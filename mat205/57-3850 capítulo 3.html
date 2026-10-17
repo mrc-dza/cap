@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<head>
+
+    <meta https-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta https-equiv="Pragma" content="no-cache">
+    <meta https-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta https-equiv="Content-Language" content="es">
+    
+  <title>57-3850 capítulo 3</title>
+
+    <!-- Librería y hoja de estilos KATEX  -->
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/katex/katex.min.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/katex/katex.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/katex/contrib/auto-render.min.js"></script>
+
+    <!-- Librerías y hojas de estilo CodeMirror -->
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/lib/codemirror.min.css">
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/theme/mdn-like.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/lib/codemirror.min.js"></script>
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/fold/foldgutter.min.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/fold/foldcode.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/fold/brace-fold.min.js"></script>
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/dialog/dialog.min.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/dialog/dialog.min.js"></script>
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/hint/show-hint.min.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/hint/show-hint.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/hint/javascript-hint.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/search/searchcursor.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/search/search.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/edit/matchbrackets.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/edit/closebrackets.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/comment/comment.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/wrap/hardwrap.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/javascript/javascript.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/mathematica/mathematica.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/octave/octave.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/python/python.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/css/css.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/xml/xml.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/markdown/markdown.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/htmlmixed/htmlmixed.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/keymap/sublime.min.js"></script>
+    
+    <!-- Librería Plotly -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script><style id="plotly.js-style-global"></style><style id="plotly.js-style-global"></style>
+
+    <!-- Librerías y hojas de estilo function-plot -->
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/function-plot/site/js/vendor/d3.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/function-plot/dist/function-plot.js"></script>
+    
+    <!-- Librería quantities -->
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/quantities/quantities.min.js"></script>
+
+    <!-- Librería GoJs para la creación de diagramas de flujo -->
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/gojs/release/go.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/flowchart_gojs.js"></script>
+
+    <!-- Librerías matemáticas propias -->
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/math.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/number.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/array.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/string.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/cplx.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/function.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/object.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/prq.js"></script>
+
+    <!-- Librería y hoja de estilos propias para la creación y manejo de la calculadora  -->
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/src/cjs.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/cjs.js"></script>
+
+    <!-- Librería y hoja de estilos propias para la creación y manejo de los capítulos -->
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/src/texto.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/texto.js"></script>
+   
+    <!-- Librería del capítulo actual -->
+    <script src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo3/files/capitulo3.js"></script>
+
+    <!-- Fuentes empleadas en el capítulo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;600;700;800&amp;family=Roboto+Mono&amp;display=swap" rel="stylesheet">
+    
+
+    <script>
+        function katexRender() {
+            renderMathInElement(document.getElementById("capitulo"));
+        }
+        document.addEventListener("DOMContentLoaded", katexRender);
+        window.onerror = function(msg, url, lineNo, columnNo, error) {
+            __error__ = msg;
+        };
+        window.onload = function(){
+            capitulo.iniciar();
+        };
+    </script>
+
+</head>
+
+<body class="text">  
+
+
+<div id="capitulo">
+
+    <button id="btGuardar" style="z-index:15;" onclick="savePage()">Guardar</button>
+
+        
+
+    <h1 class="text" onclick="alerta(capitulo.idPagina,'')" style="cursor: pointer;">Ecuaciones Algebraicas 2</h1>
+
+
+    <p class="text">Continuando con el estudio de los métodos para resolver ecuaciones algebraicas, en este capítulo se estudian algunos métodos para resolver ecuaciones que se encuentran en la forma <i>f(x)=0</i>, es decir cuando el resultado de la función debe ser igual a 0.</p>
+
+    <p class="text">Como se dijo, es la forma más empleada en la práctica, no sólo porque casi siempre es más sencillo igualar la ecuación a 0, sino también porque esta forma es más estable.</p>
+
+    <p class="text">En esa forma la solución se encuentra en la intersección de la curva con la recta <dfn class="style1">y= f(x)= 0</dfn>, es decir en la intersección de la curva con el eje de las abscisas (el eje de las equis), razón por la cual, en esta forma, no es necesario trazar otra línea:</p>
+    
+    <p class="figurasn">
+        <img src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo3/files/figura1.png" alt="Solución gráfica">
+    </p>
+
+    <p class="text">Como sucede en la mayoría de los métodos, en este capítulo se presenta tanto el algoritmo como el código de los métodos, sin embargo, se reitera que el objetivo es el de aprender a utilizar los métodos, no el volver a programarlos.</p>
+
+
+
+    <h2 class="text">Método Incremental, segmento de solución (segmentoSol)</h2>
+
+    <p class="text">El método incremental es, conceptualmente, el método más sencillo que existe para resolver ecuaciones algebraicas en la forma f(x) = 0.</p>
+
+    <p class="text">Como, a ambos lados de la solución, la función cambia de signo: antes de la solución la función es positiva (o negativa) y después es negativa (o positiva), el método incremental busca el lugar donde ocurre dicho cambio.</p>
+
+    <p class="text">Gráficamente, el método, sigue el procedimiento que se muestra en la figura:</p>
+
+    <p class="figurasn">
+        <img src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo3/files/figura2.png" alt="Método incremental">
+    </p>
+
+    <p class="text">Es decir, comenzando con el valor inicial asumido "x<sub>1</sub>" y un incremento inicial "Δx", se calculan valores sucesivo de "x<sub>i</sub>" (x<sub>i</sub> = x<sub>i-1</sub>+Δx) y de y<sub>i</sub>=f(x<sub>i</sub>), hasta que la función cambia de signo.</p>
+
+    <p class="text">De esa manera se encuentra el segmento de solución, es decir los dos valores de la variable independiente entre los cuales se encuentra la solución, siendo ese el objetivo del método. La solución se encuentra a partir de esos dos valores (casi siempre) recurriendo a otros métodos más eficientes.</p>
+
+
+    <h3 class="text">Algoritmo y código</h3>
+
+    <p class="text">Aunque el método incremental sólo encuentra el segmento donde está la solución, es necesario fijar un límite de iteraciones, porque en el proceso se pueden presentar varias situaciones como: a) La solución no se encuentra en la dirección donde se lleva a cabo la búsqueda; b) El incremento es muy pequeño y requiere demasiadas iteraciones; c) El incremento es muy grande y pasa dos soluciones sin provocar un cambio de signo; d) La función es discontinua y la búsqueda da lugar a un valor infinito o indefinido, etc.</p>
+
+    <p class="text">Para determinar si la función ha cambiado o no de signo, simplemente se multiplican los valores de la función, para los dos últimos valores consecutivos de "x" y si el signo es negativo (si el valor es menor a cero) se sabe que ha ocurrido un cambio de signo (porque más por menos, o menos por más, siempre es menos). El algoritmo, que toma en cuenta estas consideraciones es el siguiente:</p>
+
+    <p class="figurasn">
+        <img src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo3/files/increSS.png" alt="Incremental 1" style="width: 414px;">
+    </p>
+
+    <p class="text">El método devuelve un vector con los dos números a ambos lados de la solución.</p>
+
+    <p class="text">El código ha sido añadido como un método del objeto "Function" y (como ocurre con todos los métodos) puede ser recuperado, en la calculadora, escribiendo su nombre desde cualquier función, por ejemplo, escribiendo: Function.susdir (haga la prueba).</p>
+
+    <p class="text">Para emplear el método, se programa la ecuación a resolver y desde la misma se llama al método mandando el valor inicial asumido (xi), el incremento (dx) y el límite de iteraciones (li). Si no se manda el valor inicial (xi), segmentoSol le asigna (por defecto) el valor 1.1. Si no se manda el incremento (dx) segmentoSol le asigna 0.1 y si no se manda el límite de iteraciones (li) segmentoSol le asigna 100.</p>
+
+    <p class="text">Por ejemplo, para obtener el segmento de solución de la ecuación:</p>
+    
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[ f(x) = \left( 52+3\sqrt{x}-8x^{0.8} \right)^{0.36}-x = 0 \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Se la programa en una función y luego se llama al método (los resultados son mostrados redondeados al primer dígito después del punto):</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var f = x =&gt; (52+3*Math.sqrt(x)-8*x**0.8)**0.36-x;</div>
+        <div class="resultado"></div>
+        <div class="instruccion">f.segmentoSol().round(1)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">En consecuencia, la solución se encuentra entre 3.6 y 3.7. Estos dos valores constituyen el segmento de solución y como se puede ver son devueltos en un array. Aprovechando la asignación por desestructuración, estos valores pueden ser asignados directamente a dos variables, por ejemplo, en la siguiente instrucción, se asignan los dos valores del segmento de solución a las variables "x1" y "x2" y luego se muestran redondeados al primer dígito después del punto:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var [x1, x2] = f.segmentoSol().round(1)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">print(x1.round(1), x2.round(1))</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Como en este ejemplo no se ha mandado ningún valor al método, <dfn class="style1">segmentoSol</dfn> emplea los valores por defecto, es decir: xi=1.1, dx=0.1 y li=100.</p>
+
+    <p class="text">Se puede encontrar un segmento de solución más preciso, si se emplea un incremento más pequeño, por ejemplo 0.01, pero es necesario incrementar el límite de iteraciones (li), pues un incremento más pequeño implica un mayor número de iteraciones:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var [xi, xf] = f.segmentoSol({dx:0.01, li:300});<br>print(xi.round(2), xf.round(2));</div>
+        <div class="resultado"></div>
+    </div>
+    <br>
+
+    <p class="text">Ahora se sabe que la solución está entre 3.60 y 3.61.</p>
+
+
+    <div class="ejercicio" id="ejercicio1" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Complete el código que programa, como una función flecha "f", la siguiente ecuación:\[\cos(x) + \left( 1+x^3\ \right)^{-1} = 0\]</p><p></p><div id="pregunta1" class="calculadora" spellcheck="false"><div class="instruccion">var f = x =&gt; Math.cos(x)+(1+x**3)**(-1);</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con segmentoSol, encuentre el primer segmento de solución (<dfn>x1</dfn> y <dfn>x2</dfn>) comenzando la búsqueda en 0.5 (incremento por defecto, resultado redondeado al primer dígito).</p><div id="pregunta2" class="calculadora" spellcheck="false"><div class="instruccion">var [x1,x2] = f.segmentoSol({xi:0.5});<br>[x1, x2].round(1)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con segmentoSol, encuentre el segundo segmento de solución (<dfn>x3</dfn> y <dfn>x4</dfn>) comenzando la búsqueda en x2 (incremento por defecto, resultado redondeado al primer dígito).</p><div id="pregunta3" class="calculadora" spellcheck="false"><div class="instruccion">var [x3,x4] = f.segmentoSol({xi:x2});<br>[x3, x4].round(1)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="12" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 1 -->
+
+    
+
+    <h2 class="text">Método Incremental, solución (incremental)</h2>
+
+    <p class="text">Una vez conocido el segmento de solución, por lo general, se recurre a otros métodos, no obstante, la solución puede ser encontrada también continuando la búsqueda con el método incremental.</p>
+
+    <p class="text">Para ello se toma como valor inicial el límite inferior del segmento de solución, y se toma como incremento la décima parte del incremento original, tal como se muestra en la siguiente figura:</p>
+
+    <p class="figurasn">
+        <img src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo3/files/figura4.png" alt="Método incremental, solución" style="width:358px">
+    </p>
+
+    <p class="text">De esa manera se encuentra un nuevo segmento de solución, pero ahora ese segmento está 10 veces más cerca a la solución que el segmento original. Volviendo a repetir el procedimiento se consiguen segmentos de solución que, en cada repetición, están 10 veces más cerca a la solución. Repitiendo el procedimiento el suficiente número de veces, el incremento se hace tan pequeño que los dos números del segmento son prácticamente iguales y cualquiera de ellos puede ser considerado la solución buscada.</p>
+
+
+    <h3 class="text">Algoritmo y código</h3>
+
+    <p class="text">El algoritmo del método incremental es el siguiente:</p>
+
+    <p class="figurasn">
+        <img src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo3/files/incremental.png" alt="Algoritmo incremental" style="width:470px;">
+    </p>
+
+    <p class="text">Al igual que los otros métodos, ha sido añadido al objeto <dfn class="style1">Function</dfn>, por lo que debe ser llamado desde la ecuación a resolver, mandando el valor inicial (xi), el incremento (dx), la precisión/exactitud (err) y el límite de iteraciones (li). Si no semanda alguno (o ninguno de estos valores), <dfn class="style1">incremental</dfn> les asigna los valores por defecto: xi=1.1, dx=0.1, err=12 y li=100.</p>
+
+    <p class="text">Por ejemplo, para resolver la ecuación:</p>
+    
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[ f(x) = \left( 52+3\sqrt{x}-8x^{0.8} \right)^{0.36}-x = 0 \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">Se la programa y luego se llama al método:</p>
+    
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var f = function(x) {<br>  return (52+3*Math.sqrt(x)-8*x**0.8)**0.36-x;<br>};</div>
+        <div class="resultado"></div>
+        <div class="instruccion">f.incremental()</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="text">Que, al no recibir ningún valor, emplea los valores por defecto (xi=1.1, dx=0.1, err=12, li=100).</p>
+
+    <p class="text">Con un valor inicial (xi) igual a 1.6 y una precisión/exactitud de 10 dígitos, la solución es:</p>
+    
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">f.incremental({xi:1.6, err:10}).precision(10)</div>
+        <div class="resultado"></div>
+    </div>
+    <br>
+
+    <div class="ejercicio" id="ejercicio2" enunciado="2"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Complete el código que programa, como una función anónima "f", la siguiente ecuación:\[2x^3 + x^2+5x+3 = 0\]</p><p></p><div id="pregunta14" class="calculadora" spellcheck="false"><div class="instruccion">var f = function(x){<br>  return 2*x**3+x**2+5*x+3;<br>};</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con el método incremental (valor inicial 1, incremento -0.1, precisión/exactitud: 13) encuentre la solución, mostrando el resultado con esa precisión.</p><div id="pregunta15" class="calculadora" spellcheck="false"><div class="instruccion">f.incremental({xi:1,dx:-0.1,err:13}).precision(13)</div><div class="resultado"></div><div class="instruccion"></div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="8" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 2 -->
+    <div class="ejercicio" id="ejercicio3" enunciado="1"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Complete el código que programa, como una función estándar "f", la siguiente ecuación, siendo "p" un parámetro por valor y "l", "I", "E", "y", "A" y "g" (en ese orden) parámetros nombrados con valores por defecto iguales a los mostrados en la ecuación.\[\begin{gathered}f(p) = \cos(k\cdot l)\cosh(k\cdot l)+1 = 0\\[3mm]\begin{aligned}&amp;k^2 = \dfrac{p}{a} \\[2mm]&amp;a^2 = \dfrac{E\cdot I\cdot g}{A\cdot y} \\[2mm]&amp;l =121;~I=171.6;~E=3.1\times 10^6 \\&amp;y = 0.067;~A=31;~g=387\end{aligned}\end{gathered}\]</p><p></p><div id="pregunta18" class="calculadora" spellcheck="false"><div class="instruccion">function f(p,{l=121,I=171.6,E=3.1e6,y=0.067,A=31,g=387}={}){<br>  const a = Math.sqrt((E*I*g)/(A*y));<br>  const k = Math.sqrt(p/a);<br>  return Math.cos(k*l)*Math.cosh(k*l)+1;<br>};</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con el método incremental (valor inicial 10, incremento 1, precisión/exactitud: 8) encuentre la solución, mostrando el resultado con la precisión del cálculo.</p><div id="pregunta19" class="calculadora" spellcheck="false"><div class="instruccion">f.incremental({xi:10, dx:1, err:8}).precision(8)</div><div class="resultado"></div><div class="instruccion"></div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="12" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 3 -->
+
+
+
+    <h2 class="text">Método de la Bisección (biseccion)</h2>
+
+    <p class="text">El método de la Bisección, encuentra la solución a partir de los dos valores del segmento de solución. Dichos valores pueden ser obtenidos con el método <dfn class="style1">segmentoSol</dfn> o dibujando la gráfica de la ecuación y leyendo los valores de la variable independiente (x) a ambos lados de la solución (en el eje de las equis).</p>
+
+    <p class="text">Este método toma como valor de prueba el punto ubicado en la mitad del segmento (x<sub>3</sub>) y si este valor corresponde a la solución (es decir si el valor de la función en x<sub>3</sub> es cero o cercano a cero) el proceso concluye, caso contrario la búsqueda continúa en la mitad donde ocurre el cambio de signo. La mitad donde ocurre el cambio de signo se convierte en el nuevo segmento de búsqueda y el proceso se repite, tal como se muestra en la siguiente figura:</p>
+
+    <p class="figurasn">
+        <img src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo3/files/biseccion_fundamento.png" alt="Fundamento método de Bisección">
+    </p>
+
+    <p class="text">La mitad donde ocurre el cambio de signo, se determina en base al signo de la expresión: f(x<sub>1</sub>)*f(x<sub>3</sub>). Si es negativo (menor a cero) el cambio ocurre en la mitad izquierda, caso contrario en la mitad derecha.</p>
+
+    <p class="text">La ecuación que permite calcular el nuevo valor de prueba (x<sub>3</sub>) se deduce fácilmente a partir de la gráfica:</p>
+        
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[ \begin{aligned}                x_3 &amp;= \dfrac{x_2-x_1}{2}+x_1\\[3mm]                x_3 &amp;= \dfrac{x_2-x_1+2x_1}{2} \\[3mm]                x_3 &amp;= \dfrac{x_1+x_2}{2}                \end{aligned} \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <h3 class="text">Algoritmo y código</h3>
+
+    <p class="text">El algoritmo del método, es el siguiente:</p>
+
+    <p class="figurasn">
+        <img src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo3/files/biseccion_algoritmo.png" alt="Algoritmo método Bisección">
+    </p>
+
+    <p class="text">El código ha sido añadido al objeto <dfh class="style1">Function</dfh>, por lo que, al igual que los otros métodos, debe ser llamado desde la función donde se ha programado la ecuación.</p>
+
+    <p class="text">Por ejemplo para encontrar la solución de la siguiente ecuación:</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[ f(x) = \left( 52+3\sqrt{x}-8x^{0.8} \right)^{0.36}-x = 0 \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Sabiendo que la solución se encuentra entre 3.6 y 3.7, la solución, con 12 dígitos de precisión, se calcula con:</p>
+    
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var f = function(x){<br>  return (52+3*Math.sqrt(x)-8*x**0.8)**0.36-x;<br>};</div>
+        <div class="resultado"></div>
+        <div class="instruccion">f.biseccion({xi:3.6, xf:3.7, err:10}).precision(10)</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="text">O empleando una IIFE (programada como una función flecha):</p>
+    
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">(x=&gt;(52+3*Math.sqrt(x)-8*x**0.8)**0.36-x).<br>biseccion({xi:3.6, xf:3.7, err:10}).precision(10)</div>
+        <div class="resultado"></div>
+    </div>
+    <br>
+
+    <div class="ejercicio" id="ejercicio4" enunciado="2"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Complete el código que programa, como una función anónima "f", la siguiente ecuación:\[f(x) = 2 x^2+0.9-\text{e}^x = 0\]</p><p></p><div id="pregunta32" class="calculadora" spellcheck="false"><div class="instruccion">var f = function(x){<br>  return 2*x**2+0.9-Math.exp(x);<br>};</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con segmentoSol, encuentre el primer segmento de solución (<dfn>x1</dfn> y <dfn>x2</dfn>) comenzando la búsqueda en 0.1 (incremento por defecto).</p><div id="pregunta33" class="calculadora" spellcheck="false"><div class="instruccion">var[x1,x2] = f.segmentoSol({xi:0.1});</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con el segmento de solución, encuentre la primera solución con el método de la bisección, precisión/error: 10 dígitos, mostrando el resultado con la precisión del cálculo.</p><div id="pregunta34" class="calculadora" spellcheck="false"><div class="instruccion">f.biseccion({xi:x1,xf:x2,err:10}).precision(10)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con segmentoSol, encuentre el segundo segmento de solución (<dfn>x3</dfn> y <dfn>x4</dfn>) comenzando la búsqueda en x2 (incremento por defecto).</p><div id="pregunta35" class="calculadora" spellcheck="false"><div class="instruccion">var[x3,x4] = f.segmentoSol({xi:x2});</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con el segmento de solución, encuentre la segunda solución con el método de la bisección, precisión/error: 10 dígitos, mostrando el resultado con la precisión del cálculo.</p><div id="pregunta36" class="calculadora" spellcheck="false"><div class="instruccion">f.biseccion({xi:x3,xf:x4,err:10}).precision(10)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="12" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 4 -->
+
+    
+
+    <h2 class="text">Método de Regula - Falsi (refa)</h2>
+
+    <p class="text">Este método, también conocido como <dfn class="style1">método de interpolación lineal</dfn>, necesita, al igual que el método de la Bisección, los dos valores del segmento de solución, sólo que el nuevo valor de prueba se calcula por interpolación lineal entre dichos límites, tal como se muestra en la figura:</p>
+
+    <p class="figurasn">
+        <img src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo3/files/regula_falsi_fundamento.png" alt="Fundamento método de Regula Falsi">
+    </p>
+
+    <p class="text">Al igual que en el método de la Bisección, se debe ubicar el segmento donde se encuentra la solución y repetir el proceso en ese segmento. El método se repite hasta que se encuentra la solución, es decir hasta que el valor de la función sea cercano a cero o hasta que los dos últimos valores de prueba son iguales en un determinado número de dígitos.</p>
+
+    <p class="text">Básicamente difiere del método de la Bisección sólo en la ecuación, que en este caso resulta de la intersección de la línea recta que pasa por los puntos (x<sub>1</sub>,y<sub>1</sub>) − (x<sub>2</sub>,y<sub>2</sub>) y la recta "y=0":</p>
+   
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                x_3 = \dfrac{y_2x_1-y_1x_2}{y_2-y_1}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table> 
+
+    <p class="text">Debido a que en la ecuación se requieren los valores de la función (y<sub>1</sub>=f(x<sub>1</sub>), y<sub>2</sub>=f(x<sub>2</sub>)), al implementar el método no sólo se deben actualizar los valores de la variable independiente ("x"), sino también los de la variable dependiente ("y").</p>
+
+    <p class="text">Al igual que en el método de la Bisección, el segmento de solución puede ser encontrado tanto con <dfn class="style1">segmentoSol</dfn>, como con el método gráfico.</p>
+
+    
+    <h3 class="text">Algoritmo y código</h3>
+
+    <p class="text">El algoritmo del método de Regula-Falsi, es esencialmente el mismo que el de la bisección, excepto que es necesario intercambiar también los valores de las funciones:</p>
+
+    <p class="figurasn">
+        <img src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo3/files/regula_falsi_algoritmo.png" alt="Algoritmo Regula Falsi">
+    </p>
+
+    <p class="text">Como en los otros métodos, el método ha sido añadido al objeto <dfn class="style1">Function</dfn>, por lo que debe ser llamado desde la función en la cual se ha programado la ecuación a resolver, siendo los valores por defecto: err=12, li=30. Así para resolver la ecuación:</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[ f(x) = \left( 52+3\sqrt{x}-8x^{0.8} \right)^{0.36}-x = 0 \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+        
+    <p class="text">Sabiendo que la solución está entre 3 y 4, se programa la ecuación y se llama al método, mandando el segmento de solución (xi:3, xf:4) y, en este ejemplo, una precisión/exactitud de 15 dígitos (err:15):</p>
+    
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">function f(x){<br>  return (52+3*Math.sqrt(x)-8*x**0.8)**0.36-x;<br>}</div>
+        <div class="resultado"></div>
+        <div class="instruccion">f.refa({xi:3, xf:4, err:15}).precision(15)</div>
+        <div class="resultado"></div>
+    </div>
+    <br>
+
+    <div class="ejercicio" id="ejercicio5" enunciado="2"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Complete el código que programa, como una función anónima "f", la siguiente ecuación:\[f(x) = \cos(x)+\left( 1+x^3 \right)^{-1} = 0\]</p><p></p><div id="pregunta43" class="calculadora" spellcheck="false"><div class="instruccion">var f = function(x){<br>  return Math.cos(x)+(1+x**3)**(-1)<br>};</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Encuentre los segmentos de solución dibujando la gráfica de la función entre 0.5 y 6.</p><div id="pregunta44" class="calculadora" spellcheck="false"><div class="instruccion">plot({f:[f], xi:0.5, xf:6})</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con los segmentos de solución leídos de la gráfica (eje de las equis), encuentre las dos soluciones con el método de regula-falsi, precisión/error: 13 dígitos, mostrando los resultados con esa precisión.</p><div id="pregunta45" class="calculadora" spellcheck="false"><div class="instruccion">f.refa({xi:1.5, xf:2, err:13}).precision(13)</div><div class="resultado"></div><div class="instruccion">f.refa({xi:4.5, xf:5, err:13}).precision(13)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="12" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 5 -->
+    <div class="ejercicio" id="ejercicio6" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Complete el código que programa, como una función flecha "f", la siguiente ecuación:\[\begin{gathered}f(t) = \theta-\dfrac{T_0}{k}\left( 1-\cos\left(\sqrt{\dfrac{k}{I_0} }\cdot t \right) \right) = 0\\[3mm]\begin{aligned}&amp;T_0 = T_c+\theta_k\cdot k \\[2mm]&amp;T_c = 0.625;~I_0 = 0.0006 \\[1mm]&amp;\theta_k = 3.27;~\theta=2.97;~k=3\end{aligned}\end{gathered}\]Siendo "t" un parámetro por valor y  <span class="textocodigo">"Tc", "I0", "Ok", "O" y "k"</span> (en ese orden) parámetros nombrados con valores por defecto iguales a los mostrados en la ecuación.</p><p></p><div id="pregunta46" class="calculadora" spellcheck="false"><div class="instruccion">var f = (t,{Tc=0.625, I0=0.0006, Ok=3.27,O=2.97, k=3}={}) =&gt;{<br>  const T0 = Tc+Ok*k;<br>return O-T0/k*(1-Math.cos(Math.sqrt(k/I0)*t));<br>};</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Encuentre los segmentos de solución dibujando la gráfica de la función entre 0.5 y 0.66.</p><div id="pregunta47" class="calculadora" spellcheck="false"><div class="instruccion">plot({f:[f],xi:0.5,xf:0.66})</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con los segmentos de solución leídos de la gráfica (eje de las equis), encuentre las cuatro soluciones con el método de regula-falsi, precisión/error: 9 dígitos, mostrando los resultados con esa precisión.</p><div id="pregunta48" class="calculadora" spellcheck="false"><div class="instruccion">f.refa({xi:0.50, xf:0.52, err:9}).precision(9)</div><div class="resultado"></div><div class="instruccion">f.refa({xi:0.54, xf:0.56, err:9}).precision(9)</div><div class="resultado"></div><div class="instruccion">f.refa({xi:0.60, xf:0.62, err:9}).precision(9)</div><div class="resultado"></div><div class="instruccion">f.refa({xi:0.64, xf:0.66, err:9}).precision(9)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="26" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 6 -->
+
+
+
+    <h2 class="text">Método de la Secante</h2>
+
+    <p class="text">El método de la Secante requiere, igualmente, dos valores, sin embargo, no es necesario que esos valores correspondan al segmento de solución, pudiendo ser también dos valores consecutivos. Claro que si se conoce el segmento de solución, es más eficiente emplear ese segmento.</p>
+
+    <p class="text">Con los valores iniciales, el método encuentra un nuevo valor de prueba, interpolando o extrapolando linealmente hasta la intersección con la recta "y=0", tal como se muestra en la figura:</p>
+
+    <p class="figurasn">
+        <img src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo3/files/secante_fundamento.png" alt="Fundamento, método de la secante">
+    </p>
+
+    <p class="text">Si el resultado de la extrapolación (o interpolación) no es el resultado buscado, el proceso se repite, empleando siempre los dos últimos puntos calculados.</p>
+
+    <p class="text">Puesto que, el nuevo valor se calcula por extrapolación o interpolación lineal de los dos últimos puntos: (x<sub>1</sub>,y<sub>1</sub>) − (x<sub>2</sub>,y<sub>2</sub>), la ecuación del método de la Secante es la misma que la del método de Regula-Falsi:</p>
+    
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[ x_3 = \dfrac{y_2x_1-y_1x_2}{y_2-y_1}\]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>     
+
+    <h3 class="text">Algoritmo y código</h3>
+
+    <p class="text">El método de la Secante sigue una lógica similar a la del método de Regula-Falsi, excepto que, en este método, se emplean siempre los dos últimos puntos. El algoritmo, en forma de diagrama de actividades, es:</p>
+
+    <p class="figurasn">
+        <img src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo3/files/secante_algoritmo.png" alt="Algoritmo método de la secante">
+    </p>
+
+    <p class="text">El código respectivo ha sido añadido como un método del objeto <dfn class="style1">Function</dfn>, por lo que debe ser llamado desde la función donde se ha programado la ecuación a resolver. Dado que no es necesario conocer el segmento de solución, este método tiene valores por defecto para los valores iniciales: xi=1.1, xf=1.2, la precisión/error por defecto es 15 (porque es un método más preciso) y el límite de iteraciones es 30.</p>
+
+    <p class="text">Así, para resolver la ecuación:</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[ f(x) = \left( 52+3\sqrt{x}-8x^{0.8} \right)^{0.36}-x = 0 \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Se la programa:</p>
+    
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var f = x =&gt; (52+3*Math.sqrt(x)-8*x**0.8)**0.36-x;</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="text">Y se llama al método, en este ejemplo con una precisión/exactitud de 10 dígitos, quedando los otros parámetros con sus valores por defecto: xi:1.1, xf:1.2, li:30):</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">f.secante({err:10}).precision(10)</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="text">La solución, calculada con una precisión/exactitud de 14 dígitos y empleando como valores iniciales 3.6 y 3.7 (el segmento de solución), es:</p>
+    
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">f.secante({xi:3.6, xf:3.7, err:14}).precision(14)</div>
+        <div class="resultado"></div>
+    </div>
+    <br>
+
+    <div class="ejercicio" id="ejercicio7" enunciado="2"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Complete el código que programa, como una función flecha "f", la siguiente ecuación:\[f(x) = \cos(x)+\left(1.1+x^{1.9} \right)^{-1} = 0\]</p><p></p><div id="pregunta59" class="calculadora" spellcheck="false"><div class="instruccion">var f = x =&gt; Math.cos(x)+(1.1+x**1.9)**(-1);</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con el método de la secante, con una precisión/exactitud de 10 dígitos (mostrando los resultados con esa precisión), encuentre las dos soluciones, empleando valores iniciales iguales a 1.5 y 1.6 para la primera y 4.0 y 4.1 para la segunda.</p><div id="pregunta60" class="calculadora" spellcheck="false"><div class="instruccion">f.secante({xi:1.5,xf:1.6,err:10}).precision(10)</div><div class="resultado"></div><div class="instruccion">f.secante({xi:4.0,xf:4.1,err:10}).precision(10)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="10" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 7 -->
+    <div class="ejercicio" id="ejercicio8" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Complete el código que programa, como una función estándar "f", la siguiente ecuación, siendo "p" un parámetro por valor y "l", "I", "E", "y", "A" y "g" (en ese orden) parámetros nombrados con valores por defecto iguales a los mostrados en la ecuación.\[\begin{gathered}f(p) = \cos(k\cdot l) \cosh(k\cdot l)+1 = 0\\[3mm]\begin{aligned}&amp;k^2 = \dfrac{p}{a}\\[2mm]&amp;a^2 = \dfrac{E\cdot I \cdot g}{A\cdot y}\\[2mm]&amp;l=120;\space I=170.6;\space E=3\times 10^6\\&amp;y = 0.066;\space A=32;\space g=386\end{aligned}\end{gathered}\]</p><p></p><div id="pregunta61" class="calculadora" spellcheck="false"><div class="instruccion">function f(p, {l=120,I=170.6,E=3e6,y=0.066,A=32,g=386}={}) {<br>  const a = Math.sqrt(E*I*g/(A*y));<br>  const k = Math.sqrt(p/a);<br>  return Math.cos(k*l)*Math.cosh(k*l)+1;<br>}</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con el método de la secante, con una precisión/exactitud de 10 dígitos (mostrando los resultados con esa precisión), encuentre la solución, empleando dos valores consecutivos cercanos a 25 (por ejemplo: 25.1 y 25.2).</p><div id="pregunta62" class="calculadora" spellcheck="false"><div class="instruccion">f.secante({xi:50, xf:60, err:10}).precision(10)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="14" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 8 -->
+
+
+
+    <h2 class="text">Método de Newton-Raphson</h2>
+
+    <p class="text">El método de Newton-Raphson, encuentra el nuevo valor de prueba (x<sub>2</sub>), en la intersección entre la tangente de la curva para el valor asumido (x<sub>1</sub>) y la recta "y=0", tal como se muestra en la siguiente figura:</p>
+
+    <p class="figurasn">
+        <img src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo3/files/newton_fundamento.png" alt="Fundamento del método de Newton-Raphson">
+    </p>
+
+    <p class="text">Si el nuevo valor de prueba (x<sub>2</sub>) no corresponde a la solución (es decir si el valor de la función, para x<sub>2</sub>, no es cero), se repite el proceso, empleando ese valor como nuevo valor de prueba (x<sub>1</sub> = x<sub>2</sub>). Prosiguiendo de esa manera hasta que la función tiene un determinado número de ceros después del punto (exactitud) o hasta que dos valores de prueba consecutivos son iguales en un determinado número de dígitos (precisión).</p>
+
+    <p class="text">La ecuación para el cálculo del nuevo valor de prueba (x<sub>2</sub>) se deduce de la anterior gráfica, a partir del triángulo que forman la tangente, la recta "y=0" y la recta "x=x<sub>1</sub>":</p>
+    
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                x_2 = x_1 -\dfrac{y_1}{f^{\prime}(x_1)}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table> 
+ 
+    <p class="text">Que es una de las expresiones más sencillas, sin embargo, implica el cálculo de la derivada primera de la función (f'(x<sub>1</sub>)), siendo esa la mayor dificultad para la aplicación del método.</p>
+
+    <p class="text">Si bien se puede emplear la derivada analítica en el método, el problema radica en la dificultad y el tiempo que toma deducirla (además de programarla). Por otra parte, no siempre es posible resolver la derivada analíticamente. Por esa razón, en la mayoría de los casos, se recurre a la derivación numérica. En la implementación del método se emplea la derivada numérica calculada con la fórmula de diferencia central de segundo orden:</p>
+    
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[ f^{\prime}(x) = \dfrac{f(x+h)-f(x-h)}{2h} \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table> 
+
+    <p class="text">Donde “h” es el incremento de “x” (Δx), en el método se emplea un incremento igual a: x<sub>1</sub>*10<sup>-6</sup>, deducido por prueba y error.</p>
+
+
+    <h3 class="text">Algoritmo y código</h3>
+
+    <p class="text">El algoritmo del método, en forma de diagrama de actividades, es:</p>
+
+    <p class="figurasn">
+        <img src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo3/files/newton_algoritmo.png" alt="   Algoritmo, método de Newton-Raphson">
+    </p>
+
+    <p class="text">Como en todos los métodos de este tema, el método ha sido añadido al objeto <dfn class="style1">Function</dfn>, por lo que debe ser llamado desde la función donde se ha programado la ecuación a resolver.</p>
+
+    <p class="text">Así, para resolver la ecuación:</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[ f(x) = \left( 52+3\sqrt{x}-8x^{0.8} \right)^{0.36}-x = 0 \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Se la programa:</p>
+    
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var f = function(x) {<br>  return (52+3*Math.sqrt(x)-8*x**0.8)**0.36-x;<br>};</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="text">Y se llama al método, en este ejemplo empleando únicamente los valores por defecto (xi=1.1, err=15, li=30):</p>
+    
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">f.newton().precision(15)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Emplenado un valor inicial igual a 10.1 y una precisión/exactitud de 12 dígitos, se obtiene: </p>
+    
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">f.newton({xi:10.1, err:12}).precision(12)</div>
+        <div class="resultado"></div>
+    </div>
+    <br>
+
+    <div class="ejercicio" id="ejercicio9" enunciado="2"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Complete el código que programa, como una función flecha "f", la siguiente ecuación:\[f(x) = 2 x^{1.9}+1-\text{e}^x = 0\]</p><p></p><div id="pregunta71" class="calculadora" spellcheck="false"><div class="instruccion">var f = x =&gt; 2*x**1.9+1-Math.exp(x)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con el método de la Newton, con una precisión/exactitud de 9 dígitos (mostrando los resultados con esa precisión), encuentre las dos soluciones, empleando el valor por defecto para la primera y 3.1 para la segunda.</p><div id="pregunta72" class="calculadora" spellcheck="false"><div class="instruccion">f.newton({err:9}).precision(9)</div><div class="resultado"></div><div class="instruccion">f.newton({xi:3.1,err:9}).precision(9)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="8" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 9 -->
+    <div class="ejercicio" id="ejercicio10" enunciado="2"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Complete el código que programa, como una función flecha "f", la siguiente ecuación:\[\begin{gathered}f(x) = e\raisebox{0.8em}{$\frac{x+y}{3.9}$}+x^{2.1}y^2-70y-15 = 0\\[3mm]y = \dfrac{115+4x-2x^{2.1}}{5.1 x}\end{gathered}\]</p><p></p><div id="pregunta77" class="calculadora" spellcheck="false"><div class="instruccion">var f = x =&gt;{<br>  const y = (115+4*x-2*x**2.1)/(5.1*x);<br>  return Math.exp((x+y)/3.9)+x**2.1*y**2-70*y-15;<br>}</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con el método de la Newton, con una precisión/exactitud de 8 dígitos (mostrando los resultados con esa precisión), encuentre las tres soluciones, empleando un valor inicial igual a 2.1 para primera y valores mayores a la solución anterior (por prueba y error), para las otras.</p><div id="pregunta78" class="calculadora" spellcheck="false"><div class="instruccion">f.newton({xi:2.1, xf:10, err:8}).precision(8)</div><div class="resultado"></div><div class="instruccion">f.newton({xi:6, xf:6, err:8}).precision(8)</div><div class="resultado"></div><div class="instruccion">f.newton({xi:9, xf:8, err:8}).precision(8)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="14" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 10 -->
+
+
+    <p class="text">Alternativamente al lenguaje elegido en la asignatura, en este y en los siguientes capítulos, se emplearán otras herramientas/lenguajes para resolver problemas matemáticos, más específicamente, se empleará Octave/MATLAB, Mathematica y Python.</p>
+    
+    <p class="text">Para todas las herramientas empleadas, se presentan las aplicaciones WEB en las que se puede hacer uso de las mismas, de manera que los ejemplos y ejercicios puedan ser ejecutados en cualquier dispositivos con acceso a Internet (celulares, tabletas, portátiles, computadoras).</p>
+
+    <p class="text">Aunque en la asignatura no se evalúa el aprendizaje de dichas herramientas/lenguajes (porque el contenido sería demasiado extenso), se recomienda emplear esas herramientas para ejecutar los ejemplos que se presentan en los capítulos, de esa manera es posible adquirir un aprendizaje básico de las mismas (algo que puede ser de mucha utilidad en asignaturas posteriores).</p>
+
+
+
+    <h2 class="text">GNU Octave/MATLAB</h2>
+
+    <p class="text"><dfn class="style1">GNU Octave</dfn> es la alternativa de software libre equivalente a MATLAB. Es en gran medida compatible con MATLAB, por lo que aprender a utilizar Octave, es aprender a utilizar MATLAB.</p>
+
+    <p class="text">El instalador de <dfn class="style1">GNU Octave</dfn> puede ser bajado desde su <a href="https://www.gnu.org/software/octave/download" target="_blank" rel="noopener">página de descargas</a>.</p>
+        
+    <p class="text">No obstante, no es necesario instalar ninguna aplicación para trabajar con Octave, sino que puede ser empleada en línea gracias a aplicaciones web como <a href="https://www.mycompiler.io/es" target="_blank" rel="noopener noreferrer">myCompiler</a>. Para ello simplemente se ingresa a myCompiler, se elije el lenguaje en el que se quiere programar, en este caso Octave y se escribe el código. Una vez escrito el código se ejecuta pulsando las teclas <strong class="style1">Ctrl+Enter</strong> o haciendo clic en el botón <strong class="style1">ejecute</strong>. Al trabajar en Android, existe un bug cuando se emplea el teclado Hacker's, pues al escribir texto después de algunos símbolos como *, + y paréntesis, el cursor recorre una posición hacia la izquierda, por lo que, en esos casos, es necesario corregir manualmente la posición del cursor. Sin embargo, aunque es conveniente trabajar con el teclado Hacker's (para aprovechar las funcionalidades del editor) no es imprescindible, pudiendo emplearse otro teclado.</p>
+
+    <p class="text">Otra alternativa es <a href="https://jupyter.org/" target="_blank" rel="noopener noreferrer">JupyterLab</a>, que, igualmente, permite trabajar con varios lenguajes sin necesidad de instalarlos. Una vez ingresado al sitio, se debe hacer clic en el botón <strong class="style1">Try in your browser</strong> o en la opción <strong class="style1">Try</strong> del menú superior de la página. Una vez ingresado a la página "Try", se elige (en la parte inferior de la página) el kernel <strong class="style1">GNU Octave</strong>, con lo que se ingresa a la aplicación (después de esperar un tiempo a que concluya la descarga).</p>
+
+    <p class="text">Por defecto, <dfn class="style1">JupyterLab</dfn>, muestra una pestaña con ejemplos del lenguaje. Para comenzar a escribir código, simplemente se abre una nueva pestaña (haciendo clic en el botón + (<img src="./files/btn_add_jupyter.jpg" alt="btn add" style="width:22px; vertical-align:bottom;">) ubicado al lado de la pestaña actual (o el botón más de la barra lateral izquierda). JupyterLab opera de forma similar a la calculadora JavaScript: se escriben las instrucciones en la celda de código y se las evalúa pulsando las teclas Shift+Enter (o haciendo clic en el botón ejecutar (<img src="./files/btn_play_jupyter.jpg" alt="btn play">) el resultado se muestra en la celda de resultados. Para el autocompletado, al momento de escribir código, se debe pulsar la tecla Tab.</p>
+
+    <p class="text">Debido a que <dfn class="style1">JupyterLab</dfn> es una aplicación web más compleja, tiene el inconveniente de consumir más recursos (ancho de banda y memoria), por eso demora mucho más en ser abierta y en ocasiones no concluye el proceso, siendo necesario recargar la página. Además, si la aplicación permanece inactiva por cierto tiempo, se pierde la conexión con el servidor y es necesario volver a evaluar las instrucciones escritas. Para un uso más frecuente, la mejor alternativa es instalarla en el equipo o emplear otras aplicaciones que den acceso a JupyterLab, como es el caso de <a href="https://cocalc.com/" target="_blank" rel="noopener noreferrer">CoCalc</a>, que es más estable, pero que en la opción gratuita muestra un aviso permanente en la parte superior de la aplicación.</p>
+
+    <p class="text">Otra alternativa para trabajar con <dfn class="style1">Octave</dfn> (sin necesidad de instalar la aplicación) es <a href="https://octave-online.net/" target="_blank" rel="noopener noreferrer">Octave Online</a>, que también es similar a la calculadora JavaScript, solo que el código se ejecuta pulsando la tecla <strong class="style1">Enter</strong>, mientras que para insertar una nueva línea (en la misma instrucción) se pulsan las teclas <strong class="style1">Shift+Enter</strong> (a la inversa de la calculadora JavaScript), además, las celdas de código no pueden ser editadas (aunque si recuperadas). Sus principales inconvenientes son los anuncios intrusivos y el suspender el servicio cuando la aplicación permanece inactiva durante 5 minutos.</p>
+
+    <p class="text">Los operadores aritméticos de Octave son los mismos que en JavaScript, con excepción del residuo (%), que en Octave se calcula con la función <dfn class="style1">rem</dfn>. Las funciones matemáticas son, igualmente, las mismas que en JavaScript, excepto que no se escribe <strong class="style1">Math.</strong> delante de ellas. Las constantes se escriben en minúsculas, por ejemplo, para la constante π se escribe simplemente <strong class="style1">pi</strong>. Además, aunque se puede emplear <strong class="style1">**</strong> para el cálculo de las potencias, se recomienda (por compatibilidad con MatLab) emplear <strong class="style1">^</strong>.</p>
+
+    <p class="text">Por ejemplo, para calcular el valor de la siguiente expresión (calculada con JavaScript, en el capítulo 1):</p>
+    
+    <table class="ecuacionsn">
+        <tbody><tr>
+        <td>
+            \[\sqrt{{\sin(4.5)-\cos(1.2)}\over{\tan(2.3)}}\]
+        </td>
+        <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Se escribe el código:</p>
+
+    <div class="codigo octave">sqrt((sin(4.5)-cos(1.2))/tan(2.3))</div>
+
+    <p class="text">Y al evaluarla se obtiene el resultado: <span class="textocodigo">ans = 1.0942</span> (haga la prueba en myCompiler, JupyterLab u Otave online).</p>
+
+    <p class="text">Como podrá ver, por defecto Octave muestra los resultados con 6 dígitos de precisión (formato corto = <strong class="style1">format short</strong>). Para ver los resultados con 16 dígitos de precisión, se debe emplear el comando <strong class="style1">format long</strong>:</p>
+
+    <div class="codigo octave">format long;<br><br>sqrt((sin(4.5)-cos(1.2))/tan(2.3))<br><br>% Resultado obtenido:<br>ans = 1.094152181517427</div>
+
+    <p class="text">Para volver a ver los resultados con 6 dígitos de precisión, simplemente se ejecuta el comando <strong class="style1">format short</strong>.</p>
+
+    <div class="codigo octave">format long;<br>sqrt((sin(4.5)-cos(1.2))/tan(2.3))<br><br>format short;<br>sqrt((sin(4.5)-cos(1.2))/tan(2.3))<br><br>% Resultados obtenidos:<br>ans = 1.094152181517427<br>ans = 1.0942</div>
+
+    <p class="text">Igualmente, para calcular el valor de la siguiente ecuación:</p>
+    
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[\sqrt{{3+4^{1.2}+6^{3.2}}\over{\text{e}^{6.5}+\cos(6.7)}}\]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">Se escribe:</p>
+
+    <div class="codigo octave">format long;<br>sqrt((3+4^1.2+6^3.2)/(exp(6.5)+cos(6.7)))<br><br>% Resultado obtenido:<br>ans = 0.690280726010591</div>
+
+    <p class="text">Las funciones en Octave (y MatLab) pueden ser creadas en dos formas. Las <strong class="style1">funciones anónimas</strong>, que son el equivalente aproximado a las funciones flecha de JavaScript y que se crean empleando el operador <strong class="style1">@</strong>. Sin embargo, a diferencia de las funciones flecha, sólo pueden contener una instrucción. Por ejemplo, para programar la siguiente ecuación:</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[ f(x) = \left( 52+3\sqrt{x}-8x^{0.8} \right)^{0.36}-x = 0 \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Se escribe el siguiente código, donde, luego de crear la función se la llama con valores de "x" iguales a: 2.1, 4.5 y 3.6.:</p>
+
+    <div class="codigo octave">format long;<br>f = @(x) (52+3*sqrt(x)-8*x^0.8)^0.36-x;<br><br>f(2.1)<br>f(4.5)<br>f(3.6)<br><br>% Resultados obtenidos:<br>ans = 1.735865263144248<br>ans = -1.028945496612921<br>ans = 1.114959138949878e-02</div>
+
+    <p class="text">Note que cuando se llama a las funciones no se escribe un punto y coma al final. Se procede así, porque Octave (al igual que la calculadora JavaScript) no muestra el resultado si se escribe un punto y coma al final. Entonces, siempre que se quiere ve el resultado de una instrucción, no se debe escribir un punto y coma al final de la misma.</p>
+
+    <p class="text">Las funciones pueden ser creadas también como funciones estándar con <strong class="style1">function</strong>. En esta forma es posible crear funciones que tengan más de una línea de código, sin embargo, se espera que estas funciones se encuentren en un archivo que tenga el mismo nombre y la extensión <strong class="style1">.m</strong> (para que puedan ser llamadas desde otros programas).</p>
+
+    <p class="tex">En <dfn class="style1">JupyterLab</dfn> y <dfn class="style1">Octave online</dfn> no existe esa limitante, porque (al igual que en la calculadora JavaScript) las funciones pueden ser creadas en una celda de código. En <dfn class="style1">myCompiler</dfn>, para crear una función estándar (sin necesidad de hacerlo en un archivo independiente), se debe escribir una instrucción (cualquiera) antes de escribir el código de la función (por ejemplo format long;).</p>
+
+    <p class="text">Así, la función estándar para la misma ecuación (y los mismos valores de prueba) se la programa de la siguiente forma:</p>
+
+    <div class="codigo octave">format long;<br>function res = f2(x)<br>  res = (52+3*sqrt(x)-8*x^0.8)^0.36-x;<br>endfunction<br><br>f2(2.1)<br>f2(4.5)<br>f2(3.6)<br><br>% Resultados obtenidos:<br>ans = 1.735865263144248<br>ans = -1.028945496612921<br>ans = 1.114959138949878e-02</div>
+
+    <p class="text">Como se puede ver, una función estándar se encierra entre las palabras reservadas <strong class="style1">function</strong> y <strong class="style1">endfunction</strong>, aunque, al igual que MatLab, se puede emplear <strong class="style1">end</strong> (en lugar de <strong class="style1">endfunction</strong>).</p>
+
+    <p class="text">Al igual que en JavaScript, a continuación del nombre de la función ("f2") se escriben paréntesis y en su interior la lista de parámetros (en este caso solo uno: "x"). Cuando la función devuelve un resultado (como ocurre en este ejemplo) se debe especificar el nombre de la  variable en que se devolverá el resultado (en este caso <b>"res"</b>, pero, por supuesto, puede ser cualquier nombre válido).</p>
+
+    <p class="text">Para resolver ecuaciones algebraicas en <dfn class="style1">Octave</dfn>, se puede emplear la función <strong class="style1">fzero</strong>, a la que se manda el nombre de la función y el valor inicial asumido. Si la función ha sido programada como una función anónima se escribe directamente el nombre de la función. Si ha sido programada como una función estándar, se precede el nombre de la función con el operador <strong class="style1">@</strong> (porque las funciones solo pueden reciben punteros a otras funciones, no las funciones en sí).</p>
+
+    <p class="text">Por ejemplo, para resolver la ecuación programada previamente, si se la vuelve a programar como una función anónima, se procede de la siguiente forma:</p>
+
+    <div class="codigo octave">format long;<br>ec1 = @(x)(52+3*sqrt(x)-8*x^0.8)^0.36-x;<br><br>fzero(ec1, 1.1)<br><br>% Resultado obtenido<br>ans = 3.609670886140050</div>
+
+    <p class="text">Donde "1.1" es el valor inicial asumido.</p>
+
+    <p class="text">Si la función es programada como una función estándar, se la resuelve de la siguiente forma:</p>
+
+    <div class="codigo octave">format long;<br>function res= ec2(x)<br>  res = (52+3*sqrt(x)-8*x^0.8)^0.36-x;<br>endfunction<br><br>fzero(@ec2, 1.1)<br>fzero(@ec2, [2, 4])<br><br>% Resultados obtenidos:<br>ans = 3.609670886140050<br>ans = 3.609670886140050</div>
+
+    <p class="text">En este ejemplo, la segunda vez que se llama a <strong class="style1">fzero</strong>, se manda como valor inicial un array con dos valores. Esos valores corresponden al segmento de solución. Cuando se conoce el segmento de solución, es más eficiente mandar un array con los dos valores de ese segmento.</p>
+
+    <div class="ejercicio" id="ejercicio11" enunciado="2"><hr><div class="enunciado"><p class="ejercicio extern"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Complete el siguiente código que, en Octave, calcula el valor de la siguiente expresión, mostrando el resultado con 16 dígitos de precisión:\[\ln \left( \dfrac{{5.1}^{6.2}-{4.6}^{5.9}+{\text{e}}^{7.31}}{\sqrt{8.31+3^{0.75}}} \right)\]Luego ejecute el código en Octave, corrija los errores cometidos al completar el código y evalúe la celda. Copie los resultados en la subsiguiente (entre las tildes invertidas).</p><div id="pregunta81" class="calculadora" spellcheck="false"><div class="instruccion">`<br>format long;<br>log((5.1^6.2 - 4.6^5.9 + exp(7.31))/sqrt(8.31 + 3^0.75))<br>`;</div><div class="resultado"></div><div class="instruccion">`<br>ans = 8.603434576518717<br>`;</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="12" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 11 -->
+    <div class="ejercicio" id="ejercicio12" enunciado="6"><hr><div class="enunciado"><p class="ejercicio extern"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Complete el siguiente código que, en Octave, calcula el valor de la siguiente expresión:\[\text{entero más cercano }\le\text{ a: } \left(\dfrac{4.6^{8.4}-5.1^{7.7}+\text{e}^{8.32}}{\sqrt{8.91+7^{6.21}}}\right)\]Luego ejecute el código en Octave, corrija los errores cometidos al completar el código y evalúe la celda. Copie los resultados en la subsiguiente (entre las tildes invertidas).</p><div id="pregunta94" class="calculadora" spellcheck="false"><div class="instruccion">`<br>floor((4.6^8.4 - 5.1^7.7 + exp(8.32))/sqrt(8.91 + 7^6.21))<br>`;</div><div class="resultado"></div><div class="instruccion">`<br>ans = 219<br>`;</div><div class="resultado"></div><div class="instruccion"></div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="12" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 12 -->
+    <div class="ejercicio" id="ejercicio13" enunciado="0"><hr><div class="enunciado"><p class="ejercicio extern"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Complete el código que, en Octave, encuentra la solución de la siguiente ecuación, programándola como una función anónima, empleando un valor inicial igual a 1.1 y mostrando el resultado con 16 dígitos de precisión:\[f(x) = x^3+2x^2+3x+4 = 0\]Luego ejecute el código en Octave, corrija los errores cometidos al completar el código y evalúe la celda. Copie los resultados en la subsiguiente (entre las tildes invertidas).</p><div id="pregunta97" class="calculadora" spellcheck="false"><div class="instruccion">`<br>format long;<br>ec1 = @(x) x^3 + 2*x^2 +3*x + 4;<br>fzero(ec1, 1.1)<br>`;</div><div class="resultado"></div><div class="instruccion">`<br>ans = -1.650629191439387<br>`;</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="14" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 13 -->
+
+
+
+    <h2 class="text">Python</h2>
+
+    <p class="text">Al igual que <dfn class="style1">JavaScript</dfn>, <dfn class="style1">Python</dfn>, es un lenguaje de programación no comercial. Existen diferentes aplicaciones que las implementan y puede ser instalado tanto en computadoras como en dispositivos móviles.</p>
+    
+    <p class="text">No obstante, al igual que ocurre con <dfn class="style1">Octave</dfn>, no es imprescindible su instalación, pues se puede emplear <a href="https://www.mycompiler.io/es" target="_blank" rel="noopener noreferrer">myCompiler</a> y <a href="https://jupyter.org/" target="_blank" rel="noopener noreferrer">JupyterLab</a> (entre otras aplicaciones web).</p>
+
+    <p class="text">Los operadores matemáticos en Python son prácticamente los mismos que en JavaScript. Las funciones matemáticas se encuentran en la librería <dfn class="style1">math</dfn> (en lugar de <dfn class="style1">Math</dfn>), sin embargo, en Python es necesario importar el objeto <dfn class="style1">math</dfn> (así como es necesario importar la mayoría de los objetos que se emplean en el lenguaje).</p>
+
+    <p class="text">Para calcular en Python, el valor de las siguientes expresiones:</p>
+    
+    <table class="ecuacionsn">
+        <tbody><tr>
+        <td>
+            \[\sqrt{{\sin(4.5)-\cos(1.2)}\over{\tan(2.3)}}\]
+        </td>
+        <td></td>
+        </tr>
+    </tbody></table>
+    
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[\sqrt{{3+4^{1.2}+6^{3.2}}\over{\text{e}^{6.5}+\cos(6.7)}}\]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Se escribe y evalúa el siguiente código:</p>
+
+    <div class="codigo python">import math<br><br>print(math.sqrt((math.sin(4.5)-math.cos(1.2))/math.tan(2.3)))<br><br>print(math.sqrt((3+4**1.2+6**3.2)/(math.exp(6.5)+math.cos(6.7))))<br><br># Resultados obtenidos:<br>1.0941521815174273<br>0.6902807260105909</div>
+
+    <p class="text">Como se puede ver, para importar una o más funciones de una librería, se emplea la instrucción <strong class="style1">import</strong>.</p>
+
+    <p class="text">En Python se escribe una instrucción en cada línea, el salto de línea es lo que marca el final de una instrucción. Si bien es posible escribir dos o más instrucciones en una línea, separándolas con puntos y comas (igual que en JavaScript), es una práctica que no se recomienda en este lenguaje.</p>
+
+    <p class="text">Python no cuenta con un símbolo para agrupar una secuencia de instrucciones, de manera que sean ejecutadas como si se tratara de una instrucción, como es el caso de las llaves <b class="style1">{ }</b> en JavaScript. En Python, para agrupar una secuencia de instrucciones, esas instrucciones deben ser sangradas (escritas más a la derecha, precedidas por el mismo número de espacios o tabuladores). Si un bloque tiene a su vez otro bloque, el mismo debe ser sangrado más a la derecha. Los editores de código identifican los casos más frecuentes y sangran automáticamente el código en esos casos.</p>
+
+    <p class="text">Al igual que en Octave, en Python se pueden crear las funciones anónimas (denominadas funciones <strong class="style1">lambda</strong>) y como funciones estándar, las cuales se declaran empleando la palabra reservada <strong class="style1">def</strong>.</p>
+
+    <p class="text">Así, la siguiente ecuación:</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[ f(x) = \left( 52+3\sqrt{x}-8x^{0.8} \right)^{0.36}-x = 0 \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Puede ser programada en forma de una función lambda y en forma de una función estándar</p>
+
+    <div class="codigo python">import math<br><br>fun1 = lambda x: (52+3*math.sqrt(x)-8*x**0.8)**0.36-x<br><br>def fun2(x):<br>  return (52+3*math.sqrt(x)-8*x**0.8)**0.36-x<br><br>print(fun1(2.1))<br>print(fun1(4.5))<br>print(fun1(3.6,"\n"))<br><br>print(fun2(2.1))<br>print(fun2(4.5))<br>print(fun2(3.6))<br><br># Resultados obtenidos:<br>1.7358652631442482<br>-1.0289454966129212<br>0.01114959138949878<br><br>1.7358652631442482<br>-1.0289454966129212<br>0.01114959138949878</div>
+
+    <p class="text">Para resolver una ecuación no lineal en Python, se puede emplear la función <strong class="style1">root_scalar</strong>, que es una de las funciones de la librería <strong class="style1">optimize</strong>, que a su vez es parte de la librería <strong class="style1">scipy</strong>. A <strong class="style1">root_scalar</strong> se manda, como mínimo, la función a resolver y el valor inicial asumido ("<span class="textocodigo">x0</span>"). También, al igual que con <strong class="style1">fzero</strong> se puede manar el segmento de solución, en este caso en los parámetros "<span class="textocodigo">x0</span>" y "<span class="textocodigo">x1</span>".</p>
+
+    <p class="text">Así, la ecuación programada previamente se resuelve con el siguiente código:</p>
+
+    <div class="codigo python">import math<br>from scipy.optimize import root_scalar<br><br>def fun2(x):<br>  return (52+3*math.sqrt(x)-8*x**0.8)**0.36-x<br><br>r = root_scalar(fun2, x0=1.1)<br>print(r, "\n")<br>print("Solución: ", r.root, "\n")<br><br>r2 = root_scalar(fun2, x0=2, x1=4)<br>print(r2, "\n")<br>print("Solución: ", r2.root)<br><br># Resultados obtenidos:<br>converged: True<br>           flag: converged<br> function_calls: 6<br>     iterations: 3<br>           root: 3.60967088614005<br>         method: newton <br><br>Solución:  3.60967088614005 <br><br>      converged: True<br>           flag: converged<br> function_calls: 5<br>     iterations: 4<br>           root: 3.60967088614005<br>         method: secant <br><br>Solución:  3.60967088614005</div>
+
+    <p class="text">Como se puede ver, el método devuelve un objeto informando si la función ha convergido o no, el número de iteraciones, el método empleado ("newton" en el primer caso y "secant" en el segundo) y la solución propiamente (propiedad "root"). En este ejemplo, la solución propiamente, se muestra también por separado (r.root y r2.root, respectivamente) </p>
+
+    <div class="ejercicio" id="ejercicio14" enunciado="1"><hr><div class="enunciado"><p class="ejercicio extern"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Complete el siguiente código que, en Python, calcula el valor de la siguiente expresión:\[\ln \left( \dfrac{{4.7}^{5.7}-{3.8}^{6.7}+{\text{e}}^{8.65}}{\sqrt{7.32+2^{0.85}}} \right)\]Luego ejecute el código en Python, corrija los errores cometidos al completar el código y evalúe la celda. Copie los resultados en la subsiguiente (entre las tildes invertidas).</p><div id="pregunta101" class="calculadora" spellcheck="false"><div class="instruccion">`<br>import math<br>print(math.log((4.7**5.7-3.8**6.7+math.exp(8.65))/math.sqrt(7.32+2**0.85)))<br>`;</div><div class="resultado"></div><div class="instruccion">`<br>7.3752056793589<br>`;</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="12" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 14 -->
+    <div class="ejercicio" id="ejercicio15" enunciado="8"><hr><div class="enunciado"><p class="ejercicio extern"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Complete el siguiente código que, en Python, calcula el valor de la siguiente expresión:\[\text{entero más cercano }\le\text{ a: } \ln \left(\dfrac{8.1^{8.9}-3.9^{5.7}+\text{e}^{9.05}}{\sqrt[3]{9.27+4^{7.15}}}\right)\]Luego ejecute el código en Python, corrija los errores cometidos al completar el código y evalúe la celda. Copie los resultados en la subsiguiente (entre las tildes invertidas).</p><div id="pregunta117" class="calculadora" spellcheck="false"><div class="instruccion">`<br>import math<br>print(math.floor(math.log((8.1**8.9 - 3.9**5.7 + math.exp(9.05))/math.cbrt(9.27 + 4**7.15))))<br>`;</div><div class="resultado"></div><div class="instruccion">`<br>15<br>`;</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="12" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 15 -->
+    <div class="ejercicio" id="ejercicio16" enunciado="0"><hr><div class="enunciado"><p class="ejercicio extern"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Complete el siguiente código que, en Python, encuentra la solución de la siguiente ecuación, programándola como una función lambda, empleando un valor inicial igual a 1.1 y mostrando únicamente la solución:\[f(x) = x^3+2x^2+3x+4 = 0\]Luego ejecute el código en Python, corrija los errores cometidos al completar el código y evalúe la celda. Copie los resultados en la subsiguiente (entre las tildes invertidas).</p><div id="pregunta118" class="calculadora" spellcheck="false"><div class="instruccion">`<br>import math<br>from scipy.optimize import root_scalar<br>f = lambda x: x**3 + 2*x**2 + 3*x + 4<br>r = root_scalar(f, x0=1.1)<br>print(r, "\n")<br>print("Solución: ", r.root, "\n")<br>`;</div><div class="resultado"></div><div class="instruccion">`<br>Solución:  -1.6506291914393882<br>`;</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="14" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 16 -->
+
+
+
+
+
+    <div id="generarPrueba" data-scroll-y="30479.08984375"><br><hr><label class="lnotacapitulo">Nota del capítulo: </label><input type="text" id="notaCapitulo" disabled="disabled" class="itnotacapitulo"><br><br><button id="btGenerarPrueba" style="visibility: visible;" onclick="capitulo.registrarCapitulo()">Iniciar defensa</button><button id="btEmplearBono" style="margin-left:1.1rem;width:9.686rem;display:none;" onclick="capitulo.emplearBono()">Emplear Bono</button><br><br></div>
+    <br><br><br><br><br>
+
+
+<d id="dAutor" style="font-size: 0.9rem;text-align:center;color: #0808f24f;font-weight:bolder;position:fixed;top: 5px;right: 5px;user-select:none;display:inline-block;z-index:15;">Hernan G. Peñaranda V.</d></div><!-- Cierre del div capítulo -->
+            
+<span id="dato" style="display:none;">JK5KCZ0r938lCZ0oDYGrDoqpE3Km93GmE30aCZ0q938mD2GnC30aC2HCQaHrKW00</span>
+<span id="reg" style="display:none;">CJ4mC3ipC30nEp8mCJ0xCp0mCJipC30nEp4nC30xCp0mCJinCJ0mEpCmC34xCp0mCJipC30nC30mC30mEpSmC30mC34nC30xCJ4mC3ioC34mC30mC30mEpamC30mC30mC34xCJ4nCG00</span>
+
+
+
+
+<div id="divDialogo" style="display: none;"><div onfocus="document.querySelector('#divDialogo input').focus();"><div>Carnet universitario</div><div>Escriba el número de su carnet universitario, verificando que el guión haya sido correctamente insertado.</div><input type="text" onkeydown="return Capitulo.divDialogo.funKeydown(event)" onkeyup="Capitulo.divDialogo.funKeyup(event)"><div><button onclick="Capitulo.divDialogo.funClick('aceptar');">Aceptar</button><button style="margin-left:35px;" onclick="Capitulo.divDialogo.funClick('cancelar');">Cancelar</button></div></div></div></body>

@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<head>
+
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Language" content="es">
+  
+  <title>57-3850 capítulo 4</title>
+
+
+    <!-- Librería y hoja de estilos KATEX  -->
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/katex/katex.min.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/katex/katex.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/katex/contrib/auto-render.min.js"></script>
+
+    <!-- Librerías y hojas de estilo CodeMirror -->
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/lib/codemirror.min.css">
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/theme/mdn-like.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/lib/codemirror.min.js"></script>
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/fold/foldgutter.min.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/fold/foldcode.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/fold/brace-fold.min.js"></script>
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/dialog/dialog.min.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/dialog/dialog.min.js"></script>
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/hint/show-hint.min.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/hint/show-hint.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/hint/javascript-hint.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/search/searchcursor.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/search/search.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/edit/matchbrackets.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/edit/closebrackets.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/comment/comment.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/wrap/hardwrap.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/javascript/javascript.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/mathematica/mathematica.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/octave/octave.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/python/python.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/css/css.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/xml/xml.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/markdown/markdown.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/htmlmixed/htmlmixed.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/keymap/sublime.min.js"></script>
+
+    <!-- Librería Plotly -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script><style id="plotly.js-style-global"></style>
+
+    <!-- Librerías y hojas de estilo function-plot -->
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/function-plot/site/js/vendor/d3.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/function-plot/dist/function-plot.js"></script>
+    
+    <!-- Librería quantities -->
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/quantities/quantities.min.js"></script>
+
+    <!-- Librería GoJs para la creación de diagramas de flujo -->
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/gojs/release/go.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/flowchart_gojs.js"></script>
+
+    <!-- Librerías matemáticas propias -->
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/math.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/number.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/array.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/string.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/cplx.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/function.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/object.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/prq.js"></script>
+
+    <!-- Librería y hoja de estilos propias para la creación y manejo de la calculadora  -->
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/src/cjs.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/cjs.js"></script>
+
+    <!-- Librería y hoja de estilos propias para la creación y manejo de los capítulos -->
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/src/texto.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/texto.js"></script>
+
+   <!-- Librería del capítulo actual -->
+    <script src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo4/files/capitulo4.js"></script>
+
+    <!-- Fuentes empleadas en el capítulo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;600;700;800&amp;family=Roboto+Mono&amp;display=swap" rel="stylesheet">
+
+    <script>
+        function katexRender() {
+            renderMathInElement(document.getElementById("capitulo"));
+        }
+        document.addEventListener("DOMContentLoaded", katexRender);
+        window.onerror = function(msg, url, lineNo, columnNo, error) {
+            __error__ = msg;
+        };
+        window.onload = function(){
+            capitulo.iniciar();
+        };
+    </script>
+
+</head>
+
+<body class="text">  
+
+
+<div id="capitulo">
+
+    <button id="btGuardar" style="z-index:15;" onclick="savePage()">Guardar</button>
+
+        
+
+    <h1 class="text" onclick="alerta(capitulo.idPagina,'')" style="cursor: pointer;">Ecuaciones Algebraicas 3</h1>
+
+
+    <p class="text">En este capítulo se aplican los métodos estudiados en los capítulos anteriores para resolver algunos problemas prácticos.</p>
+
+
+
+    <h3 class="text">Cuota fija periódica (interés compuesto)</h3>
+
+    <p class="text">La ecuación para calcular la cuota fija periódica "C", que debe ser cancelada para honrar una deuda "P", a una tasa de interés "i", durante un número de periodos "n", se calcula con la ecuación:</p>
+ 
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                C = \dfrac{P\cdot i}{1-\dfrac{1}{(1+i)^n}}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>     
+
+    <p class="text">El cálculo de la cuota fija "C", es directo, pero el cálculo del interés "i" es iterativo (porque la variable no puede ser despejada de la ecuación). Por lo tanto el problema se reduce a resolver una ecuación no lineal con una incógnita ("i").</p>
+
+    <p class="text">Sin embargo, si bien la ecuación depende de una sola incógnita: "i", requiere también los valores de las otras variables: "P", "C" y "n", que son valores conocidos para un caso específico, pero que son diferentes para otros casos, razón por la cual deben ser recibidos como parámetros en la función.</p>
+
+    <p class="text">La forma más práctica de resolver el problema, consiste en programar la ecuación como una función que reciba, como parámetro por valor, la incógnita "i" (el interés) y como parámetros nombrados con valores por defecto: "P", "C" y "n".</p>
+    
+    <p class="text">Dentro de la función, se programa la ecuación igualada a cero:</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                \operatorname{f}(i) = C - \dfrac{P\cdot i}{1-\dfrac{1}{(1+i)^n}}=0                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">Es posible programar esta ecuación, como una función de una incógnita, porque los valores de "C", "P" y "n" ya han sido recibidos (como parámetros nombrados) en la función principal y al ser una ecuación no lineal con una incógnita, puede ser resuelta con cualquiera de los métodos estudiados previamente.</p>
+    
+    <p class="text">En la solución de problemas prácticos, es conveniente contar con valores iniciales próximos a la solución. En este caso, un valor inicial adecuado es el interés simple (no compuesto) para el mismo periodo, es decir el monto de interés cancelado durante ese periodo (n∗C-P), dividido entre el préstamo recibido (P) y entre el número de periodos (n), es decir:</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                \dfrac{n\cdot C-P}{n\cdot P}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">En la aplicación práctica de esta ecuación, es de mayor utilidad el interés anual porcentual, que el interés periódico mensual, razón por la cual, la siguiente función, devuelve el interés anual porcentual (el interés mensual multiplicado por 12), redondeado al segundo dígito después del punto:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">function interesAnual({P=30000, C=400, n=120}={}) {<br>    const f = i =&gt; C-P*i/(1-1/(1+i)**n);<br>    const xi = (n*C-P)/(n*P);<br>    let i = f.newton({xi, err:9});<br>    i = i*12*100;<br>    return i.round(2);<br>}</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Se ha trabajado con una precisión/exactitud de 9 dígitos, porque en este caso no se requiere un resultado de mayor precisión (en los cálculos económicos/financieros sólo es de utilidad práctica hasta el segundo dígito después del punto).</p>
+
+    <p class="text">Una vez elaborada la función, simplemente se la llama mandando los valores requeridos. Por ejemplo, el interés porcentual anual que se paga, por un préstamo de 135000 dólares, cancelando una cuota mensual de 1000 dólares durante 30 años, es:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">interesAnual({P:135000, C:1000, n:30*12})</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Para un préstamo de 50000 dólares, cancelando cuotas fijas mensuales de 700 dólares durante 10 años, el interés porcentual anual, es:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">interesAnual({P:50000, C:700, n:10*12})</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="text">Finalmente, el interés porcentual anual, para un préstamo de 30000 dólares, cancelando una cuota fija de 400 dólares, durante 10 años (los valores por defecto), es:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">interesAnual()</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="text">El problema puede ser resuelto también con los otros métodos, por ejemplo, con el método de Regula-Falsi. En este caso, los valores asumidos (el segmento de solución), se obtiene tomando el 70% y el 200% del interés simple:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">function interesAnualRF({P=30000, C=400, n=120}={}) {<br>    const f = i =&gt; C-P*i/(1-1/(1+i)**n);<br>    const xi = (n*C-P)/(n*P);<br>    i = f.refa({xi:0.7*xi, xf:2*xi, err:9});<br>    i = i*12*100;<br>    return i.round(2);<br>}</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Con la cual se obtienen los mismos resultados:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">interesAnualRF({P:135000, C:1000, n:30*12})</div>
+        <div class="resultado"></div>
+    </div>
+    <br>
+    
+    <div class="ejercicio" id="ejercicio1" enunciado="2"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>La ecuación con la que se calcula el interés periódico "i", por un préstamo "P", que debe ser cancelado en "n" periodos de plazo, siendo la cuota fija periódica "C", es:\[\operatorname{f}(i) = C - \dfrac{P\cdot i}{1-\dfrac{1}{(1+i)^n}}=0\]</p></div><p class="pregunta"><span class="pregunta"></span>Como una función estándar, programe la función "interésAnual3", que reciba, como parámetros nombrados con valores por defecto: el monto (P=30000), la cuota mensual (C=400) y el plazo del préstamo en años (a=10). Dentro de la función calcule el número de meses "n" (12 veces el número de años), programe la ecuación a resolver "f", como una función flecha, calcule el valor inicial ("xi") con la ecuación:\(\dfrac{n\cdotC-P}{n\cdotP}\) y resuelva la ecuación con el método incremental (precisión/exactitud: 9 dígitos), guardando la solución en "i". Luego convierta el interés mensual en anual y multiplíque por 100 (para que sea porcentual). Finalmente, devuelva el interés redondeado al segundo dígito después del punto.</p><div id="pregunta5" class="calculadora" spellcheck="false"><div class="instruccion">function interésAnual3({P=30000,C=400,a=10}={}) {<br>  const n=12*a;<br>  const f = i =&gt; C-P*i/(1-1/(1+i)**n);<br>  const xi = (n*C-P)/(n*P);<br>  let i = f.biseccion({xi:0.7*xi,xf:2*xi,err:9});<br>  i=i*12*100;<br>  return i.round(2);<br>}</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con la función elaborada, calcule el interés porcentual anual para: <b class="style1">a)</b> un préstamo de 155000 dólares, cancelando una cuota mensual de 1100 dólares, durante 25 años, <b class="style1">b)</b> un préstamo de 70000 dólares, cancelando una cuota mensual de 1000 dólares, durante 12 años.</p><div id="pregunta6" class="calculadora" spellcheck="false"><div class="instruccion">interésAnual3({P:155000,C:1100,a:25})</div><div class="resultado"></div><div class="instruccion">interésAnual3({P:70000,C:1000,a:12})</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="22" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 1 -->
+    <div class="ejercicio" id="ejercicio2" enunciado="1"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>La ecuación con la que se puede calcular el interés periódico "i", que debería pagar un banco, para ahorrar un capital "C", por el depósito de un monto fijo periódico "D", durante "n" periodos, es:\[\operatorname{f}(i) = C - \dfrac{D}{i}\left((1+i)^n-1\right)=0\]</p></div><p class="pregunta"><span class="pregunta"></span>Como una función estándar, programe la función "interésAnual2", que reciba, como parámetros nombrados: el capital a ahorrar "C", el depósito mensual "D" y el número de años "a" durante los cuales se realizara el depósito. Dentro de la función calcule el número de meses "n" (12 veces el número de años), programe la ecuación a resolver "f", como una función flecha, calcule el valor inicial ("xi") con la ecuación: \[\dfrac{C-nD}{n^2D}\] y resuelva la ecuación con el método de la bisección, valores iniciales 0.7*xi y 2*xi (precisión/exactitud: 9 dígitos) guardando la solución en "i". Luego convierta el interés mensual en anual y multiplique por 100 (para que sea porcentual). Finalmente, devuelva el interés porcentual redondeado al segundo dígito después del punto.</p><div id="pregunta9" class="calculadora" spellcheck="false"><div class="instruccion">function interésAnual2 ({C,D,a}={}) {<br>  const n=12*a;<br>  const f=i=&gt;C-D/i*((1+i)**n-1);<br>  const xi = (C-n*D)/(n**2*D);<br>  let i= f.biseccion({xi:0.7*xi,xf:2*xi,err:9});<br>  i=i*12*100;<br>  return i.round(2);<br>}</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con la función elaborada, calcule el interés porcentual anual que debería pagar un banco para acumular un capital de: <b class="style1">a)</b> 450000 dólares, depositando mensualmente 1000 dólares, durante 20 años, <b class="style1">b)</b> un préstamo de 750000 dólares, depositando mensualmente 1300 dólares, durante 25 años.</p><div id="pregunta10" class="calculadora" spellcheck="false"><div class="instruccion">interésAnual2({C:450000,D:1000,a:20})</div><div class="resultado"></div><div class="instruccion">interésAnual2({C:750000,D:1300,a:25})</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="22" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 2 -->
+    <div class="ejercicio" id="ejercicio3" enunciado="1"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>La ecuación de Fanning, para el cálculo del factor de fricción <i>"f"</i> en tuberías, es:\[\dfrac{1}{\sqrt{f}} =-4.0\log \left({\dfrac{\frac{\varepsilon}{D}}{3.7}+\dfrac{1.255}{Re\sqrt{f}}}\right)\]Donde "R" es el número de Reynolds, "D" es el diámetro interno de la tubería y "\(\varepsilon\)" su rugosidad.</p></div><p class="pregunta"><span class="pregunta"></span>Como una función anónima, programe la función "fFriccion", que reciba, como parámetros nombrados, el número de Reynolds "Re", el diámetro interno de la tubería: "D" y la rugosidad de la tubería (E). En su interior programe la ecuación de Fanning ("ff"):\[\operatorname{f}(f)=\dfrac{1}{\sqrt{f}}+4.0\log \left({\dfrac{\frac{\varepsilon}{D}}{3.7}+\dfrac{1.255}{Re\sqrt{f}}}\right)=0\]Resuélvala con el método de la "secante", empleando como valores iniciales ("xi" y "xf") el resultado y 1.1 veces el resultado devuelto por la ecuación de Darcy-Weisbach&gt; (xi y 1.1*xi):\[f=\dfrac{0.25}{\left[\ln\left({\dfrac{\varepsilon/D}{3.7}+\dfrac{5.74}{Re^{0.9}}}\right)\right]^2}\]Y resuelva la ecuación, guardando el resultado en "f", con el método de la secante, valores iniciales xi y 1.5*xi (precisión/exactitud por defecto), mostrando el resultado redondeado al cuarto dígito después del punto.</p><div id="pregunta15" class="calculadora" spellcheck="false"><div class="instruccion">var fFriccion = function({Re,D,E}={}) {<br>  const ff=f=&gt; 1/Math.sqrt(f)+4.0*Math.log10(E/D/3.7+1.255/(Re*Math.sqrt(f)));<br>  const xi=0.25/(Math.log(E/D/3.7+5.74/Re**0.9))**2;<br>  const f=ff.secante({xi,xf:1.5*xi});<br>  return f.round(4);<br>}</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Una vez completado el código, calcule el coeficiente de fricción para los siguientes valores: Re=7.3e3, D=5.08, E=0.00051; Re=3.2e5, D=2.54, E=0.0045; Re=1.2e6, D=4.23, E=0.00017.</p><div id="pregunta16" class="calculadora" spellcheck="false"><div class="instruccion">fFriccion({Re:7.3e3, D:5.08, E:0.00051})</div><div class="resultado"></div><div class="instruccion">fFriccion({Re:3.2e5, D:2.54, E:0.0045})</div><div class="resultado"></div><div class="instruccion">fFriccion({Re:1.2e6, D:4.23, E:0.00017})</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="24" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 3 -->
+
+    <p class="text">Siguiendo la misma lógica, la solución puede ser implementada en <strong class="style1">Octave</strong>, siendo la función equivalente:</p>
+
+    <div class="codigo octave">format shortG;<br><br>function r = interesAnual(P=30000, C=400, n=120)<br>    f = @(i) C-P*i/(1-1/(1+i)^n);<br>    xi = (n*C-P)/(n*P);<br>    i = fzero(f, xi);<br>    r = round((i*12*100)*1e2)/1e2;<br>end<br><br>interesAnual(135000, 1000, 30*12)<br>interesAnual(50000, 700, 10*12)<br>interesAnual()<br><br>% Resultados obtenidos<br>ans = 8.1<br>ans = 11.4<br>ans = 10.21</div>
+
+    <p class="text">En el caso de <dfn class="style1">Octave</dfn>, como se puede ver, se emplean parámetros por defecto (no parámetros nombrados) porque el lenguaje carece de los mismos. Para que Octave ignore un parámetro (que no sea el último) y emplee su valor por defecto, se puede enviar el símbolo <strong class="style1">~</strong>, que es el equivalente a <dfn class="style1">undefined</dfn> en JavaScript.</p>
+        
+    <p class="text">Por otra parte, la función <dfn class="style1">round</dfn> de Octave, al igual que la función <dfn class="style1">Math.round</dfn> de JavaScript, sólo permite redondear a números enteros (no a un determinado número de dígitos después del punto). Por esa razón, para obtener un resultado redondeado al segundo dígito, se multiplica por 1e2 (para pasar dos dígitos a la parte entera), se redondea y después se divide entre 1e2, para devolver los dos dígitos (redondeados) a la parte fraccionaria (por supuesto, lo mismo es válido para un diferente número de dígitos).</p>
+
+    <div class="ejercicio" id="ejercicio4" enunciado="0"><hr><div class="enunciado"><p class="ejercicio extern"><span class="ejercicio"></span>La ecuación de Fanning, para el cálculo del factor de fricción <i>"f"</i> en tuberías, es:\[\dfrac{1}{\sqrt{f}} =-4.0\log \left({\dfrac{\frac{\varepsilon}{D}}{3.7}+\dfrac{1.255}{Re\sqrt{f}}}\right)\]Donde "R" es el número de Reynolds, "D" es el diámetro interno de la tubería y "\(\varepsilon\)" su rugosidad.</p></div><p class="pregunta"><span class="pregunta"></span>En Octave (formato de números "shortG"), programe la función "fFriccion", que reciba, el número de Reynolds "Re", el diámetro interno de la tubería: "D" y la rugosidad de la tubería (E). Dentro de la función programe, como una función anónima, la ecuación de Fanning ("ff"):\[\operatorname{f}(f)=\dfrac{1}{\sqrt{f}}+4.0\log \left({\dfrac{\frac{\varepsilon}{D}}{3.7}+\dfrac{1.255}{Re\sqrt{f}}}\right)=0\]Calcule el valor inicial "xi" con la ecuación de Darcy-Weisbach:\[f=\dfrac{0.25}{\left[\ln\left({\dfrac{\varepsilon/D}{3.7}+\dfrac{5.74}{Re^{0.9}}}\right)\right]^2}\]Con el valor inicial calculado, resuelva la ecuación de Fanning, guardando el resultado en "f" y redondeando el resultado al quinto dígito después del punto. Una vez elaborado el programa copie el código respectivo en la siguiente celda y ejecute el mismo para verificar si existen errores.</p><div id="pregunta19" class="calculadora" spellcheck="false"><div class="instruccion">`format shortG;<br>function r = fFriccion(Re,D,E)<br>ff = @(f) 1/sqrt(f)+4.0*log10(E/D/3.7+1.255/(Re*sqrt(f)));<br>xi = 0.25/(log(E/D/3.7+5.74/Re^0.9))^2;<br>f = fzero(ff, xi);<br>r = round(f*1e5)/1e5;<br>endfunction`;</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Una vez completado el código, calcule el coeficiente de fricción para los siguientes valores: Re=7.3e3, D=5.08, E=0.00051; Re=3.2e5, D=2.54, E=0.0045; Re=1.2e6, D=4.23, E=0.00017. Una vez obtenidos los resultados, copie en la siguiente celda las instrucciones con las que se obtienen esos resultados y los resultados obtenidos.</p><div id="pregunta20" class="calculadora" spellcheck="false"><div class="instruccion">`fFriccion(7.3e3,5.08,0.00051)<br>fFriccion(3.2e5,2.54,0.0045)<br>fFriccion(1.2e6,4.23,0.00017)<br>ans = 0.00844<br>ans = 0.00583<br>ans = 0.00305`;</div><div class="resultado"></div><div class="instruccion">  </div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="24" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 4 -->
+
+
+    <p class="text">Con la misma lógica, la función puede ser programada también en <dfn class="style1">Python</dfn>:</p>
+
+    <div class="codigo python">from scipy.optimize import root_scalar<br><br>def interesAnual(P=30000, C=400, n=120):<br>    f = lambda i: C-P*i/(1-1/(1+i)**n)<br>    xi = (n*C-P)/(n*P)<br>    i = root_scalar(f, x0=xi).root<br>    return round(i*12*100, 2)<br><br>print(interesAnual(135000, 1000, 30*12))<br>print(interesAnual(50000, 700, 10*12))<br>print(interesAnual())<br><br># Resultados obtenidos:<br>8.1<br>11.4<br>10.21</div>
+
+    <p class="text">En Python, los parámetros por defecto (como los de esta función) son al mismo tiempo parámetros por defecto y parámetros nombrados. La función puede ser llamada mandando sólo los valores, escribiéndolos en el orden correcto o escribiendo el nombre y asignándole el valor con el signo igual (en cualquier orden).</p>
+
+    <p class="text">Como ya se vio previamente, del resultado devuelto por <dfn class="style1">root_scalar</dfn> se emplea únicamente la solución, es decir, la propiedad <strong class="style1">root</strong>.</p>
+
+    <div class="ejercicio" id="ejercicio5" enunciado="0"><hr><div class="enunciado"><p class="ejercicio extern"><span class="ejercicio"></span>La ecuación de Fanning, para el cálculo del factor de fricción <i>"f"</i> en tuberías, es:\[\dfrac{1}{\sqrt{f}} =-4.0\log \left({\dfrac{\frac{\varepsilon}{D}}{3.7}+\dfrac{1.255}{Re\sqrt{f}}}\right)\]Donde "R" es el número de Reynolds, "D" es el diámetro interno de la tubería y "\(\varepsilon\)" su rugosidad.</p></div><p class="pregunta"><span class="pregunta"></span>En Python, programe la función "fFriccion", que reciba, el número de Reynolds "Re", el diámetro interno de la tubería: "D" y la rugosidad de la tubería (E). Dentro de la función programe, como una función lambda, la ecuación de Fanning ("ff"):\[\operatorname{f}(f)=\dfrac{1}{\sqrt{f}}+4.0\log \left({\dfrac{\frac{\varepsilon}{D}}{3.7}+\dfrac{1.255}{Re\sqrt{f}}}\right)=0\]Calcule el valor inicial "xi" con la ecuación de Darcy-Weisbach:\[f=\dfrac{0.25}{\left[\ln\left({\dfrac{\varepsilon/D}{3.7}+\dfrac{5.74}{Re^{0.9}}}\right)\right]^2}\]Con el valor inicial calculado, resuelva la ecuación de Fanning, guardando el resultado en "f" y redondeando el resultado al quinto dígito después del punto. Una vez elaborado el programa copie el código respectivo en la siguiente celda y ejecute el mismo para verificar si existen errores.</p><div id="pregunta23" class="calculadora" spellcheck="false"><div class="instruccion">`import math<br>from scipy.optimize import root_scalar<br>def fFriccion(Re,D,E):<br>    ff = lambda f:1/math.sqrt(f)+4.0*math.log10(E/D/3.7+1.255/(Re*math.sqrt(f)))<br>    xi=0.25/(math.log(E/D/3.7+5.74/Re**0.9))**2<br>    f=root_scalar(ff,x0=xi).root<br>    return round(f,5)`;</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Una vez completado el código, calcule el coeficiente de fricción para los siguientes valores: Re=7.3e3, D=5.08, E=0.00051; Re=3.2e5, D=2.54, E=0.0045; Re=1.2e6, D=4.23, E=0.00017. Una vez obtenidos los resultados, copie en la siguiente celda las instrucciones con las que se obtienen esos resultados y los resultados obtenidos.</p><div id="pregunta24" class="calculadora" spellcheck="false"><div class="instruccion">`print(fFriccion(7.3e3,5.08,0.00051))<br>print(fFriccion(3.2e5,2.54,0.0045))<br>print(fFriccion(1.2e6,4.23,0.00017))<br>0.00844<br>0.00583<br>0.00305`;</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="24" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 5 -->
+
+
+
+    <h2 class="text">Presión de vapor</h2>
+
+    <p class="text">Una de las ecuaciones para el cálculo de la presión de vapor (la presión a la cual hierve un líquido que se encuentra a una temperatura "T") es la ecuación de Harlacher:</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                \ln(P_v)=                \text{A}+\dfrac{\text{B}}{T}+                \text{C}\cdot \ln(T)+                \text{D}\cdot\dfrac{P_v}{T^2}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">Donde "A", "B", "C" y "D", son las constantes del compuesto para el cual se quiere calcular la presión de vapor <i>P<sub>v</sub></i> (o la temperatura de saturación <i>T</i>).</p>
+
+    <p class="text">Como se puede ver, en la ecuación de Harlacher no se puede despejar ni la presión de vapor (<i>p<sub>v</sub></i>), ni la temperatura de saturación (<i>T</i>). Razón por la cual se trata de una ecuación no lineal donde la incógnita puede ser la presión de vapor (P<sub>v</sub>) o la temperatura de saturación (T):</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                \operatorname{f}(P_v|T) =                \text{A}+\dfrac{\text{B}}{T}+                \text{C}\cdot \ln(T)+                \text{D}\cdot\dfrac{P_v}{T^2}-\ln(P_v) = 0                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Al igual que en el ejemplo anterior, la forma más práctica de resolver el problema consiste en programar una función que reciba, como parámetro por valor, la temperatura de saturación (T) o la presión de vapor (P<sub>v</sub>) y como parámetros nombrados, con valores por defecto, las constantes (A, B, C y D) del compuesto para el cual se está calculando la presión de vapor. Dentro de la función se programa la anterior ecuación (como una función de P<sub>v</sub> o T) y se la resuelve con uno de los métodos estudiados en los capítulos anteriores.</p>
+
+    <p class="text">Como ya se dijo, cuando se resuelven problemas práctios (reales), es conveniente contar con valores iniciales cercanos a la solución, en este caso (para el cálculo de P<sub>v</sub>) se obtiene un valor inicial adecuado (xi) empleando únicamente los tres primeros términos de la ecuación, es decir:</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                P_v = \operatorname{e}\raisebox{1em}{$\small{\operatorname{A}+\dfrac{\operatorname{B}}{T}+\operatorname{C}\cdot \ln(T)}$}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Las constantes (A, B, C y D) están disponibles en tablas de propiedades y al ser una ecuación empírica, las unidades de presión y temperatura están predeterminadas. Así, para las constantes que se emplean en este capítulo, la presión de vapor está en milímetros de mercurio y la temperatura en Kelvin.</p>
+    
+    <p class="text">Los valores por defecto más adecuados son los correspondientes al agua: A=55.336, B=−6869.50, C=−5.115, D=1.05, porque el agua es el elemento para el que, con más frecuencia, se calcula la presión de vapor.</p>
+
+    <p class="text">Con estas consideraciones y redondeando el resultado al segundo dígito después del punto (precisión más que suficiente cuando se trabaja con mm de Hg), la función que resuelve el problema, empleando en este ejemplo el método de la secante, con valores iniciales iguales a: xi y xi*1.01, es:</p>
+    
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">function pVapor(T, {A=55.336, B=-6869.50, C=-5.115, D=1.05}={}) {<br>    const f = pv =&gt; A+B/T+C*Math.log(T)+D*pv/T**2-Math.log(pv);<br>    const xi = Math.exp(A+B/T+C*Math.log(T));<br>    let pv = f.secante({xi, xf:1.01*xi});<br>    return pv.round(2);<br>}</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Para el caso más frecuente (el del agua) sólo es necesario mandar la temperatura (en Kelvin) a la que se quiere calcular la presión de vapor, mientras que para otros compuestos, se deben mandar también las constantes.</p>
+
+    <p class="text">Así, para calcular la presión del vapor del agua a 338.15 K (65 ° C), 327.59 K (54.44 °C) y 338.89 K (65.74 ° C), se escribe:</p>
+    
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">pVapor(318.15)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">pVapor(327.59)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">pVapor(338.89)</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="text">Mientras que, para calcular la presión de vapor del alcohol etílico a 298.15 K, 323.15 K y 348.33 K (constantes: A=83.319, B=−7994.90C=−9.201, D=2.35), se escribe:</p>
+    
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">pVapor(298.15, {A:83.319, B:-7994.90, C:-9.201, D:2.35})</div>
+        <div class="resultado"></div>
+        <div class="instruccion">pVapor(323.15, {A:83.319, B:-7994.90, C:-9.201, D:2.35})</div>
+        <div class="resultado"></div>
+        <div class="instruccion">pVapor(348.33, {A:83.319, B:-7994.90, C:-9.201, D:2.35})</div>
+        <div class="resultado"></div>
+    </div>
+    <br>
+
+    <div class="ejercicio" id="ejercicio6" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>La ecuación de Harlacher, para el cálculo de la presión de vapor "P<sub>v</sub>" o la temperatura de saturación "T", es:\[\operatorname{f}(P_v|T) = \text{A}+\dfrac{\text{B}}{T}+\text{C}\cdot \ln(T)+\text{D}\cdot\dfrac{P_v}{T^2}-\ln(Pv) = 0\]Donde, para las constantes empleadas, la temperatura está en Kelvin y la presión en milímetros de mercurio.</p></div><p class="pregunta"><span class="pregunta"></span>Como una funcion estándar, programe la función "pVapor", que reciba, como parámetro por valor, la temperatura de saturación "T" y como parámetros nombrados, las constantes de Harlacher, con valores por defecto iguales a: A=55.336, B=-6869.50, C=-5.115, D=1.05 (constantes del agua). Dentro de la función, programe la ecuación de Harlacher "f" (función flecha) y calcule un valor inicial de prueba "xi" con la siguiente ecuación:\[P_v = \operatorname{e}\raisebox{1em}{$\small{\operatorname{A}+\dfrac{\operatorname{B}}{T}+\operatorname{C}\cdot \ln(T)}$}\]Y encuentre la solución ("Pv") con el método de la bisección, valores iniciales 0.8*xi y 1.2*xi (precisión/exactitud por defecto), devolviendo el resultado redondeado al segundo dígito después del punto.</p><div id="pregunta27" class="calculadora" spellcheck="false"><div class="instruccion">function pVapor(T,{A=55.336,B=-6869.50,C=-5.115,D=1.05}={}) {<br>  const f=Pv=&gt; A+B/T+C*Math.log(T)+D*Pv/T**2-Math.log(Pv);<br>  const xi=Math.exp(A+B/T+C*Math.log(T));<br>  const Pv =f.biseccion({xi:0.8*xi,xf:1.2*xi});<br>  return Pv.round(2);<br>}</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Luego, calcule: <b class="style1">a)</b> la presión de vapor del agua a 333.15 K; <b class="style1">b)</b> la presión de vapor del alcohol etílico a 333.33 K, con las constantes: A=83.319, B=-7994.90, C=-9.201, D=2.35.</p><div id="pregunta28" class="calculadora" spellcheck="false"><div class="instruccion">pVapor(333.15)</div><div class="resultado"></div><div class="instruccion">pVapor(333.33,{A:83.319,B:-7994.90,C:-9.201,D:2.35})</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="20" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 6 -->
+    <div class="ejercicio" id="ejercicio7" enunciado="1"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>La ecuación de Harlacher, para el cálculo de la temperatura de saturación "T" o la presión de vapor "P<sub>v</sub>", es: \[\operatorname{f}(T|P_v) = \text{A}+\dfrac{\text{B}}{T}+\text{C}\cdot \ln(T)+\text{D}\cdot\dfrac{P_v}{T^2}-\ln(Pv) = 0)\]Donde, para las constantes empleadas, la temperatura está en Kelvin y la presión en milímetros de mercurio.</p></div><p class="pregunta"><span class="pregunta"></span>Como una función anónima, programe la función "tSat", que reciba, como parámetro por valor, la presión de vapor "Pv" y como parámetros nombrados, las constantes de Harlacher, con valores por defecto iguales a: A=55.336, B=-6869.50, C=-5.115, D=1.05 (constantes del agua). Dentro de la función, programe la ecuación de Harlacher "f" (función flecha) y encuentre la solución ("T") con el método de la secante, valores iniciales 300 y 301 (precisión/exactitud por defecto), devolviendo el resultado redondeado al tercer dígito después del punto.</p><div id="pregunta35" class="calculadora" spellcheck="false"><div class="instruccion">var tSat = function(Pv,{A=55.336,B=-6869.50,C=-5.115,D=1.05}={}) {<br>  const f=T=&gt;A+B/T+C*Math.log(T)+D*Pv/T**2-Math.log(Pv);<br>  const T=f.secante({xi:300,xf:301})<br>  return T.round(3)<br>}</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Luego, calcule: <b class="style1">a)</b> la temperatura de saturación del agua a 1034.3 mm de Hg; <b class="style1">b)</b> la temperatura de saturación del alcohol etílico a 988 mm de Hg, con las constantes: A=83.319, B=-7994.90, C=-9.201, D=2.35.</p><div id="pregunta36" class="calculadora" spellcheck="false"><div class="instruccion">tSat(1034.3)</div><div class="resultado"></div><div class="instruccion">tSat(988,{A:83.319,B:-7994.90,C:-9.201,D:2.35})</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="20" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 7 -->
+
+
+    <p class="text">Con la misma lógica y las mismas consideraciones, la función que resuelve el problema, en Octave, es:</p>
+
+    <div class="codigo octave">format shortG;<br><br>function r = pVapor(T, A=55.336, B=-6869.50, C=-5.115, D=1.05)<br>    f = @(pv) A+B/T+C*log(T)+D*pv/T^2-log(pv);<br>    xi = exp(A+B/T+C*log(T));<br>    pv = fzero(f, xi);<br>    r = round(pv*1e2)/1e2;<br>end<br><br>pVapor(338.15)<br>pVapor(327.59)<br>pVapor(338.89)<br>pVapor(298.15, 83.319, -7994.90, -9.201, 2.35)<br>pVapor(323.15, 83.319, -7994.90, -9.201, 2.35)<br>pVapor(348.33, 83.319, -7994.90, -9.201, 2.35)<br><br>% Resultados obtenidos:<br>ans = 187.85<br>ans = 114.71<br>ans = 194.19<br>ans = 59.26<br>ans = 225.68<br>ans = 682.18</div>
+    
+    <p class="text">Que son los mismos resultados obtenidos en JavaScript.</p>
+
+    <div class="ejercicio" id="ejercicio8" enunciado="1"><hr><div class="enunciado"><p class="ejercicio extern"><span class="ejercicio"></span>La ecuación de Harlacher, para el cálculo de la temperatura de saturación "T" o la presión de vapor "P<sub>v</sub>", es: \[\operatorname{f}(T|P_v) = \text{A}+\dfrac{\text{B}}{T}+\text{C}\cdot \ln(T)+\text{D}\cdot\dfrac{P_v}{T^2}-\ln(Pv) = 0)\]Donde, para las constantes empleadas, la temperatura está en Kelvin y la presión en milímetros de mercurio.</p></div><p class="pregunta"><span class="pregunta"></span>En Octave, empleando el formato numérico "shortG", programe la función "tSat", que reciba, la presión de vapor "Pv" y las constantes de Harlacher, con valores por defecto iguales a: A=55.336, B=-6869.50, C=-5.115, D=1.05 (constantes del agua). Dentro de la función, programe la ecuación de Harlacher "f" (función anónima) y encuentre la solución ("T"), empleando valores iniciales iguales a 300 y 500, devolviendo el resultado redondeado al primer dígito después del punto. Una vez elaborado el programa copie el código respectivo en la siguiente celda y ejecute el mismo para verificar si existen errores.</p><div id="pregunta41" class="calculadora" spellcheck="false"><div class="instruccion">`format shortG;<br>function r=tSat(Pv,A=55.336,B=-6869.50,C=-5.115,D=1.05)<br>f=@(T)A+B/T+C*log(T)+D*Pv/T^2-log(Pv);<br>T=fzero(f,[300,500]);<br>r=round(T*1e1)/1e1;<br>endfunction`;</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Luego, calcule: <b class="style1">a)</b> la temperatura de saturación del agua a 1034.3 mm de Hg; <b class="style1">b)</b> la temperatura de saturación del alcohol etílico a 988 mm de Hg, con las constantes: A=83.319, B=-7994.90, C=-9.201, D=2.35. Una vez obtenidos los resultados, copie en la siguiente celda las instrucciones con las que se obtienen esos resultados y los resultados obtenidos.</p><div id="pregunta42" class="calculadora" spellcheck="false"><div class="instruccion">`tSat(1034.3)<br>tSat(988,83.319,-7994.90,-9.201,2.35)<br>ans = 381.8<br>ans = 357.9`;</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="20" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 8 -->
+
+
+    <p class="text">De manera similar (siguiendo la misma lógica y las mismas consideraciones), la función que resuelve el problema en Python, es:</p>
+
+    <div class="codigo python">import math<br>from scipy.optimize import root_scalar<br><br>def pVapor(T,A=55.336, B=-6869.50, C=-5.115, D=1.05):<br>    f = lambda pv: A+B/T+C*math.log(T)+D*pv/T**2-math.log(pv)<br>    xi = math.exp(A+B/T+C*math.log(T))<br>    pv = root_scalar(f, x0=xi).root<br>    return round(pv, 2)<br><br>print(pVapor(338.15))<br>print(pVapor(327.59))<br>print(pVapor(338.89))<br>print(pVapor(298.15, 83.319, -7994.90, -9.201, 2.35))<br>print(pVapor(323.15, 83.319, -7994.90, -9.201, 2.35))<br>print(pVapor(348.33, 83.319, -7994.90, -9.201, 2.35))<br><br># Resultados obtenidos:<br>187.85<br>114.71<br>194.19<br>59.26<br>225.68<br>682.18</div>
+
+    <p class="text">Que son los mismos resultados obtenidos en JavaSript y Octave.</p>
+
+    <div class="ejercicio" id="ejercicio9" enunciado="0"><hr><div class="enunciado"><p class="ejercicio extern"><span class="ejercicio"></span>La ecuación de Harlacher, para el cálculo de la temperatura de saturación "T" o la presión de vapor "P<sub>v</sub>", es: \[\operatorname{f}(T|P_v) = \text{A}+\dfrac{\text{B}}{T}+\text{C}\cdot \ln(T)+\text{D}\cdot\dfrac{P_v}{T^2}-\ln(Pv) = 0\]Donde, para las constantes empleadas, la temperatura está en Kelvin y la presión en milímetros de mercurio.</p></div><p class="pregunta"><span class="pregunta"></span>En Python, programe la función "tSat", que reciba, la presión de vapor "Pv" y las constantes de Harlacher, con valores por defecto iguales a: A=55.336, B=-6869.50, C=-5.115, D=1.05 (constantes del agua). Dentro de la función, programe la ecuación de Harlacher "f" (función lambda) y encuentre la solución ("T"), empleando un valor inicial igual a 300, devolviendo el resultado redondeado al segundo dígito después del punto. Una vez elaborado el programa copie el código respectivo en la siguiente celda y ejecute el mismo para verificar si existen errores. Una vez elaborado el programa copie el código respectivo en la siguiente celda y ejecute el mismo para verificar si existen errores.</p><div id="pregunta43" class="calculadora" spellcheck="false"><div class="instruccion">`import math<br>from scipy.optimize import root_scalar<br>def tSat(Pv,A=55.336,B=-6869.50,C=-5.115,D=1.05):<br>    f=lambda T:A+B/T+C*math.log(T)+D*Pv/T**2-math.log(Pv)<br>    T=root_scalar(f,x0=300).root<br>    return round(T,2)`;</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Luego, calcule: <b class="style1">a)</b> la temperatura de saturación del agua a 1034.3 mm de Hg; <b class="style1">b)</b> la temperatura de saturación del alcohol etílico a 988 mm de Hg, con las constantes: A=83.319, B=-7994.90, C=-9.201, D=2.35. Una vez obtenidos los resultados, copie en la siguiente celda las instrucciones con las que se obtienen esos resultados y los resultados obtenidos.</p><div id="pregunta44" class="calculadora" spellcheck="false"><div class="instruccion">`print(tSat(1034.3))<br>print(tSat(988,83.319,-7994.90,-9.201,2.35))<br>381.76<br>357.93`;</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="20" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 9 -->
+
+
+
+
+    <h3 class="text">Ecuación de estado</h3>
+
+    <p class="text">Las ecuaciones de estado permiten calcular las propiedades de los compuestos en la fase gaseosa (principalmente el volumen). Una de las ecuaciones más empleadas en la práctica es la ecuación de Soave-Redlich-Kwong:</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                \begin{gathered}                P = \dfrac{RT}{V-b}-\dfrac{a\alpha}{V(V+b)}\\                \begin{aligned}                \text{donde:}\\                a &amp;= 0.42748\dfrac{(R T_c)^2}{P_c}\\[3mm]                b &amp;= 0.08664\dfrac{R T_c}{P_c}\\[3mm]                \alpha &amp;= 1+(2.756m-0.7)\left(1-\sqrt{T_r}\right)^2+m(1-T_r)\\[3mm]                m &amp;= 0.484+1.515\omega-0.44\omega^2\\[3mm]                T_r &amp;= \dfrac{T}{Tc}                \end{aligned}                \end{gathered}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Donde <dfn class="style1">T</dfn> es la temperatura del gas, <dfn class="style1">P</dfn> la presión, <dfn class="style1">V</dfn> el volumen molar, <dfn class="style1">R</dfn> la constante universal de los gases, <dfn class="style1">Tc</dfn> la temperatura crítica del gas, <dfn class="style1">Pc</dfn> la presión crítica del gas y <dfn class="style1">ω</dfn> el factor acéntrico de Pitzer (estas tres últimas propiedades dependen del compuesto con el que se está trabajando).</p>
+
+    <p class="text">Como se puede ver, sólo el cálculo de la presión es directo, mientras que el volumen o la temperatura no pueden ser despejadas. En esos casos, se trata de una ecuación no lineal con una incógnita. En consecuencia y al igual que en los ejemplos previos, la forma más práctica de resolver el problema consiste en programar una función, donde se recibe, como parámetros por valor, la temperatura (o el volumen) y la presión, y como parámetros nombrados con valores por defecto "Tc", "Pc" y "w". Dentro de la función se programa la ecuación de Soaver-Redlich-Kowng, como una función con una incógnita (el volumen o la tempratura):</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                \begin{gathered}                \operatorname{f}(V|T) = \dfrac{RT}{V-b}-\dfrac{a\alpha}{V(V+b)}-P = 0\\                \end{gathered}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Luego se resuelve la ecuación con uno de los métodos estudiados en los capítulos previos, empleando como valor inicial el valor devuelto por la ecuación del gas ideal: /(PV = RT/).</p>
+        
+    <p class="text">Las unidades dependen de las unidades de la constante universal de los gases "R". En este ejemplo, la constante  "R" es 0.082057 l*atm/K*mol, por lo tanto, la temperatura (T) debe estar en Kelvin, la presión (P) en atmósferas y el volumen (V) en litros por mol.</p>
+    
+    <p class="text">Al igual que en el ejemplo anterior, el compuesto para el cual se calcula con más frecuencia el volumen (o la temperatura) es el agua, por lo tanto, los valores por defecto más adecuados son: Tc=647.3 (en K), Pc=317.6 (en atm) y w=0.344.</p>
+
+    <p class="text">La función que calcula el volumen molar, empleando el método de Newton-Raphson y tomando encuenta las anteriores consideraciones, es:</p>
+    
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var volSRK = (T, P, {Tc=647.3, Pc=217.6, w=0.344}={}) =&gt; {<br>  const R = 0.082057;<br>  const Tr = T/Tc;<br>  const m = 0.484+1.515*w-0.44*w*w;<br>  const alpha = 1+(2.756*m-0.7)*(1-Math.sqrt(Tr))**2+m*(1-Tr);<br>  const b = 0.08664*R*Tc/Pc;<br>  const a = 0.42748*(R*Tc)**2/Pc;<br>  const f = V =&gt; R*T/(V-b)-a*alpha/(V*(V+b))-P;<br>  const xi = R*T/P;<br>  const V = f.newton({xi});<br>  return V.round(3);<br>};</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Para calcular el volumen molar del vapor de agua (en l/mol) a: 383.14 K y 2.04 atm; 403.15 K y 5 atm; 423.33 K y 6.97 atm; 443.15 K y 10 atm, se escribe:</p>
+    
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">volSRK(383.15, 2.04)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">volSRK(403.15, 5)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">volSRK(423.33, 6.97)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">volSRK(443.15, 10)</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="text">Para calcular el volumen molar (en l/mol) del metano a: 333.15 K y 3 atm; 363.15 K y 5 atm; 392.78 K y 8 atm y 403.15 K y 10 atm, se debe mandar, además, las propiedades del metano: T<sub>c</sub>=190.56 K, P<sub>c</sub>=45.39 atm, ω=0.011:</p>
+    
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">volSRK(333.15, 3, {Tc:190.56, Pc:45.39, w:0.011})</div>
+        <div class="resultado"></div>
+        <div class="instruccion">volSRK(363.15, 5, {Tc:190.56, Pc:45.39, w:0.011})</div>
+        <div class="resultado"></div>
+        <div class="instruccion">volSRK(392.78, 8, {Tc:190.56, Pc:45.39, w:0.011})</div>
+        <div class="resultado"></div>
+        <div class="instruccion">volSRK(403.15, 10, {Tc:190.56, Pc:45.39, w:0.011})</div>
+        <div class="resultado"></div>
+    </div>
+    <br>
+
+    <div class="ejercicio" id="ejercicio10" enunciado="2"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>La ecuación de Soave-Redlich-Kwong, para el cálculo de la temperatura (T) o volumen (V), es:\[\begin{gathered} \operatorname{f}(T|V) = \dfrac{RT}{V-b}-\dfrac{a\alpha}{V(V+b)}-P = 0\\ \begin{aligned} \text{donde:}\\ a &amp;= 0.42748\dfrac{(R T_c)^2}{P_c}\\[3mm] b &amp;= 0.08664\dfrac{R T_c}{P_c}\\[3mm] \alpha &amp;= 1+(2.756m-0.7)\left(1-\sqrt{T_r}\right)^2+m(1-T_r)\\[3mm] m &amp;= 0.484+1.515\omega-0.44\omega^2\\[3mm] T_r &amp;= \dfrac{T}{Tc} \end{aligned} \end{gathered}\]Donde <dfn class="style1">T</dfn> es la temperatura del gas (en Kelvins), <dfn class="style1">P</dfn> la presión (en atmósferas), <dfn class="style1">V</dfn> el volumen molar (en l/mol), <dfn class="style1">R</dfn> la constante universal de los gases: 0.082057 (l*atm/K*mol), <dfn class="style1">Tc</dfn> la temperatura crítica (K), <dfn class="style1">Pc</dfn> la presión crítica (atm) y <dfn class="style1">ω</dfn> el factor acéntrico de Pitzer (adimensional). Las tres últimas propiedades dependen del compuesto con el que se está trabajando.</p></div><p class="pregunta"><span class="pregunta"></span>Como una función estándar, programe la función "tempSRK", que reciba, como parámetros por valor, el volumen "V" y la presión "P" y como parámetros nombrados, las propiedades del compuesto, con valores por defecto iguales a: Tc=647.3, Pc=217.6, w=0.344 (para el agua). Dentro de la función programe (como una función flecha "f") la ecuación de Soave-Redlich-Kwong (donde se deben calcular todos los parámetros que dependen de "T"), calcule el valor inicial de prueba "xi" con la ecuación del gas idea: P*V/R y resuelva la ecuación de Soave-Redlich-Kwong con el método de la bisección, valores iniciales 0.7*xi y 1.1*xi (precisión/exactitud por defecto). Devuelva el resultado redondeado al tercer dígito después del punto.</p><div id="pregunta51" class="calculadora" spellcheck="false"><div class="instruccion">function tempSRK(V,P,{Tc=647.3,Pc=217.6,w=0.344}={}) {<br>  const R=0.082057;<br>  const m=0.484+1.515*w-0.44*w**2;<br>  const a=0.42748*(R*Tc)**2/Pc;<br>  const b=0.08664*R*Tc/Pc;<br>  const f=T=&gt;{<br>    const Tr=T/Tc;<br>    const alpha=1+(2.756*m-0.7)*(1-Math.sqrt(Tr))**2+m*(1-Tr);<br>    return R*T/(V-b)-a*alpha/(V*(V+b))-P;<br>  }<br>  const xi=P*V/R;<br>  const T=f.biseccion({xi:0.7*xi,xf:1.1*xi});<br>  return T.round(3);<br>}</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con la función programada calcule la temperatura del: <b class="style1">a)</b> vapor de agua a 8.657 l/mol y 4.885 atm; <b class="style1">b)</b> del metano a 11.231 l/mol y 3 atm (propiedades del metano: Tc=190.56 K, Pc=45.39 atm, w=0.011)</p><div id="pregunta52" class="calculadora" spellcheck="false"><div class="instruccion">tempSRK(8.657,4.885)</div><div class="resultado"></div><div class="instruccion">tempSRK(11.231,3,{Tc:190.56,Pc:45.39,w:0.011})</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="32" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 10 -->
+    <div class="ejercicio" id="ejercicio11" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>La ecuación de estado de Peng-Robinson, par el cálculo de la temperatura (T) o volumen (V), es: \[\begin{gathered} f(T|V) = \dfrac{RT}{V-b}-\dfrac{a\alpha}{V^2+2bV-b^2}-P = 0\\ \begin{aligned} \text{donde:}\\ a &amp;= 0.45274\dfrac{(R T_c)^2}{P_c}\\[3mm] b &amp;= 0.07780\dfrac{R T_c}{P_c}\\[3mm] \alpha &amp;= \left(1+m\left(1-\sqrt{T_r}\right) \right)^2\\[3mm] m &amp;= 0.37464+1.54226\omega-0.26992\omega^2\\[3mm] T_r &amp;= \dfrac{T}{Tc} \end{aligned} \end{gathered}\]Donde <dfn class="style1">T</dfn> es la temperatura del gas (en Kelvins), <dfn class="style1">P</dfn> la presión (en atmósferas), <dfn class="style1">V</dfn> el volumen molar (en l/mol), <dfn class="style1">R</dfn> la constante universal de los gases: 0.082057 (l*atm/K*mol), <dfn class="style1">Tc</dfn> la temperatura crítica (K), <dfn class="style1">Pc</dfn> la presión crítica (atm) y <dfn class="style1">ω</dfn> el factor acéntrico de Pitzer (adimensional). Las tres últimas propiedades dependen del compuesto con el que se está trabajando.</p></div><p class="pregunta"><span class="pregunta"></span>Como una función flecha, programe la función "volPR", que reciba, como parámetros por valor, la temperatura "T" y la presión "P" y como parámetros nombrados, las propiedades del compuesto, con valores por defecto iguales a: Tc=647.3, Pc=217.6, w=0.344 (para el agua). Dentro de la función programe (como una función flecha "f") la ecuación de Peng-Robinson, calcule el valor inicial de prueba "xi" con la ecuación del gas idea: R*T/P y resuelva la ecuación de Peng-Robinson con el método de "newton" (precisión/exactitud por defecto). Devuelva el resultado redondeado al cuarto dígito después del punto.</p><div id="pregunta53" class="calculadora" spellcheck="false"><div class="instruccion">var volPR = (T,P,{Tc=647.3,Pc=217.6,w=0.344}={})=&gt; {<br>  const R=0.082057;<br>  const Tr=T/Tc;<br>  const m=0.37464+1.54226*w-0.26992*w**2;<br>  const alpha=(1+m*(1-Math.sqrt(Tr)))**2;<br>  const a=0.45274*(R*Tc)**2/Pc;<br>  const b=0.07780*R*Tc/Pc;<br>  const f=V=&gt;R*T/(V-b)-a*alpha/(V**2+2*b*V-b**2)-P;<br>  const xi=R*T/P;<br>  const V=f.newton({xi});<br>  return V.round(4);<br>}</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con la función programada calcule el volumen del: <b class="style1">a)</b> vapor de agua a 390.2 K y 7.12 atm; <b class="style1">b)</b> del metano a 415.3 K y 12 atm (propiedades del metano: Tc=190.56 K, Pc=45.39 atm, w=0.011)</p><div id="pregunta54" class="calculadora" spellcheck="false"><div class="instruccion">volPR(390.2,7.12)</div><div class="resultado"></div><div class="instruccion">volPR(415.3,12,{Tc:190.56,Pc:45.39,w:0.011})</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="32" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 11 -->
+    <div class="ejercicio" id="ejercicio12" enunciado="2"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>La ecuación de estado de Peng-Robinson, par el cálculo de la temperatura (T) o volumen (V), es: \[\begin{gathered} f(T|V) = \dfrac{RT}{V-b}-\dfrac{a\alpha}{V^2+2bV-b^2}-P = 0\\ \begin{aligned} \text{donde:}\\ a &amp;= 0.45274\dfrac{(R T_c)^2}{P_c}\\[3mm] b &amp;= 0.07780\dfrac{R T_c}{P_c}\\[3mm] \alpha &amp;= \left(1+m\left(1-\sqrt{T_r}\right) \right)^2\\[3mm] m &amp;= 0.37464+1.54226\omega-0.26992\omega^2\\[3mm] T_r &amp;= \dfrac{T}{Tc} \end{aligned} \end{gathered}\]Donde <dfn class="style1">T</dfn> es la temperatura del gas (en Kelvins), <dfn class="style1">P</dfn> la presión (en atmósferas), <dfn class="style1">V</dfn> el volumen molar (en l/mol), <dfn class="style1">R</dfn> la constante universal de los gases: 0.082057 (l*atm/K*mol), <dfn class="style1">Tc</dfn> la temperatura crítica (K), <dfn class="style1">Pc</dfn> la presión crítica (atm) y <dfn class="style1">ω</dfn> el factor acéntrico de Pitzer (adimensional). Las tres últimas propiedades dependen del compuesto con el que se está trabajando.</p></div><p class="pregunta"><span class="pregunta"></span>Como una función flecha, programe la función "tempPR", que reciba, como parámetros por valor, el volumen "V" y la presión "P" y como parámetros nombrados, las propiedades del compuesto, con valores por defecto iguales a: Tc=647.3, Pc=217.6, w=0.344 (para el agua).  Dentro de la función programe (como una función flecha "f") la ecuación de Peng-Robinson, calcule el valor inicial de prueba "xi" con la ecuación del gas ideal: P*V/R y resuelva la ecuación de Peng-Robinson con el método de la bisección, valores iniciales 0.8*xi y 1.2*xi (precisión/exactitud por defecto). Devuelva el resultado redondeado al tercer dígito después del punto.</p><div id="pregunta63" class="calculadora" spellcheck="false"><div class="instruccion">var tempPR=(V,P,{Tc=647.3,Pc=217.6,w=0.344}={})=&gt; {<br>  const R=0.082057;<br>  const m=0.37464+1.54226*w-0.26992*w**2;<br>  const a=0.45274*(R*Tc)**2/Pc;<br>  const b=0.07780*R*Tc/Pc;<br>  const f=T=&gt;{<br>    const Tr=T/Tc;<br>    const alpha=(1+m*(1-Math.sqrt(Tr)))**2;<br>    return R*T/(V-b)-a*alpha/(V**2+2*b*V-b**2)-P;<br>  }<br>  const xi=P*V/R;<br>  const T=f.biseccion({xi:0.8*xi,xf:1.2*xi });<br>  return T.round(3);<br>}</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con la función programada calcule la temperatura del: <b class="style1">a)</b> vapor de agua con un volumen de 8.657 l/mol y 4.885 atm; <b class="style1">b)</b> del metano con un volumen de 11.231 l/mol y 3 atm (propiedades del metano: Tc=190.56 K, Pc=45.39 atm, w=0.011)</p><div id="pregunta64" class="calculadora" spellcheck="false"><div class="instruccion">tempPR(8.657,4.885)</div><div class="resultado"></div><div class="instruccion">tempPR(11.231,3,{Tc:190.56,Pc:45.39,w:0.011})</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="32" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 12 -->
+
+
+    <p class="text">Con la misma lógica y las mismas consideraciones, la función que resuelve el problema en Octave, es:</p>
+
+    <div class="codigo octave">function r = volSRK(T, P, Tc=647.3, Pc=217.6, w=0.344)<br>    R = 0.082057;<br>    Tr = T/Tc;<br>    m = 0.484+1.515*w-0.44*w*w;<br>    alpha = 1+(2.756*m-0.7)*(1-sqrt(Tr))^2+m*(1-Tr);<br>    b = 0.08664*R*Tc/Pc;<br>    a = 0.42748*(R*Tc)^2/Pc;<br>    f = @(V) R*T/(V-b)-a*alpha/(V*(V+b))-P;<br>    xi = R*T/P;<br>    V = fzero(f,xi);<br>    r = round(V*1000)/1000;<br>end<br><br>volSRK(383.15, 2.04)<br>volSRK(403.15, 5)<br>volSRK(423.33, 6.97)<br>volSRK(443.15, 10)<br>volSRK(333.15, 3, 190.56, 45.39, 0.011)<br>volSRK(363.15, 5, 190.56, 45.39, 0.011)<br>volSRK(392.78, 8, 190.56, 45.39, 0.011)<br>volSRK(403.15, 10, 190.56, 45.39, 0.011)<br><br>% Resultados obtenidos:<br>ans = 15.167<br>ans = 6.3880<br>ans = 4.7740<br>ans = 3.4410<br>ans = 9.0840<br>ans = 5.9400<br>ans = 4.0160<br>ans = 3.2980</div>
+
+    <p class="text">Que son los mismos resultados que en JavaScript:</p>
+
+    <div class="ejercicio" id="ejercicio13" enunciado="1"><hr><div class="enunciado"><p class="ejercicio extern"><span class="ejercicio"></span>La ecuación de estado de Peng-Robinson, par el cálculo de la temperatura (T) o volumen (V), es: \[\begin{gathered} f(T|V) = \dfrac{RT}{V-b}-\dfrac{a\alpha}{V^2+2bV-b^2}-P = 0\\ \begin{aligned} \text{donde:}\\ a &amp;= 0.45274\dfrac{(R T_c)^2}{P_c}\\[3mm] b &amp;= 0.07780\dfrac{R T_c}{P_c}\\[3mm] \alpha &amp;= \left(1+m\left(1-\sqrt{T_r}\right) \right)^2\\[3mm] m &amp;= 0.37464+1.54226\omega-0.26992\omega^2\\[3mm] T_r &amp;= \dfrac{T}{Tc} \end{aligned} \end{gathered}\]Donde <dfn class="style1">T</dfn> es la temperatura del gas (en Kelvins), <dfn class="style1">P</dfn> la presión (en atmósferas), <dfn class="style1">V</dfn> el volumen molar (en l/mol), <dfn class="style1">R</dfn> la constante universal de los gases: 0.082057 (l*atm/K*mol), <dfn class="style1">Tc</dfn> la temperatura crítica (K), <dfn class="style1">Pc</dfn> la presión crítica (atm) y <dfn class="style1">ω</dfn> el factor acéntrico de Pitzer (adimensional). Las tres últimas propiedades dependen del compuesto con el que se está trabajando.</p></div><p class="pregunta"><span class="pregunta"></span>En Octave (empleando el formato "shortG"), programe la función "volPR", que reciba la temperatura "T", la presión "P" y las propiedades del compuesto con valores por defecto iguales a: Tc=647.3, Pc=217.6, w=0.344 (para el agua). Dentro de la función programe (como una función anónima "f") la ecuación de Peng-Robinson, calcule el valor inicial de prueba "xi" con la ecuación del gas ideal: R*T/P y resuelva la ecuación de Peng-Robinson empleando como valores iniciales 0.7*xi y 2*xi. Devuelva el resultado redondeado al cuarto dígito después del punto. Una vez elaborado el programa copie el código respectivo en la siguiente celda y ejecute el mismo para verificar si existen errores.</p><div id="pregunta67" class="calculadora" spellcheck="false"><div class="instruccion">`format shortG;<br>function r=volPR(T,P,Tc=647.3,Pc=217.6,w=0.344)<br>R=0.082057;<br>m=0.37464+1.54226*w-0.26992*w^2;<br>a=0.45274*(R*Tc)^2/Pc;<br>b=0.07780*R*Tc/Pc;<br>Tr=T/Tc;<br>alpha=(1+m*(1-sqrt(Tr)))^2;<br>f=@(V)R*T/(V-b)-a*alpha/(V^2+2*b*V-b^2)-P;<br>xi=R*T/P;<br>V=fzero(f,[0.7*xi,2*xi]);<br>r=round(V*1e4)/1e4;<br>endfunction`;</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con la función programada calcule el volumen del: <b class="style1">a)</b> vapor de agua a 390.2 K y 7.12 atm; <b class="style1">b)</b> del metano a 415.3 y 12 atm (propiedades del metano: Tc=190.56 K, Pc=45.39 atm, w=0.011). Una vez obtenidos los resultados, copie en la siguiente celda las instrucciones con las que se obtienen esos resultados y los resultados obtenidos.</p><div id="pregunta68" class="calculadora" spellcheck="false"><div class="instruccion">`volPR(390.2,7.12)<br>volPR(415.3,12,190.56,45.39,0.011)<br>ans=4.242<br>ans=2.8203`;</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="32" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 13 -->
+
+    <p class="text">Igualmente, con la misma lógica y consideraciones, la función que resuelve el problema en Python, es:</p>
+
+    <div class="codigo python">import math<br>from scipy.optimize import root_scalar<br><br>def volSRK(T, P, Tc=647.3, Pc=217.6, w=0.344):<br>    R = 0.082057<br>    Tr = T/Tc<br>    m = 0.484+1.515*w-0.44*w*w<br>    alpha = 1+(2.756*m-0.7)*(1-math.sqrt(Tr))**2+m*(1-Tr)<br>    b = 0.08664*R*Tc/Pc<br>    a = 0.42748*(R*Tc)**2/Pc<br>    f = lambda V: R*T/(V-b)-a*alpha/(V*(V+b))-P<br>    xi = R*T/P<br>    V = root_scalar(f, x0=xi).root<br>    return round(V, 3)<br><br>print(volSRK(383.15, 2.04))<br>print(volSRK(403.15, 5))<br>print(volSRK(423.33, 6.97))<br>print(volSRK(443.15, 10))<br>print(volSRK(333.15, 3, 190.56, 45.39, 0.011))<br>print(volSRK(363.15, 5, 190.56, 45.39, 0.011))<br>print(volSRK(392.78, 8, 190.56, 45.39, 0.011))<br>print(volSRK(403.15, 10, 190.56, 45.39, 0.011))<br><br>% Resultados obtenidos:<br>15.167<br>6.388<br>4.774<br>3.441<br>9.084<br>5.94<br>4.016<br>3.298</div>
+
+    <p class="text">Que, igualmente, son los mismos resultados obtenidos en JavaScript.</p>
+
+    <div class="ejercicio" id="ejercicio14" enunciado="0"><hr><div class="enunciado"><p class="ejercicio extern"><span class="ejercicio"></span>La ecuación de estado de Peng-Robinson, par el cálculo de la temperatura (T) o volumen (V), es: \[\begin{gathered} f(T|V) = \dfrac{RT}{V-b}-\dfrac{a\alpha}{V^2+2bV-b^2}-P = 0\\ \begin{aligned} \text{donde:}\\ a &amp;= 0.45274\dfrac{(R T_c)^2}{P_c}\\[3mm] b &amp;= 0.07780\dfrac{R T_c}{P_c}\\[3mm] \alpha &amp;= \left(1+m\left(1-\sqrt{T_r}\right) \right)^2\\[3mm] m &amp;= 0.37464+1.54226\omega-0.26992\omega^2\\[3mm] T_r &amp;= \dfrac{T}{Tc} \end{aligned} \end{gathered}\]Donde <dfn class="style1">T</dfn> es la temperatura del gas (en Kelvins), <dfn class="style1">P</dfn> la presión (en atmósferas), <dfn class="style1">V</dfn> el volumen molar (en l/mol), <dfn class="style1">R</dfn> la constante universal de los gases: 0.082057 (l*atm/K*mol), <dfn class="style1">Tc</dfn> la temperatura crítica (K), <dfn class="style1">Pc</dfn> la presión crítica (atm) y <dfn class="style1">ω</dfn> el factor acéntrico de Pitzer (adimensional). Las tres últimas propiedades dependen del compuesto con el que se está trabajando.</p></div><p class="pregunta"><span class="pregunta"></span>En Python, programe la función "volPR", que reciba la temperatura "T", la presión "P" y las propiedades del compuesto con valores por defecto iguales a: Tc=647.3, Pc=217.6, w=0.344 (para el agua). Dentro de la función programe (como una función lambda "f") la ecuación de Peng-Robinson, calcule el valor inicial de prueba "xi" con la ecuación del gas ideal: R*T/P y resuelva la ecuación de Peng-Robinson. Devuelva el resultado redondeado al cuarto dígito después del punto. Una vez elaborado el programa copie el código respectivo en la siguiente celda y ejecute el mismo para verificar si existen errores.</p><div id="pregunta69" class="calculadora" spellcheck="false"><div class="instruccion">`import math<br>from scipy.optimize import root_scalar<br>def volPR(T,P,Tc=647.3,Pc=217.6,w=0.344):<br>    R=0.082057<br>    m=0.37464+1.54226*w-0.26992*w**2<br>    Tr=T/Tc<br>    alpha=(1+m*(1-math.sqrt(Tr)))**2<br>    b=0.07780*R*Tc/Pc<br>    a=0.45274*(R*Tc)**2/Pc<br>    f=lambda V:R*T/(V-b)-a*alpha/(V**2+2*b*V-b**2)-P<br>    xi=R*T/P<br>    V=root_scalar(f,x0=xi).root<br>    return round(V,4)`;</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con la función programada calcule el volumen del: <b class="style1">a)</b> vapor de agua a 390.2 K y 7.12 atm; <b class="style1">b)</b> del metano a 415.3 y 12 atm (propiedades del metano: Tc=190.56 K, Pc=45.39 atm, w=0.011). Una vez obtenidos los resultados, copie en la siguiente celda las instrucciones con las que se obtienen esos resultados y los resultados obtenidos.</p><div id="pregunta70" class="calculadora" spellcheck="false"><div class="instruccion">`print(volPR(390.2,7.12))<br>print(volPR(415.3,12,190.56,45.39,0.011))<br>4.242<br>2.8203`;</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="32" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 14 -->
+
+
+
+    <div id="generarPrueba" data-scroll-y="28682.271484375"><br><hr><label class="lnotacapitulo">Nota del capítulo: </label><input type="text" id="notaCapitulo" disabled="disabled" class="itnotacapitulo"><br><br><button id="btGenerarPrueba" style="visibility: visible;" onclick="capitulo.registrarCapitulo()">Iniciar defensa</button><button id="btEmplearBono" style="margin-left:1.1rem;width:9.686rem;display:none;" onclick="capitulo.emplearBono()">Emplear Bono</button><br><br></div>
+
+
+<d id="dAutor" style="font-size: 0.9rem;text-align:center;color: #0808f24f;font-weight:bolder;position:fixed;top: 5px;right: 5px;user-select:none;display:inline-block;z-index:15;">Hernan G. Peñaranda V.</d></div><!-- Cierre del div capítulo -->
+
+<div id="dato" style="display:none;">JK5KCZ0r938lCZ0oDYGrDoqpE3Km93SmCJ0aCpKs93CrDYGnC30aC2HsQ59tDW00</div>
+<div id="reg" style="display:none;">Cp0mCJioC34mEp8mCJ0xCJ4mEp4nC3inCJ0mEp8mCJ0xCZ0nEp4nC3ipC30nEp4nC30xCp0mCJioC34xCJ4m</div>
+
+
+
+
+
+
+<div id="divDialogo" style="display: none;"><div onfocus="document.querySelector('#divDialogo input').focus();"><div>Carnet universitario</div><div>Escriba el número de su carnet universitario, verificando que el guión haya sido correctamente insertado.</div><input type="text" onkeydown="return Capitulo.divDialogo.funKeydown(event)" onkeyup="Capitulo.divDialogo.funKeyup(event)"><div><button onclick="Capitulo.divDialogo.funClick('aceptar');">Aceptar</button><button style="margin-left:35px;" onclick="Capitulo.divDialogo.funClick('cancelar');">Cancelar</button></div></div></div></body>

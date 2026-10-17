@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<head>
+
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Language" content="es">
+  
+  <title>57-3850 capítulo 7</title>
+
+  
+    <!-- Librería y hoja de estilos KATEX  -->
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/katex/katex.min.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/katex/katex.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/katex/contrib/auto-render.min.js"></script>
+
+    <!-- Librerías y hojas de estilo CodeMirror -->
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/lib/codemirror.min.css">
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/theme/mdn-like.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/lib/codemirror.min.js"></script>
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/fold/foldgutter.min.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/fold/foldcode.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/fold/brace-fold.min.js"></script>
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/dialog/dialog.min.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/dialog/dialog.min.js"></script>
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/hint/show-hint.min.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/hint/show-hint.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/hint/javascript-hint.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/search/searchcursor.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/search/search.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/edit/matchbrackets.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/edit/closebrackets.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/comment/comment.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/wrap/hardwrap.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/javascript/javascript.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/mathematica/mathematica.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/octave/octave.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/python/python.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/css/css.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/xml/xml.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/markdown/markdown.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/htmlmixed/htmlmixed.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/keymap/sublime.min.js"></script>
+    
+    <!-- Librería Plotly -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script><style id="plotly.js-style-global"></style><style id="plotly.js-style-global"></style>
+
+    <!-- Librerías y hojas de estilo function-plot -->
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/function-plot/site/js/vendor/d3.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/function-plot/dist/function-plot.js"></script>
+    
+    <!-- Librería quantities -->
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/quantities/quantities.min.js"></script>
+
+    <!-- Librería GoJs para la creación de diagramas de flujo -->
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/gojs/release/go.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/flowchart_gojs.js"></script>
+
+    <!-- Librerías matemáticas propias -->
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/math.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/number.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/array.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/string.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/cplx.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/function.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/object.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/prq.js"></script>
+
+    <!-- Librería y hoja de estilos propias para la creación y manejo de la calculadora  -->
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/src/cjs.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/cjs_.js"></script>
+
+    <!-- Librería y hoja de estilos propias para la creación y manejo de los capítulos -->
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/src/texto.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/texto_.js"></script>
+
+   <!-- Librería del capítulo actual -->
+    <script src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo7/capitulo7.js"></script>
+
+    <!-- Fuentes empleadas en el capítulo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;600;700;800&amp;family=Roboto+Mono&amp;display=swap" rel="stylesheet">
+
+    <script>
+        function katexRender() {
+            renderMathInElement(document.getElementById("capitulo"));
+        }
+        document.addEventListener("DOMContentLoaded", katexRender);
+        window.onerror = function(msg, url, lineNo, columnNo, error) {
+            __error__ = msg;
+        };
+        window.onload = function(){
+            capitulo.iniciar();
+        };
+    </script>
+
+</head>
+
+<body class="text">  
+
+
+<div id="capitulo">
+
+    <button id="btGuardar" style="z-index:15;" onclick="savePage()">Guardar</button>
+
+        
+
+    <h1 class="text" onclick="alerta(capitulo.idPagina,'')" style="cursor: pointer;">Ecuaciones Lineales 2</h1>
+
+
+    
+    <p class="text">Como ya se dijo, los métodos directos sólo permiten resolver sistemas con algunos cientos de ecuaciones lineales, por la acumulación de errores que se produce debido a la <i class="style1">propagación del error</i>.</p>
+    
+    <p class="text">Cuando se tienen sistemas con miles o cientos de miles de ecuaciones lineales, se debe recurrir a métodos iterativos. En este capítulo se estudian dos de dichos métodos: el método de <i class="style1">Jacobi</i> y el método de <i class="style1">Gauss-Seidel</i>.</p>
+    
+    <p class="text">Por otra parte, en la solución de algunos problemas, sobre todo en el campo de la ingeniería aplicada, se presentan <i class="style1">sistemas tridiagonales</i>, es decir sistemas que sólo tienen valores en su diagonal principal y las dos diagonales adyacentes, siendo el resto de los elementos iguales a cero. En este capítulo se modifican dos métodos: el de <i class="style1">Gauss</i> y el de <i class="style1">Gauss-Seidel</i>, para resolver este tipo de sistemas.</p>
+    
+    
+    
+    
+    <h2 class="text">Método de Jacobi</h2>
+    
+    <p class="text">Uno de los métodos iterativos más sencillos es el de Jacobi (que es equivalente al método de sustitución directa pero aplicado a sistemas de ecuaciones lineales, en lugar de ecuaciones simples).</p>
+    
+    <p class="text">En este método se asumen valores iniciales para todas las incógnitas (lo más usual y cómodo es asumirlos iguales a cero), luego, con la primera ecuación se calcula el valor de la primera incógnita, con la segunda el valor de la segunda incógnita y así sucesivamente.</p>
+    
+    <p class="text">Para decidir si el proceso concluye o no, se verifica si se cumple una de las siguientes condiciones: a) Que los valores calculados sean iguales a los asumidos en un determinado número de dígitos (precisión) o b) Que se cumplan las igualdades del sistema en un determinado número de dígitos (exactitud). Si se cumple una de estas condiciones el proceso concluye, caso contrario los valores calculados se convierten en valores asumidos y el proceso se repite.</p>
+    
+    <p class="text">Para comprender mejor el método, se resolverá el siguiente sistema de ecuaciones lineales, aplicando el proceso, hasta que se cumpla la condición de precisión o exactitud, en 4 dígitos:</p>
+    
+    <table class="ecuacion" id="ec1">
+        <tbody><tr>
+            <td>
+                \[                \begin{matrix}                10x_0&amp;+&amp;x_1&amp;+&amp;2x_2&amp;=&amp;44\\                2x_0&amp;+&amp;10x_1&amp;+&amp;x_2&amp;=&amp;51\\                x_0&amp;+&amp;2x_1&amp;+&amp;10x_2&amp;=&amp;61                \end{matrix}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">Se crean las variables para guardar los nuevos valores calculados ("y"), los restos de las ecuaciones ("r") y los valores asumidos (en este caso iguales a cero) para las incógnitas ("x"):</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var y = [], r = [], x = [].zeros(3)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Se calculan los nuevos valores de "x" (que se guardan en "y" y se muestran con una precisión de 4 dígitos) despejando la primera variable de la primera ecuación, la segunda de la segunda y la tercera de la tercera:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">y[0] = (44-x[1]-2*x[2])/10;<br>y[1] = (51-2*x[0]-x[2])/10;<br>y[2] = (61-x[0]-2*x[1])/10;<br>y.precision(4)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Con estos valores, se calculan los restos de cada ecuación y se guardan en "r", mostrándolos redondeados al cuarto dígito después del punto:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">r[0] = 44-(10*y[0]+y[1]+2*y[2]);<br>r[1] = 51-(2*y[0]+10*y[1]+y[2]);<br>r[2] = 61-(y[0]+2*y[1]+10*y[2]);<br>r.round(4)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Como se puede ver, y era de esperar, al tratarse de la primera iteración, los nuevos valores calculados ("y") no son iguales a los asumidos ("x") y los restos ("r") tampoco son cercanos a cero, por lo que el proceso debe ser repetido, pero empleando ahora los valores calculados como valores asumidos:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">x = y.slice();<br>y[0] = (44-x[1]-2*x[2])/10;<br>y[1] = (51-2*x[0]-x[2])/10;<br>y[2] = (61-x[0]-2*x[1])/10;<br>y.precision(4)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">r[0] = 44-(10*y[0]+y[1]+2*y[2]);<br>r[1] = 51-(2*y[0]+10*y[1]+y[2]);<br>r[2] = 61-(y[0]+2*y[1]+10*y[2]);<br>r.round(4)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Una vez más, los valores asumidos ("x") no son iguales a los calculados ("y") y los restos ("r") no son cercanos a cero, por lo que el proceso se repite hasta que se cumpla una de estas condiciones:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">x = y.slice();<br>y[0] = (44-x[1]-2*x[2])/10;<br>y[1] = (51-2*x[0]-x[2])/10;<br>y[2] = (61-x[0]-2*x[1])/10;<br>y.precision(4)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">r[0] = 44-(10*y[0]+y[1]+2*y[2]);<br>r[1] = 51-(2*y[0]+10*y[1]+y[2]);<br>r[2] = 61-(y[0]+2*y[1]+10*y[2]);<br>r.round(4)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">x = y.slice();<br>y[0] = (44-x[1]-2*x[2])/10;<br>y[1] = (51-2*x[0]-x[2])/10;<br>y[2] = (61-x[0]-2*x[1])/10;<br>y.precision(4)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">r[0] = 44-(10*y[0]+y[1]+2*y[2]);<br>r[1] = 51-(2*y[0]+10*y[1]+y[2]);<br>r[2] = 61-(y[0]+2*y[1]+10*y[2]);<br>r.round(4)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">x = y.slice();<br>y[0] = (44-x[1]-2*x[2])/10;<br>y[1] = (51-2*x[0]-x[2])/10;<br>y[2] = (61-x[0]-2*x[1])/10;<br>y.precision(4)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">r[0] = 44-(10*y[0]+y[1]+2*y[2]);<br>r[1] = 51-(2*y[0]+10*y[1]+y[2]);<br>r[2] = 61-(y[0]+2*y[1]+10*y[2]);<br>r.round(4)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">x = y.slice();<br>y[0] = (44-x[1]-2*x[2])/10;<br>y[1] = (51-2*x[0]-x[2])/10;<br>y[2] = (61-x[0]-2*x[1])/10;<br>y.precision(4)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">r[0] = 44-(10*y[0]+y[1]+2*y[2]);<br>r[1] = 51-(2*y[0]+10*y[1]+y[2]);<br>r[2] = 61-(y[0]+2*y[1]+10*y[2]);<br>r.round(4)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">x = y.slice();<br>y[0] = (44-x[1]-2*x[2])/10;<br>y[1] = (51-2*x[0]-x[2])/10;<br>y[2] = (61-x[0]-2*x[1])/10;<br>y.precision(4)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">r[0] = 44-(10*y[0]+y[1]+2*y[2]);<br>r[1] = 51-(2*y[0]+10*y[1]+y[2]);<br>r[2] = 61-(y[0]+2*y[1]+10*y[2]);<br>r.round(4)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">x = y.slice();<br>y[0] = (44-x[1]-2*x[2])/10;<br>y[1] = (51-2*x[0]-x[2])/10;<br>y[2] = (61-x[0]-2*x[1])/10;<br>y.precision(4)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">r[0] = 44-(10*y[0]+y[1]+2*y[2]);<br>r[1] = 51-(2*y[0]+10*y[1]+y[2]);<br>r[2] = 61-(y[0]+2*y[1]+10*y[2]);<br>r.round(4)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">x = y.slice();<br>y[0] = (44-x[1]-2*x[2])/10;<br>y[1] = (51-2*x[0]-x[2])/10;<br>y[2] = (61-x[0]-2*x[1])/10;<br>y.precision(4)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">r[0] = 44-(10*y[0]+y[1]+2*y[2]);<br>r[1] = 51-(2*y[0]+10*y[1]+y[2]);<br>r[2] = 61-(y[0]+2*y[1]+10*y[2]);<br>r.round(4)</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="text">En la última iteración se cumple la condición de precisión en 4 dígitos, aunque no la condición de exactitud, pero como se cumple una de ellas el proceso concluye, siendo las soluciones: x<sub>0</sub> = 3, x<sub>1</sub> = 4, x<sub>2</sub> = 5.</p>
+
+    
+    
+    
+    <h2 class="text">Algoritmo</h2>
+    
+    <p class="text">La convergencia del método de Jacobi está garantizada si el sistema tiene una <dfn class="style1">diagonal dominante</dfn>, esto es si los elementos de la diagonal principal de la matriz de coeficientes, son mayores (en valor absoluto) a la suma de los otros elementos de sus respectivas filas, tal como ocurre en la ecuación <a href="#ec1">(1)</a>.</p>
+    
+    <p class="text">Si el sistema no tiene una diagonal dominante la convergencia no está garantizada, es decir que no se puede garantizar que el método encuentre las soluciones. En ocasiones es posible transformar un sistema en una diagonal dominante mediante intercambios de filas.</p>
+    
+    <p class="text">La ecuación general para el cálculo de los nuevos valores (x'), a partir de los valores asumidos (x) (deducida en base al ejemplo manual) es:</p>
+    
+    <table class="ecuacion" id="ec2">
+        <tbody><tr>
+            <td>
+                \[                x'_i = \dfrac{a_{i,n}-\displaystyle\sum_{j=0}^{n-1}a_{i,j}x_j \begin{cases}j\ne i\end{cases}}{a_{i,i}}                \hspace{0.2cm}                \begin{cases}                \\                i = 0 \rightarrow n-1\\                \\                \end{cases}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">El algoritmo que automatiza el proceso de cálculo, haciendo uso de esta ecuación, es:</p>
+    
+    <p class="figurasn"><img src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo7/files/jacobi.png" alt="Algoritmo para resolver un sistema de ecuaciones lineales por el método de Jacobi"></p>
+    
+    <p class="text">El código respectivo, ha sido añadido como un método la clase Array, por lo que debe ser llamado desde la matriz aumentada del sistema de ecuaciones lineales.</p>
+
+    
+    <h3 class="text">Ejemplo</h3>
+    
+    <p class="ejemplo"><span class="ejemplo"></span>Encuentre la solución (el valor de “x”) de la siguiente función, resolviendo el sistema de ecuaciones lineales con el método de Jacobi (redondeando los resultados al noveno dígito después del punto), la ecuación polinomial con “roots” (redondeando los resultados al sexto dígito después del punto) y la ecuación no lineal con el método de la biseción, con una precisión/exactitudo de 7 dígitos y mostrando los resultados con esa precisión. Los valores iniciales para resolver la ecuación no lineal (el segmento de solución) deben ser encontrados con el método segmentoSol, redondeado los resultados al segundo dígito después del punto (se sabe que la solución es menor a 7).</p>
+
+    <table class="ecuacion" id="ec3" style="margin-left:1cm; width:calc(100% - 1cm);">
+        <tbody><tr>
+            <td>
+                \[                \begin{gathered}                f(x) = z_3x^{3.2}+z_2\ln(x)-z_0x-z1 = 0\\[4mm]                \begin{aligned}                12y_0+3y_1-2y_2-4y_3&amp;=-17.3\\                15y_1+6y_2-4y_3&amp;=64.7\\                -y_0+7y_1+13y_2+3y_3&amp;=-550.3\\                y_0+5y_2+10y_3&amp;=36.7                \end{aligned}\\[12mm]                z^4+y_0z^3+y_1z^2+y_2z+y_3 = 0                \end{gathered}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">Este problema es similar a los resueltos en los capítulos anteriores, sólo que ahora el sistema de ecuaciones lineales se resuelve con el método de Jacobi:</p>
+    
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var y = [[12, 3, -2, -4, -17.3],<br>         [0, 15, 6, -4, 64.7],<br>         [-1, 7, 13, 3, -550.3],<br>         [1, 0, 5, 10, 36.7]].jacobi().round(9);<br>var z = [1, y[0], y[1], y[2], y[3]].roots().round(6);<br>var f = x =&gt; z[3]*x**3.2+z[2]*Math.log(x)-z[0]*x-z[1];<br>var [xi, xf] = f.segmentoSol({xi:7, dx:-0.1}).round(2);<br>f.biseccion({xi, xf, err:7}).precision(7)</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <br>
+    <div class="ejercicio" id="ejercicio1" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Resuelva el siguiente sistema de ecuaciones lineales, con el método de Jacobi (precision/exactitud por defecto), redondeando los resultados al tercer dígito después del punto.</p>\[\begin{array}{r c r c r c r}4x_0&amp;+&amp;x_1&amp;+&amp;2x_2&amp;=&amp;5\\x_0&amp;+&amp;7x_1&amp;+&amp;3x_2&amp;=&amp;8\\2x_0&amp;+&amp;3x_1&amp;+&amp;9x_2&amp;=&amp;3\end{array}\]</div><p class="pregunta"><span class="pregunta"></span></p><div id="pregunta1" class="calculadora" spellcheck="false"><div class="instruccion">[<br>  [4, 1, 2, 5],<br>  [1, 7, 3, 8],<br>  [2, 3, 9, 3]<br>].jacobi().round(3)</div><div class="resultado"></div><div class="instruccion"></div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="5" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 1 -->
+    
+    <div class="ejercicio" id="ejercicio2" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Resuelva el siguiente sistema de ecuaciones lineales, con el método de Jacobi (precision/exactitud por defecto), redondeando los resultados al tercer dígito después del punto.</p>\[\begin{array}{r c r c r c r}14x_0&amp;+&amp;3x_1&amp;+&amp;x_2&amp;=&amp;35\\4x_0&amp;+&amp;16x_1&amp;+&amp;2x_2&amp;=&amp;38\\3x_0&amp;+&amp;2x_1&amp;+&amp;18x_2&amp;=&amp;43\end{array}\]</div><p class="pregunta"><span class="pregunta"></span></p><div id="pregunta4" class="calculadora" spellcheck="false"><div class="instruccion">[<br>  [14, 3, 1, 35],<br>  [4, 16, 2, 38],<br>  [3, 2, 18, 43]<br>].jacobi().round(3)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="5" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 2 -->
+    
+    <div class="ejercicio" id="ejercicio3" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Resuelva el siguiente sistema de ecuaciones lineales, con el método de Jacobi (precision/exactitud: 9 dígitos), redondeando los resultados al quinto dígito después del punto.</p>\[\begin{array}{r c r c r c r}22x_0&amp;-&amp;2x_1&amp;+&amp;5x_2&amp;+&amp;2x_3&amp;=&amp;13\\x_0&amp;+&amp;31x_1&amp;+&amp;3x_2&amp;+&amp;3x_3&amp;=&amp;20\\3x_0&amp;-&amp;x_1&amp;+&amp;43x_2&amp;+&amp;5x_3&amp;=&amp;12\\4x_0&amp;+&amp;3x_1&amp;+&amp;x_2&amp;+&amp;21x_3&amp;=&amp;15\end{array}\]</div><p class="pregunta"><span class="pregunta"></span></p><div id="pregunta7" class="calculadora" spellcheck="false"><div class="instruccion">[<br>  [22, -2, 5, 2, 13],<br>  [1, 31, 3, 3, 20],<br>  [3, -1, 43, 5, 12],<br>  [4, 3, 1, 21, 15]<br>].jacobi({err:9}).round(5)</div><div class="resultado"></div><div class="instruccion"></div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="5" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 3 -->
+    
+    <div class="ejercicio" id="ejercicio4" enunciado="1"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Para resolver la siguiente ecuación no lineal, encontrar el valor de "x", resuelva el sistema de ecuaciones lineales con el método de Jacobi (precisión/exactitud por defecto) redondeando los resultados al tercer dígito después del punto. Resuelva la ecuación polinomial con "roots" (precisión/exactitud por defecto) redondeando los resultados al tercer dígito después del punto. Programe la ecuación no lineal "f", como una función flecha, encuentre el segmento de solución ("xi", "xf") con segmentoSol (valor inicial 0.5) y resuelva la ecuación con el método de la bisección (precisión/exactitud: 10 dígitos) redondeando el resultado al cuarto dígito después del punto.\[\begin{gathered}f(x) = y_0y_1x^{1.3}-z_4z_3\ln(x)+\dfrac{y_2y_3}{y_4}\text{e}\raisebox{1.2em}{$\large{\frac{x}{z_2+z_1}}$}-z_0y_4=0\\[4mm]\begin{aligned}12y_0+y_2-y_3+y_4&amp;=14.3\\y_0-10y_1+2y_2+y_3-2y_4&amp;=-12.1\\3y_0+y_1-12y_2+y_3+3y_4&amp;=-4.4\\y_0+2y_1+3y_2-14y_3+y_4&amp;=-17.9\\y_0+3y_1+y_2-y_3-10y_4&amp;=-16.6\end{aligned}\\[15mm]z^5-11.8z^4+54.8z^3-125.042z^2+140.02z-61.4916 = 0\end{gathered}\]</p></div><p class="pregunta"><span class="pregunta"></span></p><div id="pregunta12" class="calculadora" spellcheck="false"><div class="instruccion">var y = [[12, 0, 1, -1, 1, 14.3],<br>         [1, -10, 2, 1, -2, -12.1],<br>         [3, 1, -12, 1, 3, -4.4],<br>         [1, 2, 3, -14, 1, -17.9],<br>         [1, 3, 1, -1, -10, -16.6]].jacobi().round(3);<br>var z = [1, -11.8, 54.8, -125.042, 140.02, -61.4916].roots().round(3);<br>var f = x =&gt; y[0] * y[1] * x**1.3 - z[4] * z[3] * Math.log(x) + y[2] * y[3] / y[4] * Math.exp(x / (z[2] + z[1])) - z[0] * y[4] ;<br>var [xi, xf] = f.segmentoSol({xi: 0.5});<br>f.biseccion({xi, xf, err: 10}).round(4)</div><div class="resultado"></div></div><p class="pregunta" id="pregunta13"><span class="pregunta"></span>La cuarta solución, del sistema de ecuaciones lineales, se encuentra guardada en <span class="campo_literal correcta" tabindex="0" contenteditable="true">y[3]</span>.<br>La quinta solución de la ecuación polinomial, se encuentra guardada en <span class="campo_literal correcta" tabindex="0" contenteditable="true">z[4]</span>.<br>La solución de la ecuación no lineal (f) se encuentra entre el valor de <span class="campo_literal correcta" tabindex="0" contenteditable="true">xi</span> y el de <span class="campo_literal correcta" tabindex="0" contenteditable="true">xf</span>.<br>Los valores que genera el método de la bisección, para encontrar la solución, corresponden a los valores de la variable <span class="campo_literal correcta" tabindex="0" contenteditable="true">xf</span> de la función "f".<br>Si se calcula el valor de "f" con la solución encontrada, su valor será aproximadamente igual a <span class="campo_literal correcta" tabindex="0" contenteditable="true">3.5088</span>.</p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="29" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 4 -->
+    
+    <div class="ejercicio" id="ejercicio5" enunciado="2"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Para resolver la siguiente ecuación no lineal, encontrar el valor de "x", resuelva el sistema de ecuaciones lineales con el método de Jacobi (precisión/exactitud por defecto) redondeando los resultados al primer dígito después del punto. Resuelva la ecuación polinomial con "roots" (precisión/exactitud por defecto) ordenando los resultados con "sort" y redondeando los resultados al primer dígito después del punto. Finalmente programe la ecuación no lineal "f" como una función flecha.\[\begin{gathered}f(x) = z_0z_3x^{1.2}-y_3y_4\log(x)+\text{e}\raisebox{1.2em}{$\large{\frac{xz_1}{y_2z_2}}$}-(y_0+y_1+z_4)^{2.5739}=0\\[4mm]\begin{aligned}13z_0+z_1-2z_2+z_3-z_4&amp;=24.8\\3z_0-12z_1+3z_2+z_3-4z_4&amp;=-18.7\\2z_0+z_1-14z_2+2z_3+z_4&amp;=-14\\z_0+4z_1-6z_2+14z_3-3z_4&amp;=25.4\\2z_0+2z_1-4z_2-5z_3+16z_4&amp;=29.6\end{aligned}\\[15mm]y^5-6.5y^4+16.85y^3-21.775y^2+14.0274y-3.6036 = 0\end{gathered}\]</p></div><p class="pregunta"><span class="pregunta"></span>Complete y ejecute el siguiente código, que </p><div id="pregunta22" class="calculadora" spellcheck="false"><div class="instruccion">var z = [[13, 1, -2, 1, -1, 24.8],<br>         [3, -12, 3, 1, -4, -18.7],<br>         [2, 1, -14, 2, 1, -14],<br>         [1, 4, -6, 14, -3, 25.4],<br>         [2, 2, -4, -5, 16, 29.6]].jacobi().round(1);<br>var y = [1, -6.5, 16.85, -21.775, 14.0274, -3.6036].roots().sort().round(1);<br>var f = x =&gt; z[0] * z[3] * x**1.2 - y[3] * y[4] * Math.log10(x) + Math.exp(x * z[1] / (y[2] * z[2])) - (y[0] + y[1] + z[4])**2.5739 ;</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con la ecuación no lineal programada (f), encuentre la solución aproximada, dibujándola cuantas veces sea necesario (se sabe que la solución es mayor o igual a 1). Finalmente, en otra celda de código, encuentre la solución de la ecuación no lineal (el valor de "x") con el método de Regula Falsi (precisión/exactitud de 8 dígitos) empleando el segmento de solución leído de la gráfica y redondeando el resultado al segundo dígito después del punto.</p><div id="pregunta23" class="calculadora" spellcheck="false"><div class="instruccion">plot({f, xi: 4, xf: 9})</div><div class="resultado"></div><div class="instruccion">f.refa({xi: 4, xf: 9, err: 8}).round(2)</div><div class="resultado"></div></div><p class="pregunta" id="pregunta24"><span class="pregunta"></span>La primera solución, del sistema de ecuaciones lineales, se encuentra guardada en <span class="campo_literal correcta" tabindex="0" contenteditable="true">z[0]</span>.<br>La segunda solución de la ecuación polinomial, se encuentra guardada en <span class="campo_literal correcta" tabindex="0" contenteditable="true">y[1]</span>.<br>¿Se puede resolver primero el polinomio y luego el sistema de ecuaciones lineales? (si/no) <span class="campo_literal correcta" tabindex="0" contenteditable="true">si</span>.</p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="32" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 5 -->
+    
+    <div class="ejercicio" id="ejercicio6" enunciado="1"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Para resolver (encontrar el valor de "z") de la siguiente ecuación no lineal, resuelva el sistema de ecuaciones lineales con el método de Jacobi (precisión/exactitud por defecto) redondeando los resultados al tercer dígito después del punto. Resuelva la ecuación polinomial con "roots" (precisión/exactitud por defecto) ordenando los resultados con "sort" y redondeando los resultados al primer dígito después del punto. Finalmente programa la ecuación no lineal "f" como una función flecha.\[\begin{gathered}f(z) = x_0x_1z^{1.4}-\ln\left(\dfrac{z}{y_3+y_4}\right)+\text{e}\raisebox{1.2em}{$\large{\frac{zx_2x_3}{y_1+y_2}}$}-(y_0+x_4)^{1.8693}=0\\[4mm]\begin{aligned}16x_0+2x_1-2x_2+3x_3-x_4&amp;=26.7\\3x_0-18x_1+4x_2+2x_3-4x_4&amp;=-18.9\\4x_0+2x_1-14x_2+3x_3-x_4&amp;=-8.3\\x_0+4x_1-3x_2+15x_3-4x_4&amp;=19.6\\3x_0+2x_1-3x_2-3x_3+17x_4&amp;=24.7\end{aligned}\\[15mm]y^5-11.5y^4+52.85y^3-121.325y^2+139.1274y-63.756 = 0\end{gathered}\]</p></div><p class="pregunta"><span class="pregunta"></span></p><div id="pregunta28" class="calculadora" spellcheck="false"><div class="instruccion">var x = [[16, 2, -2, 3, -1, 26.7],<br>         [3, -18, 4, 2, -4, -18.9],<br>         [4, 2, -14, 3, -1, -8.3],<br>         [1, 4, -3, 15, -4, 19.6],<br>         [3, 2, -3, -3, 17, 24.7]].jacobi().round(3);<br>var y = [1, -11.5, 52.85, -121.325, 139.1274, -63.756].roots().sort().round(1);<br>var f = z =&gt; x[0] * x[1] * z**1.4 - Math.log(z / (y[3] + y[4])) + Math.exp(z * x[2] * x[3] / (y[1] + y[2])) - (y[0] + x[4])**1.8693;</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con la ecuación no lineal programada (f), encuentre la solución aproximada, dibujándola cuantas veces sea necesario (se sabe que la solución es mayor o igual a 1). Finalmente, en otra celda de código, encuentre la solución de la ecuación no lineal (el valor de "x") con el método de la bisección (precisión/exactitud de 10 dígitos) empleando el segmento de solución leído de la gráfica y redondeando el resultado al tercer dígito después del punto.</p><div id="pregunta29" class="calculadora" spellcheck="false"><div class="instruccion">plot({f, xi: 1, xf: 4})</div><div class="resultado"></div><div class="instruccion">f.biseccion({xi: 1, xf: 4, err: 10}).round(3)</div><div class="resultado"></div></div><p class="pregunta" id="pregunta30"><span class="pregunta"></span>La segunda solución, del sistema de ecuaciones lineales, se encuentra guardada en <span class="campo_literal correcta" tabindex="0" contenteditable="true">x[1]</span>.<br>La primera solución de la ecuación polinomial, se encuentra guardada en <span class="campo_literal correcta" tabindex="0" contenteditable="true">y[0]</span>.<br>Cuando el método de la bisección llama a "f" ¿Se vuelve a resolver el sistema de ecuaciones lineales? (si/no) <span class="campo_literal correcta" tabindex="0" contenteditable="true">no</span>.</p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="32" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 6 -->
+    
+    
+    
+    
+    <h2 class="text">Método de Gauss-Seidel</h2>
+    
+    
+    <p class="text">El método de Gauss–Seidel es una variación del de Jacobi. En esta variación se emplean los nuevos valores calculados tan pronto como están disponibles (en lugar emplearlos recién en la siguiente iteración).</p>
+    
+    <p class="text">Entonces la primera incógnita se calcula con los valores asumidos, pero en la segunda se emplea el valor calculado para la primera, en la tercera se emplean los valores calculados para la primera y segunda y así sucesivamente.</p>
+    
+    <p class="text">Para comprender mejor el proceso se resolverá, en la calculadora, el sistema de ecuaciones <a href="#ec1">(1)</a>, encontrando las soluciones con 5 dígitos de precisión o exactitud.</p>
+
+    <table class="ecuacion" style="counter-reset: ecuación 0;">
+        <tbody><tr>
+            <td>
+                \[                \begin{matrix}                10x_0&amp;+&amp;x_1&amp;+&amp;2x_2&amp;=&amp;44\\                2x_0&amp;+&amp;10x_1&amp;+&amp;x_2&amp;=&amp;51\\                x_0&amp;+&amp;2x_1&amp;+&amp;10x_2&amp;=&amp;61                \end{matrix}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">Se crean las variables para guardar los restos de las ecuaciones ("r") y los valores de las incógnitas ("x", inicialmente iguales a cero), no se requiere de otra variable para los valores calculados, porque son empleados tan pronto están disponibles:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var r =[], x = [].zeros(3)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Se calculan los nuevos valores de "x" (y se utilizan al mismo tiempo, por esta razón se emplea la misma variable):</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">x[0] = (44-x[1]-2*x[2])/10;<br>x[1] = (51-2*x[0]-x[2])/10;<br>x[2] = (61-x[0]-2*x[1])/10;<br>x.precision(5)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Con estos valores, se calculan los restos de cada ecuación y se guardan en "r", mostrándolos redondeados al cuarto dígito después del punto:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">r[0] = 44-(10*x[0]+x[1]+2*x[2]);<br>r[1] = 51-(2*x[0]+10*x[1]+x[2]);<br>r[2] = 61-(x[0]+2*x[1]+10*x[2]);<br>r.round(5)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Como se puede ver y era de esperar, al tratarse de la primera iteración, los nuevos valores calculados ("y") no son iguales a los asumidos ("x") y no todos los restos ("r") son cercanos a cero, por lo que el proceso debe ser repetido (con los nuevos valores de "x"):</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">x[0] = (44-x[1]-2*x[2])/10;<br>x[1] = (51-2*x[0]-x[2])/10;<br>x[2] = (61-x[0]-2*x[1])/10;<br>x.precision(5)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">r[0] = 44-(10*x[0]+x[1]+2*x[2]);<br>r[1] = 51-(2*x[0]+10*x[1]+x[2]);<br>r[2] = 61-(x[0]+2*x[1]+10*x[2]);<br>r.round(5)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Una vez más, los valores asumidos ("x") no son iguales a los calculados ("y") y los restos ("r") aún no son lo suficientemente cercanos a cero, por lo que el proceso se repite hasta que se cumpla una de estas condiciones:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">x[0] = (44-x[1]-2*x[2])/10;<br>x[1] = (51-2*x[0]-x[2])/10;<br>x[2] = (61-x[0]-2*x[1])/10;<br>x.precision(5)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">r[0] = 44-(10*x[0]+x[1]+2*x[2]);<br>r[1] = 51-(2*x[0]+10*x[1]+x[2]);<br>r[2] = 61-(x[0]+2*x[1]+10*x[2]);<br>r.round(5)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">x[0] = (44-x[1]-2*x[2])/10;<br>x[1] = (51-2*x[0]-x[2])/10;<br>x[2] = (61-x[0]-2*x[1])/10;<br>x.precision(5)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">r[0] = 44-(10*x[0]+x[1]+2*x[2]);<br>r[1] = 51-(2*x[0]+10*x[1]+x[2]);<br>r[2] = 61-(x[0]+2*x[1]+10*x[2]);<br>r.round(5)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">x[0] = (44-x[1]-2*x[2])/10;<br>x[1] = (51-2*x[0]-x[2])/10;<br>x[2] = (61-x[0]-2*x[1])/10;<br>x.precision(5)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">r[0] = 44-(10*x[0]+x[1]+2*x[2]);<br>r[1] = 51-(2*x[0]+10*x[1]+x[2]);<br>r[2] = 61-(x[0]+2*x[1]+10*x[2]);<br>r.round(5)</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="text">En la última iteración se cumple la condición de precisión en 5 dígitos y  sólo uno de los elementos no cumple la condición de exactitud, siendo las soluciones: x<sub>0</sub> = 3, x<sub>1</sub> = 4, x<sub>2</sub> = 5.</p>
+
+    <p class="text">Como se puede ver, este método requiere menos iteraciones que el de Jacobi, no obstante, el método de Jacobi puede ser programado en paralelo, pues el cálculo depende de los valores de la iteración previa (no de la iteración actual), por lo que resulta más adecuado para los procesadores actuales de múltiples núcleos.</p>
+    
+
+    
+    <h3 class="text">Algoritmo</h3>
+    
+    <p class="text">La ecuación general para el cálculo de los nuevos valores, deducida en base al ejemplo manual, es:</p>
+    
+    <table class="ecuacion" id="ec4" style="counter-reset: ecuación 3">
+        <tbody><tr>
+            <td>
+                \[                x'_i = \dfrac{a_{i,n}-\displaystyle\sum_{j=0}^{n-1}a_{i,j}x_j \begin{cases}j\ne i\end{cases}}{a_{i,i}}                \hspace{0.2cm}                \begin{cases}                \\                i = 0 \rightarrow n-1\\                \\                \end{cases}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">Donde “a” es la matriz aumentada y “n” el número de filas. Los valores asumidos deben ser conservados en otro vector (“y”), sólo para efectos de comparación (para verificar si se cumple o no la precisión/exactitud establecida).</p>
+    
+    <p class="text">El algoritmo que automatiza el proceso de cálculo y que hace uso de esta ecuación, es:</p>
+    
+    <p class="figurasn"><img src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo7/files/gseidel.png" alt="Algoritmo para resolver sistemas de ecuaciones lineales por el método de Gauss Seidel"></p>
+    
+    <p class="text">El código respectivo, ha sido añadido a la clase Array, por lo que (al igual que Jacobi), debe ser llamado desde la matriz aunentada del sistema de ecuaciones lineales.</p>
+    
+    
+    
+    
+    <h3 class="text">Ejemplo</h3>
+    
+    <p class="ejemplo"><span class="ejemplo"></span>Encuentre la solución (el valor de “x”) de la siguiente ecuación no lineal empleando el método de la bisección, con 8 dígitos de precisión, pero redondeando los resultados al quinto dígito después del punto. El sistema de ecuaciones lineales debe ser resuelto con el método de Gauss-Seidel, con la precisión por defecto (12 dígitos) y la ecuación cúbica con el método de Regula Falsi, con 4 dígitos de precision/error (redondeando el resultado al cuarto dígito después del punto), encontrando el segmento de solución (que se sabe es positivo y que puede requerir hasta 300 iteraciones) con segmentoSol (incremento 0.1) redondeando los resultados al primer dígito después del punto. El segmento de solución, para el método de la bisección, debe ser encontrado con la gráfica de la función dibujada entre 1 y 3.</p>
+
+    <table class="ecuacion" id="ec5" style="margin-left:1cm; width:calc(100% - 1cm);">
+        <tbody><tr>
+            <td>
+                \[                \begin{gathered}                f(x) = y_0+y_1-y_2y_3+z^{1.0135}-z = 0\\[4mm]                \begin{aligned}                10y_0+2y_1-y_2+3y_3&amp;=14.53x\\                2y_0-9y_1+y_2-2y_3&amp;=-2.41x\\                y_0+y_1-10y_2+y_3&amp;=-3.93x^{1.8}\\                y_0+2y_1-y_2+11y_3&amp;=4.28x^{2.3}                \end{aligned}\\[12mm]                z^3-6.78z^2+14.678z-5x = 0                \end{gathered}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Como ya se vio en el anterior capítulo, dado que el sistema de ecuaciones lineales, como la ecuación polinomial, dependen de "x", el problema debe ser resuelto en una función que reciba "x" y en cuyo interior se resuelva tanto el sistema de ecuaciones lineales, como la ecuación polinomial.</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var f = x =&gt; {<br>  const a = [[10, 2, -1, 3, 14.53*x],<br>             [2, -9, 1, -2, -2.41*x],<br>             [1, 1, -10, 1, -3.93*x**1.8],<br>             [1, 2, -1, 11, 4.28*x**2.3]];<br>  const y = a.gseidel();<br>  const fz = z =&gt; z**3-6.78*z**2+14.678*z-5*x;<br>  const [z1, z2] = fz.segmentoSol({xi:0.1, li:300}).round(1);<br>  const z = fz.refa({xi:z1, xf:z2, err:4}).round(4);<br>  return y[0]+y[1]-y[2]*y[3]+z**1.0135-z;<br>};</div>
+        <div class="resultado"></div>
+        <div class="instruccion">plot({f, xi:1, xf:3})</div>
+        <div class="resultado"></div>
+        <div class="instruccion">f.biseccion({xi:2, xf:2.2, err:8}).round(5)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <br>
+    
+    <div class="ejercicio" id="ejercicio7" enunciado="2"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Resuelva el siguiente sistema de ecuaciones lineales, con el método de Gauss Seidel (precisión/exactitud por defecto), redondeando los resultados al cuarto dígito después del punto.</p>\[\begin{array}{r c r c r c r}12x_0&amp;+&amp;2x_1&amp;+&amp;3x_2&amp;=&amp;15\\3x_0&amp;+&amp;17x_1&amp;+&amp;2x_2&amp;=&amp;18\\x_0&amp;+&amp;4x_1&amp;+&amp;19x_2&amp;=&amp;23\end{array}\]</div><p class="pregunta"><span class="pregunta"></span></p><div id="pregunta36" class="calculadora" spellcheck="false"><div class="instruccion">[<br>  [12, 2, 3, 15],<br>  [3, 17, 2, 18],<br>  [1, 4, 19, 23]<br>].gseidel().round(4)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="5" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 7 -->
+    
+    <div class="ejercicio" id="ejercicio8" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Resuelva el siguiente sistema de ecuaciones lineales, con el método de Gauss Seidel (precisión/exactitud de 14 dígitos), redondeando los resultados al sexto dígito después del punto.</p>\[\begin{array}{r c r c r c r}7x_0&amp;+&amp;x_1&amp;+&amp;2x_2&amp;-&amp;x_3&amp;=&amp;3\\x_0&amp;+&amp;9x_1&amp;+&amp;3x_2&amp;+&amp;2x_3&amp;=&amp;2\\2x_0&amp;+&amp;3x_1&amp;+&amp;12x_2&amp;+&amp;3x_3&amp;=&amp;7\\-x_0&amp;+&amp;2x_1&amp;+&amp;3x_2&amp;+&amp;11x_3&amp;=&amp;5\end{array}\]</div><p class="pregunta"><span class="pregunta"></span></p><div id="pregunta37" class="calculadora" spellcheck="false"><div class="instruccion">[<br>  [7, 1, 2, -1, 3],<br>  [1, 9, 3, 2, 2],<br>  [2, 3, 12, 3, 7],<br>  [-1, 2, 3, 11, 5]<br>].gseidel({err:14}).round(6)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="5" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 8 -->
+    
+    <div class="ejercicio" id="ejercicio9" enunciado="2"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Resuelva el siguiente sistema de ecuaciones lineales, con el método de Gauss Seidel, con una precisión/exactitud de 15 dígitos, redondeando los resultados al segundo dígito después del punto.</p>\[\begin{array}{r c r c r c r}17x_0&amp;+&amp;2x_1&amp;+&amp;3x_2&amp;-&amp;x_3&amp;=&amp;13\\2x_0&amp;+&amp;19x_1&amp;+&amp;2x_2&amp;+&amp;4x_3&amp;=&amp;11\\3x_0&amp;+&amp;4x_1&amp;+&amp;12x_2&amp;+&amp;5x_3&amp;=&amp;17\\-3x_0&amp;+&amp;x_1&amp;+&amp;4x_2&amp;+&amp;21x_3&amp;=&amp;14\end{array}\]</div><p class="pregunta"><span class="pregunta"></span></p><div id="pregunta42" class="calculadora" spellcheck="false"><div class="instruccion">[<br>  [17, 2, 3, -1, 13],<br>  [2, 19, 2, 4, 11],<br>  [3, 4, 12, 5, 17],<br>  [-3, 1, 4, 21, 14]<br>].gseidel({err:15}).round(2)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="5" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 9 -->
+
+    <div class="ejercicio" id="ejercicio10" enunciado="2"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Para encontrar las soluciones de la siguiente ecuación no lineal (encontrar el valor de "x"), programe la función "f" (función flecha) que, en su interior, resuelva el sistema de ecuaciones lineales con el método de Gauss Seidel (precisión/exactitud por defecto) redondeando los resultados al tercer dígito después del punto, programe la ecuación polinomial (fz), encuentre el segmento de solución (xi, xf) con segmentoSol (xi: -0.5, li: 200) y la solución, con regula falsi (precisión/exactitud: 12 dígitos).\[\begin{gathered}f(x) = \sqrt{2y_0+3y_1+4y_2-y_3}-\sqrt[3]{2z+7}-1.87 = 0\\[4mm]\begin{aligned}13y_0-2y_1+2y_2-y_3&amp;=4.1371x\\y_0+12y_1-3y_2+2y_3&amp;= \text{e}^{0.4365x}\\5y_0+y_1-11y_2-2y_3&amp;=-170.8162/x\\2y_0+2y_1+4y_2-14y_3&amp;=-\sqrt{80.89x}\end{aligned}\\[12mm]z^5-16.32z^4+116.84z^3-464.8z^2+1054.88z-(x/1.79156)^5 = 0\end{gathered}\]</p></div><p class="pregunta"><span class="pregunta"></span></p><div id="pregunta49" class="calculadora" spellcheck="false"><div class="instruccion">var f = x =&gt; {<br>  const y = [[13, -2, 2, -1, 4.1371 * x],<br>             [1, 12, -3, 2, Math.exp(0.4365 * x)],<br>             [5, 1, -11, -2, -170.8162 / x],<br>             [2, 2, 4, -14, -Math.sqrt(80.89 * x)]].gseidel().round(3);<br>  const fz = z =&gt; z**5 - 16.32 * z**4 + 116.84 * z**3 - 464.8 * z**2 + 1054.88 * z - (x / 1.79156)**5;<br>  const [xi, xf] = fz.segmentoSol({xi: -0.5, li: 200});<br>  const z = fz.refa({xi, xf, err: 12});<br>  return Math.sqrt(2 * y[0] + 3 * y[1] + 4 * y[2] - y[3]) - Math.cbrt(2 * z + 7) - 1.87;<br>}</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con la ecuación no lineal programada (f), encuentre la solución aproximada, dibujándola cuantas veces sea necesario (se sabe que la solución es mayor o igual a 5). Finalmente, en otra celda de código, encuentre la solución de la ecuación no lineal (el valor de "x") con el método de la bisección (precisión/exactitud: 12 dígitos) empleando el segmento de solución leído de la gráfica y redondeando el resultado al cuarto dígito después del punto.</p><div id="pregunta50" class="calculadora" spellcheck="false"><div class="instruccion">plot({f, xi: 4, xf: 9})</div><div class="resultado"></div><div class="instruccion">f.biseccion({xi: 6.5, xf: 7.5, err: 12}).round(4)</div><div class="resultado"></div><div class="instruccion">// onstantes    x     si     1</div><div class="resultado"></div></div><p class="pregunta" id="pregunta51"><span class="pregunta"></span>El sistema de ecuaciones lineales tiene que ser resuelto dentro de la función "f", porque las c<span class="campo_literal correcta" tabindex="0" contenteditable="true">onstantes</span> dependen de la variable <span class="campo_literal correcta" tabindex="0" contenteditable="true">x</span>.<br>¿Cada vez que el método de la bisección llama la función "f", se vuelve a resolver el sistema de ecuaciones lineales? (si/no) <span class="campo_literal correcta" tabindex="0" contenteditable="true">si</span>.<br>El número de soluciones encontradas, al resolver la ecuación polinomial de quinto grado, es: <span class="campo_literal correcta" tabindex="0" contenteditable="true">1</span>.</p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="33" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 10 -->
+    
+    <div class="ejercicio" id="ejercicio11" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Para encontrar la solución de la siguiente ecuación no lineal, programe la función "f" (función flecha) que, en su interior, resuelva el sistema de ecuaciones lineales con el método de Gauss Seidel (precisión/exactitud por defecto) redondeando los resultados al cuarto dígito después del punto, programe la ecuación polinomial (fz), encuentre el segmento de solución (xi, xf) con segmentoSol (xi: -0.5, li: 200) y la solución, con el método de la secante (precisión/exactitud: 15 dígitos).\[\begin{gathered}f(x) = \sqrt{2y_0+3y_1-4y_2+y_3}-\sqrt[5]{2z+7}+0.17068 = 0\\[4mm]\begin{aligned}12y_0-y_1+3y_2-2y_3&amp;=x/0.2595\\3y_0+12y_1-4y_2+y_3&amp;= x^{2.15094}\\y_0+3y_1-15y_2+2y_3&amp;=-3.53*x\\4y_0+2y_1+y_2-15y_3&amp;=-\sqrt[4]{8146.22x}\end{aligned}\\[12mm]z^5-7.5z^4+35z^3-85z^2+134z-x^{3.7424} = 0\end{gathered}\]</p></div><p class="pregunta"><span class="pregunta"></span></p><div id="pregunta52" class="calculadora" spellcheck="false"><div class="instruccion">var f = x =&gt; {<br>  const y = [[12, -1, 3, -2, x / 0.2595],<br>             [3, 12, -4, 1, x**2.15094],<br>             [1, 3, -15, 2, -3.53 * x],<br>             [4, 2, 1, -15, -Math.nthroot(8146.22 * x, 4)]].gseidel().round(4);<br>  const fz = z =&gt; z**5 - 7.5 * z**4 + 35 * z**3 - 85 * z**2 + 134 * z - x**3.7424;<br>  const [xi, xf] = fz.segmentoSol({xi: -0.5, li: 200});<br>  const z = fz.secante({xi, xf, err: 15});<br>  return Math.sqrt(2 * y[0] + 3 * y[1] - 4 * y[2] + y[3]) - Math.nthroot(2 * z + 7, 5) + 0.17068;<br>}</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con la ecuación no lineal programada (f), encuentre la solución aproximada, dibujándola cuantas veces sea necesario (se sabe que la solución es mayor o igual a 1). Finalmente, en otro párrafo de instrucción, encuentre la solución de la ecuación no lineal (el valor de "x") con el método de regula falsi (precisión/exactitud: 10 dígitos) empleando el segmento de solución leído de la gráfica y redondeando el resultado al sexto dígito después del punto.</p><div id="pregunta53" class="calculadora" spellcheck="false"><div class="instruccion">plot({f, xi: 3.3, xf: 3.4})</div><div class="resultado"></div><div class="instruccion">f.refa({xi: 3.3, xf: 4, err: 10}).round(6)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="30" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 11 -->
+    
+    <div class="ejercicio" id="ejercicio12" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Para encontrar la solución de la siguiente ecuación no lineal (calcular el valor de "x"), programe la función "f" (función flecha) que, en su interior, resuelva el sistema de ecuaciones lineales con el método de Gauss Seidel (precisión/exactitud por defecto) redondeando los resultados al segundo dígito después del punto, programe la ecuación polinomial (fz) y encuentre la solución con el método incremental (valor inicial 0, precisión/exactitud 8).\[\begin{gathered}f(x) = \sqrt{y_0+4y_1-3y_2+2y_3}-\sqrt[6]{3z+1}-1.2246 = 0\\[4mm]\begin{aligned}10y_0-3y_1+4y_2+y_3&amp;=\ln\left(4.642x^{20}\right)\\2y_0+13y_1-5y_2+y_3&amp;= (35.75x+1)/5\\3y_0+2y_1-10y_2-y_3&amp;=-4.6476x\\5y_0+y_1-2y_2-12y_3&amp;=-x-14.18256\end{aligned}\\[12mm]z^5-8z^4+38z^3-98z^2+157z-52x = 0\end{gathered}\]</p></div><p class="pregunta"><span class="pregunta"></span></p><div id="pregunta58" class="calculadora" spellcheck="false"><div class="instruccion">var f = x =&gt; {<br>  const y = [[10, -3, 4, 1, Math.log(4.642 * x**20)],<br>             [2, 13, -5, 1, (35.75 * x + 1) / 5],<br>             [3, 2, -10, -1, -4.6476 * x],<br>             [5, 1, -2, -12, -x - 14.18256]].gseidel().round(2);<br>  const fz = z =&gt; z**5 - 8 * z**4 + 38 * z**3 - 98 * z**2 + 157 * z - 52 * x;<br>  const z = fz.incremental({xi: 0, err: 8});<br>  return Math.sqrt(y[0] + 4 * y[1] - 3 * y[2] + 2 * y[3]) - Math.nthroot(3 * z + 1, 6) - 1.2246;<br>}</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con la ecuación no lineal programada (f), encuentre la solución aproximada, dibujándola cuantas veces sea necesario (se sabe que la solución es mayor o igual a 1). Finalmente, en otro párrafo de instrucción, encuentre la solución de la ecuación no lineal (el valor de "x") con el método de regula falsi (precisión/exactitud: 10 dígitos) empleando el segmento de solución leído de la gráfica y redondeando el resultado al séptimo dígito después del punto.</p><div id="pregunta59" class="calculadora" spellcheck="false"><div class="instruccion">plot({f, xi: 2.1, xf: 3})</div><div class="resultado"></div><div class="instruccion">f.refa({xi: 1, xf: 4, err: 10}).round(7)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="30" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 12 -->
+    
+    
+    
+    
+    <h2 class="text">Método de Gauss para sistemas tridiagonales</h2>
+    
+    
+    <p class="text">Como se dijo, los sistemas tridiagonales son aquellos que sólo tienen valores diferentes de cero en la diagonal principal y en las diagonales adyacentes:</p>
+
+    <table class="ecuacion" id="ec6">
+        <tbody><tr>
+            <td>
+                \[                \begin{aligned}                a_{0,1}&amp;x_0\space+&amp;a_{0,2}&amp;x_1\space+&amp;0&amp;x_2\space+&amp;0&amp;x_3\space+\cdots +&amp;0&amp;x_{n-2}\space+&amp;0&amp;x_{n-1}\space=&amp;a_{0,n}\\                a_{1,0}&amp;x_0\space+&amp;a_{1,1}&amp;x_1\space+&amp;a_{1,2}&amp;x_2\space+&amp;0&amp;x_3\space+\cdots +&amp;0&amp;x_{n-2}\space+&amp;0&amp;x_{n-1}\space=&amp;a_{1,n}\\                0&amp;x_0\space+&amp;a_{2,1}&amp;x_1\space+&amp;a_{2,2}&amp;x_2\space+&amp;a_{2,3}&amp;x_3\space+\cdots +&amp;0&amp;x_{n-2}\space+&amp;0&amp;x_{n-1}\space=&amp;a_{2,n}\\                0&amp;x_0\space+&amp;0&amp;x_1\space+&amp;a_{3,2}&amp;x_2\space+&amp;a_{3,3}&amp;x_3\space+\cdots +&amp;0&amp;x_{n-2}\space+&amp;0&amp;x_{n-1}\space=&amp;a_{3,n}\\                0&amp;x_0\space+&amp;0&amp;x_1\space+&amp;0&amp;x_2\space+&amp;a_{4,3}&amp;x_3\space+\cdots +&amp;0&amp;x_{n-2}\space+&amp;0&amp;x_{n-1}\space=&amp;a_{4,n}\\                &amp;\vdots&amp; &amp;\vdots&amp;&amp;\vdots&amp;&amp;\vdots &amp;&amp;\vdots&amp;&amp;\vdots&amp;\vdots\\                0&amp;x_0\space+&amp;0&amp;x_1\space+&amp;0&amp;x_2\space+&amp;0&amp;x_3\space+\cdots +&amp;a_{n-2,n-2}&amp;x_{n-2}\space+&amp;a_{n-1,n-1}&amp;x_{n-1}\space=&amp;a_{n.1,n}\\                \end{aligned}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">Donde “n” es el número de ecuaciones del sistema.</p>
+    
+    <p class="text">Si sólo se guardan los valores diferentes de cero, el sistema tridiagonal puede ser reescrito como:</p>
+
+    <table class="ecuacion" id="ec7">
+        <tbody><tr>
+            <td>
+                \[                \begin{array}{r c r c r c r}                0 &amp;+&amp;a_{0,1}x_0&amp;+&amp;a_{0,2}x_1&amp;=&amp;a_{0,3}\\                a_{1,0}x_0&amp;+&amp;a_{1,1}x_1&amp;+&amp;a_{1,2}x_2&amp;=&amp;a_{1,3}\\                a_{2,0}x_1&amp;+&amp;a_{2,1}x_2&amp;+&amp;a_{2,2}x_3&amp;=&amp;a_{2,3}\\                a_{3,0}x_2&amp;+&amp;a_{3,1}x_3&amp;+&amp;a_{3,2}x_4&amp;=&amp;a_{3,3}\\                a_{4,0}x_3&amp;+&amp;a_{4,1}x_4&amp;+&amp;a_{5,2}x_5&amp;=&amp;a_{4,3}\\                \vdots&amp; &amp;\vdots&amp; &amp;\vdots&amp; &amp;\vdots\\                a_{n-1,0}x_{n-2}&amp;+&amp;a_{n-1,1}x_{n-1}&amp;+&amp;0&amp;=&amp;a_{n-1,3}\\                \end{array}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">Con lo que se consigue un gran ahorro de memoria, porque en lugar de reservar memoria para n*(n+1) elementos, sólo se reserva memoria para n*4 elementos.</p>
+    
+    <p class="text">La mayoría de los métodos estudiados, pueden ser adaptados de manera que trabajen con sistemas tridiagonales. Así para adaptar el método de Gauss, se considera un sistema tridiagonal de 5 ecuaciones con 5 incógnitas:</p>
+
+    <table class="ecuacion" id="ec8">
+        <tbody><tr>
+            <td>
+                \[                \begin{array}{r c r c r c r c r c r}                a_{0,1}x_0 &amp;+&amp;a_{0,2}x_1&amp;+&amp;0x_2&amp;+&amp;0x_3&amp;+&amp;0x_4&amp;=&amp;a_{0,3}\\                a_{1,0}x_0&amp;+&amp;a_{1,1}x_1&amp;+&amp;a_{1,2}x_2&amp;+&amp;0x_3&amp;+&amp;0x_4&amp;=&amp;a_{1,3}\\                0x_0&amp;+&amp;a_{2,0}x_1&amp;+&amp;a_{2,1}x_2&amp;+&amp;a_{2,2}x_3&amp;+&amp;0x_4&amp;=&amp;a_{2,3}\\                0x_0&amp;+&amp;0x_1&amp;+&amp;a_{3,0}x_2&amp;+&amp;a_{3,1}x_3&amp;+&amp;a_{3,2}x_4&amp;=&amp;a_{3,3}\\                0x_0&amp;+&amp;0x_1&amp;+&amp;0x_2&amp;+&amp;a_{4,0}x_3&amp;+&amp;a_{4,1}x_4&amp;=&amp;a_{4,3}\\                \end{array}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">Que al aplicar el método de Gauss se convierte en:</p>
+
+    <table class="ecuacion" id="ec9">
+        <tbody><tr>
+            <td>
+                \[                \begin{array}{r c r c r c r c r c r}                a_{0,1}x_0 &amp;+&amp;a_{0,2}x_1&amp;+&amp;0x_2&amp;+&amp;0x_3&amp;+&amp;0x_4&amp;=&amp;a_{0,3}\\                0x_0&amp;+&amp;a_{1,1}x_1&amp;+&amp;a_{1,2}x_2&amp;+&amp;0x_3&amp;+&amp;0x_4&amp;=&amp;a_{1,3}\\                0x_0&amp;+&amp;0x_1&amp;+&amp;a_{2,1}x_2&amp;+&amp;a_{2,2}x_3&amp;+&amp;0x_4&amp;=&amp;a_{2,3}\\                0x_0&amp;+&amp;0x_1&amp;+&amp;0x_2&amp;+&amp;a_{3,1}x_3&amp;+&amp;a_{3,2}x_4&amp;=&amp;a_{3,3}\\                0x_0&amp;+&amp;0x_1&amp;+&amp;0x_2&amp;+&amp;0x_3&amp;+&amp;a_{4,1}x_4&amp;=&amp;a_{4,3}\\                \end{array}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">Como se puede ver, sólo es necesario convertir en ceros los elementos que se encuentran debajo de la diagonal principal.</p>
+    
+    <p class="text">Para convertir en cero el elemento a<sub>1,0</sub>, se resta a la segunda fila, la primera multiplicada por a<sub>1,0</sub>/a<sub>0,1</sub>. Como no es necesario guardar ni calcular los ceros, se puede aprovechar el elemento a<sub>1,0</sub> para guardar el valor de esta división y con el mismo calcular los nuevos valores de a<sub>1,1</sub> y a<sub>1,3</sub> (el valor de a<sub>1,2</sub> no cambia):</p>
+    
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                \begin{aligned}                a_{1,0}&amp;=\dfrac{a_{1,0}}{a_{0,1}}\\                a_{1,1}&amp;=a_{1,1}-a_{1,0}a_{0,2}\\                a_{1,3}&amp;=a_{1,3}-a_{1,0}a_{0,3}                \end{aligned}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">De la misma forma, para convertir el elemento a<sub>2,0</sub> en cero, se resta a la tercera fila la segunda, multiplicada por a<sub>2,0</sub>/a<sub>1,1</sub>, guardando este resultado en a<sub>2,0</sub>:</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                \begin{aligned}                a_{2,0}&amp;=\dfrac{a_{2,0}}{a_{1,1}}\\                a_{2,1}&amp;=a_{2,1}-a_{2,0}a_{1,2}\\                a_{2,3}&amp;=a_{2,3}-a_{2,0}a_{1,3}                \end{aligned}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+        
+    <p class="text">Se procede igual con la cuarta y quinta fila:</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                \begin{gathered}                \begin{aligned}                a_{3,0}&amp;=\dfrac{a_{3,0}}{a_{2,1}}\\                a_{3,1}&amp;=a_{3,1}-a_{3,0}a_{2,2}\\                a_{3,3}&amp;=a_{3,3}-a_{3,0}a_{2,3}                \end{aligned}\\[1.2cm]                \begin{aligned}                a_{4,0}&amp;=\dfrac{a_{4,0}}{a_{3,1}}\\                a_{4,1}&amp;=a_{4,1}-a_{4,0}a_{3,2}\\                a_{4,3}&amp;=a_{4,3}-a_{4,0}a_{3,3}                \end{aligned}                \end{gathered}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">De donde se pueden deducir las ecuaciones generales, para reducir a cero, los elementos que se encuentran debajo de la diagonal principal:</p>
+
+    <table class="ecuacion" id="ec10">
+        <tbody><tr>
+            <td>
+                \[                \left.                \begin{aligned}                a_{i,0}&amp;=\dfrac{a_{i,0}}{a_{i-1,1}}\\                a_{i,1}&amp;=a_{i,1}-a_{i,0}a_{i-1,2}\\                a_{i,3}&amp;=a_{i,3}-a_{i,0}a_{i-1,3}                \end{aligned}\hspace{0.5cm}                \right\{                i = 1 \rightarrow n-1                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">Una vez que el sistema es reducido a la forma <a href="#ec9">(9)</a>, los resultados se calculan por sustitución inversa y pueden ser almacenados en la última columna del sistema tridiagonal. Así el valor de la última incógnita (x<sub>4</sub>) se calcula con:</p>
+ 
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                x_4 = a_{4,3} = \dfrac{a_{4,3}}{a_{4,1}}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">De manera similar se calculan los valores de las otras incógnitas:</p>
+ 
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                \begin{gathered}                x_3 = a_{3,3} = \dfrac{a_{3,3}-a_{3,2}x_4}{a_{3,1}} = \dfrac{a_{3,3}-a_{3,2}a_{4,3}}{a_{3,1}}\\[0.5cm]                x_2 = a_{2,3} = \dfrac{a_{2,3}-a_{2,2}x_3}{a_{2,1}} = \dfrac{a_{2,3}-a_{2,2}a_{3,3}}{a_{2,1}}\\[0.5cm]                x_1 = a_{1,3} = \dfrac{a_{1,3}-a_{1,2}x_2}{a_{1,1}} = \dfrac{a_{1,3}-a_{1,2}a_{2,3}}{a_{1,1}}\\[0.5cm]                x_0 = a_{0,3} = \dfrac{a_{0,3}-a_{0,2}x_1}{a_{0,1}} = \dfrac{a_{0,3}-a_{0,2}a_{1,3}}{a_{0,1}}                \end{gathered}                                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">De donde se deducen las ecuaciones generales para el cálculo de las soluciones por sustitución inversa:</p>
+
+    <table class="ecuacion" id="ec11">
+        <tbody><tr>
+            <td>
+                \[                \begin{aligned}                x_{n-1} &amp;= a_{n-1,3} = \dfrac{a_{n.1,3}}{a_{n-1,1}}\\[0.5cm]                x_i &amp;= a_{i,3} =\dfrac{a_{i,3}-a_{i,2}x_{i+1}}{a_{i,1}} = \dfrac{a_{i,3}-a_{i,2}a_{i+1,3}}{a_{i,1}}\hspace{0.3cm}\begin{cases}i=n-2\rightarrow 0\end{cases}                \end{aligned}                                                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    
+    
+    <h3 class="text">Algoritmo</h3>
+    
+    
+    <p class="text">El algoritmo que automatiza el proceso y que básicamente es la automatización de las ecuaciones <a href="#ec10">(10)</a> y <a href="#ec11">(11)</a>, es:</p>
+    
+    <p class="figurasn"><img src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo7/files/gausstd.png" alt="Algoritmo para resolver un sistema de ecuaciones tridiagonales con el método de Gauss"></p>
+    
+    <p class="text">El código respectivo, ha sido añadido como un método la clase Array, por lo que debe ser llamado desde la matriz tridiagonal aumentada (la que no incluye los ceros).</p>
+   
+    
+    
+    
+    <h3 class="text">Ejemplo</h3>
+    
+    <p class="ejemplo"><span class="ejemplo"></span>Resuelva el siguiente sistema de ecuaciones lineales con los métodos de Gauss para sistemas tridiagonales, redondeando los resultados al quinto dígito después del punto.</p>
+
+    <table class="ecuacion" id="ec12" style="margin-left:1cm; width:calc(100% - 1cm);">
+        <tbody><tr>
+            <td>
+                \[                \begin{array}{r c r c r c r c r c r}                2x_0&amp;+&amp;x_1&amp;+&amp;0x_2&amp;+&amp;0x_3&amp;+&amp;0x_4&amp;=&amp;6\\                x_0&amp;+&amp;4x_1&amp;+&amp;x_2&amp;+&amp;0x_3&amp;+&amp;0x_4&amp;=&amp;36\\                0x_0&amp;+&amp;x_1&amp;+&amp;4x_2&amp;+&amp;x_3&amp;+&amp;0x_4&amp;=&amp;72\\                0x_0&amp;+&amp;0x_1&amp;+&amp;x_2&amp;+&amp;4x_3&amp;+&amp;x_4&amp;=&amp;108\\                0x_0&amp;+&amp;0x_1&amp;+&amp;0x_2&amp;+&amp;x_3&amp;+&amp;2x_4&amp;=&amp;66\\                \end{array}                                                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Para resolver el sistema, simplemente se crea la matriz tridiagonal aumentada y se llama desde la misma al método <dfn class="style1">gausstd</dfn>:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">[[0, 2, 1, 6],<br> [1, 4, 1, 36],<br> [1, 4, 1, 72],<br> [1, 4, 1, 108],<br> [1, 2, 0, 66]].gausstd().round(5)</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <br>
+    <div class="ejercicio" id="ejercicio13" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Encuentre las soluciones, del siguiente sistema de ecuaciones lineales, con el método de Gauss para sistemas tridiagonales, redondeando los resultados al cuarto dígito después del punto.</p>\[\begin{array}{r c r c r c r c r c r}4x_0&amp;+&amp;2x_1&amp;+&amp;0x_2&amp;+&amp;0x_3&amp;+&amp;0x_4&amp;=&amp;8\\3x_0&amp;+&amp;8x_1&amp;+&amp;x_2&amp;+&amp;0x_3&amp;+&amp;0x_4&amp;=&amp;14\\0x_0&amp;+&amp;2x_1&amp;+&amp;12x_2&amp;+&amp;3x_3&amp;+&amp;0x_4&amp;=&amp;21\\0x_0&amp;+&amp;0x_1&amp;+&amp;x_2&amp;+&amp;9x_3&amp;+&amp;2x_4&amp;=&amp;34\\x_0&amp;+&amp;x_1&amp;+&amp;0x_2&amp;+&amp;3x_3&amp;+&amp;14x_4&amp;=&amp;37\end{array}\]</div><p class="pregunta"><span class="pregunta"></span></p><div id="pregunta64" class="calculadora" spellcheck="false"><div class="instruccion">[[0, 4, 2, 8],<br> [3, 8, 1, 14],<br> [2, 12, 3, 21],<br> [1, 9, 2, 34],<br> [3, 14, 0, 37]].gausstd().round(4)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="6" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 13 -->
+    
+    
+    
+    
+    <h2 class="text">Gauss-Seidel para sistemas tridiagonales</h2>
+    
+    
+    <p class="text">Por lo general, los sistemas tridiagonales tienen, además, una diagonal dominante, de manera que la convergencia con métodos iterativos como Jacobi y Gauss–Seidel, está garantizada.</p>
+    
+    <p class="text">Para la deducción de las ecuaciones, para el caso de los sistemas tridiagonales, se volverá a considerar el sistema de ecuaciones <a href="#ec8">(8)</a>:</p>
+
+    <table class="ecuacion" style="counter-reset: ecuación 7">
+        <tbody><tr>
+            <td>
+                \[                \begin{array}{r c r c r c r c r c r}                a_{0,1}x_0 &amp;+&amp;a_{0,2}x_1&amp;+&amp;0x_2&amp;+&amp;0x_3&amp;+&amp;0x_4&amp;=&amp;a_{0,3}\\                a_{1,0}x_0&amp;+&amp;a_{1,1}x_1&amp;+&amp;a_{1,2}x_2&amp;+&amp;0x_3&amp;+&amp;0x_4&amp;=&amp;a_{1,3}\\                0x_0&amp;+&amp;a_{2,0}x_1&amp;+&amp;a_{2,1}x_2&amp;+&amp;a_{2,2}x_3&amp;+&amp;0x_4&amp;=&amp;a_{2,3}\\                0x_0&amp;+&amp;0x_1&amp;+&amp;a_{3,0}x_2&amp;+&amp;a_{3,1}x_3&amp;+&amp;a_{3,2}x_4&amp;=&amp;a_{3,3}\\                0x_0&amp;+&amp;0x_1&amp;+&amp;0x_2&amp;+&amp;a_{4,0}x_3&amp;+&amp;a_{4,1}x_4&amp;=&amp;a_{4,3}\\                \end{array}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">Si se denomina “x” al vector con los valores iniciales asumidos, entonces, los nuevos valores se calculan con:</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                \begin{aligned}                x_0&amp;=\dfrac{a_{0,3}-a_{0,2}x_1}{a_{0,1}}\\[0.5cm]                x_1&amp;=\dfrac{a_{1,3}-a_{1,0}x_0-a_{1,2}x_2}{a_{1,1}}\\[0.5cm]                x_2&amp;=\dfrac{a_{2,3}-a_{2,0}x_1-a_{2,2}x_3}{a_{2,1}}\\[0.5cm]                x_3&amp;=\dfrac{a_{3,3}-a_{3,0}x_2-a_{3,2}x_4}{a_{3,1}}\\[0.5cm]                x_4&amp;=\dfrac{a_{4,3}-a_{4,0}x_3}{a_{4,1}}\\                \end{aligned}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">De donde se deducen las ecuaciones generales:</p>
+
+    <table class="ecuacion" id="ec13" style="counter-reset: ecuación 12">
+        <tbody><tr>
+            <td>
+                \[                \begin{aligned}                x_0&amp;=\dfrac{a_{0,3}-a_{0,2}x_1}{a_{0,1}}\\[0.5cm]                x_i&amp;=\dfrac{a_{i,3}-a_{i,0}x_{i-1}-a_{i,2}x_{i+1}}{a_{i,1}}\hspace{0.3cm}\begin{cases} i=1 \rightarrow n-2\end{cases}\\[0.5cm]                x_{n-1}&amp;=\dfrac{a_{{n-1},3}-a_{{n-1},0}x_{n-2}}{a_{n-1,1}}\\                \end{aligned}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    
+    
+    
+    <h3 class="text">Algoritmo y código</h3>
+    
+    <p class="text">El algoritmo del método que, básicamente es una aplicación de las ecuaciones <a href="#ec13">(13)</a>, es:</p>
+    
+    <p class="figurasn"><img src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo7/files/gseideltd.png" alt="Algoritmo para resolver un sistema de ecuaciones tridiagonales con el método de Gauss Seidel"></p>
+    
+    <p class="text">Y el código respectivo, ha sido añadido como un método de la clase Array, por lo que (al igual que gausstd), debe ser llamado desde la matriz tridiagonal aumentada.</p>
+        
+    
+    
+    <h3 class="text">Ejemplo</h3>
+    
+    <p class="ejemplo"><span class="ejemplo"></span>Resuelva el sistema de ecuaciones <a href="#ec12">(12)</a> con el método de Gauss Seidel para sistemas tridiagonales (valores por defecto), redondeando los resultados al quinto dígito después del punto.</p>
+
+    <table class="ecuacion" style="counter-reset: ecuación 11">
+        <tbody><tr>
+            <td>
+                \[                \begin{array}{r c r c r c r c r c r}                2x_0&amp;+&amp;x_1&amp;+&amp;0x_2&amp;+&amp;0x_3&amp;+&amp;0x_4&amp;=&amp;6\\                x_0&amp;+&amp;4x_1&amp;+&amp;x_2&amp;+&amp;0x_3&amp;+&amp;0x_4&amp;=&amp;36\\                0x_0&amp;+&amp;x_1&amp;+&amp;4x_2&amp;+&amp;x_3&amp;+&amp;0x_4&amp;=&amp;72\\                0x_0&amp;+&amp;0x_1&amp;+&amp;x_2&amp;+&amp;4x_3&amp;+&amp;x_4&amp;=&amp;108\\                0x_0&amp;+&amp;0x_1&amp;+&amp;0x_2&amp;+&amp;x_3&amp;+&amp;2x_4&amp;=&amp;66\\                \end{array}                                                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Al igual que con <dfn class="style1">gausstd</dfn>, para resolver el sistema simplemente se escribe la matriz tridiagonal aumentada y se llama al método <dfn class="style1">gseideltd</dfn>:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">[[0, 2, 1, 6],<br> [1, 4, 1, 36],<br> [1, 4, 1, 72],<br> [1, 4, 1, 108],<br> [1, 2, 0, 66]].gseideltd().round(5)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <br>
+    <div class="ejercicio" id="ejercicio14" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Encuentre las soluciones del siguiente sistema de ecuaciones lineales, con el método de Gauss Seidel para sistemas tridiagonales, redondeando los resultados al cuarto dígito después del punto.</p>\[\begin{array}{r c r c r c r c r c r}4x_0&amp;+&amp;2x_1&amp;+&amp;0x_2&amp;+&amp;0x_3&amp;+&amp;0x_4&amp;=&amp;8\\3x_0&amp;+&amp;8x_1&amp;+&amp;x_2&amp;+&amp;0x_3&amp;+&amp;0x_4&amp;=&amp;14\\0x_0&amp;+&amp;2x_1&amp;+&amp;12x_2&amp;+&amp;3x_3&amp;+&amp;0x_4&amp;=&amp;21\\0x_0&amp;+&amp;0x_1&amp;+&amp;x_2&amp;+&amp;9x_3&amp;+&amp;2x_4&amp;=&amp;34\\0x_0&amp;+&amp;0x_1&amp;+&amp;0x_2&amp;+&amp;3x_3&amp;+&amp;14x_4&amp;=&amp;37\end{array}\]</div><p class="pregunta"><span class="pregunta"></span></p><div id="pregunta67" class="calculadora" spellcheck="false"><div class="instruccion">[[0, 4, 2, 8],<br> [3, 8, 1, 14],<br> [2, 12, 3, 21],<br> [1, 9, 2, 34],<br> [3, 14, 0, 37]].gseideltd().round(4)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="6" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 14 -->
+
+
+
+
+    <h2 class="text">Sistemas de ecuaciones lineales en Octave y MatLab</h2>
+
+    <p class="text">El equivalente aproximado a los métodos de eliminación de Gauss y Gauss-Jordan, en Octave y MatLab, es la función <i class="style1">rref</i>, que recibe la matriz aumentada y devuelve la matriz reducida.</p>
+    
+    <p class="text">En Octave y MatLab, las matrices se crean escribiendo sus elementos entre corchetes, separando filas con puntos y comas y los elementos de cada fila con comas (o espacios, igual que en los vectores).</p>
+    
+    <p class="text">Así, para resolver el siguiente sistema de ecuaciones lineales:</p>
+
+    <table class="ecuacion" style="margin-left:1cm;">
+        <tbody><tr>
+            <td>
+                \[                \begin{matrix}                x_1&amp;+&amp;x_2&amp;+&amp;x_3&amp;+&amp;x_4&amp;=&amp;-1\\[1mm]                4x_1&amp;+&amp;5x_2&amp;+&amp;6x_3&amp;+&amp;7x_4&amp;=&amp;0\\[1mm]                6x_1&amp;+&amp;10x_2&amp;+&amp;15x_3&amp;+&amp;21x_4&amp;=&amp;10\\[1mm]                12x_1&amp;+&amp;30x_2&amp;+&amp;60x_3&amp;+&amp;105x_4&amp;=&amp;10                \end{matrix}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Se escribe:</p>
+
+    <div class="codigo octave">format shortG;<br>x = rref([1,1,1,1,-1; 4,5,6,7,0; 6,10,15,21,10; 12,30,60,105,10])<br>x = x(:,5)<br><br>% Resultados obtenidos:<br>x =<br><br>            1            0            0            0       11.667<br>            0            1            0            0          -46<br>            0            0            1            0           50<br>            0            0            0            1      -16.667<br><br>x =<br><br>       11.667<br>          -46<br>           50<br>      -16.667</div>
+
+    <p class="text">Como se puede ver <dfn class="style1">rref</dfn> devuelve la matriz reducida, donde las soluciones están en la última columna. Para obtener sólo las soluciones, se debe extraer la última columna, lo que se consigue escribiendo como índices: <b>(:,5)</b>, que extraer todas las filas (<b>:</b>) de la última columna (<b>5</b>).</p>
+
+    <p class="text">Con frecuencia, sin embargo, es más práctico trabajar con una vector fila que con un vector columna (porque así sólo es necesario escribir un índice). Para convertir un vector columna en un vector fila (o viceversa) se debe transponer el vector, con la función <dfn class="style1">transpose</dfn> o su símbolo equivalente, el apóstrofo: <b>'</b>, como se muestra a continuación:</p>
+
+    <div class="codigo octave">transpose(x)<br>x'<br><br>% Resultados obtenidos:<br>ans =<br><br>       11.667          -46           50      -16.667<br><br>ans =<br><br>       11.667          -46           50      -16.667</div>
+
+    <p class="text">El equivalente al método <b class="style1">inv</b> de JavaScript, en Octave y MatLab, es la función <b class="style1">inv</b>.</p>
+
+    <p class="text">Por ejemplo, para resolver (simultáneamente) los siguientes sistemas de ecuaciones lineales:</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                \begin{gathered}                \begin{matrix}                19x_1&amp;+&amp;2x_2&amp;&amp; &amp;&amp; &amp;=&amp;0\\[1mm]                2x_1&amp;+&amp;15x_2&amp;+&amp;3x_3&amp;&amp; &amp;=&amp;0\\[1mm]                &amp;&amp; 3x_2&amp;+&amp;20x_3&amp;+&amp;2x_4&amp;=&amp;1\\[1mm]                &amp;&amp; &amp;&amp;2x_3&amp;+&amp;34x_4&amp;=&amp;0                \end{matrix}\\[14mm]                \begin{matrix}                19y_1&amp;+&amp;2y_2&amp;&amp; &amp;&amp; &amp;=&amp;-2\\[1mm]                2y_1&amp;+&amp;15y_2&amp;+&amp;3y_3&amp;&amp; &amp;=&amp;2\\[1mm]                &amp;&amp; 3y_2&amp;+&amp;20y_3&amp;+&amp;2y_4&amp;=&amp;3\\[1mm]                &amp;&amp; &amp;&amp;2y_3&amp;+&amp;34y_4&amp;=&amp;4                \end{matrix}\\[14mm]                \begin{matrix}                19z_1&amp;+&amp;2z_2&amp;&amp; &amp;&amp; &amp;=&amp;2\\[1mm]                2z_1&amp;+&amp;15z_2&amp;+&amp;3z_3&amp;&amp; &amp;=&amp;2\\[1mm]                &amp;&amp; 3z_2&amp;+&amp;20z_3&amp;+&amp;2z_4&amp;=&amp;1\\[1mm]                &amp;&amp; &amp;&amp;2z_3&amp;+&amp;34z_4&amp;=&amp;0                \end{matrix}                \end{gathered}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Se guardan (por claridad) las matrices de coeficientes (A) y de constantes (B) y se resuelve el sistema de ecuaciones con <dfn class="styl1">inv</dfn>.</p>
+
+    <div class="codigo octave">A = [19,2,0,0; 2,15,3,0; 0,3,20,2; 0,0,2,34];<br>B = [0,-2,2; 0,2,2; 1,3,1; 0,4,0];<br>inv(A)*B<br><br>% Resultados obtenidos:<br>ans =<br><br>    0.0011078     -0.11843     0.093232<br>    -0.010524      0.12509      0.11429<br>     0.051884      0.12018     0.033051<br>    -0.003052      0.11058   -0.0019442</div>
+
+    <p class="text">Donde, al igual que en JavaScript, la primera columna son las soluciones del primer sistema de ecuaciones, la segunda, del segundo sistema y la tercera del tercer sistema.</p>
+
+    <p class="text">En Octave y MatLab, es más eficiente emplear el operador <b class="style1">\</b> (<span class="textocodigo">A\B</span>) o su función equivalente <b class="style1">mldivide</b> (<span class="textocodigo">mldivide(A, B)</span>). Este operador (o su función) se emplean como equivalente a: <span class="textocodigo">inv(A)*B</span>, pero, en realidad, el operado <b class="style1">\</b> no calcula la matriz inversa, sino que resuelve directamente el sistema de ecuaciones con el método de eliminación de Gauss, siendo por esa razón más eficiente. Así, empleando este operador, los sistemas de ecuaciones lineales, se resuelven con:</p>
+
+    <div class="codigo octave">A\B<br><br>% Resultados obtenidos:<br>ans =<br><br>    0.0011078     -0.11843     0.093232<br>    -0.010524      0.12509      0.11429<br>     0.051884      0.12018     0.033051<br>    -0.003052      0.11058   -0.0019442</div>
+
+    <p class="text">En Octave y MatLab, los sistemas de ecuaciones lineales pueden ser resueltos también con la función <b class="style1">linsolve</b>. Esta función analiza las matrices y determina el método más eficiente para resolver el sistema de ecuaciones lineales que recibe.</p>
+
+    <p class="text">Por ejemplo, para resolver con <b class="style1">linesolve</b>, el siguiente sistema de ecuaciones:</p>
+
+    <table class="ecuacion" id="ec24">
+        <tbody><tr>
+            <td>
+                \[                \begin{matrix}                x_0&amp;+&amp;x_1&amp;+&amp;x_2&amp;+&amp;x_3&amp;=&amp;-1\\                4x_0&amp;+&amp;5x_1&amp;+&amp;6x_2&amp;+&amp;7x_3&amp;=&amp;0\\                6x_0&amp;+&amp;10x_1&amp;+&amp;15x_2&amp;+&amp;21x_3&amp;=&amp;10\\                12x_0&amp;+&amp;30x_1&amp;+&amp;60x_2&amp;+&amp;105x_3&amp;=&amp;10                \end{matrix}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Se escribe:</p>
+
+    <div class="codigo octave">A = [1,1,1,1; 4,5,6,7; 6,10,15,21; 12,30,60,105];<br>b = [-1;0;10;10];<br>linsolve(A,b)<br><br>% Resultados obtenidos:<br>ans =<br><br>       11.667<br>          -46<br>           50<br>      -16.667</div>
+
+    <p class="text">Observe que las constantes han sido escritas como un vector columna (los elementos se separan con puntos y comas, no con comas).</p>
+
+    <p class="text">La función equivalente a los métodos <dfn class="style1">jacobi</dfn> y <dfn class="style1">gseidel</dfn> (de JavaScript), en Octave y MatLab, es <b class="style1">cgs</b>, que se emplea igual que la función <dfn class="style1">linsolve</dfn></p>
+
+    <p class="text">Así, para resolver iterativamente el siguiente sistema de ecuaciones lineales:</p>
+
+    <table class="ecuacion" style="counter-reset: ecuación 0;">
+        <tbody><tr>
+            <td>
+                \[                \begin{matrix}                10x_0&amp;+&amp;x_1&amp;+&amp;2x_2&amp;=&amp;44\\                2x_0&amp;+&amp;10x_1&amp;+&amp;x_2&amp;=&amp;51\\                x_0&amp;+&amp;2x_1&amp;+&amp;10x_2&amp;=&amp;61                \end{matrix}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Se escribe:</p>
+
+    <div class="codigo octave">A = [10,1,2; 2,10,1; 1,2,10];<br>b = [44;51;61];<br>cgs(A,b)<br><br>% Resultados obtenidos:<br>cgs converged at iteration 3 to a solution with relative residual 8.819438e-19<br>ans =<br><br>            3<br>            4<br>            5</div>
+
+    <p class="text">Por supuesto, con las funciones de Octave y MatLab, se pueden resolver los mismos problemas que con los métodos de JavaScript. Así, para resolver la siguiente ecuación no lineal:</p>
+
+    <table class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                \begin{gathered}                f(x) = z_4x^{3.2}+z_3\ln(x)-z_1x-z_2 = 0\\[4mm]                \begin{aligned}                12y_1+3y_2-2y_3-4y_4&amp;=-17.3\\                15y_2+6y_3-4y_4&amp;=64.7\\                -y_1+7y_2+13y_3+3y_4&amp;=-550.3\\                y_1+5y_3+10y_4&amp;=36.7                \end{aligned}\\[12mm]                z^4+y_1z^3+y_2z^2+y_3z+y_4 = 0                \end{gathered}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Resolviendo el sistema de ecuaciones lineales con "\", la ecuación polinomial con "roots" y la ecuación no lineal con "fzero", se escriben las siguientes instrucciones en myCompiler (recuerde que los índices en Octave y MatLab, comienzan en uno, no en cero como en JavaScript y Python.):</p>
+
+    <div class="codigo octave">A = [12,3,-2,-4; 0,15,6,-4; -1,7,13,3; 1,0,5,10];<br>b = [-17.3;64.7;-550.3;36.7];<br>y = A\b;<br>z = roots([1,y(1),y(2),y(3),y(4)]);<br>f = @(x) z(4)*x^3.2+z(3)*log(x)-z(1)*x-z(2);<br>fzero(f,1.1)<br><br>% Resultado obtenido:<br>ans = 2.0597</div>
+
+    <p class="text">Que es el mismo resultado obtenido en la calculadora JavaScript.</p>
+
+    <div class="ejercicio" id="ejercicio15" enunciado="2"><hr><div class="enunciado"><p class="ejercicio extern"><span class="ejercicio"></span>En Octave (formato shortG) resuelva el siguiente sistema de ecuaciones lineales con "rref", mostrando las soluciones en forma de un vector fila:</p>\[\begin{array}{r c r c r c r}17x_0&amp;+&amp;2x_1&amp;+&amp;3x_2&amp;-&amp;x_3&amp;=&amp;13\\2x_0&amp;+&amp;19x_1&amp;+&amp;2x_2&amp;+&amp;4x_3&amp;=&amp;11\\3x_0&amp;+&amp;4x_1&amp;+&amp;12x_2&amp;+&amp;5x_3&amp;=&amp;17\\-3x_0&amp;+&amp;x_1&amp;+&amp;4x_2&amp;+&amp;21x_3&amp;=&amp;14\end{array}\]</div><p class="pregunta"><span class="pregunta"></span>Una vez resuelto el ejercicio en myCompiler, copie, pegue y ejecute el código en la siguiente celda de código y los resultados en la subsiguiente.</p><div id="pregunta72" class="calculadora" spellcheck="false"><div class="instruccion">`<br>format shortG;<br>x = rref([17, 2, 3, -1, 13;<br>           2, 19, 2, 4, 11;<br>           3, 4, 12, 5, 17;<br>          -3, 1, 4, 21, 14]);<br>x = x(:, 5)'<br>`;</div><div class="resultado"></div><div class="instruccion">`<br>x =<br>  0.59752  0.29987  0.93407  0.55983<br>;`</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="9" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 15 -->
+    <div class="ejercicio" id="ejercicio16" enunciado="0"><hr><div class="enunciado"><p class="ejercicio extern"><span class="ejercicio"></span>En Octave (formato shortG), Resuelva la siguiente ecuación no lineal (f(x)), es decir, encontrar las dos valores de "x" que resuelven la ecuación ("f" depende implícitamente de "x"), programe una función que reciba "x", encuentre los valores de "y" resolviendo el sistema de ecuaciones lineales con "rref", encuentre el valor de "z", resolviendo la ecuación polinomial ("fz") con "fzero" (programando la ecuación como una función anónima), se sabe que la solución es cercana a 5:\[\begin{gathered}f(x) = \sqrt{2y_0+3y_1+4y_2-y_3}-\sqrt[3]{2z+7}-1.87 = 0\\[4mm]\begin{aligned}13y_0-2y_1+4y_2-y_3&amp;=4.1371x\\y_0+10y_1-3y_2+2y_3&amp;= \text{e}^{0.4365x}\\5y_0+y_1-10y_2-3y_3&amp;=-170.8162/x\\2y_0+3y_1+4y_2-15y_3&amp;=-\sqrt{80.89x}\end{aligned}\\[12mm]z^5-16.32z^4+116.84z^3-464.8z^2+1054.88z-(x/1.79156)^5 = 0\end{gathered}\]</p></div><p class="pregunta"><span class="pregunta"></span>Una vez programada y ejecutada la función en myCompiler, copie, pegue y ejecute el código en la siguiente celda de código:</p><div id="pregunta73" class="calculadora" spellcheck="false"><div class="instruccion">`<br>format shortG;<br>function r = f(x)<br>  y = rref([13, -2,   4,  -1,          4.1371 * x;<br>             1, 10,  -3,   2,     exp(0.4365 * x);<br>             5,  1, -10,  -3,       -170.8162 / x;<br>             2,  3,   4, -15,   -sqrt(80.89 * x)]);<br>  y = y(:, 5)';<br>  fz = @(z) z^5 - 16.32 * z^4 + 116.84 * z^3 - 464.8 * z^2 + 1054.88 * z - (x / 1.79156)^5;<br>  z = fzero(fz, 5);<br>  r = sqrt(2 * y(1) + 3 * y(2) + 4 * y(3) - y(4)) - cbrt(2 * z + 7) - 1.87;<br>endfunction<br>`;<br></div><div class="resultado"></div><div class="instruccion"></div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Encuentre las soluciones aproximadas dibujando la gráfica de la función "f", cuantas veces se requiera, hasta que se vean claramente las soluciones (vector x: "vx", incremento: 0.01). Para obtener los valores del vector "y" ("<span style="textocodigo">vy = [];</span>"), se debe emplear un ciclo for (<span style="textocodigo">for x = vx vy = [vy, f(x)]; endfor</span>), porque se debe resolver el sistema de ecuaciones lineales para cada uno de los valores de "x" (no para todos los valores de "x" a la vez). <br>Finalmente, con las soluciones aproximadas de la gráfica, encuentre las dos soluciones de la ecuación no lineal (los valores de "x") con "fzero". Una vez encontradas las soluciones en myCompiler, copie, pegue y ejecute el código en la siguiente celda y los resultados en la subsiguiente:</p><div id="pregunta74" class="calculadora" spellcheck="false"><div class="instruccion">`<br>vx = 1: 0.01: 9;<br>vy = [];<br>for x = vx vy = [vy, f(x)];<br>endfor<br>plot(vx, vy);<br>grid on;<br>x1 = fzero(@f, 7.1);<br>f1 = x1<br>x2 = fzero(@f, 7.5);<br>f2 = x2<br>`;</div><div class="resultado"></div><div class="instruccion">`<br>f1 = 7.2925<br>f2 = 7.2925<br>`;</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="42" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 16 -->
+
+
+
+    
+    <h2 class="text">Sistemas de ecuaciones lineales en Python</h2>
+
+    <p class="text">En Python se puede emplear la función <b class="style1">solve</b>, de la sublibrería <b class="style1">linalg</b> de la librería <b class="style1">numpy</b> que, al igual que la función <dfn class="style1">linsolve</dfn>, recibe la matriz de coeficientes y el vector (o matriz) de constantes.</p>
+
+    <p class="text">Así, para resolver el siguientes sistema de ecuaciones lineales con <dfn class="style1">solve</dfn>:</p>
+
+    <table class="ecuacion" style="margin-left:1cm;">
+        <tbody><tr>
+            <td>
+                \[                \begin{matrix}                x_1&amp;+&amp;x_2&amp;+&amp;x_3&amp;+&amp;x_4&amp;=&amp;-1\\[1mm]                4x_1&amp;+&amp;5x_2&amp;+&amp;6x_3&amp;+&amp;7x_4&amp;=&amp;0\\[1mm]                6x_1&amp;+&amp;10x_2&amp;+&amp;15x_3&amp;+&amp;21x_4&amp;=&amp;10\\[1mm]                12x_1&amp;+&amp;30x_2&amp;+&amp;60x_3&amp;+&amp;105x_4&amp;=&amp;10                \end{matrix}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+
+    <p class="text">Se escribe:</p>
+
+
+    <div class="codigo python">import numpy as np<br><br>A = np.array([<br>[1, 1, 1, 1],<br>[4, 5, 6, 7],<br>[6, 10, 15, 21],<br>[12,30,60,105]])<br><br>b = np.array([-1, 0, 10, 10])<br><br>x = np.linalg.solve(A,b)<br>print(x)<br><br># Resultados obtenidos<br>[ 11.66666667 -46.          50.         -16.66666667]</div>
+
+    <p class="text">En realidad en Python, también se puede reducir la matriz aumentada con el método <dfn class="style1">ref</dfn> de la clase <dfn class="style1">Matrix</dfn> de la librería <dfn class="style1">sympy</dfn>, sin embargo, dicha librería (como su nombre sugiere) está pensada, sobre todo, en el cálculo simbólico y de precisión arbitraria, lo que sale del ámbito del curso (métodos numéricos), razón por la cual, no será empleada en la asignatura.</p>
+
+    <p class="text">El equivalente al método <b class="style1">inv</b> de JavaScript, en Python, es la función <b class="style1">inv</b> de la clase <b class="style1">linalg</b> de la librería <b class="style1">numpy</b>. Además, para multiplicar las matrices se debe emplear el método <b class="style1">dot</b> de la misma librería. Como en este caso se trabaja con la librería <b class="style1">numpy</b>, las matrices son creadas con el método <b class="style1">array</b> de esta librería.</p>
+
+    <p class="text">Por ejemplo, para resolver (simultáneamente) los siguientes sistemas de ecuaciones lineales:</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                \begin{gathered}                \begin{matrix}                19x_0&amp;+&amp;2x_1&amp;&amp; &amp;&amp; &amp;=&amp;0\\[1mm]                2x_0&amp;+&amp;15x_1&amp;+&amp;3x_2&amp;&amp; &amp;=&amp;0\\[1mm]                &amp;&amp; 3x_1&amp;+&amp;20x_2&amp;+&amp;2x_3&amp;=&amp;1\\[1mm]                &amp;&amp; &amp;&amp;2x_2&amp;+&amp;34x_3&amp;=&amp;0                \end{matrix}\\[14mm]                \begin{matrix}                19y_0&amp;+&amp;2y_1&amp;&amp; &amp;&amp; &amp;=&amp;-2\\[1mm]                2y_0&amp;+&amp;15y_1&amp;+&amp;3y_2&amp;&amp; &amp;=&amp;2\\[1mm]                &amp;&amp; 3y_1&amp;+&amp;20y_2&amp;+&amp;2y_3&amp;=&amp;3\\[1mm]                &amp;&amp; &amp;&amp;2y_2&amp;+&amp;34y_3&amp;=&amp;4                \end{matrix}\\[14mm]                \begin{matrix}                19z_0&amp;+&amp;2z_1&amp;&amp; &amp;&amp; &amp;=&amp;2\\[1mm]                2z_0&amp;+&amp;15z_1&amp;+&amp;3z_2&amp;&amp; &amp;=&amp;2\\[1mm]                &amp;&amp; 3z_1&amp;+&amp;20z_2&amp;+&amp;2z_3&amp;=&amp;1\\[1mm]                &amp;&amp; &amp;&amp;2z_2&amp;+&amp;34z_3&amp;=&amp;0                \end{matrix}                \end{gathered}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Se guardan (por claridad) las matrices de coeficientes (A) y de constantes (B) y se resuelve el sistema de ecuaciones con <b class="style1">inv</b>, multiplicando las matrices con el método <b class="style1">dot</b>:</p>
+
+    <div class="codigo python">import numpy as np<br><br>A = np.array([[19,2,0,0],[2,15,3,0],[0,3,20,2],[0,0,2,34]])<br>B = np.array([[0,-2,2],[0,2,2],[1,3,1],[0,4,0]])<br>x = np.linalg.inv(A).dot(B)<br>print(x)<br><br># Resultados obtenidos:<br>[[ 0.00110784 -0.11843034  0.0932324 ]<br> [-0.01052449  0.12508825  0.11429223]<br> [ 0.05188387  0.12017899  0.03305058]<br> [-0.00305199  0.11057771 -0.00194415]]</div>
+
+    <p class="text">Donde, al igual que en JavaScript, la primera columna son las soluciones del primer sistema de ecuaciones, la segunda, del segundo sistema y la tercera del tercer sistema.</p>
+
+    <p class="text">Por supuesto, los sistemas pueden ser igualmente resueltos con la función <dfn class="style1">solve</dfn>:</p>
+
+    <div class="codigo python">import numpy as np<br><br>A = np.array([[19,2,0,0],[2,15,3,0],[0,3,20,2],[0,0,2,34]])<br>B = np.array([[0,-2,2],[0,2,2],[1,3,1],[0,4,0]])<br>x = np.linalg.solve(A,B)<br>print(x)<br><br># Resultados obtenidos:<br>[[ 0.00110784 -0.11843034  0.0932324 ]<br> [-0.01052449  0.12508825  0.11429223]<br> [ 0.05188387  0.12017899  0.03305058]<br> [-0.00305199  0.11057771 -0.00194415]]</div>
+
+    <p class="text">Con las funciones de Python, se pueden resolver los mismos problemas que con los métodos de JavaScript. Así, para resolver la siguiente ecuación no lineal:</p>
+
+    <table class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                \begin{gathered}                f(x) = z_3x^{3.2}+z_2\ln(x)-z_0x-z_1 = 0\\[4mm]                \begin{aligned}                12y_0+3y_1-2y_2-4y_3&amp;=-17.3\\                15y_1+6y_2-4y_3&amp;=64.7\\                -y_0+7y_1+13y_2+3y_3&amp;=-550.3\\                y_0+5y_2+10y_3&amp;=36.7                \end{aligned}\\[12mm]                z^4+y_0z^3+y_1z^2+y_2z+y_3 = 0                \end{gathered}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Resolviendo el sistema de ecuaciones lineales con "solve", la ecuación polinomial con "roots" y la ecuación no lineal con "newton", se escriben las siguientes instrucciones:</p>
+
+    <div class="codigo python">import numpy as np<br>from scipy.optimize import *<br>import math<br><br>A = np.array([[12,3,-2,-4],[0,15,6,-4],[-1,7,13,3],[1,0,5,10]])<br>b = np.array([-17.3, 64.7, -550.3, 36.7])<br>y = np.linalg.solve(A, b)<br>z = np.roots([1,y[0],y[1],y[2],y[3]])<br>f = lambda x: z[3]*x**3.2+z[2]*math.log(x)-z[0]*x-z[1]<br>x = newton(f, x0=1.1)<br>print(round(x,4))<br><br># Resultado obtenido:<br>2.0597</div>
+
+    <p class="text"></p>
+    
+    <p class="text">En este ejemplo, en lugar de <dfn class="style1">root_scalar</dfn> (de la librería <dfn class="style1">scipy.optimize</dfn>), se emplea la función <dfn class="style1">newton</dfn>, que en este caso (debido a que no se manda la derivada: <dfn class="style1">fprime</dfn>), en realidad resuelve la ecuación con el método de la <dfn class="style1">secante</dfn>. Si se manda la derivada de la función, en el parámetro <dfn class="style1">fprime</dfn> (generalmente como una función <dfn class="style1">lambda</dfn>) emplea el método de Newton. Además de <dfn class="style1">newton</dfn>, <dfn class="style1">scipy.optimize</dfn>, dispone de otros métodos como <dfn class="style1">bisect</dfn> (método de la bisección), <dfn class="style1">brenth</dfn>, <dfn class="style1">ridder</dfn>, etc. La función <dfn class="style1">root_scalar</dfn> incluye todos estos métodos y se puede elegir un método específico mediante el parámetro <dfn class="style1">method</dfn>.</p>
+
+
+    <div class="ejercicio" id="ejercicio17" enunciado="0"><hr><div class="enunciado"><p class="ejercicio extern"><span class="ejercicio"></span>En Python, resuelva el siguiente sistema de ecuaciones lineales con "solve", de la sublibrería "linalg" de la librería numpy ("np"):</p>\[\begin{array}{r c r c r c r}17x_0&amp;+&amp;2x_1&amp;+&amp;3x_2&amp;-&amp;x_3&amp;=&amp;13\\2x_0&amp;+&amp;19x_1&amp;+&amp;2x_2&amp;+&amp;4x_3&amp;=&amp;12\\3x_0&amp;+&amp;4x_1&amp;+&amp;12x_2&amp;+&amp;5x_3&amp;=&amp;17\\-3x_0&amp;+&amp;x_1&amp;+&amp;4x_2&amp;+&amp;21x_3&amp;=&amp;15\end{array}\]</div><p class="pregunta"><span class="pregunta"></span>Una vez resuelto el ejercicio en myCompiler, copie, pegue y ejecute el código en la siguiente celda de código y los resultados en la subsiguiente.</p><div id="pregunta79" class="calculadora" spellcheck="false"><div class="instruccion">`<br>import numpy as np<br>A = np.array( [[17, 2, 3, -1],<br>               [2, 19, 2, 4],<br>               [3, 4, 12, 5],<br>               [-3, 1, 4, 21]])<br>b = np.array([13, 12, 17, 15])<br>x = np.linalg.solve(A, b)<br>print(x)<br>`;</div><div class="resultado"></div><div class="instruccion">`<br>[0.60215987 0.34480077 0.89565634 0.61328826]<br>`;</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="9" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 17 -->
+    <div class="ejercicio" id="ejercicio18" enunciado="0"><hr><div class="enunciado"><p class="ejercicio extern"><span class="ejercicio"></span>En Python, Resuelva la siguiente ecuación no lineal (f(x)), es decir, encontrar las dos valores de "x" que resuelven la ecuación ("f" depende implícitamente de "x"), programe una función que reciba "x", encuentre los valores de "y" resolviendo el sistema de ecuaciones lineales con "solve" (librería "linalg" de "numpy", como "np"), encuentre el valor de "z" resolviendo la ecuación polinomial ("fz"), programada como una función lambda,  con "newton" (sublibrería "optimize" de la librería "scipy"), se sabe que la solución es cercana a 5:\[\begin{gathered}f(x) = \sqrt{2y_0+3y_1+4y_2-y_3}-\sqrt[3]{2z+7}-1.87 = 0\\[4mm]\begin{aligned}13y_0-2y_1+4y_2-y_3&amp;=4.1371x\\y_0+10y_1-3y_2+2y_3&amp;= \text{e}^{0.4365x}\\5y_0+y_1-10y_2-3y_3&amp;=-170.8162/x\\2y_0+3y_1+4y_2-15y_3&amp;=-\sqrt{80.89x}\end{aligned}\\[12mm]z^5-16.32z^4+116.84z^3-464.8z^2+1054.88z-(x/1.79156)^5 = 0\end{gathered}\]</p></div><p class="pregunta"><span class="pregunta"></span>Una vez programada y ejecutada la función en myCompiler, copie, pegue y ejecute el código en la siguiente celda de código:</p><div id="pregunta82" class="calculadora" spellcheck="false"><div class="instruccion">`<br>import math<br>import numpy as np<br>from scipy.optimize import *<br>def f(x):<br>A = np.array( [[13, -2, 4, -1],<br>               [1, 10, -3, 2],<br>               [5, 1, -10, -3],<br>               [2, 3, 4, -15]])<br>b = np.array([4.1371 * x, math.exp(0.4365 * x), -170.8162 / x, -math.sqrt(80.89 * x)])<br>y = np.linalg.solve(A, b)<br>fz = lambda z: z**5 - 16.32 * z**4 + 116.84 * z**3 - 464.8 * z**2 + 1054.88 * z - (x / 1.79156)**5<br>z = newton(fz, 5)<br>return math.sqrt(2 * y[0] + 3 * y[1] + 4 * y[2] - y[3]) - math.cbrt(2 * z + 7) - 1.87<br>`;</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Encuentre las soluciones aproximadas dibujando la gráfica de la función "f" (librería "pyplot" de "matplotlib", como "plt"), cuantas veces se requiera, hasta que se vean claramente las soluciones (vector x: "vx", incremento: 0.01). Para obtener los valores del vector "y" ("<span style="textocodigo">valor inicial: vy = np.zeros(vx.size)</span>"), se debe emplear un ciclo for (<span style="textocodigo">for k in range(vx.size): vy[k] = f(vx[k])</span>), porque se debe resolver el sistema de ecuaciones lineales para cada uno de los valores de "x" (no para todos los valores de "x" a la vez). <br>Finalmente, con las soluciones aproximadas de la gráfica, encuentre las dos soluciones de la ecuación no lineal (los valores de "x") con "newton". Una vez encontradas las soluciones en myCompiler, copie, pegue y ejecute el código en la siguiente celda y los resultados en la subsiguiente:</p><div id="pregunta83" class="calculadora" spellcheck="false"><div class="instruccion">`<br>import matplotlib.pyplot as plt<br>vx = np.arange(7, 8, 0.01)<br>vy = np.zeros(vx.size)<br>for k in range(vx.size):<br>    vy[k] = f(vx[k])<br>plt.plot(vx, vy)<br>plt.grid(True)<br>plt.show()<br>print(newton(f, 7.1))<br>print(newton(f, 7.5))<br>`;</div><div class="resultado"></div><div class="instruccion">`<br>7.747313757456008<br>7.747313757456006<br>`;</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="42" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 18 -->
+
+
+    <div id="generarPrueba" data-scroll-y="41308.1796875"><br><hr><label class="lnotacapitulo">Nota del capítulo: </label><input type="text" id="notaCapitulo" disabled="disabled" class="itnotacapitulo"><br><br><button id="btGenerarPrueba" style="visibility: visible;" onclick="capitulo.registrarCapitulo()">Iniciar defensa</button><button id="btEmplearBono" style="margin-left:1.1rem;width:9.686rem;display:none;" onclick="capitulo.emplearBono()">Emplear Bono</button><br><br></div>
+
+
+<d id="dAutor" style="font-size: 0.9rem;text-align:center;color: #0808f24f;font-weight:bolder;position:fixed;top: 5px;right: 5px;user-select:none;display:inline-block;z-index:15;">Hernan G. Peñaranda V.</d></div><!-- Cierre del div capítulo -->
+
+<div id="dato" style="display:none;">JK5KCZ0r934lCZ0oDYGrDoqpE3Km93OsC30aCpCm93CpC2GnC30aC2HFEJXmD000</div>
+<div id="reg" style="display:none;">CJ4mC3inCJ0mEp4nC30xCZ0nC3ipC30nEp8mCJ0xCp0mCJinCJ0nEpCmC34xCp0mCJinCJ0mEp4nC30xCJ4mC3inCJ0mEpCmCJ4xCJ4nCJinCJ4nEp4nCJ40</div>
+
+
+
+
+<div id="divDialogo" style="display: none;"><div onfocus="document.querySelector('#divDialogo input').focus();"><div>Carnet universitario</div><div>Escriba el número de su carnet universitario, verificando que el guión haya sido correctamente insertado.</div><input type="text" onkeydown="return Capitulo.divDialogo.funKeydown(event)" onkeyup="Capitulo.divDialogo.funKeyup(event)"><div><button onclick="Capitulo.divDialogo.funClick('aceptar');">Aceptar</button><button style="margin-left:35px;" onclick="Capitulo.divDialogo.funClick('cancelar');">Cancelar</button></div></div></div></body>

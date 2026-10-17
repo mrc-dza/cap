@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<head>
+
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Language" content="es">
+  
+  <title>57-3850 capítulo 2</title>
+
+  
+    <!-- Librería y hoja de estilos KATEX  -->
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/katex/katex.min.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/katex/katex.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/katex/contrib/auto-render.min.js"></script>
+
+    <!-- Librerías y hojas de estilo CodeMirror -->
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/lib/codemirror.min.css">
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/theme/mdn-like.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/lib/codemirror.min.js"></script>
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/fold/foldgutter.min.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/fold/foldcode.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/fold/brace-fold.min.js"></script>
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/dialog/dialog.min.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/dialog/dialog.min.js"></script>
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/hint/show-hint.min.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/hint/show-hint.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/hint/javascript-hint.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/search/searchcursor.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/search/search.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/edit/matchbrackets.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/edit/closebrackets.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/comment/comment.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/wrap/hardwrap.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/javascript/javascript.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/css/css.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/xml/xml.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/markdown/markdown.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/htmlmixed/htmlmixed.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/keymap/sublime.min.js"></script>
+
+    <!-- Librería Plotly -->
+    <script src="https://cdn.plot.ly/plotly-3.4.0.min.js" charset="utf-8"></script><style id="plotly.js-style-global"></style><style id="a75c73da1cd7a97e8992659f6aed556255838daadea9ca0c9fc3af7f1ddf63c0">.maplibregl-map{font:12px/20px Helvetica Neue,Arial,Helvetica,sans-serif;overflow:hidden;position:relative;-webkit-tap-highlight-color:rgb(0 0 0/0)}.maplibregl-canvas{left:0;position:absolute;top:0}.maplibregl-map:fullscreen{height:100%;width:100%}.maplibregl-ctrl-group button.maplibregl-ctrl-compass{touch-action:none}.maplibregl-canvas-container.maplibregl-interactive,.maplibregl-ctrl-group button.maplibregl-ctrl-compass{cursor:grab;-webkit-user-select:none;-moz-user-select:none;user-select:none}.maplibregl-canvas-container.maplibregl-interactive.maplibregl-track-pointer{cursor:pointer}.maplibregl-canvas-container.maplibregl-interactive:active,.maplibregl-ctrl-group button.maplibregl-ctrl-compass:active{cursor:grabbing}.maplibregl-canvas-container.maplibregl-touch-zoom-rotate,.maplibregl-canvas-container.maplibregl-touch-zoom-rotate .maplibregl-canvas{touch-action:pan-x pan-y}.maplibregl-canvas-container.maplibregl-touch-drag-pan,.maplibregl-canvas-container.maplibregl-touch-drag-pan .maplibregl-canvas{touch-action:pinch-zoom}.maplibregl-canvas-container.maplibregl-touch-zoom-rotate.maplibregl-touch-drag-pan,.maplibregl-canvas-container.maplibregl-touch-zoom-rotate.maplibregl-touch-drag-pan .maplibregl-canvas{touch-action:none}.maplibregl-canvas-container.maplibregl-touch-drag-pan.maplibregl-cooperative-gestures,.maplibregl-canvas-container.maplibregl-touch-drag-pan.maplibregl-cooperative-gestures .maplibregl-canvas{touch-action:pan-x pan-y}.maplibregl-ctrl-bottom-left,.maplibregl-ctrl-bottom-right,.maplibregl-ctrl-top-left,.maplibregl-ctrl-top-right{pointer-events:none;position:absolute;z-index:2}.maplibregl-ctrl-top-left{left:0;top:0}.maplibregl-ctrl-top-right{right:0;top:0}.maplibregl-ctrl-bottom-left{bottom:0;left:0}.maplibregl-ctrl-bottom-right{bottom:0;right:0}.maplibregl-ctrl{clear:both;pointer-events:auto;transform:translate(0)}.maplibregl-ctrl-top-left .maplibregl-ctrl{float:left;margin:10px 0 0 10px}.maplibregl-ctrl-top-right .maplibregl-ctrl{float:right;margin:10px 10px 0 0}.maplibregl-ctrl-bottom-left .maplibregl-ctrl{float:left;margin:0 0 10px 10px}.maplibregl-ctrl-bottom-right .maplibregl-ctrl{float:right;margin:0 10px 10px 0}.maplibregl-ctrl-group{background:#fff;border-radius:4px}.maplibregl-ctrl-group:not(:empty){box-shadow:0 0 0 2px rgba(0,0,0,.1)}@media (forced-colors:active){.maplibregl-ctrl-group:not(:empty){box-shadow:0 0 0 2px ButtonText}}.maplibregl-ctrl-group button{background-color:transparent;border:0;box-sizing:border-box;cursor:pointer;display:block;height:29px;outline:none;padding:0;width:29px}.maplibregl-ctrl-group button+button{border-top:1px solid #ddd}.maplibregl-ctrl button .maplibregl-ctrl-icon{background-position:50%;background-repeat:no-repeat;display:block;height:100%;width:100%}@media (forced-colors:active){.maplibregl-ctrl-icon{background-color:transparent}.maplibregl-ctrl-group button+button{border-top:1px solid ButtonText}}.maplibregl-ctrl button::-moz-focus-inner{border:0;padding:0}.maplibregl-ctrl-attrib-button:focus,.maplibregl-ctrl-group button:focus{box-shadow:0 0 2px 2px #0096ff}.maplibregl-ctrl button:disabled{cursor:not-allowed}.maplibregl-ctrl button:disabled .maplibregl-ctrl-icon{opacity:.25}.maplibregl-ctrl button:not(:disabled):hover{background-color:rgb(0 0 0/5%)}.maplibregl-ctrl-group button:focus:focus-visible{box-shadow:0 0 2px 2px #0096ff}.maplibregl-ctrl-group button:focus:not(:focus-visible){box-shadow:none}.maplibregl-ctrl-group button:focus:first-child{border-radius:4px 4px 0 0}.maplibregl-ctrl-group button:focus:last-child{border-radius:0 0 4px 4px}.maplibregl-ctrl-group button:focus:only-child{border-radius:inherit}.maplibregl-ctrl button.maplibregl-ctrl-zoom-out .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23333' viewBox='0 0 29 29'%3E%3Cpath d='M10 13c-.75 0-1.5.75-1.5 1.5S9.25 16 10 16h9c.75 0 1.5-.75 1.5-1.5S19.75 13 19 13z'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-zoom-in .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23333' viewBox='0 0 29 29'%3E%3Cpath d='M14.5 8.5c-.75 0-1.5.75-1.5 1.5v3h-3c-.75 0-1.5.75-1.5 1.5S9.25 16 10 16h3v3c0 .75.75 1.5 1.5 1.5S16 19.75 16 19v-3h3c.75 0 1.5-.75 1.5-1.5S19.75 13 19 13h-3v-3c0-.75-.75-1.5-1.5-1.5'/%3E%3C/svg%3E")}@media (forced-colors:active){.maplibregl-ctrl button.maplibregl-ctrl-zoom-out .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23fff' viewBox='0 0 29 29'%3E%3Cpath d='M10 13c-.75 0-1.5.75-1.5 1.5S9.25 16 10 16h9c.75 0 1.5-.75 1.5-1.5S19.75 13 19 13z'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-zoom-in .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23fff' viewBox='0 0 29 29'%3E%3Cpath d='M14.5 8.5c-.75 0-1.5.75-1.5 1.5v3h-3c-.75 0-1.5.75-1.5 1.5S9.25 16 10 16h3v3c0 .75.75 1.5 1.5 1.5S16 19.75 16 19v-3h3c.75 0 1.5-.75 1.5-1.5S19.75 13 19 13h-3v-3c0-.75-.75-1.5-1.5-1.5'/%3E%3C/svg%3E")}}@media (forced-colors:active) and (prefers-color-scheme:light){.maplibregl-ctrl button.maplibregl-ctrl-zoom-out .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' viewBox='0 0 29 29'%3E%3Cpath d='M10 13c-.75 0-1.5.75-1.5 1.5S9.25 16 10 16h9c.75 0 1.5-.75 1.5-1.5S19.75 13 19 13z'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-zoom-in .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' viewBox='0 0 29 29'%3E%3Cpath d='M14.5 8.5c-.75 0-1.5.75-1.5 1.5v3h-3c-.75 0-1.5.75-1.5 1.5S9.25 16 10 16h3v3c0 .75.75 1.5 1.5 1.5S16 19.75 16 19v-3h3c.75 0 1.5-.75 1.5-1.5S19.75 13 19 13h-3v-3c0-.75-.75-1.5-1.5-1.5'/%3E%3C/svg%3E")}}.maplibregl-ctrl button.maplibregl-ctrl-fullscreen .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23333' viewBox='0 0 29 29'%3E%3Cpath d='M24 16v5.5c0 1.75-.75 2.5-2.5 2.5H16v-1l3-1.5-4-5.5 1-1 5.5 4 1.5-3zM6 16l1.5 3 5.5-4 1 1-4 5.5 3 1.5v1H7.5C5.75 24 5 23.25 5 21.5V16zm7-11v1l-3 1.5 4 5.5-1 1-5.5-4L6 13H5V7.5C5 5.75 5.75 5 7.5 5zm11 2.5c0-1.75-.75-2.5-2.5-2.5H16v1l3 1.5-4 5.5 1 1 5.5-4 1.5 3h1z'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-shrink .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' viewBox='0 0 29 29'%3E%3Cpath d='M18.5 16c-1.75 0-2.5.75-2.5 2.5V24h1l1.5-3 5.5 4 1-1-4-5.5 3-1.5v-1zM13 18.5c0-1.75-.75-2.5-2.5-2.5H5v1l3 1.5L4 24l1 1 5.5-4 1.5 3h1zm3-8c0 1.75.75 2.5 2.5 2.5H24v-1l-3-1.5L25 5l-1-1-5.5 4L17 5h-1zM10.5 13c1.75 0 2.5-.75 2.5-2.5V5h-1l-1.5 3L5 4 4 5l4 5.5L5 12v1z'/%3E%3C/svg%3E")}@media (forced-colors:active){.maplibregl-ctrl button.maplibregl-ctrl-fullscreen .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23fff' viewBox='0 0 29 29'%3E%3Cpath d='M24 16v5.5c0 1.75-.75 2.5-2.5 2.5H16v-1l3-1.5-4-5.5 1-1 5.5 4 1.5-3zM6 16l1.5 3 5.5-4 1 1-4 5.5 3 1.5v1H7.5C5.75 24 5 23.25 5 21.5V16zm7-11v1l-3 1.5 4 5.5-1 1-5.5-4L6 13H5V7.5C5 5.75 5.75 5 7.5 5zm11 2.5c0-1.75-.75-2.5-2.5-2.5H16v1l3 1.5-4 5.5 1 1 5.5-4 1.5 3h1z'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-shrink .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23fff' viewBox='0 0 29 29'%3E%3Cpath d='M18.5 16c-1.75 0-2.5.75-2.5 2.5V24h1l1.5-3 5.5 4 1-1-4-5.5 3-1.5v-1zM13 18.5c0-1.75-.75-2.5-2.5-2.5H5v1l3 1.5L4 24l1 1 5.5-4 1.5 3h1zm3-8c0 1.75.75 2.5 2.5 2.5H24v-1l-3-1.5L25 5l-1-1-5.5 4L17 5h-1zM10.5 13c1.75 0 2.5-.75 2.5-2.5V5h-1l-1.5 3L5 4 4 5l4 5.5L5 12v1z'/%3E%3C/svg%3E")}}@media (forced-colors:active) and (prefers-color-scheme:light){.maplibregl-ctrl button.maplibregl-ctrl-fullscreen .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' viewBox='0 0 29 29'%3E%3Cpath d='M24 16v5.5c0 1.75-.75 2.5-2.5 2.5H16v-1l3-1.5-4-5.5 1-1 5.5 4 1.5-3zM6 16l1.5 3 5.5-4 1 1-4 5.5 3 1.5v1H7.5C5.75 24 5 23.25 5 21.5V16zm7-11v1l-3 1.5 4 5.5-1 1-5.5-4L6 13H5V7.5C5 5.75 5.75 5 7.5 5zm11 2.5c0-1.75-.75-2.5-2.5-2.5H16v1l3 1.5-4 5.5 1 1 5.5-4 1.5 3h1z'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-shrink .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' viewBox='0 0 29 29'%3E%3Cpath d='M18.5 16c-1.75 0-2.5.75-2.5 2.5V24h1l1.5-3 5.5 4 1-1-4-5.5 3-1.5v-1zM13 18.5c0-1.75-.75-2.5-2.5-2.5H5v1l3 1.5L4 24l1 1 5.5-4 1.5 3h1zm3-8c0 1.75.75 2.5 2.5 2.5H24v-1l-3-1.5L25 5l-1-1-5.5 4L17 5h-1zM10.5 13c1.75 0 2.5-.75 2.5-2.5V5h-1l-1.5 3L5 4 4 5l4 5.5L5 12v1z'/%3E%3C/svg%3E")}}.maplibregl-ctrl button.maplibregl-ctrl-compass .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23333' viewBox='0 0 29 29'%3E%3Cpath d='m10.5 14 4-8 4 8z'/%3E%3Cpath fill='%23ccc' d='m10.5 16 4 8 4-8z'/%3E%3C/svg%3E")}@media (forced-colors:active){.maplibregl-ctrl button.maplibregl-ctrl-compass .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23fff' viewBox='0 0 29 29'%3E%3Cpath d='m10.5 14 4-8 4 8z'/%3E%3Cpath fill='%23ccc' d='m10.5 16 4 8 4-8z'/%3E%3C/svg%3E")}}@media (forced-colors:active) and (prefers-color-scheme:light){.maplibregl-ctrl button.maplibregl-ctrl-compass .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' viewBox='0 0 29 29'%3E%3Cpath d='m10.5 14 4-8 4 8z'/%3E%3Cpath fill='%23ccc' d='m10.5 16 4 8 4-8z'/%3E%3C/svg%3E")}}.maplibregl-ctrl button.maplibregl-ctrl-terrain .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' fill='%23333' viewBox='0 0 22 22'%3E%3Cpath d='m1.754 13.406 4.453-4.851 3.09 3.09 3.281 3.277.969-.969-3.309-3.312 3.844-4.121 6.148 6.886h1.082v-.855l-7.207-8.07-4.84 5.187L6.169 6.57l-5.48 5.965v.871ZM.688 16.844h20.625v1.375H.688Zm0 0'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-terrain-enabled .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' fill='%2333b5e5' viewBox='0 0 22 22'%3E%3Cpath d='m1.754 13.406 4.453-4.851 3.09 3.09 3.281 3.277.969-.969-3.309-3.312 3.844-4.121 6.148 6.886h1.082v-.855l-7.207-8.07-4.84 5.187L6.169 6.57l-5.48 5.965v.871ZM.688 16.844h20.625v1.375H.688Zm0 0'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-geolocate .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23333' viewBox='0 0 20 20'%3E%3Cpath d='M10 4C9 4 9 5 9 5v.1A5 5 0 0 0 5.1 9H5s-1 0-1 1 1 1 1 1h.1A5 5 0 0 0 9 14.9v.1s0 1 1 1 1-1 1-1v-.1a5 5 0 0 0 3.9-3.9h.1s1 0 1-1-1-1-1-1h-.1A5 5 0 0 0 11 5.1V5s0-1-1-1m0 2.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 1 0-7'/%3E%3Ccircle cx='10' cy='10' r='2'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-geolocate:disabled .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23aaa' viewBox='0 0 20 20'%3E%3Cpath d='M10 4C9 4 9 5 9 5v.1A5 5 0 0 0 5.1 9H5s-1 0-1 1 1 1 1 1h.1A5 5 0 0 0 9 14.9v.1s0 1 1 1 1-1 1-1v-.1a5 5 0 0 0 3.9-3.9h.1s1 0 1-1-1-1-1-1h-.1A5 5 0 0 0 11 5.1V5s0-1-1-1m0 2.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 1 0-7'/%3E%3Ccircle cx='10' cy='10' r='2'/%3E%3Cpath fill='red' d='m14 5 1 1-9 9-1-1z'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-geolocate.maplibregl-ctrl-geolocate-active .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%2333b5e5' viewBox='0 0 20 20'%3E%3Cpath d='M10 4C9 4 9 5 9 5v.1A5 5 0 0 0 5.1 9H5s-1 0-1 1 1 1 1 1h.1A5 5 0 0 0 9 14.9v.1s0 1 1 1 1-1 1-1v-.1a5 5 0 0 0 3.9-3.9h.1s1 0 1-1-1-1-1-1h-.1A5 5 0 0 0 11 5.1V5s0-1-1-1m0 2.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 1 0-7'/%3E%3Ccircle cx='10' cy='10' r='2'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-geolocate.maplibregl-ctrl-geolocate-active-error .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23e58978' viewBox='0 0 20 20'%3E%3Cpath d='M10 4C9 4 9 5 9 5v.1A5 5 0 0 0 5.1 9H5s-1 0-1 1 1 1 1 1h.1A5 5 0 0 0 9 14.9v.1s0 1 1 1 1-1 1-1v-.1a5 5 0 0 0 3.9-3.9h.1s1 0 1-1-1-1-1-1h-.1A5 5 0 0 0 11 5.1V5s0-1-1-1m0 2.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 1 0-7'/%3E%3Ccircle cx='10' cy='10' r='2'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-geolocate.maplibregl-ctrl-geolocate-background .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%2333b5e5' viewBox='0 0 20 20'%3E%3Cpath d='M10 4C9 4 9 5 9 5v.1A5 5 0 0 0 5.1 9H5s-1 0-1 1 1 1 1 1h.1A5 5 0 0 0 9 14.9v.1s0 1 1 1 1-1 1-1v-.1a5 5 0 0 0 3.9-3.9h.1s1 0 1-1-1-1-1-1h-.1A5 5 0 0 0 11 5.1V5s0-1-1-1m0 2.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 1 0-7'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-geolocate.maplibregl-ctrl-geolocate-background-error .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23e54e33' viewBox='0 0 20 20'%3E%3Cpath d='M10 4C9 4 9 5 9 5v.1A5 5 0 0 0 5.1 9H5s-1 0-1 1 1 1 1 1h.1A5 5 0 0 0 9 14.9v.1s0 1 1 1 1-1 1-1v-.1a5 5 0 0 0 3.9-3.9h.1s1 0 1-1-1-1-1-1h-.1A5 5 0 0 0 11 5.1V5s0-1-1-1m0 2.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 1 0-7'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-geolocate.maplibregl-ctrl-geolocate-waiting .maplibregl-ctrl-icon{animation:maplibregl-spin 2s linear infinite}@media (forced-colors:active){.maplibregl-ctrl button.maplibregl-ctrl-geolocate .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23fff' viewBox='0 0 20 20'%3E%3Cpath d='M10 4C9 4 9 5 9 5v.1A5 5 0 0 0 5.1 9H5s-1 0-1 1 1 1 1 1h.1A5 5 0 0 0 9 14.9v.1s0 1 1 1 1-1 1-1v-.1a5 5 0 0 0 3.9-3.9h.1s1 0 1-1-1-1-1-1h-.1A5 5 0 0 0 11 5.1V5s0-1-1-1m0 2.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 1 0-7'/%3E%3Ccircle cx='10' cy='10' r='2'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-geolocate:disabled .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23999' viewBox='0 0 20 20'%3E%3Cpath d='M10 4C9 4 9 5 9 5v.1A5 5 0 0 0 5.1 9H5s-1 0-1 1 1 1 1 1h.1A5 5 0 0 0 9 14.9v.1s0 1 1 1 1-1 1-1v-.1a5 5 0 0 0 3.9-3.9h.1s1 0 1-1-1-1-1-1h-.1A5 5 0 0 0 11 5.1V5s0-1-1-1m0 2.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 1 0-7'/%3E%3Ccircle cx='10' cy='10' r='2'/%3E%3Cpath fill='red' d='m14 5 1 1-9 9-1-1z'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-geolocate.maplibregl-ctrl-geolocate-active .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%2333b5e5' viewBox='0 0 20 20'%3E%3Cpath d='M10 4C9 4 9 5 9 5v.1A5 5 0 0 0 5.1 9H5s-1 0-1 1 1 1 1 1h.1A5 5 0 0 0 9 14.9v.1s0 1 1 1 1-1 1-1v-.1a5 5 0 0 0 3.9-3.9h.1s1 0 1-1-1-1-1-1h-.1A5 5 0 0 0 11 5.1V5s0-1-1-1m0 2.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 1 0-7'/%3E%3Ccircle cx='10' cy='10' r='2'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-geolocate.maplibregl-ctrl-geolocate-active-error .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23e58978' viewBox='0 0 20 20'%3E%3Cpath d='M10 4C9 4 9 5 9 5v.1A5 5 0 0 0 5.1 9H5s-1 0-1 1 1 1 1 1h.1A5 5 0 0 0 9 14.9v.1s0 1 1 1 1-1 1-1v-.1a5 5 0 0 0 3.9-3.9h.1s1 0 1-1-1-1-1-1h-.1A5 5 0 0 0 11 5.1V5s0-1-1-1m0 2.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 1 0-7'/%3E%3Ccircle cx='10' cy='10' r='2'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-geolocate.maplibregl-ctrl-geolocate-background .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%2333b5e5' viewBox='0 0 20 20'%3E%3Cpath d='M10 4C9 4 9 5 9 5v.1A5 5 0 0 0 5.1 9H5s-1 0-1 1 1 1 1 1h.1A5 5 0 0 0 9 14.9v.1s0 1 1 1 1-1 1-1v-.1a5 5 0 0 0 3.9-3.9h.1s1 0 1-1-1-1-1-1h-.1A5 5 0 0 0 11 5.1V5s0-1-1-1m0 2.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 1 0-7'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-geolocate.maplibregl-ctrl-geolocate-background-error .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23e54e33' viewBox='0 0 20 20'%3E%3Cpath d='M10 4C9 4 9 5 9 5v.1A5 5 0 0 0 5.1 9H5s-1 0-1 1 1 1 1 1h.1A5 5 0 0 0 9 14.9v.1s0 1 1 1 1-1 1-1v-.1a5 5 0 0 0 3.9-3.9h.1s1 0 1-1-1-1-1-1h-.1A5 5 0 0 0 11 5.1V5s0-1-1-1m0 2.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 1 0-7'/%3E%3C/svg%3E")}}@media (forced-colors:active) and (prefers-color-scheme:light){.maplibregl-ctrl button.maplibregl-ctrl-geolocate .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' viewBox='0 0 20 20'%3E%3Cpath d='M10 4C9 4 9 5 9 5v.1A5 5 0 0 0 5.1 9H5s-1 0-1 1 1 1 1 1h.1A5 5 0 0 0 9 14.9v.1s0 1 1 1 1-1 1-1v-.1a5 5 0 0 0 3.9-3.9h.1s1 0 1-1-1-1-1-1h-.1A5 5 0 0 0 11 5.1V5s0-1-1-1m0 2.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 1 0-7'/%3E%3Ccircle cx='10' cy='10' r='2'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-geolocate:disabled .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23666' viewBox='0 0 20 20'%3E%3Cpath d='M10 4C9 4 9 5 9 5v.1A5 5 0 0 0 5.1 9H5s-1 0-1 1 1 1 1 1h.1A5 5 0 0 0 9 14.9v.1s0 1 1 1 1-1 1-1v-.1a5 5 0 0 0 3.9-3.9h.1s1 0 1-1-1-1-1-1h-.1A5 5 0 0 0 11 5.1V5s0-1-1-1m0 2.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 1 0-7'/%3E%3Ccircle cx='10' cy='10' r='2'/%3E%3Cpath fill='red' d='m14 5 1 1-9 9-1-1z'/%3E%3C/svg%3E")}}@keyframes maplibregl-spin{0%{transform:rotate(0deg)}to{transform:rotate(1turn)}}a.maplibregl-ctrl-logo{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='88' height='23' fill='none'%3E%3Cpath fill='%23000' fill-opacity='.4' fill-rule='evenodd' d='M17.408 16.796h-1.827l2.501-12.095h.198l3.324 6.533.988 2.19.988-2.19 3.258-6.533h.181l2.6 12.095h-1.81l-1.218-5.644-.362-1.71-.658 1.71-2.929 5.644h-.098l-2.914-5.644-.757-1.71-.345 1.71zm1.958-3.42-.726 3.663a1.255 1.255 0 0 1-1.232 1.011h-1.827a1.255 1.255 0 0 1-1.229-1.509l2.501-12.095a1.255 1.255 0 0 1 1.23-1.001h.197a1.25 1.25 0 0 1 1.12.685l3.19 6.273 3.125-6.263a1.25 1.25 0 0 1 1.123-.695h.181a1.255 1.255 0 0 1 1.227.991l1.443 6.71a5 5 0 0 1 .314-.787l.009-.016a4.6 4.6 0 0 1 1.777-1.887c.782-.46 1.668-.667 2.611-.667a4.6 4.6 0 0 1 1.7.32l.306.134c.21-.16.474-.256.759-.256h1.694a1.255 1.255 0 0 1 1.212.925 1.255 1.255 0 0 1 1.212-.925h1.711c.284 0 .545.094.755.252.613-.3 1.312-.45 2.075-.45 1.356 0 2.557.445 3.482 1.4q.47.48.763 1.064V4.701a1.255 1.255 0 0 1 1.255-1.255h1.86A1.255 1.255 0 0 1 54.44 4.7v9.194h2.217c.19 0 .37.043.532.118v-4.77c0-.356.147-.678.385-.906a2.42 2.42 0 0 1-.682-1.71c0-.665.267-1.253.735-1.7a2.45 2.45 0 0 1 1.722-.674 2.43 2.43 0 0 1 1.705.675q.318.302.504.683V4.7a1.255 1.255 0 0 1 1.255-1.255h1.744A1.255 1.255 0 0 1 65.812 4.7v3.335a4.8 4.8 0 0 1 1.526-.246c.938 0 1.817.214 2.59.69a4.47 4.47 0 0 1 1.67 1.743v-.98a1.255 1.255 0 0 1 1.256-1.256h1.777c.233 0 .451.064.639.174a3.4 3.4 0 0 1 1.567-.372c.346 0 .861.02 1.285.232a1.25 1.25 0 0 1 .689 1.004 4.7 4.7 0 0 1 .853-.588c.795-.44 1.675-.647 2.61-.647 1.385 0 2.65.39 3.525 1.396.836.938 1.168 2.173 1.168 3.528q-.001.515-.056 1.051a1.255 1.255 0 0 1-.947 1.09l.408.952a1.255 1.255 0 0 1-.477 1.552c-.418.268-.92.463-1.458.612-.613.171-1.304.244-2.049.244-1.06 0-2.043-.207-2.886-.698l-.015-.008c-.798-.48-1.419-1.135-1.818-1.963l-.004-.008a5.8 5.8 0 0 1-.548-2.512q0-.429.053-.843a1.3 1.3 0 0 1-.333-.086l-.166-.004c-.223 0-.426.062-.643.228-.03.024-.142.139-.142.59v3.883a1.255 1.255 0 0 1-1.256 1.256h-1.777a1.255 1.255 0 0 1-1.256-1.256V15.69l-.032.057a4.8 4.8 0 0 1-1.86 1.833 5.04 5.04 0 0 1-2.484.634 4.5 4.5 0 0 1-1.935-.424 1.25 1.25 0 0 1-.764.258h-1.71a1.255 1.255 0 0 1-1.256-1.255V7.687a2.4 2.4 0 0 1-.428.625c.253.23.412.561.412.93v7.553a1.255 1.255 0 0 1-1.256 1.255h-1.843a1.25 1.25 0 0 1-.894-.373c-.228.23-.544.373-.894.373H51.32a1.255 1.255 0 0 1-1.256-1.255v-1.251l-.061.117a4.7 4.7 0 0 1-1.782 1.884 4.77 4.77 0 0 1-2.485.67 5.6 5.6 0 0 1-1.485-.188l.009 2.764a1.255 1.255 0 0 1-1.255 1.259h-1.729a1.255 1.255 0 0 1-1.255-1.255v-3.537a1.255 1.255 0 0 1-1.167.793h-1.679a1.25 1.25 0 0 1-.77-.263 4.5 4.5 0 0 1-1.945.429c-.885 0-1.724-.21-2.495-.632l-.017-.01a5 5 0 0 1-1.081-.836 1.255 1.255 0 0 1-1.254 1.312h-1.81a1.255 1.255 0 0 1-1.228-.99l-.782-3.625-2.044 3.939a1.25 1.25 0 0 1-1.115.676h-.098a1.25 1.25 0 0 1-1.116-.68l-2.061-3.994zM35.92 16.63l.207-.114.223-.15q.493-.356.735-.785l.061-.118.033 1.332h1.678V9.242h-1.694l-.033 1.267q-.133-.329-.526-.658l-.032-.028a3.2 3.2 0 0 0-.668-.428l-.27-.12a3.3 3.3 0 0 0-1.235-.23q-1.136-.001-1.974.493a3.36 3.36 0 0 0-1.3 1.382q-.445.89-.444 2.074 0 1.2.51 2.107a3.8 3.8 0 0 0 1.382 1.381 3.9 3.9 0 0 0 1.893.477q.795 0 1.455-.33zm-2.789-5.38q-.576.675-.575 1.762 0 1.102.559 1.794.576.675 1.645.675a2.25 2.25 0 0 0 .934-.19 2.2 2.2 0 0 0 .468-.29l.178-.161a2.2 2.2 0 0 0 .397-.561q.244-.5.244-1.15v-.115q0-.708-.296-1.267l-.043-.077a2.2 2.2 0 0 0-.633-.709l-.13-.086-.047-.028a2.1 2.1 0 0 0-1.073-.285q-1.052 0-1.629.692zm2.316 2.706c.163-.17.28-.407.28-.83v-.114c0-.292-.06-.508-.15-.68a.96.96 0 0 0-.353-.389.85.85 0 0 0-.464-.127c-.4 0-.56.114-.664.239l-.01.012c-.148.174-.275.45-.275.945 0 .506.122.801.27.99.097.11.266.224.68.224.303 0 .504-.09.687-.269zm7.545 1.705a2.6 2.6 0 0 0 .331.423q.319.33.755.548l.173.074q.65.255 1.49.255 1.02 0 1.844-.493a3.45 3.45 0 0 0 1.316-1.4q.493-.904.493-2.089 0-1.909-.988-2.913-.988-1.02-2.584-1.02-.898 0-1.575.347a3 3 0 0 0-.415.262l-.199.166a3.4 3.4 0 0 0-.64.82V9.242h-1.712v11.553h1.729l-.017-5.134zm.53-1.138q.206.29.48.5l.155.11.053.034q.51.296 1.119.297 1.07 0 1.645-.675.577-.69.576-1.762 0-1.119-.576-1.777-.558-.675-1.645-.675-.435 0-.835.16a2 2 0 0 0-.284.136 2 2 0 0 0-.363.254 2.2 2.2 0 0 0-.46.569l-.082.162a2.6 2.6 0 0 0-.213 1.072v.115q0 .707.296 1.267l.135.211zm.964-.818a1.1 1.1 0 0 0 .367.385.94.94 0 0 0 .476.118c.423 0 .59-.117.687-.23.159-.194.28-.478.28-.95 0-.53-.133-.8-.266-.952l-.021-.025c-.078-.094-.231-.221-.68-.221a1 1 0 0 0-.503.135l-.012.007a.86.86 0 0 0-.335.343c-.073.133-.132.324-.132.614v.115a1.4 1.4 0 0 0 .14.66zm15.7-6.222q.347-.346.346-.856a1.05 1.05 0 0 0-.345-.79 1.18 1.18 0 0 0-.84-.329q-.51 0-.855.33a1.05 1.05 0 0 0-.346.79q0 .51.346.855.345.346.856.346.51 0 .839-.346zm4.337 9.314.033-1.332q.191.403.59.747l.098.081a4 4 0 0 0 .316.224l.223.122a3.2 3.2 0 0 0 1.44.322 3.8 3.8 0 0 0 1.875-.477 3.5 3.5 0 0 0 1.382-1.366q.527-.89.526-2.09 0-1.184-.444-2.073a3.24 3.24 0 0 0-1.283-1.399q-.823-.51-1.942-.51a3.5 3.5 0 0 0-1.527.344l-.086.043-.165.09a3 3 0 0 0-.33.214q-.432.315-.656.707a2 2 0 0 0-.099.198l.082-1.283V4.701h-1.744v12.095zm.473-2.509a2.5 2.5 0 0 0 .566.7q.117.098.245.18l.144.08a2.1 2.1 0 0 0 .975.232q1.07 0 1.645-.675.576-.69.576-1.778 0-1.102-.576-1.777-.56-.691-1.645-.692a2.2 2.2 0 0 0-1.015.235q-.22.113-.415.282l-.15.142a2.1 2.1 0 0 0-.42.594q-.223.479-.223 1.1v.115q0 .705.293 1.26zm2.616-.293c.157-.191.28-.479.28-.967 0-.51-.13-.79-.276-.961l-.021-.026c-.082-.1-.232-.225-.67-.225a.87.87 0 0 0-.681.279l-.012.011c-.154.155-.274.38-.274.807v.115c0 .285.057.499.144.669a1.1 1.1 0 0 0 .367.405c.137.082.28.123.455.123.423 0 .59-.118.686-.23zm8.266-3.013q.345-.13.724-.14l.069-.002q.493 0 .642.099l.247-1.794q-.196-.099-.717-.099a2.3 2.3 0 0 0-.545.063 2 2 0 0 0-.411.148 2.2 2.2 0 0 0-.4.249 2.5 2.5 0 0 0-.485.499 2.7 2.7 0 0 0-.32.581l-.05.137v-1.48h-1.778v7.553h1.777v-3.884q0-.546.159-.943a1.5 1.5 0 0 1 .466-.636 2.5 2.5 0 0 1 .399-.253 2 2 0 0 1 .224-.099zm9.784 2.656.05-.922q0-1.743-.856-2.698-.838-.97-2.584-.97-1.119-.001-2.007.493a3.46 3.46 0 0 0-1.4 1.382q-.493.906-.493 2.106 0 1.07.428 1.975.428.89 1.332 1.432.906.526 2.255.526.973 0 1.668-.185l.044-.012.135-.04q.613-.184.984-.421l-.542-1.267q-.3.162-.642.274l-.297.087q-.51.131-1.3.131-.954 0-1.497-.444a1.6 1.6 0 0 1-.192-.193q-.366-.44-.512-1.234l-.004-.021zm-5.427-1.256-.003.022h3.752v-.138q-.011-.727-.288-1.118a1 1 0 0 0-.156-.176q-.46-.428-1.316-.428-.986 0-1.494.604-.379.45-.494 1.234zm-27.053 2.77V4.7h-1.86v12.095h5.333V15.15zm7.103-5.908v7.553h-1.843V9.242h1.843z'/%3E%3Cpath fill='%23fff' d='m19.63 11.151-.757-1.71-.345 1.71-1.12 5.644h-1.827L18.083 4.7h.197l3.325 6.533.988 2.19.988-2.19L26.839 4.7h.181l2.6 12.095h-1.81l-1.218-5.644-.362-1.71-.658 1.71-2.93 5.644h-.098l-2.913-5.644zm14.836 5.81q-1.02 0-1.893-.478a3.8 3.8 0 0 1-1.381-1.382q-.51-.906-.51-2.106 0-1.185.444-2.074a3.36 3.36 0 0 1 1.3-1.382q.839-.494 1.974-.494a3.3 3.3 0 0 1 1.234.231 3.3 3.3 0 0 1 .97.575q.396.33.527.659l.033-1.267h1.694v7.553H37.18l-.033-1.332q-.279.593-1.02 1.053a3.17 3.17 0 0 1-1.662.444zm.296-1.482q.938 0 1.58-.642.642-.66.642-1.711v-.115q0-.708-.296-1.267a2.2 2.2 0 0 0-.807-.872 2.1 2.1 0 0 0-1.119-.313q-1.053 0-1.629.692-.575.675-.575 1.76 0 1.103.559 1.795.577.675 1.645.675zm6.521-6.237h1.711v1.4q.906-1.597 2.83-1.597 1.596 0 2.584 1.02.988 1.005.988 2.914 0 1.185-.493 2.09a3.46 3.46 0 0 1-1.316 1.399 3.5 3.5 0 0 1-1.844.493q-.954 0-1.662-.329a2.67 2.67 0 0 1-1.086-.97l.017 5.134h-1.728zm4.048 6.22q1.07 0 1.645-.674.577-.69.576-1.762 0-1.119-.576-1.777-.558-.675-1.645-.675-.592 0-1.12.296-.51.28-.822.823-.296.527-.296 1.234v.115q0 .708.296 1.267.313.543.823.855.51.296 1.119.297z'/%3E%3Cpath fill='%23e1e3e9' d='M51.325 4.7h1.86v10.45h3.473v1.646h-5.333zm7.12 4.542h1.843v7.553h-1.843zm.905-1.415a1.16 1.16 0 0 1-.856-.346 1.17 1.17 0 0 1-.346-.856 1.05 1.05 0 0 1 .346-.79q.346-.329.856-.329.494 0 .839.33a1.05 1.05 0 0 1 .345.79 1.16 1.16 0 0 1-.345.855q-.33.346-.84.346zm7.875 9.133a3.17 3.17 0 0 1-1.662-.444q-.723-.46-1.004-1.053l-.033 1.332h-1.71V4.701h1.743v4.657l-.082 1.283q.279-.658 1.086-1.119a3.5 3.5 0 0 1 1.778-.477q1.119 0 1.942.51a3.24 3.24 0 0 1 1.283 1.4q.445.888.444 2.072 0 1.201-.526 2.09a3.5 3.5 0 0 1-1.382 1.366 3.8 3.8 0 0 1-1.876.477zm-.296-1.481q1.069 0 1.645-.675.577-.69.577-1.778 0-1.102-.577-1.776-.56-.691-1.645-.692a2.12 2.12 0 0 0-1.58.659q-.642.641-.642 1.694v.115q0 .71.296 1.267a2.4 2.4 0 0 0 .807.872 2.1 2.1 0 0 0 1.119.313zm5.927-6.237h1.777v1.481q.263-.757.856-1.217a2.14 2.14 0 0 1 1.349-.46q.527 0 .724.098l-.247 1.794q-.149-.099-.642-.099-.774 0-1.416.494-.626.493-.626 1.58v3.883h-1.777V9.242zm9.534 7.718q-1.35 0-2.255-.526-.904-.543-1.332-1.432a4.6 4.6 0 0 1-.428-1.975q0-1.2.493-2.106a3.46 3.46 0 0 1 1.4-1.382q.889-.495 2.007-.494 1.744 0 2.584.97.855.956.856 2.7 0 .444-.05.92h-5.43q.18 1.005.708 1.45.542.443 1.497.443.79 0 1.3-.131a4 4 0 0 0 .938-.362l.542 1.267q-.411.263-1.119.46-.708.198-1.711.197zm1.596-4.558q.016-1.02-.444-1.432-.46-.428-1.316-.428-1.728 0-1.991 1.86z'/%3E%3Cpath d='M5.074 15.948a.484.657 0 0 0-.486.659v1.84a.484.657 0 0 0 .486.659h4.101a.484.657 0 0 0 .486-.659v-1.84a.484.657 0 0 0-.486-.659zm3.56 1.16H5.617v.838h3.017z' style='fill:%23fff;fill-rule:evenodd;stroke-width:1.03600001'/%3E%3Cg style='stroke-width:1.12603545'%3E%3Cpath d='M-9.408-1.416c-3.833-.025-7.056 2.912-7.08 6.615-.02 3.08 1.653 4.832 3.107 6.268.903.892 1.721 1.74 2.32 2.902l-.525-.004c-.543-.003-.992.304-1.24.639a1.87 1.87 0 0 0-.362 1.121l-.011 1.877c-.003.402.104.787.347 1.125.244.338.688.653 1.23.656l4.142.028c.542.003.99-.306 1.238-.641a1.87 1.87 0 0 0 .363-1.121l.012-1.875a1.87 1.87 0 0 0-.348-1.127c-.243-.338-.688-.653-1.23-.656l-.518-.004c.597-1.145 1.425-1.983 2.348-2.87 1.473-1.414 3.18-3.149 3.2-6.226-.016-3.59-2.923-6.684-6.993-6.707m-.006 1.1v.002c3.274.02 5.92 2.532 5.9 5.6-.017 2.706-1.39 4.026-2.863 5.44-1.034.994-2.118 2.033-2.814 3.633-.018.041-.052.055-.075.065q-.013.004-.02.01a.34.34 0 0 1-.226.084.34.34 0 0 1-.224-.086l-.092-.077c-.699-1.615-1.768-2.669-2.781-3.67-1.454-1.435-2.797-2.762-2.78-5.478.02-3.067 2.7-5.545 5.975-5.523m-.02 2.826c-1.62-.01-2.944 1.315-2.955 2.96-.01 1.646 1.295 2.988 2.916 2.999h.002c1.621.01 2.943-1.316 2.953-2.961.011-1.646-1.294-2.988-2.916-2.998m-.005 1.1c1.017.006 1.829.83 1.822 1.89s-.83 1.874-1.848 1.867c-1.018-.006-1.829-.83-1.822-1.89s.83-1.874 1.848-1.868m-2.155 11.857 4.14.025c.271.002.49.305.487.676l-.013 1.875c-.003.37-.224.67-.495.668l-4.14-.025c-.27-.002-.487-.306-.485-.676l.012-1.875c.003-.37.224-.67.494-.668' style='color:%23000;font-style:normal;font-variant:normal;font-weight:400;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:%23000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:evenodd;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:%23000;solid-opacity:1;vector-effect:none;fill:%23000;fill-opacity:.4;fill-rule:evenodd;stroke:none;stroke-width:2.47727823;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto' transform='translate(15.553 2.85)scale(.88807)'/%3E%3Cpath d='M-9.415-.316C-12.69-.338-15.37 2.14-15.39 5.207c-.017 2.716 1.326 4.041 2.78 5.477 1.013 1 2.081 2.055 2.78 3.67l.092.076a.34.34 0 0 0 .225.086.34.34 0 0 0 .227-.083l.019-.01c.022-.009.057-.024.074-.064.697-1.6 1.78-2.64 2.814-3.634 1.473-1.414 2.847-2.733 2.864-5.44.02-3.067-2.627-5.58-5.901-5.601m-.057 8.784c1.621.011 2.944-1.315 2.955-2.96.01-1.646-1.295-2.988-2.916-2.999-1.622-.01-2.945 1.315-2.955 2.96s1.295 2.989 2.916 3' style='clip-rule:evenodd;fill:%23e1e3e9;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.47727823;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:.4' transform='translate(15.553 2.85)scale(.88807)'/%3E%3Cpath d='M-11.594 15.465c-.27-.002-.492.297-.494.668l-.012 1.876c-.003.371.214.673.485.675l4.14.027c.271.002.492-.298.495-.668l.012-1.877c.003-.37-.215-.672-.485-.674z' style='clip-rule:evenodd;fill:%23fff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.47727823;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:.4' transform='translate(15.553 2.85)scale(.88807)'/%3E%3C/g%3E%3C/svg%3E");background-repeat:no-repeat;cursor:pointer;display:block;height:23px;margin:0 0 -4px -4px;overflow:hidden;width:88px}a.maplibregl-ctrl-logo.maplibregl-compact{width:14px}@media (forced-colors:active){a.maplibregl-ctrl-logo{background-color:transparent;background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='88' height='23' fill='none'%3E%3Cpath fill='%23000' fill-opacity='.4' fill-rule='evenodd' d='M17.408 16.796h-1.827l2.501-12.095h.198l3.324 6.533.988 2.19.988-2.19 3.258-6.533h.181l2.6 12.095h-1.81l-1.218-5.644-.362-1.71-.658 1.71-2.929 5.644h-.098l-2.914-5.644-.757-1.71-.345 1.71zm1.958-3.42-.726 3.663a1.255 1.255 0 0 1-1.232 1.011h-1.827a1.255 1.255 0 0 1-1.229-1.509l2.501-12.095a1.255 1.255 0 0 1 1.23-1.001h.197a1.25 1.25 0 0 1 1.12.685l3.19 6.273 3.125-6.263a1.25 1.25 0 0 1 1.123-.695h.181a1.255 1.255 0 0 1 1.227.991l1.443 6.71a5 5 0 0 1 .314-.787l.009-.016a4.6 4.6 0 0 1 1.777-1.887c.782-.46 1.668-.667 2.611-.667a4.6 4.6 0 0 1 1.7.32l.306.134c.21-.16.474-.256.759-.256h1.694a1.255 1.255 0 0 1 1.212.925 1.255 1.255 0 0 1 1.212-.925h1.711c.284 0 .545.094.755.252.613-.3 1.312-.45 2.075-.45 1.356 0 2.557.445 3.482 1.4q.47.48.763 1.064V4.701a1.255 1.255 0 0 1 1.255-1.255h1.86A1.255 1.255 0 0 1 54.44 4.7v9.194h2.217c.19 0 .37.043.532.118v-4.77c0-.356.147-.678.385-.906a2.42 2.42 0 0 1-.682-1.71c0-.665.267-1.253.735-1.7a2.45 2.45 0 0 1 1.722-.674 2.43 2.43 0 0 1 1.705.675q.318.302.504.683V4.7a1.255 1.255 0 0 1 1.255-1.255h1.744A1.255 1.255 0 0 1 65.812 4.7v3.335a4.8 4.8 0 0 1 1.526-.246c.938 0 1.817.214 2.59.69a4.47 4.47 0 0 1 1.67 1.743v-.98a1.255 1.255 0 0 1 1.256-1.256h1.777c.233 0 .451.064.639.174a3.4 3.4 0 0 1 1.567-.372c.346 0 .861.02 1.285.232a1.25 1.25 0 0 1 .689 1.004 4.7 4.7 0 0 1 .853-.588c.795-.44 1.675-.647 2.61-.647 1.385 0 2.65.39 3.525 1.396.836.938 1.168 2.173 1.168 3.528q-.001.515-.056 1.051a1.255 1.255 0 0 1-.947 1.09l.408.952a1.255 1.255 0 0 1-.477 1.552c-.418.268-.92.463-1.458.612-.613.171-1.304.244-2.049.244-1.06 0-2.043-.207-2.886-.698l-.015-.008c-.798-.48-1.419-1.135-1.818-1.963l-.004-.008a5.8 5.8 0 0 1-.548-2.512q0-.429.053-.843a1.3 1.3 0 0 1-.333-.086l-.166-.004c-.223 0-.426.062-.643.228-.03.024-.142.139-.142.59v3.883a1.255 1.255 0 0 1-1.256 1.256h-1.777a1.255 1.255 0 0 1-1.256-1.256V15.69l-.032.057a4.8 4.8 0 0 1-1.86 1.833 5.04 5.04 0 0 1-2.484.634 4.5 4.5 0 0 1-1.935-.424 1.25 1.25 0 0 1-.764.258h-1.71a1.255 1.255 0 0 1-1.256-1.255V7.687a2.4 2.4 0 0 1-.428.625c.253.23.412.561.412.93v7.553a1.255 1.255 0 0 1-1.256 1.255h-1.843a1.25 1.25 0 0 1-.894-.373c-.228.23-.544.373-.894.373H51.32a1.255 1.255 0 0 1-1.256-1.255v-1.251l-.061.117a4.7 4.7 0 0 1-1.782 1.884 4.77 4.77 0 0 1-2.485.67 5.6 5.6 0 0 1-1.485-.188l.009 2.764a1.255 1.255 0 0 1-1.255 1.259h-1.729a1.255 1.255 0 0 1-1.255-1.255v-3.537a1.255 1.255 0 0 1-1.167.793h-1.679a1.25 1.25 0 0 1-.77-.263 4.5 4.5 0 0 1-1.945.429c-.885 0-1.724-.21-2.495-.632l-.017-.01a5 5 0 0 1-1.081-.836 1.255 1.255 0 0 1-1.254 1.312h-1.81a1.255 1.255 0 0 1-1.228-.99l-.782-3.625-2.044 3.939a1.25 1.25 0 0 1-1.115.676h-.098a1.25 1.25 0 0 1-1.116-.68l-2.061-3.994zM35.92 16.63l.207-.114.223-.15q.493-.356.735-.785l.061-.118.033 1.332h1.678V9.242h-1.694l-.033 1.267q-.133-.329-.526-.658l-.032-.028a3.2 3.2 0 0 0-.668-.428l-.27-.12a3.3 3.3 0 0 0-1.235-.23q-1.136-.001-1.974.493a3.36 3.36 0 0 0-1.3 1.382q-.445.89-.444 2.074 0 1.2.51 2.107a3.8 3.8 0 0 0 1.382 1.381 3.9 3.9 0 0 0 1.893.477q.795 0 1.455-.33zm-2.789-5.38q-.576.675-.575 1.762 0 1.102.559 1.794.576.675 1.645.675a2.25 2.25 0 0 0 .934-.19 2.2 2.2 0 0 0 .468-.29l.178-.161a2.2 2.2 0 0 0 .397-.561q.244-.5.244-1.15v-.115q0-.708-.296-1.267l-.043-.077a2.2 2.2 0 0 0-.633-.709l-.13-.086-.047-.028a2.1 2.1 0 0 0-1.073-.285q-1.052 0-1.629.692zm2.316 2.706c.163-.17.28-.407.28-.83v-.114c0-.292-.06-.508-.15-.68a.96.96 0 0 0-.353-.389.85.85 0 0 0-.464-.127c-.4 0-.56.114-.664.239l-.01.012c-.148.174-.275.45-.275.945 0 .506.122.801.27.99.097.11.266.224.68.224.303 0 .504-.09.687-.269zm7.545 1.705a2.6 2.6 0 0 0 .331.423q.319.33.755.548l.173.074q.65.255 1.49.255 1.02 0 1.844-.493a3.45 3.45 0 0 0 1.316-1.4q.493-.904.493-2.089 0-1.909-.988-2.913-.988-1.02-2.584-1.02-.898 0-1.575.347a3 3 0 0 0-.415.262l-.199.166a3.4 3.4 0 0 0-.64.82V9.242h-1.712v11.553h1.729l-.017-5.134zm.53-1.138q.206.29.48.5l.155.11.053.034q.51.296 1.119.297 1.07 0 1.645-.675.577-.69.576-1.762 0-1.119-.576-1.777-.558-.675-1.645-.675-.435 0-.835.16a2 2 0 0 0-.284.136 2 2 0 0 0-.363.254 2.2 2.2 0 0 0-.46.569l-.082.162a2.6 2.6 0 0 0-.213 1.072v.115q0 .707.296 1.267l.135.211zm.964-.818a1.1 1.1 0 0 0 .367.385.94.94 0 0 0 .476.118c.423 0 .59-.117.687-.23.159-.194.28-.478.28-.95 0-.53-.133-.8-.266-.952l-.021-.025c-.078-.094-.231-.221-.68-.221a1 1 0 0 0-.503.135l-.012.007a.86.86 0 0 0-.335.343c-.073.133-.132.324-.132.614v.115a1.4 1.4 0 0 0 .14.66zm15.7-6.222q.347-.346.346-.856a1.05 1.05 0 0 0-.345-.79 1.18 1.18 0 0 0-.84-.329q-.51 0-.855.33a1.05 1.05 0 0 0-.346.79q0 .51.346.855.345.346.856.346.51 0 .839-.346zm4.337 9.314.033-1.332q.191.403.59.747l.098.081a4 4 0 0 0 .316.224l.223.122a3.2 3.2 0 0 0 1.44.322 3.8 3.8 0 0 0 1.875-.477 3.5 3.5 0 0 0 1.382-1.366q.527-.89.526-2.09 0-1.184-.444-2.073a3.24 3.24 0 0 0-1.283-1.399q-.823-.51-1.942-.51a3.5 3.5 0 0 0-1.527.344l-.086.043-.165.09a3 3 0 0 0-.33.214q-.432.315-.656.707a2 2 0 0 0-.099.198l.082-1.283V4.701h-1.744v12.095zm.473-2.509a2.5 2.5 0 0 0 .566.7q.117.098.245.18l.144.08a2.1 2.1 0 0 0 .975.232q1.07 0 1.645-.675.576-.69.576-1.778 0-1.102-.576-1.777-.56-.691-1.645-.692a2.2 2.2 0 0 0-1.015.235q-.22.113-.415.282l-.15.142a2.1 2.1 0 0 0-.42.594q-.223.479-.223 1.1v.115q0 .705.293 1.26zm2.616-.293c.157-.191.28-.479.28-.967 0-.51-.13-.79-.276-.961l-.021-.026c-.082-.1-.232-.225-.67-.225a.87.87 0 0 0-.681.279l-.012.011c-.154.155-.274.38-.274.807v.115c0 .285.057.499.144.669a1.1 1.1 0 0 0 .367.405c.137.082.28.123.455.123.423 0 .59-.118.686-.23zm8.266-3.013q.345-.13.724-.14l.069-.002q.493 0 .642.099l.247-1.794q-.196-.099-.717-.099a2.3 2.3 0 0 0-.545.063 2 2 0 0 0-.411.148 2.2 2.2 0 0 0-.4.249 2.5 2.5 0 0 0-.485.499 2.7 2.7 0 0 0-.32.581l-.05.137v-1.48h-1.778v7.553h1.777v-3.884q0-.546.159-.943a1.5 1.5 0 0 1 .466-.636 2.5 2.5 0 0 1 .399-.253 2 2 0 0 1 .224-.099zm9.784 2.656.05-.922q0-1.743-.856-2.698-.838-.97-2.584-.97-1.119-.001-2.007.493a3.46 3.46 0 0 0-1.4 1.382q-.493.906-.493 2.106 0 1.07.428 1.975.428.89 1.332 1.432.906.526 2.255.526.973 0 1.668-.185l.044-.012.135-.04q.613-.184.984-.421l-.542-1.267q-.3.162-.642.274l-.297.087q-.51.131-1.3.131-.954 0-1.497-.444a1.6 1.6 0 0 1-.192-.193q-.366-.44-.512-1.234l-.004-.021zm-5.427-1.256-.003.022h3.752v-.138q-.011-.727-.288-1.118a1 1 0 0 0-.156-.176q-.46-.428-1.316-.428-.986 0-1.494.604-.379.45-.494 1.234zm-27.053 2.77V4.7h-1.86v12.095h5.333V15.15zm7.103-5.908v7.553h-1.843V9.242h1.843z'/%3E%3Cpath fill='%23fff' d='m19.63 11.151-.757-1.71-.345 1.71-1.12 5.644h-1.827L18.083 4.7h.197l3.325 6.533.988 2.19.988-2.19L26.839 4.7h.181l2.6 12.095h-1.81l-1.218-5.644-.362-1.71-.658 1.71-2.93 5.644h-.098l-2.913-5.644zm14.836 5.81q-1.02 0-1.893-.478a3.8 3.8 0 0 1-1.381-1.382q-.51-.906-.51-2.106 0-1.185.444-2.074a3.36 3.36 0 0 1 1.3-1.382q.839-.494 1.974-.494a3.3 3.3 0 0 1 1.234.231 3.3 3.3 0 0 1 .97.575q.396.33.527.659l.033-1.267h1.694v7.553H37.18l-.033-1.332q-.279.593-1.02 1.053a3.17 3.17 0 0 1-1.662.444zm.296-1.482q.938 0 1.58-.642.642-.66.642-1.711v-.115q0-.708-.296-1.267a2.2 2.2 0 0 0-.807-.872 2.1 2.1 0 0 0-1.119-.313q-1.053 0-1.629.692-.575.675-.575 1.76 0 1.103.559 1.795.577.675 1.645.675zm6.521-6.237h1.711v1.4q.906-1.597 2.83-1.597 1.596 0 2.584 1.02.988 1.005.988 2.914 0 1.185-.493 2.09a3.46 3.46 0 0 1-1.316 1.399 3.5 3.5 0 0 1-1.844.493q-.954 0-1.662-.329a2.67 2.67 0 0 1-1.086-.97l.017 5.134h-1.728zm4.048 6.22q1.07 0 1.645-.674.577-.69.576-1.762 0-1.119-.576-1.777-.558-.675-1.645-.675-.592 0-1.12.296-.51.28-.822.823-.296.527-.296 1.234v.115q0 .708.296 1.267.313.543.823.855.51.296 1.119.297z'/%3E%3Cpath fill='%23e1e3e9' d='M51.325 4.7h1.86v10.45h3.473v1.646h-5.333zm7.12 4.542h1.843v7.553h-1.843zm.905-1.415a1.16 1.16 0 0 1-.856-.346 1.17 1.17 0 0 1-.346-.856 1.05 1.05 0 0 1 .346-.79q.346-.329.856-.329.494 0 .839.33a1.05 1.05 0 0 1 .345.79 1.16 1.16 0 0 1-.345.855q-.33.346-.84.346zm7.875 9.133a3.17 3.17 0 0 1-1.662-.444q-.723-.46-1.004-1.053l-.033 1.332h-1.71V4.701h1.743v4.657l-.082 1.283q.279-.658 1.086-1.119a3.5 3.5 0 0 1 1.778-.477q1.119 0 1.942.51a3.24 3.24 0 0 1 1.283 1.4q.445.888.444 2.072 0 1.201-.526 2.09a3.5 3.5 0 0 1-1.382 1.366 3.8 3.8 0 0 1-1.876.477zm-.296-1.481q1.069 0 1.645-.675.577-.69.577-1.778 0-1.102-.577-1.776-.56-.691-1.645-.692a2.12 2.12 0 0 0-1.58.659q-.642.641-.642 1.694v.115q0 .71.296 1.267a2.4 2.4 0 0 0 .807.872 2.1 2.1 0 0 0 1.119.313zm5.927-6.237h1.777v1.481q.263-.757.856-1.217a2.14 2.14 0 0 1 1.349-.46q.527 0 .724.098l-.247 1.794q-.149-.099-.642-.099-.774 0-1.416.494-.626.493-.626 1.58v3.883h-1.777V9.242zm9.534 7.718q-1.35 0-2.255-.526-.904-.543-1.332-1.432a4.6 4.6 0 0 1-.428-1.975q0-1.2.493-2.106a3.46 3.46 0 0 1 1.4-1.382q.889-.495 2.007-.494 1.744 0 2.584.97.855.956.856 2.7 0 .444-.05.92h-5.43q.18 1.005.708 1.45.542.443 1.497.443.79 0 1.3-.131a4 4 0 0 0 .938-.362l.542 1.267q-.411.263-1.119.46-.708.198-1.711.197zm1.596-4.558q.016-1.02-.444-1.432-.46-.428-1.316-.428-1.728 0-1.991 1.86z'/%3E%3Cpath d='M5.074 15.948a.484.657 0 0 0-.486.659v1.84a.484.657 0 0 0 .486.659h4.101a.484.657 0 0 0 .486-.659v-1.84a.484.657 0 0 0-.486-.659zm3.56 1.16H5.617v.838h3.017z' style='fill:%23fff;fill-rule:evenodd;stroke-width:1.03600001'/%3E%3Cg style='stroke-width:1.12603545'%3E%3Cpath d='M-9.408-1.416c-3.833-.025-7.056 2.912-7.08 6.615-.02 3.08 1.653 4.832 3.107 6.268.903.892 1.721 1.74 2.32 2.902l-.525-.004c-.543-.003-.992.304-1.24.639a1.87 1.87 0 0 0-.362 1.121l-.011 1.877c-.003.402.104.787.347 1.125.244.338.688.653 1.23.656l4.142.028c.542.003.99-.306 1.238-.641a1.87 1.87 0 0 0 .363-1.121l.012-1.875a1.87 1.87 0 0 0-.348-1.127c-.243-.338-.688-.653-1.23-.656l-.518-.004c.597-1.145 1.425-1.983 2.348-2.87 1.473-1.414 3.18-3.149 3.2-6.226-.016-3.59-2.923-6.684-6.993-6.707m-.006 1.1v.002c3.274.02 5.92 2.532 5.9 5.6-.017 2.706-1.39 4.026-2.863 5.44-1.034.994-2.118 2.033-2.814 3.633-.018.041-.052.055-.075.065q-.013.004-.02.01a.34.34 0 0 1-.226.084.34.34 0 0 1-.224-.086l-.092-.077c-.699-1.615-1.768-2.669-2.781-3.67-1.454-1.435-2.797-2.762-2.78-5.478.02-3.067 2.7-5.545 5.975-5.523m-.02 2.826c-1.62-.01-2.944 1.315-2.955 2.96-.01 1.646 1.295 2.988 2.916 2.999h.002c1.621.01 2.943-1.316 2.953-2.961.011-1.646-1.294-2.988-2.916-2.998m-.005 1.1c1.017.006 1.829.83 1.822 1.89s-.83 1.874-1.848 1.867c-1.018-.006-1.829-.83-1.822-1.89s.83-1.874 1.848-1.868m-2.155 11.857 4.14.025c.271.002.49.305.487.676l-.013 1.875c-.003.37-.224.67-.495.668l-4.14-.025c-.27-.002-.487-.306-.485-.676l.012-1.875c.003-.37.224-.67.494-.668' style='color:%23000;font-style:normal;font-variant:normal;font-weight:400;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:%23000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:evenodd;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:%23000;solid-opacity:1;vector-effect:none;fill:%23000;fill-opacity:.4;fill-rule:evenodd;stroke:none;stroke-width:2.47727823;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto' transform='translate(15.553 2.85)scale(.88807)'/%3E%3Cpath d='M-9.415-.316C-12.69-.338-15.37 2.14-15.39 5.207c-.017 2.716 1.326 4.041 2.78 5.477 1.013 1 2.081 2.055 2.78 3.67l.092.076a.34.34 0 0 0 .225.086.34.34 0 0 0 .227-.083l.019-.01c.022-.009.057-.024.074-.064.697-1.6 1.78-2.64 2.814-3.634 1.473-1.414 2.847-2.733 2.864-5.44.02-3.067-2.627-5.58-5.901-5.601m-.057 8.784c1.621.011 2.944-1.315 2.955-2.96.01-1.646-1.295-2.988-2.916-2.999-1.622-.01-2.945 1.315-2.955 2.96s1.295 2.989 2.916 3' style='clip-rule:evenodd;fill:%23e1e3e9;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.47727823;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:.4' transform='translate(15.553 2.85)scale(.88807)'/%3E%3Cpath d='M-11.594 15.465c-.27-.002-.492.297-.494.668l-.012 1.876c-.003.371.214.673.485.675l4.14.027c.271.002.492-.298.495-.668l.012-1.877c.003-.37-.215-.672-.485-.674z' style='clip-rule:evenodd;fill:%23fff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.47727823;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:.4' transform='translate(15.553 2.85)scale(.88807)'/%3E%3C/g%3E%3C/svg%3E")}}@media (forced-colors:active) and (prefers-color-scheme:light){a.maplibregl-ctrl-logo{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='88' height='23' fill='none'%3E%3Cpath fill='%23000' fill-opacity='.4' fill-rule='evenodd' d='M17.408 16.796h-1.827l2.501-12.095h.198l3.324 6.533.988 2.19.988-2.19 3.258-6.533h.181l2.6 12.095h-1.81l-1.218-5.644-.362-1.71-.658 1.71-2.929 5.644h-.098l-2.914-5.644-.757-1.71-.345 1.71zm1.958-3.42-.726 3.663a1.255 1.255 0 0 1-1.232 1.011h-1.827a1.255 1.255 0 0 1-1.229-1.509l2.501-12.095a1.255 1.255 0 0 1 1.23-1.001h.197a1.25 1.25 0 0 1 1.12.685l3.19 6.273 3.125-6.263a1.25 1.25 0 0 1 1.123-.695h.181a1.255 1.255 0 0 1 1.227.991l1.443 6.71a5 5 0 0 1 .314-.787l.009-.016a4.6 4.6 0 0 1 1.777-1.887c.782-.46 1.668-.667 2.611-.667a4.6 4.6 0 0 1 1.7.32l.306.134c.21-.16.474-.256.759-.256h1.694a1.255 1.255 0 0 1 1.212.925 1.255 1.255 0 0 1 1.212-.925h1.711c.284 0 .545.094.755.252.613-.3 1.312-.45 2.075-.45 1.356 0 2.557.445 3.482 1.4q.47.48.763 1.064V4.701a1.255 1.255 0 0 1 1.255-1.255h1.86A1.255 1.255 0 0 1 54.44 4.7v9.194h2.217c.19 0 .37.043.532.118v-4.77c0-.356.147-.678.385-.906a2.42 2.42 0 0 1-.682-1.71c0-.665.267-1.253.735-1.7a2.45 2.45 0 0 1 1.722-.674 2.43 2.43 0 0 1 1.705.675q.318.302.504.683V4.7a1.255 1.255 0 0 1 1.255-1.255h1.744A1.255 1.255 0 0 1 65.812 4.7v3.335a4.8 4.8 0 0 1 1.526-.246c.938 0 1.817.214 2.59.69a4.47 4.47 0 0 1 1.67 1.743v-.98a1.255 1.255 0 0 1 1.256-1.256h1.777c.233 0 .451.064.639.174a3.4 3.4 0 0 1 1.567-.372c.346 0 .861.02 1.285.232a1.25 1.25 0 0 1 .689 1.004 4.7 4.7 0 0 1 .853-.588c.795-.44 1.675-.647 2.61-.647 1.385 0 2.65.39 3.525 1.396.836.938 1.168 2.173 1.168 3.528q-.001.515-.056 1.051a1.255 1.255 0 0 1-.947 1.09l.408.952a1.255 1.255 0 0 1-.477 1.552c-.418.268-.92.463-1.458.612-.613.171-1.304.244-2.049.244-1.06 0-2.043-.207-2.886-.698l-.015-.008c-.798-.48-1.419-1.135-1.818-1.963l-.004-.008a5.8 5.8 0 0 1-.548-2.512q0-.429.053-.843a1.3 1.3 0 0 1-.333-.086l-.166-.004c-.223 0-.426.062-.643.228-.03.024-.142.139-.142.59v3.883a1.255 1.255 0 0 1-1.256 1.256h-1.777a1.255 1.255 0 0 1-1.256-1.256V15.69l-.032.057a4.8 4.8 0 0 1-1.86 1.833 5.04 5.04 0 0 1-2.484.634 4.5 4.5 0 0 1-1.935-.424 1.25 1.25 0 0 1-.764.258h-1.71a1.255 1.255 0 0 1-1.256-1.255V7.687a2.4 2.4 0 0 1-.428.625c.253.23.412.561.412.93v7.553a1.255 1.255 0 0 1-1.256 1.255h-1.843a1.25 1.25 0 0 1-.894-.373c-.228.23-.544.373-.894.373H51.32a1.255 1.255 0 0 1-1.256-1.255v-1.251l-.061.117a4.7 4.7 0 0 1-1.782 1.884 4.77 4.77 0 0 1-2.485.67 5.6 5.6 0 0 1-1.485-.188l.009 2.764a1.255 1.255 0 0 1-1.255 1.259h-1.729a1.255 1.255 0 0 1-1.255-1.255v-3.537a1.255 1.255 0 0 1-1.167.793h-1.679a1.25 1.25 0 0 1-.77-.263 4.5 4.5 0 0 1-1.945.429c-.885 0-1.724-.21-2.495-.632l-.017-.01a5 5 0 0 1-1.081-.836 1.255 1.255 0 0 1-1.254 1.312h-1.81a1.255 1.255 0 0 1-1.228-.99l-.782-3.625-2.044 3.939a1.25 1.25 0 0 1-1.115.676h-.098a1.25 1.25 0 0 1-1.116-.68l-2.061-3.994zM35.92 16.63l.207-.114.223-.15q.493-.356.735-.785l.061-.118.033 1.332h1.678V9.242h-1.694l-.033 1.267q-.133-.329-.526-.658l-.032-.028a3.2 3.2 0 0 0-.668-.428l-.27-.12a3.3 3.3 0 0 0-1.235-.23q-1.136-.001-1.974.493a3.36 3.36 0 0 0-1.3 1.382q-.445.89-.444 2.074 0 1.2.51 2.107a3.8 3.8 0 0 0 1.382 1.381 3.9 3.9 0 0 0 1.893.477q.795 0 1.455-.33zm-2.789-5.38q-.576.675-.575 1.762 0 1.102.559 1.794.576.675 1.645.675a2.25 2.25 0 0 0 .934-.19 2.2 2.2 0 0 0 .468-.29l.178-.161a2.2 2.2 0 0 0 .397-.561q.244-.5.244-1.15v-.115q0-.708-.296-1.267l-.043-.077a2.2 2.2 0 0 0-.633-.709l-.13-.086-.047-.028a2.1 2.1 0 0 0-1.073-.285q-1.052 0-1.629.692zm2.316 2.706c.163-.17.28-.407.28-.83v-.114c0-.292-.06-.508-.15-.68a.96.96 0 0 0-.353-.389.85.85 0 0 0-.464-.127c-.4 0-.56.114-.664.239l-.01.012c-.148.174-.275.45-.275.945 0 .506.122.801.27.99.097.11.266.224.68.224.303 0 .504-.09.687-.269zm7.545 1.705a2.6 2.6 0 0 0 .331.423q.319.33.755.548l.173.074q.65.255 1.49.255 1.02 0 1.844-.493a3.45 3.45 0 0 0 1.316-1.4q.493-.904.493-2.089 0-1.909-.988-2.913-.988-1.02-2.584-1.02-.898 0-1.575.347a3 3 0 0 0-.415.262l-.199.166a3.4 3.4 0 0 0-.64.82V9.242h-1.712v11.553h1.729l-.017-5.134zm.53-1.138q.206.29.48.5l.155.11.053.034q.51.296 1.119.297 1.07 0 1.645-.675.577-.69.576-1.762 0-1.119-.576-1.777-.558-.675-1.645-.675-.435 0-.835.16a2 2 0 0 0-.284.136 2 2 0 0 0-.363.254 2.2 2.2 0 0 0-.46.569l-.082.162a2.6 2.6 0 0 0-.213 1.072v.115q0 .707.296 1.267l.135.211zm.964-.818a1.1 1.1 0 0 0 .367.385.94.94 0 0 0 .476.118c.423 0 .59-.117.687-.23.159-.194.28-.478.28-.95 0-.53-.133-.8-.266-.952l-.021-.025c-.078-.094-.231-.221-.68-.221a1 1 0 0 0-.503.135l-.012.007a.86.86 0 0 0-.335.343c-.073.133-.132.324-.132.614v.115a1.4 1.4 0 0 0 .14.66zm15.7-6.222q.347-.346.346-.856a1.05 1.05 0 0 0-.345-.79 1.18 1.18 0 0 0-.84-.329q-.51 0-.855.33a1.05 1.05 0 0 0-.346.79q0 .51.346.855.345.346.856.346.51 0 .839-.346zm4.337 9.314.033-1.332q.191.403.59.747l.098.081a4 4 0 0 0 .316.224l.223.122a3.2 3.2 0 0 0 1.44.322 3.8 3.8 0 0 0 1.875-.477 3.5 3.5 0 0 0 1.382-1.366q.527-.89.526-2.09 0-1.184-.444-2.073a3.24 3.24 0 0 0-1.283-1.399q-.823-.51-1.942-.51a3.5 3.5 0 0 0-1.527.344l-.086.043-.165.09a3 3 0 0 0-.33.214q-.432.315-.656.707a2 2 0 0 0-.099.198l.082-1.283V4.701h-1.744v12.095zm.473-2.509a2.5 2.5 0 0 0 .566.7q.117.098.245.18l.144.08a2.1 2.1 0 0 0 .975.232q1.07 0 1.645-.675.576-.69.576-1.778 0-1.102-.576-1.777-.56-.691-1.645-.692a2.2 2.2 0 0 0-1.015.235q-.22.113-.415.282l-.15.142a2.1 2.1 0 0 0-.42.594q-.223.479-.223 1.1v.115q0 .705.293 1.26zm2.616-.293c.157-.191.28-.479.28-.967 0-.51-.13-.79-.276-.961l-.021-.026c-.082-.1-.232-.225-.67-.225a.87.87 0 0 0-.681.279l-.012.011c-.154.155-.274.38-.274.807v.115c0 .285.057.499.144.669a1.1 1.1 0 0 0 .367.405c.137.082.28.123.455.123.423 0 .59-.118.686-.23zm8.266-3.013q.345-.13.724-.14l.069-.002q.493 0 .642.099l.247-1.794q-.196-.099-.717-.099a2.3 2.3 0 0 0-.545.063 2 2 0 0 0-.411.148 2.2 2.2 0 0 0-.4.249 2.5 2.5 0 0 0-.485.499 2.7 2.7 0 0 0-.32.581l-.05.137v-1.48h-1.778v7.553h1.777v-3.884q0-.546.159-.943a1.5 1.5 0 0 1 .466-.636 2.5 2.5 0 0 1 .399-.253 2 2 0 0 1 .224-.099zm9.784 2.656.05-.922q0-1.743-.856-2.698-.838-.97-2.584-.97-1.119-.001-2.007.493a3.46 3.46 0 0 0-1.4 1.382q-.493.906-.493 2.106 0 1.07.428 1.975.428.89 1.332 1.432.906.526 2.255.526.973 0 1.668-.185l.044-.012.135-.04q.613-.184.984-.421l-.542-1.267q-.3.162-.642.274l-.297.087q-.51.131-1.3.131-.954 0-1.497-.444a1.6 1.6 0 0 1-.192-.193q-.366-.44-.512-1.234l-.004-.021zm-5.427-1.256-.003.022h3.752v-.138q-.011-.727-.288-1.118a1 1 0 0 0-.156-.176q-.46-.428-1.316-.428-.986 0-1.494.604-.379.45-.494 1.234zm-27.053 2.77V4.7h-1.86v12.095h5.333V15.15zm7.103-5.908v7.553h-1.843V9.242h1.843z'/%3E%3Cpath fill='%23fff' d='m19.63 11.151-.757-1.71-.345 1.71-1.12 5.644h-1.827L18.083 4.7h.197l3.325 6.533.988 2.19.988-2.19L26.839 4.7h.181l2.6 12.095h-1.81l-1.218-5.644-.362-1.71-.658 1.71-2.93 5.644h-.098l-2.913-5.644zm14.836 5.81q-1.02 0-1.893-.478a3.8 3.8 0 0 1-1.381-1.382q-.51-.906-.51-2.106 0-1.185.444-2.074a3.36 3.36 0 0 1 1.3-1.382q.839-.494 1.974-.494a3.3 3.3 0 0 1 1.234.231 3.3 3.3 0 0 1 .97.575q.396.33.527.659l.033-1.267h1.694v7.553H37.18l-.033-1.332q-.279.593-1.02 1.053a3.17 3.17 0 0 1-1.662.444zm.296-1.482q.938 0 1.58-.642.642-.66.642-1.711v-.115q0-.708-.296-1.267a2.2 2.2 0 0 0-.807-.872 2.1 2.1 0 0 0-1.119-.313q-1.053 0-1.629.692-.575.675-.575 1.76 0 1.103.559 1.795.577.675 1.645.675zm6.521-6.237h1.711v1.4q.906-1.597 2.83-1.597 1.596 0 2.584 1.02.988 1.005.988 2.914 0 1.185-.493 2.09a3.46 3.46 0 0 1-1.316 1.399 3.5 3.5 0 0 1-1.844.493q-.954 0-1.662-.329a2.67 2.67 0 0 1-1.086-.97l.017 5.134h-1.728zm4.048 6.22q1.07 0 1.645-.674.577-.69.576-1.762 0-1.119-.576-1.777-.558-.675-1.645-.675-.592 0-1.12.296-.51.28-.822.823-.296.527-.296 1.234v.115q0 .708.296 1.267.313.543.823.855.51.296 1.119.297z'/%3E%3Cpath fill='%23e1e3e9' d='M51.325 4.7h1.86v10.45h3.473v1.646h-5.333zm7.12 4.542h1.843v7.553h-1.843zm.905-1.415a1.16 1.16 0 0 1-.856-.346 1.17 1.17 0 0 1-.346-.856 1.05 1.05 0 0 1 .346-.79q.346-.329.856-.329.494 0 .839.33a1.05 1.05 0 0 1 .345.79 1.16 1.16 0 0 1-.345.855q-.33.346-.84.346zm7.875 9.133a3.17 3.17 0 0 1-1.662-.444q-.723-.46-1.004-1.053l-.033 1.332h-1.71V4.701h1.743v4.657l-.082 1.283q.279-.658 1.086-1.119a3.5 3.5 0 0 1 1.778-.477q1.119 0 1.942.51a3.24 3.24 0 0 1 1.283 1.4q.445.888.444 2.072 0 1.201-.526 2.09a3.5 3.5 0 0 1-1.382 1.366 3.8 3.8 0 0 1-1.876.477zm-.296-1.481q1.069 0 1.645-.675.577-.69.577-1.778 0-1.102-.577-1.776-.56-.691-1.645-.692a2.12 2.12 0 0 0-1.58.659q-.642.641-.642 1.694v.115q0 .71.296 1.267a2.4 2.4 0 0 0 .807.872 2.1 2.1 0 0 0 1.119.313zm5.927-6.237h1.777v1.481q.263-.757.856-1.217a2.14 2.14 0 0 1 1.349-.46q.527 0 .724.098l-.247 1.794q-.149-.099-.642-.099-.774 0-1.416.494-.626.493-.626 1.58v3.883h-1.777V9.242zm9.534 7.718q-1.35 0-2.255-.526-.904-.543-1.332-1.432a4.6 4.6 0 0 1-.428-1.975q0-1.2.493-2.106a3.46 3.46 0 0 1 1.4-1.382q.889-.495 2.007-.494 1.744 0 2.584.97.855.956.856 2.7 0 .444-.05.92h-5.43q.18 1.005.708 1.45.542.443 1.497.443.79 0 1.3-.131a4 4 0 0 0 .938-.362l.542 1.267q-.411.263-1.119.46-.708.198-1.711.197zm1.596-4.558q.016-1.02-.444-1.432-.46-.428-1.316-.428-1.728 0-1.991 1.86z'/%3E%3Cpath d='M5.074 15.948a.484.657 0 0 0-.486.659v1.84a.484.657 0 0 0 .486.659h4.101a.484.657 0 0 0 .486-.659v-1.84a.484.657 0 0 0-.486-.659zm3.56 1.16H5.617v.838h3.017z' style='fill:%23fff;fill-rule:evenodd;stroke-width:1.03600001'/%3E%3Cg style='stroke-width:1.12603545'%3E%3Cpath d='M-9.408-1.416c-3.833-.025-7.056 2.912-7.08 6.615-.02 3.08 1.653 4.832 3.107 6.268.903.892 1.721 1.74 2.32 2.902l-.525-.004c-.543-.003-.992.304-1.24.639a1.87 1.87 0 0 0-.362 1.121l-.011 1.877c-.003.402.104.787.347 1.125.244.338.688.653 1.23.656l4.142.028c.542.003.99-.306 1.238-.641a1.87 1.87 0 0 0 .363-1.121l.012-1.875a1.87 1.87 0 0 0-.348-1.127c-.243-.338-.688-.653-1.23-.656l-.518-.004c.597-1.145 1.425-1.983 2.348-2.87 1.473-1.414 3.18-3.149 3.2-6.226-.016-3.59-2.923-6.684-6.993-6.707m-.006 1.1v.002c3.274.02 5.92 2.532 5.9 5.6-.017 2.706-1.39 4.026-2.863 5.44-1.034.994-2.118 2.033-2.814 3.633-.018.041-.052.055-.075.065q-.013.004-.02.01a.34.34 0 0 1-.226.084.34.34 0 0 1-.224-.086l-.092-.077c-.699-1.615-1.768-2.669-2.781-3.67-1.454-1.435-2.797-2.762-2.78-5.478.02-3.067 2.7-5.545 5.975-5.523m-.02 2.826c-1.62-.01-2.944 1.315-2.955 2.96-.01 1.646 1.295 2.988 2.916 2.999h.002c1.621.01 2.943-1.316 2.953-2.961.011-1.646-1.294-2.988-2.916-2.998m-.005 1.1c1.017.006 1.829.83 1.822 1.89s-.83 1.874-1.848 1.867c-1.018-.006-1.829-.83-1.822-1.89s.83-1.874 1.848-1.868m-2.155 11.857 4.14.025c.271.002.49.305.487.676l-.013 1.875c-.003.37-.224.67-.495.668l-4.14-.025c-.27-.002-.487-.306-.485-.676l.012-1.875c.003-.37.224-.67.494-.668' style='color:%23000;font-style:normal;font-variant:normal;font-weight:400;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:%23000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:evenodd;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:%23000;solid-opacity:1;vector-effect:none;fill:%23000;fill-opacity:.4;fill-rule:evenodd;stroke:none;stroke-width:2.47727823;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto' transform='translate(15.553 2.85)scale(.88807)'/%3E%3Cpath d='M-9.415-.316C-12.69-.338-15.37 2.14-15.39 5.207c-.017 2.716 1.326 4.041 2.78 5.477 1.013 1 2.081 2.055 2.78 3.67l.092.076a.34.34 0 0 0 .225.086.34.34 0 0 0 .227-.083l.019-.01c.022-.009.057-.024.074-.064.697-1.6 1.78-2.64 2.814-3.634 1.473-1.414 2.847-2.733 2.864-5.44.02-3.067-2.627-5.58-5.901-5.601m-.057 8.784c1.621.011 2.944-1.315 2.955-2.96.01-1.646-1.295-2.988-2.916-2.999-1.622-.01-2.945 1.315-2.955 2.96s1.295 2.989 2.916 3' style='clip-rule:evenodd;fill:%23e1e3e9;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.47727823;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:.4' transform='translate(15.553 2.85)scale(.88807)'/%3E%3Cpath d='M-11.594 15.465c-.27-.002-.492.297-.494.668l-.012 1.876c-.003.371.214.673.485.675l4.14.027c.271.002.492-.298.495-.668l.012-1.877c.003-.37-.215-.672-.485-.674z' style='clip-rule:evenodd;fill:%23fff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.47727823;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:.4' transform='translate(15.553 2.85)scale(.88807)'/%3E%3C/g%3E%3C/svg%3E")}}.maplibregl-ctrl.maplibregl-ctrl-attrib{background-color:hsla(0,0%,100%,.5);margin:0;padding:0 5px}@media screen{.maplibregl-ctrl-attrib.maplibregl-compact{background-color:#fff;border-radius:12px;box-sizing:content-box;color:#000;margin:10px;min-height:20px;padding:2px 24px 2px 0;position:relative}.maplibregl-ctrl-attrib.maplibregl-compact-show{padding:2px 28px 2px 8px;visibility:visible}.maplibregl-ctrl-bottom-left>.maplibregl-ctrl-attrib.maplibregl-compact-show,.maplibregl-ctrl-top-left>.maplibregl-ctrl-attrib.maplibregl-compact-show{border-radius:12px;padding:2px 8px 2px 28px}.maplibregl-ctrl-attrib.maplibregl-compact .maplibregl-ctrl-attrib-inner{display:none}.maplibregl-ctrl-attrib-button{background-color:hsla(0,0%,100%,.5);background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill-rule='evenodd' viewBox='0 0 20 20'%3E%3Cpath d='M4 10a6 6 0 1 0 12 0 6 6 0 1 0-12 0m5-3a1 1 0 1 0 2 0 1 1 0 1 0-2 0m0 3a1 1 0 1 1 2 0v3a1 1 0 1 1-2 0'/%3E%3C/svg%3E");border:0;border-radius:12px;box-sizing:border-box;cursor:pointer;display:none;height:24px;outline:none;position:absolute;right:0;top:0;width:24px}.maplibregl-ctrl-attrib summary.maplibregl-ctrl-attrib-button{-webkit-appearance:none;-moz-appearance:none;appearance:none;list-style:none}.maplibregl-ctrl-attrib summary.maplibregl-ctrl-attrib-button::-webkit-details-marker{display:none}.maplibregl-ctrl-bottom-left .maplibregl-ctrl-attrib-button,.maplibregl-ctrl-top-left .maplibregl-ctrl-attrib-button{left:0}.maplibregl-ctrl-attrib.maplibregl-compact .maplibregl-ctrl-attrib-button,.maplibregl-ctrl-attrib.maplibregl-compact-show .maplibregl-ctrl-attrib-inner{display:block}.maplibregl-ctrl-attrib.maplibregl-compact-show .maplibregl-ctrl-attrib-button{background-color:rgb(0 0 0/5%)}.maplibregl-ctrl-bottom-right>.maplibregl-ctrl-attrib.maplibregl-compact:after{bottom:0;right:0}.maplibregl-ctrl-top-right>.maplibregl-ctrl-attrib.maplibregl-compact:after{right:0;top:0}.maplibregl-ctrl-top-left>.maplibregl-ctrl-attrib.maplibregl-compact:after{left:0;top:0}.maplibregl-ctrl-bottom-left>.maplibregl-ctrl-attrib.maplibregl-compact:after{bottom:0;left:0}}@media screen and (forced-colors:active){.maplibregl-ctrl-attrib.maplibregl-compact:after{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='%23fff' fill-rule='evenodd' viewBox='0 0 20 20'%3E%3Cpath d='M4 10a6 6 0 1 0 12 0 6 6 0 1 0-12 0m5-3a1 1 0 1 0 2 0 1 1 0 1 0-2 0m0 3a1 1 0 1 1 2 0v3a1 1 0 1 1-2 0'/%3E%3C/svg%3E")}}@media screen and (forced-colors:active) and (prefers-color-scheme:light){.maplibregl-ctrl-attrib.maplibregl-compact:after{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill-rule='evenodd' viewBox='0 0 20 20'%3E%3Cpath d='M4 10a6 6 0 1 0 12 0 6 6 0 1 0-12 0m5-3a1 1 0 1 0 2 0 1 1 0 1 0-2 0m0 3a1 1 0 1 1 2 0v3a1 1 0 1 1-2 0'/%3E%3C/svg%3E")}}.maplibregl-ctrl-attrib a{color:rgba(0,0,0,.75);text-decoration:none}.maplibregl-ctrl-attrib a:hover{color:inherit;text-decoration:underline}.maplibregl-attrib-empty{display:none}.maplibregl-ctrl-scale{background-color:hsla(0,0%,100%,.75);border:2px solid #333;border-top:#333;box-sizing:border-box;color:#333;font-size:10px;padding:0 5px}.maplibregl-popup{display:flex;left:0;pointer-events:none;position:absolute;top:0;will-change:transform}.maplibregl-popup-anchor-top,.maplibregl-popup-anchor-top-left,.maplibregl-popup-anchor-top-right{flex-direction:column}.maplibregl-popup-anchor-bottom,.maplibregl-popup-anchor-bottom-left,.maplibregl-popup-anchor-bottom-right{flex-direction:column-reverse}.maplibregl-popup-anchor-left{flex-direction:row}.maplibregl-popup-anchor-right{flex-direction:row-reverse}.maplibregl-popup-tip{border:10px solid transparent;height:0;width:0;z-index:1}.maplibregl-popup-anchor-top .maplibregl-popup-tip{align-self:center;border-bottom-color:#fff;border-top:none}.maplibregl-popup-anchor-top-left .maplibregl-popup-tip{align-self:flex-start;border-bottom-color:#fff;border-left:none;border-top:none}.maplibregl-popup-anchor-top-right .maplibregl-popup-tip{align-self:flex-end;border-bottom-color:#fff;border-right:none;border-top:none}.maplibregl-popup-anchor-bottom .maplibregl-popup-tip{align-self:center;border-bottom:none;border-top-color:#fff}.maplibregl-popup-anchor-bottom-left .maplibregl-popup-tip{align-self:flex-start;border-bottom:none;border-left:none;border-top-color:#fff}.maplibregl-popup-anchor-bottom-right .maplibregl-popup-tip{align-self:flex-end;border-bottom:none;border-right:none;border-top-color:#fff}.maplibregl-popup-anchor-left .maplibregl-popup-tip{align-self:center;border-left:none;border-right-color:#fff}.maplibregl-popup-anchor-right .maplibregl-popup-tip{align-self:center;border-left-color:#fff;border-right:none}.maplibregl-popup-close-button{background-color:transparent;border:0;border-radius:0 3px 0 0;cursor:pointer;position:absolute;right:0;top:0}.maplibregl-popup-close-button:hover{background-color:rgb(0 0 0/5%)}.maplibregl-popup-content{background:#fff;border-radius:3px;box-shadow:0 1px 2px rgba(0,0,0,.1);padding:15px 10px;pointer-events:auto;position:relative}.maplibregl-popup-anchor-top-left .maplibregl-popup-content{border-top-left-radius:0}.maplibregl-popup-anchor-top-right .maplibregl-popup-content{border-top-right-radius:0}.maplibregl-popup-anchor-bottom-left .maplibregl-popup-content{border-bottom-left-radius:0}.maplibregl-popup-anchor-bottom-right .maplibregl-popup-content{border-bottom-right-radius:0}.maplibregl-popup-track-pointer{display:none}.maplibregl-popup-track-pointer *{pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.maplibregl-map:hover .maplibregl-popup-track-pointer{display:flex}.maplibregl-map:active .maplibregl-popup-track-pointer{display:none}.maplibregl-marker{left:0;position:absolute;top:0;transition:opacity .2s;will-change:transform}.maplibregl-user-location-dot,.maplibregl-user-location-dot:before{background-color:#1da1f2;border-radius:50%;height:15px;width:15px}.maplibregl-user-location-dot:before{animation:maplibregl-user-location-dot-pulse 2s infinite;content:"";position:absolute}.maplibregl-user-location-dot:after{border:2px solid #fff;border-radius:50%;box-shadow:0 0 3px rgba(0,0,0,.35);box-sizing:border-box;content:"";height:19px;left:-2px;position:absolute;top:-2px;width:19px}@keyframes maplibregl-user-location-dot-pulse{0%{opacity:1;transform:scale(1)}70%{opacity:0;transform:scale(3)}to{opacity:0;transform:scale(1)}}.maplibregl-user-location-dot-stale{background-color:#aaa}.maplibregl-user-location-dot-stale:after{display:none}.maplibregl-user-location-accuracy-circle{background-color:#1da1f233;border-radius:100%;height:1px;width:1px}.maplibregl-crosshair,.maplibregl-crosshair .maplibregl-interactive,.maplibregl-crosshair .maplibregl-interactive:active{cursor:crosshair}.maplibregl-boxzoom{background:#fff;border:2px dotted #202020;height:0;left:0;opacity:.5;position:absolute;top:0;width:0}.maplibregl-cooperative-gesture-screen{align-items:center;background:rgba(0,0,0,.4);color:#fff;display:flex;font-size:1.4em;inset:0;justify-content:center;line-height:1.2;opacity:0;padding:1rem;pointer-events:none;position:absolute;transition:opacity 1s ease 1s;z-index:99999}.maplibregl-cooperative-gesture-screen.maplibregl-show{opacity:1;transition:opacity .05s}.maplibregl-cooperative-gesture-screen .maplibregl-mobile-message{display:none}@media (hover:none),(width <= 480px){.maplibregl-cooperative-gesture-screen .maplibregl-desktop-message{display:none}.maplibregl-cooperative-gesture-screen .maplibregl-mobile-message{display:block}}.maplibregl-pseudo-fullscreen{height:100%!important;left:0!important;position:fixed!important;top:0!important;width:100%!important;z-index:99999}</style>
+
+    <!-- Librerías y hojas de estilo function-plot -->
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/function-plot/site/js/vendor/d3.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/function-plot/dist/function-plot.js"></script>
+    
+    <!-- Librería quantities -->
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/quantities/quantities.min.js"></script>
+
+    <!-- Librería GoJs para la creación de diagramas de flujo -->
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/gojs/release/go.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/flowchart_gojs.js"></script>
+
+    <!-- Librerías matemáticas propias -->
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/math.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/number.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/array.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/string.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/cplx.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/function.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/object.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/prq.js"></script>
+
+    <!-- Librería y hoja de estilos propias para la creación y manejo de la calculadora  -->
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/src/cjs.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/cjs.js"></script>
+
+    <!-- Librería y hoja de estilos propias para la creación y manejo de los capítulos -->
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/src/texto.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/texto.js"></script>
+
+    <!-- Librería del capítulo actual -->
+    <script src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo2/files/capitulo2.js"></script>
+
+    <!-- Fuentes empleadas en el capítulo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;600;700;800&amp;family=Roboto+Mono&amp;display=swap" rel="stylesheet">
+
+    <script>
+        function katexRender() {
+            renderMathInElement(document.getElementById("capitulo"));
+        }
+        document.addEventListener("DOMContentLoaded", katexRender);
+        window.onerror = function(msg, url, lineNo, columnNo, error) {
+            __error__ = msg;
+        };
+        window.onload = function(){
+            capitulo.iniciar();
+        };
+    </script>
+
+</head>
+
+<body class="text">  
+
+
+<div id="capitulo">
+
+    <button id="btGuardar" style="z-index:15;" onclick="savePage()">Guardar</button>
+
+
+
+    <h1 class="text" onclick="alerta(capitulo.idPagina,'')" style="cursor: pointer;">Ecuaciones Algebraicas 1</h1>
+
+
+    <p class="text">En este y en los siguientes capítulos se presentan los fundamentos de los métodos numéricos, el algoritmo que posibilita su implementación y el programa respectivo. Esa información es útil para corregir, modificar y/o adaptar los programas para usos específicos, así como emplear los programas elaborados como plantillas para elaborar nuevos programas. No obstante, <dfn class="style1">lo realmente importante es la aplicación de los métodos numéricos en la solución de problemas matemáticos.</dfn>.</p>
+
+    <p class="text">En este capitulo inicia el estudio de los métodos que permiten la solución de ecuaciones algebraicas con una incógnita. Las ecuaciones con una incógnita que se presentan en ingeniería son, casi siempre, no lineales y con frecuencia no tienen soluciones analíticas, por lo que sólo pueden ser resueltas recurriendo a los métodos numéricos.</p>
+
+    <p class="text">Por ejemplo, dada la ecuación:</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[ f(x) = \left( 52 + 3\sqrt{x} - 8 x^{0.8} \right)^{0.36} - x = 0 \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+
+    <p class="text">El problema consiste en encontrar el valor de la incógnita (el valor de "x") que, al ser reemplazado en la ecuación, hace que se cumpla la igualdad, es decir, en este caso hace que la ecuación sea igual a cero.</p>
+
+    <p class="text">Por lo general esta igualdad se expresa en una de dos formas: a) igualando la ecuación a 0 (como se ha mostrado en la anterior ejemplo) o b) despejando la incógnita e igualándola al resto de la ecuación:</p>
+    
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[ g(x) = \left( 52 + 3\sqrt{x} - 8 x^{0.8} \right)^{0.36} = x \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">En este caso, la igualdad se cumple cuando, el resultado de la ecuación, es igual al valor de la incógnita (el valor de "x"), es decir, cuando el resultado de la ecuación es igual al valor asumido.</p>
+
+    <p class="text">La primera forma (la ecuación igualada a cero) es la más sencilla de obtener y además es la más estable, siendo por ello la forma más empleada en la práctica. Sin embargo, en algunas ocasiones, la solución del problema se ajusta mejor a la segunda forma, razón por la cual, se estudian algunos métodos para esa forma.</p>
+
+    <div class="ejercicio" id="ejercicio1" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Seleccione las afirmación correcta.</p></div><p class="pregunta"><span class="pregunta"></span>El resolver una ecuación algebraica con una incógnita consiste en encontrar el valor de la incógnita que, al ser reemplazado en la ecuación:</p><p class="opcionSimple"><input type="radio" name="pregunta1" id="pregunta1_6"><span class="opcionSimple"></span><label for="pregunta1_6">Hace que su valor sea mayor a cero.</label></p><p class="opcionSimple correcta"><input type="radio" name="pregunta1" id="pregunta1_1" checked=""><span class="opcionSimple"></span><label for="pregunta1_1">Hace que la igualdad sea verdadera.</label></p><p class="opcionSimple"><input type="radio" name="pregunta1" id="pregunta1_2"><span class="opcionSimple"></span><label for="pregunta1_2">Devuelve un resultado diferente de cero.</label></p><p class="opcionSimple"><input type="radio" name="pregunta1" id="pregunta1_5"><span class="opcionSimple"></span><label for="pregunta1_5">Hace que la ecuación sea igual a si misma.</label></p><p class="opcionSimple"><input type="radio" name="pregunta1" id="pregunta1_4"><span class="opcionSimple"></span><label for="pregunta1_4">Hace que la incógnita sea igual a cero.</label></p><p class="pregunta"><span class="pregunta"></span>Marque sólo las afirmaciones correctas:</p><p class="opcionMultiple correcta"><input type="checkbox" name="pregunta2" id="opcion7" checked=""><span class="opcionMultiple"></span><label for="opcion7">La solución, de una ecuación igualada a cero, es el valor de la incógnita que iguala a cero la ecuación.</label></p><p class="opcionMultiple correcta"><input type="checkbox" name="pregunta2" id="opcion2"><span class="opcionMultiple"></span><label for="opcion2">Las ecuaciones que se resuelven en ingeniería, por lo general, son lineales.</label></p><p class="opcionMultiple correcta"><input type="checkbox" name="pregunta2" id="opcion5" checked=""><span class="opcionMultiple"></span><label for="opcion5">Lo realmente importante, de los métodos numéricos, es su aplicación en la solución de problemas matemáticos.</label></p><p class="opcionMultiple correcta"><input type="checkbox" name="pregunta2" id="opcion3" checked=""><span class="opcionMultiple"></span><label for="opcion3">La forma más sencilla y estable, para una ecuación, es aquella en la que está iguala a cero.</label></p><p class="opcionMultiple correcta"><input type="checkbox" name="pregunta2" id="opcion4"><span class="opcionMultiple"></span><label for="opcion4">La forma más sencilla y estable, para una ecuación, es aquella en la que está iguala a la incógnita.</label></p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="7" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 1 -->
+
+
+
+    <h2 class="text">Método Gráfico</h2>
+
+    <p class="text">Visualmente, la solución de una ecuación algebraica que está en la forma <i>x=g(x)</i>, se encuentra en la intersección entre la curva de la función y la recta <i>y=x</i>, es decir la recta que pasa por el origen a 45 grados.</p>
+
+    <p class="text">Para dibujar una gráfica en la calculadora se emplea la función <i>plot</i>, que hace uso de la librería <a href="https://mauriciopoppe.github.io/function-plot/">function plot</a> de Mauricio Poppe.</p>
+
+    <p class="text">Los datos que usualmente se mandan a <dfn>plot</dfn> son: la función a dibujar (o un vector con las funciones a dibujar), el valor inicial "xi" y el valor final "xf" de la variable independiente. También se puede mandar el valor inicial "yi" y el valor final "yf" de la variable dependiente, así como el ancho "w" y alto "h" de la gráfica. Sin embargo, casi siempre sólo se mandan los tres primeros parámetros.</p>
+    
+    <p class="text">Por ejemplo, para dibujar la gráfica de la función seno, entre 0 y 2π, se escribe la siguiente instrucción:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">plot({f:Math.sin, xi:0, xf:2*Math.PI})</div>
+        <div class="resultado"></div>
+    <div class="instruccion"></div><div class="resultado"></div><div class="instruccion"></div><div class="resultado"></div></div>
+
+    <p class="text">La gráfica resultante es dinámica. Si se arrastra la gráfica, se verá que se actualiza para mostrar las zonas que antes no eran visibles, igualmente se puede ampliar (acercar) o disminuir (alejar) el tamaño de la gráfica, obtener las coordenadas a medida que se mueve el puntero del mouse o se hace clic sobre la gráfica, etc. (haga la prueba).</p>
+
+    <p class="text">Para dibujar 2 o más funciones a la vez, se manda un vector con las funciones a dibujar. Así para dibujar las gráfica de las funciones seno y coseno, entre -2π y 2π, se escribe la instrucción:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">plot({f:[Math.sin, Math.cos], xi:-2*Math.PI, xf:2*Math.PI})</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Para encontrar la o las soluciones con el método gráfico, se debe dibujar la recta <b class="style1">y=x</b>, es decir la recta donde todos los valores de "y" son iguales a los valores de "x" (x=&gt;x):</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">plot({f:x=&gt;x, xi:-5, xf:5})</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="text"><b>Él o los puntos donde la curva de la ecuación interseca con esta recta, son las soluciones de la ecuación</b>.</p>
+
+    <p class="text">Así, para encontrar la solución de la siguiente ecuación:</p>
+    
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[ g(x) = \left( 52 + 3\sqrt{x} - 8 x^{0.8} \right)^{0.36} = x \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table> 
+
+    <p class="text">Primero se la programa:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">function g(x) {<br>  return (52+3*Math.sqrt(x)-8*x**0.8)**0.36;<br>}</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Luego se la dibuja, conjuntamente la recta de <i>y = x</i> (x=&gt;x):</p>
+
+    <div class="calculadora" spellcheckk="false">
+        <div class="instruccion">plot({f:[g, x=&gt;x], xi:0, xf:14})</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="text">La solución gráfica aproximada, el punto donde intersecan la línea recta (roja) y la curva (azul) es la solución buscada y es aproximadamente igual a 3.6, valor obtenido moviendo el mouse hasta ese punto (o en los dispositivos móviles haciendo clic en ese punto). Como la gráfica es dinámica, es posible ampliar la zona de la solución y obtener un valor más exacto, sin embargo, <dfn class="style1">con el método gráfico no se busca una solución exacta sino sólo una solución aproximada</dfn>.</p>
+
+    <p class="text">La función <dfn class="style1">plot</dfn>, hace uso de dos de los tipos de gráficas disponibles en la librería <a href="https://mauriciopoppe.github.io/function-plot/">function plot</a>, de manera que resulte más sencillo el trazado de gráficas de funciones y de datos tabulados.</p>
+    
+    <p class="text">Para emplear, en la calculadora, todos los tipos de gráficas y opciones disponibles, se debe llamar a <i class="style1">funcionPlot</i> que internamente llama a la función original <i class="style1">functionPlot</i>, pero muestra los resultados directamente en la calculadora.</p>
+    
+    <p class="text">Por ejemplo, para dibujar una función polar (uno de los ejemplos de <a href="https://mauriciopoppe.github.io/function-plot/">function plot</a>), se escribe:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">funcionPlot({<br>  yAxis: {domain: [-1.897959183, 1.897959183]},<br>  xAxis: {domain: [-3, 3]},<br>  data: [{<br>    r: '2 * sin(4 theta)',<br>    fnType: 'polar',<br>    graphType: 'polyline'<br>  }]<br>})</div><div class="resultado"></div></div>
+    <br>
+    
+    
+    <div class="ejercicio" id="ejercicio2" enunciado="1"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Coloque la siguiente ecuación en la forma <dfn>g(x)=x</dfn> (despejando la incógnita de la función coseno) y complete el código que programa la función despejada ("g") como una función estándar:\[\cos(x)+\left( 1.2+x^{2.1}\right)^{-1}=0\]</p><div id="pregunta7" class="calculadora" spellcheck="false"><div class="instruccion">function g(x) {<br>  return Math.acos(-1/(1.2+x**2.1));<br>}</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Complete el código que dibuje la gráfica de la ecuación y la recta <dfn>y=f(x)=x</dfn> entre 1.5 y 2.5.</p><div id="pregunta8" class="calculadora" spellcheck="false"><div class="instruccion">plot({f:[g, x=&gt;x], xi:1.5, xf:2.5})</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con la solución aproximada, leída de la gráfica, calcule el valor de la función.</p><div id="pregunta9" class="calculadora" spellcheck="false"><div class="instruccion">g(1.7)<br>//valor de x se saca con g()<br>// si <br>//plot({f:[g,x=&gt;x]<br></div><div class="resultado"></div></div><p class="pregunta" id="pregunta10"><span class="pregunta"></span>La solución aproximada obtenida de la gráfica (el valor de x) es: <span class="campo_literal correcta" tabindex="0" contenteditable="true">1.8084603822834695</span><br>El valor de la función y el de la solución ¿son aproximadamente iguales? (si/no): <span class="campo_literal correcta" tabindex="0" contenteditable="true">si</span>.<br>La función con la que se dibuja la recta y=f(x)=x, es: <span class="campo_literal correcta" tabindex="0" contenteditable="true">plot({f:[g,x=&gt;x]<br></span>.</p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="14" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 2 -->
+    <div class="ejercicio" id="ejercicio3" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Coloque la siguiente ecuación en la forma <dfn>g(x)=x</dfn> (despejando la incógnito del término de primer grado) y complete el código que programa la función despejada ("g") como una función flecha:\[x^3 + 2 x^2 + 3 x + 4 = 0\]</p><div id="pregunta15" class="calculadora" spellcheck="false"><div class="instruccion">var g = x =&gt; -(x**3+2*x**2+4)/3</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Dibuje la gráfica de la ecuación y la recta <dfn>y=f(x)=x</dfn> entre -2 y -1.</p><div id="pregunta16" class="calculadora" spellcheck="false"><div class="instruccion">plot({f:[g,x=&gt;x],xi:-2,xf:-1})</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con la solución aproximada, leída de la gráfica, calcule el valor de la función.</p><div id="pregunta17" class="calculadora" spellcheck="false"><div class="instruccion">g(-1.64)</div><div class="resultado"></div></div><p class="pregunta" id="pregunta18"><span class="pregunta"></span>La solución aproximada obtenida de la gráfica (el valor de x) es: <span class="campo_literal correcta" tabindex="0" contenteditable="true">-1.6560853333333334</span><br>La línea de color rojo corresponde a la ecuación: <span class="campo_literal correcta" tabindex="0" contenteditable="true">y=f(x)=x<br></span><br>La línea de color azul corresponde a la ecuación: <span class="campo_literal correcta" tabindex="0" contenteditable="true">g(x)=x</span></p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="14" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 3 -->
+    <div class="ejercicio" id="ejercicio4" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Coloque la siguiente ecuación en la forma <dfn>g(x)=x</dfn> (despejando la incógnita del término de segundo grado: x<sup>2</sup> = x*x) y complete el código que programa la función despejada ("g") como una función estándar:\[2 x^2 + 1 - \text{e}^x = 0\]</p><div id="pregunta27" class="calculadora" spellcheck="false"><div class="instruccion">function g(x){<br>  return (Math.exp(x)-1)/(2*x)<br>}</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Dibuje la gráfica de la ecuación y la recta <dfn>y=f(x)=x</dfn> entre 0.5 y 1.5.</p><div id="pregunta28" class="calculadora" spellcheck="false"><div class="instruccion">plot({f:[g,x=&gt;x],xi:0.5,xf:1.5})</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con la solución aproximada, leída de la gráfica, calcule el valor de la función.</p><div id="pregunta29" class="calculadora" spellcheck="false"><div class="instruccion">g(0.74)</div><div class="resultado"></div><div class="instruccion">//0.74  x   x</div></div><p class="pregunta" id="pregunta30"><span class="pregunta"></span>La solución aproximada obtenida de la gráfica (el valor de x) es: <span class="campo_literal correcta" tabindex="0" contenteditable="true">0.74</span><br>En la intersección de las dos líneas, el valor de "y" (f(x)), es igual a: "<span class="campo_literal correcta" tabindex="0" contenteditable="true">x</span>"<br>En la línea de color rojo los valores de "y" (f(x)) son iguales a los valores de: "<span class="campo_literal correcta" tabindex="0" contenteditable="true">x</span>"</p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="14" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 4 -->
+
+
+
+    <h2 class="text">Método de sustitución directa</h2>
+
+    <p class="text">El método de <i>sustitución directa</i>, es el método más sencillo que puede ser programado para la forma <dfn class="style1">x = g(x)</dfn>.</p>
+
+    <p class="text">Básicamente consiste en asumir un valor, calcular el resultado de la ecuación para ese valor y emplear ese resultado como nuevo valor de prueba. El proceso se repite mientras el valor de prueba y el resultado de la ecuación son diferentes (en un determinado número de dígitos: la precisión establecida).</p>
+
+    <p class="text">Por ejemplo, para encontrar la solución de la siguiente ecuación:</p>
+    
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[ g(x) = \left( 52 + 3\sqrt{x} - 8 x^{0.8} \right)^{0.36} = x \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table> 
+
+    <p class="text">Primero se la programa (empleando en este ejemplo una función anónima):</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var g = function(x) {<br>  return (52+3*Math.sqrt(x)-8*x**0.8)**0.36;<br>}</div>
+        <div class="resultado"></div>
+    </div>
+        
+    <p class="text">Se asume un valor inicial (el valor de prueba) en este ejemplo 1.1 y con el mismo se obtiene el resultado de la ecuación, que se muestra con 9 dígitos de precisión (empleando el método <i class="style1">precision</i>):</p>
+    
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var x = 1.1;</div>
+        <div class="resultado"></div>
+        <div class="instruccion">x = g(x); x.precision(9)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Se compara el valor de prueba (1.1) con el calculado (3.98405539) y como no son iguales el proceso se repite, recuperando la instrucción anterior (<dfn>Ctrl+Arriba</dfn>) y evaluándola (Shift+Enter) hasta que los valores de prueba y calculado son iguales:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">x = g(x); x.precision(9)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">x = g(x); x.precision(9)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">x = g(x); x.precision(9)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">x = g(x); x.precision(9)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">x = g(x); x.precision(9)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">x = g(x); x.precision(9)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">x = g(x); x.precision(9)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">x = g(x); x.precision(9)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">x = g(x); x.precision(9)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">x = g(x); x.precision(9)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">x = g(x); x.precision(9)</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="text">En el último cálculo (en la última iteración) el valor de prueba (3.60967089) y el resultado (3.60967089) son iguales, por lo que el proceso concluye, siendo esa la solución con 9 dígitos de precisión.</p>
+
+    <p class="text">En lugar del método <i class="style1">precision</i>, se puede emplear el método estándar <i class="style1">toPrecision</i>, que devuelve el mismor resultado sólo que en forma de texto (no número).</p>
+
+    <p class="text">Como se ha podido ver, este método es muy sencillo y puede ser aplicado directamente en la calculadora (sin elaborar un programa) pero tiene la desventaja de ser inestable, es decir que no siempre <b>converge</b> (no siempre encuentra la solución).</p>
+
+
+    <h2 class="text">Algoritmo y código</h2>
+
+    <p class="text">Si bien el método de Sustitución Directa es muy sencillo y puede ser empleado directamente en la calculadora, requiere varias iteraciones (repeticiones) por lo que es conveniente automatizar el proceso, mediante la elaboración de un programa.</p>
+
+    <p class="text">El algoritmo básico es muy sencillo: Se calculan nuevos valores de prueba hasta que el valor de prueba y el valor calculado son iguales en un determinado número de dígitos.</p>
+
+    <p class="text">Para determinar si un valor: <dfn class="style1">x<sub>1</sub></dfn>, es igual a otro: <dfn class="style1">x<sub>2</sub></dfn>, en un determinado número (<i>n</i>) de dígitos, se evalúa la siguiente expresión:</p>
+    
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[ \left|{\dfrac{x_1}{x_2}-1} \right| &lt; 1 \times 10^{-n} \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table> 
+
+    <p class="text">En esta expresión, si <dfn class="style1">x<sub>1</sub></dfn> y <dfn class="style1">x<sub>2</sub></dfn> son aproximadamente iguales, la división devuelve aproximadamente 1, entonces, al restarle 1, el resultado es aproximadamente 0. Más precisamente, si <dfn class="style1">x<sub>1</sub></dfn> y <dfn class="style1">x<sub>2</sub></dfn> son iguales en "n" dígitos, su división devuelve un uno seguido de "n" ceros (después del punto) y al restarle 1, se obtiene un 0. con "n" ceros después del punto, es decir 1×10<sup>-n</sup>. Por eso en la expresión se compara el resultado con 1×10<sup>-n</sup>, de manera que si la desigualdad se cumple (es verdadera), significa que <dfn class="style1">x<sub>1</sub></dfn> y <dfn class="style1">x<sub>2</sub></dfn> son iguales en por lo menos "n" dígitos, caso contrario, no son iguales en ese número de dígitos.</p>
+
+    <p class="text">Al programar el método se debe tomar en cuenta que no siempre <i>converge</i> (no siempre encuentra la solución), por el contrario, este método con frecuencia diverge (se aleja de la solución) u oscila alternando entre dos valores pero sin llegar nunca a la solución. </p>
+
+    <p class="text">El algoritmo que toma en cuenta estas consideraciones, es:</p>
+    
+    <p class="figurasn"><img src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo2/files/figura1.png" alt="Algoritmo Sustitución Directa"></p>
+
+    <p class="text">En el algoritmo, el proceso se lleva a cabo en un ciclo que termina cuando se cumple la precisión: <i>|x<sub>1</sub>/y<sub>1</sub>-1| &lt; err</i> o la exactitud: <i>|x<sub>1</sub>-y<sub>1</sub>| &lt; err</i>.</p>
+
+    <p class="text">La <dfn class="style1">precisión</dfn> es el número de dígitos que son correctos en el resultado, mientras que la <dfn class="style1">exactitud</dfn> es el número de ceros después del punto.</p>
+
+    <p class="text">Como se puede ver, el proceso también termina cuando se alcanza el límite de iteraciones, sin embargo, en ese caso no devuelve un resultado sino que lanza un error informando del hecho. Igualmente lanza un error cuando el valor de prueba (x<sub>1</sub>) no es un número (lo que puede suceder debido a una operación no válida, como una división entre 0).</p>
+    
+    <p class="text">El código respectivo, ha sido añadido a la clase <dfn class="style1">Function</dfn>. Por esa razón, el código de este método (así como el código de los otro métodos que se estudianán en la asignatura) puede ser mostrado empleando la notación de punto, es decir:</p>
+    
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">Function.susdir</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Recuerde que para ahorrar tiempo y reducir errores, es aconsejabe emplear la función de autocompletado (Ctrl+Espacio) disponible en la calculadora:</p>
+
+    <div class="video">
+        <video width="482" src="./files/cap2_autocompletar.mp4" controls=""></video>
+    </div>
+
+
+    <p class="text">Como el método ha sido añadido a la clase Function, debe ser llamado desde la función que se quiere resolver, de acuerdo a la siguiente sintaxis:</p>
+
+    <div class="codigo">función_a_resolver.susdir({xi:valor_asumido, err:precisión/exactitud, li=límite_de_iteraciones})</div>
+
+    <p class="text">Donde "xi" es el valor inicial asumido que, como se puede ver en el código y en el diagrama de flujo, tiene un valor por defecto igual a 1.1, "err" son los dígitos de precisión/exactitud con los que se calculará el resultado (valor por defecto 12) y "li" es el límite de iteraciones permitidas (valor por defecto 50 iteraciones).</p>
+
+    <p class="text">Para emplear este método se debe colocar la ecuación en la forma <dfn class="style1">g(x) = x</dfn>, programarla y llamar al método desde la función programada.</p>
+
+    <p class="text">Así para resolver la ecuación del ejemplo manual:</p>
+    
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[ g(x) = \left( 52 + 3\sqrt{x} - 8 x^{0.8} \right)^{0.36} = x \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table> 
+    
+    <p class="text">Primero se la programa (en este ejemplo como una función anónima):</p>
+    
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var g = function(x) {<br>  return (52+3*Math.sqrt(x)-8*x**0.8)**0.36;<br>}</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="text">Luego se llama al método, en este ejemplo sin mandar ningún dato, por lo tanto trabaja con los valores por defecto (xi:1.1, err:12 y li:50):</p>
+    
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">g.susdir()</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="text">Si se cuenta con un valor inicial aproximado, entonces se debe emplear ese valor, así, si se sabe que la solución aproximada es 3.1, se debe emplear ese valor:</p>
+    
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">g.susdir({xi:3.1})</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="text">Si se requiere un resultado con mayor (o menor) precisión, se debe mandar también la precisión/exactitud "err". Así para calcular el resultado empleando un valor inicial igual a 1.1 y una precisión/exactitud de 15 dígitos, se escribe:</p>
+    
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">g.susdir({xi:3.1, err:15})</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="text">Si el método no converge, se puede intentar incrementar el límite de iteraciones (li) pero, por lo general, en esos casos es más efectivo asumir otro valor inicial (xi) y/o despejar otra de las incógnitas de la ecuación:</p>
+
+    <p class="text">Es importante tener presente que, sin importar cuan compleja se la ecuación a resolver, el método no cambia, sólo cambia la función desde la cual se llama al método (la función que se quiere resolver).</p>
+    
+    <p class="text">Por ejemplo para resolver la siguiente ecuación:</p>
+    
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[ \begin{gathered}                f(x) = 14.0 - x - y^2 - z^2 = 0\\                y = \dfrac{3 x^{2.1}-7.0}{5}\\                z = \dfrac{14.3-y^{1.2}}{4}                \end{gathered} \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table> 
+    
+    <p class="text">Primero se la coloca en la forma "g(x)=x":</p>
+    
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[ \begin{gathered}                g(x) = 14.0 - y^2 - z^2 = x\\                y = \dfrac{3 x^{2.1}-7.0}{5}\\                z = \dfrac{14.3-y^{1.2}}{4}                \end{gathered} \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table> 
+
+    <p class="text">Y se la programa (en este ejemplo como una función flecha):</p>
+    
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var g = x =&gt; {<br>&nbsp; const y = (3*x**2.1-7)/5;<br>&nbsp; const z = (14.3-y**1.2)/4;<br>&nbsp; return 14-y*y-z*z;<br>}</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Donde <i class="style1">y</i> y <i class="style1">z</i> son constantes porque sus valores (una vez calculados) no cambian.</p>
+    
+    <p class="text">Para contar con valores iniciales aproximados, algo que es importante, en métodos inestables como el presente, se puede recurrir al método gráfico:</p>
+    
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">plot({f:[g,x=&gt;x], xi:1.5, xf:2})</div><div class="resultado"></div></div>
+    
+    <p class="text">Como se puede ver, la curva interseca con la recta y = x, en dos partes, por lo que existen dos soluciones, una cerca a x = 1.7 y otra cerca a x = 1.9. Empleando esos valores, como valores iniciales, con la precisión/exactitud y límite de iteraciones por defecto, se obtiene: </p>
+    
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">g.susdir({xi:1.9})</div>
+        <div class="resultado"></div>
+        <div class="instruccion">g.susdir({xi:1.7})</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="text">En este caso el método no converge porque el valor de prueba deja de ser un número (es <i class="style1">NaN</i> : <i class="style1">N</i>ot <i class="style1">a</i> <i class="style1">N</i>umber) y eso ocurre porque el método está <i class="style1">divergiendo</i> (se está alejando de la solución) dando lugar a resultados no válidos.</p>
+
+    <p class="text">Como se dijo y como se ha comprobado en este ejemplo, el método de sustitución directa es inestable, es decir que no siempre converge, por lo que no es raro obtener mensajes de error aún empleando valores iniciales muy cercanos a la solución.</p>
+
+    <div class="ejercicio" id="ejercicio5" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Coloque la siguiente ecuación en la forma <dfn>g(x)=x</dfn> (despejando la incógnita de la función coseno) y complete el código que programa la función despejada ("g") como una función flecha:\[\cos(x)+\left( 1+x^2 \right)^{-1} = 0\]</p><div id="pregunta39" class="calculadora" spellcheck="false"><div class="instruccion">----B<br>var g = x =&gt; Math.acos(-1/(1+x**2))</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Dibuje la gráfica de la ecuación y la recta <dfn>y=f(x)=x</dfn> entre 1.5 y 2.5.</p><div id="pregunta40" class="calculadora" spellcheck="false"><div class="instruccion">plot({f:[g,x=&gt;x],xi:1.5,xf:2.5})</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con la solución aproximada leída de la gráfica, calcule, con el método de sustitución directa, la solución con 10 dígitos de precisión/exactitud.</p><div id="pregunta41" class="calculadora" spellcheck="false"><div class="instruccion">g.susdir({xi:1.8,err:10})</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="9" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 5 -->
+
+    <div class="ejercicio" id="ejercicio6" enunciado="2"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Coloque la siguiente ecuación en la forma <dfn>g(x)=x</dfn> (despejando la incógnita del término de primer grado) y complete el código que programa la función despejada ("g") como una función flecha:\[2 x^3 + 4 x^2 + 5 x+ 6 = 0\]</p><div id="pregunta54" class="calculadora" spellcheck="false"><div class="instruccion">var g = x =&gt; -(2*x**3+4*x**2+6)/5;</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Dibuje la gráfica de la ecuación y la recta <dfn>y=f(x)=x</dfn> entre -2 y -1.</p><div id="pregunta55" class="calculadora" spellcheck="false"><div class="instruccion">plot({f:[g,x=&gt;x],xi:-2,xf:-1})</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con la solución aproximada leída de la gráfica, calcule, con el método de sustitución directa, la solución con 10 dígitos de precisión/exactitud.</p><div id="pregunta56" class="calculadora" spellcheck="false"><div class="instruccion">g.susdir({xi:-1.6,err:10})</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="9" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 6 -->
+
+    <div class="ejercicio" id="ejercicio7" enunciado="2"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Coloque la siguiente ecuación en la forma <dfn>g(x)=x</dfn> (despejando la incógnita del término de segundo grado: x<sup>2</sup> = x*x) y complete el código que programa la función despejada ("g") como una función estándar:\[2.2 x^2+0.8-\text{e}^x = 0\]</p><div id="pregunta63" class="calculadora" spellcheck="false"><div class="instruccion"><br>function g(x){<br>  return (Math.exp(x)-0.8)/(2.2*x)<br>}</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Dibuje la gráfica de la ecuación y la recta <dfn>y=f(x)=x</dfn> entre 0.4 y 1.</p><div id="pregunta64" class="calculadora" spellcheck="false"><div class="instruccion">plot({f:[g,x=&gt;x],xi:0.4,xf:1})</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con la solución aproximada leída de la gráfica, calcule, con el método de sustitución directa, la solución con 10 dígitos de precisión/exactitud.</p><div id="pregunta65" class="calculadora" spellcheck="false"><div class="instruccion">g.susdir({xi:0.8,err:10})</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="9" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 7 -->
+   
+
+
+    <h2 class="text">Método de Wegstein</h2>
+
+
+    <p class="text">El método de Wegstein acelera y mejora la estabilidad del método de Sustitución Directa. En lugar de emplear directamente el último valor calculado como nuevo valor de prueba, el método de Wegstein calcula el nuevo valor de prueba (x<sub>3</sub>) interpolando o extrapolando los dos últimos puntos: (x<sub>1</sub>,g<sub>1</sub>), (x<sub>2</sub>,g<sub>2</sub>), tal como se muestra en la figura</p>
+
+    <p class="figurasn">
+        <img src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo2/files/wegstein1.png" alt="Grafica Wegstein">
+    </p>
+
+    <p class="text">Que es un procedimiento más rápido y estable que el seguido por el método de Sustitución Directa:</p>
+
+    <p class="figurasn">
+        <img src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo2/files/wegstein3.png" alt="Grafica Sustitución directa">
+    </p>
+
+    <p class="text">Para comenzar el proceso se requieren dos puntos, los cuales se calculan aplicando el método de Sustitución Directa, es decir: con el valor inicial asumido (x<sub>1</sub>) se calcula el valor de la función (g<sub>1</sub>), que se convierte en el nuevo valor de prueba (x<sub>2</sub>) y con este nuevo valor de prueba se calcula el nuevo valor de la función (g<sub>2</sub>).</p>
+
+    <p class="text">La ecuación para calcular el nuevo valor de prueba (x<sub>3</sub>) se deduce fácilmente de la intersección de la línea recta que pasa por los puntos (x<sub>1</sub>,g<sub>1</sub>), (x<sub>2</sub>,g<sub>2</sub>) y la recta g(x)=x. </p>
+
+    <p class="text">Si la ecuación de la recta es:</p>
+    
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[ g = a + bx \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table> 
+    
+    <p class="text">El coeficiente "b" se calcula sustituyendo los puntos conocidos en la ecuación de la línea recta y restando las ecuaciones miembro a miembro:</p>
+    
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[ \begin{aligned}                r.m.m. &amp;\begin{cases}                g_1 = a + bx_1 \\                g_2 = a+ bx_2                \end{cases} \\                &amp;b = \dfrac{g_1-g_2}{x_1-x_2}                \end{aligned} \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table> 
+    
+    <p class="text">Y el coeficiente "a", reemplazando este resultado en la primera ecuación:</p>
+    
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[ \begin{gathered}                g_1 = a+bx_1 = a+\dfrac{g_1-g_2}{x_1-x_2} x_1 \\[3mm]                a = g_1 - \dfrac{g_1 x_1 - g_2 x_1}{x_1 - x_2} \\[3mm]                a = \dfrac{g_2 x_1 - g_1 x_2}{x_1 - x_2} \\                \end{gathered} \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">De donde se obtiene la ecuación de la línea recta que pasa a través de los puntos (x<sub>1</sub>,g<sub>1</sub>), (x<sub>2</sub>,g<sub>2</sub>):</p>
+    
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[ g = \dfrac{g_2 x_1 - g_1 x_2}{x_1 - x_2} + \dfrac{g_1 - g_2}{x_1 - x_2} x \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">En la intersección con la recta "y = g(x)", "x<sub>3</sub>" y "g<sub>3</sub>" son iguales. Reemplazando esta igualdad en la ecuación de la línea recta y haciendo algunas operaciones, se obtiene:</p>
+    
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[ \begin{gathered}                g = g_3 = x_3 = \dfrac{g_2 x_1 - g_1 x_2}{x_1 - x_2}+ \dfrac{g_1 - g_2}{x_1 - x_2} x_3 \\[4mm]                x_3 \left( 1-\dfrac{g_1-g _2}{x_1-x_2} \right) = \dfrac{g_2 x_1-g_1x_2}{x_1-x_2} \\[4mm]                x_3 \left( \dfrac{x_1-x_2-g_1+g_2}{x_1-x_2} \right) = \dfrac{g_2 x_1- g_1 x_2}{x_1 - x_2} \\[4mm]                x_3 = \dfrac{g_2x_1-g_1x_2}{g_2-g_1+x_1-x_2}                \end{gathered} \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">Que es la ecuación del método de Wegstein.</p>
+    
+    
+    <h3 class="text">Algoritmo y código</h3>
+    
+    <p class="text">Para encontrar la solución con la ecuación de Wegstein, se siguen esencialmente los mismos pasos que en el método de Sustitución Directa, es decir se repite el proceso hasta que el valor de prueba "x<sub>3</sub>" y el valor calculado "g<sub>3</sub>" son iguales en un determinado número de dígitos (precisión) o su resta (es decir la función igualada a cero) tiene un determinado número de ceros después del punto (exactitud).</p>
+    
+    <p class="text">Sólo que en el método de Wegstein, antes de repetir el proceso, se deben actualizar los valores de las variables, para que, el nuevo valor de prueba, se calcule siempre con los últimos puntos, es decir se debe hacer que: "x<sub>1</sub>=x<sub>2</sub>, x<sub>2</sub>=x<sub>3</sub>, g<sub>1</sub>=g<sub>2</sub> y g<sub>2</sub>=g<sub>3</sub>".</p>
+    
+    <p class="text">Por ejemplo, para encontrar la solución de la siguiente ecuación, con 11 dígitos de precisión:</p>
+    
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[ g(x) = \left( 52+3\sqrt{x}-8x^{0.8} \right)^{0.36} = x \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Primero se programa la ecuación despejada (en este ejemplo como una función anónima):</p>
+    
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var g = function(x) {<br>  return (52+3*Math.sqrt(x)-8*x**0.8)**0.36;<br>}</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="text">Comenzando con un valor asumido (en este caso 1.1) se calculan los dos primeros puntos (aplicando el método de Sustitución Directa):</p>
+    
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var x1 = 1.1, g1 = g(x1), x2 = g1, g2 = g(x2);</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Luego se calcula un nuevo valor de prueba (con la ecuación de Wegstein) y el respectivo valor de la función (ambos mostrados con la precisión requerida: 11 dígitos):</p>
+    
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var x3 = (g2*x1-g1*x2)/(g2-g1+x1-x2); x3.precision(11)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">var g3 = g(x3); g3.precision(11)</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="text">Como los valores no son iguales, se realiza el cambio de variables y se repite el proceso hasta que el valor de prueba (x3) y el valor calculado (g3) son iguales:</p>
+    
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">x1 = x2; x2 = x3; g1 = g2; g2 = g3;<br>x3 = (g2*x1-g1*x2)/(g2-g1+x1-x2); print(x3.precision(11));<br>g3 = g(x3); print(g3.precision(11))</div>
+        <div class="resultado"></div>
+        <div class="instruccion">x1 = x2; x2 = x3; g1 = g2; g2 = g3;<br>x3 = (g2*x1-g1*x2)/(g2-g1+x1-x2); print(x3.precision(11));<br>g3 = g(x3); print(g3.precision(11))</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Los valores se igualan en sólo dos iteraciones, lo que demuestra la mayor eficiencia del método con relación al de sustitución directa.</p>
+    
+    <p class="text">El algoritmo, que automatiza el proceso de cálculo, es:</p>
+
+    <p class="figurasn">
+        <img src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo2/files/wegstein4.png" alt="Wegstein, diagrama de actividades">
+    </p>
+
+    <p class="text">Como se puede ver, la lógica es esencialmente la misma que en el método de Sustitución Directa (la diferencia está en la ecuación y el cambio de variables).</p>
+
+    <p class="text">El código respectivo ha sido añadido igualmente al objeto <dfn>Function</dfn> y puede ser visto en la calculadora igual que el método de sustitución directa, es decir escribiendo <dfn class="style1">Function.wegstein</dfn>.</p>
+
+    <p class="text">La sintaxis de este método es la misma que la del método de sustitución directa, sólo cambia el nombre:</p>
+
+    <div class="codigo">función_a_resolver.wegstein({xi:valor_asumido, err:precisión/exactitud, li:límite de iteraciones})</div>
+
+    <p class="text">El valor inicial por defecto (xi) es igualmente 1.1, la precisión/exactitud (err) es menor: 9 dígitos y el límite de iteraciones (li) es también menor: 30. La precisión es menor no porque el método sea menos preciso, sino porque cerca de la solución el valor de prueba (x<sub>3</sub>) y el calculado (g<sub>3</sub>) son muy cercanos, lo que genera errores de redondeo en las operaciones de resta. El límite de iteraciones es menor porque el método de Wegstein requiere menos iteraciones que el método de sustitución directa.</p>
+    
+    <p class="text">Para resolver una ecuación con este método se procede igual que con el método de sustitución directa, así para resolver la ecuación del ejemplo manual, primero se la programa (en este ejemplo como una función flecha):</p>
+    
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var g = x =&gt; (52+3*Math.sqrt(x)-8*x**0.8)**0.36;</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="text">Entonces se llama al método, en este ejemplo, con 11 dígitos de precisión/exactitud, empleando el valor inicial y límite de iteraciones por defecto (xi:1.1, li:30):</p>
+    
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">g.wegstein({err:11}).precision(11)</div>
+        <div class="resultado"></div>
+    </div>
+    <p class="text">Con lo que se obtiene (como era de esperar) la misma solución que en el ejemplo manual.</p>
+
+    <p class="text">Como ocurre con todos los métosos, se procede de la misma forma sin importar cuan compleja sea la ecuación a resolver. Así, para encontrar las dos soluciones de la siguiente ecuación:</p>
+    
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[ \begin{gathered}                g(x) = 14-y^2-z^2 = x \\[2mm]                y = \dfrac{3 x^{2,1}-7}{5}\\[2mm]                z = \dfrac{14.3-y^{1,2}}{4}                \end{gathered} \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">Primero se la programa (en este ejemplo como una función anónima):</p>
+    
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var g = function(x){<br>&nbsp; const y = (3*Math.pow(x,2.1)-7)/5;<br>&nbsp; const z = (14.3-Math.pow(y,1.2))/4;<br>&nbsp; return 14-y*y-z*z;<br>}</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="text">Se encuentran valores iniciales aproximados con el método gráfico (dibujando la función entre 1.5 y 2):</p>
+    
+    <div class="calculadora" spellcheck="false">
+            <div class="instruccion">plot({f:[g, x=&gt;x], xi:1.5, xf:2})</div><div class="resultado"></div></div>
+
+    <p class="text">Con los valores aproximadas leídos de la gráfica, se obtienen las dos soluciones buscadas y se muestran los resultados con 10 dígitos de precisión (la precisión/exactitud empleada en el cálculo):</p>
+    
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">g.wegstein({xi:1.726, err:10}).precision(10)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">g.wegstein({xi:1.943, err:10}).precision(10)</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="text">Como se puede ver, a diferencia del método de Sustitución Directa, Wegstein encuentra las dos soluciones, lo que demuestra la mayor estabilidad del método, sin embargo, debido a los errores de redondeo la precisión del método es menor, así Wegstein no converge si se trabaja con una precisión/exactitud de 12 o más dígitos:</p>
+    
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">g.wegstein({xi:1.726, err:12})</div>
+        <div class="resultado"></div>
+    </div>
+    <br>
+    
+
+    <div class="ejercicio" id="ejercicio8" enunciado="2"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Coloque la siguiente ecuación en la forma <dfn>g(x)=x</dfn> (despejando la incógnita de la función coseno) y complete el código que programa la función despejada ("g") como una función estándar:\[\cos(x) + \left( 1.2+x^{2.9} \right)^{-1} = 0\]</p><div id="pregunta72" class="calculadora" spellcheck="false"><div class="instruccion">function g(x){<br>  return Math.acos(-1/(1.2+x**2.9))<br>}</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Dibuje la gráfica de la ecuación y la recta <dfn>y=f(x)=x</dfn> entre 1 y 3.</p><div id="pregunta73" class="calculadora" spellcheck="false"><div class="instruccion">plot({f:[g,x=&gt;x],xi:1,xf:3})</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con la solución aproximada leída de la gráfica, calcule, con el método de Wegstein, la solución con 11 dígitos de precisión/exactitud, mostrando el resultado con esa precisión.</p><div id="pregunta74" class="calculadora" spellcheck="false"><div class="instruccion">g.wegstein({xi:1.7,err:11}).precision(11)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="9" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 8 -->
+
+    <div class="ejercicio" id="ejercicio9" enunciado="2"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Coloque la siguiente ecuación en la forma <dfn>g(x)=x</dfn> (despejando la incógnita del término de primer grado) y complete el código que programa la función despejada ("g") como una función anónima:\[x^3+2.9x^2+3.1x+4.1 = 0\]</p><div id="pregunta81" class="calculadora" spellcheck="false"><div class="instruccion">var g = function (x){<br>  return -(x**3+2.9*x**2+4.1)/3.1;<br>}</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Dibuje la gráfica de la ecuación y la recta <dfn>y=f(x)=x</dfn> entre -5 y 0.</p><div id="pregunta82" class="calculadora" spellcheck="false"><div class="instruccion">plot({f:[g,x=&gt;x],xi:-5,xf:0})</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con la solución aproximada leída de la gráfica, calcule, con el método de Wegstein, la solución con 9 dígitos de precisión/exactitud, mostrando el resultado con esa precisión.</p><div id="pregunta83" class="calculadora" spellcheck="false"><div class="instruccion">g.wegstein({xi:-2.7,err:9}).precision(9)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="9" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 9 -->
+
+    <div class="ejercicio" id="ejercicio10" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Coloque la siguiente ecuación en la forma <dfn>g(x)=x</dfn> (despejando la incógnita del término de segundo grado: x<sup>2</sup>=x*x) y complete el código que programa la función despejada ("g") como una función anónima:\[2 x^2+1-\text{e}^x = 0\]</p><div id="pregunta84" class="calculadora" spellcheck="false"><div class="instruccion">var g = function(x){<br>  return (Math.exp(x)-1)/(2*x);<br>}</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Dibuje la gráfica de la ecuación y la recta <dfn>y=f(x)=x</dfn> entre 0.1 y 4.</p><div id="pregunta85" class="calculadora" spellcheck="false"><div class="instruccion">plot({f:[g,x=&gt;x],xi:0.1,xf:4})</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con la primera solución aproximada leída de la gráfica, calcule, con el método de Wegstein, la primera solución con 9 dígitos de precisión/exactitud, mostrando el resultado con esa precisión</p><div id="pregunta86" class="calculadora" spellcheck="false"><div class="instruccion">g.wegstein({xi:0.7,err:9}).precision(9)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con la segunda solución aproximada leída de la gráfica, calcule, con el método de Wegstein, la segunda solución con 9 dígitos de precisión/exactitud, mostrando el resultado con esa precisión.</p><div id="pregunta87" class="calculadora" spellcheck="false"><div class="instruccion">g.wegstein({xi:3.0,err:9}).precision(9)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="11" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 10 -->
+
+
+    <div id="generarPrueba" data-scroll-y="22731.36328125"><br><hr><label class="lnotacapitulo">Nota del capítulo: </label><input type="text" id="notaCapitulo" disabled="disabled" class="itnotacapitulo"><br><br><button id="btGenerarPrueba" style="visibility: visible;" onclick="capitulo.registrarCapitulo()">Iniciar defensa</button><button id="btEmplearBono" style="margin-left:1.1rem;width:9.686rem;display:none;" onclick="capitulo.emplearBono()">Emplear Bono</button><br><br></div>
+
+
+<d id="dAutor" style="font-size: 0.9rem;text-align:center;color: #0808f24f;font-weight:bolder;position:fixed;top: 5px;right: 5px;user-select:none;display:inline-block;z-index:15;">Hernan G. Peñaranda V.</d></div><!-- Cierre del div capítulo -->
+
+            
+<span id="dato" style="display:none;">JK5KCZ0r938lCZ0oDYGrDoqpE3Km938nC30aCJ0r934mDIGnC30aC2HODMGuTW00</span>
+<span id="reg" style="display:none;">CJ4xCZ0nC3inCJ0mEp4nC30xCJ4mC3ipC30nEpCmCJ4xCp0mCJipC30nEp4nC300</span>
+
+
+
+<div id="divDialogo" style="display: none;"><div onfocus="document.querySelector('#divDialogo input').focus();"><div>Carnet universitario</div><div>Escriba el número de su carnet universitario, verificando que el guión haya sido correctamente insertado.</div><input type="text" onkeydown="return Capitulo.divDialogo.funKeydown(event)" onkeyup="Capitulo.divDialogo.funKeyup(event)"><div><button onclick="Capitulo.divDialogo.funClick('aceptar');">Aceptar</button><button style="margin-left:35px;" onclick="Capitulo.divDialogo.funClick('cancelar');">Cancelar</button></div></div></div></body>

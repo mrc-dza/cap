@@ -1,0 +1,1202 @@
+<!DOCTYPE html>
+<head>
+
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Language" content="es">
+  
+
+  <title>57-3850 capítulo 5</title>
+
+  
+    <!-- Librería y hoja de estilos KATEX  -->
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/katex/katex.min.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/katex/katex.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/katex/contrib/auto-render.min.js"></script>
+
+    <!-- Librerías y hojas de estilo CodeMirror -->
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/lib/codemirror.min.css">
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/theme/mdn-like.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/lib/codemirror.min.js"></script>
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/fold/foldgutter.min.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/fold/foldcode.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/fold/brace-fold.min.js"></script>
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/dialog/dialog.min.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/dialog/dialog.min.js"></script>
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/hint/show-hint.min.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/hint/show-hint.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/hint/javascript-hint.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/search/searchcursor.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/search/search.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/edit/matchbrackets.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/edit/closebrackets.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/comment/comment.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/wrap/hardwrap.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/javascript/javascript.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/mathematica/mathematica.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/octave/octave.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/python/python.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/css/css.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/xml/xml.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/markdown/markdown.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/htmlmixed/htmlmixed.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/keymap/sublime.min.js"></script>
+    
+    <!-- Librería Plotly -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script><style id="plotly.js-style-global"></style>
+
+    <!-- Librerías y hojas de estilo function-plot -->
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/function-plot/site/js/vendor/d3.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/function-plot/dist/function-plot.js"></script>
+    
+    <!-- Librería quantities -->
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/quantities/quantities.min.js"></script>
+
+    <!-- Librería GoJs para la creación de diagramas de flujo -->
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/gojs/release/go.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/flowchart_gojs.js"></script>
+
+    <!-- Librerías matemáticas propias -->
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/math.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/number.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/array.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/string.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/cplx.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/function.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/object.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/prq.js"></script>
+
+    <!-- Librería y hoja de estilos propias para la creación y manejo de la calculadora  -->
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/src/cjs.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/cjs_.js"></script>
+
+    <!-- Librería y hoja de estilos propias para la creación y manejo de los capítulos -->
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/src/texto.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/texto.js"></script>
+
+   <!-- Librería del capítulo actual -->
+    <script src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo5/capitulo5.js"></script>
+
+    <!-- Fuentes empleadas en el capítulo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;600;700;800&amp;family=Roboto+Mono&amp;display=swap" rel="stylesheet">
+
+    <script>
+        function katexRender() {
+            renderMathInElement(document.getElementById("capitulo"));
+        }
+        document.addEventListener("DOMContentLoaded", katexRender);
+        window.onerror = function(msg, url, lineNo, columnNo, error) {
+            __error__ = msg;
+        };
+        window.onload = function(){
+            capitulo.iniciar();
+        };
+    </script>
+
+</head>
+
+<body class="text">  
+
+
+<div id="capitulo">
+
+    <button id="btGuardar" style="z-index:15;" onclick="savePage()">Guardar</button>
+
+        
+
+    <h1 class="text" onclick="alerta(capitulo.idPagina,'')" style="cursor: pointer;">Ecuaciones Polinomiales</h1>
+
+    <p class="text">Si bien las ecuaciones polinomiales son ecuaciones algebraicas con una incógnita y por lo tanto, pueden ser resueltas con los métodos estudiados previamente, se caracterizan por tener varias soluciones (tantas soluciones como el grado del polinomio), además, dos o más de dichas soluciones pueden ser complejas (un par conjugado).</p>
+
+    <p class="text">Al ser una forma que se presenta frecuentemente en la solución de problemas prácticos, se dispone de métodos específicos para este tipo de ecuaciones.</p>
+
+    <p class="text">La forma general de una ecuación polinomial de grado "n" es:</p>
+    
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[ P_n(x) = a_0 x^{n}+a_1x^{n-1}+a_2x^{n-2}+\mathellipsis +a_{n-1}x+a_n = 0 \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">Donde, como se puede ver, los coeficientes del polinomio corresponden a un vector con "n+1" elementos. Por esta razón, cuando se trabaja con polinomios, se trabaja con vectores.</p>
+
+
+
+    <h2 class="text">Ecuación cuadrática</h2>
+
+
+    <p class="text">La ecuación polinomial más sencilla es la ecuación cuadrática:</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[ a_0 x^2 + a_1 x + a_2 = 0 \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Cuyas soluciones, como se sabe, se obtienen con la expresión:</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[ x_{1,2} = \dfrac{-a_1\pm \sqrt{a_1^2-4\cdot a_0\cdot a_2}}{2\cdot a_0} \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Un algoritmo que programa esta ecuación y devuelve las dos soluciones, es:</p>
+
+    <p class="figurasn"><img src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo5/files/cuad.png" alt="Algoritmo cuadrática"></p>
+
+    <p class="text">Dado que las ecuaciones polinomiales tienen soluciones complejas, para trabajar con este tipo de números se ha creado la clase <strong class="style1">Complex</strong> (disponible en la librería "cplx.js"). Los números complejos pueden ser creados siguiendo la notación estándar, es decir, <dfn class="style1">new Complex(valor real, valor imaginario)</dfn>, o directamente con <dfn class="style1">Complex(valor real, valor imaginario)</dfn>, pues <strong class="style1">Complex</strong> ha sido implementado como clase y como función fábrica, así, las siguientes declaraciones son equivalentes:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var c1 = new Complex(1.1, 2.3); c1</div>
+        <div class="resultado"></div>
+        <div class="instruccion">var c2 = new Complex(3.4, -5.7); c2</div>
+        <div class="resultado"></div>
+        <div class="instruccion">var c3 = Complex(1.1, 2.3); c3</div>
+        <div class="resultado"></div>
+        <div class="instruccion">var c4 = Complex(3.4, -5.7); c4</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">En lugar del valor real e imaginario, se puede mandar una cadena equivalente a un número complejo:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var c5 = new Complex("1.1+2.3i"); c5</div>
+        <div class="resultado"></div>
+        <div class="instruccion">var c6 = new Complex("3.4-5.7i"); c6</div>
+        <div class="resultado"></div>
+        <div class="instruccion">var c7 = Complex("2.2+3.5i"); c7</div>
+        <div class="resultado"></div>
+        <div class="instruccion">var c8 = Complex("3.4-5.7i"); c8</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Por otra parte, una cadena equivalente a un número complejo, puede ser convertida en un número complejo, con el método <i class="style1">toComplex</i>:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var c9 = "3.4+7.3i".toComplex(); c9</div>
+        <div class="resultado"></div>
+        <div class="instruccion">var c10 = "4.7-8.2i".toComplex(); c10</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Algunas de las propiedades de los números complejos, son:</p>
+
+    <div class="table borderAll">
+    <table align="center">
+        <caption>Propiedades de números complejos</caption>
+        <tbody><tr><th>Propiedad</th><th>Descripción</th></tr>
+        <tr><td class="center"><dfn class="style1">r</dfn></td><td>Parte real del número complejo</td></tr>
+        <tr><td class="center"><dfn class="style1">i</dfn></td><td>Parte imaginaria del número complejo</td></tr>
+    </tbody></table>
+    </div>
+
+    <p class="text">Y algunos de los métodos:</p>
+
+    <div class="table borderAll">
+    <table align="center" style="width: 400px;">
+        <caption>Métodos de números complejos</caption>
+        <tbody><tr><th style="width: 96px;">Método</th><th>Descripción</th></tr>
+        <tr><td><dfn class="style1">angle()</dfn></td><td>Devuelve el ángulo (la amplitud) del número complejo</td></tr>
+        <tr><td><dfn class="style1">conj()</dfn></td><td>Devuelve una copia con el par conjugado del número complejo</td></tr>
+        <tr><td><dfn class="style1">module()</dfn></td><td>Devuelve el módulo del número complejo (su valor absoluto)</td></tr>
+        <tr><td><dfn class="style1">negative()</dfn></td><td>Devuelve una copia con el negativo del número complejo (no el par conjugado)</td></tr>
+    </tbody></table>
+    </div>
+
+    <p class="text">En lugar de <dfn class="style1">negative</dfn>, que es el método específico para complejos, se puede emplear también el método general <dfn class="style1">neg</dfn>, igualmente en lugar de <dfn class="style1">module</dfn> que es el método específico para complejos, se puede emplear el método general <dfn class="style1">abs</dfn>. Para copiar un número complejo se emplea el método general <dfn class="style1">copy</dfn>.</p>
+
+    <p class="text">Por otra parte, la mayoría de las funciones matemáticas han sido implementadas también para trabajar con números complejos y/o devolver resultados complejos, como se puede ver en los siguientes ejemplos:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">(-3.42).sqrt().round(4)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">(-4.32).log().round(5)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">var c = Complex("3.2+4.1i"); c</div>
+        <div class="resultado"></div>
+        <div class="instruccion">c.sqrt().round(4)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">c.log().round(3)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">c.pow(3.2).round(2)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Los métodos <i class="style1">add</i>, <i class="style1">sub</i>, <i class="style1">mul</i> y <i class="style1">div</i>, operan también con números complejos, por lo que pueden ser empleados en las operaciones aritméticas con números complejos, como se muestra en los siguientes ejemplos:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var c1 = Complex(2, 3); c1</div>
+        <div class="resultado"></div>
+        <div class="instruccion">var c2 = Complex("3+4i"); c2</div>
+        <div class="resultado"></div>
+        <div class="instruccion">c1.add(c2)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">c1.sub(c2)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">c1.mul(c2)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">c1.div(c2)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <br>
+    <div class="ejercicio" id="ejercicio1" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Cree las variables "c1" y "c2" con los números complejos 3+4i y 7-5i.</p><div id="pregunta1" class="calculadora" spellcheck="false"><div class="instruccion">var c1 = Complex(3,4);<br>var c2 = Complex(7,-5);</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Cree y muestre la variable "c3" con el par conjugado de la suma de  "c1" y "c2"</p><div id="pregunta2" class="calculadora" spellcheck="false"><div class="instruccion">var c3 = c1.add(c2).conj();c3</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Cree y muestre la variable "c4" con el valor absoluto de la resta de "c2" y "c1", redondeado al décimo dígito.</p><div id="pregunta3" class="calculadora" spellcheck="false"><div class="instruccion">c4 = c2.sub(c1).abs().round(10);c4</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Cree y muestre la variable "c5" con el negativo de la división de "c1" y "c2", redondeado al décimo segundo dígito.</p><div id="pregunta4" class="calculadora" spellcheck="false"><div class="instruccion">c5 = c1.div(c2).neg().round(12);c5</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>cree y muestre la variable "c6" con el módulo de la multiplicación de "c1" y "c2", redondeado al décimo primer dígito.</p><div id="pregunta5" class="calculadora" spellcheck="false"><div class="instruccion">c6 = c1.mul(c2).abs().round(11); c6</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="15" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 1 -->
+
+    <div class="ejercicio" id="ejercicio2" enunciado="2"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Cree las variables "a" y "b" con los números complejos 3.3+4.3i y -6.3-3.3i.</p><div id="pregunta26" class="calculadora" spellcheck="false"><div class="instruccion">var a = Complex(3.3,4.3);<br>var b = Complex(-6.3,-3.3);</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Cree la variable "c" con la raíz cuadrada de la suma de "a" y "b", redondeada al tercer dígito.</p><div id="pregunta27" class="calculadora" spellcheck="false"><div class="instruccion">var c = a.add(b).sqrt().round(3);c</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Cree la variable "d" con el logaritmo natural de la resta de "a" y "b", redondeado al quinto dígito.</p><div id="pregunta28" class="calculadora" spellcheck="false"><div class="instruccion">var d = a.sub(b).log().round(5);d</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Cree la variable "e" con la raíz cúbica de la división de "b" y "a", redondeada al cuarto dígito.</p><div id="pregunta29" class="calculadora" spellcheck="false"><div class="instruccion">var e = b.div(a).cbrt().round(4);e</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Cree la variable "f" con el par conjugado de la división de "a" y "b", redondeado al segundo dígito.</p><div id="pregunta30" class="calculadora" spellcheck="false"><div class="instruccion">var f = a.div(b).conj().round(2);f</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="15" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 2 -->
+
+    <div class="ejercicio" id="ejercicio3" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Cree las variables "c1" y "c2" con los números complejos 5+2i y 8-4i.</p><div id="pregunta31" class="calculadora" spellcheck="false"><div class="instruccion">var c1 = Complex(5,2)<br>var c2 = Complex(8,-4)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Cree y muestre la variable "c3" con el par conjugado de la multiplicación de "c1" y "c2".</p><div id="pregunta32" class="calculadora" spellcheck="false"><div class="instruccion">var c3 = c1.mul(c2).conj();c3</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Cree y muestre la variable "c4" con la raíz cúbica de la división de "c2" y "c1", redondeado al noveno dígito.</p><div id="pregunta33" class="calculadora" spellcheck="false"><div class="instruccion">var c4 = c2.div(c1).cbrt().round(9);c4</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Cree y muestre la variable "c5" con la suma las raíces cuadradas de "c1" y "c2", redondeando el resultado al quinto dígito.</p><div id="pregunta34" class="calculadora" spellcheck="false"><div class="instruccion">var c5 = c1.sqrt().add(c2.sqrt()).round(5);c5</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Cree y muestre la variable "c6" con la resta de los logaritmos naturales de "c2" y "c1", redondeando el resultado al sexto dígito.</p><div id="pregunta35" class="calculadora" spellcheck="false"><div class="instruccion">var c6 = c2.log().sub(c1.log()).round(6); c6</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="15" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 3 -->
+
+    
+    <p class="text">El método que resuelve la ecuación acuadrática ha sido añadido, con el nombre <dfn class="style1">cuad</dfn>, a la clase <dfn class="style1">Array</dfn>, por lo que debe ser llamado desde un array cuyos elementos sean los coeficientes de la ecuación cuadrática, así para resolver las siguientes ecuaciones:</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[ \begin{aligned} x^2-10x+21= 0\\ x^2-14x+49=0\\ x^2+2x+3=0\\ \end{aligned} \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Se escriben las instrucciones:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">[1, -10, 21].cuad()</div>
+        <div class="resultado"></div>
+        <div class="instruccion">[1, -14, 49].cuad()</div>
+        <div class="resultado"></div>
+        <div class="instruccion">[1, 2, 3].cuad().round(4)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <br>
+    <div class="ejercicio" id="ejercicio4" enunciado="6"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Encuentre las soluciones de las siguientes ecuaciones con el método "cuad", redondeando los resultados al tercer dígito después del punto.</p>\[\begin{aligned}x^2- x+3= 0\\x^2-6x+9=0\end{aligned}\]</div><p class="pregunta"><span class="pregunta"></span></p><div id="pregunta52" class="calculadora" spellcheck="false"><div class="instruccion">[1,-1,3].cuad().round(3)</div><div class="resultado"></div><div class="instruccion">[1,-6,9].cuad().round(3)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="4" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 4 -->
+
+
+
+    <h2 class="text">Ecuación cúbica</h2>
+
+
+    <p class="text">La ecuación cúbica puede ser resuelta también de forma analítica:</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[ a_0 x^3 + a_1 x^2 + a_2 x + a_3 = 0 \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">La solución analítica, conocida como el método de Cardano (por ser quien la dedujo por primera vez), requiere que la ecuación sea colocada en la forma:</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[ x^3 + a_1 x^2 + a_2 x + a_3 = 0 \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">Lo que se consigue simplemente dividiendo los coeficientes entre el primero (a<sub>0</sub>). Luego, con estos coeficientes se calculan los siguientes parámetros:</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[ \begin{aligned} Q &amp;= \dfrac{3 a_2 - a_1^2}{9}\\[2mm] R &amp;= \dfrac{9a_1a_2-27a_3-2a_1^3}{54}\\[3mm] S &amp;= \sqrt[3]{R+\sqrt{Q^3+R^2}}\\[3mm]                T &amp;= \sqrt[3]{R-\sqrt{Q^3+R^2}} \end{aligned} \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">Y con estos parámetro se calculan las tres soluciones:</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[ \begin{aligned} x_1 &amp;= S+T-\dfrac{1}{3}a_1\\[2mm] x_2 &amp;= -\dfrac{1}{2}(S+T)-\dfrac{1}{3}a_1+\dfrac{1}{2}\sqrt{-3}(S-T)\\[3mm]                x_3 &amp;= -\dfrac{1}{2}(S+T)-\dfrac{1}{3}a_1-\dfrac{1}{2}\sqrt{-3}(S-T) \end{aligned} \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Donde la suma \(Q^3+R^2\) es el discriminante y en función a su valor se pueden presentar 3 casos: a) si es positivo una de las soluciones: \(x_1\), es real y las otras imaginarias; b) si es negativo, las tres soluciones son reales y distintas y c) si es cero todas las soluciones son reales y por lo menos dos de ellas: \(x_2\) y \(x_3\), son iguales.</p>
+
+    <p class="text">Debido a errores de redondeo, el discriminante casi nunca es cero (sólo se aproxima a cero) y esto es algo que se debe tomar en cuenta al momento de programar el método.</p>
+
+    <p class="text">El algoritmo que automatiza el proceso de cálculo, es el siguiente:</p>
+
+    <p class="figurasn"><img src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo5/files/cub.png" alt="Algoritmo ecuación cúbica"></p>
+
+    <p class="text">Y el código respectivo, con el nombre <dfn class="style1">cub</dfn>, ha sido añadido al objeto Array, por lo que debe ser llamado desde un array cuyos elementos sean los coeficientes de la ecuación, así, para resolver las siguientes ecuaciones:</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[ \begin{aligned} x^3+2x^2+3x+4 = 0\\[1mm] x^3+3x^2+7x+9 = 0\\[1mm] x^3-6x^2+11x-6 = 0\\[1mm] x^3-22x^2+145x-300 = 0\\[1mm]                x^3+21x^2+147x+343 = 0 \end{aligned} \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Se escribe:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">[1, 2, 3, 4].cub().round(4)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">[1, 3, 7, 9].cub().round(4)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">[1, -6, 11, -6].cub()</div>
+        <div class="resultado"></div>
+        <div class="instruccion">[1, -22, 145, -300].cub()</div>
+        <div class="resultado"></div>
+        <div class="instruccion">[1, 21, 147, 343].cub()</div>
+        <div class="resultado"></div>
+    </div>
+
+    <br>
+    <div class="ejercicio" id="ejercicio5" enunciado="8"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Encuentre las soluciones de las siguientes ecuaciones con el método "cub", redondeando los resultados al cuarto dígito después del punto.</p>\[\begin{aligned}2x^3+3x^2+4x+5 = 0\\[1mm]-x^3+2x-4 = 0\end{aligned}\]</div><p class="pregunta"><span class="pregunta"></span></p><div id="pregunta63" class="calculadora" spellcheck="false"><div class="instruccion">[2,3,4,5].cub().round(4)</div><div class="resultado"></div><div class="instruccion">[-1,0,2,-4].cub().round(4)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="4" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 5 -->
+
+
+
+    <h2 class="text">Método de Newton para polinomios</h2>
+
+
+    <p class="text">En los polinomios, el valor de la función y el de su derivada, pueden ser calculados por división sintética, siendo este el método más eficiente. Entonces, empleando división sintética, el método de Newton-Raphson puede ser optimizado para el caso específico de los polinomios.</p>
+
+    <p class="text">Como se sabe, el residuo de la división sintética de un polinomio entre un monomio: "x-x<sub>1</sub>", es el valor del polinomio para "x=x<sub>1</sub>" y el residuo de una segunda división sintética, es el valor de la derivada primera del polinomio.</p>
+
+    <p class="text">Por ejemplo, dado el polinomio:</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[ P_3(x) = x^3+x^2-3x -3 = 0 \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">La doble división sintética entre el monomio "x-2" (o lo que es lo mismo entre x=2), es:</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[ \begin{aligned} &amp;\underline{ \begin{matrix} \underline{x=2\vert}&amp; \phantom{-}1 &amp; \phantom{-}1 &amp;-3 &amp; -3&amp;\\ &amp; &amp; \phantom{-}2                &amp; \phantom{-}6 &amp; \phantom{-}6 \end{matrix}}\\ &amp;\underline{ \begin{matrix} \phantom{x=2\vert} &amp; \phantom{-}1 &amp; \phantom{-}3                &amp; \phantom{-}3 &amp;\phantom{-}\underline{3}\\ &amp; &amp; \phantom{-}2 &amp; 10 \end{matrix}}\\ &amp;\begin{matrix} \phantom{x=2\vert} &amp; \phantom{-}1                &amp; \phantom{-}5 &amp; \underline{13} &amp; \phantom{-7} \end{matrix} \end{aligned} \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Donde el residuo de la primera división sintética (el número 3) es el valor del polinomio para "x=2", mientras que el residuo de la segunda división sintética (el número 13) es el valor de la derivada primera para "x=2".</p>
+
+    <p class="text">De esa manera, aplicando una doble división sintética, se tienen los dos valores que se requieren en el método de Newton-Raphson.</p>
+
+    <p class="text">Las ecuaciones para calcular los coeficientes resultantes de la división sintética, se deducen fácilmente del anterior ejemplo. Si se denomina <i class="style1">a</i> a los coeficientes del polinomio original y <i class="style1">b</i> a los del polinomio resultante, dichas ecuaciones son:</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[ \begin{aligned} b_0 &amp;= a_0 \\ b_i &amp;= a_i+b_{i-1}\cdot x_1 \begin{cases} i = 1 \rightarrow n \end{cases} \end{aligned} \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Ecuaciones que pueden ser programadas en un ciclo <dfn class="style1">for</dfn>, de acuerdo a la siguiente lógica:</p>
+
+    <p class="figurasn"><img src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo5/files/divsin1.png" alt="Algoritmo división sintética 1"></p>
+
+    <p class="text">El código respectivo ha sido añadido, con el nombre <dfn class="style1">divsin1</dfn>, a la clase Array, por lo que debe ser llamado desde un array cuyos elementos sean los coeficientes de la ecuación. Así, para calcular el valor del siguiente polinomio y el de su derivada:</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[ 3x^7+x^5+2x^4-4x^2+6x-8 = 0 \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Para <i class="style1">x = 7</i>, se escribe:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var a = [3, 0, 1, 2, 0, -4, 6, -8]</div>
+        <div class="resultado"></div>
+        <div class="instruccion">var b = a.divsin1(7); b.pop()</div>
+        <div class="resultado"></div>
+        <div class="instruccion">var c = b.divsin1(7); c.pop()</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Como se recordará, <dfn class="style1">pop</dfn> quita el último elemento del vector y devuelve el elemento extraído.</p>
+
+    <p class="text">En cuanto al método de Newton-Raphson como tal, no cambia, sólo que ahora los valores de la función y el de su derivada, se calculan por división sintética. Además, como es una modificación específica para el caso de las ecuaciones polinomiales, no se trabaja con la función, sino con los coeficientes del polinomio.</p>
+
+    
+
+    <h3 class="text">Algoritmo</h3>
+
+    <p class="text">El algoritmo del método de Newton para ecuaciones polinomiales, optimizado de manera que las dos divisiones se lleven a cabo simultáneamente y sólo se guarden los residuos, es:</p>
+
+    <p class="figurasn"><img src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo5/files/newtonp.png" alt="Algoritmo método de Newton para polinomios"></p>
+
+    <p class="text">El código respectivo, ha sido añadido como un método de la clase <dfn class="style1">Array</dfn>, con el nombre <dfn class="style1">newtonp</dfn> e implementado con operadores genéricos, de manera que pueda trabajar también con coeficientes complejos.</p>
+
+    <p class="text">La exactitud/precisión, en esta versión del método, es menor que la del método genérico (<dfn class="style">newton</dfn>), porque los errores de redondeo son mayores cuando se trabaja con división sintética (debido a la propagación del error que ocurre en las operaciones de suma y resta).</p>
+
+    <p class="text">La principal dificultad, para aplicar el método de Newton, es el encontrar los valores iniciales adecuados para iniciar el proceso. En primera instancia, en el caso de las soluciones reales, dichos valores pueden ser obtenidos de la gráfica de la función y para las soluciones complejas (<i class="style1">que siempre vienen en pares conjugados</i>), se deben asumir valores (por prueba y error) hasta obtener las soluciones complejas (la mitad de las soluciones, porque la otra mitad son siempre sus pares conjugados).</p>
+
+    <p class="text">Por ejemplo, para encontrar las soluciones de la siguiente ecuación:</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[ x^5-12.6x^4+78.21x^3-255.216x^2+391.586x-213.9 = 0 \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Primero se crea el vector con los coeficientes del polinomio:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var a = [1, -12.6, 78.21, -255.216, 391.586, -213.9]</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="text">Luego se dibuja la gráfica del polinomio: la función a dibujar es simplemente el residuo de la división sintética, es decir:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var f = x =&gt; a.divsin1(x).pop();</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Al dibujar la función, se deben cambiar los límites tantas veces como sea necesario, hasta que las soluciones reales sean claramente visibles. En este caso las soluciones reales se ven claramente cuando se dibuja la gráfica entre 1 y 3.5:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">plot({f, xi:1, xf:3.5})</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Como la función a graficar es sencilla, puede ser creada directamente (como una función flecha) al momento de dibujarla:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">plot({f:x=&gt;a.divsin1(x).pop(), xi:1, xf:3.5})</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Empleando los valores iniciales obtenidos de la gráfica, se encuentran las soluciones reales. En este ejemplo con la precisión/exactitud por defecto y mostrados con esa precisión:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">a.newtonp({xi:1.201}).precision(9)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">a.newtonp({xi:2.303}).precision(9)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">a.newtonp({xi:3.103}).precision(9)</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="text">Para las soluciones complejas (el par conjugado) se asumen valores iniciales complejos hasta obtener una solución compleja. Por errores de redondeo, con frecuencia se obtienen soluciones que parecen ser complejas, como la siguiente:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">a.newtonp({xi:Complex(1,4)}).precision(9)</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="text">Pero esta es en realidad una solución real, pues el término imaginario tienen 12 ceros después del punto. Redondeando el resultado al noveno dígito después del punto se obtiene el resultado real:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">a.newtonp({xi:Complex(1,4)}).round(9)</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="text">La verdadera solucion compleja se encuentra (en esta caso en particular) empleando un valor inicial igual a 2+4i:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">a.newtonp({xi:Complex(2,4)}).precision(9)</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="text">Siendo, su par conjugado, el otro valor complejo:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">$_.conj()</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="text">Donde "$_" (o alternativamente "ans") es la variable que se emplea en la calculadora para recuperar al último resultado calculado.</p>
+
+    <div class="ejercicio" id="ejercicio6" enunciado="1"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Para encontrar las soluciones del siguiente polinomio\[x^5-12x^4+72x^3-222x^2+311x-150 = 0\]Para las soluciones complejas (en párrafos independientes) pruebe valores iniciales complejos, hasta obtener un resultado complejo y obtenga luego su par conjugado (la otra solución). En todos los casos las soluciones deben ser mostradas con los dígitos de precisión/exactitud empleados en el cálculo.</p></div><p class="pregunta"><span class="pregunta"></span>Guarde en "a" el vector de coeficientes.</p><div id="pregunta69" class="calculadora" spellcheck="false"><div class="instruccion">var a = [1,-12,72,-222,311,-150];</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Dibuje la gráfica del polinomio (creando la función, como una función flecha, directamente al momento de dibujar la gráfica), cambie los límites cuantas veces se requiera, hasta que las soluciones reales puedan ser visualizadas claramente.</p><div id="pregunta70" class="calculadora" spellcheck="false"><div class="instruccion">plot({f:x=&gt;a.divsin1(x).pop(),xi:1,xf:2})</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con los valores iniciales obtenidos de la gráfica, encuentre las soluciones reales con el método de Newton (precisión/exactitud: 7 dígitos) mostrándolas con 7 dígitos de precisión.</p><div id="pregunta71" class="calculadora" spellcheck="false"><div class="instruccion">a.newtonp({xi:1,xf:6,err:7}).precision(7)</div><div class="resultado"></div><div class="instruccion">a.newtonp({xi:2,xf:12,err:7}).precision(7)</div><div class="resultado"></div><div class="instruccion">a.newtonp({xi:3,xf:12,err:7}).precision(7)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Encuentre la primera solución compleja con el método de Newton (precisión/exactitudo: 7 dígitos) probando diferentes valores iniciales (complejos), hasta encontrar una solución (muestre la solución con 7 dígitos de precisión). La segunda solución es el par conjugado.</p><div id="pregunta72" class="calculadora" spellcheck="false"><div class="instruccion">a.newtonp({xi:Complex(2,5), err:7}).precision(7)</div><div class="resultado"></div><div class="instruccion">ans.conj()</div><div class="resultado"></div><div class="instruccion"></div><div class="resultado"></div></div><p class="pregunta" id="pregunta73"><span class="pregunta"></span>El residuo de dividir un polínomio entre x-12.34, es el ú<span class="campo_literal correcta" tabindex="0" contenteditable="true">ltimo</span> elemento y es el valor del polinomio cuando "x" es igual a <span class="campo_literal correcta" tabindex="0" contenteditable="true">12.34</span></p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="22" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div> <!-- ejercicio 6 -->
+
+    <div class="ejercicio" id="ejercicio7" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Para encontrar las soluciones del siguiente polinomio:\[x^4-12.5x^3+74.3x^2-221.13x+233.024 = 0\]Con ese fin.</p></div><p class="pregunta"><span class="pregunta"></span>Guarde en "a" el vector de coeficientes.</p><div id="pregunta79" class="calculadora" spellcheck="false"><div class="instruccion">var a = [1,-12.5,74.3,-221.13,233.024]</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Dibuje la gráfica del polinomio (creando la función, como una función flecha, directamente al momento de dibujar la gráfica), cambie los límites cuantas veces se requiera, hasta que las soluciones reales puedan ser visualizadas claramente.</p><div id="pregunta80" class="calculadora" spellcheck="false"><div class="instruccion">plot({f:x=&gt;a.divsin1(x).pop(),xi:1,xf:2})</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con los valores iniciales obtenidos de la gráfica, encuentre las soluciones reales empleando el método de Newton (precisión/exactitud: 12 dígitos) redondeándolas al cuarto dígito después del punto.</p><div id="pregunta81" class="calculadora" spellcheck="false"><div class="instruccion">a.newtonp({xi:2,err:12}).round(4)</div><div class="resultado"></div><div class="instruccion">a.newtonp({xi:4,err:12}).round(4)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Encuentre la primera solución compleja con el método de Newton (precisión/exactitudo: 12 dígitos) probando diferentes valores iniciales (complejos), hasta encontrar una solución (muestre la solución con 4 dígitos después del punto). La segunda solución es el par conjugado.</p><div id="pregunta82" class="calculadora" spellcheck="false"><div class="instruccion">a.newtonp({xi:Complex(2,4),err:12}).round(4)</div><div class="resultado"></div><div class="instruccion">ans.conj()</div><div class="resultado"></div><div class="instruccion"></div><div class="resultado"></div></div><p class="pregunta" id="pregunta83"><span class="pregunta"></span>En la función que calcula el valor del polinomio para un determinado valor de "x", el método "pop" extrae el ú<span class="campo_literal correcta" tabindex="0" contenteditable="true">ltimo</span> elemento de la d<span class="campo_literal correcta" tabindex="0" contenteditable="true">ivisión sintétic</span>a, porque el valor de ese elemento (el r<span class="campo_literal correcta" tabindex="0" contenteditable="true">esiduo</span>) es igual al valor de la función.<br>Las soluciones complejas siempre vienen en p<span class="campo_literal correcta" tabindex="0" contenteditable="true">ares conjugado</span>s y en los cálculos, el par conjugado se obtiene con la instrucción: <span class="campo_literal correcta" tabindex="0" contenteditable="true">ans.conj()</span>, donde <span class="campo_literal correcta" tabindex="0" contenteditable="true">ans</span> es el último resultado calculado.</p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="24" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div> <!-- ejercicio 7 -->
+
+    <div class="ejercicio" id="ejercicio8" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Para encontrar las soluciones del siguiente polinomio:\[x^5-5.9x^4-0.9x^3+34x^2-0.4x-38.2 = 0\]Con ese fin:</p></div><p class="pregunta"><span class="pregunta"></span>Guarde en "a" el vector de coeficientes.</p><div id="pregunta94" class="calculadora" spellcheck="false"><div class="instruccion">var a = [1,-5.9,-0.9,34,-0.4,-38.2];</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Dibuje la gráfica del polinomio (creando la función, como una función flecha, directamente al momento de dibujar la gráfica), cambie los límites cuantas veces se requiera, hasta que las soluciones reales puedan ser visualizadas claramente.</p><div id="pregunta95" class="calculadora" spellcheck="false"><div class="instruccion">plot({f:x=&gt;a.divsin1(x).pop(),xi:1,xf:2})</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con los valores iniciales obtenidos de la gráfica, encuentre las soluciones  empleando el método de Newton (precisión/exactitud: 14 dígitos) reales redondeándolas al décimo dígitos después del punto.</p><div id="pregunta96" class="calculadora" spellcheck="false"><div class="instruccion">a.newtonp({xi:-1.75,err:14}).round(10)</div><div class="resultado"></div><div class="instruccion">a.newtonp({xi:-1.26,err:14}).round(10)</div><div class="resultado"></div><div class="instruccion">a.newtonp({xi:1.2,err:14}).round(10)</div><div class="resultado"></div><div class="instruccion">a.newtonp({xi:3.1,err:14}).round(10)</div><div class="resultado"></div><div class="instruccion">a.newtonp({xi:4.5,err:14}).round(10)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="15" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div> <!-- ejercicio 8 -->
+
+
+
+
+    <h2 class="text">Método de Bairstow</h2>
+
+
+    <p class="text">El método de Bairstow, al igual que el método de Newton, permite encontrar las soluciones reales y complejas de un polinomio, sin embargo, a diferencia del método de Newton, este método encuentra las soluciones complejas sin recurrir a operaciones con números complejos.</p>
+
+    <p class="text">El método de Bairstow encuentra un par de soluciones dividiendo el polinomio entre la ecuación de segundo grado:</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[ x^2-rx-s \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Haciendo variar los coeficientes "r" y "s" hasta que el residuo sea cero, o cercano a cero, es decir hasta que se cumpla aproximadamente la igualdad:</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[ \dfrac{P_n(x)}{x^2-r\cdot x-s} = Q_{n-2}(x)\cdot (x^2-r\cdot x-s) = 0 \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">Donde Q<sub>n-2</sub> es el polinomio residual  (de grado n-2) resultante de la división. Una vez que se cumple la anterior ecuación, se calculan dos de las soluciones resolviendo la ecuación de segundo grado.</p>
+    
+    <p class="text">En teoría es posible continuar el proceso con el polinomio residual, encontrando otras dos soluciones y continuando así hasta que el polinomio residual sea de tercer o segundo grado. Sin embargo, en este proceso, los errores de redondeo se propagan en cada repetición, de manera que en cada repetición las soluciones son cada vez menos precisas.</p>
+    
+    <p class="text">Lo anterior también es válido para el método de Newton-Raphson, con el cual, en teoría, es posible encontrar otra solución con el polinomio residual y continuar así hasta que el polinomio sea de tercer grado, pero, al igual que en el método de Bairstow, los errores se propagan dando lugar, finalmente, a resultados erróneos.</p>
+    
+    <p class="text">El método de Bairstow es un método iterativo, que requiere 2 valores iniciales para iniciar el proceso. Si los valores iniciales asumidos son "x<sub>1</sub>" y "x<sub>2</sub>", entonces, la relación entre estos valores y la ecuación cuadrática es:</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[ \begin{aligned} (x-x_1)(x-x_2) &amp;= x^2-r\cdot x - s\\ x^2-(x_1+x_2)x+x_1x_2 &amp;= x^2-rx-s \end{aligned} \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">De donde se obtiene que:</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[ \begin{aligned} r&amp;= x_1+x_2\\ s&amp;= -x_1\cdot x_2 \end{aligned} \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">La forma más eficiente de dividir el polinomio, entre la ecuación de segundo grado, es mediante división sintética. Para recordar el proceso, se dividirá el siguiente polinomio:</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[ p_4(x) = x^4 -1.1 x^3+2.3x^2+0.5x+3.3 = 0 \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">Entre la ecuación de segundo grado:</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[ x^2+x+1 \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">Por lo tanto, en este caso, los divisores son r=−1 y s=−1:</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[ \begin{aligned} \underline{ \begin{array}{c|} r = -1\\ s = -1 \end{array}}\\ \begin{matrix} \phantom{r=-1}\\ \phantom{r=-1}                \end{matrix} \end{aligned} \begin{aligned} \hspace{0.5cm} \underline{ \begin{matrix} 1 &amp; -1.1 &amp; \phantom{-}2.3 &amp; \phantom{-}0.5                &amp; \phantom{-}3.3\\ &amp; -1.0 &amp; \phantom{-}2.1 &amp; -3.4 &amp; \phantom{-}0.8\\ &amp; &amp;-1.0 &amp; \phantom{-}2.1 &amp; -3.4 \end{matrix}}\\ \begin{matrix}                1 &amp; -2.1 &amp; \phantom{-}3.4 &amp; -0.8 &amp; \phantom{-}0.7 \end{matrix} \end{aligned} \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Si se denomina "b" a los coeficientes resultantes de la división sintética, entonces el residuo es:</p>
+    
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[ b_{n-1}(x-r)+b_n = b_{n-1}x+(b_n-b_{n-1}r) \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">Donde "n" es el grado del polinomio. Así el residuo del ejemplo es:</p>
+    
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[ -0.8(x-(-1))+0.7 = -0.8x-0.1 \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Una segunda división sintética, aplicada al polinomio residual, permite calcular las derivadas parciales del polinomio con relación a los coeficientes “r” y “s”:</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[ \begin{aligned}                    \underline{                    \begin{array}{c|}                    r = -1\\                    s = -1                    \end{array}}\\                    \begin{matrix}                    \phantom{r=-1}\\                    \phantom{r=-1}                    \end{matrix}                    \end{aligned}\hspace{0.5cm}                    \begin{aligned}                    \underline{                    \begin{matrix}                    1 &amp; -2.1 &amp; \phantom{-}3.4 &amp; -0.8\\                    \phantom{1} &amp; -1.1 &amp; \phantom{-}3.1 &amp; -5.5\\                    \phantom{1} &amp; \phantom{-2.1} &amp; -1.0 &amp; \phantom{-}3.1                    \end{matrix}}\\                    \begin{matrix}                    1 &amp; -3.1 &amp; \phantom{-}5.5 &amp; -3.2                    \end{matrix}                    \end{aligned} \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Si se denomina “c” a los coeficientes resultantes de esta segunda división, las derivadas parciales son:</p>
+    
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[ \begin{aligned}                    \dfrac{\partial b_3}{\partial r} =c_2&amp;=\phantom{-}5.5&amp;\\                    \dfrac{\partial b_3}{\partial s} =c_1&amp;=-3.1&amp;                    \end{aligned} \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Y en general, para un coeficiente "b<sub>i</sub>" cualquiera, se cumple que:</p>
+    
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[ \begin{aligned}                    \dfrac{\partial b_i}{\partial r} =c_{i-1}\\[3mm]                    \dfrac{\partial b_i}{\partial s} =c_{i-2}                    \end{aligned} \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">Analizando las operaciones llevadas a cabo y denominando "a" al vector de coeficientes del polinomio original, se deduce que los coeficientes "b" del polinomio resultante pueden ser calculados con:</p>
+    
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                    \begin{aligned}                    b_0 &amp;= a_0\\[2mm]                    b_1 &amp;= a_1+b_0 r\\[2mm]                    b_i &amp;= a_i+b_{i-1}r+b_{i-2}s\hspace{0.5cm}                    \begin{cases}i\rightarrow n\end{cases}                    \end{aligned}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">El algoritmo que automatiza el proceso de cálculo es el siguiente:</p>
+
+    <p class="figurasn"><img src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo5/files/divsin2.png" alt="Algoritmo división sintética de segundo grado"></p>
+
+    <p class="text">El código respectivo ha sido añadido, con el nombre <dfn class="style1">divsin2</dfn>, como un método del objeto <dfn>Array</dfn> e implementado empleando los métodos genéricos <dfn class="style1">add</dfn> y <dfn class="style1">mul</dfn>, de manera que sea posible trabajar con números complejos.</p>
+
+    <p class="text">Una vez implementado el método simplemente se llama al mismo desde el vector que tiene los coeficientes del polinomio, mandando los divisores ("r" y "s"). Así, para dividr el polinomio del ejemplo manual</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                p_4(x) = x^4 -1.1 x^3+2.3x^2+0.5x+3.3 = 0                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">Entre:</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                x^2+x+1                 \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Se escribe la instrucción:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">[1, -1.1, 2.3, 0.5, 3.3].divsin2(-1, -1).precision(12)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Obteniéndose, como era de esperar, los mismos resultados que en el ejemplo manual.</p>
+
+    <p class="text">Para que el residuo de la división sintética sea cero y así encontrar dos de las soluciones, se pueden expandir los coeficientes <dfn class="style1">b<sub>n</sub></dfn> y <dfn class="style1">b<sub>n+1</sub></dfn> en series de Taylor, como funciones de "r" y "s":</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                 \begin{aligned} b_{n-1}(r+\Delta r, s+\Delta s)&amp;=b_{n-1}(r,s)+\dfrac{\partial}{\partial r}(b_{n-1}(r,s))\Delta r+\dfrac{\partial}{\partial s}(b_{n-1}(r,s))\Delta s+\cdots+\infty = 0\\[4mm]                 b_{n}(r+\Delta r, s+\Delta s)&amp;=b_{n}(r,s)+\dfrac{\partial}{\partial r}(b_{n}(r,s))\Delta r+\dfrac{\partial}{\partial s}(b_{n}(r,s))\Delta s+\cdots+\infty = 0 \end{aligned}                 \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Donde Δr y Δs son los valores que se deben sumar a “r” y “s” para que tanto “b<sub>n</sub>” como “b<sub>n+1</sub>” sean cero. Por supuesto, no es posible resolver este sistema, que es más complejo aún que el problema original, por lo que se simplifica tomando sólo los términos de primer orden:</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                \begin{aligned}                b_{n-1}+\dfrac{\partial b_{n-1}}{\partial r}\Delta r+\dfrac {\partial b_{n-1}}{\partial s}\Delta s = 0\\[4mm]                b_{n}+\dfrac{\partial b_{n}}{\partial r}\Delta r+\dfrac{\partial b_{n}}{\partial s}\Delta s = 0                \end{aligned}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Las derivadas parciales son, como ya se vio, los coeficientes de la segunda división sintética. Reemplazando dichos coeficientes, se tiene:</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                \begin{aligned}                c_{n-2}\Delta r+c_{n-3}\Delta s &amp;= -b_{n-1}\\[2mm]                c_{n-1}\Delta r+c_{n-2}\Delta s &amp;= -b_{n}                \end{aligned}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">Que es un sistema de dos ecuaciones lineales con dos incógnitas (Δr y Δs), cuyos valores pueden ser calculados aplicando la regla de Cramer:</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                \begin{aligned}                \Delta r &amp;= \dfrac{b_nc_{n-3}-b_{n-1}c_{n-2}}{c_{n-2}^2-c_{n-1}c_{n-3}}\\[5mm]                \Delta s &amp;= \dfrac{-b_{n}-c_{n-1}\Delta r}{c_{n-2}}                \end{aligned}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Sin embargo, como el sistema ha sido simplificado (tomando sólo los términos de primer orden) al sumar estos valores a <dfn class="style1">r</dfn> y <dfn class="style1">s</dfn> no se consigue que <dfn class="style1">b<sub>n-1</sub></dfn> y <dfn class="style1">b<sub>n</sub></dfn> sean cero, pero sí que se aproximen a cero.</p>
+
+    <p class="text">En consecuencia el proceso de cálculo es iterativo: a) Se asumen valores iniciales de prueba para "r" y "s"; b) Con los valores de prueba se lleva a cabo la división sintética; c) Si "b<sub>n-1</sub>" y "b<sub>n-2</sub>" son cercanos a cero, el proceso concluye, caso contrario se continúa con el paso (d); d) Se calculan los valores de Δr y Δs; e) Se calculan nuevos valores de "r" y "s" (r=r+Δr, s=s+Δs); f) Si los nuevos valores de "r" y "s" son iguales a los anteriores, en un determinado número de dígitos, el proceso concluye, caso contrario se repite el proceso desde el paso (b), empleando los nuevos valores de "r" y "s" calculados.</p>
+
+
+
+    <h3 class="text">Algoritmo</h3>
+
+    <p class="text">El algoritmo del método, donde se optimiza el proceso de división sintética, pues sólo se requieren los dos últimos elementos de la primera división (b<sub>n</sub> y b<sub>n-1</sub>) y los tres últimos de la segunda (las derivadas parciales), es:</p>
+
+    <p class="figurasn"><img src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo5/files/bairstow.png" alt="Algoritmo método de Bairstow"></p>
+
+    <p class="text">El código respectivo, implementado con los operadores genéricos, de manera que sea posible trabajar con números complejos, ha sido añadido a la clase <dfn>Array</dfn>, por lo que debe ser llamado desde un array cuyos elementos sean los coeficiente del polinomio. Así, para obtener las cuatro soluciones del polinomio:</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[ p_4(x) = x^4 -1.1 x^3+2.3x^2+0.5x+3.3 = 0 \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Se crea el vector con los coeficientes:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var a = [1, -1.1, 2.3, 0.5, 3.3];</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Entonces se asumen dos valores iniciales (un par conjugado) y se llama al método:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var xi = Complex(0.1, 0.1); xf = xi.conj();<br>a.bairstow({xi, xf, err:10}).precision(10)</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="text">Se procede igual para encontrar la segunda solución:</p>
+    
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var xi = Complex(1,1), xf = xi.conj();<br>a.bairstow({xi, xf, err:10}).precision(10)</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="text">En el caso de Bairstow, no siempre se requieren valores complejos para encontrar las soluciones complejas. Así, las dos primeras soluciones pueden ser obtenidas, con:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">a.bairstow({xi:1, xf:2, err:10}).precision(10)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Al igual que ocurre con Newton, no siempre se obtienen las soluciones con los valores asumidos, por lo que se deben ir probando valores, hasta obtener las soluciones buscadas. Si se cuenta con valores iniciales, que se sabe son cercanos a las soluciones, se deben emplear dichos valores..</p>
+
+    <div class="ejercicio" id="ejercicio9" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Encuentre las soluciones del siguiente polinomio:\[x^5-12x^4+72x^3-222x^2+311x-150 = 0\]Con ese fin:</p></div><p class="pregunta"><span class="pregunta"></span>Guarde en "a" el vector de coeficientes.</p><div id="pregunta103" class="calculadora" spellcheck="false"><div class="instruccion">var a = [1,-12,72,-222,311,-150]</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Programe la función "f" (como una función flecha) que reciba "x" y devuelva (mediante división sintética) el valor del polinomio.</p><div id="pregunta104" class="calculadora" spellcheck="false"><div class="instruccion">var f = x =&gt; a.divsin1(x).pop();</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Dibuje la gráfica del polinomio y cambie los límites cuantas veces se requiera, hasta que las soluciones reales puedan ser visualizadas claramente.</p><div id="pregunta105" class="calculadora" spellcheck="false"><div class="instruccion">plot({f,xi:1,xf:10})</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con el primer valor aproximado de la gráfica, encuentre la primera solución real con "newtonp" (precisión/exactitud por defecto), mostrando la solución con 9 dígitos de precisión.</p><div id="pregunta106" class="calculadora" spellcheck="false"><div class="instruccion">a.newtonp({xi:1}).precision(9)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con los valores aproximados restantes de la gráfica, encuentre las soluciones reales restantes con "bairstow" (precisión/exactitud por defecto), mostrando la solución con 9 dígitos de precisión.</p><div id="pregunta107" class="calculadora" spellcheck="false"><div class="instruccion">a.bairstow({xi:-10,xf:20}).precision(9)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Asuma y guarde, en las variables "xi" y "xf" (cuantas veces sea necesario) valores iniciales (un par conjugado) y emplee los mismos en el método de Bairstow, hasta encontrar (precisión/exactitud por defecto) las soluciones complejas (los resultados deben ser mostrados con 9 dígitos de precisión).</p><div id="pregunta108" class="calculadora" spellcheck="false"><div class="instruccion">var xi = Complex(4,8);<br>var xf = xi.conj();</div><div class="resultado"></div><div class="instruccion">a.bairstow({xi,xf}).precision(9)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="24" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 9 -->
+
+    <div class="ejercicio" id="ejercicio10" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Encuentre las soluciones del siguiente polinomio:\[x^4-12.5x^3+74.3x^2-221.13x+233.024 = 0\]Con ese fin:</p></div><p class="pregunta"><span class="pregunta"></span>Guarde en "a" el vector de coeficientes.</p><div id="pregunta121" class="calculadora" spellcheck="false"><div class="instruccion">var a = [1,-12.5,74.3,-221.13,233.024]</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Programe la función "f" (como una función flecha) que reciba "x" y devuelva (mediante división sintética) el valor del polinomio.</p><div id="pregunta122" class="calculadora" spellcheck="false"><div class="instruccion">var f = x =&gt; a.divsin1(x).pop();</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Dibuje la gráfica del polinomio y cambie los límites cuantas veces se requiera, hasta que las soluciones reales puedan ser visualizadas claramente.</p><div id="pregunta123" class="calculadora" spellcheck="false"><div class="instruccion">plot({f,xi:1,xf:2})</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con los valores aproximados de la gráfica, encuentre las soluciones reales con "bairstow", precisión/exactitud de 12 dígitos, mostrando los resultados redondeados al cuarto dígito después del punto.</p><div id="pregunta124" class="calculadora" spellcheck="false"><div class="instruccion">a.bairstow({xi:-10,xf:4,err:12}).round(4)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Asuma y guarde, en las variables "xi" y "xf" (cuantas veces sea necesario) valores iniciales (un par conjugado) y emplee los mismos en el método de Bairstow, hasta encontrar (precisión/exactitud de 12 dígitos) las soluciones complejas (mostrando los resultados redondeados al cuarto dígito después del punto).</p><div id="pregunta125" class="calculadora" spellcheck="false"><div class="instruccion">var xi = Complex(2,4);<br>var xf = xi.conj();</div><div class="resultado"></div><div class="instruccion">a.bairstow({xi,xf,err:12}).round(4)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="20" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 10 -->
+
+    <div class="ejercicio" id="ejercicio11" enunciado="1"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Encuentre las soluciones del siguiente polinomio:\[x^5+x^4-6.58x^3-6.616x^2+7.5177x+5.41926 = 0\]Con ese fin:</p></div><p class="pregunta"><span class="pregunta"></span>Guarde en "a" el vector de coeficientes.</p><div id="pregunta141" class="calculadora" spellcheck="false"><div class="instruccion">var a = [1,1,-6.58,-6.616,7.5177,5.41926]</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Programe la función "f" (como una función flecha) que reciba "x" y devuelva (mediante división sintética) el valor del polinomio.</p><div id="pregunta142" class="calculadora" spellcheck="false"><div class="instruccion">var f = x =&gt; a.divsin1(x).pop();</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Dibuje la gráfica del polinomio y cambie los límites cuantas veces se requiera, hasta que las soluciones reales puedan ser visualizadas claramente.</p><div id="pregunta143" class="calculadora" spellcheck="false"><div class="instruccion">plot({f,xi:1,xf:2})</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con el primer valor aproximado de la gráfica, encuentre la primera solución real con "newtonp" (precisión/exactitud de 14 dígitos), mostrando la solución redondeada al tercer dígito después del punto.</p><div id="pregunta144" class="calculadora" spellcheck="false"><div class="instruccion">a.newtonp({xi:-4,err:14}).round(3)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con los valores aproximados restantes de la gráfica, encuentre las soluciones reales restantes con "bairstow" (precisión/exactitud de 14 dígitos), mostrando las soluciones redondeadas al tercer dígito después del punto.</p><div id="pregunta145" class="calculadora" spellcheck="false"><div class="instruccion">a.bairstow({xi:-2,xf:0.2,err:14}).round(3)</div><div class="resultado"></div><div class="instruccion">a.bairstow({xi:1,xf:3,err:14}).round(3)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="20" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 11 -->
+
+
+
+    <h2 class="text">Método QD (Quotient Divisor)</h2>
+
+    
+    <p class="text">Como ya se ha visto, tanto el método de Newton, como el de Bairstow, requieren valores iniciales para comenzar el proceso. El método “QD” tiene la ventaja de no requerir dichos valores, sin embargo, tiene la desventaja de requerir un elevado número de iteraciones.</p>
+
+    <p class="text">Por esta razón, el método QD, se emplea para encontrar valores iniciales adecuados para los métodos de Newton y/o Bairstow.</p>
+
+    <p class="text">Para una ecuación de grado <i>n</i>, el método comienza calculando los vectores <i>p</i> y <i>d</i>, con las siguientes expresiones:</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                \begin{aligned}                p_0 &amp;= -\dfrac{a_1}{a_0}\\                p_i &amp;= ~~0\hspace{0.4cm}                \begin{cases}                i = 1 \rightarrow n-1                \end{cases}                \end{aligned}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                d_i = \dfrac{a_{i+2}}{a_{i+1}}\hspace{0.4cm}                \begin{cases}                i = 0 \rightarrow n-2                \end{cases}                                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+
+    <p class="text">Luego, con estos valores, se calculan los vectores <i>q</i> y <i>e</i> con las siguientes expresiones:</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                \begin{aligned}                q_0 &amp;= d_0+p_0\\                q_i &amp;= d_i-d_{i-1}+p_i\hspace{0.2cm}                \begin{cases}                i = 1 \rightarrow n-2                \end{cases}\\                q_{n-1} &amp;= p_{n-1}-d_{n-2}                \end{aligned}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                e_i = \dfrac{q_{i+1}}{q_{i}} d_{i}\hspace{0.4cm}                \begin{cases}                i = 0 \rightarrow n-2                \end{cases}                                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Si los elementos de <i class="style1">e</i> son cercanos a cero, el proceso concluye, caso contrario el cálculo se repite pero haciendo que <dfn class="style1">p=q</dfn> y <dfn class="style1">d=e</dfn>.</p>
+
+    <p class="text">Cuando el proceso concluye (cuando los valores de <i class="style1">e</i> son cercanos a cero) las soluciones aproximadas se encuentran en el vector <i class="style1">q</i> (que tiene tantos elementos como soluciones el polinomio).</p>
+
+    <p class="text">Si el polinomio tiene soluciones complejas, entonces algunos de los elementos de <i class="style1">e</i> no convergen hacia cero. En ese caso, si <dfn class="style1">i</dfn> es el índice de uno de los elementos que no converge hacia cero, las soluciones se encuentran resolviendo la ecuación cuadrática:</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                x^2-rx-s = 0                                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">Donde los coeficientes <i class="style1">r</i> y <i class="style1">s</i> se calculan con:</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                \begin{aligned}                r &amp;= q_i+q_{i+1}\\[1mm]                s &amp;= -p_i+q_{i+1}                \end{aligned}                                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+
+
+    <h3 class="text">Algoritmo</h3>
+
+
+    <p class="text">El proceso que se sigue en el método QD, es en realidad bastante sencillo, sin embargo, en su automatización se deben tomar en cuenta algunos aspectos.</p>
+
+    <p class="text">En primer lugar se deben evitar las divisiones entre cero. Algunas situaciones en las cuales se presentan dichas divisiones son: a) Uno de los coeficientes es cero; b) Tres o más coeficientes consecutivos son iguales y el grado del polinomio es menor a 5; c) Tres o más coeficientes están igualmente espaciados y d) El espaciamiento de dos coeficientes es el cuadrado de los dos coeficientes anteriores.</p>
+
+    <p class="text">En segundo lugar, la convergencia hacia cero depende de si las soluciones son reales o complejas, además las últimas raíces convergen más rápidamente que las primeras, por lo que deben tomarse en cuenta estos factores, para determinar si el proceso concluye o no.</p>
+
+    <p class="text">Para resolver el primer problema se realiza un cambio de variables. Por comodidad, el cambio de variable más utilizado es y=x-1. Por supuesto, antes de devolver los resultados se debe hacer la operación opuesta.</p>
+
+    <p class="text">El algoritmo general, donde se toman en cuenta los aspectos antes mencionados, es el siguiente:</p>
+
+    <p class="figurasn"><img src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo5/files/qd.png" alt="Algoritmo del método QD"></p>
+
+    <p class="text">El código respectivo ha sido añadido, con el nombre <dfn class="style1">bairstow</dfn>, como un método de la clase <i>array</i>, por lo que, al igual que los anteriores métodos, debe ser llamado desde un array cuyos elementos sean los coeficientes del polinomio. Por ejemplo, para encontrar las soluciones aproximadas de los siguientes polinomios:</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                P_4(x) = 128x^4-256x^3+160x^2-32x+1 = 0                                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                P_4(x) = x^4-6x^3+12x^2-19x+12 = 0                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">Mostrando los resultados con 5 dígitos de precisión, se escribe:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">[128, -256, 160, -32, 1].qd().precision(5)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">[1, -6, 12, -19, 12].qd().precision(5)</div>
+        <div class="resultado"></div>
+    </div>
+
+
+    <br>
+    <div class="ejercicio" id="ejercicio12" enunciado="1"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Encuentre las soluciones del siguiente polinomio:\[x^5-17x^4+139x^3-601x^2+1258x-984 = 0\]Con ese fin:</p></div><p class="pregunta"><span class="pregunta"></span>Guarde en "a" el vector de coeficientes.</p><div id="pregunta155" class="calculadora" spellcheck="false"><div class="instruccion">var a = [1,-17,139,-601,1258,-984]</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Encuentre las soluciones aproximadas (guardándolas en "x") con el método QD (precisión/exactitud por defecto) mostrando los resultados con 9 dígitos de precisión</p><div id="pregunta156" class="calculadora" spellcheck="false"><div class="instruccion">var x = a.qd().precision(9); x</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con las soluciones aproximadas, encuentre con Bairstow (precisión/exactitud: 11 dígitos) las cuatro primeras soluciones,  redondeando los resultados al quinto dígito después del punto</p><div id="pregunta157" class="calculadora" spellcheck="false"><div class="instruccion">a.bairstow({xi:x[0],xf:x[1],err:11}).round(5)</div><div class="resultado"></div><div class="instruccion">a.bairstow({xi:x[2],xf:x[3],err:11}).round(5)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con Newton (precisión/exactitud: 11 dígitos) encuentre la última solución, redondeando el resultado al quinto dígito después del punto.</p><div id="pregunta158" class="calculadora" spellcheck="false"><div class="instruccion">a.newtonp({xi:x[4],err:11}).round(5)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="12" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 12 -->
+
+    <div class="ejercicio" id="ejercicio13" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Encuentre las soluciones del siguiente polinomio:\[x^4-12.5x^3+74.3x^2-221.13x+233.024 = 0\]Con ese fin:</p></div><p class="pregunta"><span class="pregunta"></span>Guarde en "a" el vector de coeficientes.</p><div id="pregunta163" class="calculadora" spellcheck="false"><div class="instruccion">var a = [1,-12.5,74.3,-221.13,233.024];</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Encuentre las soluciones aproximadas (guardándolas en "x") con el método QD (precisión/exactitud de 7 dígitos) mostrando los resultados con 7 dígitos de precisión</p><div id="pregunta164" class="calculadora" spellcheck="false"><div class="instruccion">var x = a.qd({err:7}).precision(7); x</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con las soluciones aproximadas, encuentre con Newton (precisión/exactitud por defecto) las cuatro soluciones, mostrando los resultados con una precisión de 9 dígitos.</p><div id="pregunta165" class="calculadora" spellcheck="false"><div class="instruccion">a.newtonp({xi:x[0]}).precision(9)</div><div class="resultado"></div><div class="instruccion">ans.conj()</div><div class="resultado"></div><div class="instruccion">a.newtonp({xi:x[2]}).precision(9)</div><div class="resultado"></div><div class="instruccion">a.newtonp({xi:x[3]}).precision(9)</div><div class="resultado"></div><div class="instruccion">// el par conjugado<br>// de la primera solucion<br>// real <br>// complejo</div><div class="resultado"></div></div><p class="pregunta" id="pregunta166"><span class="pregunta"></span>La segunda solución no se calcula con el método de Newton, porque es <span class="campo_arrastrar correcta" tabindex="0" data-opciones="el par conjugado&amp;@%el negativo&amp;@%el complemento" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">el par conjugado</span> de <span class="campo_arrastrar correcta" tabindex="0" data-opciones="la tercera solución&amp;@%la primera solución&amp;@%el valor de x[1]&amp;@%la cuarta solución" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">la primera solución</span> <br>Si "x" es el array con los resultados de QD, para un polinomio de quinto grado y x[1] es el primer valor complejo, x[0] es un valor <span class="campo_arrastrar correcta" tabindex="0" data-opciones="real&amp;@%válido&amp;@%complejo&amp;@%entero" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">real</span> y x[2] es un valor <span class="campo_arrastrar correcta" tabindex="0" data-opciones="real&amp;@%complejo&amp;@%váldio&amp;@%entero" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">complejo</span>.</p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="15" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 13 -->
+
+    <div class="ejercicio" id="ejercicio14" enunciado="1"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Encuentre las soluciones del siguiente polinomio:\[x^5-0.5x^4-10.39x^3-0.211x^2+17.0742x+4.8672 = 0\]Con ese fin:</p></div><p class="pregunta"><span class="pregunta"></span>Guarde en "a" el vector de coeficientes.</p><div id="pregunta179" class="calculadora" spellcheck="false"><div class="instruccion">var a = [1,-0.5,-10.39,-0.211,17.0742,4.8672]</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Encuentre las soluciones aproximadas (guardándolas en "x") con el método QD (precisión/exactitud 6 dígitos) mostrando los resultados con 6 dígitos de precisión</p><div id="pregunta180" class="calculadora" spellcheck="false"><div class="instruccion">var x = a.qd({err:6}).precision(6); x</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con Newton (precisión/exactitud: 10 dígitos) encuentre la primera solución, mostrando los resultados con 6 dígitos de precisión.</p><div id="pregunta181" class="calculadora" spellcheck="false"><div class="instruccion">a.newtonp({xi:x[0],err:10}).precision(6)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con las soluciones aproximadas, encuentre las soluciones restantes con Bairstow (precisión/exactitud: 10 dígitos) mostrando los resultados con 6 dígitos de precisión</p><div id="pregunta182" class="calculadora" spellcheck="false"><div class="instruccion">a.bairstow({xi:x[1],xf:x[2],err:10}).precision(6)</div><div class="resultado"></div><div class="instruccion">a.bairstow({xi:x[3],xf:x[4],err:10}).precision(6)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="13" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 14 -->
+
+    
+
+    <h2 class="text">Método Unificado - el método "roots"</h2>
+
+
+    <p class="text">Empleando los diferentes métodos estudiados, se puede elaborar un método general para resolver ecuaciones polinomiales.</p>
+
+    <p class="text">Dicho método se denominará <strong class="style1">roots</strong> y en el mismo, se llama a “cuad” cuando la ecuación es de segundo grado, a “cub” cuando es de tercero y a “newtonp”, con valores iniciales obtenidos con “qd”, en cualquier otro caso (esto porque el método de Newton es más estable que el de Bairstow):</p>
+
+    <p class="figurasn"><img src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo5/files/roots.png" alt="Algoritmo del método unificado para resolver ecuaciones polinomiales"></p>
+
+    <p class="text">El código respectivo ha sido añadido, con el nombre <strong class="style1">roots</strong>, como un método de la clase <dfn>Array</dfn> y, al igual que en los casos anteriores, debe ser llamado desde un array cuyos elementos sean los coeficientes del polinomio. Por ejemplo, para encontrar las soluciones de las siguientes ecuaciones con un error permitido de 10 dígitos:</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                P_4(x) = 128x^4-256x^3+160x^2-32x+1 = 0                                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                P_4(x) = x^4-6x^3+12x^2-19x+12 = 0                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Mostrando los resultados con la precisión del cálculo, se escriben:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">[128, -256, 160, -32, 1].roots(10).precision(10)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">[1, -6, 12, -19, 12].roots(10).precision(10)</div>
+        <div class="resultado"></div>
+    </div>
+
+
+
+    <h2 class="text">Raíces de un polinomio en Octave</h2>
+
+    <p class="text">En Octave se emplea la función <dfn class="style1">roots</dfn>, que es similar al método <dfn class="style1">roots</dfn> de JavaScript, sólo que es una función, no un método.</p>
+    
+    <p class="text">Así, para resolver las ecuaciones polinomiales:</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                P_4(x) = 128x^4-256x^3+160x^2-32x+1 = 0                                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                P_4(x) = x^4-6x^3+12x^2-19x+12 = 0                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Se escribe:</p>
+
+    <div class="codigo octave">format longG;<br><br>        roots([128, -256, 160, -32, 1])<br>        roots([1, -6, 12, -19, 12])<br><br><br>% Resultados obtenidos<br><br>ans =<br><br>      0.9619397662556424<br>      0.6913417161825449<br>      0.3086582838174551<br>     0.03806023374435661<br><br>ans =<br><br>       3.999999999999995 +                      0i<br>      0.5000000000000017 +      1.658312395177699i<br>      0.5000000000000017 -      1.658312395177699i<br>       1.000000000000001 +                      0i</div>
+    <br>
+
+
+
+    <h2 class="text">Raíces de un polinomio en Python</h2>
+
+    <p class="text">En Python se emplea, igualmente, la función <dfn class="style1">roots</dfn> de la librería NumPy, de manera similar a Octave (y MatLab).</p>
+    
+    <p class="text">Así, para resolver las ecuaciones polinomiales:</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                P_4(x) = 128x^4-256x^3+160x^2-32x+1 = 0                                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                P_4(x) = x^4-6x^3+12x^2-19x+12 = 0                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Se escribe:</p>
+
+    <div class="codigo python">import numpy as np<br><br>print(np.roots([128, -256, 160, -32, 1]))<br>print(np.roots([1, -6, 12, -19, 12]))<br><br># Resultados obtenidos:<br><br>[0.96193977 0.69134172 0.30865828 0.03806023]<br>[4. +0.j        0.5+1.6583124j 0.5-1.6583124j 1. +0.j       ]</div>
+    <br>
+
+
+
+    <h2 class="text">Solución integral de problemas</h2>
+
+    <p class="text">Los métodos estudiados hasta ahora, así como los métodos que se estudiarán posteriormente, son empleados en conjunto para resolver problemas prácticos más complejos.</p>
+    
+    <p class="text">Por ejemplo, para encontrar el valor de "z" de la siguiente ecuación no lineal:</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                \begin{gathered}                f(z) = x_0z^{3.1}-y_1z^{0.2}+y_0z^{0.75}-370.1 = 0\\[5mm]                x^5-9.5x^4+47x^3-137x^2+226x-227.5 = 0\\[1mm]                y^4-7.4y^3+23.16y^2-41.414y+33.9171 = 0                \end{gathered}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Donde x<sub>0</sub> es la solución real de la ecuación de quinto grado y y<sub>0</sub> y y<sub>1</sub> son las dos soluciones reales de la ecuación de cuarto grado. Es necesario resolver previamente las ecuaciones polinomiales, obtener las soluciones reales y con esas soluciones se programa la ecuación no lineal, para resolverla luego con uno de los métodos disponibles (por ejemplo el de Newton).</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var raicesx = [1, -9.5, 47, -137, 226, -227.5].roots().precision(6);<br>var x = raicesx.filter(e=&gt;e.i===undefined);<br>print(x);<br>var raicesy = [1, -7.4, 23.16, -41.414, 33.9171].roots().precision(6);<br>var y = raicesy.filter(e=&gt;e.i===undefined);<br>print(y);<br>var f = z =&gt; x[0]*z**3.1-y[1]*z**0.2+y[0]*z**0.75-370.1;<br>f.newton({xi:1.1}).round(4)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Donde los vectores con las soluciones reales han sido obtenidos con el método <dfn c="" ass="style1">filter</dfn>, filtrando los elementos que no tienen parte imaginaria (sus valores se muestran, con print, únicamente para tener una idea de su magnitud, pero no es necesario conocerlos para resolver el problema). Finalmente, la ecuación no lineal se programa y resuelve con el método de Newton (valor inicial 1.1, error/precisión por defecto).</p>
+
+    <p class="text">Las soluciones se redondean a 6 dígitos de precisión y el resultado a 4 dígitos después del punto, sólo para mostrarlos con la misma precisión que Octave (en el formato shortG).</p>
+
+    <p class="text">Si no se tiene un valor inicial adecuado (o el segmento de solución), se puede dibujar la gráfica de la ecuación. Así, dibujando la ecuación entre -10 y 10:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">plot({f, xi:-10, xf:10})</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Donde se puede ver que la solución está entre 4 y 5, sin embargo, para obtener valores más precisos, se puede volver a dibujar la función entre dos valores más próximos a la solución, por ejemplo entre 1 y 7:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">plot({f, xi:1, xf:7})</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Entonces con el valor aproximado obtenido de la gráfica (4.489) o el segmento de solución (4 y 5), se puede encontrar la solución, por ejemplo con el método de Regula Falsi:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">f.refa({xi:4, xf:5}).round(4)</div>
+        <div class="resultado"></div>
+    </div>
+    
+
+    <div class="ejercicio" id="ejercicio15" enunciado="1"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Para resolver la siguiente ecuación (encontrar el valor de la variable "x"), donde r<sub>0</sub> a r<sub>3</sub>, son las soluciones de la ecuación polinomial:\[\begin{gathered}f(x) = r_3x^{2.1}+r_2x^{0.3}-r_1x-r_0 = 0\\[2mm]r^4-10.8r^3+38.97r^2-55.13r+26.4 = 0\end{gathered}\]</p></div><p class="pregunta"><span class="pregunta"></span>Resuelva la ecuación polinomial con "roots" (precisión/exactitud: 10 dígitos), redondeando los resultados al cuarto dígito después del punto.</p><div id="pregunta190" class="calculadora" spellcheck="false"><div class="instruccion">var r = [1,-10.8,38.97,-55.13,26.4].roots({err:10}).round(4);r</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Programe la ecuación no lineal (f(x)).</p><div id="pregunta191" class="calculadora" spellcheck="false"><div class="instruccion">var f=x=&gt; r[3]*x**2.1+r[2]*x**0.3-r[1]*x-r[0];</div><div class="resultado"></div><div class="instruccion"></div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Resuelva la ecuación no lineal con el método de la secante (valores iniciales 3.1 y 3.2, error por defecto), redondeando el resultado al séptimo dígito después del punto.</p><div id="pregunta192" class="calculadora" spellcheck="false"><div class="instruccion">f.secante({xi:3.1,xf:3.2}).round(7)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="12" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 15 -->
+    <div class="ejercicio" id="ejercicio16" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Para resolver la siguiente ecuación (encontrar dos de las soluciones: dos valores de "z"), siendo x<sub>0</sub> a x<sub>3</sub>, las soluciones de la ecuación polinomial de cuarto grado:\[\begin{gathered}f(z) = \text{e}^{x_0z+x_1}-x_2z^{2.45}+x_3z-3.9= 0\\[2mm]x^4+3.69x^3-63.2149x^2-78.6403x+200.261 = 0\end{gathered}\]</p></div><p class="pregunta"><span class="pregunta"></span>Resuelva la ecuación de cuarto grado con "roots" (precisión/exactitud por defecto, mostrando los resultados con nueve dígitos de precisión).</p><div id="pregunta196" class="calculadora" spellcheck="false"><div class="instruccion">var x=[1,3.69,-63.2149,-78.6403,200.261].roots().precision(9);x</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Programe la ecuación no lineal "f":</p><div id="pregunta197" class="calculadora" spellcheck="false"><div class="instruccion">var f=z=&gt;Math.exp(x[0]*z+x[1])-x[2]*z**2.45+x[3]*z-3.9;</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Encuentre los segmentos de solución dibujando la función, cuantas veces se requiera, hasta que las soluciones sean claramente visibles.</p><div id="pregunta198" class="calculadora" spellcheck="false"><div class="instruccion">plot({f:[f],xi:0.8,xf:1.6})</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con los segmentos de solución leídos de la gráfica, encuentre las dos soluciones de la ecuación con el método de Regula-Falsi, con 10 dígitos de precisión/exactitud, mostrando los resultados con esa precisión.</p><div id="pregunta199" class="calculadora" spellcheck="false"><div class="instruccion">f.refa({xi:0.4,xf:0.8,err:10}).precision(10)</div><div class="resultado"></div><div class="instruccion">f.refa({xi:1,xf:1.4,err:10}).precision(10)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="16" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 16 -->
+    <div class="ejercicio" id="ejercicio17" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Para encontrar las soluciones de la siguiente ecuación de tercer grado (encontrar los valores de "z"):\[\begin{gathered}f(z) = 10.8z^3+38.97z^2-55.13z-x = 0\\[2mm]f(x) = \dfrac{x^{2.1}-3.1x-10}{x^{0.7}-2x^2-7} = 0\end{gathered}\]</p></div><p class="pregunta"><span class="pregunta"></span>Programe la ecuación no lineal "f" (f(x)), como una función flecha.</p><div id="pregunta208" class="calculadora" spellcheck="false"><div class="instruccion">var f = x =&gt; (x**2.1-3.1*x-10)/(x**0.7-2*x**2-7);</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Encuentre el segmento de solución (xi, xf) con segmentoSol (se sabe que la solución es positiva)</p><div id="pregunta209" class="calculadora" spellcheck="false"><div class="instruccion">var [xi,xf] = f.segmentoSol({xi:0.1});[xi, xf]</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con el valor inicial del segmento de solución, resuelva la ecuación no lineal con el método de Newton Raphson, con una exactitud/precisión de 14 dígitos, mostrando el resultado con esa precisión;</p><div id="pregunta210" class="calculadora" spellcheck="false"><div class="instruccion">var x = f.newton({xi,err:14}).precision(14);x</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Resuelva la ecuación cúbica (f(z)) con roots, con una exactitud/precisión de 12 dígitos y mostrando el resultado con esa precisión.</p><div id="pregunta211" class="calculadora" spellcheck="false"><div class="instruccion">[10.8,38.97,-55.13,-x].roots({err:12}).precision(12)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="16" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 17 -->
+    <div class="ejercicio" id="ejercicio18" enunciado="2"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Para resolver la siguiente función (encontrar el valor de "z"):\[\begin{gathered}f(z) = x_3z^{y_0}-x_2z^{y_2}+x_4z^{y_3}-9.1536 = 0\\[2mm]x^6-15x^5+93.4x^4-309x^3+572.8384x^2-564.192x+230.6304 = 0\\[2mm]y^5-10y^4+38.75y^3-72.5y^2+65.25y-22.5 = 0\end{gathered}\]</p></div><p class="pregunta"><span class="pregunta"></span>Resuelva la ecuación de quinto grado con <dfn>roots</dfn>, con una precisión/exactitud de 10 dígitos y redondeando los resultados al segundo dígito después del punto</p><div id="pregunta230" class="calculadora" spellcheck="false"><div class="instruccion">var y = [1,-10,38.75,-72.5,65.25,-22.5].roots({err:10}).round(2);y</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Resuelva la ecuación de sexto grado con <dfn>roots</dfn>, con un error de 10 dígitos y redondeando los resultados al tercer dígito después del punto</p><div id="pregunta231" class="calculadora" spellcheck="false"><div class="instruccion">var x = [1,-15,93.4,-309,572.8384,-564.192,230.6304].roots({err:10}).round(3);x</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Programe la ecuación no lineal f(z):</p><div id="pregunta232" class="calculadora" spellcheck="false"><div class="instruccion">var f = z =&gt; x[3]*z**y[0]-x[2]*z**y[2]+x[4]*z**y[3]-9.1536;</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Encuentre los segmentos de solución dibujando la función, cuantas veces se requiera, hasta que las soluciones sean claramente visibles.</p><div id="pregunta233" class="calculadora" spellcheck="false"><div class="instruccion">plot({f:f,xi:0,xf:4})</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con el segmento de solución de la gráfica, encuentre la solución de la función "f(z)" con el método de Regula Falsi, con un error de 11 dígitos, pero redondeando el resultado al cuarto dígito después del punto.</p><div id="pregunta234" class="calculadora" spellcheck="false"><div class="instruccion">f.refa({xi:1.6,xf:2,err:11}).round(4)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="20" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 18 -->
+    <div class="ejercicio" id="ejercicio19" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Para resolver la siguiente ecuación de segundo grado (p(y)), es decir encontrar los valores de "y";\[\begin{gathered}P(y) = r_0y^2+r_1y+w= 0\\[2mm]f(w) = 5\ln(w)-3.2w^{2.1}+7.5 = 0\\[2mm]f(r) = r^2-r-6 = 0\end{gathered}\]</p></div><p class="pregunta"><span class="pregunta"></span>Resuelva la ecuación de segundo grado (f(r)) con "cuad"</p><div id="pregunta235" class="calculadora" spellcheck="false"><div class="instruccion">var r = [1,-1,-6].cuad(); r</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Programe la ecuación no lineal "f" (f(w)), como una función flecha.</p><div id="pregunta236" class="calculadora" spellcheck="false"><div class="instruccion">var f = w =&gt; 5*Math.log(w)-3.2*w**2.1+7.5;</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Encuentre el segmento de solución (xi, xf) con segmentoSol, redondeando los resultados al cuarto dígito después del punto (se sabe que la solución es positiva y mayor a 0.3)</p><div id="pregunta237" class="calculadora" spellcheck="false"><div class="instruccion">var [xi,xf] = f.segmentoSol({xi:0.3}).round(4); [xi,xf]</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con el segmento de solución calculado, resuelva la ecuación no lineal con el método de Regula Falsi (precisión/exactitud: 9 dígitos, mostrando el resultado con esa precisión),</p><div id="pregunta238" class="calculadora" spellcheck="false"><div class="instruccion">var w = f.refa({xi,xf,err:9}).precision(9); w</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Resuelva la ecuación segundo grado (P(y)) con "cuad", redondeando los resultados al décimo segundo dígito después del punto.</p><div id="pregunta239" class="calculadora" spellcheck="false"><div class="instruccion">[r[0],r[1],w].cuad().round(12)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="20" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 19 -->
+    <div class="ejercicio" id="ejercicio20" enunciado="1"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Para resolver la siguiente ecuación cúbica (p<sub>3</sub>(z)), es decir encontrar sus raíces o soluciones:\[\begin{gathered}P_3(z) = z^3+y_1y_2z^2-y_3y_4z+y_0 = 0\\[2mm]P_5(y) = y^5+2y^4-3y^3+y^2-2y+x = 0\\[2mm]f(x) = x^{2.2}-5.1x^{1.1}-8x+35\end{gathered}\]</p></div><p class="pregunta"><span class="pregunta"></span>Programe la ecuación no lineal "f(x)":</p><div id="pregunta255" class="calculadora" spellcheck="false"><div class="instruccion">var f = x =&gt; x**2.2-5.1*x**1.1-8*x+35;</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Encuentre la primera solución dibujando la función, cuantas veces se requiera, hasta que la solución sea claramente visible.</p><div id="pregunta256" class="calculadora" spellcheck="false"><div class="instruccion">plot({f:[f],xi:4,xf:6})</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con el segmento de solución leído de la gráfica, encuentre la primera solución con el método de la secante (precisión/exactitud: 13 dígitos, redondeado al cuarto dígito después del punto).</p><div id="pregunta257" class="calculadora" spellcheck="false"><div class="instruccion">var x = f.secante({xi:3.2,xf:4.3,err:13}).round(4);x</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Resuelva la ecuación de quinto grado con "roots" (precisión/exactitud: 11 dígitos, redondeado al cuarto dígito después del punto).</p><div id="pregunta258" class="calculadora" spellcheck="false"><div class="instruccion">var y = [1,2,-3,1,-2,x].roots({err:11}).round(4);y</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Resuelva la ecuación de tercer grado con "cub", redondeando los resultados al segundo dígito después del punto. Debe tomar en cuenta que algunos coeficientes son complejos, por lo que se requiere la función "mul".</p><div id="pregunta259" class="calculadora" spellcheck="false"><div class="instruccion">var z = [1,y[1].mul(y[2]),-y[3].mul(y[4]),y[0]].cub().round(2);z</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="25" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 20 -->
+
+
+
+    <p class="text">En <b class="style1">Octave</b>, siguiendo el mismo razonamiento, el problema se resuelve con las siguientes instrucciones:</p>
+
+    <div class="codigo octave">format shortG;<br><br>raicesx = roots([1, -9.5, 47, -137, 226, -227.5]);<br>x = raicesx(imag(raicesx)==0)<br>raicesy = roots([1, -7.4, 23.16, -41.414, 33.9171]);<br>y = raicesy(imag(raicesy)==0)<br>f = @(z)x(1)*z.^3.1-y(2)*z.^0.2+y(1)*z.^0.75-370.1;<br>fzero(f, 1.1);<br><br><br>% Resultados obtenidos:<br><br>x =   3.5<br>y =<br><br>          3.1          2.1<br><br>ans = 4.4712</div>
+
+    <p class="text">Donde, al igual que en JavaScript, los vectores reales (x, y) se muestran, únicamente para tener una idea de su magnitud. Las soluciones se obtienen con "roots" y se filtran con la función <strong class="style1">imag</strong> que devuelve la parte imaginaria de las soluciones y si esa parte es igual a 0, entonces se sabe que la solución es real.</p>
+
+    <p class="text">Note que en Octave (al igual que en MatLab) los elementos se recuperan escribiendo el índice entre paréntesis (no entre corchetes como en JavaScript y Python) y que el índice del primer elemento es 1 (no 0 como en JavaScript y Python).</p>
+
+    <p class="text">Observe también que, en la función, para calcular las potencias no se ha escrito directamente el operador <b class="style1">^</b>, sino que se ha escrito el operador precedido de un punto <b class="style1">.^</b>. Esto es necesario cuando se trabaja con matrices (como ocurre cuando se dibuja la gráfica de la función), porque entonces, si se emplea directamente el operador (^), Octave intenta elevar todo el vector (z) a la potencia, mientras que si se precede el operador con un punto (.^) eleva cada uno de los elementos del vector (y eso es lo que se quiere cuando se dibuja una función).</p>
+
+    <p class="text">Como en javaScript, si no se tiene un valor inicial o un segmento de solución adecuado, se puede dibujar la gráfica de la ecuación con la función <strong class="style1">plot</strong>, la cual (en su forma más básica) recibe dos vectores ("x" y "y") con los datos a dibujar. Esos vectores pueden ser generados con el operador <b class="style1">:</b>, por ejemplo, si se escribe <span class="codigotexto">1:0.1:10</span>, se genera un vector con elementos del 1 al 10, espaciados de 0.1 en 0.1.</p>
+
+    <p class="text">Así, para dibujar la gráfica de la ecuación entre 1 y 10, se escribe:</p>
+
+    <div class="codigo octave">vx = 1:0.1:7;<br>vy = f(vx);<br>plot(vx, vy);<br>grid on;</div>
+
+    <p class="text">Con lo que se obtiene la gráfica:</p>
+
+    <div class="img"><img src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo5/files/ejem2_octave.png" style="width: 540px;" alt="gráfica en Octave"></div>
+
+    <p class="text">Donde, al igual que en JavaScript, se puede ver que la solución está entre 4 y 5, con los cuales se puede encontrar la solución de la ecuación:</p>
+    
+    <div class="codigo octave">fzero(f, [4, 5])<br><br>% Resultado obtenido:<br>ans = 4.4712</div>
+<br>
+
+    <div class="ejercicio" id="ejercicio21" enunciado="0"><hr><div class="enunciado"><p class="ejercicio extern"><span class="ejercicio"></span>En la siguiente ecuación no lineal (f(x)), r<sub>0</sub> a r<sub>3</sub> son las soluciones de la ecuación polinomial de cuarto grado (P(r)):\[\begin{gathered}f(x) = r_3x^{2.1}+r_2x^{0.3}-r_1x-r_0 = 0\\[2mm]r^4-10.8r^3+38.97r^2-55.13r+26.4 = 0\end{gathered}\]</p></div><p class="pregunta"><span class="pregunta"></span>Complete el siguiente código Octave (formato longG), resuelva la ecuación polinomial con "roots", redondeando. Con los valores de "r" calculados, programe (como una función anónima) la ecuación no lineal (f) y encuentre su solución (valor inicial 3.1), redondeando el resultado al cuarto dígito después del punto. Luego ejecute el código en Octave, corrija los errores cometidos al completar el código y evalúe la celda. Copie los resultados en la subsiguiente (entre las tildes invertidas).</p><div id="pregunta265" class="calculadora" spellcheck="false"><div class="instruccion">`format longG;<br>raicesr=roots([1,-10.8,38.97,-55.13,26.4]);<br>r=raicesr(imag(raicesr)==0)<br>f=@(x) r(4)*x^2.1+r(3)*x^0.3-r(2)*x-r(1);<br>x=fzero(f,3.1);<br>f=round(x*1e4)/1e4;`;</div><div class="resultado"></div><div class="instruccion">`r =<br>       5.000000000000011<br>       3.199999999999983<br>       1.500000000000005<br>       1.099999999999999<br>f =  3.2849`;</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="15" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 21 -->
+    <div class="ejercicio" id="ejercicio22" enunciado="1"><hr><div class="enunciado"><p class="ejercicio extern"><span class="ejercicio"></span>En la siguiente ecuación no lineal (f(z)), x<sub>0</sub> a x<sub>3</sub>, las soluciones de la ecuación polinomial de cuarto grado:\[\begin{gathered}f(z) = \text{e}^{x_0z+x_1}-x_2z^{2.45}+x_3z-3.9= 0\\[2mm]x^4+3.69x^3-63.2149x^2-78.6403x+200.261 = 0\end{gathered}\]</p></div><p class="pregunta"><span class="pregunta"></span>Complete el siguiente código Octave (formato longG), resuelva la ecuación de cuarto grado con "roots" y programe la ecuación no lineal (f(z)) como una función anónima. Luego dibuje la gráfica de la ecuación de manera que se vean claramente las dos segmentos de solución (vectores de datos vx y vy). Finalmente, con los segmentos de solución de la gráfica, encuentre las soluciones numéricas redondeadas al noveno dígito después del punto. Una vez resuelto el problema, pegue (y evalúe) el código que resuelve el problema en la siguiente celda y en la celda subsiguiente, pegue los resultado obtenidos.</p><div id="pregunta268" class="calculadora" spellcheck="false"><div class="instruccion">`format longG;<br>raicesx = roots([1, 3.69, -63.2149, -78.6403, 200.261]);<br>x = raicesx(imag(raicesx)==0)<br>f = @(z) exp(x(1)*z+x(2))-x(3)*z.^2.45+x(4)*z-3.9;<br>vx = 0:0.01:2;<br>vy = f(vx);<br>plot(vx, vy);<br>grid on;<br>z1=fzero(f,[0.6,0.7]);<br>f1=round(z1*1e9)/1e9<br>z2=fzero(f,[1,1.1]);<br>f2=round(z2*1e9)/1e9`;</div><div class="resultado"></div><div class="instruccion">`x =<br>      -9.320000191949191<br>       6.750000661974699<br>      -2.429998491559998<br>       1.309998021534484<br>f1 = 0.636663753<br>f2 = 1.012561621`;</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="15" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 22 -->
+
+    <p class="text">En <b class="style1">Python</b>, siguiendo el mismo razonamiento que en JavaScript, el problema se resuelve con las siguientes instrucciones:</p>
+
+    <div class="codigo python">import numpy as np<br>from scipy.optimize import root_scalar<br><br>raicesx = np.roots([1, -9.5, 47, -137, 226, -227.5])<br>x = np.real(raicesx[np.isreal(raicesx)])<br>print(x)<br>raicesy = np.roots([1, -7.4, 23.16, -41.414, 33.9171])<br>y = np.real(raicesy[np.isreal(raicesy)])<br>print(y)<br>f = lambda z: x[0]*z**3.1-y[1]*z**0.2+y[0]*z**0.75-370.1<br>z = round(root_scalar(f, x0=1.1).root,4)<br>print(z)<br><br># Resultados obtenidos:<br><br>[3.5]<br>[3.1 2.1]<br>4.4712</div>
+
+    <p class="text">Al igual que con JavaScript y Octave, los vectores reales (x, y), se muestran únicamente para tener una idea de su magnitud. Las soluciones se obtienen con el método "roots" de la librería numpy (importada como "np") y las soluciones reales se filtran con el método "isreal", que devuelve True, si el número es real y False en caso contrario.</p>
+
+    <p class="text">De forma similar a JavaScript y Octave, cuando no se tiene un valor inicial adecuado se puede dibujar la gráfica de la ecuación. En Python, se puede dibujar la gráfica con la función <strong class="style1">pyplot</strong> de la librería <strong class="style1">matplotlib</strong>, importada en este caso como "plt". La función <strong class="style1">plot</strong> de esta librería es muy similar a la función <strong class="style1">plot</strong> de Octave:</p>
+
+    <div class="codigo python">import matplotlib.pyplot as plt<br><br>vx = np.arange(1,7.1,0.1)<br>vy = f(vx)<br>plt.plot(vx, vy)<br>plt.grid(True)<br>plt.show()</div>
+
+    <p class="tex">Los valores de x (vx) se generan con la función <strong class="style1">arange</strong> de la librería NumPy, que es muy similar al método <strong class="style1">range</strong> de JavaScript. Al ser una función NumPy, devuelve un array NumPy (no una lista Python), razón por la cual puede ser empleada directamente en la función elaborada (f), para calcular (en una sola instrucción) los valores de la función para todos los valores de "x" (vx).</p>
+
+    <div class="img"><img src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo5/files/ejem2_python.png" style="width: 540px" alt="gráfica en Octave"></div>
+
+    <p class="text">Con este segmento de solución, se obtiene el mismo resultado obtenido con el valor asumido (1.1):</p>
+
+    <div class="codigo python">z = round(root_scalar(f, x0=4, x1=5).root, 4)<br>print(z)<br><br># Resultado obtenido:<br><br>4.4712</div>
+<br>
+
+<div class="ejercicio" id="ejercicio23" enunciado="1"><hr><div class="enunciado"><p class="ejercicio extern"><span class="ejercicio"></span>En la siguiente ecuación no lineal (f(x)), r<sub>0</sub> a r<sub>3</sub> son las soluciones de la ecuación polinomial de cuarto grado (P(r)):\[\begin{gathered}f(x) = r_3x^{2.1}+r_2x^{0.3}-r_1x-r_0 = 0\\[2mm]r^4-10.8r^3+38.97r^2-55.13r+26.4 = 0\end{gathered}\]</p></div><p class="pregunta"><span class="pregunta"></span>Complete el siguiente código Python, resuelva la ecuación polinomial con "roots" de la librería NumPY (importada como "np"). Con los valores de "r" calculados, programe (como una función lambda) la ecuación no lineal (f) y encuentre su solución (valores iniciales 3.1 y 3.5) con root_scalar de la sublibrería "optimize" de "scipy", redondeando el resultado al séptimo dígito después del punto. Luego ejecute el código en Python, corrija los errores cometidos al completar el código y evalúe la celda. Copie los resultados en la subsiguiente (entre las tildes invertidas).</p><div id="pregunta270" class="calculadora" spellcheck="false"><div class="instruccion">`import numpy as np<br>from scipy.optimize import root_scalar<br>raicesr = np.roots([1, -10.8, 38.97, -55.13, 26.4])<br>r = np.real(raicesr[np.isreal(raicesr)])<br>f = lambda x: r[3]*x**2.1+r[2]*x**0.3-r[1]*x-r[0]<br>x = round(root_scalar(f, x0=3.1,x1=3.5).root,7)<br>print(x)`;</div><div class="resultado"></div><div class="instruccion">`3.2848733`;</div><div class="resultado"></div><div class="instruccion"></div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="15" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 21 -->
+<div class="ejercicio" id="ejercicio24" enunciado="1"><hr><div class="enunciado"><p class="ejercicio extern"><span class="ejercicio"></span>En la siguiente ecuación no lineal (f(z)), x<sub>0</sub> a x<sub>3</sub>, las soluciones de la ecuación polinomial de cuarto grado:\[\begin{gathered}f(z) = \text{e}^{x_0z+x_1}-x_2z^{2.45}+x_3z-3.9= 0\\[2mm]x^4+3.69x^3-63.2149x^2-78.6403x+200.261 = 0\end{gathered}\]</p></div><p class="pregunta"><span class="pregunta"></span>Complete el siguiente código Python, resuelva la ecuación de cuarto grado con "roots" de la librería NumPY (importada como "np") y programe la ecuación no lineal (f(z)) como una función lambda (nota: debido a que se trabaja con arrays NumPy, debe emlear np.exp para el cálculo del exponente). Luego dibuje la gráfica de la ecuación (librería pyplot de matplotlib importada como "plt") de manera que se vean claramente las dos segmentos de solución (vectores de datos vx y vy). Finalmente, con los segmentos de solución de la gráfica, encuentre las soluciones numéricas redondeadas al noveno dígito después del punto con root_scalar de la sublibrería "optimize" de "scipy". Luego ejecute el código en Python, corrija los errores cometidos al completar el código y evalúe la celda. Copie los resultados en la subsiguiente (entre las tildes invertidas).</p><div id="pregunta272" class="calculadora" spellcheck="false"><div class="instruccion">`import matplotlib.pyplot as plt<br>import numpy as np<br>from scipy.optimize import root_scalar<br>raicesx = np.roots([1, 3.69, -63.2149, -78.6403, 200.261])<br>x = np.real(raicesx[np.isreal(raicesx)])<br>f = lambda z: np.exp(x[0]*z+x[1]) - x[2]*z**2.45 + x[3]*z - 3.9<br>vx = np.arange(0, 2.01, 0.01)<br>vy = f(vx)<br>plt.plot(vx, vy)<br>plt.grid(True)<br>plt.show()<br>z1 = round(root_scalar(f, x0=0.6, x1=0.7).root, 9)<br>z2 = round(root_scalar(f, x0=1.0, x1=1.1).root, 9)<br>print(z1, z2)`;</div><div class="resultado"></div><div class="instruccion">`0.636663753 1.012561621`;</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="15" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 22 -->
+
+
+    <div id="generarPrueba" data-scroll-y="48065"><br><hr><label class="lnotacapitulo">Nota del capítulo: </label><input type="text" id="notaCapitulo" disabled="disabled" class="itnotacapitulo"><br><br><button id="btGenerarPrueba" style="visibility: visible;" onclick="capitulo.registrarCapitulo()">Iniciar defensa</button><button id="btEmplearBono" style="margin-left:1.1rem;width:9.686rem;display:none;" onclick="capitulo.emplearBono()">Emplear Bono</button><br><br></div>
+
+
+<d id="dAutor" style="font-size: 0.9rem;text-align:center;color: #0808f24f;font-weight:bolder;position:fixed;top: 5px;right: 5px;user-select:none;display:inline-block;z-index:15;">Hernan G. Peñaranda V.</d></div><!-- Cierre del div capítulo -->
+
+<div id="dato" style="display:none;">JK5KCZ0r934lCZ0oDYGrDoqpE3Km93StCZ0aCpWt93CuDoGnC30aC2HpQcDtKW00</div>
+<div id="reg" style="display:none;">CJ4mC3ipC30nEp4nC30xDp0mC30mC34mC3ivC30mC30mC30nEp8mCJ0xCJ4mC3inCJ0mEp4nC30xCJ4mC3ioC34mEp8mCJ0xCJ4mC3ioC34mEp8mCJ0xCJ4mC3inCJ4nEpCnCJ4xCJ4mC3ioC34mEp4nC3ioC34xCZ0nEp8mCG00</div>
+
+
+
+
+<div id="divDialogo" style="display: none;"><div onfocus="document.querySelector('#divDialogo input').focus();"><div>Carnet universitario</div><div>Escriba el número de su carnet universitario, verificando que el guión haya sido correctamente insertado.</div><input type="text" onkeydown="return Capitulo.divDialogo.funKeydown(event)" onkeyup="Capitulo.divDialogo.funKeyup(event)"><div><button onclick="Capitulo.divDialogo.funClick('aceptar');">Aceptar</button><button style="margin-left:35px;" onclick="Capitulo.divDialogo.funClick('cancelar');">Cancelar</button></div></div></div></body>

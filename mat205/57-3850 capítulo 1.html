@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<head>
+
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Language" content="es">
+    <meta name="title" content="Introducción a JavaScript">
+    <meta name="author" content="Hernan G. Peñaranda V.">
+    <meta name="description" content="Introducción al lenguaje JavaScript y la calculadora JavaScript">
+    <meta name="keywords" content="JavaScript,HTML,CSS">
+
+  <title>57-3850 capítulo 1</title>
+
+
+    <!-- Librería y hoja de estilos KATEX  -->
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/katex/katex.min.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/katex/katex.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/katex/contrib/auto-render.min.js"></script>
+
+    <!-- Librerías y hojas de estilo CodeMirror -->
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/lib/codemirror.min.css">
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/theme/mdn-like.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/lib/codemirror.min.js"></script>
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/fold/foldgutter.min.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/fold/foldcode.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/fold/brace-fold.min.js"></script>
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/dialog/dialog.min.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/dialog/dialog.min.js"></script>
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/hint/show-hint.min.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/hint/show-hint.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/hint/javascript-hint.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/search/searchcursor.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/search/search.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/edit/matchbrackets.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/edit/closebrackets.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/comment/comment.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/wrap/hardwrap.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/javascript/javascript.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/css/css.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/xml/xml.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/markdown/markdown.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/htmlmixed/htmlmixed.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/keymap/sublime.min.js"></script>
+
+    <!-- Librería Plotly -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script><style id="plotly.js-style-global"></style><style id="plotly.js-style-global"></style><style id="plotly.js-style-global"></style>
+
+    <!-- Librerías y hojas de estilo function-plot -->
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/function-plot/site/js/vendor/d3.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/function-plot/dist/function-plot.js"></script>
+
+    <!-- Librería quantities -->
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/quantities/quantities.min.js"></script>
+
+    <!-- Librería math.js -->
+    <!-- <script src="https://cursosabiertos.usfx.bo/materias/librerias/mathjs/math.js"></script> -->
+
+    <!-- Librería Mermaid.js para la creación de diagramas de flujo -->
+    <!-- <script src="https://cursosabiertos.usfx.bo/materias/librerias/mermaid/dist/mermaid.min.js"></script> -->
+
+    <!-- Librería GoJs para la creación de diagramas de flujo -->
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/gojs/release/go.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/flowchart_gojs.js"></script>
+
+    <!-- Librerías matemáticas propias -->
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/math.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/number.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/array.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/string.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/cplx.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/function.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/object.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/prq.js"></script>
+
+    <!-- Librería y hoja de estilos propias para la creación y manejo de la calculadora  -->
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/src/cjs.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/cjs.js"></script>
+
+    <!-- Librería y hoja de estilos propias para la creación y manejo de los capítulos -->
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/src/texto.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/texto.js"></script>
+
+    <!-- Librería del capítulo actual -->
+    <script src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo1/files/capitulo1.js"></script>
+
+    <!-- Fuentes empleadas en el capítulo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;600;700;800&amp;family=Roboto+Mono&amp;display=swap" rel="stylesheet">
+
+    <script>
+        function katexRender() {
+            renderMathInElement(document.getElementById("capitulo"));
+        }
+        document.addEventListener("DOMContentLoaded", katexRender);
+        window.onerror = function(msg, url, lineNo, columnNo, error) {
+            __error__ = msg;
+        };
+        window.onload = function(){
+            capitulo.iniciar();
+        };
+    </script>
+
+</head>
+
+<body class="text">  
+
+
+<div id="capitulo">
+
+    <button id="btGuardar" style="z-index:15;" onclick="savePage()">Guardar</button>
+
+        
+    <h1 class="text" onclick="alerta(capitulo.idPagina,'')" style="cursor: pointer;">Expresiones matemáticas</h1>
+
+    <p class="text">En la asignatura se resuelven problemas matemáticos empleando métodos numéricos. Los métodos numéricos se caracterizan porque permiten resolver problemas matemáticos complejos, con simples operaciones aritméticas (suma, resta, multiplicación y división), sin embargo, se requieren cientos, miles y hasta millones de operaciones aritméticas para encontrar un resultado, por lo que la aplicación práctica de los métodos numéricos, sólo es posible con la ayuda de computadoras y/o dispositivos programables (computadoras, tabletas, teléfonos inteligentes, calculadoras programables, etc.).</p>
+
+    <p class="text">Para resolver problemas matemáticos con la ayuda de los métodos numéricos, se debe programar la expresión matemática o modelo matemático del problema a resolver y la forma más eficiente y ordenada de hacerlo es mediante la elaboración de funciones, por esa razón, las funciones son elementos fundamentales en la aplicación de los métodos numéricos.</p>
+
+    <p class="text">Por esa razón, en este capítulo se hace un breve repaso de las expresiones matemáticas y las diferentes formas de programar funciones.</p>
+
+    <p class="text">En la asignatura, al igual que en la asignatura previa (MAT204), se emplea como principal lenguaje de programación Javascript y para escribir y emplear los programas, se emplea la calculadora Javascript.</p>
+
+    <p class="text">No obstante, en la asignatura se emplearán también otras herramientas y aplicaciones, principalmente: Octave, MatLab, Mathematica y Python.</p>
+
+    <div class="ejercicio" id="ejercicio1" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Seleccione el texto que complementa las expresiones.</p></div><p class="pregunta" id="pregunta1"><span class="pregunta"></span>Los métodos numéricos permiten resolver problemas <span class="campo_arrastrar correcta" tabindex="0" data-opciones="matemáticos complejos&amp;@%matemáticos simples&amp;@%racionales simples&amp;@%logarítmicos complejos&amp;@%aritméticos complejos" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">matemáticos complejos</span> con <span class="campo_arrastrar correcta" tabindex="0" data-opciones="multiplicaciones y divisiones&amp;@%complejas operaciones&amp;@%restas y sumas&amp;@%simples operaciones" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">simples operaciones</span> aritméticas.</p><p class="pregunta" id="pregunta2"><span class="pregunta"></span>Los métodos numéricos requieren, entre <span class="campo_arrastrar correcta" tabindex="0" data-opciones="cinco y veinte&amp;@%cientos y millones&amp;@%2.5 y 3 millones&amp;@%una decena y una centena" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">cientos y millones</span> de operaciones aritméticas, por lo que sólo son de utilidad práctica si se implementan <span class="campo_arrastrar correcta" tabindex="0" data-opciones="en un cuaderno&amp;@%en un editor de texto&amp;@%en un navegador&amp;@%en un dispositivo programable" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">en un dispositivo programable</span>.</p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="4" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div> <!-- Ejercicio 1 -->
+
+
+
+    <h2 class="text">Operadores y funciones matemáticas</h2>
+
+    <p class="text">Como se recordará, en Javascript, se pueden emplear los siguientes operadores aritméticos, para escribir expresiones matemáticas:</p>
+
+    <div class="table borderAll">
+        <table align="center" style="width:9.656rem">
+        <caption>Operadores Matemáticos</caption>
+        <tbody><tr><td class="center" style="width:2.0rem;"><b class="style1">+</b></td><td>Suma</td></tr>
+        <tr><td class="center"><b class="style1">-</b></td><td>Resta</td></tr>
+        <tr><td class="center"><b class="style1">*</b></td><td>Multiplicación</td></tr>
+        <tr><td class="center"><b class="style1">/</b></td><td>División</td></tr>
+        <tr><td class="center"><b class="style1">%</b></td><td>Residuo (módulo)</td></tr>
+        <tr><td class="center"><b class="style1">**</b></td><td>Potencia</td></tr>
+        </tbody></table>
+    </div>
+
+    <p class="text">Así, por ejemplo, para calcular el valor de la siguiente expresión:</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+        <td>
+            \[{2^{7.2}-7 \times 8.2} \over {4.5+ \dfrac{9.2}{5.6}}\]
+        </td>
+        <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Se escribe y evalúa (con Shift+Enter) la siguiente expresión en la calculadora:</p>
+    
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">(2**7.2-7*8.2)/(4.5+9.2/5.6)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <br>
+    <div class="ejercicio" id="ejercicio2" enunciado="5"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Calcule el valor de la siguiente expresión matemática:\[\dfrac{6-9.1+8 \times 9.2}{\dfrac{10}{2}+\dfrac{16}{4}}\]</p></div><p class="pregunta"><span class="pregunta"></span></p><div id="pregunta8" class="calculadora" spellcheck="false"><div class="instruccion">(6-9.1+8*9.2)/(10/2+16/4)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="3" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div> <!-- Ejercicio 2 -->
+
+    <div class="ejercicio" id="ejercicio3" enunciado="6"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Calcule el valor de la siguiente expresión matemática:\[\dfrac{\dfrac{21-9+4}{1.585^5-5+2}}{8+\dfrac{12+14}{14+2}+\dfrac{4^{1.793}-2}{18-4 \times 4}}\]</p><div id="pregunta18" class="calculadora" spellcheck="false"><div class="instruccion">(21-9+4)/(1.585**5-5+2)/(8+(12+14)/(14+2)+(4**1.793-2)/(18-4*4))</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="6" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div> <!-- Ejercicio 3 -->
+
+
+    <p class="text">Como también se recordará, las funciones matemáticas disponibles en el objeto <dfn class="style1">Math</dfn>, de JavaScript, son las siguientes:</p>
+
+    <div class="table borderAll">
+        <table align="center" style="width:20rem;">
+        <caption>Funciones Matemáticas Predefinidas</caption>
+        <tbody><tr><td style="width:6.8rem;"><dfn class="style1">abs(x)</dfn></td><td>Valor absoluto de "x".</td></tr>
+        <tr><td><dfn class="style1">acos(x)</dfn></td><td>Arco coseno de "x".</td></tr>
+        <tr><td><dfn class="style1">acosh(x)</dfn></td><td>Arco coseno hiperbólico de "x".</td></tr>
+        <tr><td><dfn class="style1">asin(x)</dfn></td><td>Arco seno de "x" (resultado en radianes).</td></tr>
+        <tr><td><dfn class="style1">asinh(x)</dfn></td><td>Arco seno hiperbólico de "x".</td></tr>
+        <tr><td><dfn class="style1">atan(x)</dfn></td><td>Arco tangente de "x".</td></tr>
+        <tr><td><dfn class="style1">atanh(x)</dfn></td><td>Arco tangente hiperbólico de "x".</td></tr>
+        <tr><td><dfn class="style1">atan2(y,x)</dfn></td><td>Arco tangente del cociente de "y" entre "x".</td></tr>
+        <tr><td><dfn class="style1">cbrt(x)</dfn></td><td>Raíz cúbica de "x".</td></tr>
+        <tr><td><dfn class="style1">ceil(x)</dfn></td><td>Entero más cercano mayor o igual a "x".</td></tr>
+        <tr><td><dfn class="style1">clz32(x)</dfn></td><td>Número de ceros iniciales del entero "x" de 32 bits.</td></tr>
+        <tr><td><dfn class="style1">cos(x)</dfn></td><td>Coseno de "x".</td></tr>
+        <tr><td><dfn class="style1">cosh(x)</dfn></td><td>Coseno hiperbólico de "x".</td></tr>
+        <tr><td><dfn class="style1">exp(x)</dfn></td><td>Exponente de "x": \(e^x\).</td></tr>
+        <tr><td><dfn class="style1">expm1(x)</dfn></td><td>Devuelve \(e^x-1\).</td></tr>
+        <tr><td><dfn class="style1">floor(x)</dfn></td><td>Entero más cercano menor o igual "x".</td></tr>
+        <tr><td><dfn class="style1">fround(x)</dfn></td><td>Devuelve el número real de simple precisión más cercano a "x".</td></tr>
+        <tr><td><dfn class="style1">hypot([x[,y[, ...]]])</dfn></td><td>Raiz cuadrada de la suma de los cuadrados de "x", "y", ...</td></tr>
+        <tr><td><dfn class="style1">imul(x,y)</dfn></td><td>Multiplica los enteros de 32 bits "x" y "y".</td></tr>
+        <tr><td><dfn class="style1">log(x)</dfn></td><td>Logaritmo natural de "x": \(\ln(x)\).</td></tr>
+        <tr><td><dfn class="style1">log1p(x)</dfn></td><td>Logaritmo natural de "1+x": \(\ln(1+x)\).</td></tr>
+        <tr><td><dfn class="style1">log10(x)</dfn></td><td>Logaritmo en base 10 de "x": \(\log(x)\).</td></tr>
+        <tr><td><dfn class="style1">log2(x)</dfn></td><td>Logaritmo en base 2 de "x": \(\log_{{}_2}(x)\).</td></tr>
+        <tr><td><dfn class="style1">max([x[,[y[, ...]]]])</dfn></td><td>Mayor de los números "x", "y", ...</td></tr>
+        <tr><td><dfn class="style1">min([x[,[y[, ...]]]])</dfn></td><td>Menor de los números "x", "y", ...</td></tr>
+        <tr><td><dfn class="style1">pow(x,y)</dfn></td><td>"x" elevado a "y", (\(x^y\)), igual a x**y.</td></tr>
+        <tr><td><dfn class="style1">random()</dfn></td><td>Número aleatorio comprendido entre 0 y 1.</td></tr>
+        <tr><td><dfn class="style1">round(x)</dfn></td><td>Redondea "x" al entero más cercano.</td></tr>
+        <tr><td><dfn class="style1">sign(x)</dfn></td><td>Devuelve 1, si "x" es positivo, -1 si es negativo y 0 si es cero.</td></tr>
+        <tr><td><dfn class="style1">sin(x)</dfn></td><td>Seno del "x".</td></tr>
+        <tr><td><dfn class="style1">sinh(x)</dfn></td><td>Seno hiperbólico de "x".</td></tr>
+        <tr><td><dfn class="style1">sqrt(x)</dfn></td><td>Raíz cuadrada de "x".</td></tr>      
+        <tr><td><dfn class="style1">tan(x)</dfn></td><td>Tangente del "x" ("x" en radianes).</td></tr>
+        <tr><td><dfn class="style1">tanh(x)</dfn></td><td>Tangente hiperbólica de "x".</td></tr>
+        <tr><td><dfn class="style1">trunc(x)</dfn></td><td>Parte entera de "x".</td></tr>
+        </tbody></table>
+    </div>
+
+    <p class="text">Donde, en las funciones trigonométricas, los ángulos deben estar en radianes.</p>
+
+    <p class="text">Además, en la calculadora Javascript, se pueden emplear también las siguientes funciones matemáticas.</p>
+
+    <div class="table borderAll">
+        <table align="center" style="width:19rem;">
+            <caption>Funciones Matemáticas Adicionales</caption>
+            <tbody><tr><td style="width:5.0rem;"><dfn>cot(x)</dfn></td><td>Cotangente de "x".</td></tr>
+            <tr><td><dfn>coth(x)</dfn></td><td>Cotangente hiperbólica de "x".</td></tr>
+            <tr><td><dfn>csc(x)</dfn></td><td>Cosecante de "x".</td></tr>
+            <tr><td><dfn>csch(x)</dfn></td><td>Cosecante hiperbólica de "x".</td></tr>
+            <tr><td><dfn>even(x)</dfn></td><td>Verdadero si "x" es par.</td></tr>
+            <tr><td><dfn>factorial(x)</dfn></td><td>Factorial de "x".</td></tr>
+            <tr><td><dfn>frac(x)</dfn></td><td>Parte fraccionaria de "x".</td></tr>
+            <tr><td><dfn>log(b,x)</dfn></td><td>Logaritmo en base "b" de "x".</td></tr>
+            <tr><td><dfn>odd(x)</dfn></td><td>Verdadero si "x" es impar.</td></tr>
+            <tr><td><dfn>quot(x,y)</dfn></td><td>Cociente (parte entera) de "x/y".</td></tr>
+            <tr><td><dfn>sec(x)</dfn></td><td>Secante de "x".</td></tr>
+            <tr><td><dfn>sech(x)</dfn></td><td>Secante hiperbólica de "x".</td></tr>
+            <tr><td><dfn>sqr(x)</dfn></td><td>Cuadrado de "x" (x<sup>2</sup>).</td></tr>
+            <tr><td><dfn>toDeg(x)</dfn></td><td>Convierte "x" de radianes a grados.</td></tr>
+            <tr><td><dfn>toRad(x)</dfn></td><td>Convierte "x" de grados a radianes.</td></tr>
+            <tr><td><dfn>nthroot(x,n)</dfn></td><td>Raíz enésima (n) de "x".</td></tr>
+        </tbody></table>
+    </div>
+    <br>
+
+    <div class="ejercicio" id="ejercicio4" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Con relación a las funciones matemáticas en Javascript:</p></div><p class="pregunta" id="pregunta21"><span class="pregunta"></span>Elija la función que permite calcular el resultado indicado por la expresión:</p><div class="dato"><table class="dato"><tbody><tr><td class="dato_col1">Tangente de x</td><td><span class="campo_dato correcta" tabindex="0" data-opciones="tan(x)&amp;@%math.tan(x)&amp;@%Math.tan(x)&amp;@%Math.tg(x)" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">Math.tan(x)</span></td></tr><tr><td class="dato_col1">Arco seno de x (sin<sup>-1</sup>(x))</td><td><span class="campo_dato correcta" tabindex="0" data-opciones="1/Math.sin(x)&amp;@%Math.asin(x)&amp;@%Math.sin**-1(x)&amp;@%Math.arcsin(x)" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">Math.asin(x)</span></td></tr><tr><td class="dato_col1">Arco tangente de x/y (tan<sup>-1</sup>(x/y))</td><td><span class="campo_dato correcta" tabindex="0" data-opciones="Math.arctan(x/y)&amp;@%1/Math.atan(x,y)&amp;@%Math.atan2(x,y)&amp;@%Math.atan(x,y)" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">Math.atan2(x,y)</span></td></tr><tr><td class="dato_col1">Logaritmo natural de x</td><td><span class="campo_dato correcta" tabindex="0" data-opciones="Math.ln(x)&amp;@%ln(x)&amp;@%log(x)&amp;@%Math.log(x)" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">Math.log(x)</span></td></tr><tr><td class="dato_col1">Exponente de x (e<sup>x</sup>)</td><td><span class="campo_dato correcta" tabindex="0" data-opciones="math.exp(x)&amp;@%Math.exp(x)&amp;@%Math.e(x)&amp;@%math.E**x" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">Math.exp(x)</span></td></tr><tr><td class="dato_col1">Coseno de y</td><td><span class="campo_dato correcta" tabindex="0" data-opciones="cos(x)&amp;@%Math.cos(x)&amp;@%Math.cos(y)&amp;@%Math.coseno(y)" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">Math.cos(y)</span></td></tr><tr><td class="dato_col1">Raíz cuadrada de z</td><td><span class="campo_dato correcta" tabindex="0" data-opciones="Math.sqr(x)&amp;@%Math.sqr(z)&amp;@%Math.sqrt(x)&amp;@%Math.sqrt(z)" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">Math.sqrt(z)</span></td></tr><tr><td class="dato_col1">a elevado a b (a<sup>b</sup>)</td><td><span class="campo_dato correcta" tabindex="0" data-opciones="Math.exp(a,b)&amp;@%a**b&amp;@%Math.pow(b,a)&amp;@%math.pow(a,b)" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">a**b</span></td></tr><tr><td class="dato_col1">Seno de 3.45</td><td><span class="campo_dato correcta" tabindex="0" data-opciones="Math.sin(3,45)&amp;@%Math.sen(3.45)&amp;@%math.sin(3.45)&amp;@%Math.sin(3.45)" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">Math.sin(3.45)</span></td></tr><tr><td class="dato_col1">Entero más cercano &lt;= z</td><td><span class="campo_dato correcta" tabindex="0" data-opciones="Math.ceil(z)&amp;@%Math.down(z)&amp;@%Math.up(z)&amp;@%Math.floor(z)" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">Math.floor(z)</span></td></tr></tbody></table></div><p></p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="8" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div> <!-- Ejercicio 4 -->
+
+    <p class="text">Además, el objeto <dfn class="style1">Math</dfn> cuenta con las siguientes constantes:</p>
+
+    <div class="table borderAll">
+        <table align="center" style="width:21.0rem;">
+        <caption>Constantes Matemáticas Predefinidas</caption>
+        <tbody><tr><td style="width:4.5rem"><dfn class="style1">E</dfn></td><td>Número de Euler.</td></tr>
+        <tr><td><dfn class="style1">LN2</dfn></td><td>Logaritmo natural de 2.</td></tr>
+        <tr><td><dfn class="style1">LN10</dfn></td><td>Logaritmo natural de 10.</td></tr>
+        <tr><td><dfn class="style1">LOG2E</dfn></td><td>Logaritmo en base 2 del número de Euler.</td></tr>
+        <tr><td><dfn class="style1">LOG10E</dfn></td><td>Logaritmo en base 10 del número de Euler.</td></tr>
+        <tr><td><dfn class="style1">PI</dfn></td><td>Número pi.</td></tr>
+        <tr><td><dfn class="style1">SQRT1_2&nbsp;</dfn></td><td>Raíz cuadrada de 1/2.</td></tr>
+        <tr><td><dfn class="style1">SQRT2</dfn></td><td>Raíz cuadrada de 2.</td></tr>
+        </tbody></table>
+    </div>
+
+    <p class="text">Que, como se sabe, se emplean igual que las funciones sólo que no se escribe paréntesis después del nombre.</p>
+
+    <div class="ejercicio" id="ejercicio5" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Con relación a las constantes matemáticas en Javascript:</p></div><p class="pregunta" id="pregunta22"><span class="pregunta"></span>Elija la función que permite calcular el resultado indicado por la expresión:</p><div class="dato"><table class="dato"><tbody><tr><td class="dato_col1">Coseno de π</td><td><span class="campo_dato correcta" tabindex="0" data-opciones="math.cos(math.pi)&amp;@%Math.cos(Math.PI)&amp;@%Math.cos(pi)&amp;@%Math.cos(PI)" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">Math.cos(Math.PI)</span></td></tr><tr><td class="dato_col1">Entero más cercano &gt;= ln(10)</td><td><span class="campo_dato correcta" tabindex="0" data-opciones="Math.ceil(Math.ln(10))&amp;@%Math.floor(Math.ln10)&amp;@%Math.floor(Math.LN10)&amp;@%Math.ceil(Math.LN10)" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">Math.ceil(Math.LN10)</span></td></tr><tr><td class="dato_col1">Cubo del logaritmo en base 10 del número de Euler</td><td><span class="campo_dato correcta" tabindex="0" data-opciones="Math.pow(Math.log(E),3)&amp;@%Math.pow(Math.log10(e),3)&amp;@%Math.pow(Math.LOG10E),3)&amp;@%Math.log10(e)**3" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">Math.pow(Math.LOG10E),3)</span></td></tr><tr><td class="dato_col1">Raíz cuadrada del número de Euler</td><td><span class="campo_dato correcta" tabindex="0" data-opciones="Math.sqr(Math.exp(Math.E)))&amp;@%Math.sqrt(E)&amp;@%Math.sqrt(Math.E)&amp;@%Math.sqr(Math.exp(1))" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">Math.sqrt(Math.E)</span></td></tr><tr><td class="dato_col1">Valor redondeado de la raíz cuadrada de 2</td><td><span class="campo_dato correcta" tabindex="0" data-opciones="Math.round(Math.sqr(2))&amp;@%Math.round(Math.SQRT2)&amp;@%Math.ROUNDSQRT2&amp;@%Math.raund(Math.SQRT2)" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">Math.round(Math.SQRT2)</span></td></tr><tr><td class="dato_col1">Absoluto del negativo de la raíz cuadrada de 1/2</td><td><span class="campo_dato correcta" tabindex="0" data-opciones="-Math.abs(Math.SQRT1_2)&amp;@%Math.abs(-Math.SQRT1/2)&amp;@%Math.abs(-Math.SQRT1_2)&amp;@%-Math.abs(Math.SQRT1/2)" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">Math.abs(-Math.SQRT1_2)</span></td></tr><tr><td class="dato_col1">Seno del número de Euler</td><td><span class="campo_dato correcta" tabindex="0" data-opciones="Math.sen(Math.E)&amp;@%Math.sin(E)&amp;@%Math.sin(Math.E)&amp;@%Math.sin(math.exp(1))" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">Math.sin(Math.E)</span></td></tr><tr><td class="dato_col1">Tangente de 3π</td><td><span class="campo_dato correcta" tabindex="0" data-opciones="Math.tan(Math.3PI)&amp;@%Math.tan(3*math.pi))&amp;@%Math.tan(3*Math.PI)" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">Math.tan(3*Math.PI)</span></td></tr></tbody></table></div><p></p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="12" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div> <!-- Ejercicio 5 -->
+    
+    <p class="text">Se recuerda también que en programación, los nombres de las variables, funciones, constantes, objetos, etc., se conocen como <dfn class="style1">identificadores</dfn>.</p>
+    
+    <p class="text">Y aunque no es una regla, sino una convención, los nombres de las constantes se escriben en mayúsculas (como SQRT2) y si son nombres compuestos, las palabras que componen el nombre, se separan con guiones bajos (como en MAX_INTEGER). Los nombres de las variables y funciones se escriben en minúsculas (como en floor) y si son nombres compuestos, la segunda y subsiguientes palabras, que componen el nombre, se escriben con la letra inicial en mayúsculas (como en firstElementChild). Las clases (y objetos constructores) se escriben con la letra inicial en mayúsculas (como ocurre con la clase Math).</p>
+
+    <p class="text">Además, Javascript, diferencia entre mayúsculas y minúsculas, por lo tanto, para Javascript, <dfn class="style1">Math</dfn> y <dfn class="style1">math</dfn> son nombres diferentes.</p>
+
+    <div class="ejercicio" id="ejercicio6" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>En JavaScript: </p><p class="opcionMultiple correcta"><input type="checkbox" name="pregunta23" id="opcion26"><span class="opcionMultiple"></span><label for="opcion26">Los nombres, de las constantes se escriben en minúsculas.</label></p><p class="opcionMultiple correcta"><input type="checkbox" name="pregunta23" id="opcion23" checked=""><span class="opcionMultiple"></span><label for="opcion23">Los nombres de las funciones y variables se escriben en minúsculas.</label></p><p class="opcionMultiple correcta"><input type="checkbox" name="pregunta23" id="opcion29" checked=""><span class="opcionMultiple"></span><label for="opcion29">Las palabras adicionales, en los nombres compuestos de variables y funciones, se escriben con mayúscula inicial.</label></p><p class="opcionMultiple correcta"><input type="checkbox" name="pregunta23" id="opcion30"><span class="opcionMultiple"></span><label for="opcion30">Las palabras adicionales, en los nombres compuestos de variables y funciones, se escriben con minúscula inicial.</label></p><p class="opcionMultiple correcta"><input type="checkbox" name="pregunta23" id="opcion28"><span class="opcionMultiple"></span><label for="opcion28">Los nombres, de las clases y de los objetos constructores, se escriben con minúscula inicial.</label></p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="4" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div> <!-- Ejercicio 6 -->
+
+    <p class="text">Debido a que, es muy fácil olvidar tanto las funciones como las diferentes instrucciones de un lenguaje, es conveniente contar con una ayuda memoria. En el caso de la calculadora y gracias a <i>CodeMirror</i> se cuenta con esa ayuda y se accede a la misma pulsando las teclas <i class="style1">Ctrl+Espacio</i>, como se muestra en el siguiente video:</p>
+ 
+    <div class="video">
+        <video width="401" src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo1/files/codemirror_autocompletar.mp4" controls=""></video>
+    </div>
+
+    <p class="text">Es conveniente acostumbrarse a emplear este procedimiento no sólo como una ayuda memoria, sino para acelerar la escritura de código y reducir los errores.</p>
+
+    <p class="text">Empleando paréntesis y las funciones matemáticas de Javascript, se puede calcular el valor de prácticamente cualquier expresión matemática.</p>
+
+    <p class="text">Por ejemplo, para calcular el valor de la siguiente expresiones matemáticas:</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+        <td>
+            \[\sqrt{{\sin(4.5)-\cos(1.2)}\over{\tan(2.3)}}\]
+        </td>
+        <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Se escribe en la calculadora:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">Math.sqrt((Math.sin(4.5)-Math.cos(1.2))/Math.tan(2.3))</div>
+        <div class="resultado"></div>
+    <div class="instruccion"></div><div class="resultado"></div><div class="instruccion"></div><div class="resultado"></div></div>
+
+    <p class="text">Y para calcular el valor de la siguiente expresión:</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+        <td>
+            \[\Big({\sin(1.2)+\cos(3.1)+\tan(0.7)}\Big)^{0.32}\]
+        </td>
+        <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Se escribe:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">(Math.sin(1.2)+Math.cos(3.1)+Math.tan(0.7))**0.32</div>
+        <div class="resultado"></div>
+    </div>
+ 
+    <p class="text">Que también puede ser calculada con <dfn class="style1">pow</dfn>:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">Math.pow(Math.sin(1.2)+Math.cos(3.1)+Math.tan(0.7),0.32)</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="text">Como se puede recordará, en Javascript y en los lenguajes de programación en general, casi siempre existe más de una forma de resolver el mismo problema.</p>
+
+    <p class="text">En la calculadora, como ocurre en la mayoría de los editores, para deshacer la última acción se pulsan las teclas <i>Ctrl+Z</i>. Si bien es posible copiar y pegar en la forma estándar (<i>Ctrl+C</i> y <i>Ctrl+V</i> o <i>Ctrl+Arrastrar con el mouse</i>) es más eficiente recuperar instrucciones anteriores pulsando las teclas <i>Ctrl+Arriba</i> y las teclas <i>Ctrl+Abajo</i> para instrucciones posteriores.</p>
+
+    <p class="text">Por ejemplo para calcular los cosenos de 5, 7, 10, 15 y 25 radianes, se procede de la siguiente forma:</p>
+ 
+    <div class="video">
+        <video width="401" src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo1/files/recuperar_instrucciones.mp4" controls=""></video>
+    </div>
+
+    <p class="text">Se recomienda emplear el anterior procedimiento siempre que sea posible. Así, para calcular el valor de las siguientes expresiones (que sólo difieren en dos signos):</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+        <td>
+            \[\sqrt{{3+4^{1.2}+6^{3.2}}\over{\text{e}^{6.5}+\cos(6.7)}}\]
+            \[\sqrt{{3-4^{1.2}+6^{3.2}}\over{\text{e}^{6.5}-\cos(6.7)}}\]
+        </td>
+        <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Se procede de la siguiente manera:</p>
+ 
+    <div class="video">
+        <video width="613" src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo1/files/recuperar_instrucciones_2.mp4" controls=""></video>
+    </div>
+    <br>
+
+    <p class="text">Los siguientes ejercicios tienen el propósito de refrescar la memoria y reforzar las habilidades en la escritura de expresiones matemáticas.</p>
+    
+    
+    <div class="ejercicio" id="ejercicio7" enunciado="2"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Calcule el valor de la siguiente expresión:\[\dfrac{\tan(73.1)\cos(6.5)\sin(9.5)}{30.7+{1.2}^{1.6}+|-4 \pi|}\]</p><div id="pregunta26" class="calculadora" spellcheck="false"><div class="instruccion">(Math.tan(73.1)*Math.cos(6.5)*Math.sin(9.5))/(30.7+1.2**1.6+Math.abs(-4*Math.PI))</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="6" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 7 -->
+    
+    <div class="ejercicio" id="ejercicio8" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Calcule el valor de la siguiente expresión (emplee ** para las potencias):\[\text{entero más cercano }\le\text{ a: } \left(\dfrac{4.5^{9.2}-5.8^{7.8}+\text{e}^{9.87}}{\sqrt{6.32+7^{5.98}}}\right)\]</p><div id="pregunta33" class="calculadora" spellcheck="false"><div class="instruccion">Math.floor((4.5**9.2-5.8**7.8+Math.exp(9.87))/Math.sqrt(6.32+7**5.98))</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="6" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 8 -->
+    
+    <div class="ejercicio" id="ejercicio9" enunciado="1"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Calcule el valor de la siguiente expresión:\[\ln(4.567) e^{3.937}\]</p><div id="pregunta43" class="calculadora" spellcheck="false"><div class="instruccion">Math.log(4.567)*Math.exp(3.937)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="3" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 9 -->
+    
+    <div class="ejercicio" id="ejercicio10" enunciado="8"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Calcule el valor de la siguiente expresión:\[\tan^{-1}\left({\dfrac{\sqrt{8.2}+6.89}{14+3.35}}\right)\]</p><div id="pregunta59" class="calculadora" spellcheck="false"><div class="instruccion">Math.atan((Math.sqrt(8.2)+6.89)/(14+3.35))</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="5" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 10 -->
+    
+    <div class="ejercicio" id="ejercicio11" enunciado="3"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Calcule el valor de la siguiente expresión (emplee ** para las potencias):\[\ln \left( \dfrac{{5.2}^{10.6}-{4.9}^{8.1}+{\text{e}}^{9.96}}{\sqrt{7.12+3^{0.96}}} \right)\]</p><div id="pregunta63" class="calculadora" spellcheck="false"><div class="instruccion">Math.log((5.2**10.6-4.9**8.1+Math.exp(9.96))/Math.sqrt(7.12+3**0.96))</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="5" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 11 -->
+    
+    <div class="ejercicio" id="ejercicio12" enunciado="5"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Calcule el valor de la siguiente expresión:\[\dfrac{\tan^{-1}(7.84)+7 \sin^{-1}(0.53)+4 \cos^{-1}(0.83)}{5 \text{e}^{9/7} \pi}\]</p><div id="pregunta74" class="calculadora" spellcheck="false"><div class="instruccion">(Math.atan(7.84)+7*Math.asin(0.53)+4*Math.acos(0.83))/(5*Math.exp(9/7)*Math.PI)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="5" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 12 -->
+
+
+
+    <h2 class="text">Funciones</h2>
+
+    <p class="text">Como se recordará, las funciones en Javascript pueden ser creadas de varias maneras, siendo la <dfn class="style1">forma estándar</dfn> la siguiente:</p>
+  
+    <div class="codigo">function Nombre_de_la_función(lista_de_parámetros) {<br>    // instrucciones Javascript<br>    return valor/expresión;<br>}</div>
+
+    <p class="text">Por ejemplo, la siguiente función devuelve la suma de los cubos de los tres números que recibe:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">function sumCub(x, y, z) {<br>  return x**3+y**3+z**3;<br>}</div>
+        <div class="resultado"></div>
+        <div class="instruccion">sumCub(1, 2, 3)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">sumCub(5, 3, 4)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">sumCub(1, 5, 9)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Una función puede ser creada también como una <dfn class="style1">expresión literal</dfn> empleando una <dfn class="style1">función anónima</dfn>:</p>
+  
+    <div class="codigo">var variable = function(lista_de_parámetros) {<br>    // instrucciones Javascript<br>    return valor/expresión;<br>}</div>
+
+    <p class="text">Así, la función sumCub, empleando una expresión literal, se crea de la siguiente forma:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var sumCub = function(x, y, z) {<br>  return x**3+y**3+z**3;<br>}</div>
+        <div class="resultado"></div>
+        <div class="instruccion">sumCub(1, 2, 3)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">sumCub(5, 3, 4)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">sumCub(1, 5, 9)</div>
+        <div class="resultado"></div>
+    </div>
+    <br>
+
+    <p class="text">Las funciones anónimas se invocan (ejecutan) inmediatamente, sin guardarlas en una variable, de acuerdo a la siguiente sintaxis:</p>
+  
+    <div class="codigo">(function(lista_de_parámetros) {<br>    // instrucciones Javascript<br>})(datos_pasados_a_la_función);</div>
+
+    <p class="text">O alternativamente:</p>
+  
+    <div class="codigo">(function(lista_de_parámetros) {<br>    // instrucciones Javascript<br>}(datos_pasados_a_la_función));</div>
+
+    <p class="text">Estas formas, conocidas como funciones IIFE (por su denominación en inglés: Inmediately Invoked Function Expressions), se emplean sobre todo cuando el programa debe ser ejecutado una sola vez. Así, si sólo se quiere calcular la suma de los cubos de 1, 5 y 9 y no de otros números, se puede emplear una función IIFE (pronunciada "ifi"):</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">(function(x, y, z) {<br>  return x**3+y**3+z**3;<br>})(1, 5, 9)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">O igualmente:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">(function(x, y, z) {<br>  return x**3+y**3+z**3;<br>}(1, 5, 9))</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">En realidad, como se recordará, los paréntesis se emplean únicamente para que Javascript trate a la palabra <dfn class="style1">function</dfn> como una expresión y no como la declaración de una función.</p>
+
+    <p class="text">Las funciones también pueden ser creadas en forma de <dfn class="style1">funciones flecha</dfn>:</p>
+  
+    <div class="codigo">var Nombre_de_la_función = (lista_de_parámetros) =&gt; {<br>        // instrucciones Javascript<br>        return valor/expresión;<br>    }</div>
+
+    <p class="text">Esta es una de las formas más útiles para programar expresiones y modelos matemáticos, por lo que será empleada frecuentemente en la materia.</p>
+
+    <p class="text">Empleando una función flecha, la función <dfn>sumCub</dfn>, se crea de la siguiente forma:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var sumCub = (x, y, z) =&gt; x**3+y**3+z**3;</div>
+        <div class="resultado"></div>
+        <div class="instruccion">sumCub(1, 2, 3)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">sumCub(5, 3, 4)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">sumCub(1, 5, 9)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Como se puede ver en el ejemplo, si el cuerpo de la función sólo consta de una expresión, no se requieren ni llaves ni el comando <dfn class="style1">return</dfn>.</p>
+
+    <p class="text">Si además la función sólo tiene un parámetro (sólo recibe un dato) tampoco son necesarios los paréntesis. Así, con la siguiente instrucción (que no emplea paréntesis) se crea una función para calcular el cubo de un número:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var cubo = x =&gt; x*x*x;</div>
+        <div class="resultado"></div>
+        <div class="instruccion">cubo(3)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">cubo(5)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">cubo(9)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Las funciones flecha son por defecto funciones anónimas y pueden ser empleadas también para crear funciones IIFE, así, con una función flecha, la IIFE creada previamente, es:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">((x, y, z) =&gt; x**3+y**3+z**3)(1, 5, 9)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Es importante tener presente que, sin importar el tipo de función que se emplee, no cambian ni la lógica ni la forma en que se emplean las funciones.</p>
+   
+    <div class="ejercicio" id="ejercicio13" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Empleando la forma estándar, programe la función <dfn>fun1</dfn> que calcule el valor de la siguiente expresión\[f(x) = x^3+2x^2+3x+4\]Luego, empleando la función, calcule los valores de la expresión para valores de "x" iguales a 2, 5 y 7 (una en cada celda de instrucción). </p><p></p><div id="pregunta78" class="calculadora" spellcheck="false"><div class="instruccion">function fun1(x) {<br>  return x**3 + 2*x**2 + 3*x + 4;<br>}</div><div class="resultado"></div><div class="instruccion">fun1(2)</div><div class="resultado"></div><div class="instruccion">fun1(5)</div><div class="resultado"></div><div class="instruccion">fun1(7)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="5" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div> <!-- Ejercicio 13 -->
+    
+    <div class="ejercicio" id="ejercicio14" enunciado="1"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Empleando la forma estándar, programe la función <dfn>rcuarta</dfn>, que reciba un número y devuelva la raíz cuarta del número recibido, tome en cuenta que:\[\sqrt[4]{x} = x^{1/4}\]Luego, empleando la función, calcule la raíz cuarta de 1.7, 4.5 y 12.3</p><div id="pregunta84" class="calculadora" spellcheck="false"><div class="instruccion">function rcuarta(x) {<br>  return x**(1/4);<br>}</div><div class="resultado"></div><div class="instruccion">rcuarta(1.7)</div><div class="resultado"></div><div class="instruccion">rcuarta(4.5)</div><div class="resultado"></div><div class="instruccion">rcuarta(12.3)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="5" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div> <!-- Ejercicio 14 -->
+    
+    <div class="ejercicio" id="ejercicio15" enunciado="2"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Empleando una expresión literal - función anónima, guardada en la variable <dfn>log7</dfn>, programe una función que reciba un número y devuelva el logaritmo en base 7 del número recibido, recordando que:\[\log_7(x) = {\ln(x) \over \ln(7)}\]Luego, empleando la función, calcule el logaritmo en base 7 de 5.7, 12.3 y 31.2</p><div id="pregunta91" class="calculadora" spellcheck="false"><div class="instruccion">var log7 = function(x) {<br>  return Math.log(x)/Math.log(7);<br>};</div><div class="resultado"></div><div class="instruccion">log7(5.7)</div><div class="resultado"></div><div class="instruccion">log7(12.3)</div><div class="resultado"></div><div class="instruccion">log7(31.2)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="5" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div> <!-- Ejercicio 15 -->
+
+    <div class="ejercicio" id="ejercicio16" enunciado="2"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Empleando una expresión literal- función anónima, guardada en la variable <dfn>logb</dfn>, programe una función que reciba dos números: "b" y "x" y devuelva el logaritmo en base "b" de "x", recordando que:\[\log_b(x) = {\ln(x) \over \ln(b)}\]Luego, empleando la función, calcule el logaritmo en base 5 de 5.7, el logaritmo en base 7 de 12.3 y el logaritmo en base 9 de 31.2</p><div id="pregunta97" class="calculadora" spellcheck="false"><div class="instruccion">var logb = function(b,x) {<br>  return Math.log(x)/Math.log(b);<br>};</div><div class="resultado"></div><div class="instruccion">logb(5,5.7)</div><div class="resultado"></div><div class="instruccion">logb(7,12.3)</div><div class="resultado"></div><div class="instruccion">logb(9,31.2)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="6" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div> <!-- Ejercicio 16 -->
+
+
+
+    <h2 class="text">Parámetros</h2>
+
+    <p class="text">Como se recordará, los parámetros de una función son los nombres de las variables (separadas con comas) en las que la función recibe los datos que requiere.</p>
+    
+    <p class="text">Los parámetros, al igual que las variables declaradas dentro de una función, sólo existen mientras la función está siendo ejecutada, luego, cuando la función termina, son destruidas, por esa razón son conocidas como variables locales o variables temporales.</p>
+
+    <p class="text">Los parámetros normales son <dfn class="style1">parámetros por valor</dfn>. Este tipo de parámetro guarda una copia del valor que recibe, entonces, en la función se trabaja con la copia, por lo que el valor original no es modificado. Si no se manda un valor a este tipo de parámetros, JavaScript le asigna el valor <dfn class="style1">undefined</dfn> (indefinido).</p>
+
+    <p class="text">Los parámetros también pueden ser <dfn class="style1">por defecto</dfn>. En este caso al parámetro se le asigna un valor (el valor por defecto). Si no se manda un valor a un parámetro de este tipo, toma su valor por defecto (no <dfn class="style1">undefined</dfn>, como ocurre con los parámetros por valor).</p>
+
+    <p class="text">Los parámetros por defecto se emplean cuando es muy probable que deba recibir un determinado valor o cuando es necesario evitar que quede indefinido.</p>
+
+    <p class="text">Por ejemplo, la siguiente función calcula la suma de hasta 5 números, pero, gracias a los parámetros por defecto, funciona igualmente si se le manda 4 o menos valores:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">function suma(a=0, b=0, c=0, d=0, e=0) {<br>  return a+b+c+d+e;<br>};</div>
+        <div class="resultado"></div>
+        <div class="instruccion">suma(1, 2, 3, 4, 5)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">suma(1, 2, 3, 4)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">suma(1, 2, 3)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">suma(1, 2)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">suma(1)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">suma()</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Los parámetros también pueden ser <dfn class="style1">nombrados</dfn>. En ese caso, no sólo se debe mandar el valor, sino también el nombre del parámetro. Este tipo de parámetros son de uso, casi obligado, cuando la función recibe tres o más parámetros. En esos casos es más fácil recordar el nombre de los parámetros que el orden en que fueron escritos.</p>
+
+    <p class="text">Por ejemplo la siguiente función recibe cuatro números y calcula la raíz cuadrada de su suma. Como se puede ver, al ser creada con parámetros nombrados, puede ser llamada mandando los nombres:valores, en cualquier orden:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">function sqrtSum({a, b, c, d}={}) {<br>  return Math.sqrt(a+b+c+d);<br>};</div>
+        <div class="resultado"></div>
+        <div class="instruccion">sqrtSum({a:1, b:2, c:3, d:4})</div>
+        <div class="resultado"></div>
+        <div class="instruccion">sqrtSum({c:3, a:1, b:2, d:4})</div>
+        <div class="resultado"></div>
+        <div class="instruccion">sqrtSum({c:3, a:1, d:4, b:2})</div>
+        <div class="resultado"></div>
+        <div class="instruccion">sqrtSum({d:4, b:2, c:3, a:1})</div>
+        <div class="resultado"></div>
+        <div class="instruccion">sqrtSum({b:2, d:4, c:3, a:1})</div>
+        <div class="resultado"></div>
+        <div class="instruccion">sqrtSum({b:2, d:4, a:1, c:3})</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">La función <dfn>sqrtSum</dfn>, creada como una función flecha y con parámetros nombrados con valores por defecto, es:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var sqrtSum = ({a=0, b=0, c=0, d=0}={}) =&gt; Math.sqrt(a+b+c+d);</div>
+        <div class="resultado"></div>
+        <div class="instruccion">sqrtSum({a:1, c:3, d:4})</div>
+        <div class="resultado"></div>
+        <div class="instruccion">sqrtSum({c:3, d:4})</div>
+        <div class="resultado"></div>
+        <div class="instruccion">sqrtSum({b:2})</div>
+        <div class="resultado"></div>
+        <div class="instruccion">sqrtSum()</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Se recuerda también que las variables dentro de una función se declaran con las palabras reservadas <b class="style1">let</b>, cuando su valor es modificado o recalculado dentro de la función y <b class="style1">const</b>, cuando su valor no debe ser modificado dentro de la función.</p>
+
+    <p class="text">Por ejemplo, para calcular el valor de la siguiente expresión:</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[ \begin{gathered}                f(x) = 14.0 - x - y^2 - z^2 \\                y = \dfrac{3 x^{2.1}-7.0}{5} \\                z = \dfrac{14.3-y^{1.2}}{4}                \end{gathered} \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>     
+
+    <p class="text">Se debe programar una función que reciba un parámetro (<dfn>x</dfn>) y donde las variables internas (<dfn>y</dfn>, <dfn>z</dfn>) deben ser declaradas como constantes, porque su valor no es modificado en la función.</p>
+
+    <p class="text">La función, programada como una función flecha, es:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var f = x =&gt; {<br>  const y = (3*x**2.1-7.0)/5;<br>  const z = (14.3-y**1.2)/4;<br>  return 14.0-x-y**2-z**2;<br>};</div>
+        <div class="resultado"></div>
+        <div class="instruccion">f(1.5)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">f(3)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">f(5.1)</div>
+        <div class="resultado"></div>
+    </div>
+    <br>
+
+    <div class="ejercicio" id="ejercicio17" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Empleando la forma estándar, programe la función <dfn>fx</dfn> que calcule el valor de la siguiente expresión:\[\begin{gathered}f(x) = \text{e}\raisebox{1.2em}{$\small\dfrac{x+y}{5}$} + x^2y^2-70y-15\\y = \dfrac{115+4x-2x^2}{5x}\end{gathered}\]Luego, empleando la función programada, calcule el valor de la expresión para: x=1, x=2.5, x=4.2 y x=6.7</p><p></p><div id="pregunta101" class="calculadora" spellcheck="false"><div class="instruccion">function fx(x) {<br>  const y = (115+4*x-2*x**2)/(5*x);<br>  return Math.exp((x+y)/5)+x**2*y**2-70*y-15;<br>}</div><div class="resultado"></div><div class="instruccion">fx(1)</div><div class="resultado"></div><div class="instruccion">fx(2.5)</div><div class="resultado"></div><div class="instruccion">fx(4.2)</div><div class="resultado"></div><div class="instruccion">fx(6.7)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="10" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div> <!-- Ejercicio 17 -->
+    
+    <div class="ejercicio" id="ejercicio18" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Empleando la forma estándar, un parámetro por valor para "p" y parámetros nombrados por defecto para las constantes: <span class="textocodigo">l, I, E, y, A y g</span>, en ese orden (<span class="textocodigo">(p, {l=...}={})</span>), programe la función <dfn>fp1</dfn> que calcule el valor de la siguiente expresión:\[\begin{matrix}f(p) = \cos(k \cdot l) \cosh(k \cdot l)+1\\[5mm]\begin{aligned}&amp;k^2 = \dfrac{p}{a}\\[3mm]&amp;a^2 = \dfrac{E\cdot I\cdot g}{A\cdot y}\\[3mm]&amp;l = 120;~ I = 170.6; ~E = 3\times 10^6 \\[1mm]&amp;y = 0.066; ~A = 32; ~g = 386\end{aligned}\end{matrix}\]Luego, empleando la función programada, calcule el valor de la expresión para: p=21, p=47, p=55, p=67 y p=75.</p><p></p><div id="pregunta104" class="calculadora" spellcheck="false"><div class="instruccion">function fp1(p, {l=120, I=170.6, E=3e6, y=0.066, A=32, g=386}={}) {<br>  const a = Math.sqrt(E*I*g/(A*y));<br>  const k = Math.sqrt(p/a);<br>  return Math.cos(k*l)*Math.cosh(k*l) + 1;<br>}</div><div class="resultado"></div><div class="instruccion">fp1(21)</div><div class="resultado"></div><div class="instruccion">fp1(47)</div><div class="resultado"></div><div class="instruccion">fp1(55)</div><div class="resultado"></div><div class="instruccion">fp1(67)</div><div class="resultado"></div><div class="instruccion">fp1(75)</div><div class="resultado"></div><div class="instruccion"></div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="14" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div> <!-- Ejercicio 18 -->
+
+    <br><br><br>
+
+    <div id="generarPrueba" data-scroll-y="100"><br><hr><label class="lnotacapitulo">Nota del capítulo: </label><input type="text" id="notaCapitulo" disabled="disabled" class="itnotacapitulo"><br><br><button id="btGenerarPrueba" style="visibility: visible;" onclick="capitulo.registrarCapitulo()">Iniciar defensa</button><button id="btEmplearBono" style="margin-left:1.1rem;width:9.686rem;display:none;" onclick="capitulo.emplearBono()">Emplear Bono</button><br><br></div>
+
+
+<d id="dAutor" style="font-size: 0.9rem;text-align:center;color: #0808f24f;font-weight:bolder;position:fixed;top: 5px;right: 5px;user-select:none;display:inline-block;z-index:15;">Hernan G. Peñaranda V.</d></div><!-- Cierre del div capítulo -->
+            
+<span id="dato" style="display:none;">JK5KCZ0r938lCZ0oDYGrDoqpE3Km938oD30aCJ4o934nCYGnC30aC2GnE30uGm00</span>
+<span id="reg" style="display:none;">CJ4xDZ0mC30mCJ0mC3itC30mC30mCJ0mEp4nEp4nEp4nEpCmC34mC30mC30xCJ4mC30mC30mC3ioC34mC30mC30mEpamC30mC30mC34xD30mC34mC30mC3isC30mC30nC30mEp4nC30mC3ioC34mC30mEpCmC34mC30xCp0mCJ0mC3inCJ0mEp4nC300</span>
+
+
+
+
+<div id="divDialogo" style="display: none;"><div onfocus="document.querySelector('#divDialogo input').focus();"><div>Carnet universitario</div><div>Escriba el número de su carnet universitario, verificando que el guión haya sido correctamente insertado.</div><input type="text" onkeydown="return Capitulo.divDialogo.funKeydown(event)" onkeyup="Capitulo.divDialogo.funKeyup(event)"><div><button onclick="Capitulo.divDialogo.funClick('aceptar');">Aceptar</button><button style="margin-left:35px;" onclick="Capitulo.divDialogo.funClick('cancelar');">Cancelar</button></div></div></div></body>

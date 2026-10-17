@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<head>
+
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Language" content="es">
+  
+  <title>57-3850 capítulo 9</title>
+
+  
+    <!-- Librería y hoja de estilos KATEX  -->
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/katex/katex.min.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/katex/katex.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/katex/contrib/auto-render.min.js"></script>
+
+    <!-- Librerías y hojas de estilo CodeMirror -->
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/lib/codemirror.min.css">
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/theme/mdn-like.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/lib/codemirror.min.js"></script>
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/fold/foldgutter.min.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/fold/foldcode.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/fold/brace-fold.min.js"></script>
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/dialog/dialog.min.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/dialog/dialog.min.js"></script>
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/hint/show-hint.min.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/hint/show-hint.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/hint/javascript-hint.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/search/searchcursor.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/search/search.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/edit/matchbrackets.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/edit/closebrackets.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/comment/comment.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/wrap/hardwrap.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/javascript/javascript.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/mathematica/mathematica.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/octave/octave.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/python/python.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/css/css.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/xml/xml.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/markdown/markdown.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/htmlmixed/htmlmixed.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/keymap/sublime.min.js"></script>
+    
+    <!-- Librería Plotly -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script><style id="plotly.js-style-global"></style>
+
+    <!-- Librerías y hojas de estilo function-plot -->
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/function-plot/site/js/vendor/d3.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/function-plot/dist/function-plot.js"></script>
+    
+    <!-- Librería quantities -->
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/quantities/quantities.min.js"></script>
+
+    <!-- Librería GoJs para la creación de diagramas de flujo -->
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/gojs/release/go.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/flowchart_gojs.js"></script>
+
+    <!-- Librerías matemáticas propias -->
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/math.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/number.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/array.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/string.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/cplx.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/function.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/object.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/prq.js"></script>
+
+    <!-- Librería y hoja de estilos propias para la creación y manejo de la calculadora  -->
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/src/cjs.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/cjs.js"></script>
+
+    <!-- Librería y hoja de estilos propias para la creación y manejo de los capítulos -->
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/src/texto.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/texto.js"></script>
+
+   <!-- Librería del capítulo actual -->
+    <script src="  https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo9/files/capitulo9.js"></script>
+
+    <!-- Fuentes empleadas en el capítulo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;600;700;800&amp;family=Roboto+Mono&amp;display=swap" rel="stylesheet">
+
+    <script>
+        function katexRender() {
+            renderMathInElement(document.getElementById("capitulo"));
+        }
+        document.addEventListener("DOMContentLoaded", katexRender);
+        window.onerror = function(msg, url, lineNo, columnNo, error) {
+            __error__ = msg;
+        };
+        window.onload = function(){
+            capitulo.iniciar();
+        };
+    </script>
+
+<style id="plotly.js-style-modebar-332345"></style><style id="plotly.js-style-modebar-3fe837"></style></head>
+
+<body class="text">  
+
+
+<div id="capitulo">
+
+    <button id="btGuardar" style="z-index:15;" onclick="savePage()">Guardar</button>
+
+
+
+    <h1 class="text" onclick="alerta(capitulo.idPagina,'')" style="cursor: pointer;">Ajuste de Datos</h1>
+
+
+
+    <p class="text">Con frecuencia, en la resolución de problemas en el campo de la ingeniería, los únicos datos disponibles se encuentran en forma tabular. Estos datos, que por lo general son el resultado de mediciones de campo o de laboratorio, deben ser empleados para realizar una serie de cálculos que van desde la estimación de valores intermedios (interpolación), pasando por el cálculo de raíces, hasta la integración y diferenciación numérica.</p>
+
+    <p class="text">En estos casos existen dos alternativas: a) Ajustar los datos tabulados a una ecuación analítica y b) Calcular valores por interpolación o extrapolación de los datos tabulados.</p>
+
+    <p class="text">En este capítulo se estudia la primera alternativa, que es la alternativa a elegir cuando los datos no son precisos (por ejemplo datos provenientes de mediciones de campo) o cuando, por razones teóricas, se tiene idea de la forma analítica que deberá tener la ecuación ajustada.</p>
+
+
+
+    <h2 class="text">Método de los mínimos cuadrados</h2>
+
+    <p class="text">Este es el método más empleado para ajustar datos tabulados a funciones analíticas. En este método se busca minimizar el cuadrado de las diferencias que existen, entre los valores calculados con la ecuación ajustada y los valores tabulados (valores conocidos).</p>
+
+    <p class="text">Como en realidad se trata de un problema de optimización (se busca el mínimo) puede ser resuelto empleando diferentes métodos, en este acápite se encontrará el mínimo recurriendo al cálculo diferencial, es decir igualando la derivada de la función a cero.</p>
+
+    <p class="text">Aunque es posible desarrollar un método general para ajustar datos a una expresión de cualquier forma, el resultado es un método iterativo y por consiguiente la convergencia no está garantizada. Por esa razón, en este capítulo se presenta el método para ajustar datos específicamente a una ecuación de la forma:</p>
+    
+    <table class="ecuacion" id="ec1">
+        <tbody><tr>
+            <td>
+                \[                y = c_1f_1(x)+c_2f_2(x)+\cdots +c_mf_m(x)                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Donde “y” es la variable dependiente, “x” la variable independiente, “f<sub>i</sub>” son funciones que dependen de “x” y “c<sub>1</sub>” a “c<sub>m</sub>” son los coeficientes resultantes del ajuste, siendo “m” el número de coeficientes en la expresión analítica.</p>
+
+    <p class="text">Aunque el desarrollo del método está limitado a la forma de la ecuación (1), una gran variedad de ecuaciones tienen o pueden ser colocadas en esa forma (incluyendo todas las expresiones polinomiales) por lo que el método es de utilidad práctica.</p>
+
+    <p class="text">Para el desarrollo del método se asumirá que se cuenta con los siguientes datos experimentales:</p>
+
+    <div class="table borderAll">
+        <table align="center" style="width:450px;">
+            <tbody><tr>
+            <th class="center" style="width:35px;">x</th><td class="center">4.0</td><td class="center">3.2</td><td class="center">6.8</td><td class="center">9.3</td><td class="center">1.2</td><td class="center">0.7</td><td class="center">5.5</td><td class="center">7.4</td><td class="center">6.5</td><td class="center">2.4</td>
+            </tr>
+            <tr>
+            <th class="center">y</th><td class="center">6.2</td><td class="center">5.3</td><td class="center">9.1</td><td class="center">12.0</td><td class="center">3.3</td><td class="center">1.5</td><td class="center">7.9</td><td class="center">10.6</td><td class="center">8.7</td><td class="center">6.3</td>
+            </tr>
+        </tbody></table>
+    </div>
+
+    <p class="text">Los cuales deben ser ajustados a la ecuación:</p>
+    
+    <table class="ecuacion" id="ec2">
+        <tbody><tr>
+            <td>
+                \[                y = a+bx^2+cx^4+d\ln(x)                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Es decir que se deben calcular los valores de <dfn class="style1">a</dfn>, <dfn class="style1">b</dfn>, <dfn class="style1">c</dfn> y <dfn class="style1">d</dfn> tales que, al reemplazar un valor de <dfn class="style1">x</dfn> en la ecuación, se obtenga el correspondiente valor de <dfn class="style1">y</dfn>. Como se dijo, eso se consigue minimizando las diferencias entre los valores calculados con la ecuación ajustada (ecuación 2) y los valores conocidos (los valores tabulados).</p>
+
+    <p class="text">Esta ecuación está en forma de la ecuación <a href="#ec1">(1)</a>, donde las funciones son: f<sub>1</sub>(x)=1; f<sub>2</sub>(x)=x<sup>2</sup>; f<sub>3</sub>(x)=x<sup>4</sup> y f<sub>4</sub>(x)=ln(x), mientras que los coeficientes son: c<sub>1</sub>=a; c<sub>2</sub>=b; c<sub>3</sub>=c y c<sub>4</sub>=d.</p>
+
+    <p class="text">Para encontrar el valor de las constantes se reemplaza cada par de datos tabulados (x<sub>i</sub>, y<sub>i</sub>) en la ecuación a ajustar (ecuación 2):</p>
+    
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                \begin{aligned}                a+b(4.0)^{0.2}+c(4.0)^{0.2}+d\ln(4.0)-6.2 &amp;= r_1\\                a+b(3.2)^{0.2}+c(3.2)^{0.2}+d\ln(3.2)-5.3 &amp;= r_2\\                a+b(6.8)^{0.2}+c(6.8)^{0.2}+d\ln(6.8)-9.1 &amp;= r_3\\                a+b(6.5)^{0.2}+c(6.5)^{0.2}+d\ln(6.5)-8.7 &amp;= r_4\\                a+b(2.4)^{0.2}+c(2.4)^{0.2}+d\ln(2.4)-6.3 &amp;= r_5                \end{aligned}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">Donde “r<sub>1</sub>”, “r<sub>2</sub>” … “r<sub>n</sub>” son los restos (las diferencias) entre los valores calculados con la ecuación ajustada (f(x<sub>i</sub>)) y los valores conocidos (y<sub>i</sub>). Si el ajuste es perfecto, los restos son iguales a cero, por lo tanto, para conseguir el mejor ajuste posible se deben minimizar estos restos (es decir hacer que los restos sean cercanos o iguales a cero)</p>
+    
+    <p class="text">Para una ecuación cualquiera, que tenga la forma de la <a href="#ec1">ecuación 1</a>, los restos se calculan con:</p>
+    
+    <table class="ecuacion" id="ec3">
+        <tbody><tr>
+            <td>
+                \[                \begin{aligned}                c_1f_1(x_1)+c_2f_2(x1)+\cdots +c_mf_n(x_1)-y_1 &amp;= r_1\\                c_1f_1(x_2)+c_2f_2(x2)+\cdots +c_mf_n(x_2)-y_2 &amp;= r_2\\                \vdots\hspace{2.8cm}&amp;=~\vdots\\                c_1f_1(x_{n-1})+c_2f_2(x_{n-1})+\cdots +c_mf_n(x_{n-1})-y_{n-1} &amp;= r_{n-1}\\                c_1f_1(x_{n})+c_2f_2(x_{n})+\cdots +c_mf_n(x_{n})-y_{n} &amp;= r_{n}\\                \end{aligned}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">Y el mejor ajuste se consigue minimizando estos restos, es decir haciendo que se cumpla:</p>
+    
+    <table class="ecuacion" id="ec4">
+        <tbody><tr>
+            <td>
+                \[                \sum_{i=1}^n r_i = mínimo                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">Pero, como ya se vio en la resolución de ecuaciones no lineales, al minimizar se debe evitar el signo (para evitar falsos mínimos) lo que se consigue simplemente elevando al cuadrado los restos:</p>
+
+    <table class="ecuacion" id="ec5">
+        <tbody><tr>
+            <td>
+                \[                \sum_{i=1}^n r_i^2 = mínimo                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Esta es la ecuación de los mínimos cuadrados y de la cual, como se puede ver, deriva el nombre del método.</p>
+
+    <p class="text">Como ya se dijo, aún cuando el mínimo puede ser encontrado por diferentes métodos, en este caso (para ecuaciones que tienen la forma de la <a href="#ec1">ecuación 1</a>) se recurre al cálculo diferencial.</p>
+
+    <p class="text">Para ello primero se escribe el sistema de <a href="#ec_3">ecuaciones 3</a> en forma matricial:</p>
+    
+    <table class="ecuacion" id="ec6">
+        <tbody><tr>
+            <td>
+                \[                \begin{bmatrix}                f_1(x_1)&amp;f_2(x_1)&amp;\cdots&amp;f_m(x_1)\\                f_1(x_2)&amp;f_2(x_2)&amp;\cdots&amp;f_m(x_2)\\[2mm]                \vdots&amp;\vdots&amp;\vdots&amp;\vdots\\[1mm]                f_1(x_n)&amp;f_2(x_n)&amp;\cdots&amp;f_m(x_n)                \end{bmatrix}                \times                \begin{bmatrix}                c_1\\                c_2\\[2mm]                \vdots\\[1mm]                c_m                \end{bmatrix}                -                \begin{bmatrix}                y_1\\                y_2\\[2mm]                \vdots\\[1mm]                y_n                \end{bmatrix}                =                \begin{bmatrix}                r_1\\                r_2\\[2mm]                \vdots\\[1mm]                r_n                \end{bmatrix}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Que en forma abreviada es:</p>
+
+    <table class="ecuacion" id="ec7">
+        <tbody><tr>
+            <td>
+                \[                F\times C - Y = R                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">Como se recordará de los fundamentos del cálculo diferencial, para encontrar el mínimo se deriva la <a href="#ec_1">ecuación 1</a> con relación a cada uno de los coeficientes y se igualan las derivadas a cero, es decir:</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                \dfrac{\partial}{\partial c_k}\sum_{i-1}^n r_i^2=                \sum_{i=1}^n\dfrac{\partial{r_i^2}}{\partial c_k}=                \sum_{i=1}^n 2r_i\dfrac{\partial{r_i}}{\partial c_k}=                2\sum_{i=1}^n r_i\dfrac{\partial{r_i}}{\partial c_k}=0                \hspace{4mm}                \begin{cases}                k = 1 \rightarrow n                \end{cases}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">De donde resulta:</p>
+
+    <table class="ecuacion" id="ec8">
+        <tbody><tr>
+            <td>
+                \[                \sum_{i=1}^n r_i\dfrac{\partial{r_i}}{\partial c_k}=0                \hspace{4mm}                \begin{cases}                k = 1 \rightarrow n                \end{cases}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">Que en forma desarrolada es:</p>
+
+    <table class="ecuacion" id="ec9">
+        <tbody><tr>
+            <td>
+                \[                \begin{matrix}                r_1\dfrac{\partial{r_1}}{\partial c_1}+r_2\dfrac{\partial{r_2}}{\partial c_1}+                \cdots+                r_n\dfrac{\partial{r_n}}{\partial c_1}=0\\[4mm]                r_1\dfrac{\partial{r_1}}{\partial c_2}+r_2\dfrac{\partial{r_2}}{\partial c_2}+                \cdots+                r_n\dfrac{\partial{r_n}}{\partial c_2}=0\\[4mm]                \hspace{7mm}\vdots\\[2mm]                r_1\dfrac{\partial{r_1}}{\partial c_m}+r_2\dfrac{\partial{r_2}}{\partial c_m}+                \cdots+                r_n\dfrac{\partial{r_n}}{\partial c_m}=0                                \end{matrix}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">En realidad, hasta esta parte, el desarrollo del método es general (no depende de la forma que tenga la ecuación a ajustar) y en consecuencia esta expresión puede ser empleada para ajustar datos a una expresión cualquiera, pero como se dijo, el proceso final resulta ser iterativo (pues para calcular las derivadas parciales es necesario asumir valores para los coeficientes).</p>
+    
+    <p class="text">Aplicándola específicamente a ecuaciones que se encuentre en forma de la <a href="#ec1">ecuación 1</a>, se puede comprobar fácilmente que las derivadas parciales, para cada uno de los coeficientes, son iguales a sus funciones respectivas. Así la derivada parcial de r<sub>2</sub> con respecto a c<sub>1</sub> (∂r<sub>2</sub>/∂c<sub>1</sub>) es igual a f<sub>1</sub>(x<sub>2</sub>); la derivada parcial de r<sub>1</sub> con respecto a c<sub>2</sub>, (∂r<sub>1</sub>/∂c<sub>2</sub>) es igual a f<sub>2</sub>(x<sub>1</sub>), entonces, para cualquier derivada se cumple que:</p>
+
+    <table class="ecuacion" id="ec10">
+        <tbody><tr>
+            <td>
+                \[                \dfrac{\partial{r_i}}{\partial{c_k}} = f_k(x_i)                \hspace{5mm}                \begin{cases}                i =1 \rightarrow n\\                k =1 \rightarrow m                \end{cases}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">Reemplazando los valores de esta expresión en la <a href="#ec9">ecuación 9</a>, se obtiene:</p>
+
+    <table class="ecuacion" id="ec11">
+        <tbody><tr>
+            <td>
+                \[                \begin{aligned}                r_1f_1(x_1)+r_2f_1(x_2)+                \cdots+r_nf_1(x_n)&amp;=0\\[2mm]                r_1f_2(x_1)+r_2f_2(x_2)+                \cdots+r_nf_2(x_n)&amp;=0\\[1mm]                \vdots\hspace{1.8cm}\\[1mm]                r_1f_m(x_1)+r_2f_m(x_2)+                \cdots+r_nf_m(x_n)&amp;=0                \end{aligned}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">Que escrita en forma matricial es:</p>
+    
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                \begin{bmatrix}                f_1(x_1)&amp;f_1(x_2)&amp;\cdots&amp;f_1(x_n)\\[2mm]                f_2(x_1)&amp;f_2(x_2)&amp;\cdots&amp;f_2(x_n)\\[2mm]                &amp;&amp;\vdots\\[1mm]                f_m(x_1)&amp;f_m(x_2)&amp;\cdots&amp;f_m(x_n)\\[2mm]                \end{bmatrix}                \times                \begin{bmatrix}                r_1\\[2.5mm]                r_2\\[2.5mm]                \vdots\\[2mm]                r_m                \end{bmatrix}                =                \begin{bmatrix}                0\\[2.5mm]                0\\[2.5mm]                \vdots\\[2mm]                0                \end{bmatrix}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Como se puede ver, la matriz “F” de esta ecuación es la transpuesta de la matriz “F” de la <a href="#ec6">ecuación 6</a>. Entonces, se cumple que:</p>
+
+    <table class="ecuacion" id="ec12">
+        <tbody><tr>
+            <td>
+                \[                F^T \times R = 0                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">Reemplazando “R” por la expresión de la <a href="#ec7">ecuación 7</a> y realizando algunas operaciones se obtiene:</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                F^T \times (F\times C-Y) = 0                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <table class="ecuacion" id="ec13">
+        <tbody><tr>
+            <td>
+                \[                F^T\times F\times C = F^T \times Y                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">Esta expresión constituye un sistema de “m” ecuaciones lineales con “m” incógnitas (siendo las incógnitas los valores de “C”), la matriz de coeficientes es el resultado de: F<sup>T</sup>*F y la de constantes el resultado de: F<sup>T</sup>*Y. En consecuencia, el cálculo de los coeficientes del ajuste se reduce a la solución de un sistema de ecuaciones lineales.</p>
+
+    <p class="text">Para verificar que tan bueno (o malo) resulta el ajuste obtenido, se puede dibujar la gráfica de los puntos conocidos y la ecuación ajustada y juzgar visualmente si la curva resultante representa bien (o no) los datos tabulados.</p>
+
+    <p class="text">Otra forma de verificar numéricamente si el ajuste es bueno o malo, es mediante el cálculo del coeficiente de correlación que, para el caso de una variable independiente, se define como:</p>
+
+    <table class="ecuacion" id="ec14">
+        <tbody><tr>
+            <td>
+                \[                cor = \sqrt{\dfrac                    {\displaystyle \sum_{i-1}^n \left( f(y_i)-\overline{y}\right)^2}                    {\displaystyle \sum_{i-1}^n\left(y_i-\overline{y}\right)^2}                    }                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Donde “f” es la ecuación ajustada, y<sub>i</sub> son los valores conocidos de la variable dependiente (los valores tabulados) y \(\overline{y}\) es el promedio de dichos datos.</p>
+
+    <p class="text">Cuanto más cercano es el valor del coeficiente de correlación a 1, mejor es el ajuste, siendo 1 el ajuste perfecto (en ese caso, los valores calculados son exactamente iguales a los valores conocidos).</p>
+
+    <p class="text">No obstante, se debe tener cuidado al interpretar los resultados del coeficiente de correlación, pues no siempre su valor es señal de un buen ajuste. Por ejemplo, cuando se ajustan “n” datos a una ecuación polinomial de grado “n”, el coeficiente de correlación devuelve siempre 1 (ajuste perfecto), sin embargo, casi siempre ese es un mal ajuste, pues si bien la curva pasa por todos los puntos, su comportamiento entre ellos es errático (algo que se puede comprobar dibujando la gráfica de los puntos y de la ecuación ajustada).</p>
+
+    <p class="text">Para comprender mejor el proceso se ajustarán los siguientes datos:</p>
+
+    <div class="table borderAll">
+    <table align="center" style="width:275px;">
+        <tbody><tr>
+        <th class="center" style="width:40px;">x</th><td class="center">1.0</td><td class="center">2.5</td><td class="center">3.5</td><td class="center">4.0</td>
+        </tr>
+        <tr>
+        <th class="center">y</th><td class="center">3.8</td><td class="center">15.0</td><td class="center">26.0</td><td class="center">33.0</td>
+        </tr>
+    </tbody></table>
+    </div>
+
+    <p class="text">A la ecuación:</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                y = a + bx^2                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Que se encuentra en forma de la <a href="#ec1">ecuación 1</a>. En este caso f<sub>1</sub>(x)=1, f<sub>2</sub>(x)=x<sup>2</sup>, c<sub>1</sub>=a y  c<sub>2</sub>=b. En esta ecuación existen dos coeficientes (m=2) y se cuenta con cuatro puntos (n=4). Entonces, se guardan los datos tabulados:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var vx = [1, 2.5, 3.5, 4];<br>var vy = [3.8, 15, 26, 33];<br>var n = vx.length;</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="text">Y el vector con los grupos funcionales:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var f = [x=&gt;1, x=&gt;x*x]<br>var m = f.length;</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Con los datos se calculan los elementos de la matriz de funciones y su transpuesta (F, FT):</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var FT = [vx, vx].map((v,i)=&gt;v.map(f[i]));<br>F = FT.transpose()</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="text">Con las matrices "F", "FT" y el vector "y", se obtiene la matriz de coeficientes ("A=F<sup>T</sup>F") y el de constantes "B=F<sup>T</sup>C" del sistema de ecuaciones (<a href="#ec13">13</a>):</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var A = FT.mul(F);<br>var B = FT.mul(vy);</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="text">Y se resuelve el sistema de ecuaciones lineales con alguno de los métodos estudiados en capítulos previos, por ejemplo con "crout", obteniéndose los coeficientes "a" y "b" de la ecuación ajustada:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var [a, b] = A.crout(B).transpose();<br>[a, b]</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">En consecuencia, la ecuación ajustada (la ecuación equivalente a los datos tabulados), es:</p>
+    
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                y = 2.2789699570815394 + 1.9347639484978545x^2                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">La cual, puede ser programada:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var fx = x =&gt;&nbsp;a+b*x*x;</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="text">Una vez programada, se emplea igual que cualquier función regular, así se pueden calcular los valores de "y" para los valores conocidos de "x":</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">vx.map(fx).round(1)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">vy</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Al comparar los valores calculados, con los conocidos (los valores de "y"), se puede juzgar si el ajuste es o no bueno. En este caso, comparando los valores calculados y conocidos, se puede concluir que el ajuste es bueno, pues los valores calculados son próximos (o iguales) a los conocidos.</p>
+
+    <p class="text">Para decidir si el ajuste es realmente bueno, se deben analizar no sólo los puntos conocidos, sino también los valores intermedios (pues el cálculo de esos valores es el propósito principal del ajuste). Con ese fin, lo más conveniente es dibujar la gráfica de la ecuación ajustada y los puntos conocidos.</p>
+
+    <p class="text">Para dibujar puntos en la calculadora, simplemente se manda a <dfn class="style1">plot</dfn> un vector con los vectores correspondientes a los datos "x" y "y", siendo conveniente que los límites sean algo inferiores al primer dato (x[0]) y algo superiores al último (x[n-1]):</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">plot({f:[fx, [vx,vy]], xi:0, xf:5})</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">En este caso analizando la gráfica se corrobora que el ajuste es bueno, porque, por un lado la curva es uniforme y por otro los datos conocidos (los puntos) se distribuyen uniformemente a ambos lados de la misma.</p>
+
+    <p class="text">Para contar con un indicador numérico, que permita juzgar la calidad del ajuste, se calcula el coeficiente de correlación (<a href="#ec14">ecuación 14</a>):</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var yp = vy.sum()/n;<br>Math.sqrt(vx.map(fx).sub(yp).sqr().sum()/vy.sub(yp).sqr().sum())</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Que, al ser cercano a 1, indica que el ajuste es bueno.</p>
+
+    <p class="text">Como se señaló previamente, la ecuación ajustada puede ser empleada igual que cualquier función analítica, es decir se pueden obtener los valores de la variable dependiente (como se ha visto en el ejemplo), calcular derivadas, integrales, encontrar raíces (soluciones), mínimos, etc., sin embargo, se deben tener precaución con los valores que se encuentran fuera de los límites correspondientes a los datos conocidos, pues, en esos casos, el método no garantiza que dichos valores sean correctos.</p>
+
+
+
+    <h3 class="text">Algoritmo</h3>
+
+    <p class="text">El algoritmo para el cálculo de los coeficientes de la ecuación ajustada, que básicamente automatiza los pasos mostrados en el ejemplo, es el siguiente:</p>
+
+    <p class="figurasn"><img src="files/algoritmo_mincuad.png" alt="Algoritmo método de los mínimos cuadrados">
+    </p>
+
+    <p class="text">El código respectivo, ha sido añadido como un método dinámico de la clase <dfn class="style1">Array</dfn> y debe ser llamado desde el vector que tiene los grupos funcionales, se le manda la matriz con los datos a ajustar (td) y devuelve un objeto con: a) La ecuación ajustada: <strong class="style1">f</strong>; b) Los coeficientes de la ecuación ajustada: <strong class="style1">c</strong> y d) El coeficiente de correlación: <strong class="style1">r</strong>.</p>
+
+    <p class="text">Para emplear este método, es conveniente crear primero la matriz con los datos a ajustar (tabla con los datos a ajustar) y el vector con los grupos funcionales.</p>
+    
+    <p class="text">Por ejemplo, para realizar el ajuste de la anterior sección, se crea la matriz con los datos a ajustar y el vector con los grupos funcionales:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var td = [[1, 2.5, 3.5, 4], [3.8, 15, 26, 33]];<br>var vf = [x=&gt;1, x=&gt;x*x];</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Y se llama al método desde "vf" (el vector con los grupos funcionales):</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var {f, c, r} = vf.mincuad(td);</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Como se puede ver, los resultados se guardan en las varialbles "f" (la función), "c" (los coeficientes ajustados) y "r" el coeficiente de correlación.</p>
+
+    <p class="text">Los coeficientes de la ecuación ajustada, son:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">c</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Que son iguales a los calculados previamente. El coeficiente de correlación,  es:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">r</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Que igualmente es el resultado calculado en la sección previa. Como este valor es cercano a 1, se concluye que el ajuste es bueno, sin embargo, para determinar visualmente si el ajuste es bueno o no, se dibuja la ecuación ajustada (f) y los datos conocidos (td):</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">plot({f:[f, td], xi:0, xf:5})</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Que, como era de esperar, es igual a la gráfica de la sección previa y que en consecuencia, ratifica el valor del coeficiente de correlación.</p>
+
+    <p class="text">Como se dijo, una vez que se cuenta con la ecuación ajustada puede ser empleada como cualquier función estándar. Por ejemplo, para calcular el valor de "y" para un valor de "x" igual a 3.1, se escribe:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">f(3.1)</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="text">Para obtener varios valores a la vez se puede emplear <dfn class="style1">map</dfn>:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">[1.1, 1.3, 1.7, 2.1, 2.7, 3.2, 3.8].map(f).round(2)</div>
+        <div class="resultado"></div>
+    </div>
+
+
+    <br>
+    <div class="ejercicio" id="ejercicio1" enunciado="1"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Para ajustar, con "mincuad", los datos de la siguiente tabla:</p><div class="table borderAll"><table align="center" style="width:600px"><tbody><tr><th class="center">x</th><td class="center">2.4</td><td class="center">4.5</td><td class="center">6.6</td><td class="center">8.4</td><td class="center">9.3</td><td class="center">10.2</td><td class="center">11.1</td><td class="center">12.5</td><td class="center">14.7</td><td class="center">16.1</td><td class="center">17.4</td><td class="center">18.3</td></tr><tr><th class="center">y</th><td class="center">11</td><td class="center">41</td><td class="center">90</td><td class="center">141</td><td class="center">169</td><td class="center">205</td><td class="center">251</td><td class="center">318</td><td class="center">421</td><td class="center">545</td><td class="center">592</td><td class="center">655</td></tr></tbody></table></div><p class="ejerciciosn">A la ecuación:</p>\[y = ax^2+\dfrac{b}{x}+c\text{e}\raisebox{0.9em}{$\frac{x}{8}$}\]</div><p class="pregunta"><span class="pregunta"></span>Complete el siguiente código, donde "td" es la matriz con los datos a ajustar y "vf" es el vector con los grupos funcionales:</p><div id="pregunta7" class="calculadora" spellcheck="false"><div class="instruccion">var td = [[2.4,4.5,6.6,8.4,9.3,10.2,11.1,12.5,14.7,16.1,17.4,18.3],<br>          [11,41,90,141,169,205,251,318,421,545,592,655]];<br>var vf = [x=&gt;x**2, x=&gt;1/x, x=&gt;Math.exp(x/8)];<br>var {f, c, r} = vf.mincuad(td);<br>print(c);<br>r</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Dibuje la gráfica de la función ajustada y los puntos conocidos (límites: menor y mayor valor de "x"):</p><div id="pregunta8" class="calculadora" spellcheck="false"><div class="instruccion">plot({f:[f,td], xi:2.4, xf:18.3})</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Calcule (con "map") valores de "y" para valores de "x" iguales a: 2, 4, 7, 9, 11, 12, 13, 14, 16, 17 y 18, redondeando el resultado al segundo dígito después del punto:</p><div id="pregunta9" class="calculadora" spellcheck="false"><div class="instruccion">[2,4,7,9,11,12,13,14,16,17,18].map(f).round(2)</div><div class="resultado"></div></div><p class="pregunta" id="pregunta10"><span class="pregunta"></span>De acuerdo al coeficiente de correlación (r), se puede afirmar que el ajustes es <span class="campo_arrastrar correcta" tabindex="0" data-opciones="perfecto&amp;@%regular&amp;@%bueno&amp;@%pésimo&amp;@%malo" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">bueno</span>.</p><p class="pregunta" id="pregunta11"><span class="pregunta"></span>El análisis visual de la gráfica permite concluir que el ajuste es <span class="campo_arrastrar correcta" tabindex="0" data-opciones="perfecto&amp;@%pésimo&amp;@%bueno&amp;@%malo&amp;@%regular" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">bueno</span>.<br></p><p class="pregunta" id="pregunta12"><span class="pregunta"></span>El valor de "y" para "x = 4" es: <span class="campo_literal correcta" tabindex="0" contenteditable="true">32.31</span>.</p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="18" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 1 -->
+
+    <div class="ejercicio" id="ejercicio2" enunciado="1"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Para ajustar, con "mincuad", los datos de la siguiente tabla:</p><div class="table borderAll"><table align="center" style="width:550px"><tbody><tr><th class="center">x</th><td class="center">3.8</td><td class="center">1.5</td><td class="center">9.2</td><td class="center">3.6</td><td class="center">1.0</td><td class="center">5.1</td><td class="center">5.4</td><td class="center">9.0</td><td class="center">8.0</td><td class="center">6.1</td><td class="center">6.8</td><td class="center">8.3</td></tr><tr><th class="center">y</th><td class="center">15</td><td class="center">8</td><td class="center">124</td><td class="center">13</td><td class="center">8</td><td class="center">27</td><td class="center">35</td><td class="center">116</td><td class="center">84</td><td class="center">46</td><td class="center">50</td><td class="center">87</td></tr></tbody></table></div><p class="ejerciciosn">A la ecuación:</p>\[y = ax^3+b\sqrt{x}+\dfrac{c}{\sqrt[3]{x}}\]</div><p class="pregunta"><span class="pregunta"></span>Complete el siguiente código, donde "td" es la matriz con los datos a ajustar y "vf" es el vector con los grupos funcionales:</p><div id="pregunta25" class="calculadora" spellcheck="false"><div class="instruccion">var td = [[3.8, 1.5, 9.2, 3.6, 1.0, 5.1, 5.4, 9.0, 8.0, 6.1, 6.8, 8.3],<br>          [15, 8, 124, 13, 8, 27, 35, 116, 84, 46, 50, 87]];<br>var vf = [x=&gt;x**3, x=&gt;Math.sqrt(x), x=&gt;1/Math.cbrt(x)];<br>var {f, c, r} = vf.mincuad(td);<br>print(c);<br>r</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Dibuje la gráfica de la función ajustada y los puntos conocidos (límites: menor y mayor valor de "x"):</p><div id="pregunta26" class="calculadora" spellcheck="false"><div class="instruccion">plot({f:[f,td], xi:1.0, xf:9.2})</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Calcule la derivada primera (método "df1") de la función ajustada, para x=6, redondeando el resultado al cuarto dígito después del punto</p><div id="pregunta27" class="calculadora" spellcheck="false"><div class="instruccion">f.df1(6).round(4)</div><div class="resultado"></div></div><p class="pregunta" id="pregunta28"><span class="pregunta"></span>De acuerdo al coeficiente de correlación (r), se puede afirmar que el ajustes es <span class="campo_arrastrar correcta" tabindex="0" data-opciones="regular&amp;@%malo&amp;@%perfecto&amp;@%pésimo&amp;@%bueno" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">bueno</span>.</p><p class="pregunta" id="pregunta29"><span class="pregunta"></span>El análisis visual de la gráfica permite concluir que el ajuste es <span class="campo_arrastrar correcta" tabindex="0" data-opciones="malo&amp;@%pésimo&amp;@%regular&amp;@%perfecto&amp;@%bueno" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">bueno</span>.<br></p><p class="pregunta" id="pregunta30"><span class="pregunta"></span>El valor del coeficiente "a", de la ecuación ajustada, es: <span class="campo_literal correcta" tabindex="0" contenteditable="true">0.1442570952896253</span>.</p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="18" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 2 -->
+
+    <div class="ejercicio" id="ejercicio3" enunciado="2"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Para ajustar, con "mincuad", los datos de la siguiente tabla:</p><div class="table borderAll"><table align="center" style="width:350px"><tbody><tr><th class="center">x</th><td class="center">1</td><td class="center">2</td><td class="center">5</td><td class="center">6</td><td class="center">7</td><td class="center">11</td><td class="center">15</td><td class="center">16</td><td class="center">21</td></tr><tr><th class="center">y</th><td class="center">1</td><td class="center">3</td><td class="center">2</td><td class="center">2</td><td class="center">5</td><td class="center">4</td><td class="center">6</td><td class="center">6</td><td class="center">7</td></tr></tbody></table></div><p class="ejerciciosn">A la ecuación:</p>\[y = a \ln(x)+b\sin(x)-c\cos(x)\]</div><p class="pregunta"><span class="pregunta"></span>Complete el siguiente código, donde "td" es la matriz con los datos a ajustar y "vf" es el vector con los grupos funcionales:</p><div id="pregunta49" class="calculadora" spellcheck="false"><div class="instruccion">var td = [[1,2,5,6,7,11,15,16,21],<br>          [1,3,2,2,5,4,6,6,7]];<br>var vf = [x=&gt;Math.log(x), x=&gt;Math.sin(x), x=&gt;-Math.cos(x)];<br>var {f, c, r} = vf.mincuad(td);<br>print(c);<br>r</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Dibuje la gráfica de la función ajustada y los puntos conocidos (límites: menor y mayor valor de "x"):</p><div id="pregunta50" class="calculadora" spellcheck="false"><div class="instruccion">plot({f:[f,td], xi:1, xf:21})</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Encuentre la solución de la función ajustada con el método incremental (valor inicial 5, incremento -0.1), redondeando el resultado al quinto dígito después del punto.</p><div id="pregunta51" class="calculadora" spellcheck="false"><div class="instruccion">f.incremental({xi:5, dx:-0.1}).round(5)</div><div class="resultado"></div></div><p class="pregunta" id="pregunta52"><span class="pregunta"></span>De acuerdo al coeficiente de correlación (r), se puede afirmar que el ajustes es <span class="campo_arrastrar correcta" tabindex="0" data-opciones="perfecto&amp;@%bueno&amp;@%pésimo&amp;@%malo" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">bueno</span>.</p><p class="pregunta" id="pregunta53"><span class="pregunta"></span>El análisis visual de la gráfica permite concluir que el ajuste es <span class="campo_arrastrar correcta" tabindex="0" data-opciones="regular&amp;@%pésimo&amp;@%bueno&amp;@%perfecto" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">regular</span>.<br></p><p class="pregunta" id="pregunta54"><span class="pregunta"></span>El valor del coeficiente "b", de la ecuación ajustada, es: <span class="campo_literal correcta" tabindex="0" contenteditable="true">1.1913752200728451</span></p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="18" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 3 -->
+
+    <div class="ejercicio" id="ejercicio4" enunciado="2"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Para ajustar, con "mincuad", los datos de la siguiente tabla:</p><div class="table borderAll"><table align="center" style="width:550px"><tbody><tr><th class="center">x</th><td class="center">1</td><td class="center">4</td><td class="center">8</td><td class="center">10</td><td class="center">13</td><td class="center">15</td><td class="center">17</td><td class="center">18</td><td class="center">22</td><td class="center">24</td></tr><tr><th class="center">y</th><td class="center">9.3</td><td class="center">23.4</td><td class="center">38.2</td><td class="center">45.2</td><td class="center">55.3</td><td class="center">61.9</td><td class="center">68.5</td><td class="center">71.8</td><td class="center">84.7</td><td class="center">91.1</td></tr></tbody></table></div><p class="ejerciciosn">A la ecuación:</p>\[y =ax+b\log(x)+c\sqrt[5]{x}\]</div><p class="pregunta"><span class="pregunta"></span>Complete el siguiente código, donde "td" es la matriz con los datos a ajustar y "vf" es el vector con los grupos funcionales:</p><div id="pregunta67" class="calculadora" spellcheck="false"><div class="instruccion">var td = [[1,4,8,10,13,15,17,18,22,24],<br>          [9.3,23.4,38.2,45.2,55.3,61.9,68.5,71.8,84.7,91.1]];<br>var vf = [x=&gt;x, x=&gt;Math.log10(x), x=&gt;Math.nthroot(x,5)];<br>var {f, c, r} = vf.mincuad(td);<br>print(c);<br>r</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Dibuje la gráfica de la función ajustada y los puntos conocidos (límites: menor y mayor valor de "x"):</p><div id="pregunta68" class="calculadora" spellcheck="false"><div class="instruccion">plot({f:[f,td], xi:1, xf:24})</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Resuelva el siguiente sistema de ecuaciones lineales ("f" es la ecuación ajustada):\[\begin{aligned}z_1+4z_2+6z_3+2z_4&amp;=f(2)\\2z_1+3z_2+z_3+5z_4&amp;=f(3)\\3z_1+z_2+4z_3+7z_4&amp;=f(4)\\4z_1+2z_2+5z_3+6z_4&amp;=f(5)\end{aligned}\]Con el método de Gauss Jordán con pivotaje total (resultado: vector, redondeo: segundo dígito):</p><div id="pregunta69" class="calculadora" spellcheck="false"><div class="instruccion">[[1,4,6,2,f(2)],<br> [2,3,1,5,f(3)],<br> [3,1,4,7,f(4)],<br> [4,2,5,6,f(5)]].gaussjpt().transpose().round(2)</div><div class="resultado"></div></div><p class="pregunta" id="pregunta70"><span class="pregunta"></span>De acuerdo al coeficiente de correlación (r), se puede afirmar que el ajustes es <span class="campo_arrastrar correcta" tabindex="0" data-opciones="regular&amp;@%bueno&amp;@%pésimo&amp;@%perfecto&amp;@%malo" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">bueno</span>.</p><p class="pregunta" id="pregunta71"><span class="pregunta"></span>El análisis visual de la gráfica permite concluir que el ajuste es <span class="campo_arrastrar correcta" tabindex="0" data-opciones="perfecto&amp;@%regular&amp;@%pésimo&amp;@%bueno&amp;@%malo" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">bueno</span>.<br></p><p class="pregunta" id="pregunta72"><span class="pregunta"></span>El valor de la variable "z<sub>2</sub>", es: <span class="campo_literal correcta" tabindex="0" contenteditable="true">1.61</span>.</p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="18" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 4 -->
+
+    <div class="ejercicio" id="ejercicio5" enunciado="2"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Para ajustar, con "mincuad", los datos de la siguiente tabla:</p><div class="table borderAll"><table align="center" style="width:550px"><tbody><tr><th class="center">x</th><td class="center">1</td><td class="center">3</td><td class="center">4</td><td class="center">6</td><td class="center">7</td><td class="center">9</td><td class="center">8</td><td class="center">10</td><td class="center">11</td><td class="center">12</td></tr><tr><th class="center">y</th><td class="center">6</td><td class="center">100</td><td class="center">195</td><td class="center">470</td><td class="center">600</td><td class="center">705</td><td class="center">685</td><td class="center">570</td><td class="center">240</td><td class="center">-362</td></tr></tbody></table></div><p class="ejerciciosn">A la ecuación:</p>\[y = a+bx^{2.3}+cx^{3.1}+dx^{4.2}\]</div><p class="pregunta"><span class="pregunta"></span>Complete el siguiente código, donde "td" es la matriz con los datos a ajustar y "vf" es el vector con los grupos funcionales:</p><div id="pregunta87" class="calculadora" spellcheck="false"><div class="instruccion">var td = [[1, 3, 4, 6, 7, 9, 8, 10, 11, 12],<br>          [6, 100, 195, 470, 600, 705, 685, 570, 240, -362]];<br>var vf = [x=&gt;1, x=&gt;x**2.3, x=&gt;x**3.1, x=&gt;x**4.2];<br>var {f, c, r} = vf.mincuad(td);<br>print(c);<br>r</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Dibuje la gráfica de la función ajustada y los puntos conocidos (límites: menor y mayor valor de "x"):</p><div id="pregunta88" class="calculadora" spellcheck="false"><div class="instruccion">plot({f:[f,td], xi:1, xf:12})</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Tomando el segmento de solución positivo de la gráfica, resuelva la ecuación ajustada por el método de regula falsi (precisión/exactitud: 7 dígitos, redondeo: segundo dígito):</p><div id="pregunta89" class="calculadora" spellcheck="false"><div class="instruccion">f.refa({xi:11, xf:12, err:7}).round(2)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Encuentre las raíces de la siguiente ecuación polinomial ("f" es la ecuación ajustada):\[y^5+2y^4-3y^2+5y+f(7) = 0\]Con "roots" redondeando los resultados al primer dígito después del punto:</p><div id="pregunta90" class="calculadora" spellcheck="false"><div class="instruccion">[1,2,0,-3,5,f(7)].roots().round(1)</div><div class="resultado"></div></div><p class="pregunta" id="pregunta91"><span class="pregunta"></span>De acuerdo al coeficiente de correlación (r), se puede afirmar que el ajustes es <span class="campo_arrastrar correcta" tabindex="0" data-opciones="pésimo&amp;@%malo&amp;@%regular&amp;@%perfecto&amp;@%bueno" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">bueno</span>.</p><p class="pregunta" id="pregunta92"><span class="pregunta"></span>El análisis visual de la gráfica permite concluir que el ajuste es <span class="campo_arrastrar correcta" tabindex="0" data-opciones="pésimo&amp;@%bueno&amp;@%perfecto&amp;@%malo&amp;@%regular" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">bueno</span>.<br></p><p class="pregunta" id="pregunta93"><span class="pregunta"></span>La solución positiva de la ecuación ajustada, es: <span class="campo_literal correcta" tabindex="0" contenteditable="true">11.46</span>.</p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="21" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 5 -->
+
+
+
+
+    <h2 class="text">Ajuste de datos con Simplex y Descenso Acelerado</h2>
+
+    <p class="text">Puesto que el ajuste de datos es un proceso de optimización, se pueden emplear los métodos Simplex y Descenso acelerado, para ajustar datos a ecuaciones analíticas.</p>
+
+    <p class="text">La función de error es simplemente la ecuación de definición de los mínimos cuadrados, es decir la <a href="#ec5">ecuación 5</a>.</p>
+
+    <p class="text">En este caso, para minimizar las diferencias entre los valores conocidos y los calculados, se hacen variar los coeficientes, por lo tanto, las variables que deben recibir la función de error, son los coeficientes de la ecuación. Los datos conocidos deben ser declarados dentro de la función y la función debe devolver un vector con los restos de la ecuación.</p>
+
+    <p class="text">Por ejemplo, para ajustar los datos del ejemplo manual:</p>
+
+    <div class="table borderAll">
+    <table align="center" style="width:250px;">
+        <tbody><tr>
+        <th class="center" style="width:40px;">x</th><td class="center">1.0</td><td class="center">2.5</td><td class="center">3.5</td><td class="center">4.0</td>
+        </tr>
+        <tr>
+        <th class="center">y</th><td class="center">3.8</td><td class="center">15.0</td><td class="center">26.0</td><td class="center">33.0</td>
+        </tr>
+    </tbody></table>
+    </div>
+
+    <p class="text">A la ecuación:</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                y = a + bx^2                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Se crea la función que devuelve el vector con las ecuaciones igualadas a cero, declarando previamente la matriz con los datos a ajustar (td):</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var td = [[1, 2.5, 3.5, 4], [3.8, 15, 26, 33]];<br>var&nbsp;f = ([a, b]) =&gt; {<br>  const fa = x =&gt; a+b*x*x;<br>  let v = [];<br>  for (let i=0; i&lt;td[0].length; i++)<br>    v.push(fa(td[0][i])-td[1][i]);<br>  return v;<br>};</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Con esta función, se puede encontrar los coeficientes de la ecuación ajustada llamando al método simplex, guardando los resultados en "c" (coeficientes) y "e" (valor de la función de error):</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var {v:c, e} = f.simplex({vi:[1.1, 1.2], err:9});</div>
+    <div class="resultado"></div></div>
+    
+    <p class="text">Por consiguiente los coeficientes de la ecuación ajustada (redondeados al sexto dígito después del punto) son:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">c.round(6)</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="text">El valor de la función de error:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">e.round(6)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Que al ser cercano a cero, informa que el ajuste es bueno.</p>
+
+    <p class="text">Los resultados pueden ser calculado también llamando al método del  descenso acelerado:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var {v:c, e} = f.descensoa({vi:[1.1, 1.2], err:9});<br>[c, e].round(6)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Ambos métodos devuelven resultados que concuerdan con los obtenidos con <dfn class="style1">mincuad</dfn>, sin embargo, al ser métodos iterativos, se trabaja con una precisión limitada (9 dígitos en este ejemplo) comparada con los 14 a 16 dígitos de un método no iterativo como <dfn class="style1">mincuad</dfn>, no obstante, el principal inconveniente de los métodos iterativos no es la precisión, sino la necesidad de asumir valores iniciales y la incertidumbre de la convergencia.</p>
+
+    <p class="text">Para juzgar visualmente el resultado del ajuste, se dibuja la gráfica de la ecuación ajustada y los puntos conocidos. Con ese fin, es necesario programar primero la función ajustada:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var [a, b] = c;<br>var f = x =&gt; a+b*x*x;</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="text">Y se la dibuja entre un límite inferior menor al menor valor de la variable independiente y uno superior mayor al mayor valor de la variable independiente (en este caso entre 0.8 y 4.2):</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">plot({f:[f, td], xi:0.8, xf:4.2})</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Como se puede ver el ajuste es bueno: la curva es uniforme y los datos se distribuyen uniformemente a ambos lados de la curva (o sobre la misma).</p>
+
+    <p class="text">Se puede calcular también el coeficiente de correlación:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var yp = td[1].sum()/td[1].length;<br>Math.sqrt(td[0].map(f).sub(yp).sqr().sum()/td[1].sub(yp).sqr().sum())</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Que al ser cercano a 1, informa (en concordancia con la gráfica) que el ajuste es muy bueno.</p>
+
+    <p class="text">En resumen, las desventajas de estos métodos, con relación al método desarrollado previamente (<dfn class="style1">mincuad</dfn>), son: a) Son iterativos y en consecuencia la convergencia no está garantizada; b) Requieren valores iniciales asumidos para iniciar el proceso; c) Trabajan con una precision (o exactitud) limitada; d) Casi siempre requieren más tiempo para encontrar las soluciones.</p>
+
+    <p class="text">En contrapartida, estos métodos son más generales, porque no necesitan que la ecuación se encuentre en forma de la <a href="#ec1">ecuación 1</a>. Por lo tanto, con estos métodos se pueden ajustar datos a cualquier forma de ecuación analítica. Además, estos métodos no están limitados a una sola variable, por lo que pueden ser empleados también en el ajuste multivariable.</p>
+
+    <p class="text">En base al procedimiento anterior, se ha creado el método <b class="style1">mincuadSimplex</b>, que al igual que <dfn class="style1">mincuad</dfn> devuelve un objeto con la función correspondiente a la ecuación ajustada (<dfn class="style1">f</dfn>), los coeficientes de la ecuación ajustada (<dfn class="style1">c</dfn>) y el coeficiente de correlación (<dfn class="style1">r</dfn>).</p>
+
+    <p class="text">En este caso, sin embargo, se llama al método desde la función a ajustar (no desde el vector con los grupos funcionales), además, como el método es iterativo, se debe mandar también el vector con los valores iniciales asumidos (vi). Opcionalmente se puede mandar también la precisión/exactitud permitida (err, por defecto 12) y el límite de iteraciones (li, por defecto 1000).</p>
+
+    <p class="text">Generalmente el método logra convergencia con los valores por defecto, sin embargo, de no ser así, se puede disminuir la precisión/exactitud (err) y/o incrementar el límite de iteraciones (li). Los Resultados se devuelven con 8 dígitos de precisión.</p>
+
+    <p class="text">Se puede crear un método similar empleando el método del Descenso Acelerado, pero dado que este método es menos estable, no sería de utilidad práctica.</p>
+
+    <p class="text">Para ajustar los datos del ejemplo previo, empleando <dfn class="style1">mincuadSimplex</dfn>, se crean la matriz de datos y la función a ajustar:</p>
+    
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var td = [[1, 2.5, 3.5, 4], [3.8, 15, 26, 33]];<br>var vi = [1.1, 1.2];<br>var fa = ([a, b], [x]) =&gt; a+b*x**2;</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="text">Entonces se llama al método y se asignan los resultados a variables:</p>
+    
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var {f, c, r} = fa.mincuadSimplex({td, vi});</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="text">Siendo los coeficientes de la ecuación ajustada y el coeficiente de correlación:</p>
+    
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">print(c);<br>r</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="text">Con la función ajustada (f) se puede, por ejemplo, dibujar la gráfica de la función y los puntos conocidos:</p>
+    
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">plot({f:[f, td], xi:0.8, xf:4.2})</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="text">Por supuesto, no es imprescindible guardar la matriz "td", el vector "vi" y la función a ajustar "fa", en variables:</p>
+    
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var {f, c, r} =(([a, b], [x]) =&gt; a+b*x*x).mincuadSimplex({<br>  td:[[1, 2.5, 3.5, 4], [3.8, 15, 26, 33]],<br>	vi:[1.1, 1.2]<br>});<br>print(c);<br>r</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Sin embargo, como se puede ver, la instrucción es menos clara y en ocasiones, como cuando es necesario dibujar la gráfica de la función, se debe volver a reescribir (o copiar) la matriz de datos.</p>
+
+    <p class="text">Como se dijo, la ventaja de los métodos de optimización, es que permiten ajustar los datos a cualquier forma de ecuación, pero además, no están limitados a dos variables, sino que es posible hacer ajuste multivariable, por ejemplo, para ajustar los siguientes datos:</p>
+
+    <div class="table borderAll">
+    <table align="center" style="width:500px;">
+        <tbody><tr>
+        <th class="center" style="width:40px;">x</th><td class="center">1</td><td class="center">3</td><td class="center">4</td><td class="center">7</td><td class="center">10</td><td class="center">11</td><td class="center">13</td><td class="center">14</td><td class="center">16</td><td class="center">20</td>
+        </tr>
+        <tr>
+        <th class="center">y</th><td class="center">2.1</td><td class="center">2.6</td><td class="center">3.2</td><td class="center">4.2</td><td class="center">5.3</td><td class="center">6.4</td><td class="center">7.4</td><td class="center">8.2</td><td class="center">9.6</td><td class="center">10.5</td>
+        </tr>
+        <tr>
+        <th class="center">z</th><td class="center">0.23</td><td class="center">0.85</td><td class="center">1.07</td><td class="center">1.65</td><td class="center">2.19</td><td class="center">2.46</td><td class="center">2.85</td><td class="center">3.07</td><td class="center">3.51</td><td class="center">4.15</td>
+        </tr>
+    </tbody></table>
+    </div>
+
+    <p class="text">A la ecuación:</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                z = \dfrac{a\cdot x+b\cdot x\cdot y-c\cdot y^2}{d\cdot x+e\cdot y}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Que a pesar de tener dos variables independientes ("x" y "y"), una dependiente ("z"), 5 coeficientes ("a", "b", "c", "d", "e") y no estar en la forma estándar (<a href="#ec1">ecuación 1</a>), se procede básicamente de la misma forma que en el ejemplo anterior, tomando en cuenta, por supuesto, la variable adicional.</p>
+
+    <p class="text">Los datos necesarios son:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var td = [[1, 3, 4, 7, 10, 11, 13, 14, 16, 20],<br>          [2.1, 2.6, 3.2, 4.2, 5.3, 6.4, 7.4, 8.2, 9.6, 10.5],<br>          [0.23, 0.85, 1.07, 1.65, 2.19, 2.46, 2.85, 3.07, 3.51, 4.15]];<br>var vi = [1.1, 1.2, 1.3, 1.4, 1.5];<br>var fa = ([a, b, c, d, e], [x, y]) =&gt; (a*x+b*x*y-c*y*y)/<br>    			(d*x+e*y);</div>
+        <div class="resultado"></div>
+    </div>
+<!-- 
+    <p class="text">Si los valores correspondientes al eje "x" no estarían ordenados ascendentemente (en este caso lo están), primero sería necesario ordenar la matriz en base a los valores de "x", lo que se consigue con el método "sort", así, si ese fuera el caso, la matriz podría ser ordenada con la siguiente instrucción:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">td = td.transpose().sort((a,b)=>a[0]-b[0]).transpose()</div>
+        <div class="resultado"></div>
+    </div> -->
+
+    <p class="text">Los datos son ajustados llamando a <dfn class="style1">mincuadSimplex</dfn>:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var {f, c, r} = fa.mincuadSimplex({td, vi});</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Siendo los coeficientes de la ecuación ajustada y el coeficiente de correlación:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">print(c);<br>r</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Por el valor del coeficiente de correlación (cercano a uno) se puede concluir que el ajuste ha sido bueno, no obstante, como ya se dijo, ese no es un parámetro del todo confiable, porque si bien la ecuación ajustada puede predecir correctamente valores para los puntos conocidos, su comportamiento, entre los puntos, puede ser irregular.</p>
+
+    <p class="text">La forma más confiable de juzgar un ajuste es mediante el análisis visual de la gráfica de los puntos conocidos y la curva de la ecuación ajustada. Sin embargo, al tratarse de tres variables, no se puede emplear la función <dfn class="style1">plot</dfn> para dibujar los valores conocidos (los puntos) y la curva de la función ajustada, pero sí se puede emplear la función <dfn class="style1">plotly</dfn> (que como se recordará en realidad llama a la función <dfn class="style1">Plotly.newPlot</dfn>).</p>
+
+    <p class="text">Para elaborar la gráfica, primero se crea el objeto con los datos conocidos (los datos tabulados), recordando que dichos datos se encuentran en la variable "td":</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var trace1 = {<br>  x: td[0], <br>  y: td[1],<br>  z: td[2],<br>  mode: "markers",<br>  marker: {<br>    size: 5,<br>    color: "red",<br>  },<br>  type: "scatter3d"<br>};</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Como se puede ver, los valores de los ejes "x", "y" y "z", corresponden a las filas 0, 1 y 2 de la matriz "td". En este objeto, se instruye a <dfn class="style1">plotly</dfn> que dibuje únicamente los puntos (mode: "markers"), que cada punto tenga un tamaño de 5 pixeles y esté en color rojo (red). El tipo de gráfica es "scatter3d", es decir una gráfica con puntos tridimensionales (x, y, z), unidos o no, con líneas rectas.</p>
+
+    <p class="text">De manera similar, se crea el objeto con los valores obtenidos con la ecuación ajustada "f", sin embargo, ahora no se dibuja una curva, sino la superficie de la ecuación ajustada (porque al ser una función bidimensional, su gráfica es la de una superficie, no la de una curva).</p>
+    
+    <p class="text">Para generar las matrices, con los valores que permiten construir la malla sobre la cual se dibuja la superficie (tres matrices bidimensionales: una para cada eje), se puede emplear la función <b class="style1">getAxes</b> (empleada internamente por la función <b class="style1">surfacePlot</b>) que recibe un vector "fun", con las funciones a dibujar (en este caso sólo una: la ecuación ajustada), los límites mínimos y máximos de los ejes "x", "y" (xmin, xmax, ymin, ymax) y los incrementos respectivos (dx, dy). La función devuelve una matriz con tres elementos: las matrices bidimensionales "x", "y" y la matriz "z" con tantas matrices bidimensionales, como funciones recibidas, en este caso sólo una (que se recibe en "z"):</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var [x,y,[z]] = getAxes({fun:[f], xmin:0, xmax:22, dx:0.2, ymin:1.1, ymax:12.5, dy:0.2}).round(2);</div>
+    <div class="resultado"></div></div>
+
+    <p class="text">Como se puede ver, los resultados son redondeados al segundo dígito después del punto, porque esa es la precisión máxima de los datos conocidos. Note también que los límites mínimos y máximos de "x" y "y", son menores a los menores valores tabulados y mayores a los mayores valores tabulados, esto para impedir que el menor y el mayor punto conocido, queden al borde de la superficie.</p>
+
+    <p class="text">Entonces, con las matrices generadas, se define el objeto para dibujar la superficie:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var trace2 = {<br>  x,<br>  y,<br>  z,<br>  contours: {<br>    x: {show: true, color: 'rgb(80,80,80)',},<br>    y: {show: true, color: 'rgb(80,80,80)',},<br>    z: {show: true, color: 'rgb(80,80,80)',},<br>  },<br>  colorscale: "Viridis",<br>  showscale: false,<br>  type: "surface",<br>};</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Donde se instruye a <dfn class="style1">plotly</dfn> que dibuje con las tres matrices bidimensionales (x, y, z) una superficie (type: "surface"), con la escala de colores "Viridis", sin mostrar la barra de la escala de colores (showscale: false) y mostrando (show: true) las líneas de la malla (contours), en color gris claro ("rgb(80,80,80)").</p>
+
+    <p class="text">Finalmente se crea el objeto "layout", donde se fija por defecto el modo de arrastre en órbita (dragmode: "orbit"), para que la imagen pueda ser rotada en todas las direcciones (no sólo alrededor del eje "z"). La relación de aspecto (aspectratio) de la escena (scene), para todos los ejes, se fija en 1, para que todos los ejes tengan la misma escala y se establece el valor inicial del ojo (eye) de la cámara (camera) de manera que la gráfica se muestre (inicialmente) en una posición donde se puedan ver todos los puntos conocidos y la superficie de la ecuación ajustada:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var layout = {<br>  dragmode: "orbit",<br>  scene: {<br>    aspectratio: {x: 1, y: 1, z: 1,},<br>    camera: {<br>      eye: {<br>        x: -1.6763964580053603,<br>        y: 0.7003995864558651,<br>        z: 1.1775548118366015,<br>      }<br>    }<br>  },<br>};</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="text">En realidad, el objeto "layout" es prescindible (excepto quizá por la relación de aspecto), porque la imagen puede ser colocada en el modo de órbita, simplemente haciendo click en el botón respectivo en la barra de botones y la imagen puede ser rotada manualmente, hasta ver claramente los puntos conocidos y la superficie ajustada.</p>
+
+    <p class="text">Finalmente, se dibuja la gráfica llamando a la función <dfn class="style1">plotly</dfn>:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">plotly([trace1, trace2], layout)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Como se puede apreciar en la gráfica, todos los puntos conocidos están en la superficie de la ecuación ajustada, por lo que se puede concluir que el ajuste es muy bueno (en concordancia con el valor del coeficiente de correlación). Si existieran puntos por encima y debajo de la superficie, pero equitativamente distribuidos, sería un buen ajuste, pero si la mayoría de los puntos están sobre o debajo de la superficie, el ajuste sería malo.</p>
+
+    <p class="text">Si el ajuste corresponde a 4 o más variables, no es posible su representación gráfica. En esos casos no queda otra alternativa que juzgar el ajuste mediante el valor del coeficiente de correlación, pero, la ecuación ajustada debe ser posteriormente validada contrastando los valores calculados, con nuevos valores obtenidos en laboratorio y/o equipos de medición empleados en la práctica.</p>
+
+    <p class="text">Así, si en este caso no fuera posible elaborar la gráfica de los puntos conocidos y la curva ajustada, se podrían calcular algunos valores intermedios, por ejemplo para los siguientes valores de "x" y "y":</p>
+
+    <div class="table borderAll">
+        <table align="center" style="width:500px;">
+            <tbody><tr>
+            <th class="center" style="width:40px;">x</th><td class="center">1.5</td><td class="center">3.5</td><td class="center">5</td><td class="center">8</td><td class="center">10.5</td><td class="center">12</td><td class="center">13.5</td><td class="center">15</td><td class="center">18</td>
+            </tr>
+            <tr>
+            <th class="center">y</th><td class="center">2.3</td><td class="center">2.9</td><td class="center">3.8</td><td class="center">4.8</td><td class="center">6</td><td class="center">7</td><td class="center">7.9</td><td class="center">9</td><td class="center">10</td>
+            </tr>
+        </tbody></table>
+    </div><br>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var td2 = [[1.5, 3.5, 5, 8, 10.5, 12, 13.5, 15, 18],<br>           [2.3, 2.9, 3.8, 4.8, 6, 7, 7.9, 9, 10]];<br>td2.transpose().map(([x,y])=&gt;f(x,y).round(2))</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Luego, para validar el ajuste, se comparan estos valores con valores obtenidos en laboratorio y/o equipos de medición empleados en la práctica.</p>
+    
+    <p class="text">Observe que en este caso, antes de llamar a <dfn class="style1">map</dfn>, se transpone la matriz de datos (td2) para que cada fila (cada dato que recibe la función de <dfn class="style1">map</dfn>) corresponda a un par de datos "x"-"y" (en lugar de a una fila con todos los datos de "x" y otra con los datos de "y"), de esa manera, en cada repetición, la función recibe un vector con un par de datos que se asignan a las variables "x" y "y" ([x,y]) y con esos valores se calculan y redondean, los valores de "z" (f(x,y).round(2)).</p>
+
+
+    <br>
+    <div class="ejercicio" id="ejercicio6" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Para ajustar, con "mincuadSimplex", los datos de la siguiente tabla:</p><div class="table borderAll"><table align="center" style="width:620px"><tbody><tr><th class="center" style="width:30px;">x</th><td class="center">2.3</td><td class="center">4.5</td><td class="center">6.7</td><td class="center">8.4</td><td class="center">9.2</td><td class="center">10.1</td><td class="center">11.2</td><td class="center">12.6</td><td class="center">14.5</td><td class="center">16.3</td><td class="center">17.2</td><td class="center">18.1</td></tr><tr><th class="center">y</th><td class="center">11</td><td class="center">41</td><td class="center">90</td><td class="center">141</td><td class="center">169</td><td class="center">205</td><td class="center">251</td><td class="center">318</td><td class="center">421</td><td class="center">545</td><td class="center">592</td><td class="center">655</td></tr></tbody></table></div><p class="ejerciciosn">A la ecuación:</p>\[y = ax^2+\dfrac{b}{x}+c\text{e}\raisebox{0.9em}{$\frac{x}{8}$}\]</div><p class="pregunta"><span class="pregunta"></span>Complete el siguiente código, donde "td" es la matriz con los datos a ajustar, "vi" es el vector con los valores iniciales asumidos (1.1, 1.2, ...) y "fa" es la función con la ecuación a ajustar:</p><div id="pregunta94" class="calculadora" spellcheck="false"><div class="instruccion">var td = [[2.3,4.5,6.7,8.4,9.2,10.1,11.2,12.6,14.5,16.3,17.2,18.1],<br>          [11,41,90,141,169,205,251,318,421,545,592,655]];<br>var vi = [1.1,1.2,1.3];<br>var fa = ([a,b,c], [x]) =&gt; a*x**2+b/x+c*Math.exp(x/8);<br>var {f, c, r} = fa.mincuadSimplex({td,vi});<br>print(c);<br>r</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Dibuje la gráfica de la función ajustada y los puntos conocidos (límites: menor y mayor valor de "x"):</p><div id="pregunta95" class="calculadora" spellcheck="false"><div class="instruccion">plot({f:[f,td], xi:2.3, xf:18.1})</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Calcule (con "map") valores de "y" para valores de "x" iguales a: 2, 4, 7, 9, 11, 12, 13, 14, 16, 17 y 18, redondeando el resultado al segundo dígito después del punto:</p><div id="pregunta96" class="calculadora" spellcheck="false"><div class="instruccion">[2,4,7,9,11,12,13,14,16,17,18].map(f).round(2)</div><div class="resultado"></div></div><p class="pregunta" id="pregunta97"><span class="pregunta"></span>De acuerdo al coeficiente de correlación (r), se puede afirmar que el ajustes es <span class="campo_arrastrar correcta" tabindex="0" data-opciones="regular&amp;@%perfecto&amp;@%bueno&amp;@%malo&amp;@%pésimo" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">bueno</span>.</p><p class="pregunta" id="pregunta98"><span class="pregunta"></span>El análisis visual de la gráfica permite concluir que el ajuste es <span class="campo_arrastrar correcta" tabindex="0" data-opciones="bueno&amp;@%perfecto&amp;@%regular&amp;@%pésimo&amp;@%malo" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">bueno</span>.<br></p><p class="pregunta" id="pregunta99"><span class="pregunta"></span>El valor de "y" para "x = 7" es: <span class="campo_literal correcta" tabindex="0" contenteditable="true">97.35</span>.</p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="18" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 6 -->
+
+    <div class="ejercicio" id="ejercicio7" enunciado="1"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Para ajustar, con "mincuadSimplex", los datos de la siguiente tabla:</p><div class="table borderAll"><table align="center" style="width:550px"><tbody><tr><th class="center">x</th><td class="center">3.8</td><td class="center">1.5</td><td class="center">9.2</td><td class="center">3.6</td><td class="center">1.0</td><td class="center">5.1</td><td class="center">5.4</td><td class="center">9.0</td><td class="center">8.0</td><td class="center">6.1</td><td class="center">6.8</td><td class="center">8.3</td></tr><tr><th class="center">y</th><td class="center">15</td><td class="center">8</td><td class="center">124</td><td class="center">13</td><td class="center">8</td><td class="center">27</td><td class="center">35</td><td class="center">116</td><td class="center">84</td><td class="center">46</td><td class="center">50</td><td class="center">87</td></tr></tbody></table></div><p class="ejerciciosn">A la ecuación:</p>\[y = ax^3+b\sqrt{x}+\dfrac{c}{\sqrt[3]{x}}\]</div><p class="pregunta"><span class="pregunta"></span>Complete el siguiente código, donde "td" es la matriz con los datos a ajustar, "vi" es el vector con los valores iniciales asumidos (1.1, 1.2, ...) y "fa" es la función con la ecuación a ajustar:</p><div id="pregunta118" class="calculadora" spellcheck="false"><div class="instruccion">var td = [[3.8,1.5,9.2,3.6,1.0,5.1,5.4,9.0,8.0,6.1,6.8,8.3],<br>          [15,8,124,13,8,27,35,116,84,46,50,87]];<br>var vi = [1.1,1.2,1.3];<br>var fa = ([a,b,c], [x]) =&gt; a*x**3+b*Math.sqrt(x)+c/Math.cbrt(x);<br>var {f, c, r} = fa.mincuadSimplex({td,vi});<br>print(c);<br>r</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Dibuje la gráfica de la función ajustada y los puntos conocidos (límites: menor y mayor valor de "x"):</p><div id="pregunta119" class="calculadora" spellcheck="false"><div class="instruccion">plot({f:[f,td], xi:1, xf:9.2})</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Calcule la derivada primera (método "df1") de la función ajustada, para x=6, redondeando el resultado al cuarto dígito después del punto</p><div id="pregunta120" class="calculadora" spellcheck="false"><div class="instruccion">f.df1(6).round(4)</div><div class="resultado"></div></div><p class="pregunta" id="pregunta121"><span class="pregunta"></span>De acuerdo al coeficiente de correlación (r), se puede afirmar que el ajustes es <span class="campo_arrastrar correcta" tabindex="0" data-opciones="malo&amp;@%bueno&amp;@%regular&amp;@%perfecto&amp;@%pésimo" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">bueno</span>.</p><p class="pregunta" id="pregunta122"><span class="pregunta"></span>El análisis visual de la gráfica permite concluir que el ajuste es <span class="campo_arrastrar correcta" tabindex="0" data-opciones="perfecto&amp;@%malo&amp;@%regular&amp;@%bueno&amp;@%pésimo" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">bueno</span>.<br></p><p class="pregunta" id="pregunta123"><span class="pregunta"></span>El valor del coeficiente "b", de la ecuación ajustada, es: <span class="campo_literal correcta" tabindex="0" contenteditable="true">2.3796349</span>.</p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="18" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 7 -->
+
+    <div class="ejercicio" id="ejercicio8" enunciado="1"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Para ajustar, con "mincuadSimplex", los datos de la siguiente tabla:</p><div class="table borderAll"><table align="center" style="width:350px"><tbody><tr><th class="center">x</th><td class="center">1</td><td class="center">3</td><td class="center">5</td><td class="center">6</td><td class="center">8</td><td class="center">12</td><td class="center">14</td><td class="center">16</td><td class="center">20</td></tr><tr><th class="center">y</th><td class="center">1</td><td class="center">3</td><td class="center">2</td><td class="center">2</td><td class="center">5</td><td class="center">4</td><td class="center">6</td><td class="center">6</td><td class="center">7</td></tr></tbody></table></div><p class="ejerciciosn">A la ecuación:</p>\[y = a \ln(x)+b\sin(x)-c\cos(x)\]</div><p class="pregunta"><span class="pregunta"></span>Complete el siguiente código, donde "td" es la matriz con los datos a ajustar, "vi" es el vector con los valores iniciales asumidos (1.1, 1.2, ...) y "fa" es la función con la ecuación a ajustar:</p><div id="pregunta136" class="calculadora" spellcheck="false"><div class="instruccion">var td = [[1,3,5,6,8,12,14,16,20],<br>          [1,3,2,2,5,4,6,6,7]];<br>var vi = [1.1,1.2,1.3];<br>var fa = ([a,b,c], [x]) =&gt; a*Math.log(x)+b*Math.sin(x)-c*Math.cos(x);<br>var {f, c, r} = fa.mincuadSimplex({td,vi});<br>print(c);<br>r</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Dibuje la gráfica de la función ajustada y los puntos conocidos (límites: menor y mayor valor de "x"):</p><div id="pregunta137" class="calculadora" spellcheck="false"><div class="instruccion">plot({f:[f,td], xi:1, xf:20})</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Encuentre la solución de la función ajustada con el método incremental (valor inicial 5, incremento -0.1), redondeando el resultado al quinto dígito después del punto.</p><div id="pregunta138" class="calculadora" spellcheck="false"><div class="instruccion">f.incremental({xi:5, dx:-0.1}).round(5)</div><div class="resultado"></div></div><p class="pregunta" id="pregunta139"><span class="pregunta"></span>De acuerdo al coeficiente de correlación (r), se puede afirmar que el ajustes es <span class="campo_arrastrar correcta" tabindex="0" data-opciones="perfecto&amp;@%bueno&amp;@%pésimo&amp;@%malo" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">bueno</span>.</p><p class="pregunta" id="pregunta140"><span class="pregunta"></span>El análisis visual de la gráfica permite concluir que el ajuste es <span class="campo_arrastrar correcta" tabindex="0" data-opciones="pésimo&amp;@%bueno&amp;@%regular&amp;@%perfecto" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">regular</span>.<br></p><p class="pregunta" id="pregunta141"><span class="pregunta"></span>El valor del coeficiente "c", de la ecuación ajustada, es: <span class="campo_literal correcta" tabindex="0" contenteditable="true">0.70661907</span>.</p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="18" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 8 -->
+
+    <div class="ejercicio" id="ejercicio9" enunciado="2"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Para ajustar, con "mincuadSimplex", los datos de la siguiente tabla:</p><div class="table borderAll"><table align="center" style="width:550px"><tbody><tr><th class="center">x</th><td class="center">1</td><td class="center">4</td><td class="center">8</td><td class="center">10</td><td class="center">13</td><td class="center">15</td><td class="center">17</td><td class="center">18</td><td class="center">22</td><td class="center">24</td></tr><tr><th class="center">y</th><td class="center">9.3</td><td class="center">23.4</td><td class="center">38.2</td><td class="center">45.2</td><td class="center">55.3</td><td class="center">61.9</td><td class="center">68.5</td><td class="center">71.8</td><td class="center">84.7</td><td class="center">91.1</td></tr></tbody></table></div><p class="ejerciciosn">A la ecuación:</p>\[y =ax+b\log(x)+c\sqrt[5]{x}\]</div><p class="pregunta"><span class="pregunta"></span>Complete el siguiente código, donde "td" es la matriz con los datos a ajustar, "vi" es el vector con los valores iniciales asumidos (1.1, 1.2, ...) y "fa" es la función con la ecuación a ajustar:</p><div id="pregunta160" class="calculadora" spellcheck="false"><div class="instruccion">var td = [[1,4,8,10,13,15,17,18,22,24],<br>          [9.3,23.4,38.2,45.2,55.3,61.9,68.5,71.8,84.7,91.1]];<br>var vi = [1.1,1.2,1.3];<br>var fa = ([a,b,c], [x]) =&gt; a*x+b*Math.log10(x)+c*Math.nthroot(x,5);<br>var {f, c, r} = fa.mincuadSimplex({td,vi});<br>print(c);<br>r</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Dibuje la gráfica de la función ajustada y los puntos conocidos (límites: menor y mayor valor de "x"):</p><div id="pregunta161" class="calculadora" spellcheck="false"><div class="instruccion">plot({f:[f,td], xi:1, xf:24})</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Resuelva el siguiente sistema de ecuaciones lineales ("f" es la ecuación ajustada):\[\begin{aligned}z_1+4z_2+6z_3+2z_4&amp;=f(2)\\2z_1+3z_2+z_3+5z_4&amp;=f(3)\\3z_1+z_2+4z_3+7z_4&amp;=f(4)\\4z_1+2z_2+5z_3+6z_4&amp;=f(5)\end{aligned}\]Con el método de Gauss Jordán con pivotaje total (resultado: vector, redondeo: segundo dígito):</p><div id="pregunta162" class="calculadora" spellcheck="false"><div class="instruccion">[[1,4,6,2,f(2)],<br> [2,3,1,5,f(3)],<br> [3,1,4,7,f(4)],<br> [4,2,5,6,f(5)]].gaussjpt().transpose().round(2)</div><div class="resultado"></div></div><p class="pregunta" id="pregunta163"><span class="pregunta"></span>De acuerdo al coeficiente de correlación (r), se puede afirmar que el ajustes es <span class="campo_arrastrar correcta" tabindex="0" data-opciones="regular&amp;@%malo&amp;@%pésimo&amp;@%bueno&amp;@%perfecto" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">bueno</span>.</p><p class="pregunta" id="pregunta164"><span class="pregunta"></span>El análisis visual de la gráfica permite concluir que el ajuste es <span class="campo_arrastrar correcta" tabindex="0" data-opciones="perfecto&amp;@%bueno&amp;@%regular&amp;@%malo&amp;@%pésimo" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">bueno</span>.<br></p><p class="pregunta" id="pregunta165"><span class="pregunta"></span>El valor de la variable "z<sub>4</sub>", es: <span class="campo_literal correcta" tabindex="0" contenteditable="true">1.47</span>.</p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="18" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 9 -->
+
+    <div class="ejercicio" id="ejercicio10" enunciado="2"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Para ajustar, con "mincuadSimplex", los datos de la siguiente tabla:</p><div class="table borderAll"><table align="center" style="width:550px"><tbody><tr><th class="center">x</th><td class="center">1</td><td class="center">3</td><td class="center">4</td><td class="center">6</td><td class="center">7</td><td class="center">9</td><td class="center">8</td><td class="center">10</td><td class="center">11</td><td class="center">12</td></tr><tr><th class="center">y</th><td class="center">6</td><td class="center">100</td><td class="center">195</td><td class="center">470</td><td class="center">600</td><td class="center">705</td><td class="center">685</td><td class="center">570</td><td class="center">240</td><td class="center">-362</td></tr></tbody></table></div><p class="ejerciciosn">A la ecuación:</p>\[y = a+bx^{2.3}+cx^{3.1}+dx^{4.2}\]</div><p class="pregunta"><span class="pregunta"></span>Complete el siguiente código, donde "td" es la matriz con los datos a ajustar, "vi" es el vector con los valores iniciales asumidos (1.1, 1.2, ...) y "fa" es la función con la ecuación a ajustar:</p><div id="pregunta180" class="calculadora" spellcheck="false"><div class="instruccion">var td = [[1,3,4,6,7,9,8,10,11,12],<br>          [6,100,195,470,600,705,685,570,240,-362]];<br>var vi = [1.1,1.2,1.3,1.4];<br>var fa = ([a,b,c,d], [x]) =&gt; a+b*x**2.3+c*x**3.1+d*x**4.2;<br>var {f, c, r} = fa.mincuadSimplex({td,vi});<br>print(c);<br>r</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Dibuje la gráfica de la función ajustada y los puntos conocidos (límites: menor y mayor valor de "x"):</p><div id="pregunta181" class="calculadora" spellcheck="false"><div class="instruccion">plot({f:[f,td], xi:1, xf:12})</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Tomando el segmento de solución positivo de la gráfica, resuelva la ecuación ajustada por el método de regula falsi (precisión/exactitud: 7 dígitos, redondeo: segundo dígito):</p><div id="pregunta182" class="calculadora" spellcheck="false"><div class="instruccion">f.refa({xi:11,xf:12, err:7}).round(2)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Encuentre las raíces de la siguiente ecuación polinomial ("f" es la ecuación ajustada):\[y^5+2y^4-3y^2+5y+f(7) = 0\]Con "roots" redondeando los resultados al primer dígito después del punto:</p><div id="pregunta183" class="calculadora" spellcheck="false"><div class="instruccion">[1,2,0,-3,5,f(7)].roots().round(1)</div><div class="resultado"></div></div><p class="pregunta" id="pregunta184"><span class="pregunta"></span>De acuerdo al coeficiente de correlación (r), se puede afirmar que el ajustes es <span class="campo_arrastrar correcta" tabindex="0" data-opciones="pésimo&amp;@%perfecto&amp;@%malo&amp;@%regular&amp;@%bueno" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">bueno</span>.</p><p class="pregunta" id="pregunta185"><span class="pregunta"></span>El análisis visual de la gráfica permite concluir que el ajuste es <span class="campo_arrastrar correcta" tabindex="0" data-opciones="malo&amp;@%perfecto&amp;@%bueno&amp;@%pésimo&amp;@%regular" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">bueno</span>.<br></p><p class="pregunta" id="pregunta186"><span class="pregunta"></span>La solución positiva de la ecuación ajustada, es: <span class="campo_literal correcta" tabindex="0" contenteditable="true">11.46</span>.</p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="21" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 10 -->
+
+    <div class="ejercicio" id="ejercicio11" enunciado="1"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Empleando el método <dfn>mincuadSimplex</dfn> ajuste los datos de la siguiente tabla:</p><div class="table borderAll"><table align="center" style="width:620px"><tbody><tr><th class="center">x</th><td class="center">1</td><td class="center">3</td><td class="center">6</td><td class="center">7</td><td class="center">9</td><td class="center">12</td><td class="center">16</td><td class="center">18</td><td class="center">22</td><td class="center">24</td></tr><tr><th class="center">y</th><td class="center">0.17</td><td class="center">1.49</td><td class="center">3.39</td><td class="center">5.9</td><td class="center">8.99</td><td class="center">14.64</td><td class="center">21.43</td><td class="center">29.29</td><td class="center">38.16</td><td class="center">48</td></tr></tbody></table></div><p class="ejerciciosn">A la ecuación:</p>\[y = \dfrac{ax^2+b\ln(x)}{c+d\sqrt[3]{x}}\]</div><p class="pregunta"><span class="pregunta"></span>Complete el siguiente código, donde "td" es la matriz con los datos a ajustar, "vi" es el vector con los valores iniciales asumidos (1.1, 1.2, ...) y "fa" es la función con la ecuación a ajustar:</p><div id="pregunta193" class="calculadora" spellcheck="false"><div class="instruccion">var td = [[1,3,6,7,9,12,16,18,22,24],<br>          [0.17,1.49,3.39,5.9,8.99,14.64,21.43,29.29,38.16,48]];<br>var vi = [1.1,1.2,1.3,1.4];<br>var fa = ([a,b,c,d], [x]) =&gt; (a*x**2+b*Math.log(x))/(c+d*Math.cbrt(x));<br>var {f, c, r} = fa.mincuadSimplex({td,vi});<br>print(c);<br>r</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Dibuje la gráfica de la función ajustada y los puntos conocidos (límites: menor y mayor valor de "x"):</p><div id="pregunta194" class="calculadora" spellcheck="false"><div class="instruccion">plot({f:[f,td], xi:1, xf:24})</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con la función ajustada (f), encuentre las soluciones del siguiente sistema de ecuaciones no lineales\[\begin{array}{r c r}x^2+2xy^2-f(5)&amp;=&amp;44\\x^2y-3x^2y^2+f(6)&amp;=&amp;-117\end{array}\]Con el método de Newton (valores iniciales: 1 y 2, precisión/exactitud: 9 dígitos, redondeo: tercer dígito):</p><div id="pregunta195" class="calculadora" spellcheck="false"><div class="instruccion">var fr = ([x, y]) =&gt; [<br>  x**2+2*x*y**2-f(5)-44,<br>  x**2*y-3*x**2*y**2+f(6)+117<br>];<br>fr.newtonnl({vi:[1,2], err:9}).v.round(3)</div><div class="resultado"></div></div><p class="pregunta" id="pregunta196"><span class="pregunta"></span>De acuerdo al coeficiente de correlación (r), se puede afirmar que el ajustes es <span class="campo_arrastrar correcta" tabindex="0" data-opciones="pésimo&amp;@%perfecto&amp;@%regular&amp;@%malo&amp;@%bueno" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">bueno</span>.</p><p class="pregunta" id="pregunta197"><span class="pregunta"></span>El análisis visual de la gráfica permite concluir que el ajuste es <span class="campo_arrastrar correcta" tabindex="0" data-opciones="malo&amp;@%bueno&amp;@%regular&amp;@%perfecto&amp;@%pésimo" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">bueno</span>.<br></p><p class="pregunta" id="pregunta198"><span class="pregunta"></span>El valor de "x", en el sistema de ecuaciones no lineales, es: <span class="campo_literal correcta" tabindex="0" contenteditable="true">6.145</span>.</p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="25" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 11 -->
+
+    <div class="ejercicio" id="ejercicio12" enunciado="2"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Empleando el método <dfn>mincuadSimplex</dfn> ajuste los datos de la siguiente tabla:</p><div class="table borderAll"><table align="center" style="width:720px"><tbody><tr><th class="center">x</th><td class="center">2.0</td><td class="center">1.3</td><td class="center">4.0</td><td class="center">3.6</td><td class="center">7.3</td><td class="center">6.2</td><td class="center">1.2</td><td class="center">3.0</td><td class="center">5.5</td><td class="center">7.2</td><td class="center">2.8</td><td class="center">3.2</td></tr><tr><th class="center">y</th><td class="center">2.3</td><td class="center">4.2</td><td class="center">3.2</td><td class="center">2.6</td><td class="center">5.1</td><td class="center">3.3</td><td class="center">6.2</td><td class="center">4.2</td><td class="center">2.2</td><td class="center">1.3</td><td class="center">2.6</td><td class="center">2.9</td></tr><tr><th class="center">z</th><td class="center">1.71</td><td class="center">1.36</td><td class="center">4.51</td><td class="center">3.44</td><td class="center">10.40</td><td class="center">6.93</td><td class="center">1.03</td><td class="center">3.72</td><td class="center">4.68</td><td class="center">3.94</td><td class="center">2.80</td><td class="center">3.26</td></tr></tbody></table></div><p class="ejerciciosn">A la ecuación:</p>\[z=\dfrac{a+b\ln(x)+c\ln(y)}{\dfrac{d}{x}+\dfrac{e}{y}}\]</div><p class="pregunta"><span class="pregunta"></span>Complete el siguiente código, donde "td" es la matriz con los datos a ajustar, "vi" es el vector con los valores iniciales asumidos (1.1, 1.2, ...) y "fa" es la función con la ecuación a ajustar:</p><div id="pregunta217" class="calculadora" spellcheck="false"><div class="instruccion">var td = [[2.0, 1.3, 4.0, 3.6, 7.3, 6.2, 1.2, 3.0, 5.5, 7.2, 2.8, 3.2],<br>      [2.3, 4.2, 3.2, 2.6, 5.1, 3.3, 6.2, 4.2, 2.2, 1.3, 2.6, 2.9],<br>      [1.71, 1.36, 4.51, 3.44, 10.40, 6.93, 1.03, 3.72, 4.68, 3.94, 2.80, 3.26]];<br>var vi = [1.1, 1.2, 1.3, 1.4, 1.5];<br>var fa = ([a, b, c, d, e], [x, y]) =&gt;(a + b * Math.log(x) + c * Math.log(y)) /(d / x + e / y);<br>var { f, c, r } = fa.mincuadSimplex({ td, vi });<br>print(c);<br>r</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con la ecuación ajustada, calcule (con "map") los valores de "z" (redondeados al segundo dígito después del punto) para los siguientes valores: "x" = 1, 2.2, 3.3, 4.4, 5.6, 7.7, 8.8; "y" = 1.5, 2.3, 3.5, 4.8, 5.9, 7.9, 9.0</p><div id="pregunta218" class="calculadora" spellcheck="false"><div class="instruccion">var vx = [1, 2.2, 3.3, 4.4, 5.6, 7.7, 8.8];<br>var vy = [1.5, 2.3, 3.5, 4.8, 5.9, 7.9, 9.0];<br>[vx, vy].transpose().map(([x, y])=&gt;f(x, y)).round(2)</div><div class="resultado"></div></div><p class="pregunta" id="pregunta219"><span class="pregunta"></span>De acuerdo al coeficiente de correlación (r), se puede afirmar que el ajustes es <span class="campo_arrastrar correcta" tabindex="0" data-opciones="regular&amp;@%malo&amp;@%perfecto&amp;@%bueno&amp;@%pésimo" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">bueno</span>.</p><p class="pregunta" id="pregunta220"><span class="pregunta"></span>El valor calculado de "z" para x=7.7, y=7.9, es: <span class="campo_literal correcta" tabindex="0" contenteditable="true">13.47</span>.</p><p class="pregunta"><span class="pregunta"></span>Con <dfn class="style1">plotly</dfn>, dibuje la gráfica de los puntos conocidos (td): 7 pixeles, en color marrón (maroon) y la ecuación ajustada "f": escala de colores "Earth", malla visible en color verde claro "lightgreen", límites mínimos y máximos: valores mínimos tabulados menos 1 y valores máximos tabulados más 1.</p><div id="pregunta221" class="calculadora" spellcheck="false"><div class="instruccion">var trace1 = {<br>  x:td[0] , <br>  y:td[1] ,<br>  z: td[2],<br>  mode: "markers",<br>  marker: {<br>    size: 7,<br>    color: "maroon",<br>  },<br>  type: "scatter3d"<br>};</div><div class="resultado"></div><div class="instruccion">var[x,y ,[z] ] = getAxes({fun:[f], xmin:0.2, xmax:8.3, dx:0.2, ymin:0.3, ymax:7.2, dy:0.2}).round(2);</div><div class="resultado"></div><div class="instruccion">var trace2 = {<br>  x,<br>  y,<br>  z,<br>  contours: {<br>    x:{show:true, color: "lightgreen"},<br>    y:{show:true, color: "lightgreen"},<br>    z:{show:true, color: "lightgreen"},<br>  },<br>  colorscale: "Earth",<br>  showscale: false,<br>  type: "surface"<br>};</div><div class="resultado"></div><div class="instruccion">var layout = {<br>  scene: {<br>    aspectratio: {x:1, y:1, z:1},<br>  }<br>};</div><div class="resultado"></div><div class="instruccion">plotly([trace1,trace2],layout )</div><div class="resultado"></div></div><p class="pregunta" id="pregunta222"><span class="pregunta"></span>El análisis visual de la gráfica, permite determinar que el ajuste es <span class="campo_arrastrar correcta" tabindex="0" data-opciones="pésimo&amp;@%perfecto&amp;@%malo&amp;@%bueno" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">bueno</span>.</p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="48" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 12 -->
+
+
+
+
+    <h2 class="text">Ajuste de datos en Octave y MatLab</h2>
+
+    <p class="text">Tanto Octave, como MatLab, poseen varias funciones para el ajuste de datos. En la asignatura se empleará la función <b class="style1">nlinfit</b>.</p>
+    
+    <p class="text">En Octave, <b class="style1">nlinfit</b> se encuentra en el paquete <b class="style1">optim</b>, por lo que es necesario importar dicho paquete, antes de hacer uso de la función.</p>
+
+    <p class="text">La función <dfn class="style1">nlinfit</dfn> recibe (en ese orden) un vector con los valores conocidos de la variable "x", un vector con los valores conocidos de la variable "y", la función donde se ha programado la ecuación a ajustar y un vector con los valores iniciales asumidos.</p>
+
+    <p class="text">Debido a que la versión Octave de myCompiler no tiene instalado el paquete <strong class="style1">optim</strong> y no permite su instalación de paquetes adicionales, se empleará la aplicación <a href="https://octave-online.net/" target="_blank" rel="Octave online"><strong class="style1">Octave online</strong></a>.</p>
+
+    <p class="text">En Octave online, es más cómodo trabajar en un archivo, el cual puede ser creado en la columna izquierda de la interfaz y editado en la columna derecha adjunta. Alternativamente, el código puede ser escrito directamente en la consola (en la columna derecha de la interfaz), no obstante, debido a que no es posible corregir el código, una vez ejecutado (con la tecla Enter) es más difícil corregir errores.</p>
+
+    <p class="text">Lamentablemente la aplicación no es adaptativa, por lo que en los teléfonos inteligentes se debe emplear la aplicación en el modo de sitio de computadora (o sitio de escritorio).</p>
+
+    <p class="text">Para ajustar los siguientes datos:</p>
+    
+    <div class="table borderAll">
+        <table align="center" style="width:275px;">
+            <tbody><tr>
+            <th class="center" style="width:40px;">x</th><td class="center">1.0</td><td class="center">2.5</td><td class="center">3.5</td><td class="center">4.0</td>
+            </tr>
+            <tr>
+            <th class="center">y</th><td class="center">3.8</td><td class="center">15.0</td><td class="center">26.0</td><td class="center">33.0</td>
+            </tr>
+        </tbody></table>
+    </div>
+
+    <p class="text">A la ecuación:</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                y = a + bx^2                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="te">Se escribe el siguiente código (valores iniciales asumidos: 1.1 y 1.2):</p>
+
+    <div class="codigo octave">pkg load optim;<br>format shortG;<br><br>fa = @(c,x)c(1)+c(2)*x.^2;<br><br>vx = [1.0, 2.5, 3.5, 4.0];<br>vy = [3.8, 15.0, 26.0, 33.0];<br>vi = [1.1, 1.2];<br><br>c = nlinfit(vx, vy, fa, vi)<br><br>% Resultados obtenidos<br><br>c =<br><br>       2.278969977825517<br>       1.934763946533173</div>
+
+    <p class="text">Que son los coeficientes de la ecuación ajustada (en el vector "c").</p>
+    
+    <!-- <p class="text">En este ejemplo, para asignar los elementos de un array a variables independientes, se convierte el array en un array de celdas con la función <span class="textocodigo">num2cell()</span>. Los array de celdas de Octave (y MatLab), son el equivalente más cercano a los arrays de JavaScript. Cuando se extraen todos los elementos de una array de celdas, con <strong class="style1">{:}</strong>), o partes del array con: <strong class="style1">{:, número de columna}</strong> (una fila), <strong class="style1">{número de fila, :}</strong> (una columna) o <strong class="style1">{fila inicial:fila final, columna inicial:columna final}</strong> (filas y columnas específicas), los elementos extraídos son devueltos como valores independientes, los cuales pueden ser asignados a variables (como se ha hecho en este ejemplo).</p> -->
+    
+    <p class="text">Como se vio previamente, en la función "x" se eleva al cuadrado con el operador de punto <strong class="style1">.^</strong>, porque "x" es un vector y para elevar cada uno de sus elementos al cuadrado se debe emplear el operador de punto.</p>
+
+    <p class="text">Para que octave (MatLab) realicen operaciones con cada uno de los elementos de un vector o matriz (<dfn class="style1">operaciones escalares</dfn>), se deben emplear los operadores de punto: <b class="style1">.^</b>, <b class="style1">.*</b>, <b class="style1">./</b>, <b class="style1">.+</b>, <b class="style1">.-</b> y <b class="style1">.\</b> (para dividir un escalar entre cada uno de los elementos de un array). No obstante, en la práctica, sólo se requieren los operadores: <b class="style1">.^</b>, <b class="style1">./</b> y <b class="style1">.\</b>, porque en los otros casos, Octave (y MatLab) pueden deducir si realizar o no operaciones escalares en base a los operadores, pero no con las potencias (^) porque no pueden deducir si lo que se quiere es elevar el array a la potencia o elevar cada uno de sus elementos, igualmente en las divisiones (cuando el array está en el denominador) no puede deducir si lo que se quiere es la inversa de la matriz o dividir entre cada uno de los elementos de la matriz.</p>
+
+    <p class="text">Una vez calculados los coeficientes de la ecuación, se puede programar la función ajustada "f" y calcular los valores de "y" (f(vx)) para compararlos con los valores conocidos (vy), aunque una mejor alternativa es la de dibujar los puntos conocidos y la ecuación ajustada para determinar visualmente si el ajuste es o no bueno:</p>
+
+    <div class="codigo octave">f = @(x) c(1)+c(2)*x.^2;<br><br>[f(vx), vy]'<br><br>x = 1:0.01:4;<br>plot(vx, vy, ".r", x, f(x), "-b");<br><br>% Resultados obtenidos:<br><br>ans =<br><br>        4.21373392435869                     3.8<br>       14.37124464365785                      15<br>       25.97982832285689                      26<br>       33.23519312235629                      33</div>
+
+    <p class="text">Siendo la gráfica resultante:</p>
+    
+    <div class="figurasn"><img src="./files/octave_plot_1.png" alt="Octave" style="width:550px;"></div>
+
+    <p class="text">En este caso los  puntos (.) se dibujan en color rojo (red):".r" y la función ajustada con con una línea continua (-) de color azul (blue): "-b".</p>
+
+    <p class="text">Donde, como se puede ver, los datos conocidos (los puntos) se distribuyen uniformemente alrededor de la curva ajustada (la línea azul), por lo que se puede concluir que el ajuste es bueno.</p>
+
+    
+    <div class="ejercicio" id="ejercicio13" enunciado="0"><hr><div class="enunciado"><p class="ejercicio extern"><span class="ejercicio"></span>Complete el siguiente código que, en Octave, ajusta los datos de la siguiente tabla:</p><div class="table borderAll"><table align="center" style="width:620px"><tbody><tr><th class="center" style="width:30px;">x</th><td class="center">2.3</td><td class="center">4.5</td><td class="center">6.7</td><td class="center">8.4</td><td class="center">9.2</td><td class="center">10.1</td><td class="center">11.2</td><td class="center">12.6</td><td class="center">14.5</td><td class="center">16.3</td><td class="center">17.2</td><td class="center">18.1</td></tr><tr><th class="center">y</th><td class="center">11</td><td class="center">41</td><td class="center">90</td><td class="center">141</td><td class="center">169</td><td class="center">205</td><td class="center">251</td><td class="center">318</td><td class="center">421</td><td class="center">545</td><td class="center">592</td><td class="center">655</td></tr></tbody></table></div><p class="ejerciciosn">A la ecuación:</p>\[y = ax^2+\dfrac{b}{x}+c\text{e}\raisebox{0.9em}{$\frac{x}{8}$}\]</div><p class="pregunta"><span class="pregunta"></span>Establezca el formato numérico en "longG", cargue el paquete "optim", guarde en "vx" los valores conocidos de la variable independiente, en "vy" los valores conocidos de la variable dependiente, en "vi" los valores iniciales asumidos: 1.1, 1.2, 1.3, .... Programe en "fa" (función anónima, parámetros "c" y "x") la ecuación a ajustar y ajuste los datos con "nlinfit", guardando (y mostrando) los coeficientes ajustados en "c". Programe la ecuación ajustada "f" (función anónima, parámetro "x", empleando "fa"). Luego ejecute el código en Octave online, corrija los errores cometidos al completar el código y evalúe la celda. Copie los resultados en la subsiguiente (entre las tildes invertidas).</p><div id="pregunta223" class="calculadora" spellcheck="false"><div class="instruccion">`<br>format longG;<br>pkg load optim;<br>vx = [2.3,4.5,6.7,8.4,9.2,10.1,11.2,12.6,14.5,16.3,17.2,18.1];<br>vy = [11,41,90,141,169,205,251,318,421,545,592,655];<br>vi = [1.1, 1.2, 1.3];<br>fa = @(c,x)c(1)*x.^2+c(2)./x+c(3)*exp(x/8);<br>c = nlinfit(vx, vy, fa, vi)<br>f = @(x) fa(c,x);<br>`;</div><div class="resultado"></div><div class="instruccion">`c =<br>        2.08383370756789<br>       9.674149391358121<br>      -2.559105619371679<br>`;</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con la ecuación ajustada, genere el vector "x" con valores igualmente espaciados (incremento 0.01) desde el menor hasta el mayor valor tabulado de "x". Dibuje los valores conocidos "vx" y "vy" (puntos rojos: ".r"), conjuntamente los valores calculados "x" y "f(x)" (línea azul: "-b"). Luego ejecute el código en Octave, corrija los errores cometidos al completar el código y evalúe la celda.</p><div id="pregunta224" class="calculadora" spellcheck="false"><div class="instruccion">`<br>x = 2.3:0.01:18.1;<br>plot(vx, vy, ".r", x, f(x), "-b");<br>`;</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con la ecuación ajustada, calcule los valores de "y" para valores de "x" iguales a: 2, 4, 7, 9, 11, 12, 13, 14, 16, 17 y 18, redondeando los resultados al segundo dígito.<br>Una vez resuelto el problema en Octave online, copie el código que resuelve el problema en la siguiente celda de código (entre las tildes invertidas) y los resultados obtenidos en la subsiguiente celda.</p><div id="pregunta225" class="calculadora" spellcheck="false"><div class="instruccion">`<br>round(f([2, 4, 7, 9, 11, 12, 13, 14, 16, 17, 18])*1e2)/1e2<br>`;</div><div class="resultado"></div><div class="instruccion">`<br><br>ans =<br> Columns 1 through 3:<br>       9.890000000000001                   31.54       97.34999999999999<br> Columns 4 through 6:<br>                  161.98                   242.9                  289.41<br> Columns 7 through 9:<br>                  339.92                   394.4                  515.16<br> Columns 10 and 11:<br>                  581.37                  651.42<br>`;</div><div class="resultado"></div></div><p class="pregunta" id="pregunta226"><span class="pregunta"></span>El análisis visual de la gráfica permite concluir que el ajuste es <span class="campo_arrastrar correcta" tabindex="0" data-opciones="regular&amp;@%malo&amp;@%bueno&amp;@%perfecto&amp;@%pésimo" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">bueno</span>.<br></p><p class="pregunta" id="pregunta227"><span class="pregunta"></span>El valor de "y" para "x = 17" es: <span class="campo_literal correcta" tabindex="0" contenteditable="true">581.37</span>.</p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="29" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 13 -->
+    <div class="ejercicio" id="ejercicio14" enunciado="0"><hr><div class="enunciado"><p class="ejercicio extern"><span class="ejercicio"></span>Complete el siguiente código que ajusta, en Octave, los datos de la siguiente tabla:</p><div class="table borderAll"><table align="center" style="width:550px"><tbody><tr><th class="center" style="width:30px;">x</th><td class="center">3.8</td><td class="center">1.3</td><td class="center">9.2</td><td class="center">3.4</td><td class="center">1.0</td><td class="center">5.1</td><td class="center">5.7</td><td class="center">9.0</td><td class="center">8.0</td><td class="center">6.4</td><td class="center">6.6</td><td class="center">8.1</td></tr><tr><th class="center">y</th><td class="center">15</td><td class="center">8</td><td class="center">124</td><td class="center">13</td><td class="center">8</td><td class="center">27</td><td class="center">35</td><td class="center">116</td><td class="center">84</td><td class="center">46</td><td class="center">50</td><td class="center">87</td></tr></tbody></table></div><p class="ejerciciosn">A la ecuación:</p>\[y = ax^3+b\sqrt{x}+\dfrac{c}{\sqrt[3]{x}}\]</div><p class="pregunta"><span class="pregunta"></span>Establezca el formato numérico en "longG", cargue el paquete "optim", guarde en "vx" los valores conocidos de la variable independiente, en "vy" los valores conocidos de la variable dependiente, en "vi" los valores iniciales asumidos: 1.1, 1.2, 1.3, .... Programe en "fa" (función anónima, parámetros "c" y "x") la ecuación a ajustar y ajuste los datos con "nlinfit", guardando (y mostrando) los coeficientes ajustados en "c". Programe la ecuación ajustada "f" (función anónima, parámetro "x", empleando "fa"). Luego ejecute el código en Octave online, corrija los errores cometidos al completar el código y evalúe la celda. Copie los resultados en la subsiguiente (entre las tildes invertidas).</p><div id="pregunta228" class="calculadora" spellcheck="false"><div class="instruccion">`<br>format longG;<br>pkg load optim;<br>vx = [3.8,1.3,9.2,3.4,1.0,5.1,5.7,9.0,8.0,6.4,6.6,8.1];<br>vy = [15,8,124,13,8,27,35,116,84,46,50,87];<br>vi = [1.1, 1.2, 1.3];<br>fa = @(c,x)c(1)*x.^3+c(2)*sqrt(x)+c(3)./cbrt(x);<br>c = nlinfit(vx, vy, fa, vi)<br>f = @(x) fa(c,x);<br>`;</div><div class="resultado"></div><div class="instruccion">`<br>c =<br>      0.1493198560280096<br>       1.472202208388773<br>       6.450669434137219<br>`;</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con la ecuación ajustada, genere el vector "x" con valores igualmente espaciados (incremento 0.01) desde el menor hasta el mayor valor tabulado de "x". Dibuje los valores conocidos "vx" y "vy" (puntos rojos: ".r"), conjuntamente los valores calculados "x" y "f(x)" (línea azul: "-b"). Luego ejecute el código en Octave, corrija los errores cometidos al completar el código y evalúe la celda.</p><div id="pregunta229" class="calculadora" spellcheck="false"><div class="instruccion">`<br>x = 1:0.01:9.2;<br>plot(vx, vy, ".r", x, f(x), "-b");<br>`;</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Calcule, con "deriv", la derivada primera de la función ajustada, para x=6, redondeando el resultado al cuarto dígito después del punto. Luego ejecute el código en Octave, corrija los errores cometidos al completar el código y evalúe la celda. Copie los resultados en la subsiguiente (entre las tildes invertidas).</p><div id="pregunta230" class="calculadora" spellcheck="false"><div class="instruccion">`<br>round(deriv(f,6)*1e4)/1e4<br>`;</div><div class="resultado"></div><div class="instruccion">`<br>ans =          16.2298<br>`;</div><div class="resultado"></div></div><p class="pregunta" id="pregunta231"><span class="pregunta"></span>El análisis visual de la gráfica permite concluir que el ajuste es <span class="campo_arrastrar correcta" tabindex="0" data-opciones="perfecto&amp;@%malo&amp;@%regular&amp;@%pésimo&amp;@%bueno" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">bueno</span>.<br></p><p class="pregunta" id="pregunta232"><span class="pregunta"></span>El valor del coeficiente "b", de la ecuación ajustada, es: <span class="campo_literal correcta" tabindex="0" contenteditable="true">1.472202208388773</span></p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="29" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 14 -->
+    <div class="ejercicio" id="ejercicio15" enunciado="0"><hr><div class="enunciado"><p class="ejercicio extern"><span class="ejercicio"></span>Complete el siguiente código que, en Octave, ajusta los datos de la siguiente tabla:</p><div class="table borderAll"><table align="center" style="width:350px"><tbody><tr><th class="center" style="width:30px;">x</th><td class="center">1</td><td class="center">3</td><td class="center">4</td><td class="center">5</td><td class="center">8</td><td class="center">11</td><td class="center">14</td><td class="center">15</td><td class="center">20</td></tr><tr><th class="center">y</th><td class="center">1</td><td class="center">3</td><td class="center">2</td><td class="center">2</td><td class="center">5</td><td class="center">4</td><td class="center">6</td><td class="center">6</td><td class="center">7</td></tr></tbody></table></div><p class="ejerciciosn">A la ecuación:</p>\[y = a \ln(x)+b\sin(x)-c\cos(x)\]</div><p class="pregunta"><span class="pregunta"></span>Establezca el formato numérico en "longG", cargue el paquete "optim", guarde en "vx" los valores conocidos de la variable independiente, en "vy" los valores conocidos de la variable dependiente, en "vi" los valores iniciales asumidos: 1.1, 1.2, 1.3, .... Programe en "fa" (función anónima, parámetros "c" y "x") la ecuación a ajustar y ajuste los datos con "nlinfit", guardando (y mostrando) los coeficientes ajustados en "c". Programe la ecuación ajustada "f" (función anónima, parámetro "x", empleando "fa"). Luego ejecute el código en Octave online, corrija los errores cometidos al completar el código y evalúe la celda. Copie los resultados en la subsiguiente (entre las tildes invertidas).</p><div id="pregunta233" class="calculadora" spellcheck="false"><div class="instruccion">`<br>format longG;<br>pkg load optim;<br>vx = [1,3,4,5,8,11,14,15,20];<br>vy = [1,3,2,2,5,4,6,6,7];<br>vi = [1.1, 1.2, 1.3];<br>fa = @(c,x)c(1)*log(x)+c(2)*sin(x)-c(3)*cos(x);<br>c = nlinfit(vx, vy, fa, vi)<br>f = @(x) fa(c,x);<br>`;</div><div class="resultado"></div><div class="instruccion">`<br>c =<br>       1.980988327359078<br>       1.014435468928723<br>      0.2368989870709431<br>`;</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con la ecuación ajustada, genere el vector "x" con valores igualmente espaciados (incremento 0.01) desde el menor hasta el mayor valor tabulado de "x". Dibuje los valores conocidos "vx" y "vy" (puntos rojos: ".r"), conjuntamente los valores calculados "x" y "f(x)" (línea azul: "-b"). Luego ejecute el código en Octave, corrija los errores cometidos al completar el código y evalúe la celda.</p><div id="pregunta234" class="calculadora" spellcheck="false"><div class="instruccion">`<br>x = 1:0.01:20;<br>plot(vx, vy, ".r", x, f(x),"-b");<br>`;</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Encuentre la solución de la función ajustada con fzero (valor inicial 1.1), redondeando el resultado al quinto dígito después del punto. Luego ejecute el código en Octave, corrija los errores cometidos al completar el código y evalúe la celda. Copie los resultados en la subsiguiente (entre las tildes invertidas).</p><div id="pregunta235" class="calculadora" spellcheck="false"><div class="instruccion">`<br>round(fzero(f,1.1)*1e5)/1e5;<br>`;</div><div class="resultado"></div><div class="instruccion">`<br>ans =          0.76472<br>`;</div><div class="resultado"></div></div><p class="pregunta" id="pregunta236"><span class="pregunta"></span>El análisis visual de la gráfica permite concluir que el ajuste es <span class="campo_arrastrar correcta" tabindex="0" data-opciones="bueno&amp;@%perfecto&amp;@%pésimo&amp;@%regular" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">regular</span>.<br></p><p class="pregunta" id="pregunta237"><span class="pregunta"></span>El valor del coeficiente "b", de la ecuación ajustada, es: <span class="campo_literal correcta" tabindex="0" contenteditable="true">1.014435468928723</span></p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="29" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 15 -->
+    <div class="ejercicio" id="ejercicio16" enunciado="0"><hr><div class="enunciado"><p class="ejercicio extern"><span class="ejercicio"></span>Complete el siguiente código que, en Octave, ajusta los datos de la siguiente tabla:</p><div class="table borderAll"><table align="center" style="width:550px"><tbody><tr><th class="center" style="width:30px;">x</th><td class="center">1</td><td class="center">4</td><td class="center">7</td><td class="center">10</td><td class="center">12</td><td class="center">15</td><td class="center">16</td><td class="center">18</td><td class="center">22</td><td class="center">23</td></tr><tr><th class="center">y</th><td class="center">9.3</td><td class="center">23.4</td><td class="center">34.7</td><td class="center">45.2</td><td class="center">52</td><td class="center">61.9</td><td class="center">65.2</td><td class="center">71.8</td><td class="center">84.7</td><td class="center">87.9</td></tr></tbody></table></div><p class="ejerciciosn">A la ecuación:</p>\[y =ax+b\log(x)+c\sqrt[5]{x}\]</div><p class="pregunta"><span class="pregunta"></span>Establezca el formato numérico en "longG", cargue el paquete "optim", guarde en "vx" los valores conocidos de la variable independiente, en "vy" los valores conocidos de la variable dependiente, en "vi" los valores iniciales asumidos: 1.1, 1.2, 1.3, .... Programe en "fa" (función anónima, parámetros "c" y "x") la ecuación a ajustar y ajuste los datos con "nlinfit", guardando (y mostrando) los coeficientes ajustados en "c". Programe la ecuación ajustada "f" (función anónima, parámetro "x", empleando "fa"). Luego ejecute el código en Octave, corrija los errores cometidos al completar el código y evalúe la celda. Copie los resultados en la subsiguiente (entre las tildes invertidas).</p><div id="pregunta238" class="calculadora" spellcheck="false"><div class="instruccion">`<br>format longG;<br>pkg load optim;<br>vx = [1,4,7,10,12,15,16,18,22,23];<br>vy = [9.3,23.4,34.7,45.2,52,61.9,65.2,71.8,84.7,87.9];<br>vi = [1.1, 1.2, 1.3];<br>fa = @(c,x)c(1)*x+c(2)*log10(x)+c(3)*nthroot(x,5);<br>c = nlinfit(vx, vy, fa, vi)<br>f = @(x) fa(c,x);<br>`;</div><div class="resultado"></div><div class="instruccion">`<br>c =<br>       3.003159895798895<br>       5.176803672003129<br>       6.291133162616288<br>`;</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con la ecuación ajustada, genere el vector "x" con valores igualmente espaciados (incremento 0.01) desde el menor hasta el mayor valor tabulado de "x". Dibuje los valores conocidos "vx" y "vy" (puntos rojos: ".r"), conjuntamente los valores calculados "x" y "f(x)" (línea azul: "-b"). Luego ejecute el código en Octave, corrija los errores cometidos al completar el código y evalúe la celda.</p><div id="pregunta239" class="calculadora" spellcheck="false"><div class="instruccion">`<br>x = 1:0.01:23;<br>plot(vx, vy, ".r", x, f(x), "-b");<br>`;</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con la función ajustada, resuelva el siguiente sistema de ecuaciones lineales:\[\begin{aligned}z_1+4z_2+6z_3+2z_4&amp;=f(2)\\2z_1+3z_2+z_3+5z_4&amp;=f(3)\\3z_1+z_2+4z_3+7z_4&amp;=f(4)\\4z_1+2z_2+5z_3+6z_4&amp;=f(5)\end{aligned}\]Con rref, resultados como vector fila, redondeandos al segundo dígito.</p><div id="pregunta240" class="calculadora" spellcheck="false"><div class="instruccion">`<br>round(rref([1,4,6,2,f(2); 2,3,1,5,f(3); 3,1,4,7,f(4); 4,2,5,6,f(5)])(:,5)'*1e2)/1e2;<br>`;</div><div class="resultado"></div><div class="instruccion">`<br>ans =<br> Columns 1 through 3:<br>                     3.4                    1.61                    0.33<br> Column 4:<br>                    1.47<br>`;</div><div class="resultado"></div></div><p class="pregunta" id="pregunta241"><span class="pregunta"></span>El análisis visual de la gráfica permite concluir que el ajuste es <span class="campo_arrastrar correcta" tabindex="0" data-opciones="perfecto&amp;@%regular&amp;@%pésimo&amp;@%bueno&amp;@%malo" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">bueno</span>.<br></p><p class="pregunta" id="pregunta242"><span class="pregunta"></span>El valor de la variable "z<sub>3</sub>", es: <span class="campo_literal correcta" tabindex="0" contenteditable="true">0.33</span>.</p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="29" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 16 -->
+    <div class="ejercicio" id="ejercicio17" enunciado="0"><hr><div class="enunciado"><p class="ejercicio extern"><span class="ejercicio"></span>Complete el siguiente código que, en Octave, ajusta los datos de la siguiente tabla:</p><div class="table borderAll"><table align="center" style="width:550px"><tbody><tr><th class="center" style="width:30px;">x</th><td class="center">1</td><td class="center">3</td><td class="center">4</td><td class="center">6</td><td class="center">7</td><td class="center">9</td><td class="center">8</td><td class="center">10</td><td class="center">11</td><td class="center">12</td></tr><tr><th class="center">y</th><td class="center">6</td><td class="center">94</td><td class="center">190</td><td class="center">461</td><td class="center">598</td><td class="center">705</td><td class="center">693</td><td class="center">577</td><td class="center">245</td><td class="center">-362</td></tr></tbody></table></div><p class="ejerciciosn">A la ecuación:</p>\[y = a+bx^{2.3}+cx^{3.1}+dx^{4.2}\]</div><p class="pregunta"><span class="pregunta"></span>Establezca el formato numérico en "longG", cargue el paquete "optim", guarde en "vx" los valores conocidos de la variable independiente, en "vy" los valores conocidos de la variable dependiente, en "vi" los valores iniciales asumidos: 1.1, 1.2, 1.3, .... Programe en "fa" (función anónima, parámetros "c" y "x") la ecuación a ajustar y ajuste los datos con "nlinfit", guardando (y mostrando) los coeficientes ajustados en "c". Programe la ecuación ajustada "f" (función anónima, parámetro "x", empleando "fa"). Luego ejecute el código en Octave online, corrija los errores cometidos al completar el código y evalúe la celda. Copie los resultados en la subsiguiente (entre las tildes invertidas).</p><div id="pregunta243" class="calculadora" spellcheck="false"><div class="instruccion">`<br>format longG;<br>pkg load optim;<br>vx = [1,3,4,6,7,9,8,10,11,12];<br>vy = [6,94,190,461,598,705,693,577,245,-362];<br>vi = [1.1, 1.2, 1.3, 1.4];<br>fa = @(c,x)c(1)+c(2)*x.^2.3+c(3)*x.^3.1+c(4)*x.^4.2;<br>c = nlinfit(vx, vy, fa, vi)<br>f = @(x) fa(c,x);<br>`;</div><div class="resultado"></div><div class="instruccion">`<br>c =<br>      0.2429816251736757<br>       3.207712638298924<br>       2.438823303444802<br>     -0.1977254519061921<br>`;</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con la ecuación ajustada, genere el vector "x" con valores igualmente espaciados (incremento 0.01) desde el menor hasta el mayor valor tabulado de "x". Dibuje los valores conocidos "vx" y "vy" (puntos rojos: ".r"), conjuntamente los valores calculados "x" y "f(x)" (línea azul: "-b"). Luego ejecute el código en Octave, corrija los errores cometidos al completar el código y evalúe la celda.</p><div id="pregunta244" class="calculadora" spellcheck="false"><div class="instruccion">`<br>x = 1:0.01:12;<br>plot(vx, vy, ".r", x, f(x), "-b");<br>`;</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Tomando como valor inicial la solución positiva de la gráfica, resuelva la ecuación ajustada con fzero, redondeando el resultado al segundo dígito. Luego ejecute el código en Octave online, corrija los errores cometidos al completar el código y evalúe la celda. Copie los resultados en la subsiguiente (entre las tildes invertidas).</p><div id="pregunta245" class="calculadora" spellcheck="false"><div class="instruccion">`<br>round(fzero(f,11.7)*1e2)/1e2;<br>`;</div><div class="resultado"></div><div class="instruccion">`<br>ans =            11.47<br>`;</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con la ecuación ajustada, encuentre las raíces de la siguiente ecuación polinomial:\[y^5+2y^4-3y^2+5y+f(7) = 0\]Con "roots" redondeando los resultados al primer dígito después del punto. Luego ejecute el código en Octave online, corrija los errores cometidos al completar el código y evalúe la celda. Copie los resultados en la subsiguiente (entre las tildes invertidas).</p><div id="pregunta246" class="calculadora" spellcheck="false"><div class="instruccion">`<br>round(roots([1,2,0,-3,5,f(7)])*1e1)/1e1;<br>`;</div><div class="resultado"></div><div class="instruccion">`<br>ans =<br>                      -4 +                      0i<br>                    -1.6 +                    3.3i<br>                    -1.6 -                    3.3i<br>                     2.6 +                    2.1i<br>                     2.6 -                    2.1i<br>`;</div><div class="resultado"></div></div><p class="pregunta" id="pregunta247"><span class="pregunta"></span>El análisis visual de la gráfica permite concluir que el ajuste es <span class="campo_arrastrar correcta" tabindex="0" data-opciones="pésimo&amp;@%regular&amp;@%perfecto&amp;@%bueno&amp;@%malo" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">bueno</span>.<br></p><p class="pregunta" id="pregunta248"><span class="pregunta"></span>La raíz real de la ecuación polinomial, es: <span class="campo_literal correcta" tabindex="0" contenteditable="true">-4</span>.</p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="29" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 17 -->
+
+
+
+
+
+
+    <h2 class="text">Ajuste de datos en Python</h2>
+
+    <p class="text">En Python, la función para el ajuste de datos es <b class="style1">curve_fit</b>, la cual se encuentra dentro de la librería <b class="style1">scipy.optimize</b>. Esta función recibe (en ese orden): la función con la ecuación a ajustar, un vector con los datos de la variable independiente (x), un vector con los datos de la variable dependiente (y) y un vector con los valores iniciales asumidos. La función devuelve un vector con los coeficientes de la ecuación ajustada y una matriz con la covarianza de los coeficientes ajustados.</p>
+
+    <p class="text">Los valores de la covarianza pueden dar una idea del error del ajuste, sin embargo, en este capítulo se determina cuan bueno o malo es el ajuste mediante el análisis visual de la gráfica, por esa razón, en este capítulo, no se emplean los valores de la covarianza (los valores de "e").</p>
+
+    <p class="text">Así, para ajustar los siguientes datos:</p>
+    
+    <div class="table borderAll">
+        <table align="center" style="width:275px;">
+            <tbody><tr>
+            <th class="center" style="width:40px;">x</th><td class="center">1.0</td><td class="center">2.5</td><td class="center">3.5</td><td class="center">4.0</td>
+            </tr>
+            <tr>
+            <th class="center">y</th><td class="center">3.8</td><td class="center">15.0</td><td class="center">26.0</td><td class="center">33.0</td>
+            </tr>
+        </tbody></table>
+    </div>
+
+    <p class="text">A la ecuación:</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                y = a + bx^2                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Se escriben las siguientes instrucciones:</p>
+
+    <div class="codigo python">import numpy as np<br>from scipy.optimize import curve_fit<br><br>vx = np.array([1.0, 2.5, 3.5, 4.0])<br>vy = np.array([3.8, 15.0, 26.0, 33.0])<br>vi = np.array([1.1, 1.2])<br><br>fa = lambda x, a, b: a+b*x**2<br><br>vc, e = curve_fit(fa, vx, vy, vi)<br>a, b = vc<br>print(a, b)<br><br># Resultados obtenidos:<br><br>2.278969922099183 1.9347639519259063</div>
+
+    <p class="text">Que son los coeficientes de la ecuación ajustada.</p>
+
+    <p class="text">Una vez calculados los coeficientes, se puede programar la función con la ecuación ajustada y emplearla para calcular, por ejemplo, los valores de "y" para los valores conocidos de "x" (vx), así como dibujar los puntos conocidos y la curva ajustada:</p>
+
+    <div class="codigo python">import matplotlib.pyplot as plt<br><br>f = lambda x: fa(x, a, b)<br><br>print(np.array([f(vx), vy]).transpose())<br><br>x = np.arange(1.0, 4.0, 0.01)<br><br>plt.plot(vx, vy, "or")<br>plt.plot(x, f(x), "-b")<br>plt.show()<br><br># Resultados obtenidos:<br><br>[[ 4.21373387  3.8       ]<br> [14.37124462 15.        ]<br> [25.97982833 26.        ]<br> [33.23519315 33.        ]]</div>
+
+    <p class="text">Siendo la gráfica resultante:</p>
+
+    <div class="figurasn"><img src="./files/python_plot_1.png" alt="" style="width:550px;"></div>
+
+    
+    <div class="ejercicio" id="ejercicio18" enunciado="0"><hr><div class="enunciado"><p class="ejercicio extern"><span class="ejercicio"></span>Complete el siguiente código que, en Python, ajusta los datos de la siguiente tabla:</p><div class="table borderAll"><table align="center" style="width:650px"><tbody><tr><th class="center" style="width:30px;">x</th><td class="center">2.3</td><td class="center">4.5</td><td class="center">6.7</td><td class="center">8.4</td><td class="center">9.2</td><td class="center">10.1</td><td class="center">11.2</td><td class="center">12.6</td><td class="center">14.5</td><td class="center">16.3</td><td class="center">17.2</td><td class="center">18.1</td></tr><tr><th class="center">y</th><td class="center">11</td><td class="center">41</td><td class="center">90</td><td class="center">141</td><td class="center">169</td><td class="center">205</td><td class="center">251</td><td class="center">318</td><td class="center">421</td><td class="center">545</td><td class="center">592</td><td class="center">655</td></tr></tbody></table></div><p class="ejerciciosn">A la ecuación:</p>\[y = ax^2+\dfrac{b}{x}+c\text{e}\raisebox{0.9em}{$\frac{x}{8}$}\]</div><p class="pregunta"><span class="pregunta"></span>Importe de "scipy.optimize", "curve_fit", importe "matplotlib.pyplot" como "plt" e importe "numpy" como "np". Guarde (como arrays de tipo numpy) en "vx" los valores conocidos de la variable independiente, en "vy" los valores conocidos de la variable dependiente, en "vi" los valores iniciales asumidos: 1.1, 1.2, 1.3, .... Programe en "fa" (función lambda, donde se requieran funciones numpy, parámetros: "x", "a", "b", "c") la ecuación a ajustar y ajuste los datos con "curve_fit", recibiendo los coeficientes ajustados en "vc", la varianza en "e" y guardando los elementos de "vc" en "a", "b" y "c". Programe la ecuación ajustada "f" (función lambda, parámetro "x", empleando "fa"). Luego ejecute el código en Python, corrija los errores cometidos al completar el código y evalúe la celda. Copie los resultados en la subsiguiente (entre las tildes invertidas).</p><div id="pregunta249" class="calculadora" spellcheck="false"><div class="instruccion">`<br>from scipy.optimize import curve_fit<br>import matplotlib.pyplot as plt<br>import numpy as np<br>vx = np.array([2.3,4.5,6.7,8.4,9.2,10.1,11.2,12.6,14.5,16.3,17.2,18.1])<br>vy = np.array([11,41,90,141,169,205,251,318,421,545,592,655])<br>vi = np.array([1.1, 1.2, 1.3])<br>fa = lambda x, a, b, c: a*x**2+b/x+c*np.exp(x/8)<br>vc, e = curve_fit(fa, vx, vy, vi)<br>a, b, c = vc<br>print(a, b, c)<br>f = lambda x: fa(x, a, b, c)<br>`;</div><div class="resultado"></div><div class="instruccion">`<br>2.083842075658516 9.67526188951258 -2.5593971856319033<br>`;</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con la ecuación ajustada, genere el vector "x" con valores igualmente espaciados (incremento 0.01) desde el menor hasta el mayor valor tabulado de "x". Dibuje los valores conocidos "vx" y "vy" (puntos rojos: ".r"), conjuntamente los valores calculados "x" y "f(x)" (línea azul: "-b"). Luego ejecute el código en Python, corrija los errores cometidos al completar el código y evalúe la celda.</p><div id="pregunta250" class="calculadora" spellcheck="false"><div class="instruccion">`<br>x = np.arange(2.3, 18.1, 0.01)<br>plt.plot(vx, vy, ".r")<br>plt.plot(x, f(x), "-b")<br>plt.show()<br>`;</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con la ecuación ajustada, calcule los valores de "y" para valores de "x" iguales a: 2, 4, 7, 9, 11, 12, 13, 14, 16, 17 y 18, redondeando los resultados al segundo dígito. Luego ejecute el código en Python, corrija los errores cometidos al completar el código y evalúe la celda. Copie los resultados en la subsiguiente (entre las tildes invertidas).</p><div id="pregunta251" class="calculadora" spellcheck="false"><div class="instruccion">`<br>print(f(np.array([2, 4, 7, 9, 11, 12, 13, 14, 16, 17, 18])).round(2))<br>`;</div><div class="resultado"></div><div class="instruccion">`<br>[  9.89  31.54  97.35 161.98 242.9  289.41 339.92 394.4  515.16 581.37<br> 651.42]<br>`;</div><div class="resultado"></div></div><p class="pregunta" id="pregunta252"><span class="pregunta"></span>El análisis visual de la gráfica permite concluir que el ajuste es <span class="campo_arrastrar correcta" tabindex="0" data-opciones="pésimo&amp;@%regular&amp;@%perfecto&amp;@%malo&amp;@%bueno" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">bueno</span>.<br></p><p class="pregunta" id="pregunta253"><span class="pregunta"></span>El valor de "y" para "x = 17" es: <span class="campo_literal correcta" tabindex="0" contenteditable="true">581.37</span>.</p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="29" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 18 -->
+    <div class="ejercicio" id="ejercicio19" enunciado="0"><hr><div class="enunciado"><p class="ejercicio extern"><span class="ejercicio"></span>Complete el siguiente código que, en Python, ajusta los datos de la siguiente tabla:</p><div class="table borderAll"><table align="center" style="width:550px"><tbody><tr><th class="center" style="width:30px;">x</th><td class="center">3.8</td><td class="center">1.3</td><td class="center">9.2</td><td class="center">3.4</td><td class="center">1.0</td><td class="center">5.1</td><td class="center">5.7</td><td class="center">9.0</td><td class="center">8.0</td><td class="center">6.4</td><td class="center">6.6</td><td class="center">8.1</td></tr><tr><th class="center">y</th><td class="center">15</td><td class="center">8</td><td class="center">124</td><td class="center">13</td><td class="center">8</td><td class="center">27</td><td class="center">35</td><td class="center">116</td><td class="center">84</td><td class="center">46</td><td class="center">50</td><td class="center">87</td></tr></tbody></table></div><p class="ejerciciosn">A la ecuación:</p>\[y = ax^3+b\sqrt{x}+\dfrac{c}{\sqrt[3]{x}}\]</div><p class="pregunta"><span class="pregunta"></span>Importe de "scipy.optimize", "curve_fit", importe "matplotlib.pyplot" como "plt" e importe "numpy" como "np". Guarde (como arrays de tipo numpy) en "vx" los valores conocidos de la variable independiente, en "vy" los valores conocidos de la variable dependiente, en "vi" los valores iniciales asumidos: 1.1, 1.2, 1.3, .... Programe en "fa" (función lambda, donde se requieran funciones numpy, parámetros: "x", "a", "b", "c") la ecuación a ajustar y ajuste los datos con "curve_fit", recibiendo los coeficientes ajustados en "vc", la varianza en "e" y guardando los elementos de "vc" en "a", "b" y "c". Programe la ecuación ajustada "f" (función lambda, parámetro "x", empleando "fa"). Luego ejecute el código en Python, corrija los errores cometidos al completar el código y evalúe la celda. Copie los resultados en la subsiguiente (entre las tildes invertidas).</p><div id="pregunta254" class="calculadora" spellcheck="false"><div class="instruccion">`<br>from scipy.optimize import curve_fit<br>import matplotlib.pyplot as plt<br>import numpy as np<br>vx = np.array([3.8,1.3,9.2,3.4,1.0,5.1,5.7,9.0,8.0,6.4,6.6,8.1])<br>vy = np.array([15,8,124,13,8,27,35,116,84,46,50,87])<br>vi = np.array([1.1, 1.2, 1.3])<br>fa = lambda x, a, b, c: a*x**3+b*np.sqrt(x)+c/np.cbrt(x)<br>vc, e = curve_fit(fa, vx, vy, vi)<br>a, b, c = vc<br>print(a, b, c)<br>f = lambda x: fa(x, a, b, c)<br>`;</div><div class="resultado"></div><div class="instruccion">`<br>0.14931985591458904 1.472202244949302 6.450669351584162<br>`;</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con la ecuación ajustada, genere el vector "x" con valores igualmente espaciados (incremento 0.01) desde el menor hasta el mayor valor tabulado de "x". Dibuje los valores conocidos "vx" y "vy" (puntos rojos: ".r"), conjuntamente los valores calculados "x" y "f(x)" (línea azul: "-b"). Luego ejecute el código en Python, corrija los errores cometidos al completar el código y evalúe la celda.</p><div id="pregunta255" class="calculadora" spellcheck="false"><div class="instruccion">`<br>x = np.arange(1, 9.2, 0.01)<br>plt.plot(vx, vy, ".r")<br>plt.plot(x, f(x), "-b")<br>plt.show()<br>df1 = lambda f,x,h=1e-6:(f(x+h)-f(x-h))/(2*h)<br>print(round(df1(f, 6),4))<br>`;</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Calcule, con "df1 = lambda f,x,h=1e-6:(f(x+h)-f(x-h))/(2*h)", la derivada primera de la función ajustada, para x=6, redondeando el resultado al cuarto dígito después del punto. Luego ejecute el código en Python, corrija los errores cometidos al completar el código y evalúe la celda. Copie los resultados en la subsiguiente (entre las tildes invertidas).</p><div id="pregunta256" class="calculadora" spellcheck="false"><div class="instruccion">`<br><br>df1 = lambda f,x,h=1e-6:(f(x+h)-f(x-h))/(2*h)<br>print(round(df1(f, 6),4))<br>`;</div><div class="resultado"></div><div class="instruccion">`<br>16.2298<br>`;</div><div class="resultado"></div></div><p class="pregunta" id="pregunta257"><span class="pregunta"></span>El análisis visual de la gráfica permite concluir que el ajuste es <span class="campo_arrastrar correcta" tabindex="0" data-opciones="bueno&amp;@%perfecto&amp;@%regular&amp;@%pésimo&amp;@%malo" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">bueno</span>.<br></p><p class="pregunta" id="pregunta258"><span class="pregunta"></span>El valor del coeficiente "a", de la ecuación ajustada, es: <span class="campo_literal correcta" tabindex="0" contenteditable="true">0.14931985591458904</span>.</p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="29" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 19 -->
+    <div class="ejercicio" id="ejercicio20" enunciado="0"><hr><div class="enunciado"><p class="ejercicio extern"><span class="ejercicio"></span>Complete el siguiente código que, en Python, ajusta los datos de la siguiente tabla:</p><div class="table borderAll"><table align="center" style="width:350px"><tbody><tr><th class="center" style="width:30px;">x</th><td class="center">1</td><td class="center">3</td><td class="center">4</td><td class="center">5</td><td class="center">8</td><td class="center">11</td><td class="center">14</td><td class="center">15</td><td class="center">20</td></tr><tr><th class="center">y</th><td class="center">1</td><td class="center">3</td><td class="center">2</td><td class="center">2</td><td class="center">5</td><td class="center">4</td><td class="center">6</td><td class="center">6</td><td class="center">7</td></tr></tbody></table></div><p class="ejerciciosn">A la ecuación:</p>\[y = a \ln(x)+b\sin(x)-c\cos(x)\]</div><p class="pregunta"><span class="pregunta"></span>Importe de "scipy.optimize", "curve_fit" y "newton", importe "matplotlib.pyplot" como "plt" e importe "numpy" como "np". Guarde (como arrays de tipo numpy) en "vx" los valores conocidos de la variable independiente, en "vy" los valores conocidos de la variable dependiente, en "vi" los valores iniciales asumidos: 1.1, 1.2, 1.3, .... Programe en "fa" (función lambda, donde se requieran funciones numpy, parámetros: "x", "a", "b", "c") la ecuación a ajustar y ajuste los datos con "curve_fit", recibiendo los coeficientes ajustados en "vc", la varianza en "e" y guardando los elementos de "vc" en "a", "b" y "c". Programe la ecuación ajustada "f" (función lambda, parámetro "x", empleando "fa"). Luego ejecute el código en Python, corrija los errores cometidos al completar el código y evalúe la celda. Copie los resultados en la subsiguiente (entre las tildes invertidas).</p><div id="pregunta259" class="calculadora" spellcheck="false"><div class="instruccion">`<br>from scipy.optimize import curve_fit, newton<br>import matplotlib.pyplot as plt<br>import numpy as np<br>vx = np.array([1,3,4,5,8,11,14,15,20])<br>vy = np.array([1,3,2,2,5,4,6,6,7])<br>vi = np.array([1.1, 1.2, 1.3])<br>fa = lambda x, a, b, c: a*np.log(x)+b*np.sin(x)-c*np.cos(x)<br>vc, e = curve_fit(fa, vx, vy, vi)<br>a, b, c = vc<br>print(a, b, c)<br>f = lambda x: fa(x, a, b, c)<br>`;</div><div class="resultado"></div><div class="instruccion">`<br>1.9809886139850403 1.0144349581396876 0.23689818638528107<br>`;</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con la ecuación ajustada, genere el vector "x" con valores igualmente espaciados (incremento 0.01) desde el menor hasta el mayor valor tabulado de "x". Dibuje los valores conocidos "vx" y "vy" (puntos rojos: ".r"), conjuntamente los valores calculados "x" y "f(x)" (línea azul: "-b"). Luego ejecute el código en Python, corrija los errores cometidos al completar el código y evalúe la celda.</p><div id="pregunta260" class="calculadora" spellcheck="false"><div class="instruccion">`<br>x = np.arange(1, 20, 0.01)<br>plt.plot(vx, vy, ".r")<br>plt.plot(x, f(x), "-b")<br>plt.show()<br>`;</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Encuentre la raíz de la función ajustada, con newton (valor inicial 1.1), redondeando el resultado al quinto dígito después del punto. Luego ejecute el código en Python, corrija los errores cometidos al completar el código y evalúe la celda. Copie los resultados en la subsiguiente (entre las tildes invertidas).</p><div id="pregunta261" class="calculadora" spellcheck="false"><div class="instruccion">`<br>print(round(newton(f, 1.1),5))<br>`;</div><div class="resultado"></div><div class="instruccion">`<br>0.76472<br>`;</div><div class="resultado"></div></div><p class="pregunta" id="pregunta262"><span class="pregunta"></span>El análisis visual de la gráfica permite concluir que el ajuste es <span class="campo_arrastrar correcta" tabindex="0" data-opciones="perfecto&amp;@%pésimo&amp;@%regular&amp;@%bueno" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">regular</span>.<br></p><p class="pregunta" id="pregunta263"><span class="pregunta"></span>El valor del coeficiente "b", de la ecuación ajustada, es: <span class="campo_literal correcta" tabindex="0" contenteditable="true">1.0144349581396876</span></p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="29" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 20 -->
+    <div class="ejercicio" id="ejercicio21" enunciado="0"><hr><div class="enunciado"><p class="ejercicio extern"><span class="ejercicio"></span>Complete el siguiente código que, en Python, ajusta los datos de la siguiente tabla:</p><div class="table borderAll"><table align="center" style="width:550px"><tbody><tr><th class="center" style="width:30px;">x</th><td class="center">1</td><td class="center">4</td><td class="center">7</td><td class="center">10</td><td class="center">12</td><td class="center">15</td><td class="center">16</td><td class="center">18</td><td class="center">22</td><td class="center">23</td></tr><tr><th class="center">y</th><td class="center">9.3</td><td class="center">23.4</td><td class="center">34.7</td><td class="center">45.2</td><td class="center">52</td><td class="center">61.9</td><td class="center">65.2</td><td class="center">71.8</td><td class="center">84.7</td><td class="center">87.9</td></tr></tbody></table></div><p class="ejerciciosn">A la ecuación:</p>\[y =ax+b\log(x)+c\sqrt[5]{x}\]</div><p class="pregunta"><span class="pregunta"></span>Importe de "scipy.optimize", "curve_fit", importe "matplotlib.pyplot" como "plt" e importe "numpy" como "np". Guarde (como arrays de tipo numpy) en "vx" los valores conocidos de la variable independiente, en "vy" los valores conocidos de la variable dependiente, en "vi" los valores iniciales asumidos: 1.1, 1.2, 1.3, .... Programe en "fa" (función lambda, donde se requieran funciones numpy, parámetros: "x", "a", "b", "c") la ecuación a ajustar y ajuste los datos con "curve_fit", recibiendo los coeficientes ajustados en "vc", la varianza en "e" y guardando los elementos de "vc" en "a", "b" y "c". Programe la ecuación ajustada "f" (función lambda, parámetro "x", empleando "fa"). Luego ejecute el código en Python, corrija los errores cometidos al completar el código y evalúe la celda. Copie los resultados en la subsiguiente (entre las tildes invertidas).</p><div id="pregunta264" class="calculadora" spellcheck="false"><div class="instruccion">`<br>import numpy as np<br>import matplotlib.pyplot as plt<br>from scipy.optimize import curve_fit<br>vx = np.array([1,4,7,10,12,15,16,18,22,23])<br>vy = np.array([9.3,23.4,34.7,45.2,52,61.9,65.2,71.8,84.7,87.9])<br>vi = np.array([1.1, 1.2, 1.3])<br>fa = lambda x, a, b, c: a*x+b*np.log10(x)+c*x**(1/5)<br>vc, e = curve_fit(fa, vx, vy, vi)<br>a, b, c = vc<br>f = lambda x: fa(x, a, b, c)<br>print(a, b, c)<br>`;</div><div class="resultado"></div><div class="instruccion">`<br>3.0031599009105703 5.176803540511366 6.291133204126633<br>`;</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con la ecuación ajustada, genere el vector "x" con valores igualmente espaciados (incremento 0.01) desde el menor hasta el mayor valor tabulado de "x". Dibuje los valores conocidos "vx" y "vy" (puntos rojos: ".r"), conjuntamente los valores calculados "x" y "f(x)" (línea azul: "-b"). Luego ejecute el código en Python, corrija los errores cometidos al completar el código y evalúe la celda.</p><div id="pregunta265" class="calculadora" spellcheck="false"><div class="instruccion">`<br>x = np.arange(1, 23, 0.01)<br>plt.plot(vx, vy, ".r")<br>plt.plot(x, f(x), "-b")<br>plt.show()<br>`;</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con la función ajustada, resuelva el siguiente sistema de ecuaciones lineales:\[\begin{aligned}z_1+4z_2+6z_3+2z_4&amp;=f(2)\\2z_1+3z_2+z_3+5z_4&amp;=f(3)\\3z_1+z_2+4z_3+7z_4&amp;=f(4)\\4z_1+2z_2+5z_3+6z_4&amp;=f(5)\end{aligned}\]Con "linalg.solve" de la librería numpy, resultados redondeandos al segundo dígito. Luego ejecute el código en Python, corrija los errores cometidos al completar el código y evalúe la celda. Copie los resultados en la subsiguiente (entre las tildes invertidas).</p><div id="pregunta266" class="calculadora" spellcheck="false"><div class="instruccion">`<br>A = np.array([[1,4,6,2],[2,3,1,5],[3,1,4,7],[4,2,5,6]])<br>b = np.array([f(2), f(3), f(4), f(5)])<br>print(np.linalg.solve(A, b).round(2))<br>`;</div><div class="resultado"></div><div class="instruccion">`<br>[3.4  1.61 0.33 1.47]<br>`;</div><div class="resultado"></div></div><p class="pregunta" id="pregunta267"><span class="pregunta"></span>El análisis visual de la gráfica permite concluir que el ajuste es <span class="campo_arrastrar correcta" tabindex="0" data-opciones="perfecto&amp;@%malo&amp;@%regular&amp;@%pésimo&amp;@%bueno" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">bueno</span>.<br></p><p class="pregunta" id="pregunta268"><span class="pregunta"></span>El valor de la variable "z<sub>1</sub>", es: <span class="campo_literal correcta" tabindex="0" contenteditable="true">3.4</span>.</p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="29" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 21 -->
+    <div class="ejercicio" id="ejercicio22" enunciado="0"><hr><div class="enunciado"><p class="ejercicio extern"><span class="ejercicio"></span>Complete el siguiente código que, en Python, ajusta los datos de la siguiente tabla:</p><div class="table borderAll"><table align="center" style="width:550px"><tbody><tr><th class="center" style="width:30px;">x</th><td class="center">1</td><td class="center">3</td><td class="center">4</td><td class="center">6</td><td class="center">7</td><td class="center">9</td><td class="center">8</td><td class="center">10</td><td class="center">11</td><td class="center">12</td></tr><tr><th class="center">y</th><td class="center">6</td><td class="center">94</td><td class="center">190</td><td class="center">461</td><td class="center">598</td><td class="center">705</td><td class="center">693</td><td class="center">577</td><td class="center">245</td><td class="center">-362</td></tr></tbody></table></div><p class="ejerciciosn">A la ecuación:</p>\[y = a+bx^{2.3}+cx^{3.1}+dx^{4.2}\]</div><p class="pregunta"><span class="pregunta"></span>Importe de "scipy.optimize", "curve_fit" y "newton", importe "matplotlib.pyplot" como "plt" e importe "numpy" como "np". Guarde (como arrays de tipo numpy) en "vx" los valores conocidos de la variable independiente, en "vy" los valores conocidos de la variable dependiente, en "vi" los valores iniciales asumidos: 1.1, 1.2, 1.3, .... Programe en "fa" (función lambda, donde se requieran funciones numpy, parámetros: "x", "a", "b", "c") la ecuación a ajustar y ajuste los datos con "curve_fit", recibiendo los coeficientes ajustados en "vc", la varianza en "e" y guardando los elementos de "vc" en "a", "b" y "c". Programe la ecuación ajustada "f" (función lambda, parámetro "x", empleando "fa"). <br>Una vez resuelto el problema en myCompiler, copie el código que resuelve el problema en la siguiente celda de código (entre las tildes invertidas) y los resultados obtenidos en la subsiguiente celda.</p><div id="pregunta269" class="calculadora" spellcheck="false"><div class="instruccion">`<br>from scipy.optimize import curve_fit, newton<br>import matplotlib.pyplot as plt<br>import numpy as np<br>vx = np.array([1,3,4,6,7,9,8,10,11,12])<br>vvy = np.array([6,94,190,461,598,705,693,577,245,-362])<br>vi = np.array([1.1, 1.2, 1.3, 1.4])<br>fa = lambda x, a, b, c, d: a+b*x**2.3+c*x**3.1+d*x**4.2<br>vc, e = curve_fit(fa, vx, vy, vi)<br>a, b, c, d = vc<br>print(a, b, c, d)<br>f = lambda x: fa(x, a, b, c, d)<br>`;</div><div class="resultado"></div><div class="instruccion">`<br>0.24295337055522204 3.207715421072189 2.4388226281517182 -0.19772543183066868<br>`;</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con la ecuación ajustada, genere el vector "x" con valores igualmente espaciados (incremento 0.01) desde el menor hasta el mayor valor tabulado de "x". Dibuje los valores conocidos "vx" y "vy" (puntos rojos: ".r"), conjuntamente los valores calculados "x" y "f(x)" (línea azul: "-b"). Luego ejecute el código en Python, corrija los errores cometidos al completar el código y evalúe la celda.</p><div id="pregunta270" class="calculadora" spellcheck="false"><div class="instruccion">`<br>x = np.arange(1, 12, 0.01)<br>plt.plot(vx, vy, ".r")<br>plt.plot(x, f(x), "-b")<br>plt.show()<br>`;</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Tomando como valor inicial la solución positiva de la gráfica, resuelva la ecuación ajustada con newton, redondeando el resultado al segundo dígito. Luego ejecute el código en Python, corrija los errores cometidos al completar el código y evalúe la celda. Copie los resultados en la subsiguiente (entre las tildes invertidas).</p><div id="pregunta271" class="calculadora" spellcheck="false"><div class="instruccion">`<br>print(round(newton(f, 11.7),2))<br>`;</div><div class="resultado"></div><div class="instruccion">`<br>11.47<br>`;</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Finalmente encuentre las raíces de la siguiente ecuación polinomial ("f" es la ecuación ajustada):\[y^5+2y^4-3y^2+5y+f(7) = 0\]Con "np.roots" redondeando los resultados al primer dígito después del punto. Luego ejecute el código en Python, corrija los errores cometidos al completar el código y evalúe la celda. Copie los resultados en la subsiguiente (entre las tildes invertidas).</p><div id="pregunta272" class="calculadora" spellcheck="false"><div class="instruccion">`<br>print(np.roots([1,2,0,-3,5,f(7)]).round(1))<br>`;</div><div class="resultado"></div><div class="instruccion">`<br>[-4. +0.j  -1.6+3.3j -1.6-3.3j  2.6+2.1j  2.6-2.1j]<br>`;</div><div class="resultado"></div></div><p class="pregunta" id="pregunta273"><span class="pregunta"></span>El análisis visual de la gráfica permite concluir que el ajuste es <span class="campo_arrastrar correcta" tabindex="0" data-opciones="malo&amp;@%pésimo&amp;@%perfecto&amp;@%regular&amp;@%bueno" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">bueno</span>.<br></p><p class="pregunta" id="pregunta274"><span class="pregunta"></span>La raíz real de la ecuación polinomial, es: <span class="campo_literal correcta" tabindex="0" contenteditable="true">-4</span>.</p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="29" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 22 -->
+
+
+
+
+
+    <div id="generarPrueba" data-scroll-y="60778.44140625"><br><hr><label class="lnotacapitulo">Nota del capítulo: </label><input type="text" id="notaCapitulo" disabled="disabled" class="itnotacapitulo"><br><br><button id="btGenerarPrueba" style="visibility: visible;" onclick="capitulo.registrarCapitulo()">Iniciar defensa</button><button id="btEmplearBono" style="margin-left:1.1rem;width:9.686rem;display:none;" onclick="capitulo.emplearBono()">Emplear Bono</button><br><br></div>
+
+
+
+<d id="dAutor" style="font-size: 0.9rem;text-align:center;color: #0808f24f;font-weight:bolder;position:fixed;top: 5px;right: 5px;user-select:none;display:inline-block;z-index:15;">Hernan G. Peñaranda V.</d></div><!-- Cierre del div capítulo -->
+
+<div id="dato" style="display:none;">JK5KCZ0r938lCZ0oDYGrDoqpE3Km934mEJWm93KqEIGrD3aaCJ0m930aSsHDRJ40</div>
+<div id="reg" style="display:none;">CZ0nC3ioC34mEpCmC34xCp0mCJipC30nEp4nC30xCZ0nC3ioC34mEpCmC34xCp0mCJioC34mEpCmC34xCJ4xCJ4xCJ4xCJ4xCJ4xCJ4xCJ4xCJ4xCJ4xCJ40</div>
+
+
+
+
+<svg id="js-plotly-tester" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="position: absolute; left: -10000px; top: -10000px; width: 9000px; height: 9000px; z-index: 1;"><path class="js-reference-point" d="M0,0H1V1H0Z" style="stroke-width: 0; fill: black;"></path></svg><div id="divDialogo" style="display: none;"><div onfocus="document.querySelector('#divDialogo input').focus();"><div>Carnet universitario</div><div>Escriba el número de su carnet universitario, verificando que el guión haya sido correctamente insertado.</div><input type="text" onkeydown="return Capitulo.divDialogo.funKeydown(event)" onkeyup="Capitulo.divDialogo.funKeyup(event)"><div><button onclick="Capitulo.divDialogo.funClick('aceptar');">Aceptar</button><button style="margin-left:35px;" onclick="Capitulo.divDialogo.funClick('cancelar');">Cancelar</button></div></div></div></body>
