@@ -1,0 +1,1293 @@
+<!DOCTYPE html>
+<head>
+
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Language" content="es">
+  
+  <title>57-3850 capítulo 6</title>
+
+  
+    <!-- Librería y hoja de estilos KATEX  -->
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/katex/katex.min.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/katex/katex.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/katex/contrib/auto-render.min.js"></script>
+
+    <!-- Librerías y hojas de estilo CodeMirror -->
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/lib/codemirror.min.css">
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/theme/mdn-like.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/lib/codemirror.min.js"></script>
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/fold/foldgutter.min.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/fold/foldcode.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/fold/brace-fold.min.js"></script>
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/dialog/dialog.min.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/dialog/dialog.min.js"></script>
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/hint/show-hint.min.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/hint/show-hint.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/hint/javascript-hint.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/search/searchcursor.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/search/search.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/edit/matchbrackets.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/edit/closebrackets.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/comment/comment.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/wrap/hardwrap.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/javascript/javascript.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/mathematica/mathematica.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/octave/octave.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/python/python.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/css/css.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/xml/xml.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/markdown/markdown.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/htmlmixed/htmlmixed.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/keymap/sublime.min.js"></script>
+    
+    <!-- Librería Plotly -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script><style id="plotly.js-style-global"></style>
+
+    <!-- Librerías y hojas de estilo function-plot -->
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/function-plot/site/js/vendor/d3.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/function-plot/dist/function-plot.js"></script>
+    
+    <!-- Librería quantities -->
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/quantities/quantities.min.js"></script>
+
+    <!-- Librería GoJs para la creación de diagramas de flujo -->
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/gojs/release/go.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/flowchart_gojs.js"></script>
+
+    <!-- Librerías matemáticas propias -->
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/math.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/number.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/array.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/string.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/cplx.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/function.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/object.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/prq.js"></script>
+
+    <!-- Librería y hoja de estilos propias para la creación y manejo de la calculadora  -->
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/src/cjs.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/cjs.js"></script>
+
+    <!-- Librería y hoja de estilos propias para la creación y manejo de los capítulos -->
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/src/texto.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/texto.js"></script>
+
+   <!-- Librería del capítulo actual -->
+    <script src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo6/files/capitulo6.js"></script>
+
+    <!-- Fuentes empleadas en el capítulo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;600;700;800&amp;family=Roboto+Mono&amp;display=swap" rel="stylesheet">
+
+    <script>
+        function katexRender() {
+            renderMathInElement(document.getElementById("capitulo"));
+        }
+        document.addEventListener("DOMContentLoaded", katexRender);
+        window.onerror = function(msg, url, lineNo, columnNo, error) {
+            __error__ = msg;
+        };
+        window.onload = function(){
+            capitulo.iniciar();
+        };
+    </script>
+
+</head>
+
+<body class="text">  
+
+
+<div id="capitulo">
+
+    <button id="btGuardar" style="z-index:15;" onclick="savePage()">Guardar</button>
+
+        
+
+    <h1 class="text" onclick="alerta(capitulo.idPagina,'')" style="cursor: pointer;">Ecuaciones Lineales 1</h1>
+
+
+    <p class="text">Con frecuencia, en el campo de la ingeniería, es necesario resolver sistemas de ecuaciones lineales que tienen entre 2 y cientos de miles de ecuaciones.</p>
+
+    <p class="text">Los métodos que permiten resolver estos sistemas pueden clasificarse en dos grupos: a) <i class="style1">No iterativos o directos</i>, con los cuales se pueden resolver sistemas con algunos cientos de ecuaciones lineales (no por limitaciones de los métodos, sino por errores de redondeo) y b) <i class="style1">Los métodos iterativos</i>, que permiten resolver sistemas con cientos de miles de ecuaciones lineales, aunque, como normalmente ocurre con los métodos iterativos, la convergencia no está garantizada.</p>
+
+    <p class="text">Los métodos directos, a su vez, pueden clasificarse en <i class="style1">métodos de eliminación</i> y <i class="style1">métodos de factorización</i>.</p>
+
+
+
+    <h2 class="text">Método de Gauss</h2>
+
+
+    <p class="text">El método de eliminación de Gauss, reduce el sistema de ecuaciones lineales a un sistema triangular superior. Así al aplicar el método al siguiente sistema de 4 ecuaciones lineales:</p>
+
+    <table class="ecuacion" id="ec1">
+        <tbody><tr>
+            <td>
+                \[                \begin{matrix}                a_{0,0}x_0&amp;+&amp;a_{0,1}x_1&amp;+&amp;a_{0,2}x_2&amp;+&amp;a_{0,3}x_3 &amp;= &amp;c_0\\[2mm]                a_{1,0}x_0&amp;+&amp;a_{1,1}x_1&amp;+&amp;a_{1,2}x_2&amp;+&amp;a_{1,3}x_3 &amp;= &amp;c_1\\[2mm]                a_{2,0}x_0&amp;+&amp;a_{2,1}x_1&amp;+&amp;a_{2,2}x_2&amp;+&amp;a_{2,3}x_3 &amp;= &amp;c_2\\[2mm]                a_{3,0}x_0&amp;+&amp;a_{3,1}x_1&amp;+&amp;a_{3,2}x_2&amp;+&amp;a_{3,3}x_3 &amp;= &amp;c_3                \end{matrix}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+        
+    <p class="text">Se reduce a:</p>
+
+    <table class="ecuacion" id="ec2">
+        <tbody><tr>
+            <td>
+                \[                \begin{matrix}                x_0&amp;+&amp;a'_{0,1}x_1&amp;+&amp;a'_{0,2}x_2&amp;+&amp;a'_{0,3}x_3 &amp;= &amp;c'_0\\[2mm]                0&amp;+&amp;x_1&amp;+&amp;a'_{1,2}x_2&amp;+&amp;a'_{1,3}x_3 &amp;= &amp;c'_1\\[2mm]                0&amp;+&amp;0&amp;+&amp;x_2&amp;+&amp;a'_{2,3}x_3 &amp;= &amp;c'_2\\[2mm]                0&amp;+&amp;0&amp;+&amp;0&amp;+&amp;x_3 &amp;= &amp;c'_3                \end{matrix}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Donde los apostrofos simplemente denotan valores diferentes a los iniciales. Como se puede observar el valor de x<sub>3</sub> queda determinado por la última ecuación (es igual a c'<sub>3</sub>). Por tanto, como se conoce la tercera solución, se puede calcular la segunda x<sub>2</sub>, a partir de la penúltima ecuación:</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                x_2 = c'_2-a'_{2,3}x_3                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+
+    <p class="text">Entonces, con x<sub>2</sub> y x<sub>3</sub> conocidos, se calcula x<sub>1</sub> con la antepenúltima ecuación:</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                x_1 = c'_1-a'_{1,2}x_2-a'_{1,3}x_3                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+
+    <p class="text">Finalmente con x<sub>1</sub>, x<sub>2</sub> y x<sub>3</sub> conocidos, se calcula x<sub>0</sub> con la ecuación restante (la primera):</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                x_0 = c'_0-a'_{0,1}x_1-a'_{0,2}x_2-a'_{0,3}x_3                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+
+    <p class="text">En forma matricial, el aplicar el método de Gauss, da lugar a la siguiente transformación:</p>
+
+    <table class="ecuacion" id="ec3">
+        <tbody><tr>
+            <td>
+                \[                \begin{bmatrix}                a_{0,0}&amp;a_{0,1}&amp;a_{0,2}&amp;a_{0,3}&amp;a_{0,4}\\[2mm]                a_{1,0}&amp;a_{1,1}&amp;a_{1,2}&amp;a_{1,3}&amp;a_{1,4}\\[2mm]                a_{2,0}&amp;a_{2,1}&amp;a_{2,2}&amp;a_{2,3}&amp;a_{2,4}\\[2mm]                a_{3,0}&amp;a_{3,1}&amp;a_{3,2}&amp;a_{3,3}&amp;a_{3,4}                \end{bmatrix}                \xrightarrow{\text{\hspace{0.4cm}gauss\hspace{0.4cm}}}                \begin{bmatrix}                1&amp;a'_{0,1}&amp;a'_{0,2}&amp;a'_{0,3}&amp;a'_{0,4}\\[2mm]                0&amp;1&amp;a'_{1,2}&amp;a'_{1,3}&amp;a'_{1,4}\\[2mm]                0&amp;0&amp;1&amp;a'_{2,3}&amp;a'_{2,4}\\[2mm]                0&amp;0&amp;0&amp;1&amp;a'_{3,4}                \end{bmatrix}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Para lograr esta transformación, se deben reducir las filas (convirtiendo en uno el elemento de la diagonal principal) y reducir las columnas (convirtiendo en ceros los elementos que se encuentran por debajo de la diagonal principal). Estas operaciones se realizan primero para la fila y columna 1, luego para la fila y columna 2, luego para la fila y columna 3 y así sucesivamente hasta llegar a la última fila del sistema.</p>
+
+    <p class="text">Puesto que cada uno de los elementos de la matriz interviene una sola vez en los cálculos, la matriz resultante puede ser guardada en la matriz original, ahorrando así memoria.</p>
+
+    <p class="text">En las siguientes ecuaciones se denominará “p” (pivote) al contador que determina la fila y columna que se está reduciendo, “n” al número de ecuaciones del sistema y “m” al número de columnas de la matriz aumentada.</p>
+
+    <p class="text">Para reducir los elementos de la diagonal principal a 1, simplemente se divide la fila pivote (a<sub>p</sub>) entre el elemento que se encuentra en la diagonal principal (a<sub>p,p</sub>):</p>
+
+    <table class="ecuacion" id="ec4">
+        <tbody><tr>
+            <td>
+                \[                a_{p,j} = \dfrac{a_{p,j}}{a_{p,p}}\hspace{0.5cm}                \begin{cases}                j = p+1 \longrightarrow m-1                \end{cases}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Observe que en esta expresión, no se calcula el primer elemento a<sub>p,p</sub>, porque se convertiría en 1. Al final del proceso se puede asignar a a<sub>p,p</sub> el valor 1, aunque ello no es estrictamente necesario.</p>
+
+    <p class="text">Luego, para reducir a cero los elementos de la columna “p”, por debajo del elemento pivote (a<sub>p,p</sub>), se resta a cada fila, el producto del elemento de la columna pivote (a<sub>i,p</sub>) por la fila pivote (a<sub>p</sub>):</p>
+
+    <table class="ecuacion" id="ec5">
+        <tbody><tr>
+            <td>
+                \[                a_{i,j} = a_{i,j}-a_{p,j}\cdot a_{i,p}\hspace{0.5cm}                \begin{cases}                i = p+1 \longrightarrow n-1\\                j = p+1 \longrightarrow m-1                \end{cases}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">En esta ecuación no se calculan los elementos que se encuentran debajo del elemento pivote, pues se sabe que son cero. Al final del proceso se pueden asignar ceros a estos elementos.</p>
+
+    <p class="text">Las anteriores ecuaciones se aplican en forma secuencial, para valores de “p” que van desde 0 hasta “n-1”, aunque la segunda ecuación sólo va hasta “n-2” (porque no existen elementos por debajo de la última fila).</p> 
+
+    <p class="text">Una vez reducida la matriz a la forma triangular superior, las soluciones del sistema se calculan por sustitución inversa y quedan en la columna de las constantes (la última columna). Si existe más de una columna de constantes, como ocurre cuando se resuelven simultánemanete sistemas de ecuaciones, las soluciones de cada sistema quedan en cada una de las columnas a partir de la columna "n". La expresión que permite calcular estos valores, por sustitución inversa, es:</p>
+
+    <table class="ecuacion" id="ec6">
+        <tbody><tr>
+            <td>
+                \[                a_{i,j} = a_{i,j}-\sum_{k=i+1}^{n-1}a_{i,k}\cdot a_{k,j}\hspace{0.5cm}                \begin{cases}                i = n-2 \longrightarrow 0\\                j = n \longrightarrow m-1                \end{cases}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+
+
+    <h3 class="text">Pivotaje Parcial</h3>
+
+
+    <p class="text">Al aplicar el método de eliminación de Gauss puede ocurrir que el elemento de la diagonal principal (el elemento pivote) sea cero, lo que ocasionaría un error por división entre cero.</p>
+
+    <p class="text">Para evitar este error, se puede buscar, en los elementos restantes de la columna pivote, el elemento con el mayor valor absoluto, llevando el mismo (mediante un intercambio de filas) a la posición pivote. A este proceso se conoce con el nombre de <i class="style1">pivotaje parcial</i>.</p>
+
+    <p class="text">El pivotaje no sólo es útil para evitar una división entre cero, sino también para reducir los errores de redondeo, pues cuanto mayor es el valor del elemento pivote menor es el error de redondeo en las operaciones.</p>
+
+    <p class="text">El algoritmo para llevar a cabo el <i class="style1">pivotaje parcial</i> es el siguiente:</p>
+
+    <p class="figurasn"><img src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo6/files/pivpar.png" alt="Algoritmo para el pivotaje parcial en los métodos de eliminación"></p>
+
+    <p class="text">Como se puede ver "pivpar" genera un error si en la columna pivote sólo quedan ceros, devuelve verdadero si se ha llevado a cabo un intercambio de filas y falso en caso contrario.</p>
+
+    <p class="text">El código respectivo, ha sido añadido como un método del objeto Array.</p>
+
+
+    <h3 class="text">Pivotaje total</h3>
+
+
+    <p class="text">Cuando el elemento con el mayor valor absoluto se busca no sólo en la columna pivote, sino en todos los elementos de la matriz no reducida y es llevado a la posición pivote mediante intercambio de filas y/o columnas, el proceso se conoce como <i class="style1">pivotaje total</i>.</p>
+
+    <p class="text">En el <i class="style1">pivotaje total</i>, se debe hacer un seguimiento de las columnas intercambiadas, pues un intercambio de columnas implica también un intercambio en la posición de los resultados, por ejemplo, si se intercambian las columnas 2 y 4, el segundo resultado (x<sub>1</sub>) se encontrará en la cuarta fila (no en la segunda), mientras que el cuarto resultado (x<sub>3</sub>) se encontrará en la segunda fila (no en la cuarta).</p>
+
+    <p class="text">El algoritmo para realizar el <i class="style1">pivotaje total</i>, es:</p>
+
+    <p class="figurasn"><img src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo6/files/pivtot.png" alt="Algoritmo para el pivotaje total en los métodos de eliminación"></p>
+
+    <p class="text">Al igual que el pivotaje parcial, "pivtot" genera un error si en la matriz residual sólo quedan ceros. El intercambio de columnas (si se lleva a cabo) queda registrado en el vector de posiciones "v", el cual inicialmente debe contener números enteros consecutivos desde 0 hasta n-1.</p>
+
+    <p class="text">El código respectivo, ha sido añadido como un método del objeto Array.</p>
+
+
+
+    <h3 class="text">Sustitución Inversa</h3>
+
+    <p class="text">Una vez reducido el sistema de ecuaciones, las soluciones del sistema se encuentran por sustitución inversa (<a href="#ec6">ecuación 6</a>). Siendo el algoritmo para llevar a cabo dicho cálculo, el siguiente:</p>
+
+    <p class="figurasn"><img src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo6/files/susinv.png" alt="Algoritmo para el método de sustitución inversa en los métodos de eliminación"></p>
+
+    <p class="text">El código respectivo, ha sido añadido como un método del objeto Array.</p>
+
+
+
+    <h3 class="text">Método de Gauss con Pivotaje Parcial</h3>
+
+    <p class="text">El algoritmo que automatiza el método de Gauss, con pivotaje parcial, el cual llama a los métodos elaborados previamente, es el siguiente: </p>
+
+    <p class="figurasn"><img src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo6/files/gauss.png" alt="Algoritmo del método de Gauss con pivotaje parcial"></p>
+
+    <p class="text">El código respectivo, ha sido añadido, igualmente, como un método del objeto Array, por lo que debe ser llamado desde la matriz aumentada, correspondiente al sistema de ecuaciones lineales, que se quiere resolver.</p>
+
+
+
+    <h3 class="text">Método de Gauss con Pivotaje Total</h3>
+
+
+    <p class="text">Aplicando el pivotaje total, en lugar del parcial, el algoritmo es:</p>
+
+    <p class="figurasn"><img src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo6/files/gausspt.png" alt="Algoritmo para el método de eliminación de Gauss con pivotaje total"></p>
+
+    <p class="text">El código respectivo ha sido añadido como un método del objeto Array.</p>
+
+    <p class="text">Que igualmente, ha sido añadido como un método del objeto Array, por lo que se emplea igual que <dfn class="style1">gauss</dfn>.</p>
+
+
+
+    <h3 class="text">Ejemplos</h3>
+
+    <p class="ejemplo"><span class="ejemplo"></span>Encuentre las soluciones del siguiente sistema de ecuaciones lineales, empleando el método de Gauss con pivotaje parcial. Redondee los resultados al segundo dígito después del punto y convierta el resultado en un vector.</p>
+
+    <table class="ecuacion" id="ec7" style="margin-left:1cm; width:calc(100% - 1cm);">
+        <tbody><tr>
+            <td>
+                \[                \begin{matrix}                x_0&amp;+&amp;x_1&amp;+&amp;x_2&amp;+&amp;x_3&amp;=&amp;-1\\[1mm]                4x_0&amp;+&amp;5x_1&amp;+&amp;6x_2&amp;+&amp;7x_3&amp;=&amp;0\\[1mm]                6x_0&amp;+&amp;10x_1&amp;+&amp;15x_2&amp;+&amp;21x_3&amp;=&amp;10\\[1mm]                12x_0&amp;+&amp;30x_1&amp;+&amp;60x_2&amp;+&amp;105x_3&amp;=&amp;10                \end{matrix}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">La matriz aumentada correspondiente al sistema de ecuaciones lineales, es:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var a = [[1, 1, 1, 1, -1],<br>         [4, 5, 6, 7, 0],<br>         [6, 10, 15, 21, 10],<br>         [12, 30, 60, 105, 10]]</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Con la cual se resuelve el sistema de ecuaciones lineales:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var x = a.gauss().round(2); x.show()</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Para convertir el resultado, en un vector, se llama al método <dfn class="style1">transpose</dfn>:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">x.transpose()</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">El problema puede ser resuelto, igualmente, en una sola instrucción (sin crear variables intermedias):</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">[[1, 1, 1, 1, -1],<br> [4, 5, 6, 7, 0],<br> [6, 10, 15, 21, 10],<br> [12, 30, 60, 105, 10]].gauss().transpose().round(2)</div>
+        <div class="resultado"></div>
+    </div>
+    <br>
+
+
+
+    <p class="ejemplo"><span class="ejemplo"></span>Encuentre la solución (el valor de “x”) de la siguiente ecuación no lineal, resolviendo el sistema de ecuaciones lineales con el método de Gauss con pivotaje total (resultados redondeados al cuarto dígito después del punto), la ecuación polinomial con “roots” (resultado redondeado al segundo dígito después del punto) y la ecuación no lineal con el método de Regula Falsi con el error por defecto y mostrando el resultado con esa precisión (12 dígitos). Los valores iniciales para resolver la ecuación no lineal deben ser calculados con el método incremental (redondeando el resultado al segundo dígito después del punto), se sabe que la solución es menor a 7).
+    </p>
+
+    <table class="ecuacion" id="ec8" style="margin-left:1cm; width:calc(100% - 1cm);">
+        <tbody><tr>
+            <td>
+                \[                \begin{gathered}                f(x) = z_3x^{3.2}+z_2\ln(x)-z_0x-z1 = 0\\[4mm]                \begin{aligned}                y_0+3y_1-2y_2+y_3&amp;=335.137\\                2y_1+5y_2+4y_3&amp;=-122.815\\                -4y_0+4y_1+y_2-2y_3&amp;=70.6096\\                3y_0-6y_2-7y_3&amp;=129.13                \end{aligned}\\[12mm]                z^4+y_0z^3+y_1z^2+y_2z+y_3 = 0                \end{gathered}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Primero se resuelve el sistema de ecuaciones lineales con el método de Gauss:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var a = [[1, 3, -2, 1, 335.137],<br>         [0, 2, 5, 4, -122.815],<br>         [-4, 4, 1, -2, 70.6096],<br>         [3, 0, -6, -7, 129.13]];<br>var y = a.gausspt().transpose().round(4); y</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Ahora, con los valores de "y" calculados, se resuelve la ecución polinomial con <dfn class="style1">roots</dfn>:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var b = [1, y[0], y[1], y[2], y[3]];<br>var z = b.roots().round(2); z</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Finalmente, con los valores de "z" calculados, se resuelve la ecuación no lineal con el método de Regula Falsi, encontrando primero el segmento de solución ("xi", "xf") con <dfn class="style1">segmentoSol</dfn>:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var f = x =&gt; z[3]*x**3.2+z[2]*Math.log(x)-z[0]*x-z[1];</div>
+        <div class="resultado"></div>
+        <div class="instruccion">var [xi, xf] = f.segmentoSol({xi:7, dx:-0.1}).round(2); [xi, xf]</div>
+        <div class="resultado"></div>
+        <div class="instruccion">f.refa({xi, xf, err:12}).precision(12)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Que, igualmente, puede ser resuelto en una sola instrucción:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var y = [[1, 3, -2, 1, 335.137],<br>         [0, 2, 5, 4, -122.815],<br>         [-4, 4, 1, -2, 70.6096],<br>         [3, 0, -6, -7, 129.13]].gausspt().transpose().round(4);<br>var z = [1, y[0], y[1], y[2], y[3]].roots().round(2);<br>var f = x =&gt; z[3]*x**3.2+z[2]*Math.log(x)-z[0]*x-z[1];<br>var [xi, xf] = f.segmentoSol({xi:7, dx:-0.1}).round(2);<br>f.refa({xi, xf, err:12}).precision(12)</div>
+        <div class="resultado"></div>
+    </div>
+    <br>
+
+
+    <div class="ejercicio" id="ejercicio1" enunciado="1"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Para resolver el siguiente sistema de ecuaciones lineales, con el método de Gauss con pivotaje total, transformando el resultado en un vector, redondeado al segundo dígito después del punto:\[\begin{matrix}3y_0&amp;+&amp;2y_1&amp;-&amp;~y_2&amp;+&amp;2y_3&amp;=&amp;-3\\~y_0&amp;+&amp;4y_1&amp;+&amp; &amp;+&amp;2y_3&amp;=&amp;~~1\\2y_0&amp;+&amp;~y_1&amp;+&amp;2y_2&amp;-&amp;~y_3&amp;=&amp;~~2\\~y_0&amp;+&amp;~y_1&amp;-&amp;~y_2&amp;+&amp;3y_3&amp;=&amp;~~5\end{matrix}\]</p></div><p class="pregunta"><span class="pregunta"></span>Complete y ejecute la siguiente instrucción:</p><div id="pregunta2" class="calculadora" spellcheck="false"><div class="instruccion">var a = [[3, 2, -1, 2, -3],<br>         [1, 4, 0, 2, 1],<br>         [2, 1, 2, -1, 2],<br>         [1, 1, -1, 3, 5]]<br>var y = a.gausspt().transpose().round(2); y</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="6" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 1 -->
+
+    <div class="ejercicio" id="ejercicio2" enunciado="1"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Para resolver el siguiente sistema de ecuaciones lineales, con el método de Gauss con pivotaje parcial, transformando el resultado en un vector, redondeado al cuarto dígito después del punto:\[\begin{matrix}7x_0&amp;+&amp;2x_1&amp;+&amp;2x_2&amp;-&amp;x_3&amp;=&amp;3\\x_0&amp;+&amp;7x_1&amp;+&amp;3x_2&amp;+&amp;2x_3&amp;=&amp;2\\2x_0&amp;+&amp;x_1&amp;+&amp;12x_2&amp;+&amp;3x_3&amp;=&amp;7\\-x_0&amp;+&amp;3x_1&amp;+&amp;3x_2&amp;+&amp;11x_3&amp;=&amp;5\end{matrix}\]Los resultados deben ser mostrados en forma de vector, redondeados al cuarto dígito después del punto.</p></div><p class="pregunta"><span class="pregunta"></span>Complete y ejecute la siguiente instrucción:</p><div id="pregunta5" class="calculadora" spellcheck="false"><div class="instruccion">var y = [[7, 2, 2, -1, 3],<br>         [1, 7, 3, 2, 2],<br>         [2, 1, 12, 3, 7],<br>         [-1, 3, 3, 11, 5]].gauss().transpose().round(4); y</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="6" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 2 -->
+
+    <div class="ejercicio" id="ejercicio3" enunciado="1"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Para resolver el siguiente sistema de ecuaciones lineales, con el método de Gauss con pivotaje total, transformando el resultado en un vector, redondeado al tercer dígito después del punto:\[\begin{matrix}22z_0&amp;-&amp;2z_1&amp;+&amp;4z_2&amp;+&amp;2z_3&amp;=&amp;13\\z_0&amp;+&amp;31z_1&amp;+&amp;4z_2&amp;+&amp;3z_3&amp;=&amp;20\\3z_0&amp;-&amp;z_1&amp;+&amp;42z_2&amp;+&amp;5z_3&amp;=&amp;12\\4z_0&amp;+&amp;3z_1&amp;+&amp;2z_2&amp;+&amp;21z_3&amp;=&amp;15\end{matrix}\]</p></div><p class="pregunta"><span class="pregunta"></span>Complete y ejecute la siguiente instrucción:</p><div id="pregunta8" class="calculadora" spellcheck="false"><div class="instruccion">var a = [[22, -2, 4, 2, 13],<br>         [1, 31, 4, 3, 20],<br>         [3, -1, 42, 5, 12],<br>         [4, 3, 2, 21, 15]]<br>var y = a.gausspt().transpose().round(3); y</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="6" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 3 -->
+
+    <div class="ejercicio" id="ejercicio4" enunciado="2"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Para resolver la siguiente ecuación no lineal, encontrar el valor de "z":\[\begin{gathered}f(z) = x_0x_1z^{1.4}-\ln\left(\frac{z}{y_3+y_4}\right)+\text{e}\raisebox{1.2em}{$\Large{\frac{zx_2x_3}{y_1+y_2}}$}-(y_0+x_4)^{1.8693} = 0\\[4mm]\begin{aligned}2x_0+3x_1-2x_2+4x_3-x_4&amp;=8.5\\3x_0-x_1+4x_2+2x_3-4x_4&amp;=4.9\\4x_0+2x_1-3x_2+4x_3-x_4&amp;=8.2\\x_0+4x_1-3x_2+5x_3-4x_4&amp;=3.6\\3x_0+2x_1-3x_2-4x_3+5x_4&amp;=4.3\end{aligned}\\[15mm]y^5-11.5y^4+52.85y^3-121.325y^2+139.1274y-63.756 = 0\end{gathered}\]</p></div><p class="pregunta"><span class="pregunta"></span>Complete la siguiente instrucción, que resuelve el sistema de ecuaciones lineales con el método de Gauss con pivotaje total. La ecuación polinomial con roots (precisión/exactitud por defecto) ordenando los resultados con <dfn class="style1">sort</dfn>. Programa la ecuación no lineal como una función estándar (operador **) y encuentra la solución con el método de Newton-Raphson (precisión/exactitud de 9 dígitos, valores iniciales por defecto).</p><div id="pregunta12" class="calculadora" spellcheck="false"><div class="instruccion">var x = [[2, 3, -2, 4, -1, 8.5],<br>         [3, -1, 4, 2, -4, 4.9],<br>         [4, 2, -3, 4, -1, 8.2],<br>         [1, 4, -3, 5, -4, 3.6],<br>         [3, 2, -3, -4, 5, 4.3]].gausspt().transpose();<br>var y = [1, -11.5, 52.85, -121.325, 139.1274, -63.756].roots().sort();<br>function f(z) {<br>  return x[0] * x[1] * z**1.4 - Math.log(z / (y[3] + y[4])) + Math.exp(z * x[2] * x[3] / (y[1] + y[2])) - (y[0] + x[4])**1.8693;<br>};<br>f.newton({err: 9})</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="25" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 4 -->
+
+
+
+    <h3 class="text">Método de Gauss-Jordán</h3>
+
+    <p class="text">El método de eliminación de Gauss–Jordán, es muy similar al método de eliminación de Gauss, sólo que la matriz se reduce tanto por debajo como por encima del elemento pivote, resultando en una matriz identidad (unidad). Así aplicando el método de Gauss-Jordán al sistema de ecuaciones (1):</p>
+
+    <table class="ecuacion" style="counter-reset: ecuación 0;">
+        <tbody><tr>
+            <td>
+                \[                \begin{matrix}                a_{0,0}x_0&amp;+&amp;a_{0,1}x_1&amp;+&amp;a_{0,2}x_2&amp;+&amp;a_{0,3}x_3 &amp;= &amp;c_0\\[2mm]                a_{1,0}x_0&amp;+&amp;a_{1,1}x_1&amp;+&amp;a_{1,2}x_2&amp;+&amp;a_{1,3}x_3 &amp;= &amp;c_1\\[2mm]                a_{2,0}x_0&amp;+&amp;a_{2,1}x_1&amp;+&amp;a_{2,2}x_2&amp;+&amp;a_{2,3}x_3 &amp;= &amp;c_2\\[2mm]                a_{3,0}x_0&amp;+&amp;a_{3,1}x_1&amp;+&amp;a_{3,2}x_2&amp;+&amp;a_{3,3}x_3 &amp;= &amp;c_3                \end{matrix}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+        
+    <p class="text">Se reduce a:</p>
+
+    <table class="ecuacion" id="ec9" style="counter-reset: ecuación 8">
+        <tbody><tr>
+            <td>
+                \[                \begin{matrix}                x_0&amp;+&amp;0&amp;+&amp;0&amp;+&amp;0&amp;= &amp;c'_0\\[2mm]                0&amp;+&amp;x_1&amp;+&amp;0&amp;+&amp;0&amp;= &amp;c'_1\\[2mm]                0&amp;+&amp;0&amp;+&amp;x_2&amp;+&amp;0&amp;= &amp;c'_2\\[2mm]                0&amp;+&amp;0&amp;+&amp;0&amp;+&amp;x_3 &amp;= &amp;c'_3                \end{matrix}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Donde, como se puede ver, las soluciones se encuentran directamente en la columna de las constantes.</p>
+
+    <p class="text">En forma matricial, el resultado de aplicar el método de Gauss-Jordán, es:</p>
+
+    <table class="ecuacion" id="ec10">
+        <tbody><tr>
+            <td>
+                \[                \begin{bmatrix}                a_{0,0}&amp;a_{0,1}&amp;a_{0,2}&amp;a_{0,3}&amp;a_{0,4}\\[2mm]                a_{1,0}&amp;a_{1,1}&amp;a_{1,2}&amp;a_{1,3}&amp;a_{1,4}\\[2mm]                a_{2,0}&amp;a_{2,1}&amp;a_{2,2}&amp;a_{2,3}&amp;a_{2,4}\\[2mm]                a_{3,0}&amp;a_{3,1}&amp;a_{3,2}&amp;a_{3,3}&amp;a_{3,4}                \end{bmatrix}                \xrightarrow{\text{\hspace{0.4cm}gauss-jordan\hspace{0.4cm}}}                \begin{bmatrix}                1&amp;0&amp;0&amp;0&amp;a'_{0,4}\\[2mm]                0&amp;1&amp;0&amp;0&amp;a'_{1,4}\\[2mm]                0&amp;0&amp;1&amp;0&amp;a'_{2,4}\\[2mm]                0&amp;0&amp;0&amp;1&amp;a'_{3,4}                \end{bmatrix}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Las operaciones para llevar la matriz aumentada a la matriz identidad son prácticamente las mismas que en el método de Gauss, excepto que ahora la eliminación de las columnas se realiza no sólo en la parte inferior de la diagonal principal, sino también en la parte superior de la misma. Para la reducción de las filas se emplea la misma ecuación que en el método de Gauss (ecuación 4):</p>
+
+    <table class="ecuacion" style="counter-reset:ecuación 3;">
+        <tbody><tr>
+            <td>
+                \[                a_{p,j} = \dfrac{a_{p,j}}{a_{p,p}}\hspace{0.5cm}                \begin{cases}                j = p+1 \longrightarrow m-1                \end{cases}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">En la reducción de columnas la ecuación también es la misma, sin embargo, se excluye la fila pivote:</p>
+
+    <table class="ecuacion" id="ec11" style="counter-reset:ecuación 10;">
+        <tbody><tr>
+            <td>
+                \[                a_{i,j} = a_{i,j}-a_{p,j}\cdot a_{i,p}\hspace{0.5cm}                \begin{cases}                i = 0 \longrightarrow n-1\\                j = p+1 \longrightarrow m-1\text{, ~si~ }i \ne p                \end{cases}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Al igual que en el método de Gauss, no es necesario calcular ni los unos de la diagonal principal, ni los ceros encima y debajo de la misma, sin embargo (aunque no es estrictamente necesario) dichos valores pueden ser asignados después de realizar los cálculos.</p>
+
+
+
+
+    <h3 class="text">Gauss-Jordán con pivotaje parcial</h3>
+
+
+    <p class="text">Empleando las funciones elaboradas para el método de Gauss, el algoritmo para el método de Gauss-Jordan, con pivotaje parcial, es:</p>
+
+    <p class="figurasn"><img src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo6/files/gaussj.png" alt="Algoritmo para el método de eliminación de Gauss-Jordan con pivotaje parcial"></p>
+
+    <p class="text">Que ha sido añadido como un método del objeto Array, por lo que se emplea igual que el método de Gauss.</p>
+
+
+
+    <h3 class="text">Gauss-Jordán con pivotaje total</h3>
+
+    <p class="text">El algoritmo del método de Gauss-Jordán, con pivotaje total, es:</p>
+
+    <p class="figurasn"><img src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo6/files/gaussjpt.png" alt="Algoritmo para el método de eliminación de Gauss Jordan con pivotaje total"></p>
+
+    <p class="text">El código respectivo, ha sido añadido (igualmente) como un método del objeto Array.</p>
+
+
+
+    <h3 class="text">Ejemplos</h3>
+
+    <p class="ejemplo"><span class="ejemplo"></span>Encuentre las soluciones de los siguientes sistemas de ecuaciones lineales, resolviéndolos simultáneamente con el método de Gauss-Jordán, tanto con pivotaje parcial  como total, redondeando los resultados al quinto dígito después del punto.</p>
+
+    <table class="ecuacion" id="ec12" style="counter-reset: ecuacion 12; margin-left:1cm; width:calc(100% - 1cm);">
+        <tbody><tr>
+            <td>
+                \[                \begin{gathered}                \begin{matrix}                19x_0&amp;+&amp;2x_1&amp;&amp; &amp;&amp; &amp;=&amp;0\\[1mm]                2x_0&amp;+&amp;15x_1&amp;+&amp;3x_2&amp;&amp; &amp;=&amp;0\\[1mm]                &amp;&amp; 3x_1&amp;+&amp;20x_2&amp;+&amp;2x_3&amp;=&amp;1\\[1mm]                &amp;&amp; &amp;&amp;2x_2&amp;+&amp;34x_3&amp;=&amp;0                \end{matrix}\\[14mm]                \begin{matrix}                19y_0&amp;+&amp;2y_1&amp;&amp; &amp;&amp; &amp;=&amp;-2\\[1mm]                2y_0&amp;+&amp;15y_1&amp;+&amp;3y_2&amp;&amp; &amp;=&amp;2\\[1mm]                &amp;&amp; 3y_1&amp;+&amp;20y_2&amp;+&amp;2y_3&amp;=&amp;3\\[1mm]                &amp;&amp; &amp;&amp;2y_2&amp;+&amp;34y_3&amp;=&amp;4                \end{matrix}\\[14mm]                \begin{matrix}                19z_0&amp;+&amp;2z_1&amp;&amp; &amp;&amp; &amp;=&amp;2\\[1mm]                2z_0&amp;+&amp;15z_1&amp;+&amp;3z_2&amp;&amp; &amp;=&amp;2\\[1mm]                &amp;&amp; 3z_1&amp;+&amp;20z_2&amp;+&amp;2z_3&amp;=&amp;1\\[1mm]                &amp;&amp; &amp;&amp;2z_2&amp;+&amp;34z_3&amp;=&amp;0                \end{matrix}                \end{gathered}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Con los métodos de Gauss y Gauss-Jordán, se pueden resolver simultáneamente dos o más sistemas de ecuaciones lineales, siempre que dichos sistemas sólo difieran en la columna de las constantes (como ocurre en el presente ejemplo).</p>
+
+    <p class="text">Para ello simplemente se crea la matriz aumentada, añadiendo a la matriz de coeficientes las columnas de las constantes. Al aplicar el método las soluciones quedan en cada una de las columnas de resultados:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var a = [[19, 2, 0, 0, 0, -2, 2],<br>         [2, 15, 3, 0, 0, 2, 2],<br>         [0, 3, 20, 2, 1, 3, 1],<br>         [0, 0, 2, 34, 0, 4, 0]]</div>
+        <div class="resultado"></div>
+        <div class="instruccion">a.gaussj().round(5).show()</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Y para Gauss Jordan con pivotaje total, simplemente se cambia el nombre:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">a.gaussjpt().round(5).show()</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Por lo tanto, las soluciones del primer sistema son: x<sub>0</sub> = a<sub>0,4</sub> = 0.00111, x<sub>1</sub> = a<sub>1,4</sub> = −0.01052, x<sub>2</sub> = a<sub>2,4</sub> = 0.05188 y x<sub>3</sub> = a<sub>3,4</sub> = −0.00305; las del segundo:  y<sub>0</sub> = a<sub>0,4</sub> = 0.0011, y<sub>1</sub> = a<sub>1,4</sub> = −0.11843, y<sub>2</sub> = a<sub>2,4</sub> = 0.12018 y y<sub>3</sub> = a<sub>3,4</sub> = 0.11058 y las del tercero:  z<sub>0</sub> = a<sub>0,4</sub> = 0.09323, z<sub>1</sub> = a<sub>1,4</sub> = 0.11429, z<sub>2</sub> = a<sub>2,4</sub> = 0.03305 y z<sub>3</sub> = a<sub>3,4</sub> = −0.00194.</p>
+
+    <p class="text">Al igual que en el método de Gauss, el problema puede ser resuelto en una sola instrucción (sin crear variables intermedias):</p>
+    
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">[[19, 2, 0, 0, 0, -2, 2],<br> [2, 15, 3, 0, 0, 2, 2],<br> [0, 3, 20, 2, 1, 3, 1],<br> [0, 0, 2, 34, 0, 4, 0]].gaussj().round(5).show()</div>
+        <div class="resultado"></div>
+    </div>
+
+
+
+
+
+    <p class="ejemplo"><span class="ejemplo"></span>Encuentre la solución (el valor de “x”) de la siguiente ecuación no lineal:</p>
+
+    <table class="ecuacion" id="ec13" style="margin-left:1cm; width:calc(100% - 1cm);">
+        <tbody><tr>
+            <td>
+                \[                \begin{gathered}                f(x) = y_0+y_1-y_2y_3+z^{1.0135}-z = 0\\[4mm]                \begin{aligned}                y_0+2y_1-y_2+3y_3&amp;=3.75x\\                2y_0-y_1+5y_2-6y_3&amp;=1.46x\\                4y_0+y_1-7y_2+y_3&amp;=-0.49x\\                y_0+y_1+y_2+y_3&amp;=1.97x^{1.8}                \end{aligned}\\[12mm]                z^3-6.78z^2+14.678z-5x = 0                \end{gathered}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="ejemplosn" style="margin-top: -5px; margin-bottom: 25px;">Empleando el método de Newton con 9 dígitos de precisión y redondeando el resultado al tercer dígito después del punto. En esta ecuación, z es la solución real de la ecuación polinomial, y<sub>0</sub> a y<sub>3</sub> son las soluciones del sistema de ecuaciones lineales. El sistema de ecuaciones lineales debe ser resuelto con el método de Gauss Jordán con pivotaje parcial, la solución real de la ecuación polinomial (el valor de "z") debe ser calculado con el método de Regula Falsi (no con "roots") con la precisión/exactitud por defecto (12 dígitos), encontrando el segmento de solución con el método incremental (segmentoSol). Se sabe que el valor de "z" es mayor o igual a -5. Por otra parte se sabe que la solución de la función "f(x)" (el valor de "x") está comprendido entre 0 y 5.</p>
+
+    <p class="text">En este caso, tanto el sistema de ecuaciones lineales, como la ecuación polinomial, dependen de "x", de manera que no pueden ser resueltas independientemente, sino que deben ser resueltas simultáneamente programándolas en una función que reciba "x" y en cuyo interior se resuelva tanto el sistema de ecuaciones lineales, como la ecuación polinomial.</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var f = x =&gt; {<br>&nbsp; const a = [[1, 2, -1, 3, 3.75*x], [2, -1, 5, -6, 1.46*x], [4, 1, -7, 1, -0.49*x], [1, 1, 1, 1, 1.97*Math.pow(x,1.8)]];<br>&nbsp; const y = a.gaussj().transpose();<br>&nbsp; const fz = z =&gt; z**3-6.78*z**2+14.678*z-5*x;<br>&nbsp; const [zi, zf] = fz.segmentoSol({xi:-5, dx:0.1});<br>&nbsp; const z = fz.refa({xi:zi, xf:zf});<br>&nbsp; return y[0]+y[1]-y[2]*y[3]+z**1.0135-z;<br>};</div>
+        <div class="resultado"></div>
+        <div class="instruccion">f.newton({xi:2.5, err:9}).round(3)</div>
+        <div class="resultado"></div>
+   </div>
+   <br>
+
+    <div class="ejercicio" id="ejercicio5" enunciado="1"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Para resolver, simultáneamente, el siguiente sistema de ecuaciones lineales, con el método de Gauss Jordan con pivotaje total, redondeado al tercer dígito después del punto y mostrando el resultado con "show":\[\begin{gathered}\begin{matrix}3x_0&amp;+&amp;2x_1&amp;-&amp;x_2&amp;+&amp;2x_3 &amp;=&amp;0\\[1mm]x_0&amp;+&amp;4x_1&amp;+&amp;&amp;+&amp;2x_3&amp;=&amp;0\\[1mm]2x_0&amp;+&amp;x_1&amp;+&amp;2x_2&amp;-&amp;x_3&amp;=&amp;1\\[1mm]x_0&amp;+&amp;x_1&amp;-&amp;2x_2&amp;+&amp;3x_3&amp;=&amp;0\end{matrix}\\[14mm]\begin{matrix}3y_0&amp;+&amp;2y_1&amp;-&amp;y_2&amp;+&amp;2y_3 &amp;=&amp;-2\\[1mm]y_0&amp;+&amp;4y_1&amp;+&amp;&amp;+&amp;2y_3&amp;=&amp;2\\[1mm]2y_0&amp;+&amp;y_1&amp;+&amp;2y_2&amp;-&amp;y_3&amp;=&amp;3\\[1mm]y_0&amp;+&amp;y_1&amp;-&amp;2y_2&amp;+&amp;3y_3&amp;=&amp;4\end{matrix}\\[14mm]\begin{matrix}3z_0&amp;+&amp;2z_1&amp;-&amp;z_2&amp;+&amp;2z_3 &amp;=&amp;2\\[1mm]z_0&amp;+&amp;4z_1&amp;+&amp;&amp;+&amp;2z_3&amp;=&amp;2\\[1mm]2z_0&amp;+&amp;z_1&amp;+&amp;2z_2&amp;-&amp;z_3&amp;=&amp;1\\[1mm]z_0&amp;+&amp;z_1&amp;-&amp;2z_2&amp;+&amp;3z_3&amp;=&amp;0\end{matrix}\end{gathered}\]</p></div><p class="pregunta"><span class="pregunta"></span>Complete y ejecute la siguiente instrucción:</p><div id="pregunta14" class="calculadora" spellcheck="false"><div class="instruccion">[[3, 2, -1, 2, 0, -2, 2],<br> [1, 4, 0, 2, 0, 2, 2],<br> [2, 1, 2, -1, 1, 3, 1],<br> [1, 1, -2, 3, 0, 4, 0]].gaussjpt().round(3).show()</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="7" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 5 -->
+
+    <div class="ejercicio" id="ejercicio6" enunciado="1"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Para resolver, simultáneamente, el siguiente sistema de ecuaciones lineales, con el método de Gauss Jordan con pivotaje total, redondeado al segundo dígito después del punto y mostrando el resultado con "show":\[\begin{gathered}\begin{matrix}2x_0&amp;+&amp;3x_1&amp;-&amp;x_2&amp;+&amp;3x_3 &amp;=&amp;2\\[1mm]3x_0&amp;+&amp;2x_1&amp;+&amp;2x_2&amp;+&amp;4x_3&amp;=&amp;1\\[1mm]5x_0&amp;+&amp;x_1&amp;+&amp;3x_2&amp;-&amp;7x_3&amp;=&amp;3\\[1mm]x_0&amp;+&amp;3x_1&amp;-&amp;4x_2&amp;+&amp;3x_3&amp;=&amp;0\end{matrix}\\[14mm]\begin{matrix}2y_0&amp;+&amp;3y_1&amp;-&amp;y_2&amp;+&amp;3y_3 &amp;=&amp;5\\[1mm]3y_0&amp;+&amp;2y_1&amp;+&amp;2y_2&amp;+&amp;4y_3&amp;=&amp;2\\[1mm]5y_0&amp;+&amp;y_1&amp;+&amp;3y_2&amp;-&amp;7y_3&amp;=&amp;1\\[1mm]y_0&amp;+&amp;3y_1&amp;-&amp;4y_2&amp;+&amp;3y_3&amp;=&amp;4\end{matrix}\\[14mm]\begin{matrix}2z_0&amp;+&amp;3z_1&amp;-&amp;z_2&amp;+&amp;3z_3 &amp;=&amp;1\\[1mm]3z_0&amp;+&amp;2z_1&amp;+&amp;2z_2&amp;+&amp;4z_3&amp;=&amp;4\\[1mm]5z_0&amp;+&amp;z_1&amp;+&amp;3z_2&amp;-&amp;7z_3&amp;=&amp;5\\[1mm]z_0&amp;+&amp;3z_1&amp;-&amp;4z_2&amp;+&amp;3z_3&amp;=&amp;2\end{matrix}\end{gathered}\]</p></div><p class="pregunta"><span class="pregunta"></span>Complete y ejecute la siguiente instrucción:</p><div id="pregunta17" class="calculadora" spellcheck="false"><div class="instruccion">[[2, 3, -1, 3, 2, 5, 1],<br> [3, 2, 2, 4, 1, 2, 4],<br> [5, 1, 3, -7, 3, 1, 5],<br> [1, 3, -4, 3, 0, 4, 2]].gaussjpt().round(2).show()</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="7" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 6 -->
+
+    <div class="ejercicio" id="ejercicio7" enunciado="2"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Para resolver, simultáneamente, el siguiente sistema de ecuaciones lineales, con el método de Gauss Jordan con pivotaje parcial, redondeado al primer dígito después del punto y mostrando el resultado con "show":\[\begin{gathered}\begin{matrix}x_0&amp;+&amp;3x_1&amp;-&amp;2x_2&amp;+&amp;4x_3&amp;=&amp;7\\[1mm]3x_0&amp;+&amp;2x_1&amp;+&amp;4x_2&amp;+&amp;x_3&amp;=&amp;3\\[1mm]4x_0&amp;+&amp;4x_1&amp;+&amp;x_2&amp;-&amp;5x_3&amp;=&amp;4\\[1mm]5x_0&amp;+&amp;2x_1&amp;-&amp;6x_2&amp;+&amp;2x_3&amp;=&amp;6\end{matrix}\\[14mm]\begin{matrix}y_0&amp;+&amp;3y_1&amp;-&amp;2y_2&amp;+&amp;4y_3&amp;=&amp;3\\[1mm]3y_0&amp;+&amp;2y_1&amp;+&amp;4y_2&amp;+&amp;y_3&amp;=&amp;2\\[1mm]4y_0&amp;+&amp;4y_1&amp;+&amp;y_2&amp;-&amp;5y_3&amp;=&amp;5\\[1mm]5y_0&amp;+&amp;2y_1&amp;-&amp;6y_2&amp;+&amp;2y_3&amp;=&amp;4\end{matrix}\\[14mm]\begin{matrix}z_0&amp;+&amp;3z_1&amp;-&amp;2z_2&amp;+&amp;4z_3&amp;=&amp;5\\[1mm]3z_0&amp;+&amp;2z_1&amp;+&amp;4z_2&amp;+&amp;z_3&amp;=&amp;1\\[1mm]4z_0&amp;+&amp;4z_1&amp;+&amp;z_2&amp;-&amp;5z_3&amp;=&amp;3\\[1mm]5z_0&amp;+&amp;2z_1&amp;-&amp;6z_2&amp;+&amp;2z_3&amp;=&amp;2\end{matrix}\end{gathered}\]</p></div><p class="pregunta"><span class="pregunta"></span>Complete y ejecute la siguiente instrucción:</p><div id="pregunta21" class="calculadora" spellcheck="false"><div class="instruccion">[[1, 3, -2, 4, 7, 3, 5],<br> [3, 2, 4, 1, 3, 2, 1],<br> [4, 4, 1, -5, 4, 5, 3],<br> [5, 2, -6, 2, 6, 4, 2]].gaussj().round(1).show()</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="7" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 7 -->
+
+    <div class="ejercicio" id="ejercicio8" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Para resolver la siguiente ecuación no lineal, encontrar la primera solución (el primer valor de "x"):\[\begin{gathered}f(x) = \sqrt{2y_0+3y_1+4y_2-y_3}-\sqrt[3]{2z+7}-1.87 = 0\\[4mm]\begin{aligned}3y_0-2y_1+4y_2-y_3&amp;=1.26x\\y_0+y_1-3y_2+2y_3&amp;= \text{e}^{0.131x}\\5y_0+y_1-y_2-3y_3&amp;=x/8.11\\2y_0+3y_1+4y_2-5y_3&amp;=\sqrt{6.15x}\end{aligned}\\[12mm]z^5-16.32z^4+116.84z^3-464.8z^2+1054.88z-(x/1.79156)^5 = 0\end{gathered}\]</p></div><p class="pregunta"><span class="pregunta"></span>Complete la función "f" (función flecha) que programa la ecuación a resolver. Con ese fin, en su interior, primero se resuelve el sistema de ecuaciones lineales con el método de Gauss Jordán con pivotaje total (resultado en forma de vector), luego se programa la ecuación polinomial "fz" (función flecha, operador **), se encuentra el segmento de solución ("xi" y "xf") con "segmentoSol" (valor inicial: -0.5, límite de iteraciones: 300) y la solución, con el método de la bisección (precisión/exactitud de 8 dígitos)</p><div id="pregunta22" class="calculadora" spellcheck="false"><div class="instruccion">var f = x =&gt; {<br>  const y = [[3, -2, 4, -1, 1.26 * x],<br>             [1, 1, -3, 2, Math.exp(0.131 * x)],<br>             [5, 1, -1, -3, x / 8.11],<br>             [2, 3, 4, -5, Math.sqrt(6.15 * x)]].gaussjpt().transpose();<br>  const fz = z =&gt; z**5 - 16.32 * z**4 + 116.84 * z**3 - 464.8 * z**2 + 1054.88 * z - (x / 1.79156)**5;<br>  const [xi, xf] = fz.segmentoSol({xi: -0.5, li: 300});<br>  const z = fz.biseccion({xi, xf, err: 8}).precision(8);<br>  return Math.sqrt(2 * y[0] + 3 * y[1] + 4 * y[2] - y[3]) - Math.cbrt(2 * z + 7) - 1.87;<br>}</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con la ecuación programada (f), encuentre el segmento de la primera solución dibujando su gráfica, luego (en otra celda de código) encuentre la solución con el método de Regula-Falsi (precisión/exactitud de 9 dígitos) redondeando el resultado al quinto dígito después del punto.</p><div id="pregunta23" class="calculadora" spellcheck="false"><div class="instruccion">plot({f, xi: 3, xf: 5})</div><div class="resultado"></div><div class="instruccion">f.refa({xi: 4.5, xf: 5.5, err: 9}).round(5)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="33" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 8 -->
+
+
+
+
+    <h2 class="text">Método de la matriz inversa</h2>
+
+    <p class="text">Si se conoce la inversa de la matriz de coeficientes de un sistema de ecuaciones lineales, se pueden calcular las soluciones del sistema aplicando aritmética de matrices.</p>
+
+    <p class="text">Si "B" es la matriz de coeficientes, "X" el vector de variables y "C" el de constantes, la representación matricial de un sistema de ecuaciones lineales es:</p>
+
+    <table class="ecuacion" id="ec14">
+        <tbody><tr>
+            <td>
+                \[                \text{B}\cdot\text{X} = \text{C}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>    
+
+    <p class="text">Multiplicando ambos miembros por la matriz inversa, se obtiene:</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                \begin{aligned}                \text{B}^{-1}\cdot\text{B}\cdot\text{X}&amp;=\text{B}^{-1}\cdot\text{C}\\                \text{I}\cdot\text{X}&amp;=\text{B}^{-1}\cdot\text{C}                \end{aligned}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>    
+
+    <p class="text">Por lo tanto, las soluciones del sistema (el vector "x") se calculan multiplicando la matriz inversa por el vector de constantes:</p>
+
+    <table class="ecuacion" id="ec15">
+        <tbody><tr>
+            <td>
+                \[                \text{X} = \text{B}^{-1}\cdot\text{C}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>    
+
+    <p class="text">La matriz inversa puede ser calculada tanto con Gauss, como con Gauss Jordán, añadiendo a la matriz de coeficientes la matriz unidad (o identidad) y resolviendo el sistema. El resultado es la matriz inversa. dicho procedimiento ha sido programado en el método <b class="style1">inv</b>, por lo que se obtiene la matriz inversa llamando al mismo desde la matriz de coeficientes, por ejemplo, para obtener la matriz inversa del siguiente sistema de ecuaciones lineales:</p>
+
+    <table class="ecuacion" id="ec16">
+        <tbody><tr>
+            <td>
+                \[                \begin{matrix}                2x_0&amp;+&amp;8x_1&amp;+&amp;2x_2&amp;=&amp;14\\                x_0&amp;+&amp;6x_1&amp;-&amp;x_2&amp;=&amp;15\\                2x_0&amp;-&amp;x_1&amp;+&amp;2x_2&amp;=&amp;5                \end{matrix}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>    
+
+    <p class="text">Se escribe:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">[[2,8,2],[1,6,-1],[2,-1,2]].inv().round(4).show()</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Una vez se tiene la matriz inversa de los coeficientes, se aplica la ecuación <a href="#ec15">(15)</a>, para obtener las soluciones (es decir se multiplica por la matriz de las constantes). Así, para calcular las soluciones del sistema de ecuaciones <a href="#ec16">(16)</a>, redondeando los resultados al cuarto dígito después del punto, se escribe la siguiente instrucción:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">[[2, 8, 2],[1, 6, -1],[2, -1, 2]].inv().mul([14, 15, 5]).round(4)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Este método resulta particularmente útil para resolver, simultáneamente, sistemas de ecuaciones lineales, por ejemplo, para resolver los sistemas de ecuaciones lineales de la <a href="#ec12">ecuación 12</a>:</p>
+
+    <table class="ecuacion" style="counter-reset: ecuación 11;">
+        <tbody><tr>
+            <td>
+                \[                \begin{gathered}                \begin{matrix}                19x_0&amp;+&amp;2x_1&amp;&amp; &amp;&amp; &amp;=&amp;0\\[1mm]                2x_0&amp;+&amp;15x_1&amp;+&amp;3x_2&amp;&amp; &amp;=&amp;0\\[1mm]                &amp;&amp; 3x_1&amp;+&amp;20x_2&amp;+&amp;2x_3&amp;=&amp;1\\[1mm]                &amp;&amp; &amp;&amp;2x_2&amp;+&amp;34x_3&amp;=&amp;0                \end{matrix}\\[14mm]                \begin{matrix}                19y_0&amp;+&amp;2y_1&amp;&amp; &amp;&amp; &amp;=&amp;-2\\[1mm]                2y_0&amp;+&amp;15y_1&amp;+&amp;3y_2&amp;&amp; &amp;=&amp;2\\[1mm]                &amp;&amp; 3y_1&amp;+&amp;20y_2&amp;+&amp;2y_3&amp;=&amp;3\\[1mm]                &amp;&amp; &amp;&amp;2y_2&amp;+&amp;34y_3&amp;=&amp;4                \end{matrix}\\[14mm]                \begin{matrix}                19z_0&amp;+&amp;2z_1&amp;&amp; &amp;&amp; &amp;=&amp;2\\[1mm]                2z_0&amp;+&amp;15z_1&amp;+&amp;3z_2&amp;&amp; &amp;=&amp;2\\[1mm]                &amp;&amp; 3z_1&amp;+&amp;20z_2&amp;+&amp;2z_3&amp;=&amp;1\\[1mm]                &amp;&amp; &amp;&amp;2z_2&amp;+&amp;34z_3&amp;=&amp;0                \end{matrix}                \end{gathered}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Redondeando los resultados al quinto dígito después del punto, se escribe:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">[[19, 2, 0, 0],<br> [2, 15, 3, 0],<br> [0, 3, 20, 2],<br> [0, 0, 2, 34]].inv().mul(<br>  [[0, -2, 2],<br>   [0, 2, 2],<br>   [1, 3, 1],<br>   [0, 4, 0]]).round(5).show()</div>
+        <div class="resultado"></div>
+    </div>
+    <br>
+
+    <div class="ejercicio" id="ejercicio9" enunciado="2"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Para resolver el siguiente sistema de ecuaciones lineales, con el método de la matriz inversa, redondeado al cuarto dígito después del punto:</p>\[\begin{matrix}3y_0&amp;+&amp;2y_1&amp;-&amp;~y_2&amp;+&amp;2y_3&amp;=&amp;-2\\~y_0&amp;+&amp;4y_1&amp;+&amp; &amp;+&amp;2y_3&amp;=&amp;~~2\\2y_0&amp;+&amp;~y_1&amp;+&amp;2y_2&amp;-&amp;~y_3&amp;=&amp;~~3\\~y_0&amp;+&amp;~y_1&amp;-&amp;~y_2&amp;+&amp;3y_3&amp;=&amp;~~4\end{matrix}\]<p></p></div><p class="pregunta"><span class="pregunta"></span>Complete y ejecute la siguiente instrucción:</p><div id="pregunta30" class="calculadora" spellcheck="false"><div class="instruccion">[[3, 2, -1, 2],<br> [1, 4, 0, 2],<br> [2, 1, 2, -1],<br> [1, 1, -1, 3]].inv().mul([-2,2,3,4]).round(4)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="6" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 9 -->
+
+    <div class="ejercicio" id="ejercicio10" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Para resolver el siguiente sistema de ecuaciones lineales, con el método de la matriz inversa, redondeado al quinto dígito después del punto:\[\begin{matrix}7x_0&amp;+&amp;x_1&amp;+&amp;2x_2&amp;-&amp;x_3&amp;=&amp;3\\x_0&amp;+&amp;9x_1&amp;+&amp;3x_2&amp;+&amp;2x_3&amp;=&amp;2\\2x_0&amp;+&amp;3x_1&amp;+&amp;12x_2&amp;+&amp;3x_3&amp;=&amp;7\\-x_0&amp;+&amp;2x_1&amp;+&amp;3x_2&amp;+&amp;11x_3&amp;=&amp;5\end{matrix}\]</p></div><p class="pregunta"><span class="pregunta"></span>Complete y ejecute la siguiente instrucción:</p><div id="pregunta31" class="calculadora" spellcheck="false"><div class="instruccion">[[7, 1, 2, -1],<br> [1, 9, 3, 2],<br> [2, 3, 12, 3],<br> [-1, 2, 3, 11]].inv().mul([3,2,7,5]).round(5)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="6" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 10 -->
+
+    <div class="ejercicio" id="ejercicio11" enunciado="2"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Para resolver el siguiente sistema de ecuaciones lineales, con el método de la matriz inversa, redondeado al segundo dígito después del punto:\[\begin{matrix}22z_0&amp;-&amp;2z_1&amp;+&amp;6z_2&amp;+&amp;2z_3&amp;=&amp;13\\z_0&amp;+&amp;31z_1&amp;+&amp;2z_2&amp;+&amp;3z_3&amp;=&amp;20\\3z_0&amp;-&amp;z_1&amp;+&amp;45z_2&amp;+&amp;5z_3&amp;=&amp;12\\4z_0&amp;+&amp;3z_1&amp;+&amp;3z_2&amp;+&amp;21z_3&amp;=&amp;15\end{matrix}\]</p></div><p class="pregunta"><span class="pregunta"></span>Complete y ejecute la siguiente instrucción:</p><div id="pregunta36" class="calculadora" spellcheck="false"><div class="instruccion">[[22, -2, 6, 2],<br> [1, 31, 2, 3],<br> [3, -1, 45, 5],<br> [4, 3, 3, 21]].inv().mul([13,20,12,15]).round(2)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="6" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 11 -->
+
+    <div class="ejercicio" id="ejercicio12" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Para resolver, simultáneamente, el siguiente sistema de ecuaciones lineales, con el método de la matriz inversa, redondeado al segundo dígito después del punto y mostrando el resultado con "show":\[\begin{gathered}\begin{matrix}3x_0&amp;+&amp;2x_1&amp;-&amp;x_2&amp;+&amp;2x_3 &amp;=&amp;0\\[1mm]x_0&amp;+&amp;4x_1&amp;+&amp;&amp;+&amp;2x_3&amp;=&amp;0\\[1mm]2x_0&amp;+&amp;x_1&amp;+&amp;2x_2&amp;-&amp;x_3&amp;=&amp;1\\[1mm]x_0&amp;+&amp;x_1&amp;-&amp;x_2&amp;+&amp;3x_3&amp;=&amp;0\end{matrix}\\[14mm]\begin{matrix}3y_0&amp;+&amp;2y_1&amp;-&amp;y_2&amp;+&amp;2y_3 &amp;=&amp;-2\\[1mm]y_0&amp;+&amp;4y_1&amp;+&amp;&amp;+&amp;2y_3&amp;=&amp;2\\[1mm]2y_0&amp;+&amp;y_1&amp;+&amp;2y_2&amp;-&amp;y_3&amp;=&amp;3\\[1mm]y_0&amp;+&amp;y_1&amp;-&amp;y_2&amp;+&amp;3y_3&amp;=&amp;4\end{matrix}\\[14mm]\begin{matrix}3z_0&amp;+&amp;2z_1&amp;-&amp;z_2&amp;+&amp;2z_3 &amp;=&amp;2\\[1mm]z_0&amp;+&amp;4z_1&amp;+&amp;&amp;+&amp;2z_3&amp;=&amp;2\\[1mm]2z_0&amp;+&amp;z_1&amp;+&amp;2z_2&amp;-&amp;z_3&amp;=&amp;1\\[1mm]z_0&amp;+&amp;z_1&amp;-&amp;z_2&amp;+&amp;3z_3&amp;=&amp;0\end{matrix}\end{gathered}\]</p></div><p class="pregunta"><span class="pregunta"></span>Complete y ejecute la siguiente instrucción:</p><div id="pregunta37" class="calculadora" spellcheck="false"><div class="instruccion">[[3, 2, -1, 2],<br> [1, 4, 0, 2],<br> [2, 1, 2, -1],<br> [1, 1, -1, 3]].inv().mul(<br>[[0, -2, 2],<br> [0, 2, 2],<br> [1, 3, 1],<br> [0, 4, 0]]).round(2).show()</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="7" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 12 -->
+
+
+
+    <h2 class="text">Método de Crout</h2>
+
+
+    <p class="text">El método de Crout es el primer método de factorización (o descomposición) que se estudia. Estos métodos trabajan primero con la matriz de coeficientes, así si la matriz de coeficientes del sistema de ecuaciones lineales, es:</p>
+
+    <table class="ecuacion" id="ec17" style="counter-reset: ecuación 16">
+        <tbody><tr>
+            <td>
+                \[                A =                \begin{bmatrix}                a_{0,0}&amp;a_{0,1}&amp;a_{0,2}&amp;a_{0,3}\\[2mm]                a_{1,0}&amp;a_{1,1}&amp;a_{1,2}&amp;a_{1,3}\\[2mm]                a_{2,0}&amp;a_{2,1}&amp;a_{2,2}&amp;a_{2,3}\\[2mm]                a_{3,0}&amp;a_{3,1}&amp;a_{3,2}&amp;a_{3,3}                \end{bmatrix}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Estos métodos la descomponen en el producto de dos matrices, es decir:</p>
+
+    <table class="ecuacion" id="ec18">
+        <tbody><tr>
+            <td>
+                \[                A =                \begin{bmatrix}                a_{0,0}&amp;a_{0,1}&amp;a_{0,2}&amp;a_{0,3}\\[2mm]                a_{1,0}&amp;a_{1,1}&amp;a_{1,2}&amp;a_{1,3}\\[2mm]                a_{2,0}&amp;a_{2,1}&amp;a_{2,2}&amp;a_{2,3}\\[2mm]                a_{3,0}&amp;a_{3,1}&amp;a_{3,2}&amp;a_{3,3}                \end{bmatrix}                = L \times U                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Al cálculo de los elementos de las matrices “L” y “U”, se conoce como <dfn class="style1">descomposición LU o factorización LU</dfn> y es lo que se hace en los métodos de Crout, Doolitle y Cholesky.</p>
+
+    <p class="text">El proceso de descomposición no es único, las posibles combinaciones de “L” y “U” son infinitas, en general, sin embargo, son tres las formas de descomposición más empleadas en la práctica.</p>
+
+    <p class="text">La descomposición de <i class="style1">Crout</i>, en la que los elementos de la diagonal principal en “U” son unos, es decir:</p>
+
+    <table class="ecuacion" id="ec19">
+        <tbody><tr>
+            <td>
+                \[                A = L \times U =                \begin{bmatrix}                l_{0,0}&amp;0&amp;0&amp;0\\[2mm]                l_{1,0}&amp;l_{1,1}&amp;0&amp;0\\[2mm]                l_{2,0}&amp;l_{2,1}&amp;l_{2,2}&amp;0\\[2mm]                l_{3,0}&amp;l_{3,1}&amp;l_{3,2}&amp;l_{3,3}                \end{bmatrix} \times                \begin{bmatrix}                1&amp;u_{0,1}&amp;u_{0,2}&amp;u_{0,3}\\[2mm]                0&amp;1&amp;u_{1,2}&amp;u_{1,3}\\[2mm]                0&amp;0&amp;1&amp;u_{2,3}\\[2mm]                0&amp;0&amp;0&amp;1                \end{bmatrix}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">La descomposición de <i class="style1">Doolittle</i>, en la que los elementos de la diagonal principal en “L” son unos, es decir:</p>
+
+    <table class="ecuacion" id="ec20">
+            <tbody><tr>
+                <td>
+                    \[                    A = L \times U =                    \begin{bmatrix}                    1&amp;0&amp;0&amp;0\\[2mm]                    l_{1,0}&amp;1&amp;0&amp;0\\[2mm]                    l_{2,0}&amp;l_{2,1}&amp;1&amp;0\\[2mm]                    l_{3,0}&amp;l_{3,1}&amp;l_{3,2}&amp;1                    \end{bmatrix} \times                    \begin{bmatrix}                    u_{0,0}&amp;u_{0,1}&amp;u_{0,2}&amp;u_{0,3}\\[2mm]                    0&amp;u_{1,1}&amp;u_{1,2}&amp;u_{1,3}\\[2mm]                    0&amp;0&amp;u_{2,2}&amp;u_{2,3}\\[2mm]                    0&amp;0&amp;0&amp;u_{3,3}                    \end{bmatrix}                    \]
+                </td>
+                <td></td>
+            </tr>
+        </tbody></table>
+
+    <p class="text">Y la descomposición de <i class="style1">Cholesky</i>, que sólo se aplica a matrices simétricas y donde, por esa razón, U es la transpuesta de L:</p>
+
+    <table class="ecuacion" id="ec21">
+        <tbody><tr>
+            <td>
+                \[                A = L \times U =                \begin{bmatrix}                l_{0,0}&amp;0&amp;0&amp;0\\[2mm]                l_{1,0}&amp;l_{1,1}&amp;0&amp;0\\[2mm]                l_{2,0}&amp;l_{2,1}&amp;l_{2,2}&amp;0\\[2mm]                l_{3,0}&amp;l_{3,1}&amp;l_{3,2}&amp;l_{3,3}                \end{bmatrix} \times                \begin{bmatrix}                l_{0,0}&amp;l_{1,0}&amp;l_{2,0}&amp;l_{3,0}\\[2mm]                0&amp;l_{1,1}&amp;l_{2,1}&amp;l_{3,1}\\[2mm]                0&amp;0&amp;l_{2,2}&amp;l_{3,2}\\[2mm]                0&amp;0&amp;0&amp;l_{3,3}                \end{bmatrix}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Si la matriz A, es la matriz de los coeficientes de un sistema de ecuaciones lineales, como el siguiente:</p>
+
+    <table class="ecuacion" id="ec22">
+        <tbody><tr>
+            <td>
+                \[                \begin{matrix}                a_{0,0}x_0&amp;+&amp;a_{0,1}x_1&amp;+&amp;a_{0,2}x_2&amp;+&amp;a_{0,3}x_3 &amp;= &amp;b_0\\[2mm]                a_{1,0}x_0&amp;+&amp;a_{1,1}x_1&amp;+&amp;a_{1,2}x_2&amp;+&amp;a_{1,3}x_3 &amp;= &amp;b_1\\[2mm]                a_{2,0}x_0&amp;+&amp;a_{2,1}x_1&amp;+&amp;a_{2,2}x_2&amp;+&amp;a_{2,3}x_3 &amp;= &amp;b_2\\[2mm]                a_{3,0}x_0&amp;+&amp;a_{3,1}x_1&amp;+&amp;a_{3,2}x_2&amp;+&amp;a_{3,3}x_3 &amp;= &amp;b_3                \end{matrix}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Una vez realizada la factorización, las soluciones pueden ser calculadas empleando las matrices triangulares obtenidas:</p>
+
+    <table class="ecuacion" id="ec23">
+        <tbody><tr>
+            <td>
+                \[                A \cdot x = L \cdot U \cdot x = b                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Multiplicando ambos lados de la ecuación por L<sup>-1</sup> (la inversa de L), se obtiene:</p>
+
+    <table class="ecuacion" id="ec24">
+        <tbody><tr>
+            <td>
+                \[                L^{-1} \cdot L \cdot U \cdot x = I \cdot U \cdot x = U \cdot x = L^{-1} \cdot b = c                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">De donde resultan las igualdades:</p>
+
+    <table class="ecuacion" id="ec25">
+        <tbody><tr>
+            <td>
+                \[                U \cdot x = c                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <table class="ecuacion" id="ec26">
+        <tbody><tr>
+            <td>
+                \[                L^{-1} \cdot b = c                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Primero se calculan los valores de “c” y para ello se multiplican ambos lados de la ecuación <a href="#ec26">(26)</a> por L:</p>
+
+    <table class="ecuacion" id="ec27">
+        <tbody><tr>
+            <td>
+                \[                L \cdot L^{-1} \cdot b = I \cdot b = b = L \cdot c                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">De donde se deduce que los elementos el vector “c” pueden ser calculados resolviendo el sistema de ecuaciones lineales:</p>
+
+    <table class="ecuacion" id="ec28">
+        <tbody><tr>
+            <td>
+                \[                L \cdot c = b                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Que al ser un sistema triangular inferior, puede ser resuelto directamente por sustitución hacia adelante. Por ejemplo, para el sistema de ecuaciones <a href="#ec22">(22)</a>, el sistema triangular inferior que se forma (aplicando la descomposición de Crout) es:</p>
+
+    <table class="ecuacion" id="ec29">
+        <tbody><tr>
+            <td>
+                \[                \begin{matrix}                l_{0,0}c_0&amp; &amp; &amp; &amp; &amp; &amp; &amp;= &amp;b_0\\[2mm]                l_{1,0}c_0&amp;+&amp;l_{1,1}c_1&amp; &amp; &amp; &amp;  &amp;= &amp;b_1\\[2mm]                l_{2,0}c_0&amp;+&amp;l_{2,1}c_1&amp;+&amp;l_{2,2}c_2&amp; &amp;  &amp;= &amp;b_2\\[2mm]                l_{3,0}c_0&amp;+&amp;l_{3,1}c_1&amp;+&amp;l_{3,2}c_2&amp;+&amp;l_{3,3}c_3 &amp;= &amp;b_3                \end{matrix}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Donde c<sub>0</sub> se calcula con la primera ecuación, c<sub>1</sub> con la segunda y así sucesivamente. En general, para un sistema con “n” ecuaciones, los valores de “c” se calculan con:</p> 
+
+    <table class="ecuacion" id="ec30">
+        <tbody><tr>
+            <td>
+                \[                c_i = \dfrac{b_i-\displaystyle\sum_{k=0}^{i-1}l_{i,k}\cdot c_k}{l_{i,i}}\hspace{0.7cm}                \begin{cases}                i = 0 \longrightarrow n-1                \end{cases}                                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">Esta ecuación puede ser generalizada para el caso en el que “b” es una matriz en lugar de un vector (que es lo que ocurre cuando se resuelven simultáneamente sistemas de ecuaciones lineales, o se calcula la matriz inversa):</p>
+
+    <table class="ecuacion" id="ec31">
+        <tbody><tr>
+            <td>
+                \[                c_{i,j} = \dfrac{b_{i,j}-\displaystyle\sum_{k=0}^{i-1}l_{i,k}\cdot c_{k,j}}{l_{i,i}}\hspace{0.7cm}                \begin{cases}                i = 0 \longrightarrow n-1\\                j = 0 \longrightarrow m-1                \end{cases}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Donde “m” es el número de columnas de la matriz “b” y “n” el número de filas del sistema de ecuaciones.</p>
+
+    <p class="text">Una vez calculado el vector “c”, se encuentran las soluciones resolviendo el sistema de ecuaciones lineales <a href="#ec25">(25)</a>, que al ser un sistema triangular superior, puede ser resuelto por sustitución hacia atrás (como en el método de Gauss).</p>
+
+    <p class="text">Por ejemplo, para la ecuación <a href="#ec22">(22)</a> el sistema triangular superior que se forma (para la descomposición de Crout) es:</p>
+
+    <table class="ecuacion" id="ec32">
+        <tbody><tr>
+            <td>
+                \[                \begin{matrix}                x_0&amp;+&amp;u_{0,1}x_1&amp;+&amp;u_{0,2}x_2&amp;+&amp;u_{0,3}x_3 &amp;= &amp;c_0\\[2mm]                 &amp; &amp;x_1&amp;+&amp;u_{1,2}x_2&amp;+&amp;u_{1,3}x_3 &amp;= &amp;c_1\\[2mm]                &amp; &amp; &amp; &amp;x_2&amp;+&amp;u_{2,3}x_3 &amp;= &amp;c_2\\[2mm]                &amp; &amp; &amp; &amp; &amp; &amp;x_3 &amp;= &amp;c_3                \end{matrix}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>    
+
+    <p class="text">Es decir que con la última ecuación se calcula x<sub>3</sub>, con la penúltima x<sub>2</sub> y así sucesivamente. En general, para un sistema con “n” ecuaciones, los valores de “x<sub>i</sub>” se calculan con: </p>
+
+    <table class="ecuacion" id="ec33">
+        <tbody><tr>
+            <td>
+                \[                x_i = \dfrac{c_i-\displaystyle\sum_{k=i+1}^{n-1}u_{i,k}\cdot x_k}{u_{i,i}}\hspace{0.7cm}                \begin{cases}                i = n-1 \longrightarrow 0                \end{cases}                                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Para el caso general en el que “c” es una matriz, se tiene:</p>
+
+    <table class="ecuacion" id="ec34">
+        <tbody><tr>
+            <td>
+                \[                x_{i,j} = \dfrac{c_{i,j}-\displaystyle\sum_{k=i+1}^{n-1}u_{i,k}\cdot x_{k,j}}{l_{i,i}}\hspace{0.7cm}                \begin{cases}                i = n-1 \longrightarrow 0\\                j = 0 \longrightarrow m-1                \end{cases}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">La factorización (o descomposición) matricial es particularmente útil cuando, en el problema que se está resolviendo, sólo cambian las constantes del sistema. En esos casos las matrices “L” y “U” se calculan una sola vez, luego, cuando cambian las constantes, las nuevas soluciones se calculan aplicando las ecuaciones <a href="#ec31">(31)</a> y <a href="#ec34">(34)</a> (donde los valores de “L” y “U” ya han sido calculados).</p>
+
+    <p class="text">Las ecuaciones para llevar a cabo la factorización en el método de Crout, pueden ser deducidas multiplicando de forma intercalada la matriz “L” por la primera columna de la matriz “U”, luego la primera fila de la matriz “L” por las columnas 2 a “n” de la matriz “U”, la matriz “L” por la segunda columna de “U”, la segunda fila de la matriz “L” por las columnas 3 a “n” de la matriz “U” y así sucesivamente.</p>
+
+    <p class="text">Siguiendo el anterior procedimiento se deducen las siguientes expresiones:</p>
+
+    <table class="ecuacion" id="ec35">
+        <tbody><tr>
+            <td>
+                \[                \left.\begin{aligned}                l_{i,p} &amp;= a_{i,p}-\sum_{k=0}^{p-1}l_{i,k}\cdot u_{k,p}                \hspace{0.4cm}                \begin{cases}                i=p \rightarrow n-1                \end{cases}\\[7mm]                u_{p,p} &amp;= 1\\                u_{p,j}&amp;=\dfrac{a_{p,j}-\displaystyle\sum_{k=0}^{p-1}l_{p,k}\cdot u_{k,j}}{l_{p,p}}                \hspace{0.4cm}                \begin{cases}                j=p+1 \rightarrow n-1                \end{cases}                \end{aligned}                \right\{                p=0 \rightarrow n-1                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Si no se almacenan los unos de la matriz “U”, ni los ceros de las matrices “L” y “U”, ambas matrices pueden ser almacenadas en una sola, así las dos matrices de la ecuación <a href="#ec19">(19)</a>, pueden ser almacenadas en una:</p>
+
+    <table class="ecuacion" id="ec36">
+        <tbody><tr>
+            <td>
+                \[                \begin{bmatrix}                l_{0,0}&amp;u_{0,1}&amp;u_{0,2}&amp;u_{0,3}\\[2mm]                l_{1,0}&amp;l_{1,1}&amp;u_{1,2}&amp;u_{1,3}\\[2mm]                l_{2,0}&amp;l_{2,1}&amp;l_{2,2}&amp;u_{2,3}\\[2mm]                l_{3,0}&amp;l_{3,1}&amp;l_{3,2}&amp;l_{3,3}                \end{bmatrix}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Así se ahorra memoria y, más importante aún, se simplifican los cálculos. Si esta matriz se almacena en la matriz de coeficientes “A” (pues dichos coeficientes se emplean sólo una vez en los cálculos), las ecuaciones <a href="#ec35">(35)</a> pueden ser reescritas como:</p>
+
+    <table class="ecuacion" id="ec37">
+        <tbody><tr>
+            <td>
+                \[                \left.\begin{aligned}                a_{i,p} &amp;= a_{i,p}-\sum_{k=0}^{p-1}a_{i,k}\cdot a_{k,p}                \hspace{0.4cm}                \begin{cases}                i=p \rightarrow n-1                \end{cases}\\[7mm]                a_{p,j}&amp;=\dfrac{a_{p,j}-\displaystyle\sum_{k=0}^{p-1}a_{p,k}\cdot a_{k,j}}{a_{p,p}}                \hspace{0.4cm}                \begin{cases}                j=p+1 \rightarrow n-1                \end{cases}                \end{aligned}                \right\{                p=0 \rightarrow n-1                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Las ecuaciones <a href="#ec31">(31)</a> y <a href="#ec34">(34)</a>, con las que se calculan las soluciones del sistema, también deben ser reescritas, pero, si además las soluciones se almacenan en la matriz de constantes “b” (cuyos valores se emplean también sólo una vez en los cálculos) las expresiones resultantes son:</p>
+
+    <table class="ecuacion" id="ec38">
+        <tbody><tr>
+            <td>
+                \[                b_{i,j} = \dfrac{b_{i,j}-\displaystyle\sum_{k=0}^{i-1}a_{i,k}\cdot b_{k,j}}{a_{i,i}}\hspace{0.7cm}                \begin{cases}                i = 0 \longrightarrow n-1\\                j = 0 \longrightarrow m-1                \end{cases}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <table class="ecuacion" id="ec39">
+        <tbody><tr>
+            <td>
+                \[                b_{i,j} = b_{i,j}-\displaystyle\sum_{k=i+1}^{n-1}a_{i,k}\cdot b_{k,j}\hspace{0.7cm}                \begin{cases}                i = n-1 \longrightarrow 0\\                j = 0 \longrightarrow m-1                \end{cases}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">A esta forma se denomina esquema compacto y es la más empleada en la práctica.</p>
+
+
+
+    <h3 class="text">Pivotaje parcial</h3>
+
+    <p class="text">Al igual que en los métodos de Gauss y Gauss Jordán, en los métodos de factorización se debe evitar que el elemento pivote sea cero y con ese fin se debe llevar a cabo un pivotaje parcial.</p>
+
+    <p class="text">En estos métodos, sin embargo, se debe mantener un registro de los intercambios de filas realizados, pues es necesario ordenar la matriz de las constantes (“b”) en función a dichos intercambios.</p>
+
+    <p class="text">Alternativamente se puede trabajar con la matriz aumentada, pero con ello se pierde la principal ventaja de estos métodos: la de calcular nuevas soluciones empleando las matrices “l” y “u”.</p>
+
+    <p class="text">Para hacer el seguimiento de los intercambios, se emplea una matriz de permutaciones “o”, que es una matriz identidad, de las mismas dimensiones que la matriz de coeficientes. Cada vez que se intercambian dos filas en la matriz “a”, se intercambian las mismas filas en "o", luego, al final del proceso, los intercambios se reflejan en “b”, simplemente multiplicándo "b" por “o”.</p>
+
+    <p class="text">El algoritmo del pivotaje parcial, para los métodos de factorizacion, es el siguiente:</p>
+
+    <p class="figurasn"><img src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo6/files/pivparlu.png" alt="Algoritmo para realizar el pivotaje parcial en los métodos de factorización"></p>
+
+    <p class="text">El código respectivo, ha sido añadido como un método de la clase Array.</p>
+
+
+
+    <h3 class="text">Factorización LU</h3>
+
+    <p class="text">El algoritmo para factorizar (descomponer) una matriz por el método de Crout, que básicamente es la traducción a estructuras de control, de las ecuaciones <a href="ec37">(37)</a> es:</p>
+
+    <p class="figurasn"><img src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo6/files/croutlu.png" alt="Algoritmo para factorizar las matrices L, U en el método de Crout."></p>
+
+    <p class="text">El código respectivo, ha sido añadido como un método de la clase Array.</p>
+
+
+
+
+    <h3 class="text">Cálculo de las soluciones</h3>
+
+    <p class="text">Con las matriz factorizada y la de permutaciones, devueltas por el método <dfn class="style1">croutlu</dfn>, se pueden calcular las soluciones del sistema llevando a cabo primero la sustitución hacia adelante, ecuación <a href="#ec38">(38)</a> y luego la sustitución hacia atrás, ecuación <a href="#ec39">(39)</a>, como se muestra en el siguiente algoritmo:</p>
+
+    <p class="figurasn"><img src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo6/files/croutsol.png" alt="Algoritmo para resolver sistemas de ecuaciones lineales por el método de Crout"></p>
+
+    <p class="text">Que también ha sido añadido como un método de la clase Array y debe ser llamado desde el vector devuelto por el método <dfn class="style1">croutlu</dfn>.</p>
+
+    <p class="text">Cuando sólo se resuelve un sistema de ecuaciones, o se resuelven simultáneamente dos o más sistemas, resulta práctico agrupar los métodos <dfn class="style1">croutlu</dfn> y <dfn class="style1">croutsol</dfn> en uno solo, de manera que se obtengan directamente las soluciones del sistema. Dicho método, ha sido añadido igualmente a la clase Array, con el nombre <b class="style1">crout</b>.</p>
+
+    <p class="text">El método <b class="style1">crout</b> debe ser llamado desde la matriz de coeficientes (no la matriz aumentada), mandando como argumento la matriz (o vector) de constantes.</p>
+
+
+    <h3 class="text">Ejemplos</h3>
+
+    <p class="ejemplo"><span class="ejemplo"></span>Empleando por una parte <dfn class="style1">croutlu</dfn> y <dfn class="style1">croutsol</dfn> y por otra <dfn class="style1">crout</dfn>, encuentre las soluciones del siguiente sistema de ecuaciones lineales, redondeando los resultados al cuarto dígito después del punto.</p>
+
+    <table class="ecuacion" id="ec40" style="margin-left:1cm; width:calc(100% - 1cm);">
+        <tbody><tr>
+            <td>
+                \[                \begin{matrix}                x_0&amp;+&amp;x_1&amp;+&amp;x_2&amp;+&amp;x_3&amp;=&amp;-1\\                4x_0&amp;+&amp;5x_1&amp;+&amp;6x_2&amp;+&amp;7x_3&amp;=&amp;0\\                6x_0&amp;+&amp;10x_1&amp;+&amp;15x_2&amp;+&amp;21x_3&amp;=&amp;10\\                12x_0&amp;+&amp;30x_1&amp;+&amp;60x_2&amp;+&amp;105x_3&amp;=&amp;10                \end{matrix}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Primero se crea la matriz de coeficientes y el vector de constantes:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var a = [[1, 1, 1, 1], [4, 5, 6, 7], [6, 10, 15, 21], [12, 30, 60, 105]];<br>var b = [-1, 0, 10, 10];</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="text">Con la matriz de coeficientes se lleva a cabo la factorización, obteniéndose un vector con dos elementos, siendo el primero la matriz factorizada (donde la matriz triangular inferior, incluyendo la diagonal principal, corresponde a "L" y la matriz triangular superior a "U"):</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var r = a.croutlu();<br>r[0].show()</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="text">El segundo elemento es la matriz de permutaciones (la matriz "o"):</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">r[1].show()</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Desde el vector resultante "r" se llama a <dfn class="style1">croutsol</dfn> y se obtienen las soluciones del sistema de ecuaciones, en este caso mostrando el resultado en filas separadas y redondeando los elementos al tercer dígito después del punto:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">r.croutsol(b).round(3).show()</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="text">Como en Javascript se puede llamar a un método desde un resultado, el sistema de ecuaciones puede ser resuelto con una sola instrucción:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">a.croutlu().croutsol(b).round(3).show()</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="text">O, directamente, llamando al método <dfn class="style1">crout</dfn>:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">a.crout(b).round(3).show()</div>
+        <div class="resultado"></div>
+    </div>
+
+
+
+
+    <p class="ejemplo"><span class="ejemplo"></span>Encuentre la solución (el valor de “x”) de la siguiente ecuación no lineal, resolviendo el sistema de ecuaciones lineales con el método de Crout (resultados redondeados al cuarto dígito después del punto), la ecuación polinomial con “roots” (resultado redondeado al segundo dígito después del punto) y la ecuación no lineal con el método de la Bisección, con 10 dígitos de precisión y redondeando el resultado al séptimo dígito después del punto. Los valores iniciales, para resolver la ecuación no lineal, deben ser calculados con el método incremental (segmentoSol), redondeando el resultado al segundo dígito después del punto. Se sabe que la solución es menor o igual a 7.</p>
+
+    <table class="ecuacion" id="ec41" style="margin-left:1cm; width:calc(100% - 1cm);">
+        <tbody><tr>
+            <td>
+                \[                \begin{gathered}                f(x) = z_3x^{3.2}+z_2\ln(x)-z_0x-z1 = 0\\[4mm]                \begin{aligned}                y_0+3y_1-2y_2+y_3&amp;=335.137\\                2y_1+5y_2+4y_3&amp;=-122.815\\                -4y_0+4y_1+y_2-2y_3&amp;=70.6096\\                3y_0-6y_2-7y_3&amp;=129.13                \end{aligned}\\[12mm]                z^4+y_0z^3+y_1z^2+y_2z+y_3 = 0                \end{gathered}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Para resolver el problema, se guarda la matriz de coeficientes y la de constantes en variables ("a" y "b"), se resuelve el sistema de ecuaciones lineales (con "crout") y se guarda el vector con las soluciones en "y", luego se resuelve la ecuación polinomial con "roots" y se guarda el vector con las soluciones en "z", entonces (en "f") se programa la ecuación no lineal y se encuentra el segmento de solución con "segmentoSol", guardando los resultados en "xi" y "xf", finalmente se encuentra la solución con el método de la bisección:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var a = [[1, 3, -2, 1], [0, 2, 5, 4], [-4, 4, 1, -2], [3, 0, -6, -7]];<br>var b = [335.137, -122.815, 70.6096, 129.13];<br>var y = a.crout(b).round(4).transpose();<br>var z = [1, y[0], y[1], y[2], y[3]].roots().round(2);<br>var f = x =&gt; z[3]*x**3.2+z[2]*Math.log(x)-z[0]*x-z[1];<br>var [xi, xf] = f.segmentoSol({xi:7, dx:-0.1}).round(2);<br>f.biseccion({xi, xf, err:10}).round(7)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <br>
+    <div class="ejercicio" id="ejercicio13" enunciado="1"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Para resolver el siguiente sistema de ecuaciones lineales, con los métodos <dfn class="style1">croutlu</dfn> y <dfn class="style1">croutsol</dfn>, transformando el resultado en un vector, redondeado al cuarto dígito después del punto:\[\begin{matrix}3y_0&amp;+&amp;2y_1&amp;-&amp;~y_2&amp;+&amp;2y_3&amp;=&amp;-3\\~y_0&amp;+&amp;4y_1&amp;+&amp; &amp;+&amp;2y_3&amp;=&amp;~~1\\2y_0&amp;+&amp;~y_1&amp;+&amp;2y_2&amp;-&amp;~y_3&amp;=&amp;~~2\\~y_0&amp;+&amp;~y_1&amp;-&amp;~y_2&amp;+&amp;3y_3&amp;=&amp;~~5\end{matrix}\]</p></div><p class="pregunta"><span class="pregunta"></span>Complete y ejecute la siguiente instrucción:</p><div id="pregunta41" class="calculadora" spellcheck="false"><div class="instruccion">[[3, 2, -1, 2],<br> [1, 4, 0, 2],<br> [2, 1, 2, -1],<br> [1, 1, -1, 3]].croutlu().croutsol([-3,1,2,5]).transpose().round(4)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="6" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 13 -->
+
+    <div class="ejercicio" id="ejercicio14" enunciado="2"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Para resolver el siguiente sistema de ecuaciones lineales, con el método <dfn class="style1">crout</dfn>, transformando el resultado en un vector, redondeado al cuarto dígito después del punto:\[\begin{matrix}7x_0&amp;+&amp;3x_1&amp;+&amp;2x_2&amp;-&amp;x_3&amp;=&amp;3\\x_0&amp;+&amp;8x_1&amp;+&amp;3x_2&amp;+&amp;2x_3&amp;=&amp;2\\2x_0&amp;+&amp;2x_1&amp;+&amp;12x_2&amp;+&amp;3x_3&amp;=&amp;7\\-x_0&amp;+&amp;2x_1&amp;+&amp;3x_2&amp;+&amp;11x_3&amp;=&amp;5\end{matrix}\]</p></div><p class="pregunta"><span class="pregunta"></span>Complete y ejecute la siguiente instrucción:</p><div id="pregunta45" class="calculadora" spellcheck="false"><div class="instruccion">[[7, 3, 2, -1],<br> [1, 8, 3, 2],<br> [2, 2, 12, 3],<br> [-1, 2, 3, 11]].crout([3,2,7,5]).transpose().round(4)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="6" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 14 -->
+
+    <div class="ejercicio" id="ejercicio15" enunciado="2"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Para resolver el siguiente sistema de ecuaciones lineales, con los métodos <dfn class="style1">croutlu</dfn> y <dfn class="style1">croutsol</dfn>, transformando el resultado en un vector, redondeado al segundo dígito después del punto:\[\begin{matrix}22z_0&amp;-&amp;2z_1&amp;+&amp;6z_2&amp;+&amp;2z_3&amp;=&amp;13\\z_0&amp;+&amp;31z_1&amp;+&amp;2z_2&amp;+&amp;3z_3&amp;=&amp;20\\3z_0&amp;-&amp;z_1&amp;+&amp;45z_2&amp;+&amp;5z_3&amp;=&amp;12\\4z_0&amp;+&amp;3z_1&amp;+&amp;3z_2&amp;+&amp;21z_3&amp;=&amp;15\end{matrix}\]Los resultados deben ser mostrados en forma de vector y redondeados al segundo dígito después del punto.</p></div><p class="pregunta"><span class="pregunta"></span>Complete y ejecute la siguiente instrucción:</p><div id="pregunta48" class="calculadora" spellcheck="false"><div class="instruccion">[[22, -2, 6, 2],<br> [1, 31, 2, 3],<br> [3, -1, 45, 5],<br> [4, 3, 3, 21]].croutlu().croutsol([13,20,12,15]).transpose().round(2)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="6" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 15 -->
+
+    <div class="ejercicio" id="ejercicio16" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Para resolver la siguiente ecuación no lineal, encontrar el valor de "x":):\[\begin{gathered} f(x) = y_0y_1x^{1.3}-z_4z_3\ln(x)+{y_2y_3 \over y_4}\text{e}\raisebox{1em}{\large{$\frac{x}{z_2+z_1}$}}-z_0y_4 = 0\\[4mm] \begin{aligned} 2y_0+y_2-2y_3+y_4&amp;=2.3\\y_0-y_1+2y_2+y_3-3y_4 &amp;= -1.9\\ 3y_0+y_1-2y_2+5y_3-4y_4&amp;=2.5\\y_0+y_1+y_2-y_3-y_4 &amp;= -0.2\\ 2y_0+3y_1+4y_2-5y_3-y_4 &amp;= 0.5 \end{aligned}\\[15mm] z^5-11.8z^4+54.8z^3-125.042z^2+140.02z-61.4916 = 0 \end{gathered}\]</p></div><p class="pregunta"><span class="pregunta"></span>Complete la siguiente instrucción, donde se resuelve el sistema de ecuaciones lineales con los métodos "croutlu" y "croutsol", resuelve la ecuación polinomial con roots (precisión/exactitud por defecto), ordenando los resultados con <dfn class="style1">sort</dfn>, programa la ecuación no lineal "f" (función flecha, operador **), encuentra el segmento de solución ("xi", "xf") con segmentoSol (valores por defecto) y la solución con el método de la bisección (precisión/exactitud: 7 dígitos)</p><div id="pregunta49" class="calculadora" spellcheck="false"><div class="instruccion">var y = [[2, 0, 1, -2, 1],<br>         [1, -1, 2, 1, -3],<br>         [3, 1, -2, 5, -4],<br>         [1, 1, 1, -1, -1],<br>         [2, 3, 4, -5, -1]].croutlu().croutsol([2.3, -1.9, 2.5, -0.2, 0.5]).transpose();<br>var z = [1, -11.8, 54.8, -125.042, 140.02, -61.4916].roots().sort();<br>var f = x =&gt; y[0] * y[1] * x**1.3 - z[4] * z[3] * Math.log(x) + y[2] * y[3] / y[4] * Math.exp(x / (z[2] + z[1])) - z[0] * y[4];<br>var [xi, xf] = f.segmentoSol();<br>f.biseccion({xi, xf, err: 7}).round(7)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="22" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 16 -->
+
+
+
+    <h2 class="text">Método de Doolittle</h2>
+
+    <p class="text">Cuando en la factorización L-U, la matriz triangular inferior queda con unos en la diagonal principal (ecuación <a href="#ec20">20</a>), el proceso se conoce como  el método de Doolittle.</p>
+
+    <p class="text">Las ecuaciones para la factorización (el cálculo de las matrices “L” y “U”) son:</p>
+
+    <table class="ecuacion" id="ec42">
+        <tbody><tr>
+            <td>
+                \[                \left.\begin{aligned}                u_{p,j}&amp;=a_{p,j}-\sum_{k=0}^{p-1}l_{p,k}\cdot u_{k,j}                \hspace{0.4cm}                \begin{cases}                j=p \rightarrow n-1                \end{cases}\\[7mm]                l_{p,p} &amp;= 1\\                l_{i,p} &amp;= \dfrac{a_{i,p}-\displaystyle\sum_{k=0}^{p-1}l_{i,k}\cdot u_{k,p}}{u_{p,p}}                \hspace{0.4cm}                \begin{cases}                i=p+1 \rightarrow n-1                \end{cases}\\                \end{aligned}                \right\{                p=0 \rightarrow n-1                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Estas ecuaciones se deducen de forma similar al método de Crout, sólo que los cálculos se realizan en el orden: fila 1, columna 1, fila 2, columna 2, fila 3, columna 3 y así sucesivamente.</p>
+
+    <p class="text">Al igual que en el método de Crout, no es necesario guardar los ceros ni los unos de las matrices, por lo que las dos matrices (“L” y “U”) pueden ser guardadas en una sola:</p>
+
+    <table class="ecuacion" id="ec43">
+        <tbody><tr>
+            <td>
+                \[                \begin{bmatrix}                u_{0,0}&amp;u_{0,1}&amp;u_{0,2}&amp;u_{0,3}\\[2mm]                l_{1,0}&amp;u_{1,1}&amp;u_{1,2}&amp;u_{1,3}\\[2mm]                l_{2,0}&amp;l_{2,1}&amp;u_{2,2}&amp;u_{2,3}\\[2mm]                l_{3,0}&amp;l_{3,1}&amp;l_{3,2}&amp;u_{3,3}                \end{bmatrix}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Si esta matriz se guarda en la matriz de coeficientes “a”, las ecuaciones <a href="#ec42">(42)</a> se transforman en:</p>
+
+    <table class="ecuacion" id="ec44">
+        <tbody><tr>
+            <td>
+                \[                \left.\begin{aligned}                a_{p,j} &amp;= a_{p,j}-\sum_{k=0}^{p-1}a_{p,k}\cdot a_{k,j}                \hspace{0.4cm}                \begin{cases}                j=p \rightarrow n-1                \end{cases}\\[7mm]                a_{i,p}&amp;=\dfrac{a_{i,p}-\displaystyle\sum_{k=0}^{p-1}a_{i,k}\cdot a_{k,p}}{a_{p,p}}                \hspace{0.4cm}                \begin{cases}                i=p+1 \rightarrow n-1                \end{cases}                \end{aligned}                \right\{                p=0 \rightarrow n-1                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Las ecuaciones para el cálculo de las soluciones, por sustitución hacia adelante y hacia atrás, tomando en cuenta que ahora “L” es la matriz triangular inferior con unos en su diagonal principal (no la matriz "U" como ocurre en Crout) y guardando los resultados en la matriz de constantes “b”, son:</p>
+
+    <table class="ecuacion" id="ec45">
+        <tbody><tr>
+            <td>
+                \[                b_{i,j} = b_{i,j}-\displaystyle\sum_{k=0}^{i-1}a_{i,k}\cdot b_{k,j}\hspace{0.7cm}                \begin{cases}                i = 0 \longrightarrow n-1\\                j = 0 \longrightarrow m-1                \end{cases}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <table class="ecuacion" id="ec46">
+        <tbody><tr>
+            <td>
+                \[                b_{i,j} = \dfrac{b_{i,j}-\displaystyle\sum_{k=i+1}^{n}a_{i,k}\cdot b_{k,j}}{a_{i,i}}\hspace{0.7cm}                \begin{cases}                i = n-1 \longrightarrow 0\\                j = 0 \longrightarrow m-1                \end{cases}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+
+
+
+    <h3 class="text">Factorización LU</h3>
+
+    <p class="text">El algoritmo para calcular las matrices “L” y “U” por el método de Doolittle, es el proceso que automatiza la solución de las ecuaciones <a href="#ec44">(44)</a> y es el siguiente:</p>
+
+    <p class="figurasn"><img src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo6/files/doolittlelu.png" alt="Algoritmo para la factoriación por el método de Doolittle"></p>
+
+    <p class="text">El código respectivo, ha sido añadido como un método a la clase Array.</p>
+
+
+
+    <h3 class="text">Cálculo de las soluciones</h3>
+
+    <p class="text">Con la matriz factorizada y la de permutaciones, devueltas por "doolittlelu", se calculan las soluciones del sistema por sustitución hacia adelante <a href="#ec45">(45)</a> y hacia atrás <a href="#ec46">(46)</a>, tal como se detalla en el siguiente algoritmo:</p>
+
+    <p class="figurasn"><img src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo6/files/doolittlesol.png" alt="Algoritmo para resolver sistemas de ecuaciones lineales por el método de Doolittle"></p>
+
+    <p class="text">El código respectivo, ha sido añadido como un método de la clase Array y debe ser llamado desde el resultado que devuelve el método <dfn class="style1">doolittlelu</dfn>.</p>
+
+    <p class="text">Estos métodos se emplean de la misma forma que <dfn class="style1">croutlu</dfn> y <dfn class="style1">croutsol</dfn> y al igual que en dichos métodos, se cuenta con un método: <b class="style1">doolittle</b>, que permite obtener las soluciones directamente, llamándolo desde el vector de constantes y mandando (como argumento) el vector (o matriz) de constantes.</p>
+
+    
+    <h3 class="text">Ejemplos</h3>
+    
+    <p class="ejemplo"><span class="ejemplo"></span>Calcule, simultáneamente, las soluciones de los siguientes sistemas de ecuaciones lineales con los métodos <dfn class="style1">doolittlelu</dfn> y <dfn class="style1">doolittlesol</dfn> y luego con el método <dfn class="style1">doolittle</dfn>, redondeando los resultados al tercer dígito después del punto, mostrando las filas de la matriz resultante en líneas separadas.</p>
+
+    <table class="ecuacion" id="ec47" style="margin-left:1cm; width:calc(100% - 1cm);">
+        <tbody><tr>
+            <td>
+                \[                \begin{aligned}                \begin{matrix}                x_1&amp;+&amp;2x_2&amp;+&amp;3x_3&amp;=&amp;21\\                5x_1&amp;-&amp;9x_2&amp;+&amp;2x_3&amp;=&amp;12\\                3x_1&amp;+&amp;x_2&amp;-&amp;4x_3&amp;=&amp;15                \end{matrix}\\[7mm]                \begin{matrix}                y_1&amp;+&amp;2y_2&amp;+&amp;3y_3&amp;=&amp;11\\                5y_1&amp;-&amp;9y_2&amp;+&amp;2y_3&amp;=&amp;2\\                3y_1&amp;+&amp;y_2&amp;-&amp;4y_3&amp;=&amp;4                \end{matrix}\\[7mm]                \begin{matrix}                z_1&amp;+&amp;2z_2&amp;+&amp;3z_3&amp;=&amp;1\\                5z_1&amp;-&amp;9z_2&amp;+&amp;2z_3&amp;=&amp;2\\                3z_1&amp;+&amp;z_2&amp;-&amp;4z_3&amp;=&amp;3                \end{matrix}                \end{aligned}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Para resolver el problema, simplemente se crean las matrices de coeficientes y constantes y se llama a los métodos <dfn class="style1">doolittlelu</dfn> y <dfn class="style1">doolittlesol</dfn>:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var a = [[1, 2, 3], [5, -9, 2], [3, 1, -4]];<br>var b = [[21, 11, 1], [12, 2, 2], [15, 4, 3]];<br>a.doolittlelu().doolittlesol(b).round(3).show()</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Que igualmente puede ser resuelto con <dfn class="style1">doolittle</dfn>:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">a.doolittle(b).round(3).show()</div>
+        <div class="resultado"></div>
+    </div>
+    <br>
+
+
+
+
+    <p class="ejemplo"><span class="ejemplo"></span>Encuentre la solución (el valor de “x”) de la siguiente ecuación no lineal, empleando el método de la Secante con 9 dígitos de precisión, redondeando el resultado al quinto dígitos después del punto. En esta ecuación, z es la solución real de la ecuación polinomial, y<sub>0</sub> a y<sub>3</sub> son las soluciones del sistema de ecuaciones lineales. El sistema de ecuaciones lineales debe ser resuelto con el método <dfn class="style1">doolittle</dfn>, la solución real de la ecuación polinomial (el valor de "z") debe ser calculado con el método de Regula Falsi, con el error por defecto y con ese número de dígitos de precisión, encontrando el segmento de solución con el método incremental (se sabe que el valor de "z" es mayor o igual a -5). Por otra parte, se sabe que la solución de la ecuación no lineal (el valor de "x") está comprendida entre 0 y 5.</p>
+
+    <table class="ecuacion" id="ec48" style="margin-left:1cm; width:calc(100% - 1cm);">
+        <tbody><tr>
+            <td>
+                \[                \begin{gathered}                f(x) = y_0+y_1-y_2y_3+z^{1.0135}-z = 0\\[4mm]                \begin{aligned}                y_0+2y_1-y_2+3y_3&amp;=3.75x\\                2y_0-y_1+5y_2-6y_3&amp;=1.46x\\                4y_0+y_1-7y_2+y_3&amp;=-0.49x\\                y_0+y_1+y_2+y_3&amp;=1.97x^{1.8}                \end{aligned}\\[12mm]                z^3-6.78z^2+14.678z-5x = 0                \end{gathered}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Como ya ha visto, dado que tanto el sistema de ecuaciones lineales, como la ecuación polinomial, dependen de "x", el valor de la función debe ser calculado programándola en una función que reciba "x" y en cuyo interior se resuelva tanto el sistema de ecuaciones lineales, como la ecuación polinomial.</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var f = x =&gt; {<br>&nbsp; const a = [[1, 2, -1, 3], [2, -1, 5, -6], [4, 1, -7, 1], [1, 1, 1, 1]];<br>  const b = [3.75*x, 1.46*x, -0.49*x, 1.97*x**1.8];<br>&nbsp; const y = a.doolittle(b).transpose();<br>&nbsp; const fz = z =&gt; z**3-6.78*z**2+14.678*z-5*x;<br>&nbsp; const [zi, zf] = fz.segmentoSol({xi:-5, dx:0.1});<br>&nbsp; const z = fz.refa({xi:zi, xf:zf}).precision(12);<br>&nbsp; return y[0]+y[1]-y[2]*y[3]+z**1.0135-z;<br>};</div>
+        <div class="resultado"></div>
+   </div>
+
+   <p class="text">Luego, con la función programada, se encuentra la solución (el valor de "x") con el método de la secante, comenzando la búsqueda con dos valores consecutivos cerca a la mitad del segmento proporcionado:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">f.secante({xi:2.5, xf:2.6, err:9}).round(5)</div>
+        <div class="resultado"></div>
+   </div>
+
+    <br>
+    <div class="ejercicio" id="ejercicio17" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Para resolver, simultáneamente, el siguiente sistema de ecuaciones lineales, con los métodos <dfn class="style1">doolittlelu</dfn> y <dfn class="style1">doolittlesol</dfn>, redondeado al segundo dígito después del punto y mostrando el resultado con "show":\[\begin{gathered}\begin{matrix}3x_0&amp;+&amp;2x_1&amp;-&amp;x_2&amp;+&amp;2x_3 &amp;=&amp;0\\[1mm]x_0&amp;+&amp;4x_1&amp;+&amp;&amp;+&amp;2x_3&amp;=&amp;0\\[1mm]2x_0&amp;+&amp;x_1&amp;+&amp;2x_2&amp;-&amp;x_3&amp;=&amp;1\\[1mm]x_0&amp;+&amp;x_1&amp;-&amp;x_2&amp;+&amp;3x_3&amp;=&amp;0\end{matrix}\\[14mm]\begin{matrix}3y_0&amp;+&amp;2y_1&amp;-&amp;y_2&amp;+&amp;2y_3 &amp;=&amp;-2\\[1mm]y_0&amp;+&amp;4y_1&amp;+&amp;&amp;+&amp;2y_3&amp;=&amp;2\\[1mm]2y_0&amp;+&amp;y_1&amp;+&amp;2y_2&amp;-&amp;y_3&amp;=&amp;3\\[1mm]y_0&amp;+&amp;y_1&amp;-&amp;y_2&amp;+&amp;3y_3&amp;=&amp;4\end{matrix}\\[14mm]\begin{matrix}3z_0&amp;+&amp;2z_1&amp;-&amp;z_2&amp;+&amp;2z_3 &amp;=&amp;2\\[1mm]z_0&amp;+&amp;4z_1&amp;+&amp;&amp;+&amp;2z_3&amp;=&amp;2\\[1mm]2z_0&amp;+&amp;z_1&amp;+&amp;2z_2&amp;-&amp;z_3&amp;=&amp;1\\[1mm]z_0&amp;+&amp;z_1&amp;-&amp;z_2&amp;+&amp;3z_3&amp;=&amp;0\end{matrix}\end{gathered}\]</p></div><p class="pregunta"><span class="pregunta"></span>Complete y ejecute la siguiente instrucción:</p><div id="pregunta52" class="calculadora" spellcheck="false"><div class="instruccion">[[3, 2, -1, 2],<br> [1, 4, 0, 2],<br> [2, 1, 2, -1],<br> [1, 1, -1, 3]].doolittlelu().doolittlesol(<br>[[0, -2, 2],<br> [0, 2, 2],<br> [1, 3, 1],<br> [0, 4, 0]]).round(2).show()</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="7" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 17 -->
+
+    <div class="ejercicio" id="ejercicio18" enunciado="2"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Para resolver, simultáneamente, el siguiente sistema de ecuaciones lineales, con el método <dfn class="style1">doolittle</dfn>, redondeado al segundo dígito después del punto y mostrando el resultado con "show":\[\begin{gathered}\begin{matrix}2x_0&amp;+&amp;3x_1&amp;-&amp;2x_2&amp;+&amp;3x_3 &amp;=&amp;2\\[1mm]3x_0&amp;+&amp;2x_1&amp;+&amp;3x_2&amp;+&amp;4x_3&amp;=&amp;1\\[1mm]5x_0&amp;+&amp;x_1&amp;+&amp;2x_2&amp;-&amp;5x_3&amp;=&amp;3\\[1mm]x_0&amp;+&amp;3x_1&amp;-&amp;4x_2&amp;+&amp;6x_3&amp;=&amp;0\end{matrix}\\[14mm]\begin{matrix}2y_0&amp;+&amp;3y_1&amp;-&amp;2y_2&amp;+&amp;3y_3 &amp;=&amp;5\\[1mm]3y_0&amp;+&amp;2y_1&amp;+&amp;3y_2&amp;+&amp;4y_3&amp;=&amp;2\\[1mm]5y_0&amp;+&amp;y_1&amp;+&amp;2y_2&amp;-&amp;5y_3&amp;=&amp;1\\[1mm]y_0&amp;+&amp;3y_1&amp;-&amp;4y_2&amp;+&amp;6y_3&amp;=&amp;4\end{matrix}\\[14mm]\begin{matrix}2z_0&amp;+&amp;3z_1&amp;-&amp;2z_2&amp;+&amp;3z_3 &amp;=&amp;1\\[1mm]3z_0&amp;+&amp;2z_1&amp;+&amp;3z_2&amp;+&amp;4z_3&amp;=&amp;4\\[1mm]5z_0&amp;+&amp;z_1&amp;+&amp;2z_2&amp;-&amp;5z_3&amp;=&amp;5\\[1mm]z_0&amp;+&amp;3z_1&amp;-&amp;4z_2&amp;+&amp;6z_3&amp;=&amp;2\end{matrix}\end{gathered}\]</p></div><p class="pregunta"><span class="pregunta"></span>Complete y ejecute la siguiente instrucción:</p><div id="pregunta57" class="calculadora" spellcheck="false"><div class="instruccion">[[2, 3, -2, 3],<br> [3, 2, 3, 4],<br> [5, 1, 2, -5],<br> [1, 3, -4, 6]].doolittle(<br>[[2, 5, 1],<br> [1, 2, 4],<br> [3, 1, 5],<br> [0, 4, 2]]).round(2).show()</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="7" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 18 -->
+
+    <div class="ejercicio" id="ejercicio19" enunciado="2"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Para resolver, simultáneamente, el siguiente sistema de ecuaciones lineales, con los métodos <dfn class="style1">doolittlelu</dfn> y <dfn class="style1">doolittlesol</dfn>, redondeado al cuarto dígito después del punto y mostrando el resultado con "show":\[\begin{gathered}\begin{matrix}x_0&amp;+&amp;3x_1&amp;-&amp;2x_2&amp;+&amp;4x_3&amp;=&amp;7\\[1mm]3x_0&amp;+&amp;2x_1&amp;+&amp;4x_2&amp;+&amp;x_3&amp;=&amp;3\\[1mm]4x_0&amp;+&amp;4x_1&amp;+&amp;x_2&amp;-&amp;5x_3&amp;=&amp;4\\[1mm]5x_0&amp;+&amp;2x_1&amp;-&amp;6x_2&amp;+&amp;2x_3&amp;=&amp;6\end{matrix}\\[14mm]\begin{matrix}y_0&amp;+&amp;3y_1&amp;-&amp;2y_2&amp;+&amp;4y_3&amp;=&amp;3\\[1mm]3y_0&amp;+&amp;2y_1&amp;+&amp;4y_2&amp;+&amp;y_3&amp;=&amp;2\\[1mm]4y_0&amp;+&amp;4y_1&amp;+&amp;y_2&amp;-&amp;5y_3&amp;=&amp;5\\[1mm]5y_0&amp;+&amp;2y_1&amp;-&amp;6y_2&amp;+&amp;2y_3&amp;=&amp;4\end{matrix}\\[14mm]\begin{matrix}z_0&amp;+&amp;3z_1&amp;-&amp;2z_2&amp;+&amp;4z_3&amp;=&amp;5\\[1mm]3z_0&amp;+&amp;2z_1&amp;+&amp;4z_2&amp;+&amp;z_3&amp;=&amp;1\\[1mm]4z_0&amp;+&amp;4z_1&amp;+&amp;z_2&amp;-&amp;5z_3&amp;=&amp;3\\[1mm]5z_0&amp;+&amp;2z_1&amp;-&amp;6z_2&amp;+&amp;2z_3&amp;=&amp;2\end{matrix}\end{gathered}\]</p></div><p class="pregunta"><span class="pregunta"></span>Complete y ejecute la siguiente instrucción:</p><div id="pregunta60" class="calculadora" spellcheck="false"><div class="instruccion">[[1, 3, -2, 4],<br> [3, 2, 4, 1],<br> [4, 4, 1, -5],<br> [5, 2, -6, 2]].doolittlelu().doolittlesol(<br>[[7, 3, 5],<br> [3, 2, 1],<br> [4, 5, 3],<br> [6, 4, 2]]).round(4).show()</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="7" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 19 -->
+
+    <div class="ejercicio" id="ejercicio20" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Para resolver la siguiente ecuación no lineal, encontrar la primera solución (el primer valor de "x"):\[\begin{gathered}f(x) = \sqrt{2y_0+3y_1+4y_2-y_3}-\sqrt[3]{2z+7}-1.87 = 0\\[4mm]\begin{aligned}3y_0-2y_1+4y_2-y_3&amp;=1.26x\\y_0+y_1-3y_2+2y_3&amp;= \text{e}^{0.131x}\\5y_0+y_1-y_2-3y_3&amp;=x/8.11\\2y_0+3y_1+4y_2-5y_3&amp;=\sqrt{6.15x}\end{aligned}\\[12mm]z^5-16.32z^4+116.84z^3-464.8z^2+1054.88z-(x/1.79156)^5 = 0\end{gathered}\]</p></div><p class="pregunta"><span class="pregunta"></span>Complete la función "f" (función flecha) que programa la ecuación a resolver. Con ese fin, en su interior, primero se resuelve el sistema de ecuaciones lineales con el método doolittle (resultado en forma de vector), luego se programa la ecuación polinomial "fz" (función flecha, operador **), se encuentra el segmento de solución ("xi" y "xf") con "segmentoSol" (valor inicial: -0.5, límite de iteraciones: 300) y la solución, con el método de la bisección (precisión/exactitud de 8 dígitos)</p><div id="pregunta61" class="calculadora" spellcheck="false"><div class="instruccion">var f = x =&gt; {<br>  const y = [[3, -2, 4, -1],<br>             [1, 1, -3, 2],<br>             [5, 1, -1, -3],<br>             [2, 3, 4, -5]].doolittle(<br>  [1.26 * x, Math.exp(0.131 * x), x / 8.11, Math.sqrt(6.15 * x)]).transpose();<br>  const fz = z =&gt; z**5 - 16.32 * z**4 + 116.84 * z**3 - 464.8 * z**2 + 1054.88 * z - (x / 1.79156)**5;<br>  const [xi, xf] = fz.segmentoSol({xi: -0.5, li: 300});<br>  const z = fz.biseccion({xi, xf, err: 8});<br>  return Math.sqrt(2 * y[0] + 3 * y[1] + 4 * y[2] - y[3]) - Math.cbrt(2 * z + 7) - 1.87;<br>}</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con la ecuación programada (f), encuentre el segmento de la primera solución dibujando su gráfica, luego (en otra celda de código) encuentre la solución con el método de Regula-Falsi (precisión/exactitud de 9 dígitos) redondeando el resultado al quinto dígito después del punto.</p><div id="pregunta62" class="calculadora" spellcheck="false"><div class="instruccion">plot({f, xi: 4, xf: 9})</div><div class="resultado"></div><div class="instruccion">f.refa({xi: 4.5, xf: 5.5, err: 9}).round(5)</div><div class="resultado"></div><div class="instruccion">f.refa({xi: 7, xf: 7.5, err: 9}).round(5)</div><div class="resultado"></div><div class="instruccion">f.refa({xi: 8, xf: 9, err: 9}).round(5)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="33" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 20 -->
+
+
+
+    <h2 class="text">Método de Cholesky</h2>
+
+    <p class="text">Cuando la matriz es simétrica, la descomposición “L” “U” puede ser simplificada y el proceso se conoce como el método de Cholesky y corresponde a la descomposición presentada en la <a href="#ec21">ecuación 21</a>).</p>
+
+    <p class="text">Puesto que la matriz a factorizar debe ser simétrica, el método de Cholesky no admite pivotaje.</p>
+
+    <p class="text">A pesar de estas limitaciones, la forma de Cholesky resulta de utilidad práctica, pues los sistemas con matrices simétricas aparecen en la solución de diversos problemas prácticos.</p>
+
+    <p class="text">Las ecuaciones que permiten calcular los valores de “L” (y en consecuencia los de “U”), se deducen obteniendo los términos de la matriz triangular inferior de la matriz original “A” (columna por columna) y son: </p>
+
+    <table class="ecuacion" id="ec49">
+        <tbody><tr>
+            <td>
+                \[                \left.\begin{aligned}                l_{p,p}&amp;=\sqrt{a_{p,p}-\sum_{k=0}^{p-1}l_{p,k}^2}\\[7mm]                l_{i,p} &amp;= \dfrac{a_{i,p}-\displaystyle\sum_{k=0}^{p-1}l_{i,k}\cdot l_{p,k}}{l_{p,p}}                \hspace{0.4cm}                \begin{cases}                i=p+1 \rightarrow n-1                \end{cases}\\                \end{aligned}                \right\{                p=0 \rightarrow n-1                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Como se puede ver, el cálculo de los elementos de la diagonal principal involucra el cálculo de la raíz cuadrada, por lo que dicho valor debe ser positivo.</p>
+
+    <p class="text">Al igual que en Crout y Doolittle, no es necesario almacenar los ceros, por lo que los resultados se pueden almacenar en una matriz:</p> 
+
+    <table class="ecuacion" id="ec50">
+        <tbody><tr>
+            <td>
+                \[                \begin{bmatrix}                l_{0,0}&amp;l_{1,0}&amp;l_{2,0}&amp;l_{3,0}\\[2mm]                l_{1,0}&amp;l_{1,1}&amp;l_{2,1}&amp;l_{3,1}\\[2mm]                l_{2,0}&amp;l_{2,1}&amp;l_{2,2}&amp;l_{3,2}\\[2mm]                l_{3,0}&amp;l_{3,1}&amp;l_{3,2}&amp;l_{3,3}                \end{bmatrix}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Si esta matriz es la matriz de coeficientes (A), las ecuaciones <a href="#ec_49">(49)</a> se transforman en:</p>
+
+    <table class="ecuacion" id="ec51">
+        <tbody><tr>
+            <td>
+                \[                \left.\begin{aligned}                a_{p,p}&amp;=\sqrt{a_{p,p}-\sum_{k=0}^{p-1}a_{p,k}^2}\\[7mm]                a_{i,p} = a_{p,i} &amp;= \dfrac{a_{i,p}-\displaystyle\sum_{k=0}^{p-1}a_{i,k}\cdot a_{p,k}}{a_{p,p}}                \hspace{0.1cm}                \begin{cases}                i=p+1 \rightarrow n-1                \end{cases}\\                \end{aligned}                \right\{                p=0 \rightarrow n-1                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+
+
+
+    <h3 class="text">Factorización LU</h3>
+
+
+    <p class="text">El algoritmo que automatiza el cálculo de las ecuaciones de factorización en el método de Cholesky, es el siguiente:</p>
+
+    <p class="figurasn"><img src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo6/files/doolittlelu.png" alt="Algoritmo para realizar la factorización en el método de Doolittle"></p>
+
+    <p class="text">El código respectivo, añadido como un método de la clase Array.</p>
+
+
+
+    <h3 class="text">Cálculo de las soluciones</h3>
+
+    <p class="text">El algoritmo que automatiza el cálculo de las ecuaciones <a href="#ec31">(31)</a> y <a href="#ec34">(34)</a>, con las que se calculan las soluciones del sistema a partir de la matriz factorizada, es:</p>
+
+    <p class="figurasn"><img src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo6/files/choleskysol.png" alt="Algoritmo para resolver un sistema de ecuaciones lineales simétrico por el método de Cholesky"></p>
+
+    <p class="text">El código respectivo ha sido añadido, también, a la clase Array y debe ser llamado, desde el resultado devuelto por <dfn class="style1">choleskylu</dfn>. Tanto <dfn class="style1">choleskylu</dfn> como <dfn class="style1">choleskysol</dfn> se emplean de la misma forma que los métodos respectivos de Crout y Doolittle, recordando que, para el método de Cholesky, la matriz de coeficientes tiene que ser simétrica.</p>
+
+    <p class="text">Al igual que en los otros casos, se ha añadido un método, con el nombre <i class="style1">cholesky</i>, con el cual se obtienen directamente las soluciones, llamándolo desde la matriz de coeficientes y mandando (como argumento) el vector (o matriz) de constantes.</p>
+
+    <div class="ejercicio" id="ejercicio21" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Para resolver el siguiente sistema de ecuaciones lineales, con los métodos de <dfn class="style1">choleskylu</dfn> y <dfn class="style1">choleskysol</dfn>, transformando el resultado en un vector, redondeado al tercer dígito después del punto:\[\begin{matrix}7x_0&amp;+&amp;x_1&amp;+&amp;2x_2&amp;-&amp;x_3&amp;=&amp;3\\x_0&amp;+&amp;9x_1&amp;+&amp;3x_2&amp;+&amp;2x_3&amp;=&amp;2\\2x_0&amp;+&amp;3x_1&amp;+&amp;12x_2&amp;+&amp;3x_3&amp;=&amp;7\\-x_0&amp;+&amp;2x_1&amp;+&amp;3x_2&amp;+&amp;11x_3&amp;=&amp;5\end{matrix}\].</p></div><p class="pregunta"><span class="pregunta"></span>Complete y ejecute la siguiente instrucción:</p><div id="pregunta67" class="calculadora" spellcheck="false"><div class="instruccion">[[7, 1, 2, -1],<br> [1, 9, 3, 2],<br> [2, 3, 12, 3],<br> [-1, 2, 3, 11]].choleskylu().choleskysol([3,2,7,5]).transpose().round(3)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="6" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 21 -->
+
+
+
+
+    <div id="generarPrueba" data-scroll-y="20323.02734375"><br><hr><label class="lnotacapitulo">Nota del capítulo: </label><input type="text" id="notaCapitulo" disabled="disabled" class="itnotacapitulo"><br><br><button id="btGenerarPrueba" style="visibility: visible;" onclick="capitulo.registrarCapitulo()">Iniciar defensa</button><button id="btEmplearBono" style="margin-left:1.1rem;width:9.686rem;display:none;" onclick="capitulo.emplearBono()">Emplear Bono</button><br><br></div>
+
+
+<d id="dAutor" style="font-size: 0.9rem;text-align:center;color: #0808f24f;font-weight:bolder;position:fixed;top: 5px;right: 5px;user-select:none;display:inline-block;z-index:15;">Hernan G. Peñaranda V.</d></div><!-- Cierre del div capítulo -->
+
+<div id="dato" style="display:none;">JK5KCZ0r938lCZ0oDYGrDoqpE3Km93GqD30aCZ8o938oCYGnC30aC2HvLczXP000</div>
+<div id="reg" style="display:none;">CZ0nC3ioC34mEp8mCJ0xCp0mCJioC34mEp8mCJ0xCp0mCJinCJ0mEpCmC34xCJ4mC3ipC30nEp4nC30xCZ0nC3ipC30nEpCmC34xCJ4mC3inCJ0mEpCmC34xCp0mCJinCJ0mEp4nC300</div>
+
+
+
+
+<div id="divDialogo" style="display: none;"><div onfocus="document.querySelector('#divDialogo input').focus();"><div>Carnet universitario</div><div>Escriba el número de su carnet universitario, verificando que el guión haya sido correctamente insertado.</div><input type="text" onkeydown="return Capitulo.divDialogo.funKeydown(event)" onkeyup="Capitulo.divDialogo.funKeyup(event)"><div><button onclick="Capitulo.divDialogo.funClick('aceptar');">Aceptar</button><button style="margin-left:35px;" onclick="Capitulo.divDialogo.funClick('cancelar');">Cancelar</button></div></div></div></body>
