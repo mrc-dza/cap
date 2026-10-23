@@ -1,0 +1,1326 @@
+<!DOCTYPE html>
+<head>
+
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Language" content="es">
+  
+    <title>57-3850 capítulo 10</title>
+
+  
+    <!-- Librería y hoja de estilos KATEX  -->
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/katex/katex.min.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/katex/katex.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/katex/contrib/auto-render.min.js"></script>
+
+    <!-- Librerías y hojas de estilo CodeMirror -->
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/lib/codemirror.min.css">
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/theme/mdn-like.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/lib/codemirror.min.js"></script>
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/fold/foldgutter.min.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/fold/foldcode.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/fold/brace-fold.min.js"></script>
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/dialog/dialog.min.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/dialog/dialog.min.js"></script>
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/hint/show-hint.min.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/hint/show-hint.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/hint/javascript-hint.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/search/searchcursor.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/search/search.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/edit/matchbrackets.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/edit/closebrackets.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/comment/comment.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/wrap/hardwrap.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/javascript/javascript.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/mathematica/mathematica.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/octave/octave.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/python/python.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/css/css.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/xml/xml.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/markdown/markdown.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/htmlmixed/htmlmixed.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/keymap/sublime.min.js"></script>
+    
+    <!-- Librería Plotly -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script><style id="plotly.js-style-global"></style>
+
+    <!-- Librerías y hojas de estilo function-plot -->
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/function-plot/site/js/vendor/d3.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/function-plot/dist/function-plot.js"></script>
+    
+    <!-- Librería quantities -->
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/quantities/quantities.min.js"></script>
+
+    <!-- Librería GoJs para la creación de diagramas de flujo -->
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/gojs/release/go.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/flowchart_gojs.js"></script>
+
+    <!-- Librerías matemáticas propias -->
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/math.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/number.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/array.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/string.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/cplx.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/function.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/object.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/prq.js"></script>
+
+    <!-- Librería y hoja de estilos propias para la creación y manejo de la calculadora  -->
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/src/cjs.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/cjs.js"></script>
+
+    <!-- Librería y hoja de estilos propias para la creación y manejo de los capítulos -->
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/src/texto.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/texto.js"></script>
+
+   <!-- Librería del capítulo actual -->
+    <script src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo10/files/capitulo10.js"></script>
+
+    <!-- Fuentes empleadas en el capítulo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;600;700;800&amp;family=Roboto+Mono&amp;display=swap" rel="stylesheet">
+
+    <script>
+        function katexRender() {
+            renderMathInElement(document.getElementById("capitulo"));
+        }
+        document.addEventListener("DOMContentLoaded", katexRender);
+        window.onerror = function(msg, url, lineNo, columnNo, error) {
+            __error__ = msg;
+        };
+        window.onload = function(){
+            capitulo.iniciar();
+        };
+    </script>
+
+</head>
+
+<body class="text">  
+
+
+<div id="capitulo">
+
+    <button id="btGuardar" style="z-index:15;" onclick="savePage()">Guardar</button>
+
+
+
+    <h1 class="text" onclick="alerta(capitulo.idPagina,'')" style="cursor: pointer;">Interpolación</h1>
+
+
+    <p class="text">Cuando los datos son precisos y/o no es posible ajustarlos a una expresión analítica (a una función matemática), se recurre a la interpolación.</p>
+
+    <p class="text">Para interpolar se cuenta al menos con dos caminos: a) <i class="style1">La interpolación polinomial</i>, donde todos los puntos conocidos son empleados en el cálculo de los valores interpolados y b) <i class="style1">La interpolación segmentaria</i>, en la cual se emplean conjuntos, de dos o más puntos consecutivos, para predecir valores intermedios en el segmento involucrado.</p>
+
+    <p class="text">Al igual que en el ajuste de datos, los métodos de interpolación permiten trabajar con los datos tabulados como si se tratara de funciones analíticas: devuelven el valor de la variable dependiente, para un valor conocido de la variable independiente. Sin embargo, los métodos de interpolación, sólo deben ser empleados para predecir valores entre los límites correspondientes a los datos conocidos.</p>
+
+
+
+    <h2 class="text">Interpolación lineal</h2>
+
+    <p class="text">A pesar de ser un método de poca precisión es uno de los métodos más empleados en la práctica, sobre todo en ingeniería donde sólo se requieren valores aproximados.</p>
+
+    <p class="text">La interpolación lineal proporciona resultados satisfactorios cuando los puntos están distribuidos en segmentos cercanos, o cuando la curva que une los puntos, se aproxima a una línea recta.</p>
+
+    <p class="text">En este método se busca el segmento donde se encuentra el valor a interpolar (el valor de <dfn class="style1">x</dfn>) y con los dos puntos del segmento se calculan los coeficientes de la ecuación lineal. Es esta ecuación (la ecuación lineal) con la que se calcula el valor de la variable dependiente (el valor de <dfn class="style1">y</dfn>).</p>
+
+    <p class="text">Si el valor de la variable independiente es mayor al mayor valor tabulado (o menor al menor valor tabulado) se emplea el segmento final (o el segmento inicial) para calcular los coeficientes de la ecuación lineal.</p>
+
+    <p class="text">Si (x<sub>i</sub>, y<sub>i</sub>) y (x<sub>j</sub>, y<sub>j</sub>) son los puntos del segmento, los coeficientes de la línea recta se calculan con:</p>
+
+    <table class="ecuacion" id="ec1">
+        <tbody><tr>
+            <td>
+                \[ \begin{gathered}                b = \frac{y_j-y_i}{x_j-x_i}\\                a = y_i-bx_i                \end{gathered} \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Y el valor interpolado: el valor de <dfn class="style1">y</dfn>, se calcula con:</p>
+
+    <table class="ecuacion" id="ec2">
+        <tbody><tr>
+            <td>
+                \[ y = a+b x \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Algo importante a tomar en cuenta, cuando se emplea este método, es que <dfn class="style1">los datos deben estar ordenados ascendentemente en función a la variable independiente</dfn>, pues de lo contrario no sería posible ubicar el segmento de interpolación.</p>
+
+    <p class="text">Para ilustrar el método se interpolará (se calculará) el valor de <dfn class="style1">y</dfn> para un valor de <dfn class="style1">x</dfn> igual a 0.7, aplicando el método de interpolación lineal a los siguientes datos:</p>
+
+    <div class="table borderAll">
+    <table align="center">
+        <tbody><tr>
+        <th class="center" style="width: 40px;">x</th><td class="center" style="width:40px;">0</td><td class="center" style="width:40px;">0.2</td><td class="center" style="width:40px;">0.4</td><td class="center" style="width:40px;">0.6</td><td class="center" style="width:40px;">0.8</td><td class="center" style="width:40px;">1.0</td>
+        </tr>
+        <tr>
+        <th class="center">y</th><td class="center">0</td><td class="center">0.199</td><td class="center">0.389</td><td class="center">0.565</td><td class="center">0.717</td><td class="center">0.841</td>
+        </tr>
+    </tbody></table>
+    </div>
+
+    <p class="text">Para ello, primero se guardan los datos en una matriz <dfn class="style1">td</dfn> (tabla de datos), correspondiendo la primera fila a la variable independiente y la segunda a la dependiente:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var td = [[0, 0.2, 0.4, 0.6, 0.8, 1.0],<br>          [0, 0.199, 0.389, 0.565, 0.717, 0.841]];</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="text">Se guarda también el valor a interpolar (el valor de <dfn class="style1">x</dfn>):</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var x = 0.7;</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Ahora se ubica el segmento en el que se encuentra el valor a interpolar (0.7). A simple vista se ve que está entre 0.6 y 0.8, es decir en el cuarto segmento. Para ubicar automáticamente el segmento se comparan, uno a uno, los valores de la variable independiente (los valores de la fila <dfn class="style1">td[0]</dfn>) a partir del segundo elemento, hasta que el valor de <dfn class="style1">x</dfn> es menor al elemento comparado:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var j;<br>for (j = 1; j &lt; td[0].length; j++) {<br>&nbsp; if (x &lt; td[0][j]) break;<br>};<br>j</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Por lo tanto, el segmento de solución es el cuarto (como se determinó también visualmente). La búsqueda comienza en el segundo elemento (j = 1), porque si el valor buscado es menor al segundo, se emplea directamente el primer segmento.</p>
+
+    <p class="text">Una vez ubicado el segmento de interpolación, se aplican las ecuaciones <a href="#ec_1">1</a> y <a href="#ec_2">2</a>, para calcular los coeficientes:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var i = j-1;<br>var b = (td[1][j]-td[1][i])/(td[0][j]-td[0][i]);<br>var a = td[1][i]-b*td[0][i];<br>[a, b]</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="text">Finalmente el valor buscado (el valor interpolado) se calcula con la ecuación <a href="#ec_3">3</a>:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var y = a+b*x; y</div>
+        <div class="resultado"></div>
+    </div>
+
+
+
+    <h3 class="text">Algoritmo</h3>
+
+    <p class="text">El algoritmo del método básicamente sigue los pasos del anterior acápite, es decir:</p>
+
+    <ol class="letras">
+        <li>Ubica el segmento correspondiente al valor a interpolar.</li>
+        <li>Calcula los coeficientes "a" y "b" de la línea recta que pasa por los dos puntos del segmento.</li>
+        <li>Con la ecuación de la línea recta, calcula el valor de la variable dependiente (el valor interpolado)</li>
+    </ol>
+
+    <p class="text">En forma de diagrama de actividades, el algoritmo, es:</p>
+
+    <p class="figurasn"><img src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo10/files/inlineal.png" alt="Algoritmo interpolación lineal"></p>
+
+    <p class="text">El algoritmo ha sido implementado como un método de la clase Array, por lo que debe ser llamado desde la matriz con los datos tabulados: la primera fila con los datos de la variable independiente y la segunda con los datos de la variable dependiente. El método devuelve la función de interpolación (una clausura) que puede ser empleada igual que una función estándar (pero cuidando de no mandar valores que estén fuera de los límites correspondientes a los valores conocidos).</p>
+
+    <p class="text">Para resolver con esta función el problema del ejemplo previo, primero se obtiene la función de interpolación:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var td = [[0, 0.2, 0.4, 0.6, 0.8, 1.0],<br>          [0, 0.199, 0.389, 0.565, 0.717, 0.841]];<br>var f = td.inLineal();</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Luego, se emplea esa función para calcular el valor requerido:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">f(0.7)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Como era de esperar, se obtiene el mismo resultado. Se pueden calcular también varios valores a la vez (con <dfn class="style1">map</dfn>), por ejemplo, para calcular los valores de "y" para los siguientes valores "x": 0.1, 0.3, 0.5, 0.6, 0.7, 0.9, 1.1, se escribe:</p> 
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">[0.1, 0.3, 0.5, 0.7, 0.9, 1.1].map(f)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Observe que el último valor, al ser mayor al mayor valor conocido de "x", es en realidad un resultado extrapolado, algo aceptable (hasta cierto límite) en este método.</p>
+
+    <p class="text">Con la función de interpolación, se puede construir igualmente la gráfica de los valores interpolados y los puntos conocidos:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">plot({f:[f, td], xi:-0.2, xf:1.2})</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="text">Como se puede ver, al tratarse de un método de interpolación, la gráfica pasa por todos los puntos conocidos, pero es el comportamiento que tiene entre esos puntos el que permite juzgar visualmente si la interpolación es o no buena. En este caso la curva tiene una apariencia uniforme, por lo que se puede concluir que la interpolación es buena.</p>
+
+
+    <div class="ejercicio" id="ejercicio1" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Empleando los datos de la siguiente tabla:</p><div class="table borderAll"><table align="center" style="width:550px;"><tbody><tr><th class="center" style="width:30px;">x</th><td class="center">1.0</td><td class="center">1.3</td><td class="center">3.4</td><td class="center">3.8</td><td class="center">5.1</td><td class="center">5.7</td><td class="center">6.4</td><td class="center">6.6</td><td class="center">8.0</td><td class="center">8.1</td><td class="center">9.0</td><td class="center">9.2</td></tr><tr><th class="center">y</th><td class="center">8</td><td class="center">8</td><td class="center">13</td><td class="center">15</td><td class="center">27</td><td class="center">35</td><td class="center">46</td><td class="center">50</td><td class="center">84</td><td class="center">87</td><td class="center">116</td><td class="center">124</td></tr></tbody></table></div></div><p class="pregunta"><span class="pregunta"></span>Guarde los valores de "x" en el vector "vx", los de "y" en "vy", con estos vectores cree la tabla de datos "td" y obtenga la función de interpolación "f" empleando el método lineal (inLineal)</p><div id="pregunta1" class="calculadora" spellcheck="false"><div class="instruccion">var vx=[1.0,1.3,3.4,3.8,5.1,5.7,6.4,6.6,8.0,8.1,9.0,9.2];<br>var vy=[8,8,13,15,27,35,46,50,84,87,116,124];<br>var td=[vx,vy];<br>var f=td.inLineal();</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con la función de interpolación, calcule el valor de "y" para un valor de "x" igual a 7.3.</p><div id="pregunta2" class="calculadora" spellcheck="false"><div class="instruccion">f(7.3)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Calcule los valores de "y" para valores de "x" iguales a 1, 2, 3, 5, 6, 7, 8, 9 y 10, redondeando los resultados al primer dígito después del punto.</p><div id="pregunta3" class="calculadora" spellcheck="false"><div class="instruccion">[ 1, 2, 3, 5, 6, 7, 8, 9 ,10].map(f).round(1)</div><div class="resultado"></div></div><p class="pregunta" id="pregunta4"><span class="pregunta"></span>El valor de "y" para "x = 6" es: <span class="campo_literal correcta" tabindex="0" contenteditable="true">39.7</span></p><p class="pregunta"><span class="pregunta"></span>Dibuje la gráfica de los puntos conocidos y los valores interpolados (límites: menor y mayor valor de "x").</p><div id="pregunta5" class="calculadora" spellcheck="false"><div class="instruccion">plot({f:[f,td],xi:1,xf:9.2})</div><div class="resultado"></div></div><p class="pregunta" id="pregunta6"><span class="pregunta"></span>El análisis visual de la gráfica permite concluir que la función de interpolación es: <span class="campo_arrastrar correcta" tabindex="0" data-opciones="aceptable&amp;@%no aceptable&amp;@%confiable" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">aceptable</span></p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="16" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 1 -->
+    
+    <div class="ejercicio" id="ejercicio2" enunciado="2"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Empleando los datos de la siguiente tabla:</p><div class="table borderAll"><table align="center" style="width:550px;"><tbody><tr><th class="center" style="width:30px;">x</th><td class="center">1</td><td class="center">4</td><td class="center">8</td><td class="center">10</td><td class="center">13</td><td class="center">15</td><td class="center">17</td><td class="center">18</td><td class="center">22</td><td class="center">24</td></tr><tr><th class="center">y</th><td class="center">9.3</td><td class="center">23.4</td><td class="center">38.2</td><td class="center">45.2</td><td class="center">55.3</td><td class="center">61.9</td><td class="center">68.5</td><td class="center">71.8</td><td class="center">84.7</td><td class="center">91.1</td></tr></tbody></table></div></div><p class="pregunta"><span class="pregunta"></span>Guarde los valores de "x" en el vector "vx", los de "y" en "vy", con estos vectores cree la tabla de datos "td" y obtenga la función de interpolación "f" empleando el método lineal (inLineal)</p><div id="pregunta29" class="calculadora" spellcheck="false"><div class="instruccion">var vx=[1, 4, 8, 10, 13, 15, 17, 18, 22, 24];<br>var vy=[9.3, 23.4, 38.2, 45.2, 55.3, 61.9, 68.5, 71.8, 84.7, 91.1];<br>var td=[vx,vy];<br>var f=td.inLineal();</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Dibuje la gráfica de los puntos conocidos y los valores interpolados (límites: menor y mayor valor de "x").</p><div id="pregunta30" class="calculadora" spellcheck="false"><div class="instruccion">plot({f:[f,td],xi:1,xf:24})</div><div class="resultado"></div></div><p class="pregunta" id="pregunta31"><span class="pregunta"></span>El análisis visual de la gráfica permite concluir que la función de interpolación es: <span class="campo_arrastrar correcta" tabindex="0" data-opciones="confiable&amp;@%no confiable&amp;@%aceptable" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">confiable</span></p><p class="pregunta"><span class="pregunta"></span>Empleando la función de interpolación, resuelva el siguiente sistema de ecuaciones lineales:\[\begin{aligned}z_1+4z_2+6z_3+2z_4&amp;=f(2)\\2z_1+3z_2+z_3+5z_4&amp;=f(3)\\3z_1+z_2+4z_3+7z_4&amp;=f(4)\\4z_1+2z_2+5z_3+6z_4&amp;=f(5)\end{aligned}\]Con el método de Gauss Jordán con pivotaje parcial (resultado: vector, redondeo: segundo dígito):</p><div id="pregunta32" class="calculadora" spellcheck="false"><div class="instruccion">[[1,4,6,2,f(2)],<br>[2,3,1,5,f(3)],<br>[3,1,4,7,f(4)],<br>[4,2,5,6,f(5)]].gaussj().transpose().round(2)</div><div class="resultado"></div></div><p class="pregunta" id="pregunta33"><span class="pregunta"></span>El valor de la variable "z<sub>4</sub>", es: <span class="campo_literal correcta" tabindex="0" contenteditable="true">1.47</span>.</p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="18" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 2 -->
+    
+    <div class="ejercicio" id="ejercicio3" enunciado="2"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Empleando los datos de la siguiente tabla:</p><div class="table borderAll"><table align="center" style="width:590px;"><tbody><tr><th class="center" style="width:30px;">x</th><td class="center">1</td><td class="center">2</td><td class="center">5</td><td class="center">7</td><td class="center">9</td><td class="center">11</td><td class="center">15</td><td class="center">19</td><td class="center">21</td><td class="center">24</td></tr><tr><th class="center">y</th><td class="center">0.17</td><td class="center">1.49</td><td class="center">3.39</td><td class="center">5.9</td><td class="center">8.99</td><td class="center">14.64</td><td class="center">21.43</td><td class="center">29.29</td><td class="center">38.16</td><td class="center">48</td></tr></tbody></table></div></div><p class="pregunta"><span class="pregunta"></span>Guarde los valores de "x" en el vector "vx", los de "y" en "vy", con estos vectores cree la tabla de datos "td" y obtenga la función de interpolación "f" empleando el método lineal (inLineal)</p><div id="pregunta44" class="calculadora" spellcheck="false"><div class="instruccion">var vx = [1, 2, 5, 7, 9, 11, 15, 19, 21, 24];<br>var vy = [0.17, 1.49, 3.39, 5.9, 8.99, 14.64, 21.43, 29.29, 38.16, 48];<br>var td = [vx, vy];<br>var f = td.inLineal();</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Dibuje la gráfica de los puntos conocidos y los valores interpolados (límites: menor y mayor valor de "x").</p><div id="pregunta45" class="calculadora" spellcheck="false"><div class="instruccion">plot({f:[f,td],xi:1,xf:24})</div><div class="resultado"></div></div><p class="pregunta" id="pregunta46"><span class="pregunta"></span>El análisis visual de la gráfica permite concluir que la función de interpolación es: <span class="campo_arrastrar correcta" tabindex="0" data-opciones="aceptable&amp;@%confiable&amp;@%no confiable" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">aceptable</span></p><p class="pregunta"><span class="pregunta"></span>Empleando la función de interpolación, encuentre las soluciones del siguiente sistema de ecuaciones no lineales\[\begin{array}{r c r}x^2+2xy^2-f(5)&amp;=&amp;44\\x^2y-3x^2y^2+f(6)&amp;=&amp;-117\end{array}\]Con el método de Newton (valores iniciales: 1 y 2, precisión/exactitud: 9 dígitos, redondeo: tercer dígito), guardando la función (flecha) que devuelve el vector de restos en "fr".</p><div id="pregunta47" class="calculadora" spellcheck="false"><div class="instruccion">var fr=([x,y])=&gt;[<br>  x**2+2*x*y**2-f(5)-44,<br>  x**2*y-3*x**2*y**2+f(6)+117<br>];<br>fr.newtonnl({vi:[1,2],err:9}).v.round(3)</div><div class="resultado"></div></div><p class="pregunta" id="pregunta48"><span class="pregunta"></span>El valor de "x", en el sistema de ecuaciones no lineales, es: <span class="campo_literal correcta" tabindex="0" contenteditable="true">6.15</span>.</p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="20" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 3 -->
+
+
+
+    <h2 class="text">Método de Lagrange</h2>
+
+    <p class="text">El método de Lagrange es un método de interpolación polinomial. En el mismo se calculan los valores intermedios ajustando los datos a una ecuación polinomial de igual grado que el número de puntos conocidos, de manera que la ecuación polinomial resultante pasa por todos los puntos conocidos.</p>
+
+    <p class="text">La ecuación de interpolación es:</p>
+
+    <table class="ecuacion" id="ec3">
+        <tbody><tr>
+            <td>
+                \[ y = \sum_{k=1}^{n} y_k~L_k(x) \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Los valores de L<sub>k</sub> se calculan con:</p>
+
+    <table class="ecuacion" id="ec4">
+        <tbody><tr>
+            <td>
+                \[                \begin{aligned}                L_k(x) = \dfrac{P_k(x)}{Q_k(x)}&amp;\hspace{1cm}                \begin{cases}                k=1\longrightarrow n                \end{cases}\\[5mm]                P_k(x) = \prod_{\stackrel{i=1}{i \not = k}}^{n}(x-x_i)&amp;\hspace{1cm}                \begin{cases}                k=1\longrightarrow n                \end{cases}\\[7mm]                Q_k(x_k) = \prod_{\stackrel{i=1}{i\not = k}}^{n}(x_k-x_i)&amp;\hspace{1cm}                \begin{cases}                k=1\longrightarrow n                \end{cases}                \end{aligned}                                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Donde "n" es el número de datos conocidos, "x" es el valor a interpolar, "x<sub>i</sub>" y "y<sub>i</sub>" son los elementos con los valores conocidos de las variables independiente y dependiente respectivamente.</p>
+
+    <p class="text">Como se puede observar, los valores de "Q" sólo dependen de los valores conocidos de la variable independiente ("x<sub>i</sub>"), por lo tanto no varían para un conjunto dado de datos, pudiendo ser calculados independientemente del valor a interpolar, mientras que "P" depende del valor a interpolar ("x") por lo que debe ser calculado para cada valor a interpolar. Por otra parte, no pueden existir dos valores consecutivos iguales de la variable independiente (dos valores consecutivos iguales de “x<sub>i</sub>”), porque daría lugar a una división entre cero.</p>
+
+    <p class="text">Para ilustrar el método, se emplearán los datos de la siguiente tabla, para obtener los valores de "y¨ para valores de "x" iguales a 2 y 3.</p>
+
+    <div class="table borderAll">
+    <table align="center">
+        <tbody><tr>
+        <th class="center" style="width:40px;">x</th><td class="center" style="width:40px;">0</td><td class="center" style="width:40px;">1</td><td class="center" style="width:40px;">4</td><td class="center" style="width:40px;">6</td>
+        </tr>
+        <tr>
+        <th class="center">y</th><td class="center">1</td><td class="center">-1</td><td class="center">1</td><td class="center">-1</td>
+        </tr>
+    </tbody></table>
+    </div>
+
+    <p class="text">Primero se crea la matriz con los valores de la tabla de datos:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var td = [[0, 1, 4, 6],<br>          [1, -1, 1, -1]];</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Con estos datos see calculan los valores "Q":</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var n = td[0].length; q = [];<br>for (var k = 0; k &lt; n; k++) {<br>&nbsp; q[k] = 1;<br>&nbsp; for (var i = 0; i &lt; n; i++)<br>&nbsp; &nbsp; q[k] *= i != k ? td[0][k]-td[0][i] : 1;<br>};<br>q</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Ahora se calculan los valores de "P" para el primer valor a interpolar "x=2":</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var x = 2, p = [];<br>for (var k = 0; k &lt; n; k++) {<br>&nbsp; p[k] = 1;<br>&nbsp; for (i = 0; i &lt; n; i++)<br>&nbsp; &nbsp; p[k] *= i!=k ? x-td[0][i] : 1;<br>};<br>p</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Con "q" y "p" se calculan los valores de "L":</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var l = [];<br>for (var k = 0; k &lt; n; k++)<br>&nbsp; l[k] = p[k]/q[k];<br>l</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Finalmente se calcula el valor de "y" (el valor interpolado) para “x=2”:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var y = 0;<br>for (k = 0; k &lt; n; k++)<br>&nbsp; y += td[1][k]*l[k];<br>y</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Para el otro valor a interpolar (x=3), se repite el proceso pero sólo desde el cálculo de "p" (pues "q" sólo depende de los datos tabulados):</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var x = 3;<br>var p = [];<br>for (var k = 0; k &lt; n; k++) {<br>&nbsp; p[k] = 1;<br>&nbsp; for (i = 0; i &lt; n; i++)<br>&nbsp; &nbsp; p[k] *= i!=k ? x-td[0][i] : 1;<br>};<br>p</div>
+        <div class="resultado"></div>
+        <div class="instruccion">var l = [];<br>for (var k = 0; k &lt; n; k++)<br>&nbsp; l[k] = p[k]/q[k];<br>l</div>
+        <div class="resultado"></div>
+        <div class="instruccion">var y = 0;<br>for (k = 0; k &lt; n; k++)<br>&nbsp; y += td[1][k]*l[k];<br>y</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Que redondeado es 0:</p>
+
+
+    <h3 class="text">Algoritmo</h3>
+
+    <p class="text">El algoritmo del método, que básicamente sigue el procedimiento ejemplificado en el anterior acápite, es el siguiente:</p>
+
+    <p class="figurasn"><img src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo10/files/inlagrange.png" alt="Algoritmo interpolación de Lagrange"></p>
+
+    <p class="text">Al igual que en el método de interpolación lineal, el algoritmo ha sido implementado como un método de la clase Array, por lo que debe ser llamado desde la matriz que contiene la tabla de datos conocidos: la primera fila con los datos de la variable independiente y la segunda con los datos de la variable dependiente. El método devuelve la función de interpolación para esos datos (una clausura) y puede ser empleada igual que una función estándar:</p>
+
+    <p class="text">Con este método, se procede igual que con el método de interpolación lineal, así para resolver el problema de la sección anterior, primero se obtiene la función de interpolación:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var td = [[0, 1, 4, 6],<br>          [1, -1, 1, -1]];<br>var f = td.inLagrange();</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Ahora, para obtener los valores interpolados, simplemente se llama a la función para "x" igual a 2 y 3:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">f(2)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">f(3)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Obteniéndose, como era de esperar, los mismos resultados. Por supueto, los resultados pueden ser obtenidos también en una sola instrucción (con "map") redondeando, en este caso, los resultados al segundo dígito después del punto:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">[2, 3].map(f).round(2)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Con la función de interpolación, se puede dibujar, igualmente, la grafica de los valores interpolados y los puntos conocidos:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">plot({f:[f, td], xi:-0.1, xf:6.1})</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Al igual que ocurre con el método de interpolación lineal, la curva correspondiente a la función de interpolación, pasa por todos los puntos conocidos. Para juzgar visualmente si la interpolación predice correctamente o no los valores intermedios, se debe analizar el comportamiento entre los puntos. Así, en este caso, al ser la curva uniforme en todo el intervalo, se puede asumir que la interpolación es buena.</p>
+
+
+    <div class="ejercicio" id="ejercicio4" enunciado="1"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Empleando los datos de la siguiente tabla:</p><div class="table borderAll"><table align="center" style="width:550px;"><tbody><tr><th class="center" style="width:30px;">x</th><td class="center">2.1</td><td class="center">4.5</td><td class="center">6.7</td><td class="center">8.4</td><td class="center">9.3</td><td class="center">10.2</td><td class="center">11.3</td><td class="center">12.6</td><td class="center">14.4</td><td class="center">16.5</td><td class="center">17.4</td><td class="center">18.6</td></tr><tr><th class="center">y</th><td class="center">11</td><td class="center">41</td><td class="center">90</td><td class="center">141</td><td class="center">169</td><td class="center">205</td><td class="center">251</td><td class="center">318</td><td class="center">421</td><td class="center">545</td><td class="center">592</td><td class="center">655</td></tr></tbody></table></div></div><p class="pregunta"><span class="pregunta"></span>Guarde los valores de "x" en el vector "vx", los de "y" en "vy", con estos vectores cree la tabla de datos "td" y obtenga la función de interpolación "f" empleando el método de Lagrange (inLagrange)</p><div id="pregunta55" class="calculadora" spellcheck="false"><div class="instruccion">var vx=[2.1,4.5,6.7,8.4,9.3,10.2,11.3,12.6,14.4,16.5,17.4,18.6];<br>var vy=[11,41,90,141,169,205,251,318,421,545,592,655];<br>var td=[vx,vy];<br>var f=td.inLagrange();</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con la función de interpolación, calcule el valor de "y" para un valor de "x" igual a 15.5.</p><div id="pregunta56" class="calculadora" spellcheck="false"><div class="instruccion">f(15.5)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Calcule los valores de "y" para valores de "x" iguales a 3, 5, 9, 11, 12, 16, 17 y 18, redondeando los resultados al primer dígito después del punto.</p><div id="pregunta57" class="calculadora" spellcheck="false"><div class="instruccion">[3, 5, 9, 11, 12, 16, 17 , 18].map(f).round(1)</div><div class="resultado"></div></div><p class="pregunta" id="pregunta58"><span class="pregunta"></span>El valor de "y" para "x = 17" es: <span class="campo_literal correcta" tabindex="0" contenteditable="true">578.6</span></p><p class="pregunta"><span class="pregunta"></span>Dibuje la gráfica de los puntos conocidos y los valores interpolados (límites: menor y mayor valor de "x").</p><div id="pregunta59" class="calculadora" spellcheck="false"><div class="instruccion">plot({f:[f,td],xi:2.1,xf:18.6})</div><div class="resultado"></div></div><p class="pregunta" id="pregunta60"><span class="pregunta"></span>El análisis visual de la gráfica permite concluir que la función de interpolación es: <span class="campo_arrastrar correcta" tabindex="0" data-opciones="confiable&amp;@%no confiable&amp;@%aceptable" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">no confiable</span></p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="16" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 4 -->
+
+    <div class="ejercicio" id="ejercicio5" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Empleando los datos de la siguiente tabla:</p><div class="table borderAll"><table align="center" style="width:550px;"><tbody><tr><th class="center" style="width:30px;">x</th><td class="center">1</td><td class="center">4</td><td class="center">7</td><td class="center">10</td><td class="center">12</td><td class="center">15</td><td class="center">16</td><td class="center">18</td><td class="center">22</td><td class="center">23</td></tr><tr><th class="center">y</th><td class="center">9.3</td><td class="center">23.4</td><td class="center">34.7</td><td class="center">45.2</td><td class="center">52</td><td class="center">61.9</td><td class="center">65.2</td><td class="center">71.8</td><td class="center">84.7</td><td class="center">87.9</td></tr></tbody></table></div></div><p class="pregunta"><span class="pregunta"></span>Guarde los valores de "x" en el vector "vx", los de "y" en "vy", con estos vectores cree la tabla de datos "td" y obtenga la función de interpolación "f" empleando el método de Lagrange (inLagrange)</p><div id="pregunta67" class="calculadora" spellcheck="false"><div class="instruccion">var vx=[1,4,7,10,12,15,16,18,22,23];<br>var vy=[9.3,23.4,34.7,45.2,52,61.9,65.2,71.8,84.7,87.9];<br>var td=[vx,vy];<br>var f=td.inLagrange();</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Dibuje la gráfica de los puntos conocidos y los valores interpolados (límites: menor y mayor valor de "x").</p><div id="pregunta68" class="calculadora" spellcheck="false"><div class="instruccion">plot({f:[f,td],xi:1,xf:23})</div><div class="resultado"></div></div><p class="pregunta" id="pregunta69"><span class="pregunta"></span>El análisis visual de la gráfica permite concluir que la función de interpolación es: <span class="campo_arrastrar correcta" tabindex="0" data-opciones="no confiable&amp;@%confiable&amp;@%aceptable" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">confiable</span></p><p class="pregunta"><span class="pregunta"></span>Empleando la función de interpolación, resuelva el siguiente sistema de ecuaciones lineales:\[\begin{aligned}z_1+4z_2+6z_3+2z_4&amp;=f(2)\\2z_1+3z_2+z_3+5z_4&amp;=f(3)\\3z_1+z_2+4z_3+7z_4&amp;=f(4)\\4z_1+2z_2+5z_3+6z_4&amp;=f(5)\end{aligned}\]Con el método de la matriz inversa (redondeo: segundo dígito):</p><div id="pregunta70" class="calculadora" spellcheck="false"><div class="instruccion">[[1,4,6,2],<br>[2,3,1,5],<br>[3,1,4,7],<br>[4,2,5,6]].inv().mul([f(2),f(3),f(4),f(5)]).round(2)</div><div class="resultado"></div></div><p class="pregunta" id="pregunta71"><span class="pregunta"></span>El valor de la variable "z<sub>2</sub>", es: <span class="campo_literal correcta" tabindex="0" contenteditable="true">1.44</span>.</p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="18" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 5 -->
+
+    <div class="ejercicio" id="ejercicio6" enunciado="1"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Empleando los datos de la siguiente tabla:</p><div class="table borderAll"><table align="center" style="width:620px;"><tbody><tr><th class="center" style="width:30px;">x</th><td class="center">1</td><td class="center">3</td><td class="center">6</td><td class="center">7</td><td class="center">9</td><td class="center">12</td><td class="center">16</td><td class="center">18</td><td class="center">22</td><td class="center">24</td></tr><tr><th class="center">y</th><td class="center">0.17</td><td class="center">1.49</td><td class="center">3.39</td><td class="center">5.9</td><td class="center">8.99</td><td class="center">14.64</td><td class="center">21.43</td><td class="center">29.29</td><td class="center">38.16</td><td class="center">48</td></tr></tbody></table></div></div><p class="pregunta"><span class="pregunta"></span>Guarde los valores de "x" en el vector "vx", los de "y" en "vy", con estos vectores cree la tabla de datos "td" y obtenga la función de interpolación "f" empleando el método de Lagrange (inLagrange)</p><div id="pregunta87" class="calculadora" spellcheck="false"><div class="instruccion">var vx = [1, 3, 6, 7, 9, 12, 16, 18, 22, 24];<br>var vy = [0.17, 1.49, 3.39, 5.9, 8.99, 14.64, 21.43, 29.29, 38.16, 48];<br>var td = [vx, vy];<br>var f = td.inLagrange();</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Dibuje la gráfica de los puntos conocidos y los valores interpolados (límites: menor y mayor valor de "x").</p><div id="pregunta88" class="calculadora" spellcheck="false"><div class="instruccion">plot({f:[f,td],xi:1,xf:24})</div><div class="resultado"></div></div><p class="pregunta" id="pregunta89"><span class="pregunta"></span>El análisis visual de la gráfica permite concluir que la función de interpolación es: <span class="campo_arrastrar correcta" tabindex="0" data-opciones="aceptable&amp;@%no confiable&amp;@%confiable" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">no confiable</span></p><p class="pregunta"><span class="pregunta"></span>Empleando la función de interpolación, encuentre las soluciones del siguiente sistema de ecuaciones no lineales\[\begin{array}{r c r}x^2+2xy^2-f(5)&amp;=&amp;44\\x^2y-3x^2y^2+f(6)&amp;=&amp;-117\end{array}\]Con el método de Newton (valores iniciales: 1 y 2, precisión/exactitud: 7 dígitos, redondeo: tercer dígito), guardando la función (flecha) que devuelve el vector de restos en "fr":</p><div id="pregunta90" class="calculadora" spellcheck="false"><div class="instruccion">var fr=([x,y])=&gt;<br>[<br>  x**2+2*x*y**2-f(5)-44,<br>  x**2*y-3*x**2*y**2+f(6)+117<br>];<br>fr.newtonnl({vi:[1,2],err:7}).v.round(3)</div><div class="resultado"></div></div><p class="pregunta" id="pregunta91"><span class="pregunta"></span>El valor de "y", en el sistema de ecuaciones no lineales, es: <span class="campo_literal correcta" tabindex="0" contenteditable="true">-3.436</span>.</p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="20" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 6 -->
+
+
+
+
+    <h2 class="text">Método de Newton</h2>
+
+    <p class="text">El método de interpolación de Newton, es también un método polinomial, donde, al igual que en el método de Lagrange, los puntos conocidos se ajustan a una ecuación polinomial de igual grado que el número de puntos conocidos, siendo la ecuación polinomial en este caso:</p>
+
+    <table class="ecuacion" id="ec5">
+        <tbody><tr>
+            <td>
+                \[                y = b_0+b_1(x-x_0)+b_2(x-x_0)(x-x_1)+\dots+b_{n-1}(x-x_0)(x-x_1)(x-x_2)\dots(x-x_{n-2})                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Que en forma compacta es:</p>
+
+    <table class="ecuacion" id="ec6">
+        <tbody><tr>
+            <td>
+                \[                y =\large\sum_{k=0}^{n-1}\normalsize\left[b_k\prod_{i=1}^{k-1}\left(x-x_i\right)\right]                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Donde los valores de "b" se calculan con:</p>
+
+    <table class="ecuacion" id="ec7">
+        <tbody><tr>
+            <td>
+                \[                \begin{aligned}                &amp;f=y\\[5mm]                &amp;\left.                \begin{aligned}                b_k&amp;=f_0\\                f_i&amp;=\dfrac{f_{i+1}-f_i}{x_{i+k+1}-x_i}\hspace{2mm}                \begin{cases}i=0\rightarrow n-k-1\end{cases}                \end{aligned} \hspace{2mm}                \right\lbrace k = 0\rightarrow n-1                \\[8mm]                &amp;b_{n-1} = f_0                \end{aligned}                                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">En estas ecuaciones "n" es el número de datos, "x<sub>i</sub>" y "y<sub>i</sub>" son los datos tabulados (conocidos) para las variables independiente y dependiente y "x" es el valor a interpolar.</p>
+
+    <p class="text">Como los coeficientes "b" sólo dependen de los valores conocidos pueden ser calculados por separado (tal como ocurre con el parámetro "Q" del método de Lagrange). De esta manera es posible reducir el número de cálculos cuando se interpolan varios valores con los mismos datos.</p>
+
+    <p class="text">Al igual que sucede con el método de Lagrange, el método de Newton no puede ser empleado cuando la variable independiente tiene 2 o más valores consecutivos iguales, pues, como se puede observar, se produciría un error por división entre cero, además, es necesario que los valores de la variable independiente estén ordenados ascendentemente.</p>
+
+    <p class="text">Para ilustrar el procedimiento se obtendrán (se interpolarán) valores de "y" para valores de "x" iguales a: 2 y 5.5, empleando los siguientes datos tabulados:</p>
+
+    <div class="table borderAll">
+    <table align="center">
+        <tbody><tr>
+        <th class="center" style="width:40px;">x</th><td class="center" style="width:76px">1</td><td class="center">4</td><td class="center">5</td><td class="center">6</td>
+        </tr>
+        <tr>
+        <th class="center">y</th><td class="center">0</td><td class="center">1.3862944</td><td class="center">1.6094379</td><td class="center">1.7917595</td>
+        </tr>
+    </tbody></table>
+    </div>
+
+    <p class="text">Primero se guardan los datos tabulados en una matriz:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var td = [[1, 4, 5, 6],<br>          [0, 1.3862944, 1.6094379, 1.7917595]];</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Ahora se calculan los valores de “b”:</p>
+    
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var f = td[1], b = [], n = td[0].length;<br>for (var k = 0; k &lt; n-1; k++) {<br>&nbsp; b[k] = f[0];<br>&nbsp; for (var i = 0; i &lt; n-k-1; i++)<br>&nbsp; &nbsp; f[i] = (f[i+1]-f[i])/(td[0][i+k+1]-td[0][i]);<br>}<br>b[n-1] = f[0];<br>b</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Finalmente se calcula el valor con la ecuación de interpolación de Newton, sin embargo, su aplicación directa implica la repetición inútil de operaciones, así para calcular el tercer término se multiplica: (x-x<sub>0</sub>)(x-x<sub>1</sub>), para el cuarto término se multiplica: (x-x<sub>0</sub>)(x-x<sub>1</sub>)(x-x<sub>2</sub>) y en esta operación se está volviendo a calcular: (x-x<sub>0</sub>)(x-x<sub>1</sub>). Igualmente para calcular el cuarto término se multiplica: (x-x<sub>0</sub>)(x-x<sub>1</sub>)(x-x<sub>2</sub>)(x-x<sub>3</sub>), donde se está volviendo a calcular: (x-x<sub>0</sub>)(x-x<sub>1</sub>)(x-x<sub>2</sub>) y así sucesivamente.</p>
+
+    <p class="text">Para evitar la repetición inútil de cálculos, se puede guardar el resultado de la operación anterior en una variable ("p") y emplear la misma para calcular los nuevos valores. Procediendo de esa manera para “x=2”, se obtiene:</p>
+    
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var x = 2, p = 1, y = b[0];<br>for (var k = 1; k &lt; n; k++) {<br>&nbsp; p *= (x-td[0][k-1]);<br>&nbsp; y += b[k]*p;<br>};<br>y</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">De la misma forma, para “x=5.5”, se obtiene:</p>
+    
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var x = 5.5, p = 1, y = b[0];<br>for (var k = 1; k &lt; n; k++) {<br>&nbsp; p *= (x-td[0][k-1]);<br>&nbsp; y += b[k]*p;<br>};<br>y</div>
+        <div class="resultado"></div>
+    </div>
+
+
+
+    <h3 class="text">Algoritmo</h3>
+
+    <p class="text">El algoritmo básicamente sigue el procedimiento ejemplificado en el anterior acápite y en forma de diagrama de actividades es:</p>
+
+    <p class="figurasn"><img src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo10/files/innewton.png" alt="Algoritmo interpolación de Newton"></p>
+
+    <p class="text">Como en los otros métodos, este algoritmo ha sido implementado como un método de la clase Array, de manera que debe ser llamado desde el array con los datos conocidos: primera fila con los datos de la variable independiente y la segunda con los de la variable dependiente. El método devuelve la función de interpolación correspondiente a los datos (una clausura).</p>
+
+    <p class="text">Este método se emplea igual que los métodos anteriores, así la función de interpolación, para los datos del ejemplo, se obtiene con:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var td = [[1, 4, 5, 6],<br>          [0, 1.3862944, 1.6094379, 1.7917595]];<br>var f = td.inNewton();</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Ahora simplemente se llama a la función para obtener los valores interpolados:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">f(2)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">f(5.5)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Por supuesto, los resultados pueden ser calculados en una instrucción (con <dfn class="style1">map</dfn>), redondeando, este caso, los resultados al séptimo dígito después del punto:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">[2, 5.5].map(f).round(7)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Igualmente, la función de interpolación puede ser empleada para dibujar la gráfica correspondiente a la función ajustada y los puntos conocidos:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">plot({f:[f, td], xi:0.9, xf:6.1})</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Como en los casos anteriores, analizando el comportamiento de la curva entre los puntos, se puede determinar visualmente si la interpolación es o no buena. En este caso, dado que el comportamiento de la curva es uniforme en todo el intervalo, se puede concluir que la interpolación es buena.</p>
+
+
+    <div class="ejercicio" id="ejercicio7" enunciado="1"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Empleando los datos de la siguiente tabla:</p><div class="table borderAll"><table align="center" style="width:550px;"><tbody><tr><th class="center" style="width:30px;">x</th><td class="center">3</td><td class="center">5</td><td class="center">7</td><td class="center">11</td><td class="center">13</td><td class="center">15</td><td class="center">18</td><td class="center">19</td><td class="center">23</td><td class="center">25</td><td class="center">26</td><td class="center">28</td><td class="center">29</td><td class="center">33</td><td class="center">36</td><td class="center">40</td><td class="center">44</td></tr><tr><th class="center">y</th><td class="center">0</td><td class="center">0</td><td class="center">0</td><td class="center">0</td><td class="center">1</td><td class="center">3</td><td class="center">13</td><td class="center">22</td><td class="center">29</td><td class="center">26</td><td class="center">18</td><td class="center">8</td><td class="center">3</td><td class="center">0</td><td class="center">0</td><td class="center">0</td><td class="center">0</td></tr></tbody></table></div></div><p class="pregunta"><span class="pregunta"></span>Guarde los valores de "x" en el vector "vx", los de "y" en "vy", con estos vectores cree la tabla de datos "td" y obtenga la función de interpolación "f" empleando el método de Newton (inNewton)</p><div id="pregunta103" class="calculadora" spellcheck="false"><div class="instruccion">var vx = [3, 5, 7, 11, 13, 15, 18, 19, 23, 25, 26, 28, 29, 33, 36, 40, 44];<br>var vy = [0, 0, 0, 0, 1, 3, 13, 22, 29, 26, 18, 8, 3, 0, 0, 0, 0];<br>var td = [vx, vy];<br>var f = td.inNewton();</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con la función de interpolación, calcule el valor de "y" para un valor de "x" igual a 17</p><div id="pregunta104" class="calculadora" spellcheck="false"><div class="instruccion">f(17)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Calcule los valores de "y" para valores de "x" iguales a 4, 6, 8, 12, 18, 20, 23, 28, 30, 35 y 42, redondeando los resultados al primer dígito después del punto.</p><div id="pregunta105" class="calculadora" spellcheck="false"><div class="instruccion">[4, 6, 8, 12, 18, 20, 23, 28, 30, 35 , 42].map(f).round(1)</div><div class="resultado"></div></div><p class="pregunta" id="pregunta106"><span class="pregunta"></span>El valor de "y" para "x = 35" es: <span class="campo_literal correcta" tabindex="0" contenteditable="true">396.4</span></p><p class="pregunta"><span class="pregunta"></span>Dibuje la gráfica de los puntos conocidos y los valores interpolados (límites: menor y mayor valor de "x").</p><div id="pregunta107" class="calculadora" spellcheck="false"><div class="instruccion">plot({f:[f,td],xi:3,xf:44})</div><div class="resultado"></div></div><p class="pregunta" id="pregunta108"><span class="pregunta"></span>El análisis visual de la gráfica permite concluir que la función de interpolación es: <span class="campo_arrastrar correcta" tabindex="0" data-opciones="confiable&amp;@%aceptable&amp;@%no confiable" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">no confiable</span></p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="16" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 7 -->
+
+    <div class="ejercicio" id="ejercicio8" enunciado="1"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Empleando los datos de la siguiente tabla:</p><div class="table borderAll"><table align="center" style="width:550px;"><tbody><tr><th class="center" style="width:30px;">x</th><td class="center">1</td><td class="center">3</td><td class="center">7</td><td class="center">10</td><td class="center">12</td><td class="center">14</td><td class="center">16</td><td class="center">17</td><td class="center">22</td><td class="center">23</td></tr><tr><th class="center">y</th><td class="center">9.3</td><td class="center">19.3</td><td class="center">34.7</td><td class="center">45.2</td><td class="center">52</td><td class="center">58.6</td><td class="center">65.2</td><td class="center">68.5</td><td class="center">84.7</td><td class="center">87.9</td></tr></tbody></table></div></div><p class="pregunta"><span class="pregunta"></span>Guarde los valores de "x" en el vector "vx", los de "y" en "vy", con estos vectores cree la tabla de datos "td" y obtenga la función de interpolación "f" empleando el método de Newton (inNewton)</p><div id="pregunta120" class="calculadora" spellcheck="false"><div class="instruccion">var vx = [1, 3, 7, 10, 12, 14, 16, 17, 22, 23];<br>var vy = [9.3, 19.3, 34.7, 45.2, 52, 58.6, 65.2, 68.5, 84.7, 87.9];<br>var td = [vx, vy];<br>var f = td.inNewton();</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Dibuje la gráfica de los puntos conocidos y los valores interpolados (límites: menor y mayor valor de "x").</p><div id="pregunta121" class="calculadora" spellcheck="false"><div class="instruccion">plot({f:[f,td],xi:1 ,xf:23 })</div><div class="resultado"></div></div><p class="pregunta" id="pregunta122"><span class="pregunta"></span>El análisis visual de la gráfica permite concluir que la función de interpolación es: <span class="campo_arrastrar correcta" tabindex="0" data-opciones="no confiable&amp;@%aceptable&amp;@%confiable" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">confiable</span></p><p class="pregunta"><span class="pregunta"></span>Empleando la función de interpolación, resuelva el siguiente sistema de ecuaciones lineales:\[\begin{aligned}z_1+4z_2+6z_3+2z_4&amp;=f(2)\\2z_1+3z_2+z_3+5z_4&amp;=f(3)\\3z_1+z_2+4z_3+7z_4&amp;=f(4)\\4z_1+2z_2+5z_3+6z_4&amp;=f(5)\end{aligned}\]Con el método de la crout (resultado: vector, redondeo: segundo dígito):</p><div id="pregunta123" class="calculadora" spellcheck="false"><div class="instruccion">[[1,4,6,2],<br> [2,3,1,5],<br> [3,1,4,7],<br> [4,2,5,6]].crout([f(2),f(3),f(4),f(5)]).transpose().round(2)</div><div class="resultado"></div></div><p class="pregunta" id="pregunta124"><span class="pregunta"></span>El valor de la variable "z<sub>2</sub>", es: <span class="campo_literal correcta" tabindex="0" contenteditable="true">1.5</span>.</p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="18" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 8 -->
+
+    <div class="ejercicio" id="ejercicio9" enunciado="2"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Empleando los datos de la siguiente tabla:</p><div class="table borderAll"><table align="center" style="width:620px;"><tbody><tr><th class="center" style="width:30px;">x</th><td class="center">1</td><td class="center">2</td><td class="center">5</td><td class="center">7</td><td class="center">9</td><td class="center">11</td><td class="center">15</td><td class="center">19</td><td class="center">21</td><td class="center">24</td></tr><tr><th class="center">y</th><td class="center">0.17</td><td class="center">1.49</td><td class="center">3.39</td><td class="center">5.9</td><td class="center">8.99</td><td class="center">14.64</td><td class="center">21.43</td><td class="center">29.29</td><td class="center">38.16</td><td class="center">48</td></tr></tbody></table></div></div><p class="pregunta"><span class="pregunta"></span>Guarde los valores de "x" en el vector "vx", los de "y" en "vy", con estos vectores cree la tabla de datos "td" y obtenga la función de interpolación "f" empleando el método de Newton (inNewton)</p><div id="pregunta140" class="calculadora" spellcheck="false"><div class="instruccion">var vx = [1, 2, 5, 7, 9, 11, 15, 19, 21, 24];<br>var vy = [0.17, 1.49, 3.39, 5.9, 8.99, 14.64, 21.43, 29.29, 38.16, 48];<br>var td = [vx, vy];<br>var f = td.inNewton();</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Dibuje la gráfica de los puntos conocidos y los valores interpolados (límites: menor y mayor valor de "x").</p><div id="pregunta141" class="calculadora" spellcheck="false"><div class="instruccion">plot({f:[f,td], xi:1,xf:24 })</div><div class="resultado"></div></div><p class="pregunta" id="pregunta142"><span class="pregunta"></span>El análisis visual de la gráfica permite concluir que la función de interpolación es: <span class="campo_arrastrar correcta" tabindex="0" data-opciones="aceptable&amp;@%no confiable&amp;@%confiable" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">no confiable</span></p><p class="pregunta"><span class="pregunta"></span>Empleando la función de interpolación, encuentre las soluciones del siguiente sistema de ecuaciones no lineales\[\begin{array}{r c r}x^2+2xy^2-f(5)&amp;=&amp;44\\x^2y-3x^2y^2+f(6)&amp;=&amp;-117\end{array}\]Con el método Simplex (valores iniciales: 1 y 2, precisión/exactitud: 9 dígitos, redondeo: tercer dígito):</p><div id="pregunta143" class="calculadora" spellcheck="false"><div class="instruccion">var fr = ([x, y]) =&gt; [<br>  x**2+2*x*y**2-f(5)-44,<br>  x**2*y-3*x**2*y**2+f(6)+117<br>];<br>fr.simplex({vi:[1,2], err:9}).v.round(3)</div><div class="resultado"></div></div><p class="pregunta" id="pregunta144"><span class="pregunta"></span>El valor de "x", en el sistema de ecuaciones no lineales, es: <span class="campo_literal correcta" tabindex="0" contenteditable="true">2.111</span>.</p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="20" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 9 -->
+
+
+
+
+
+    <h2 class="text">Interpolación segmentaria lineal</h2>
+
+    <p class="text">La ecuación más empleada en el ajuste segmentario es la cúbica, pero se pueden emplear otras, siendo la más sencilla la lineal.</p>
+
+    <p class="text">Dado que para calcular los coeficientes de una ecuación lineal sólo se requieren 2 puntos, la interpolación segmentaria lineal es el equivalente a la interpolación lineal estudiada previamente, excepto que ahora se calculan todos los coeficientes para las "n-1" ecuaciones.</p>
+
+    <p class="text">Las "n-1" ecuaciones, correspondientes a cada uno de los segmentos, se definen de la siguiente forma:</p>
+    
+    <table id="ec_8" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                y = s_j(x) = a_j+b_j(x-x_j)\hspace{5mm} \begin{cases}j = 0 \rightarrow n-2 \end{cases}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Donde s<sub>j</sub>, es la ecuación ajustada para el segmento "j", "x" es el valor a interpolar (comprendido entre x<sub>j</sub> y x<sub>j+1</sub>), x<sub>j</sub> es el valor de "x" al principio del segmento, a<sub>j</sub> y b<sub>j</sub> son los coeficientes de la ecuación lineal para el segmento "j" y "n" es el número de datos conocidos.</p>
+
+    <p class="text">Puesto que cada ecuación pasa exactamente a través de los dos puntos de su segmento, en el punto (x<sub>j+1</sub>, y<sub>j+1</sub>), el valor que devuelve s<sub>j</sub>(x<sub>j+1</sub>) es igual al valor que devuelve s<sub>j+1</sub>(x<sub>j+1</sub>), es decir que la ecuación del segmento y la ecuación del segmento posterior, devuelven el mismo valor para el punto que tienen en común:</p>
+    
+    <table id="ec_9" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                s_j(x_{j+1}) = s_{j+1}(x_{j+1}) = y_{j+1}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Reemplazando la <a href="#ec_8">ecuación 8</a> en esta ecuación y haciendo algunas operaciones se obtiene:</p>
+    
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                \begin{aligned}                a_j+b_j(x_{j+1}-x_j) = a_{j+1}+b_{j+1}(x_{j+1}-x_{j+1}) = y_{j+1}\\                a_j+b_j(x_{j+1}-x_j) = a_{j+1} = y_{j+1}                \end{aligned}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">De donde se deduce que:</p>
+    
+    <table id="ec_10" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                a_j = y_j                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Es decir que los coeficientes "a" de la ecuación ajustada son los valores conocidos de la variable dependiente. Reemplazando esta relación en la ecuación 3, resulta:</p>
+    
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                a_j+b_j(x_{j+1}-x_j) = y_j+(x_{j+1}-x_j)  = y_{j+1}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">De donde se obtiene:</p>
+    
+    <table id="ec_11" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                b_j = \dfrac{y_{j+1}-y_j}{x_{j+1}-x_j}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Con la que se calculan los "n-1" coeficientes "b" de la <a href="#ec_8">ecuación 8</a>.</p>
+
+
+
+
+    <h3 class="text">Algoritmo</h3>
+
+    <p class="text">Para este método básicamente se calculan los coeficientes de las ecuaciones lineales (ecuaciones <a href="#ec_10">10</a> y <a href="#ec_11">11</a>), luego se busca el segmento "j" en el que se encuentra el valor a interpolar y finalmente se calcula el valor interpolado con la <a href="#ec_8">ecuación 8</a>.</p>
+
+    <p class="text">Si las anteriores operaciones tendrían que ser llevadas a cabo cada vez que se quiere interpolar un nuevo valor, el método sería ineficiente, pues se volverían a calcular los mismo valores una y otra vez. Para que el método sea de utilidad práctica los coeficientes deben ser calculados una sola vez, luego, para interpolar cualquier valor, simplemente se ubica el segmento y con los coeficientes ya calculados (y la <a href="#ec_8">ecuación 8</a>), se obtiene el valor interpolado.</p>
+
+    <p class="text">Con ese fin, el método debe ser implementado de manera que devuelva una función de interpolación, donde los coeficientes ya estén calculados. Esta función recibe el valor a interpolar, ubica el segmento y devuelve el resultado (empleando los coeficientes ya calculados).</p>
+
+    <p class="text">Tomando en cuenta las anteriores consideraciones, el algoritmo en forma de diagrama de actividades, es:</p>
+
+    <p class="figurasn"><img src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo10/files/splinelineal.png" alt="Algoritmo spline lineal"></p>
+
+    <p class="text">Siendo la función de interpolación (interna):</p>
+
+    <p class="figurasn"><img src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo10/files/f_lineal.png" alt="Función de interpolación lineal"></p>
+
+    <p class="text">Al igual que los otros métodos, el código respectivo ha sido añadido como un método de la clase Array. El método se emplea igual que en los anteriores métodos, por ejemplo, para los siguientes  datos:</p>
+
+    <div class="table borderAll"><table align="center">
+        <tbody><tr>
+        <th class="center" style="width:30px;">x</th><td class="center" style="width:41px;">0</td><td class="center">0.2</td><td class="center">0.4</td><td class="center">0.6</td><td class="center">0.8</td><td class="center">1.0</td>
+        </tr>
+        <tr>
+        <th class="center">y</th><td class="center">0</td><td class="center">0.199</td><td class="center">0.389</td><td class="center">0.565</td><td class="center">0.717</td><td class="center">0.841</td>
+        </tr>
+    </tbody></table></div>
+
+    <p class="text">Primero se obtiene la función de interpolación:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var td = [[0, 0.2, 0.4, 0.6, 0.8, 1.0],<br>          [0, 0.199, 0.389, 0.565, 0.717, 0.841]];<br>var f = td.splineLineal();</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Luego, la función de interpolación (<dfn class="style1">f</dfn>) puede ser empleada para calcular valores interpolados, así para <dfn class="style1">x = 0.7</dfn>, se tiene:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">f(0.7)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Se pueden calcular también varios valores a la vez (con <dfn class="style1">map</dfn>), por ejemplo, se pueden obtener los valores de "y" para valores de "x" iguales a: 0.1, 0.3, 0.5, 0.6, 0.7, 0.9 y 1.1:</p> 
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">[0.1, 0.3, 0.5, 0.6, 0.7, 0.9, 1.1].map(f)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">La función de interpolación, puede ser empleada también para trazar la gráfica de los valores interpolados y los puntos conocidos:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">plot({f:[f, td], xi:0, xf:1})</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="text">Como era de esperar, tanto la gráfica, como los resultados calculados, son esencialmente los mismos que con <dfn class="style1">inlineal</dfn>, sin embargo, el método de interpolación segmentaria, al calcular una sola vez los coeficientes, es más rápido que el de interpolación lineal, por lo que es el método a elegir cuando se realizan numerosas interpolaciones con los datos de una misma tabla.</p>
+
+
+    <div class="ejercicio" id="ejercicio10" enunciado="2"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Empleando los datos de la siguiente tabla:</p><div class="table borderAll"><table align="center" style="width:550px;"><tbody><tr><th class="center" style="width:30px;">x</th><td class="center">0.9</td><td class="center">1.3</td><td class="center">3.4</td><td class="center">3.7</td><td class="center">5.1</td><td class="center">5.7</td><td class="center">6.4</td><td class="center">6.7</td><td class="center">7.9</td><td class="center">8.1</td><td class="center">8.9</td><td class="center">9.2</td></tr><tr><th class="center">y</th><td class="center">8</td><td class="center">8</td><td class="center">13</td><td class="center">15</td><td class="center">27</td><td class="center">35</td><td class="center">46</td><td class="center">50</td><td class="center">84</td><td class="center">87</td><td class="center">116</td><td class="center">124</td></tr></tbody></table></div></div><p class="pregunta"><span class="pregunta"></span>Guarde los valores de "x" en el vector "vx", los de "y" en "vy", con estos vectores cree la tabla de datos "td" y obtenga la función de interpolación "f" empleando el método spline lineal (splineLineal)</p><div id="pregunta157" class="calculadora" spellcheck="false"><div class="instruccion">var vx = [0.9, 1.3, 3.4, 3.7, 5.1, 5.7, 6.4, 6.7, 7.9, 8.1, 8.9, 9.2];<br>var vy = [8, 8, 13, 15, 27, 35, 46, 50, 84, 87, 116, 124];<br>var td = [vx, vy];<br>var f = td.splineLineal();</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con la función de interpolación, calcule el valor de "y" para un valor de "x" igual a 7.3.</p><div id="pregunta158" class="calculadora" spellcheck="false"><div class="instruccion">f(7.3)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Calcule los valores de "y" para valores de "x" iguales a 1, 2, 3, 5, 6, 7, 8, 9 y 10, redondeando los resultados al primer dígito después del punto.</p><div id="pregunta159" class="calculadora" spellcheck="false"><div class="instruccion">[1,2,3,5,6,7,8,9,10].map(f).round(1)</div><div class="resultado"></div></div><p class="pregunta" id="pregunta160"><span class="pregunta"></span>El valor de "y" para "x = 6" es: <span class="campo_literal correcta" tabindex="0" contenteditable="true">39.7</span></p><p class="pregunta"><span class="pregunta"></span>Dibuje la gráfica de los puntos conocidos y los valores interpolados (límites: menor y mayor valor de "x").</p><div id="pregunta161" class="calculadora" spellcheck="false"><div class="instruccion">plot({f:[f,td],xi:0.9 ,xf:9.2 })</div><div class="resultado"></div></div><p class="pregunta" id="pregunta162"><span class="pregunta"></span>El análisis visual de la gráfica permite concluir que la función de interpolación es: <span class="campo_arrastrar correcta" tabindex="0" data-opciones="aceptable&amp;@%confiable&amp;@%no confiable" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">aceptable</span></p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="16" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 10 -->
+    
+    <div class="ejercicio" id="ejercicio11" enunciado="1"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Empleando los datos de la siguiente tabla:</p><div class="table borderAll"><table align="center" style="width:550px;"><tbody><tr><th class="center" style="width:30px;">x</th><td class="center">1</td><td class="center">3</td><td class="center">7</td><td class="center">10</td><td class="center">12</td><td class="center">14</td><td class="center">16</td><td class="center">17</td><td class="center">22</td><td class="center">23</td></tr><tr><th class="center">y</th><td class="center">9.3</td><td class="center">19.3</td><td class="center">34.7</td><td class="center">45.2</td><td class="center">52</td><td class="center">58.6</td><td class="center">65.2</td><td class="center">68.5</td><td class="center">84.7</td><td class="center">87.9</td></tr></tbody></table></div></div><p class="pregunta"><span class="pregunta"></span>Guarde los valores de "x" en el vector "vx", los de "y" en "vy", con estos vectores cree la tabla de datos "td" y obtenga la función de interpolación "f" empleando el método spline lineal (splineLineal)</p><div id="pregunta168" class="calculadora" spellcheck="false"><div class="instruccion">var vx = [1, 3, 7, 10, 12, 14, 16, 17, 22, 23];<br>var vy = [9.3, 19.3, 34.7, 45.2, 52, 58.6, 65.2, 68.5, 84.7, 87.9];<br>var td = [vx, vy];<br>var f = td.splineLineal();</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Dibuje la gráfica de los puntos conocidos y los valores interpolados (límites: menor y mayor valor de "x").</p><div id="pregunta169" class="calculadora" spellcheck="false"><div class="instruccion">plot({f:[f,td], xi:1,xf:23 })</div><div class="resultado"></div></div><p class="pregunta" id="pregunta170"><span class="pregunta"></span>El análisis visual de la gráfica permite concluir que la función de interpolación es: <span class="campo_arrastrar correcta" tabindex="0" data-opciones="confiable&amp;@%aceptable&amp;@%no confiable" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">confiable</span></p><p class="pregunta"><span class="pregunta"></span>Empleando la función de interpolación, resuelva el siguiente sistema de ecuaciones lineales:\[\begin{aligned}z_1+4z_2+6z_3+2z_4&amp;=f(2)\\2z_1+3z_2+z_3+5z_4&amp;=f(3)\\3z_1+z_2+4z_3+7z_4&amp;=f(4)\\4z_1+2z_2+5z_3+6z_4&amp;=f(5)\end{aligned}\]Con el método de Gauss Jordán con pivotaje parcial (resultado: vector, redondeo: segundo dígito):</p><div id="pregunta171" class="calculadora" spellcheck="false"><div class="instruccion">[[1,4,6,2,f(2)],<br> [2,3,1,5,f(3)],<br> [3,1,4,7,f(4)],<br> [4,2,5,6,f(5)]].gaussj().transpose().round(2)</div><div class="resultado"></div></div><p class="pregunta" id="pregunta172"><span class="pregunta"></span>El valor de la variable "z<sub>3</sub>", es: <span class="campo_literal correcta" tabindex="0" contenteditable="true">0.24</span>.</p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="18" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 11 -->
+    
+    <div class="ejercicio" id="ejercicio12" enunciado="2"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Empleando los datos de la siguiente tabla:</p><div class="table borderAll"><table align="center" style="width:620px;"><tbody><tr><th class="center" style="width:30px;">x</th><td class="center">1</td><td class="center">2</td><td class="center">5</td><td class="center">7</td><td class="center">9</td><td class="center">11</td><td class="center">15</td><td class="center">19</td><td class="center">21</td><td class="center">24</td></tr><tr><th class="center">y</th><td class="center">0.17</td><td class="center">1.49</td><td class="center">3.39</td><td class="center">5.9</td><td class="center">8.99</td><td class="center">14.64</td><td class="center">21.43</td><td class="center">29.29</td><td class="center">38.16</td><td class="center">48</td></tr></tbody></table></div></div><p class="pregunta"><span class="pregunta"></span>Guarde los valores de "x" en el vector "vx", los de "y" en "vy", con estos vectores cree la tabla de datos "td" y obtenga la función de interpolación "f" empleando el método spline lineal (splineLineal)</p><div id="pregunta188" class="calculadora" spellcheck="false"><div class="instruccion">var vx = [1,2,5,7,9,11,15,19,21,24];<br>var vy = [0.17,1.49,3.39,5.9,8.99,14.64,21.43,29.29,38.16,48];<br>var td = [vx,vy];<br>var f = td.splineLineal();</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Dibuje la gráfica de los puntos conocidos y los valores interpolados (límites: menor y mayor valor de "x").</p><div id="pregunta189" class="calculadora" spellcheck="false"><div class="instruccion">plot({f:[f,td],xi:1 ,xf:24 })</div><div class="resultado"></div></div><p class="pregunta" id="pregunta190"><span class="pregunta"></span>El análisis visual de la gráfica permite concluir que la función de interpolación es: <span class="campo_arrastrar correcta" tabindex="0" data-opciones="aceptable&amp;@%confiable&amp;@%no confiable" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">aceptable</span></p><p class="pregunta"><span class="pregunta"></span>Empleando la función de interpolación, encuentre las soluciones del siguiente sistema de ecuaciones no lineales\[\begin{array}{r c r}x^2+2xy^2-f(5)&amp;=&amp;44\\x^2y-3x^2y^2+f(6)&amp;=&amp;-117\end{array}\]Con el método de Newton (valores iniciales: 1 y 2, precisión/exactitud: 9 dígitos, redondeo: tercer dígito), guardando la función (flecha) que devuelve el vector de restos en "fr":</p><div id="pregunta191" class="calculadora" spellcheck="false"><div class="instruccion">var fr = ([x, y]) =&gt; [<br>  x**2+2*x*y**2-f(5)-44,<br>  x**2*y-3*x**2*y**2+f(6)+117<br>];<br>fr.newtonnl({vi:[1,2], err:9}).v.round(3)</div><div class="resultado"></div></div><p class="pregunta" id="pregunta192"><span class="pregunta"></span>El valor de "y", en el sistema de ecuaciones no lineales, es: <span class="campo_literal correcta" tabindex="0" contenteditable="true">-0.882</span>.</p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="20" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 12 -->
+
+
+
+
+    <h2 class="text">Interpolación segmentaria cúbica</h2>
+
+    <p class="text">Como se dijo, la ecuación más empleada en la interpolación segmentaria, es la ecuación cúbica. En este caso las ecuaciones para cada uno de los “n-1” segmentos, tienen la forma:</p>
+    
+    <table id="ec_12" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                s_j(x) = a_j+b_j(x-x_j)+c_j(x-x_j)^2+d_j(x-x_j)^3 \hspace{5mm} \begin{cases}j = 0 \rightarrow n-2 \end{cases}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Donde s<sub>j</sub> es la ecuación ajustada para el segmento “j”, “x” es el valor a interpolar (comprendido entre x<sub>j</sub> y x<sub>j+1</sub>; a<sub>j</sub>, b<sub>j</sub>, c<sub>j</sub> y d<sub>j</sub>, son los coeficientes de la ecuación cúbica para el segmento “j”; "n" es el número de datos conocidos.</p>
+
+    <p class="text">En el punto común a dos segmentos consecutivos "j" y "j+1", tanto al función del primer segmento (s<sub>j</sub>), como la del segundo (s<sub>j+1</sub>), devuelven el mismo valor de y<sub>j+1</sub> para el mismo valor de x<sub>j+1</sub>, es decir se cumple que:</p>
+    
+    <table id="ec_13" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                s_j(x_{j+1}) = s_{j+1}(x_{j+1}) = y_{j+1}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Aplicando la <a href="#ec_12">ecuación 12</a>, en esta expresión se tiene:</p>
+    
+    <table id="ec_14" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                \begin{aligned}                a_j+b_j(x_{j+1}-x_j)+c_j(x_{j+1}-x_j)^2+d_j(x_{j+1}-x_j)^3 = a_{j+1}+b_{j+1}(x_{j+1}-x_j)+c_{j+1}(x_{j+1}-x_j)^2+d_{j+1}(x_{j+1}-x_j)^3 = y_{j+1}                \end{aligned}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">De donde se deduce que:</p>
+    
+    <table id="ec_15" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                a_j = y_j                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+
+    <p class="text">Si se denomina “hj” a la diferencia entre dos valores consecutivos de “x”:</p>
+    
+    <table id="ec_16" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                h_j = x_{j+1}-x_j                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">La <a href="#ec_14">ecuación 14</a> puede ser reescrita como:</p>
+    
+    <table id="ec_17" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                a_j+b_jh_j+c_jh_j^2+d_jh_j^3=a_{j+1}=y_{j+1}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Para que las curvas que unen dos segmentos tengan un comportamiento uniforme al pasar de un segmento al otro, se igualan las derivadas primeras en el punto común a ambas curvas (x<sub>j+1</sub>), es decir se hace que ambas curvas, en ese punto, tengan la misma pendiente:</p>
+    
+    <table id="ec_18" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                s'_j(x_{j+1}) = s'_{j+1}(x_{j+1})                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Haciendo algunas operaciones, se tiene:</p>
+    
+    <table id="ec_19" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                \begin{gathered}                b_j+2c_jh_j+3d_jh_j^2 = b_{j+1}+2c_{j+1}(x_{j+1}-x_{j+1})+3d_{j+1}(x_{j+1}-x_{j+1})^2\\                b_j+2c_jh_j+3d_jh_j^2 = b_{j+1}                \end{gathered}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Para lograr un comportamiento aún más uniforme al pasar la curva de un segmento al siguiente, se igualan también las derivadas segundas de las ecuaciones a ambos lados del punto en común (x<sub>j+1</sub>)</p>
+    
+    <table id="ec_20" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                s''_j(x_{j+1}) = s''_{j+1}(x_{j+1})                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">De donde resulta:</p>
+    
+    <table id="ec_21" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                \begin{gathered}                2c_j+6d_jh_j = 2c_{j+1}+6d_{j+1}(x_{j+1}-x_{j+1})\\                c_j+3d_jh_j = c_{j+1}                \end{gathered}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Despejando dj de esta ecuación, se tiene:</p>
+    
+    <table id="ec_22" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                d_j = \dfrac{c_{j+1}-c_j}{3h_j}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Reemplazando esta ecuación en la <a href="#ec_21">ecuación 21</a> y haciendo algunas operaciones, se obtiene:</p>
+    
+    <table id="ec_23" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                \begin{gathered}                b_j+2c_jh_j+\dfrac{3(c_{j+1}-c_j)}{3h_j}h_j^2 = b_{j+1}\\                b_j+2c_jh_j+c_{j+1}h_j-c_jh_j = b_{j+1}\\                b_j+(c_j+c_{j+1})h_j = b_{j+1}                \end{gathered}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Reemplazando la <a href="#ec_22">ecuación 22</a> en <a href="#ec_19">la ecuación 19</a>:</p>
+    
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                \begin{gathered}                a_j+b_jh_j+c_jh_j^2+\dfrac{c_{j+1}-c_j}{3h_j}h_j^3 = a_{j+1}\\[6mm]                a_j+b_jh_j+\dfrac{3c_jh_j^2+c_{j+1}h_j^2-c_jh_j^2}{3} = a_{j+1}\\[5mm]                b_j=\dfrac{a_{j+1}-a_j}{h_j}-\dfrac{2c_jh_j^2+c_{j+1}h_j^2}{3h_j}                \end{gathered}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Se obtiene:</p>
+    
+    <table id="ec_24" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                b_j=\dfrac{a_{j+1}-a_j}{h_j}-\dfrac{(2c_j+c_{j+1})h_j}{3}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Reemplazando esta ecuación en la <a href="#ec_23">ecuación 23</a> y reajustando índices, se obtiene:</p>
+    
+    <table id="ec_25" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                \begin{gathered}                \dfrac{a_{j+1}-a_j}{h_j}-\dfrac{(2c_j+c_{j+1})h_j}{3}+(c_j+c_{j+1})h_j = \dfrac{a_{j+2}-a_{j+1}}{h_{j+1}}-\dfrac{(2c_{j+1}+c_{j+2})h_{j+1}}{3}\\[6mm]                \dfrac{-2c_jh_j-c_{j+1}h_j+3c_jh_j+3c_{j+1}h_j}{3}+\dfrac{(2c_{j+1}+c_{j+2})h_{j+1}}{3} = 3\left(\dfrac{a_{j+2}-a_{j+1}}{h_{j+1}}-\dfrac{a_{j+1}-a_j}{h_j}\right)\\[7mm]                h_jc_j+2(h_j+h_{j+1})c_{j+1}+h_{j+1}c_{j+2} = 3\left(\dfrac{a_{j+2}-a_{j+1}}{h_{j+1}}-\dfrac{a_{j+1}-a_j}{h_j}\right)                \end{gathered}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Que representa un sistema de "n-2" ecuaciones lineales, siendo las incógnitas los valores de "c". Existen "n-2" ecuaciones porque "j" sólo puede variar de 0 hasta "n-3", pues al existir "n-1" segmentos y al estar presente en la relación el término c<sub>j+2</sub>, el mayor valor posible para "j" es: j+2 = n-1 =&gt; j = n-3.</p>
+
+    <p class="text">Por ejemplo si se tienen 6 puntos (n=6), se forma un sistema con 4 ecuaciones lineales con 6 incógnitas (c<sub>0</sub>, c<sub>1</sub>, c<sub>2</sub>, c<sub>3</sub>, c<sub>4</sub> y c<sub>5</sub>):</p>
+    
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                \begin{aligned}                h_0c_0+2(h_0+h_1)c_1+h_1c_2 = 3\left(\dfrac{a_2-a_1}{h_1}-\dfrac{a_1-a_0}{h_0}\right) &amp;= p_0\\[7mm]                h_1c_1+2(h_1+h_2)c_2+h_2c_3 = 3\left(\dfrac{a_3-a_2}{h_2}-\dfrac{a_2-a_1}{h_1}\right) &amp;= p_1\\[7mm]                h_2c_2+2(h_2+h_3)c_3+h_3c_4 = 3\left(\dfrac{a_4-a_3}{h_3}-\dfrac{a_3-a_2}{h_2}\right) &amp;= p_2\\[7mm]                h_3c_3+2(h_3+h_4)c_4+h_4c_5 = 3\left(\dfrac{a_5-a_4}{h_4}-\dfrac{a_4-a_3}{h_3}\right) &amp;= p_3                \end{aligned}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Donde los elementos “p<sub>i</sub>” simplemente representan los resultados obtenidos al reemplazar los valores en el lado derecho de cada una de las ecuaciones.</p>
+
+    <p class="text">Por consiguiente, para resolver este sistema, se requieren o 2 ecuaciones adicionales o dos valores conocidos de "c".  Como no se tiene ninguna información con relación al comportamiento de los datos antes del primer segmento y después del último, se puede asumir que en el primer segmento y después del último, las ecuaciones cúbicas no cuentan con el término de segundo grado, es decir asumir que los valores de "c" en dichos segmentos (c<sub>0</sub> y c<sub>n-1</sub>) son cero.</p>
+
+    <p class="text">Con esta suposición, se puede resolver el sistema de ecuaciones lineales (<a href="#ec_27">ecuación 27</a>), que en forma desarrollada es:</p>
+    
+    <table id="ec_26" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                \begin{bmatrix}                h_0 &amp; 2(h_0+h_1) &amp; h_1 &amp; 0 &amp; 0 &amp; \cdots &amp;0 &amp;0 &amp;0\\[2mm]                0 &amp; h_1 &amp; 2(h_1+h_2) &amp; h_2 &amp; 0 &amp; \cdots &amp; 0 &amp;0 &amp;0\\[2mm]                0 &amp; 0 &amp; h_2 &amp; 2(h_2+h_3) &amp; h_3 &amp; \cdots &amp; 0 &amp;0 &amp;0\\[1mm]                \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots\\[2mm]                0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; \cdots &amp; h_{n-3} &amp; 2(h_{n-3}+h_{n-2}) &amp; h_{n-2}                \end{bmatrix}                \begin{bmatrix}                c_1\\[2mm]                c_2\\[2mm]                c_2\\[1mm]                \vdots\\[2mm]                c_{n-2}                \end{bmatrix}                =                \begin{bmatrix}                p_0\\[2mm]                p_1\\[2mm]                p_2\\[1mm]                \vdots\\[2mm]                p_{n-3}                \end{bmatrix}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Donde los valores de "p" que, como se dijo, simplemente representan el término derecho del sistema de ecuaciones lineales, se calculan con:</p>
+    
+    <table id="ec_27" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                p_j = 3\left(\dfrac{a_{j+2}-a_{j+1}}{h_{j+1}}-\dfrac{a_{j+1}-a_j}{h_j}\right)                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">Como se puede ver, el sistema de ecuaciones lineales corresponde a un sistema tridiagonal, por lo que puede ser resuelto con uno de los métodos disponibles para ese fin (<dfn class="style1">gausstd</dfn> o <dfn class="style1">gseideltd</dfn>).</p>
+
+    <p class="text">Una vez calculados los coeficientes “c”, los coeficientes “b” se calculan con la <a href="#ec_24">ecuación 24</a> y los “d” con la <a href="#ec_22">ecuación 22</a>.</p>
+
+    <p class="text">Luego, con los coeficientes calculados, se procede igual que con el método de interpolación segmentaria lineal, es decir se ubica el segmento ("j") al que pertenece el valor a interpolar ("x") y con la ecuación de ese segmento (<a href="#ec_12">ecuación 12</a>) se calcula el valor interpolado ("y").</p>
+
+
+
+    <h2 class="text">Algoritmo</h2>
+
+    <p class="text">Con excepción del cálculo de los coeficientes, el algoritmo para la interpolación segmentaria cúbica, es el mismo que el de la lineal y al igual que en la misma es implementado de manera que devuelva la función de interpolación para los valores dados.</p>
+
+    <p class="text">En forma de diagrama de actividades, el algoritmo que construye y devuelve la función de interpolación es el siguiente:</p>
+
+    <p class="figurasn"><img src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo10/files/splinecubico.png" alt="Algoritmo spline cúbico"></p>
+
+    <p class="text">Siendo la función de interpolación:</p>
+
+    <p class="figurasn"><img src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo10/files/f_cubico.png" alt="Función spline cúbico"></p>
+
+    <p class="text">Al igual que los métodos anteriores, el código ha sido añadido como un método de la clase Array y se emplea igual que en los anteriores casos. Así, dados los valores de la siguiente tabla:</p>
+
+    <div class="table borderAll"><table align="center">
+        <tbody><tr>
+        <th class="center" style="width:30px;">x</th><td class="center" style="width:76px;">1</td><td class="center">4</td><td class="center">5</td><td class="center">6</td>
+        </tr>
+        <tr>
+        <th class="center">y</th><td class="center">0</td><td class="center">1.3862944</td><td class="center">1.6094379</td><td class="center">1.7917595</td>
+        </tr>
+    </tbody></table></div>
+
+    <p class="text">Se crea la función de interpolación con:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var td = [[1, 4, 5, 6],<br>          [0, 1.3862944, 1.6094379, 1.7917595]];<br>var f = td.splineCubico();</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Luego, con la función de interpolación (<dfn class="style1">f</dfn>), se pueden interpolar para valores de "x", por ejemplo, para x=3.2, se escribe:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">f(3.2).round(7)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Que ha sido redondeado al séptimo dígito por ser esa la exactitud de los datos originales. Si se quiere interpolar para más de un valor, por ejemplo para: 2, 4.5 y 5.5, se puede emplear al método <dfn class="style1">map</dfn>:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">[2, 4.5, 5.5].map(f).round(7)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Para juzgar visualmente cuan confiable o no (cuan buena o no) es la función de interpolación, se puede dibujar la función de interpolación y los valores conocidos:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">plot({f:[f, td], xi:1, xf:6})</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Como se puede ver, en este caso, la curva es uniforme en todo el intervalo, por lo que se puede concluir que la función de interpolación es buena.</p>
+
+    <div class="ejercicio" id="ejercicio13" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Empleando los datos de la siguiente tabla:</p><div class="table borderAll"><table align="center" style="width:600px;"><tbody><tr><th class="center" style="width:30px;">x</th><td class="center">2.3</td><td class="center">4.5</td><td class="center">6.7</td><td class="center">8.4</td><td class="center">9.2</td><td class="center">10.1</td><td class="center">11.2</td><td class="center">12.6</td><td class="center">14.5</td><td class="center">16.3</td><td class="center">17.2</td><td class="center">18.1</td></tr><tr><th class="center">y</th><td class="center">11</td><td class="center">41</td><td class="center">90</td><td class="center">141</td><td class="center">169</td><td class="center">205</td><td class="center">251</td><td class="center">318</td><td class="center">421</td><td class="center">545</td><td class="center">592</td><td class="center">655</td></tr></tbody></table></div></div><p class="pregunta"><span class="pregunta"></span>Guarde los valores de "x" en el vector "vx", los de "y" en "vy", con estos vectores cree la tabla de datos "td" y obtenga la función de interpolación "f" empleando el método spline cúbico (splineCubico)</p><div id="pregunta193" class="calculadora" spellcheck="false"><div class="instruccion">var vx = [2.3,4.5,6.7,8.4,9.2,10.1,11.2,12.6,14.5,16.3,17.2,18.1];<br>var vy = [11,41,90,141,169,205,251,318,421,545,592,655];<br>var td = [vx,vy];<br>var f = td.splineCubico();</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con la función de interpolación, calcule el valor de "y" para un valor de "x" igual a 15.5.</p><div id="pregunta194" class="calculadora" spellcheck="false"><div class="instruccion">f(15.5)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Calcule los valores de "y" para valores de "x" iguales a 3, 5, 9, 11, 12, 16, 17 y 18, redondeando los resultados al primer dígito después del punto.</p><div id="pregunta195" class="calculadora" spellcheck="false"><div class="instruccion">[3,5,9,11,12,16,17,18].map(f).round(1)</div><div class="resultado"></div></div><p class="pregunta" id="pregunta196"><span class="pregunta"></span>El valor de "y" para "x = 5" es: <span class="campo_literal correcta" tabindex="0" contenteditable="true">50.2</span></p><p class="pregunta"><span class="pregunta"></span>Dibuje la gráfica de los puntos conocidos y los valores interpolados (límites: menor y mayor valor de "x").</p><div id="pregunta197" class="calculadora" spellcheck="false"><div class="instruccion">plot({f:[f,td],xi:2.3 ,xf:18.1 })</div><div class="resultado"></div></div><p class="pregunta" id="pregunta198"><span class="pregunta"></span>El análisis visual de la gráfica permite concluir que la función de interpolación es: <span class="campo_arrastrar correcta" tabindex="0" data-opciones="aceptable&amp;@%confiable&amp;@%no confiable" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">confiable</span></p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="16" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 13 -->
+
+    <div class="ejercicio" id="ejercicio14" enunciado="1"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Empleando los datos de la siguiente tabla:</p><div class="table borderAll"><table align="center" style="width:550px;"><tbody><tr><th class="center" style="width:30px;">x</th><td class="center">1</td><td class="center">3</td><td class="center">7</td><td class="center">10</td><td class="center">12</td><td class="center">14</td><td class="center">16</td><td class="center">17</td><td class="center">22</td><td class="center">23</td></tr><tr><th class="center">y</th><td class="center">9.3</td><td class="center">19.3</td><td class="center">34.7</td><td class="center">45.2</td><td class="center">52</td><td class="center">58.6</td><td class="center">65.2</td><td class="center">68.5</td><td class="center">84.7</td><td class="center">87.9</td></tr></tbody></table></div></div><p class="pregunta"><span class="pregunta"></span>Guarde los valores de "x" en el vector "vx", los de "y" en "vy", con estos vectores cree la tabla de datos "td" y obtenga la función de interpolación "f" empleando el método spline cúbico (splineCubico)</p><div id="pregunta216" class="calculadora" spellcheck="false"><div class="instruccion">var vx = [1, 3, 7, 10, 12, 14, 16, 17, 22, 23];<br>var vy = [9.3, 19.3, 34.7, 45.2, 52, 58.6, 65.2, 68.5, 84.7, 87.9];<br>var td = [vx, vy];<br>var f = td.splineCubico();</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Dibuje la gráfica de los puntos conocidos y los valores interpolados (límites: menor y mayor valor de "x").</p><div id="pregunta217" class="calculadora" spellcheck="false"><div class="instruccion">plot({f:[f,td],xi:1 ,xf:23 })</div><div class="resultado"></div></div><p class="pregunta" id="pregunta218"><span class="pregunta"></span>El análisis visual de la gráfica permite concluir que la función de interpolación es: <span class="campo_arrastrar correcta" tabindex="0" data-opciones="aceptable&amp;@%confiable&amp;@%no confiable" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">confiable</span></p><p class="pregunta"><span class="pregunta"></span>Empleando la función de interpolación, resuelva el siguiente sistema de ecuaciones lineales:\[\begin{aligned}z_1+4z_2+6z_3+2z_4&amp;=f(2)\\2z_1+3z_2+z_3+5z_4&amp;=f(3)\\3z_1+z_2+4z_3+7z_4&amp;=f(4)\\4z_1+2z_2+5z_3+6z_4&amp;=f(5)\end{aligned}\]Con el método de crout (redondeo: segundo dígito):</p><div id="pregunta219" class="calculadora" spellcheck="false"><div class="instruccion">[[1,4,6,2],<br> [2,3,1,5],<br> [3,1,4,7],<br> [4,2,5,6]].crout([f(2),f(3),f(4),f(5)]).transpose().round(2)</div><div class="resultado"></div></div><p class="pregunta" id="pregunta220"><span class="pregunta"></span>El valor de la variable "z<sub>4</sub>", es: <span class="campo_literal correcta" tabindex="0" contenteditable="true">1.47</span>.</p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="18" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 14 -->
+
+    <div class="ejercicio" id="ejercicio15" enunciado="2"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Empleando los datos de la siguiente tabla:</p><div class="table borderAll"><table align="center" style="width:620px;"><tbody><tr><th class="center" style="width:30px;">x</th><td class="center">1</td><td class="center">2</td><td class="center">5</td><td class="center">7</td><td class="center">9</td><td class="center">11</td><td class="center">15</td><td class="center">19</td><td class="center">21</td><td class="center">24</td></tr><tr><th class="center">y</th><td class="center">0.17</td><td class="center">1.49</td><td class="center">3.39</td><td class="center">5.9</td><td class="center">8.99</td><td class="center">14.64</td><td class="center">21.43</td><td class="center">29.29</td><td class="center">38.16</td><td class="center">48</td></tr></tbody></table></div></div><p class="pregunta"><span class="pregunta"></span>Guarde los valores de "x" en el vector "vx", los de "y" en "vy", con estos vectores cree la tabla de datos "td" y obtenga la función de interpolación "f" empleando el método spline cúbico (splineCubico)</p><div id="pregunta236" class="calculadora" spellcheck="false"><div class="instruccion">var vx = [1, 2, 5, 7, 9, 11, 15, 19, 21, 24];<br>var vy = [0.17, 1.49, 3.39, 5.9, 8.99, 14.64, 21.43, 29.29, 38.16, 48];<br>var td = [vx, vy];<br>var f = td.splineCubico();</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Dibuje la gráfica de los puntos conocidos y los valores interpolados (límites: menor y mayor valor de "x").</p><div id="pregunta237" class="calculadora" spellcheck="false"><div class="instruccion">plot({f:[f,td],xi:1 ,xf:24 })</div><div class="resultado"></div></div><p class="pregunta" id="pregunta238"><span class="pregunta"></span>El análisis visual de la gráfica permite concluir que la función de interpolación es: <span class="campo_arrastrar correcta" tabindex="0" data-opciones="no confiable&amp;@%confiable&amp;@%aceptable" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">aceptable</span></p><p class="pregunta"><span class="pregunta"></span>Empleando la función de interpolación, encuentre las soluciones del siguiente sistema de ecuaciones no lineales\[\begin{array}{r c r}x^2+2xy^2-f(5)&amp;=&amp;44\\x^2y-3x^2y^2+f(6)&amp;=&amp;-117\end{array}\]Con el método simplex (valores iniciales: 1 y 2, precisión/exactitud: 9 dígitos, redondeo: tercer dígito), guardando la función (flecha) que devuelve el vector de restos en "fr":</p><div id="pregunta239" class="calculadora" spellcheck="false"><div class="instruccion">var fr = ([x, y]) =&gt; [<br>  x**2+2*x*y**2-f(5)-44,<br>  x**2*y-3*x**2*y**2+f(6)+117<br>];<br>fr.simplex({vi:[1,2], err:9}).v.round(3)</div><div class="resultado"></div></div><p class="pregunta" id="pregunta240"><span class="pregunta"></span>El valor de "y", en el sistema de ecuaciones no lineales, es: <span class="campo_literal correcta" tabindex="0" contenteditable="true">3.193</span>.</p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="20" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 15 -->
+
+
+
+<!-- 
+    <h2 class="text">Interpolación de datos puntuales</h2>
+
+    <p class="text">En ocasiones, lo que se requiere es interpolar valores puntuales para datos específicos, no interpolar varios valores para los datos de una tabla. Si bien los métodos estudiados permiten llevar a cabo dicha interpolación, simplemente mandando una tabla con los datos específicos, todas ellas crean un función y como en este caso sólo se quiere realizar una interpolación, la función de interpolación sería llamada una sola vez, lo que resulta ineficiente, pues se crea una función para una sola llamada. Por esa razón, en esta sección se presentan algunas funciones que permiten llevar a cabo una interpolación a partir de datos puntuales.</p>
+
+    <p class="text">El método más empleado, cuando se trabaja con datos puntuales, es el de interpolación lineal. La función creada para ese fin se denomina <b class="style1">inLin</b>. Dicha función recibe (como parámetros por valor) el valor a interpolar (xc), los valores conocidos de la variable independiente (xi, xf) y los valores conocidos de la variable dependiente (yi, yf). Devuelve el valor interpolado (yc).</p>
+
+    <p class="text">Por ejemplo, dados los siguientes datos:</p>
+
+    <div class="table borderAll">
+        <table align="center">
+            <tr>
+            <th class = "center" style="width: 40px;">x</th><td class = "center" style="width:40px;">12</td><td class = "center" style="width:40px;">16</td>
+            </tr>
+            <tr>
+            <th class = "center">y</th><td class = "center">14.5</td><td class = "center">19.6</td>
+            </tr>
+        </table>
+        </div>
+    
+    <p class="text">Para interpolar del valor de "y" para "x" igual a 15, se escribe la siguiente instrucción:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">inLin(15, 12, 16, 14.5, 19.6)</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="text">Igualmente para extrapolar el valor de "y" para "x" igual a 18, se escribe:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">inLin(18, 12, 16, 14.5, 19.6)</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="text">A la inversa, para interpolar el valor de "x" para valores de "y" iguales a 16 y 19, se escribe:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">inLin(16, 14.5, 19.6, 12, 16)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">inLin(19, 14.5, 19.6, 12, 16)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="tex">Si en lugar de mandar valores puntuales para las variables dependientes, se mandan dos vectores con dos o más valores para las variables dependientes,  <b class="style1">inLin</b>, devuelve un vector con los valores interpolados para cada uno de los elementos. Por ejemplo, dados los siguientes datos:</p>
+
+    <div class="table borderAll">
+        <table align="center">
+            <tr>
+            <th class = "center" style="width: 40px;">xi</th><td class = "center" style="width:40px;">39.9</td>
+            </tr>
+            <tr>
+            <th class = "center">yi</th><td class = "center">0</td><td class = "center">25.0</td><td class = "center">46.0</td><td class = "center">66.5</td>
+            </tr>
+            <tr>
+            <th class = "center" style="width: 40px;">xf</th><td class = "center" style="width:40px;">59.4</td>
+            </tr>
+            <tr>
+            <th class = "center">yf</th><td class = "center">0</td><td class = "center">50</td><td class = "center">102</td><td class = "center">151</td>
+            </tr>
+        </table>
+    </div>
+
+    <p class="text">Para interpolar los valores de "y" para x = 45 (redondeando los resultados al primer dígito después del punto), se escribe la siguiente instrucción.</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">inLin(45, 39.9, 59.4, [0, 25, 46, 66.5], [0, 50, 102, 151]).round(2)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text"></p>
+
+    
+
+
+
+    <h2 class="text">Generadores de funciones arbitrarias</h2>
+
+    <p class="text">Todos los métodos de interpolación estudiados en este capítulo han sido implementados como <b class="style1">generadores de funciones arbitrarias</b>, es decir que, todos los métodos devuelven, a partir de los datos tabulados disponibles, una función que puede ser empleada como una función estándar (una función arbitraria).</p>
+
+    <p class="text">Todas las funciones arbitrarias devueltas por los métodos estudiados corresponden a <b>funciones arbitraria de primer nivel</b>, esto es, funciones construidas a partir de tablas que tienen dos filas: una con los valores de la variable independiente y otro con los valores de la variable dependiente. En esta sección se estudiarán algunos métodos para generar funciones arbitrarias de segundo y hasta tercer nivel.</p>
+
+
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">randseed = 1;
+a = [].rand(7,5,1,200).round(); a.replaceCols(a.getCols(0).quick(),0);a.show()</div>
+        <div class="resultado"></div>
+        <div class="instruccion">inLin1(a, 82)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">inLin1(a, 20)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">inLin1(a, 161).round(2)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">inLin1(a, 159).round(2)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">a = [
+  [4, [[0,0.0009982,0.02724,4.02,0.00009],[5,0.0009981,21.00,24.99,0.07617],[10,0.0009984,41.92,45.91,0.1507],[15,0.0009991,62.80,66.80,0.2239],[20,0.001000,83.67,87.67,0.2956],[25,0.001001,104.5,108.5,0.3662],[30,0.001003,125.4,129.4,0.4355],[35,0.001004,146.2,150.2,0.5037],[40,0.001006,167.0,171.1,0.5709]]],
+  [4.5, [[0,0.0009979,0.03932,4.53,0.00011],[5,0.0009979,21.00,25.49,0.07615],[10,0.0009982,41.91,46.40,0.1507],[15,0.0009989,62.79,67.28,0.2238],[20,0.0009998,83.64,88.14,0.2955],[25,0.001001,104.5,109.0,0.3661],[30,0.001002,125.3,129.8,0.4354],[35,0.001004,146.2,150.7,0.5036],[40,0.001006,167.0,171.5,0.5707]]],
+  [5, [[0,0.0009977,0.0416,5.03,0.00014],[5,0.0009976,20.99,25.98,0.07614],[10,0.0009980,41.89,46.88,0.1506],[15,0.0009986,62.76,67.75,0.2237],[20,0.0009996,83.61,88.61,0.2954],[25,0.001001,104.4,109.5,0.3659],[30,0.001002,125.3,130.3,0.4352],[35,0.001004,146.1,151.1,0.5034],[40,0.001006,166.9,172.0,0.5705]]],
+  [5.5, [[0,0.0009974,0.05413,5.54,0.00016],[5,0.0009974,20.99,26.48,0.07612],[10,0.0009977,41.88,47.37,0.1506],[15,0.0009984,62.74,68.23,0.2236],[20,0.0009993,83.58,89.08,0.2953],[25,0.001001,104.4,109.9,0.3658],[30,0.001002,125.2,130.7,0.4351],[35,0.001004,146.0,151.6,0.5032],[40,0.001005,166.9,172.4,0.5703]]]
+];</div>
+        <div class="resultado"></div>
+        <div class="instruccion">inLin2(a, 4.7, 33).precision(4)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">ans.precision(5.2, 19)</div>
+        <div class="resultado"></div>
+    </div>
+
+
+    
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">a = 
+[
+  [2,
+   [[1,
+     [[2,3,4],[3,4,5],[4,5,6]]],
+    [2,
+     [[4,5,6],[5,6,7],[6,7,8]]],
+    [3,
+     [[6,7,8],[7,8,9],[8,9,10]]]]],
+	[4,
+   [[2,
+     [[3,4,5],[4,5,6],[5,6,7]]],
+    [3,
+     [[5,6,7],[6,7,8],[7,8,9]]],
+    [4,
+     [[7,8,9],[8,9,10],[9,10,11]]]]],
+  [6,
+   [[3,
+     [[4,5,6],[5,6,7],[6,7,8]]],
+    [4,
+     [[6,7,8],[7,8,9],[8,9,10]]],
+    [5,
+     [[8,9,10],[9,10,11],[10,11,12]]]]],
+  [8,
+   [[4,
+     [[5,6,7],[6,7,8],[7,8,9]]],
+    [5,
+     [[7,8,9],[8,9,10],[9,10,11]]],
+    [6,
+     [[9,10,11],[10,11,12],[11,12,13]]]]]
+];</div>
+        <div class="resultado"></div>
+        <div class="instruccion">inLin3(a, 2, 2, 5)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">inLin3(a, 4, 3, 6)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">inLin3(a, 1, 1, 4)</div>
+        <div class="resultado"></div>
+    </div> -->
+
+
+
+
+    <h2 class="text">Interpolación en Octave y MatLab</h2>
+
+    <p class="text">En Octave y MatLab, la interpolación lineal puede ser llevada a cabo con la función <b class="style1">interp1</b>.</p>
+
+    <p class="text"><strong class="style1">Interp1</strong> recibe como parámetros y en ese orden: a) Un vector con los valores de la variable independiente; b) Un vector con los valores de la variable dependiente; c) Un escalar o vector con los valores a interpolar y d) El nombre del método de interpolación, este parámetro es opcional y si no se manda el método por defecto es "linear" (interpolación lineal). Entre los métodos de interpolación disponibles están: la interpolación cúbica ("cubic"), la interpolación modificada de Akima ("makima") y la interpolación segmentaria cúbica ("spline").</p>
+
+    <p class="text">Así, para calcular (interpolar) el valor de "y". para un valor conocido de "x" (en este ejemplo 0.7), empleando el método de interpolación lineal, con los siguientes datos tabulados:</p>
+
+    <div class="table borderAll">
+        <table align="center">
+            <tbody><tr>
+            <th class="center" style="width: 40px;">x</th><td class="center" style="width:40px;">0</td><td class="center" style="width:40px;">0.2</td><td class="center" style="width:40px;">0.4</td><td class="center" style="width:40px;">0.6</td><td class="center" style="width:40px;">0.8</td><td class="center" style="width:40px;">1.0</td>
+            </tr>
+            <tr>
+            <th class="center">y</th><td class="center">0</td><td class="center">0.199</td><td class="center">0.389</td><td class="center">0.565</td><td class="center">0.717</td><td class="center">0.841</td>
+            </tr>
+        </tbody></table>
+    </div>
+
+    <p class="text">Se escriben las instrucciones:</p>
+
+    <div class="codigo octave">format shortG;<br>vx = [0,0.2,0.4,0.6,0.8,1.0];<br>vy = [0,0.199,0.389,0.565,0.717,0.841];<br>interp1(vx,vy,0.7)<br><br>% Resultado obtenido:<br><br>ans = 0.641</div>
+    
+    <p class="text">Y para calcular (interpolar) los valores de "y" para valores de "x" iguales a 0.1, 0.3, 0.5, 0.7 y 0.9, se escribe:</p>
+
+    <div class="codigo octave">x = [0.1,0.3,0.5,0.7,0.9];<br>interp1(vx, vy, x)<br><br>% Resultados obtenidos:<br><br>ans =<br><br>      0.0995        0.294        0.477        0.641        0.779</div>
+
+    <p class="text">Con <strong class="style1">interp1</strong> se puede crear una función de interpolación (similar a las creadas con JavaScript), que reciba él o valores a interpolar y devuelva él o los valores interpolados:</p>
+
+    <div class="codigo octave">f = @(x)interp1(vx,vy,x);</div>
+    
+    <p class="text">Empleando esta función, los valores interpolados previamente se obtienen con:</p>
+
+    <div class="codigo octave">f = @(x)interp1(vx, vy, x);<br>f(0.7)<br>f(x)<br><br>% Resultados obtenidos:<br><br>ans = 0.641<br>ans =<br><br>       0.0995        0.294        0.477        0.641        0.779</div>
+
+    <p class="text">Y, para determinar visualmente si la interpolación es o no confiable, se dibuja (desde el menor hasta el mayor valor tabulado de "x", incremento 0.01) la gráfica con los puntos conocidos y la función de interpolación:</p>
+
+    <div class="codigo octave">x = 0:0.01:1;<br>plot(vx,vy,".r",x,f(x),"-b")</div>
+
+    <div class="figurasn"><img src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo10/files/graph_octave_1.png" style="width:550px;"></div>
+
+    <p class="text">Al ser el comportamiento de la curva de interpolación uniforme y continua entre los puntos, se puede concluir que la interpolación es confiable.</p>
+
+    <p class="text">El equivalente aproximado a los métodos de interpolación polinomial (Lagrange y Newton) es la función <b class="style1">polyfit</b>. Esta función recibe un vector con los valores conocidos de "x", un vector con los valores conocidos de "y" y el número de segmentos (es decir el número de elementos menos 1). Devuelve un vector (p) con los coeficientes de la ecuación de interpolación, la cual se manda a la función <b class="style1">polyval</b>, conjuntamente el valor o valores a interpolar, para obtener los valores interpolados. Al igual que con <strong class="style1">interp1</strong>, en lugar de emplear directamente <strong class="style1">polyval</strong> es más práctico crear una función anónima (f) que reciba el valor o valores a interpolar (x) y devuelva él o los valores interpolados.</p>
+
+    <p class="text">Por ejemplo, para interpolar, con los datos de la siguiente tabla, los valores de "y" para "x=2" y "x=5.5":</p>
+
+    <div class="table borderAll">
+        <table align="center">
+            <tbody><tr>
+            <th class="center" style="width:40px;">x</th><td class="center" style="width:76px">1</td><td class="center">4</td><td class="center">5</td><td class="center">6</td>
+            </tr>
+            <tr>
+            <th class="center">y</th><td class="center">0</td><td class="center">1.3862944</td><td class="center">1.6094379</td><td class="center">1.7917595</td>
+            </tr>
+        </tbody></table>
+    </div>
+
+    <p class="text">Se escriben las siguientes instrucciones:</p>
+
+    <div class="codigo octave">format shortG;<br><br>vx = [1,4,5,6];<br>vy = [0,1.3862944,1.6094379,1.7917595];<br>p = polyfit(vx,vy,length(vx)-1);<br>f = @(x)polyval(p,x);<br>f([2,5.5])<br><br>% Resultados obtenidos:<br><br>ans =<br><br>      0.62877       1.7028</div>
+
+    <p class="text">Para determinar visualmente cuan bueno o malo es el ajuste, se dibuja la gráfica de los puntos conocidos y la función de interpolación, entre los límites tabulados (incremento 0.01):</p>
+
+    <div class="codigo octave">x = 1:0.01:6;<br>plot(vx,vy,".r",x,f(x),"-b")</div>
+
+    <div class="figurasn"><img src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo10/files/graph_octave_2.png" alt="Octave" style="width:550px;"></div>
+
+    <p class="text">Al ser el comportamiento de la curva uniforme y continuo entre los puntos, se concluye que la función de interpolación es confiable.</p>
+
+    <p class="text">El método spline cúbico, puede ser llamado (como se dijo) desde la función <strong class="style1">interp1</strong>, sin embargo, cuando se trabaja con los mismos datos (con la misma tabla) implica el cálculo repetitivo de los mismos coeficientes. Por esta razón, en Octave, es más práctico emplear la función <b class="style1">spline</b>, recibe los vectores con los valores conocidos (x, y) y devuelve una matriz (pp) con los coeficientes ajustados. La matriz resultante (pp) se manda a la función <b class="style1">ppval</b>, conjuntamente él o los valores a interpolar, para obtener él o los valores interpolados. Al igual que en los casos anteriores, en lugar de emplear directamente <strong class="style1">ppval</strong> es más práctico crear una función de interpolación anónima (f) que reciba él o los valores a interpolar (x) y devuelva él o los valores interpolados.</p>
+
+    <p class="text">Por ejemplo, para interpolar para "x=0.7" y para valores de "x" iguales a: 0.1, 0.3, 0.5, 0.7 y 0.9, con los datos de la siguiente tabla:</p>
+    
+    <div class="table borderAll"><table align="center">
+        <tbody><tr>
+        <th class="center" style="width:30px;">x</th><td class="center" style="width:41px;">0</td><td class="center">0.2</td><td class="center">0.4</td><td class="center">0.6</td><td class="center">0.8</td><td class="center">1.0</td>
+        </tr>
+        <tr>
+        <th class="center">y</th><td class="center">0</td><td class="center">0.199</td><td class="center">0.389</td><td class="center">0.565</td><td class="center">0.717</td><td class="center">0.841</td>
+        </tr>
+    </tbody></table></div>
+
+    <p class="text">Se escriben las siguientes instrucciones:</p>
+
+    <div class="codigo octave">format shortG;<br><br>vx = [0,0.2,0.4,0.6,0.8,1.0];<br>vy = [0,0.199,0.389,0.565,0.717,0.841];<br>pp = spline(vx,vy);<br>f = @(x)ppval(pp, x);<br>f(0.7)<br>f([0.1, 0.3, 0.5, 0.7, 0.9])<br><br>% Resultados obtenidos:<br><br>ans = 0.64437<br>ans =<br><br>      0.10042      0.29533      0.47939      0.64437      0.78263</div>
+
+    <p class="text">Luego, para otros valores, como x=0.5 y x = 0.25, 0.3, 0.45, 0.5, 0.65, 0.7, 0.85, 0.9, simplemente se emplea la función de interpolación:</p>
+
+    <div class="codigo octave">f(0.5)<br>f([0.25,0.3,0.45,0.5,0.65,0.7,0.85,0.9])<br><br>% Resultados obtenidos:<br>ans = 0.47939<br>ans =<br><br> Columns 1 through 6:<br><br>      0.24747      0.29533      0.43468      0.47939      0.60551      0.64437<br><br> Columns 7 and 8:<br><br>      0.75071      0.78263</div>
+
+    <p class="text">Y para determinar visualmente cuan bueno o malo es el ajuste, se dibuja la gráfica de los puntos conocidos y la función de interpolación, entre los límites tabulados (incremento 0.01):</p>
+
+    <div class="codigo octave">x = 0:0.01:1;<br>plot(vx,vy,".r",x,f(x),"-b")</div>
+
+    <div class="figurasn"><img src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo10/files/graph_octave_3.png" alt="Octave" style="width:550px;"></div>
+
+    <p class="text">Al ser el comportamiento de la curva interpolación uniforme entre los puntos, se concluye que la interpolación es confiable.</p>
+
+
+    <div class="ejercicio" id="ejercicio16" enunciado="0"><hr><div class="enunciado"><p class="ejercicio extern"><span class="ejercicio"></span>En Octave (formato shortG), empleando los datos de la siguiente tabla:</p><div class="table borderAll"><table align="center" style="width:550px;"><tbody><tr><th class="center" style="width:30px;">x</th><td class="center">1.0</td><td class="center">1.3</td><td class="center">3.4</td><td class="center">3.8</td><td class="center">5.1</td><td class="center">5.7</td><td class="center">6.4</td><td class="center">6.6</td><td class="center">8.0</td><td class="center">8.1</td><td class="center">9.0</td><td class="center">9.2</td></tr><tr><th class="center">y</th><td class="center">8</td><td class="center">8</td><td class="center">13</td><td class="center">15</td><td class="center">27</td><td class="center">35</td><td class="center">46</td><td class="center">50</td><td class="center">84</td><td class="center">87</td><td class="center">116</td><td class="center">124</td></tr></tbody></table></div></div><p class="pregunta"><span class="pregunta"></span>Complete el código que guarda los valores de "x" en el vector "vx", los de "y" en "vy" y obtenga la función de interpolación "f" empleando interp1. Con la función de interpolación calcule el valor de "y" para x = 7.3 y los valores de "y" para x = 1, 2, 3, 5, 6, 7, 8, 9, redondeando los resultados al primer dígito después del punto. Luego ejecute el código en Octave, corrija los errores cometidos al completar el código y evalúe la celda. Copie los resultados en la subsiguiente (entre las tildes invertidas).</p><div id="pregunta241" class="calculadora" spellcheck="false"><div class="instruccion">`<br>format shortG;<br>vx=[1.0,1.3,3.4,3.8,5.1,5.7,6.4,6.6,8.0,8.1,9.0,9.2];<br>vy=[8,8,13,15,27,35,46,50,84,87,116,124];<br>f=@(x)interp1(vx,vy,x);<br>f(7.3)<br>round(f([1, 2, 3, 5, 6, 7, 8, 9])*1e1)/1e1<br>`;</div><div class="resultado"></div><div class="instruccion">`<br>ans =    67<br>ans =<br> Columns 1 through 6:<br>            8          9.7           12         26.1         39.7         59.7<br> Columns 7 and 8:<br>           84          116<br>`;</div><div class="resultado"></div></div><p class="pregunta" id="pregunta242"><span class="pregunta"></span>El valor de "y" para "x = 8" es: <span class="campo_literal correcta" tabindex="0" contenteditable="true">84</span></p><p class="pregunta"><span class="pregunta"></span>Complete el código que dibuja la gráfica de los puntos conocidos (".r") y la función ("-b") de interpolación (vector "x", límites: menor y mayor valores tabulados, incremento 0.01). Luego ejecute el código en Octave, corrija los errores cometidos al completar el código y evalúe la celda.</p><div id="pregunta243" class="calculadora" spellcheck="false"><div class="instruccion">`<br>x=1:0.01:9.2;<br>plot(vx,vy,".r",x,f(x),"-b")<br>`;</div><div class="resultado"></div></div><p class="pregunta" id="pregunta244"><span class="pregunta"></span>El análisis visual de la gráfica permite concluir que la función de interpolación es: <span class="campo_arrastrar correcta" tabindex="0" data-opciones="no confiable&amp;@%confiable" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">confiable</span></p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="30" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 16 -->
+
+    <div class="ejercicio" id="ejercicio17" enunciado="2"><hr><div class="enunciado"><p class="ejercicio extern"><span class="ejercicio"></span>En Octave (formato shortG), empleando los datos de la siguiente tabla:</p><div class="table borderAll"><table align="center" style="width:550px;"><tbody><tr><th class="center" style="width:30px;">x</th><td class="center">1</td><td class="center">4</td><td class="center">8</td><td class="center">10</td><td class="center">13</td><td class="center">15</td><td class="center">17</td><td class="center">18</td><td class="center">22</td><td class="center">24</td></tr><tr><th class="center">y</th><td class="center">9.3</td><td class="center">23.4</td><td class="center">38.2</td><td class="center">45.2</td><td class="center">55.3</td><td class="center">61.9</td><td class="center">68.5</td><td class="center">71.8</td><td class="center">84.7</td><td class="center">91.1</td></tr></tbody></table></div></div><p class="pregunta"><span class="pregunta"></span>Complete el código que guarda los valores de "x" en el vector "vx", los de "y" en "vy" y programe (y guarde en "f") la función de interpolación, empleando spline (resultado guardado en "pp") y ppval. Luego ejecute el código en Octave, corrija los errores cometidos al completar el código y evalúe la celda.</p><div id="pregunta263" class="calculadora" spellcheck="false"><div class="instruccion">`format shortG;<br>vx=[1,4,8,10,13,15,17,18,22,24];<br>vy=[9.3,23.4,38.2,45.2,55.3,61.9,68.5,71.8,84.7,91.1];<br>pp = spline(vx,vy);<br>f = @(x)ppval(pp, x);<br>`;</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Complete el código que dibuja la gráfica de los puntos conocidos (".r") y la función ("-b") de interpolación (vector "x", límites: menor y mayor valores tabulados, incremento 0.01). Luego ejecute el código en Octave, corrija los errores cometidos al completar el código y evalúe la celda.</p><div id="pregunta264" class="calculadora" spellcheck="false"><div class="instruccion">`<br>x=1:0.01:24;<br>plot(vx,vy,".r",x,f(x),"-b")<br>`;</div><div class="resultado"></div></div><p class="pregunta" id="pregunta265"><span class="pregunta"></span>El análisis visual de la gráfica permite concluir que la función de interpolación es: <span class="campo_arrastrar correcta" tabindex="0" data-opciones="no confiable&amp;@%confiable" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">confiable</span></p><p class="pregunta"><span class="pregunta"></span>Complete el código que empleando la función de interpolación, resuelva el siguiente sistema de ecuaciones lineales:\[\begin{aligned}z_1+4z_2+6z_3+2z_4&amp;=f(2)\\2z_1+3z_2+z_3+5z_4&amp;=f(3)\\3z_1+z_2+4z_3+7z_4&amp;=f(4)\\4z_1+2z_2+5z_3+6z_4&amp;=f(5)\end{aligned}\]Con el método linsolve, resultado redondeado al segundo dígito. Luego ejecute el código en Octave, corrija los errores cometidos al completar el código y evalúe la celda. Copie los resultados en la subsiguiente (entre las comillas invertidas).</p><div id="pregunta266" class="calculadora" spellcheck="false"><div class="instruccion">`round(linsolve([1, 4, 6, 2; 2, 3, 1, 5; 3, 1, 4, 7; 4, 2, 5, 6], [f(2); f(3); f(4); f(5)]) * 1e2) / 1e2;<br>`;</div><div class="resultado"></div><div class="instruccion">`<br><br>ans =<br>         3.53<br>          1.54<br>          0.32<br>         1.43`;</div><div class="resultado"></div></div><p class="pregunta" id="pregunta267"><span class="pregunta"></span>El valor de la variable "z<sub>2</sub>", es: <span class="campo_literal correcta" tabindex="0" contenteditable="true">1.54</span>.</p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="48" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 17 -->
+
+    <div class="ejercicio" id="ejercicio18" enunciado="1"><hr><div class="enunciado"><p class="ejercicio extern"><span class="ejercicio"></span>En Octave (formato shortG), empleando los datos de la siguiente tabla:</p><div class="table borderAll"><table align="center" style="width:620px;"><tbody><tr><th class="center" style="width:30px;">x</th><td class="center">1</td><td class="center">3</td><td class="center">5</td><td class="center">7</td><td class="center">9</td><td class="center">12</td><td class="center">15</td><td class="center">18</td><td class="center">21</td><td class="center">24</td></tr><tr><th class="center">y</th><td class="center">0.17</td><td class="center">1.49</td><td class="center">3.39</td><td class="center">5.9</td><td class="center">8.99</td><td class="center">14.64</td><td class="center">21.43</td><td class="center">29.29</td><td class="center">38.16</td><td class="center">48</td></tr></tbody></table></div></div><p class="pregunta"><span class="pregunta"></span>Complete el código que guarda los valores de "x" en el vector "vx", los de "y" en "vy", declare la variable global "f" y programe (y guarde en "f") la función de interpolación empleando las funciones polyfit (resultado guardado en "p") y polyval. Luego ejecute el código en Octave, corrija los errores cometidos al completar el código y evalúe la celda. Nota: La instrucción <span class="textocodigo">warning("off", "all");</span> suprime los mensajes de advertencia.</p><div id="pregunta273" class="calculadora" spellcheck="false"><div class="instruccion">`format shortG;<br>vx = [1,3,5,7,9,12,15,18,21,24];<br>vy = [0.17,1.49,3.39,5.9,8.99,14.64,21.43,29.29,38.16,48];<br>global f;<br>pp = polyfit(vx,vy,length(vx)-1);<br>f=@(x)polyval(p,x);<br>`;</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Complete el código que dibuja la gráfica de los puntos conocidos (".r") y la función ("-b") de interpolación (vector "x", límites: menor y mayor valores tabulados, incremento 0.01). Luego ejecute el código en Octave, corrija los errores cometidos al completar el código y evalúe la celda.</p><div id="pregunta274" class="calculadora" spellcheck="false"><div class="instruccion">`x=1:0.01:24;<br>plot(vx,vy,".r",x,f(x),"-b")<br>`;</div><div class="resultado"></div></div><p class="pregunta" id="pregunta275"><span class="pregunta"></span>El análisis visual de la gráfica permite concluir que la función de interpolación es: <span class="campo_arrastrar correcta" tabindex="0" data-opciones="no confiable&amp;@%confiable" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">confiable</span></p><p class="pregunta"><span class="pregunta"></span>Complete el código que empleando la función de interpolación, encuentre las soluciones del siguiente sistema de ecuaciones no lineales\[\begin{array}{r c r}x^2+2xy^2-f(5)&amp;=&amp;44\\x^2y-3x^2y^2+f(6)&amp;=&amp;-117\end{array}\]Con fsolve (valores iniciales: 1 y 2, redondeo: tercer dígito), función a resolver "res = fr(v)". Luego ejecute el código en Octave, corrija los errores cometidos al completar el código y evalúe la celda. Copie los resultados en la subsiguiente.</p><div id="pregunta276" class="calculadora" spellcheck="false"><div class="instruccion">`function res=fr(v):<br> global f;x=v(1);y=v(2);<br> res=[res=[x^2+2*x*y^2-f(5)-44,<br>      x^2*y-3*x^2*y^2+f(6)+117];]<br>endfunction<br>round(fsolve(@fr,[1,2])*1e3)/1e3<br>`;</div><div class="resultado"></div><div class="instruccion">`ans =<br>        2.107        3.193<br>`;</div><div class="resultado"></div></div><p class="pregunta" id="pregunta277"><span class="pregunta"></span>El valor de "y", en el sistema de ecuaciones no lineales, es: <span class="campo_literal correcta" tabindex="0" contenteditable="true">3.193</span>.</p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="48" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 18 -->
+
+    
+
+
+    <h2 class="text">Interpolación en Python</h2>
+
+    <p class="text">En Python, la interpolación lineal puede ser llevada a cabo con la función <b class="style1">interp1d</b>, de la clase <b class="style1">interpolate</b> de la librería <b class="style1">scipy</b>, que es el equivalente a la función homónima de Octave (MatLab). Esta función recibe como parámetros dos vectores con los valores conocidos de las variables independiente y dependiente ("x", "y") y de manera similar a las funciones elaboradas en JavaScript, devuelve directamente la función de interpolación.</p>
+
+    <p class="text">Así, para calcular (interpolar) el valor de "y", para x=0.7, así como para valores de "x" iguales a 0.1, 0.3, 0.5, 0.7 y 0.9, dibujando la gráfica de los puntos conocidos y la función de interpolación (entre los límites tabulados), con los datos de la siguiente tabla:</p>
+
+    <div class="table borderAll">
+        <table align="center">
+            <tbody><tr>
+            <th class="center" style="width: 40px;">x</th><td class="center" style="width:40px;">0</td><td class="center" style="width:40px;">0.2</td><td class="center" style="width:40px;">0.4</td><td class="center" style="width:40px;">0.6</td><td class="center" style="width:40px;">0.8</td><td class="center" style="width:40px;">1.0</td>
+            </tr>
+            <tr>
+            <th class="center">y</th><td class="center">0</td><td class="center">0.199</td><td class="center">0.389</td><td class="center">0.565</td><td class="center">0.717</td><td class="center">0.841</td>
+            </tr>
+        </tbody></table>
+    </div>
+
+    <p class="text">Se escriben las siguientes instrucciones:</p>
+
+    <div class="codigo python">from scipy.interpolate import interp1d<br>import numpy as np<br>import matplotlib.pyplot as plt<br><br>vx = [0,0.2,0.4,0.6,0.8,1.0]<br>vy = [0,0.199,0.389,0.565,0.717,0.841]<br>f = interp1d(vx,vy)<br>print(f(0.7))<br>print(f([0.1,0.3,0.5,0.7,0.9]).round(3))<br><br>x = np.arange(0, 1, 0.01)<br>plt.plot(vx, vy, "or", x, f(x), "-b")<br>plt.show()<br><br># Resultados obtenidos:<br><br>0.6409999999999999<br>[0.0995 0.294  0.477  0.641  0.779 ]</div>
+    
+    <div class="figurasn"><img src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo10/files/graph_python_1.png" style="width:550px;"></div>
+
+    <p class="text">Al ser el comportamiento de la curva uniforme entre los puntos, se concluye que la interpolación es confiable.</p>
+
+    <p class="text">El equivalente aproximado a los métodos de interpolación polinomial (Lagrange y Newton) es la función <b class="style1">polyfit</b> de la librería <b class="style1">numpy</b>, que es el equivalente a la función homónima de Octave (MatLab). Esta función recibe dos vectores con los valores conocidos de "x", "y" y el número de segmentos. Devuelve los coeficientes de la ecuación de interpolación, que se mandan a la función <b class="style1">polyval</b>, conjuntamente él o los valores a interpolar y devuelve él o los valores interpolados. Al igual que en Octave, en lugar de emplear directamente <strong class="style1">polyval</strong> es más práctico programar y emplear la función de interpolación (lambda).</p>
+
+    <p class="text">Así, para interpolar los valores de "y" para "x=2" y "x=5.5", así como dibujar la gráfica de los puntos conocidos y la función de interpolación, empleando los datos de la siguiente, tabla:</p>
+
+    <div class="table borderAll">
+        <table align="center">
+            <tbody><tr>
+            <th class="center" style="width:40px;">x</th><td class="center" style="width:76px">1</td><td class="center">4</td><td class="center">5</td><td class="center">6</td>
+            </tr>
+            <tr>
+            <th class="center">y</th><td class="center">0</td><td class="center">1.3862944</td><td class="center">1.6094379</td><td class="center">1.7917595</td>
+            </tr>
+        </tbody></table>
+    </div>
+
+    <p class="text">Se escriben las siguientes instrucciones:</p>
+
+    <div class="codigo python">import numpy as np<br>import matplotlib.pyplot as plt<br><br>vx = [1,4,5,6]<br>vy = [0,1.3862944,1.6094379,1.7917595]<br>p = np.polyfit(vx,vy,len(vx)-1)<br>f = lambda x: np.polyval(p, x)<br>print(f([2, 5.5]))<br><br>x = np.arange(1, 6, 0.01)<br>plt.plot(vx,vy,"or",x,f(x),"-b")<br>plt.show()<br><br># Resultados obtenidos:<br><br>[0.6287687  1.70275186]</div>
+
+    <div class="figurasn"><img src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo10/files/graph_python_2.png" alt="python" style="width:550px;"></div>
+
+    <p class="text">Al ser el comportamiento de la curva uniforme entre los puntos, se concluye que la interpolación es confiable.</p>
+
+    <p class="text">Como se dijo, en Python, se puede emplear también la función <b class="style1">interp1d</b>, para llevar a cabo el ajuste segmentario (spline cúbico), mandando el parámetro adiciona <dfn class="style1">kind</dfn> con el valor <dfn class="style1">'cubic'</dfn>.</p>
+
+    <p class="text">Por ejemplo, para interpolar el valor de "y" para x=0.7 y para x = 0.1, 0.3, 0.5, 0.7 y 0.9, así como dibujar la gráfica de los puntos conocidos y la función de interpolación, con los datos de la siguiente tabla:</p>
+    
+    <div class="table borderAll"><table align="center">
+        <tbody><tr>
+        <th class="center" style="width:30px;">x</th><td class="center" style="width:41px;">0</td><td class="center">0.2</td><td class="center">0.4</td><td class="center">0.6</td><td class="center">0.8</td><td class="center">1.0</td>
+        </tr>
+        <tr>
+        <th class="center">y</th><td class="center">0</td><td class="center">0.199</td><td class="center">0.389</td><td class="center">0.565</td><td class="center">0.717</td><td class="center">0.841</td>
+        </tr>
+    </tbody></table></div>
+
+    <p class="text">Se escriben las siguientes instrucciones:</p>
+
+    <div class="codigo python">from scipy.interpolate import interp1d<br>import numpy as np<br>import matplotlib.pyplot as plt<br><br><br>vx = [0,0.2,0.4,0.6,0.8,1.0]<br>vy = [0,0.199,0.389,0.565,0.717,0.841]<br>f = interp1d(vx, vy, kind='cubic')<br>print(f(0.7))<br>print(f([0.1,0.3,0.5,0.7,0.9]))<br><br>x = np.arange(0, 1, 0.01)<br>plt.plot(vx, vy, "or", x, f(x), "-b")<br>plt.show()<br><br># Resultados obtenidos:<br><br>0.6443708333333334<br>[0.10042083 0.29532917 0.4793875  0.64437083 0.78262917]</div>
+
+    <div class="figurasn"><img src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo10/files/graph_python_3.png" alt="python" style="width:550px;"></div>
+
+    <p class="text">Al ser la curva uniforme entre los puntos, se concluye que la interpolación es confiable.</p>
+
+
+    <div class="ejercicio" id="ejercicio19" enunciado="0"><hr><div class="enunciado"><p class="ejercicio extern"><span class="ejercicio"></span>En Python (importando "interp1d" de scyipy.interpolate, numpy como "np", matplotlib.pylot como "plt"), empleando los datos de la siguiente tabla:</p><div class="table borderAll"><table align="center" style="width:550px;"><tbody><tr><th class="center" style="width:30px;">x</th><td class="center">1.0</td><td class="center">1.3</td><td class="center">3.4</td><td class="center">3.8</td><td class="center">5.1</td><td class="center">5.7</td><td class="center">6.4</td><td class="center">6.6</td><td class="center">8.0</td><td class="center">8.1</td><td class="center">9.0</td><td class="center">9.2</td></tr><tr><th class="center">y</th><td class="center">8</td><td class="center">8</td><td class="center">13</td><td class="center">15</td><td class="center">27</td><td class="center">35</td><td class="center">46</td><td class="center">50</td><td class="center">84</td><td class="center">87</td><td class="center">116</td><td class="center">124</td></tr></tbody></table></div></div><p class="pregunta"><span class="pregunta"></span>Complete el código que guarda los valores de "x" en el vector "vx", los de "y" en "vy" y obtenga la función de interpolación "f" empleando interp1d. Con la función de interpolación calcule el valor de "y" para x = 7.3 y los valores de "y" para x = 1, 2, 3, 5, 6, 7, 8, 9, redondeando los resultados al primer dígito después del punto. Luego ejecute el código en Python, corrija los errores cometidos al completar el código y evalúe la celda. Copie los resultados en la subsiguiente (entre las tildes invertidas).</p><div id="pregunta283" class="calculadora" spellcheck="false"><div class="instruccion">`<br>import numpy as np<br>import matplotlib.pyplot as plt<br>from scipy.interpolate import interp1d<br>vx = [1.0, 1.3, 3.4, 3.8, 5.1, 5.7, 6.4, 6.6, 8.0, 8.1, 9.0, 9.2]<br>vy = [8, 8, 13, 15, 27, 35, 46, 50, 84, 87, 116, 124]<br>f = interp1d(vx, vy)<br>print(f(7.3))<br>print(f([1, 2, 3, 5, 6, 7, 8, 9]).round(1))<br>`;</div><div class="resultado"></div><div class="instruccion">`<br>67.0<br>[  8.    9.7  12.   26.1  39.7  59.7  84.  116. ]<br>`;</div><div class="resultado"></div></div><p class="pregunta" id="pregunta284"><span class="pregunta"></span>El valor de "y" para "x = 6" es: <span class="campo_literal correcta" tabindex="0" contenteditable="true">39.7</span></p><p class="pregunta"><span class="pregunta"></span>Complete el código que dibuja la gráfica de los puntos conocidos (".r") y la función ("-b") de interpolación (vector "x", límites: menor y mayor valores tabulados, incremento 0.01). Luego ejecute el código en Python, corrija los errores cometidos al completar el código y evalúe la celda.</p><div id="pregunta285" class="calculadora" spellcheck="false"><div class="instruccion">`<br>x=np.arange(1,9.2,0.01)<br>plt.plot(vx,vy,".r",x,f(x),"-b")<br>plt.show()<br>`;</div><div class="resultado"></div></div><p class="pregunta" id="pregunta286"><span class="pregunta"></span>El análisis visual de la gráfica permite concluir que la función de interpolación es: <span class="campo_arrastrar correcta" tabindex="0" data-opciones="confiable&amp;@%no confiable" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">confiable</span></p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="30" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 19 -->
+
+    <div class="ejercicio" id="ejercicio20" enunciado="2"><hr><div class="enunciado"><p class="ejercicio extern"><span class="ejercicio"></span>En Python (importando "interp1d" de scyipy.interpolate, numpy como "np", matplotlib.pylot como "plt"), empleando los datos de la siguiente tabla:</p><div class="table borderAll"><table align="center" style="width:550px;"><tbody><tr><th class="center" style="width:30px;">x</th><td class="center">1</td><td class="center">4</td><td class="center">8</td><td class="center">10</td><td class="center">13</td><td class="center">15</td><td class="center">17</td><td class="center">18</td><td class="center">22</td><td class="center">24</td></tr><tr><th class="center">y</th><td class="center">9.3</td><td class="center">23.4</td><td class="center">38.2</td><td class="center">45.2</td><td class="center">55.3</td><td class="center">61.9</td><td class="center">68.5</td><td class="center">71.8</td><td class="center">84.7</td><td class="center">91.1</td></tr></tbody></table></div></div><p class="pregunta"><span class="pregunta"></span>Complete el código que guarda los valores de "x" en el vector "vx", los de "y" en "vy" y programe (y guarde en "f") la función de , empleando interp1d con la clase (kind) "cubic". Luego ejecute el código en Python, corrija los errores cometidos al completar el código y evalúe la celda.</p><div id="pregunta305" class="calculadora" spellcheck="false"><div class="instruccion">`from scipy.interpolate import interp1d<br>import numpy as np <br>import matplotlib.pyplot as plt<br>vx=[1,4,8,10,13,15,17,18,22,24]<br>vy=[9.3,23.4,38.2,45.2,55.3,61.9,68.5,71.8,84.7,91.1]<br>f=interp1d(vx,vy,kind="cubic")<br>`;</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Complete el código que dibuja la gráfica de los puntos conocidos (".r") y la función ("-b") de interpolación (vector "x", límites: menor y mayor valores tabulados, incremento 0.01). Luego ejecute el código en Python, corrija los errores cometidos al completar el código y evalúe la celda.</p><div id="pregunta306" class="calculadora" spellcheck="false"><div class="instruccion">`x=np.arange(1,24,0.01)<br> plt.plot(vx,vy,".r",x,f(x),"-b")<br> plt.show()<br>`;</div><div class="resultado"></div></div><p class="pregunta" id="pregunta307"><span class="pregunta"></span>El análisis visual de la gráfica permite concluir que la función de interpolación es: <span class="campo_arrastrar correcta" tabindex="0" data-opciones="confiable&amp;@%no confiable" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">confiable</span></p><p class="pregunta"><span class="pregunta"></span>Complete el código que empleando la función de interpolación, resuelva el siguiente sistema de ecuaciones lineales:\[\begin{aligned}z_1+4z_2+6z_3+2z_4&amp;=f(2)\\2z_1+3z_2+z_3+5z_4&amp;=f(3)\\3z_1+z_2+4z_3+7z_4&amp;=f(4)\\4z_1+2z_2+5z_3+6z_4&amp;=f(5)\end{aligned}\]Con el np.linalg.solve, resultado redondeado al segundo dígito. Luego ejecute el código en Python, corrija los errores cometidos al completar el código y evalúe la celda. Copie los resultados en la subsiguiente.</p><div id="pregunta308" class="calculadora" spellcheck="false"><div class="instruccion">`print(np.linalg.solve([[1,4,6,2],[2,3,1,5],[3,1,4,7],[4,2,5,6]],[f(2),f(3),f(4),f(5)]).round(2))<br>`;</div><div class="resultado"></div><div class="instruccion">`[3.53 1.54 0.32 1.43]<br>`;</div><div class="resultado"></div></div><p class="pregunta" id="pregunta309"><span class="pregunta"></span>El valor de la variable "z<sub>1</sub>", es: <span class="campo_literal correcta" tabindex="0" contenteditable="true">3.53</span>.</p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="48" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 20 -->
+
+    <div class="ejercicio" id="ejercicio21" enunciado="2"><hr><div class="enunciado"><p class="ejercicio extern"><span class="ejercicio"></span>En Python (importando "interp1d" de scyipy.interpolate, numpy como "np", matplotlib.pylot como "plt"), empleando los datos de la siguiente tabla:</p><div class="table borderAll"><table align="center" style="width:px;"><tbody><tr><th class="center" style="width:30px;">x</th><td class="center">1</td><td class="center">3</td><td class="center">5</td><td class="center">7</td><td class="center">9</td><td class="center">12</td><td class="center">15</td><td class="center">18</td><td class="center">21</td><td class="center">24</td></tr><tr><th class="center">y</th><td class="center">0.17</td><td class="center">1.49</td><td class="center">3.39</td><td class="center">5.9</td><td class="center">8.99</td><td class="center">14.64</td><td class="center">21.43</td><td class="center">29.29</td><td class="center">38.16</td><td class="center">48</td></tr></tbody></table></div></div><p class="pregunta"><span class="pregunta"></span>Complete el código que guarda los valores de "x" en el vector "vx", los de "y" en "vy" y programe (y guarde en "f") la función de interpolación empleando interp1d con la clase (kind) "cubic". Luego ejecute el código en Python, corrija los errores cometidos al completar el código y evalúe la celda.</p><div id="pregunta320" class="calculadora" spellcheck="false"><div class="instruccion">`from scipy.interpolate import interp1d<br>from scipy.optimize import fsolve<br>import numpy as np<br>import matplotlib.pyplot as plt<br>vx=[1,3,5,7,9,12,15,18,21,24]<br>vy=[0.17,1.49,3.39,5.9,8.99,14.64,21.43,29.29,38.16,48]<br>f=interp1d(vx,vy,kind="cubic")<br>`;</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Complete el código que dibuja la gráfica de los puntos conocidos (".r") y la función ("-b") de interpolación (vector "x", límites: menor y mayor valores tabulados, incremento 0.01). Luego ejecute el código en Python, corrija los errores cometidos al completar el código y evalúe la celda.</p><div id="pregunta321" class="calculadora" spellcheck="false"><div class="instruccion">`<br>x=np.arange(1,24,0.01)<br>plt.plot(vx,vy,".r",x,f(x),"-b")<br>plt.show()<br>`;</div><div class="resultado"></div></div><p class="pregunta" id="pregunta322"><span class="pregunta"></span>El análisis visual de la gráfica permite concluir que la función de interpolación es: <span class="campo_arrastrar correcta" tabindex="0" data-opciones="no confiable&amp;@%confiable" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">confiable</span></p><p class="pregunta"><span class="pregunta"></span>Complete el código que empleando la función de interpolación, encuentre las soluciones del siguiente sistema de ecuaciones no lineales\[\begin{array}{r c r}x^2+2xy^2-f(5)&amp;=&amp;44\\x^2y-3x^2y^2+f(6)&amp;=&amp;-117\end{array}\]Con fsolve (valores iniciales: 1 y 2, redondeo: tercer dígito), función a resolver "fr(v)". Luego ejecute el código en Python, corrija los errores cometidos al completar el código y evalúe la celda. Copie los resultados en la subsiguiente.</p><div id="pregunta323" class="calculadora" spellcheck="false"><div class="instruccion">`def fr(v):<br>    x,y=v<br>    return x**2+2*x*y**2-f(5)-44,x**2*y-3*x**2*y**2+f(6)+117<br>print(fsolve(fr,[1,2]).round(3))<br>`;</div><div class="resultado"></div><div class="instruccion">`[2.107 3.193]<br>`;</div><div class="resultado"></div></div><p class="pregunta" id="pregunta324"><span class="pregunta"></span>El valor de "y", en el sistema de ecuaciones no lineales, es: <span class="campo_literal correcta" tabindex="0" contenteditable="true">3.193</span>.</p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="48" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 21 -->
+
+
+
+
+
+
+    <div id="generarPrueba" data-scroll-y="57022.65234375"><br><hr><label class="lnotacapitulo">Nota del capítulo: </label><input type="text" id="notaCapitulo" disabled="disabled" class="itnotacapitulo"><br><br><button id="btGenerarPrueba" style="visibility: visible;" onclick="capitulo.registrarCapitulo()">Iniciar defensa</button><button id="btEmplearBono" style="margin-left:1.1rem;width:9.686rem;display:none;" onclick="capitulo.emplearBono()">Emplear Bono</button><br><br></div>
+
+
+<d id="dAutor" style="font-size: 0.9rem;text-align:center;color: #0808f24f;font-weight:bolder;position:fixed;top: 5px;right: 5px;user-select:none;display:inline-block;z-index:15;">Hernan G. Peñaranda V.</d></div><!-- Cierre del div capítulo -->
+
+<div id="dato" style="display:none;">JK5KCZ0r938lCZ0oDYGrDoqpE3Km934mD3Gm93KoCYGrCZ8aCJ0m930aJ5HGHs80</div>
+<div id="reg" style="display:none;">CJ4mC3ipC30nEpCmC34xCZ0nC3inCJ0mEp8mCJ0xCZ0nC3ioC34mEpCmC34xCp0mCJioC34mEpCmC34xCJ4mC3ioC34mEpCmC34xCJ4mC3ipC30nEp8mCJ0xCJ4mC3ipC30nEpCmC340</div>
+
+
+
+
+<div id="divDialogo" style="display: none;"><div onfocus="document.querySelector('#divDialogo input').focus();"><div>Carnet universitario</div><div>Escriba el número de su carnet universitario, verificando que el guión haya sido correctamente insertado.</div><input type="text" onkeydown="return Capitulo.divDialogo.funKeydown(event)" onkeyup="Capitulo.divDialogo.funKeyup(event)"><div><button onclick="Capitulo.divDialogo.funClick('aceptar');">Aceptar</button><button style="margin-left:35px;" onclick="Capitulo.divDialogo.funClick('cancelar');">Cancelar</button></div></div></div></body>
