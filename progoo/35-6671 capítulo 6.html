@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<head>
+
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Language" content="es">
+
+    <title>35-6671 capítulo 6</title>
+  
+    <!-- Librería y hoja de estilos KATEX  -->
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/katex/katex.min.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/katex/katex.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/katex/contrib/auto-render.min.js"></script>
+
+    <!-- Librerías y hojas de estilo CodeMirror -->
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/lib/codemirror.min.css">
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/theme/mdn-like.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/lib/codemirror.min.js"></script>
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/fold/foldgutter.min.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/fold/foldcode.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/fold/brace-fold.min.js"></script>
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/dialog/dialog.min.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/dialog/dialog.min.js"></script>
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/hint/show-hint.min.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/hint/show-hint.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/hint/javascript-hint.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/search/searchcursor.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/search/search.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/edit/matchbrackets.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/edit/closebrackets.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/comment/comment.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/wrap/hardwrap.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/javascript/javascript.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/css/css.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/xml/xml.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/markdown/markdown.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/htmlmixed/htmlmixed.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/keymap/sublime.min.js"></script>
+
+    <!-- Librería Plotly -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script><style id="plotly.js-style-global"></style>
+
+    <!-- Librerías y hojas de estilo function-plot -->
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/function-plot/site/js/vendor/d3.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/function-plot/dist/function-plot.js"></script>
+    
+    <!-- Librería quantities -->
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/quantities/quantities.min.js"></script>
+
+    <!-- Librería GoJs para la creación de diagramas de flujo -->
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/gojs/release/go.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/flowchart_gojs.js"></script>
+
+    <!-- Librerías matemáticas propias -->
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/math.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/number.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/array.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/string.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/cplx.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/function.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/object.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/prq.js"></script>
+
+    <!-- Librería y hoja de estilos propias para la creación y manejo de la calculadora  -->
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/src/cjs.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/cjs.js"></script>
+
+    <!-- Librería y hoja de estilos propias para la creación y manejo de los capítulos -->
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/src/texto.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/texto.js"></script>
+
+   <!-- Librería del capítulo actual -->
+    <script src="https://cursosabiertos.usfx.bo/materias/progoo/capitulos/capitulo6/files/capitulo6.js"></script>
+
+    <!-- Fuentes empleadas en el capítulo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;600;700;800&amp;family=Roboto+Mono&amp;display=swap" rel="stylesheet">
+
+    <script>
+        function katexRender() {
+            renderMathInElement(document.getElementById("capitulo"));
+        }
+        document.addEventListener("DOMContentLoaded", katexRender);
+        window.onerror = function(msg, url, lineNo, columnNo, error) {
+            __error__ = msg;
+        };
+        window.onload = function(){
+            capitulo.iniciar();
+        };
+    </script>
+
+</head>
+
+<body class="text">  
+
+
+<div id="capitulo">
+
+  <button id="btGuardar" style="z-index:15;" onclick="savePage()">Guardar</button>
+
+
+  <h1 class="text" onclick="alerta(capitulo.idPagina,'')" style="cursor: pointer;">Recursividad</h1>
+
+
+  <p class="text">En general, un concepto es recursivo cuando en su definición se emplea el concepto que se está definiendo. Desde el punto de vista de la programación, <dfn class="style1">una función es recursiva cuando se llama a sí misma.</dfn></p>
+
+  <p class="text">La recursividad es otra forma de abordar la solución de problemas que involucran procesos repetitivos. Mientras que en el <dfn class="style1">razonamiento iterativo</dfn> se piensa en la estructura y la condición de finalización más adecuada para resolver el problema, en el <dfn class="style1">razonamiento recursivo</dfn> se piensa en la <dfn class="style1">llamada recursiva</dfn> que resuelve el problema y en la <dfn class="style1">condición base</dfn> para la cual se conoce una solución al problema.</p>
+
+
+
+  <h2 class="text">Ejemplos</h2>
+
+
+  <p class="text">En ete ejemplo, se programa una función recursiva que recibe un número entero positivo y devuelve <b class="style1">el factorial</b> de ese número.</p>
+
+  <p class="text">Como se recordará, el factorial de un número es simplemente la multiplicación de los números enteros que existen entre 1 y el número cuyo factorial se quiere calcular. Así, el factorial de 5 se calcula con: 1*2*3*4*5 = 120, pero como 1*2*3*4 es el factorial de 4, en realidad el factorial de 5 se está calculando con:</p>
+
+  <table class="ecuacionsn">
+      <tbody><tr>
+      <td>
+          \[           5! = 4!\times 5 = 24\times 5 = 120          \]
+      </td>
+      <td></td>
+      </tr>
+  </tbody></table>
+
+  <p class="text">Igualmente, el factorial de 6 se calcula con:</p>
+
+  <table class="ecuacionsn">
+      <tbody><tr>
+      <td>
+          \[           6! = 5!\times 6 = 120\times 6 = 720          \]
+      </td>
+      <td></td>
+      </tr>
+  </tbody></table>
+
+  <p class="text">Entonces, para cualquier número entero "n" se cumple que:</p>
+
+  <table class="ecuacionsn">
+      <tbody><tr>
+      <td>
+          \[           n! = (n-1)!\times n          \]
+      </td>
+      <td></td>
+      </tr>
+  </tbody></table>
+
+  <p class="text">Y esta fórmula es una fórmula recursiva: para calcular el factorial de un número (de "n") se requiere el factorial de otro número (de "n-1"), siendo esta la <dfn class="style1">llamada recursiva</dfn> que resuelve el problema, sin embargo, para que la solución esté completa se requiere además la <dfn class="style1">condición base</dfn>, es decir la condición para la cual se conoce la solución del problema. En este caso, se sabe que (por definición) que el factorail de 0 es 1, por lo que esa es la <dfn class="style1">condición base</dfn> adecuada para resolver este problema.</p>
+
+  <p class="text">Entonces, la función recursiva que resuelve el problema, es:</p>
+
+  <div class="calculadora" spellcheck="false">
+      <div class="instruccion">factorial = n =&gt; n===0 ? 1 : factorial(n-1)*n;</div>
+      <div class="resultado"></div>
+  </div>
+
+  <p class="text">Como se puede ver, la solución tiene sólo una instrucción. El que las soluciones recursivas sean más sencillas de programar que sus contrapartes iterativas, es la principal razón por la que son empleadas en la práctica.</p>
+
+  <p class="text">Llamando a la función, con algunos valores de prueba, se obtienen los resultados esperados:</p>
+
+  <div class="calculadora" spellcheck="false">
+      <div class="instruccion">factorial(0)</div>
+      <div class="resultado"></div>
+      <div class="instruccion">factorial(1)</div>
+      <div class="resultado"></div>
+      <div class="instruccion">factorial(5)</div>
+      <div class="resultado"></div>
+      <div class="instruccion">factorial(7)</div>
+      <div class="resultado"></div>
+      <div class="instruccion">factorial(17)</div>
+      <div class="resultado"></div>
+      <div class="instruccion">factorial(25)</div>
+      <div class="resultado"></div>
+  </div>
+
+  <p class="text">Si bien esa es la solución recursiva (con una sola instrucción) y como se ha comprobado devuelve los resultados correctos, es está asumiendo que siempre es llamada con valores valores correctos: Números enteros positivos. Como en la práctica no se puede garantizar que el usuario mande siempre los valores correctos, es necesario validar el número recibido para garantizar que realmente sea entero positivo, porque de lo contrario, al mandar un valor negativo o un número real, como en los siguientes ejemplos:</p>
+
+  <div class="calculadora" spellcheck="false">
+      <div class="instruccion">factorial(-7)</div>
+      <div class="resultado"></div>
+      <div class="instruccion">factorial(9.2)</div>
+      <div class="resultado"></div>
+  </div>
+
+  <p class="text">Javascript lanza un error, informando que se ha superado el máximo de llamadas recursivas permitidas: Actualmente los navegadores limitan el número de llamadas recursivas para evitar los ciclos recursivos infinitos. En este caso se supera el límite porque cuando "n" es negativo y en dado que en cada llamada recursiva se le resta 1, nunca llegará a ser cero, por el contrario, se alejará cada vez más y más de cero. Cuando "n" es real, al restarle 1 seguirá siendo real, porque seguirá teniendo su parte fraccionaria, por lo tanto siempre será diferente de cero.</p>
+
+  <p class="text">Por esa razón, en la práctica, es necesario programar la función recursiva dentro de otra función, donde se hacen las validacines e inicializaciones que fueran necesarias, antes de llamar a la función recursiva. Así en este caso, en la función externa se valida que el número sea entero positivo y solo entonces se llama a la función recursiva:</p>
+
+  <div class="calculadora" spellcheck="false">
+    <div class="instruccion">function factorial2(n) {<br>  if (n%1!==0 || n&lt;0) throw new Error("El número debe ser entero positivo");<br>  const factorial = n =&gt; n&lt;2 ? 1 : factorial(n-1)*n;<br>  return factorial(n);<br>};</div>
+    <div class="resultado"></div>
+  </div>
+
+  <p class="text">Observe que ahora, como se sabe que el número es entero y positivo, se ha cambiado la <dfn class="style1">condición base</dfn> a <span class="textocodigo">n&lt;2</span> de manera que devuelva 1 tanto para n=0, como para n=1. Esta condición no puede ser empleada sin la validación, porque con un número negativo esta condición sería siempre verdadera (porque todo número negativo es menor a 2) y en consecuencia la función recursiva devolvería 1.  Con un número real también, en algún momento, "n" llegaría a ser menor a 2 (porque en cada llamada recursiva se le resta 1) y en ese momento devolvería 1 y comenzaría a calcular un resultado erróneo (porque no existe el factorial de un númeoro real).</p>
+  
+  <p class="text">Por supuesto, con esta versión, se obtienen los mismos resultados que con la versión anterior:</p>
+
+  <div class="calculadora" spellcheck="false">
+      <div class="instruccion">factorial2(0)</div>
+      <div class="resultado"></div>
+      <div class="instruccion">factorial2(1)</div>
+      <div class="resultado"></div>
+      <div class="instruccion">factorial2(5)</div>
+      <div class="resultado"></div>
+      <div class="instruccion">factorial2(7)</div>
+      <div class="resultado"></div>
+  </div>
+
+  <p class="text">Si bien el mecanismo de las llamadas recursivas no forma parte del problema, porque de ello se encarga el lenguaje de programación, es útil comprender como funciona para no cometer errores lógicos. En el caso del factorial, por ejemplo, para calcular el factorial de 5 la función se llama sucesivamente con valores de "n" iguales a 4, 3, 2 y 1, entonces (cuando "n" es 1) se cumple la <dfn class="style1">condición base</dfn> (1 es menor que 2), por lo que devuelve la solución conocida <b>1</b>, con ese resultado se calculan sucesivamente los factoriales de 2 (factorial(1)*2=<b>1</b>*2=<b>2</b>), el de 3 (factorial(2)*3=<b>2</b>*3=<b>6</b>), el de 4 (factorial(3)*6=<b>6</b>*4=<b>24</b>) y finalmente el de 5 (factorial(4)*5=<b>24</b>*5=<b>120</b>)</p>
+
+  <p class="text">Aunque, las soluciones recursivas son más sencillas que su contraparte iterativa, desde el punto de vista de la eficiencia (uso de recursos) son menos eficientes que las iterativas: cada llamada recursiva crea una copia de la función en memoria y cada vez que una de las copias termina (devuelve un resultado) la copia es eliminada de memoria, lo que consume tanto tiempo de procesamiento como memoria.</p>
+
+  <p class="text">Varios de los problemas que involucran productorias o sumatorias tienen, esencialmente, la misma lógica que el cálculo del factorial. Por ejemplo, la <b class="style1">sumatoria de los primeros "n" números enteros</b> (1+2+3+...+n) puede ser calculada conociendo la sumatoria de los primeros "n-1" números:</p>
+
+  <table class="ecuacionsn">
+      <tbody><tr>
+      <td>
+          \[           sne(n) = sne(n-1)+n          \]
+      </td>
+      <td></td>
+      </tr>
+  </tbody></table>
+
+  <p class="text">Cuando "n" es cero, la sumatoria es cero (porque no hay nada que sumar), siendo esa la <dfn class="style1">condición base</dfn> (la solución conocida). La función recursiva respectiva (sin validación) es:</p>
+
+  <div class="calculadora" spellcheck="false">
+      <div class="instruccion">sne = n =&gt; n==0 ? 0 : sne(n-1)+n;</div>
+      <div class="resultado"></div>
+      <div class="instruccion">sne(5)</div>
+      <div class="resultado"></div>
+      <div class="instruccion">sne(20)</div>
+      <div class="resultado"></div>
+  </div>
+
+  <p class="text">Igualmente, el cálculo de <b class="style1">x<sup>n</sup>: La potencia entera "n" de un número real "x"</b>, se resuelve con la siguiente ecuación recursiva:</p>
+
+  <table class="ecuacionsn">
+      <tbody><tr>
+      <td>
+          \[           penr(x,n) = penr(x,n-1)*x          \]
+      </td>
+      <td></td>
+      </tr>
+  </tbody></table>
+
+  <p class="text">En este caso, para la <dfn class="style1">condición base</dfn>, se sabe que x<sup>0</sup> es 1. La función respectiva (sin validación), es:</p>
+
+  <div class="calculadora" spellcheck="false">
+      <div class="instruccion">penr = (x, n) =&gt; n===0 ? 1 : penr(x, n-1)*x;</div>
+      <div class="resultado"></div>
+      <div class="instruccion">penr(3,5)</div>
+      <div class="resultado"></div>
+      <div class="instruccion">penr(3.2,7)</div>
+      <div class="resultado"></div>
+  </div>
+
+  <p class="text">Por supuesto, en la implementación final (para prevenir errores, así como ciclos recursivos infinitas) es necesario validar los datos. Si es posible, es conveniente, también, mejorar la eficiencia de los cálculos empleando variables locales. En este ejemplo, se debe validar que "n" sea entero positivo y es posible mejorar la eficiencia, empleando el valor de "x" recibido en la función externa, en lugar de mandar una y otra vez (en cada llamada recursiva) el mismo valor (pues el valor de "x" no cambia). La función que mejora la eficiencia (sin validación) es:</p>
+
+  <div class="calculadora" spellcheck="false">
+      <div class="instruccion">penr2 = function(x, n) {<br>  const pot = n =&gt; n===0 ? 1 : pot(n-1)*x;<br>  return pot(n);<br>};</div>
+    <div class="resultado"></div>
+    <div class="instruccion">penr2(3, 5)</div>
+    <div class="resultado"></div>
+    <div class="instruccion">penr2(3.2, 7)</div>
+    <div class="resultado"></div>
+  </div>
+
+  <p class="text">Observe que la función recursiva propiamente (pot), sigue siendo muy sencilla y solo tiene una instrucción.</p>
+
+  <p class="text">Para calcular recursivamente la <b class="style1">sumatoria de los números pares que existen entre 2 y un número "n" dado</b>, se tiene por lo menos dos alternativas.</p>
+  
+  <p class="text">Por un lado, conociendo la sumatoria de los primeros "n-2" números pares, la sumatoria se calcula sumándole el último número par "n":</p>
+  
+  <table class="ecuacionsn">
+      <tbody><tr>
+      <td>
+          \[           snp(n) = snp(n-2)+n          \]
+      </td>
+      <td></td>
+      </tr>
+  </tbody></table>
+
+  <p class="text">Cuando "n" es menor a 2 (cuando ya no existen más números pares) la sumatoria es 0 (<dfn class="style1">condición base</dfn>). Por ejemplo, si "n" es 8, la función se llama a sí misma con 6, 4, 2 y 0, entonces (cuando ya no existen más números pares) devuelve <b>0</b> y con ese resultado se calculan y devuelven, sucesivamente: <b>0</b>+2=<b>2</b>, <b>2</b>+4=<b>6</b>, <b>6</b>+6=<b>12</b> y <b>12</b>+8=<b>20</b>. La función recursiva programada con este razonamiento (sin validación) es:</p>
+
+  <div class="calculadora" spellcheck="false">
+      <div class="instruccion">snp = n =&gt; n&lt;2 ? 0 : snp(n-2)+n;</div>
+      <div class="resultado"></div>
+      <div class="instruccion">snp(8)</div>
+      <div class="resultado"></div>
+      <div class="instruccion">snp(40)</div>
+      <div class="resultado"></div>
+  </div>
+  
+  <p class="text">Sin embargo, esta solución solo devuelve los resultados correctos cuando el número "n" que recibe es par. Si se manda un número impar, por ejemplo 9:</p>
+
+  <div class="calculadora" spellcheck="false">
+      <div class="instruccion">snp(9)</div>
+      <div class="resultado"></div>
+  </div>
+  
+  <p class="text">Se obtiene 24 (la sumatoria de 3+5+7+9) en lugar de 20 (la sumatoria hasta 8: último número par antes del 9). Para obtener la solución correcta, la función recursiva debe ser programada dentro de otra función y llamada con "n-1" (en lugar de "n") si es impar:</p>
+
+  <div class="calculadora" spellcheck="false">
+    <div class="instruccion">snp2 = n =&gt; {<br>  const sum = n =&gt; n&lt;2 ? 0 : sum(n-2)+n;<br>  return (n%2===1 ? sum(n-1) : sum(n));<br>};</div>
+    <div class="resultado"></div>
+    <div class="instruccion">snp(9)</div>
+    <div class="resultado"></div>
+  </div>
+
+  <p class="text">Por otra parte, si se conoce la suma de los números pares de 4 a n, basta añadir 2 —el primer número par— para obtener la sumatoria:</p>
+
+  <table class="ecuacionsn">
+      <tbody><tr>
+      <td>
+          \[           snp3(n,i=2) = snp3(n,i+2)+i          \]
+      </td>
+      <td></td>
+      </tr>
+  </tbody></table>
+
+  <p class="text">Si "i" supera a "n", la función devuelve 0 porque ya se sumó el último número par (condición base). Por ejemplo, para "n=8", la función se llama a sí misma con "i" igual a 4, 6, 8 y 10. Cuando se cumple la condición base (10&gt;8), devuelve <b>0</b>; a partir de ese valor, calcula y retorna sucesivamente: <b>0</b>+8=<b>8</b>, <b>8</b>+6=14, <b>14</b>+4=<b>18</b> y <b>18</b>+2=<b>20</b>. La función recursiva correspondiente, sin validación, es:</p>
+
+  <div class="calculadora" spellcheck="false">
+    <div class="instruccion">snp3 = (n, i=2) =&gt; i&gt;n ? 0 : snp3(n, i+2)+i;</div>
+    <div class="resultado"></div>
+    <div class="instruccion">snp3(9)</div>
+    <div class="resultado"></div>
+    <div class="instruccion">snp3(40)</div>
+    <div class="resultado"></div>
+  </div>
+
+  <p class="text">Como se observa, los resultados son correctos incluso cuando el número es impar. Sin embargo, la eficiencia puede mejorarse al incluir el procedimiento en otra función, lo que evita enviar repetidamente el mismo valor de "n":</p>
+  
+  <div class="calculadora" spellcheck="false">
+    <div class="instruccion">snp4 = n =&gt; {<br>  const sum = i =&gt; i&gt;n ? 0 : sum(i+2)+i;<br>  return sum(2);<br>};</div>
+    <div class="resultado"></div>
+    <div class="instruccion">snp4(9)</div>
+    <div class="resultado"></div>
+    <div class="instruccion">snp4(40)</div>
+    <div class="resultado"></div>
+  </div>
+
+  <p class="text">Este mismo algoritmo también permite calcular la suma de los números pares comprendidos entre dos límites, «m» y «n»:</p>
+
+  <div class="calculadora" spellcheck="false">
+    <div class="instruccion">spmn = (m, n) =&gt; {<br>  const sum = i =&gt; i&gt;n ? 0 : sum(i+2)+i;<br>  return sum(m);<br>};</div>
+    <div class="resultado"></div>
+    <div class="instruccion">spmn(22, 34)</div>
+    <div class="resultado"></div>
+    <div class="instruccion">spmn(18, 59)</div>
+    <div class="resultado"></div>
+  </div>
+
+  <p class="text">También se puede adaptar el algoritmo (simplemente cambiando la <dfn class="style1">condición base</dfn>) para que devuelva la sumatoria de los primeros "n" números pares:</p>
+
+  <div class="calculadora" spellcheck="false">
+    <div class="instruccion">spnp = n =&gt; {<br>  const sum = i =&gt; i&gt;2*n ? 0 : sum(i+2)+i;<br>  return sum(2);<br>};</div>
+    <div class="resultado"></div>
+    <div class="instruccion">spnp(5)</div>
+    <div class="resultado"></div>
+    <div class="instruccion">spnp(15)</div>
+    <div class="resultado"></div>
+  </div>
+
+  <p class="text">El mismo razonamiento es válido para progresiones (series) tanto aritméticas como geométricas. Por ejemplo, la siguiente función calcula (sin validación) <b class="style1">la sumatoria, entre "m" y "n", de la serie aritmética cuya diferencia es 4</b>:</p>
+
+  <div class="calculadora" spellcheck="false">
+    <div class="instruccion">ssa4 = (m, n) =&gt; {<br>  const sum = i =&gt; i&gt;n ? 0 : sum(i+4)+i;<br>  return sum(m);<br>};</div>
+      <div class="resultado"></div>
+      <div class="instruccion">ssa4(5, 19)</div>
+      <div class="resultado"></div>
+      <div class="instruccion">ssa4(8, 27)</div>
+      <div class="resultado"></div>
+  </div>
+
+  <p class="text">De manera similar, la siguiente función calcula (sin validación) <b class="style1">la sumatoria, entre "m" y "n", de la serie geométrica cuya razón es 3 </b>:</p>
+
+  <div class="calculadora" spellcheck="false">
+    <div class="instruccion">ssg3 = (m, n) =&gt; {<br>  const sum = i =&gt; i&gt;n ? 0 : sum(i*3)+i;<br>  return sum(m);<br>};</div>
+    <div class="resultado"></div>
+    <div class="instruccion">ssg3(1, 500)</div>
+    <div class="resultado"></div>
+    <div class="instruccion">ssg3(23, 1200)</div>
+    <div class="resultado"></div>
+  </div>
+
+  <p class="text">Como otro ejemplo, se elabora la función recursiva que devuelve <b class="style1">el primer dígito de un número</b>. El primer dígito de un número simplemente es el primer dígito del cociente de ese número entre 10. Por ejemplo, el primer dígito de 8434, es el primer dígito del 843, es decir el número 8. Cuando el número tiene sólo un dígito, ese es su primer dígito, siendo esa la<dfn class="style1">condición base</dfn>.</p>
+
+  <p class="text">La función recursiva (sin validación) es:</p>
+  
+  <div class="calculadora" spellcheck="false">
+    <div class="instruccion">pd = n =&gt; n&lt;10 ? n : pd((n-n%10)/10);</div>
+    <div class="resultado"></div>
+    <div class="instruccion">pd(54321)</div>
+    <div class="resultado"></div>
+    <div class="instruccion">pd(738234)</div>
+    <div class="resultado"></div>
+  </div>
+
+  <p class="text"><b class="style1">El número de dígitos de un número</b>, recursivamente, simplemente es el número de dígitos de su cociente entre 10 más 1. Así si el número es 12345, su número de dígitos es el número de dígitos de 1234 (4) más 1 (5). Cuando el número tiene solo un dígito (cuando es menor a 10) el número de dígitos es 1 (<dfn class="style1">condición base</dfn>):</p>
+  
+  <div class="calculadora" spellcheck="false">
+    <div class="instruccion">nd = n =&gt; n&lt;10 ? 1 : nd((n-n%10)/10)+1;</div>
+    <div class="resultado"></div>
+    <div class="instruccion">nd(12345)</div>
+    <div class="resultado"></div>
+    <div class="instruccion">nd(32)</div>
+    <div class="resultado"></div>
+  </div>
+
+  <p class="text"><b class="style1">El número sin su primer dígito</b>, se obtiene tomando en cuenta que es el cociente del número entre 10 sin su primer dígito, más el residuo del número entre 10. Por ejemplo, si el número es 54321, el número sin su primer dígito es 432*10+1 = 4321, donde 432 es el cociente ((54321-54321%10)/10=5432) sin su primer dígito y 1 es el residuo del número (54321%10=1). Es necesario multiplicar el cociente por 10, para que el residuo pase a ser el último dígito del número (si se suma directamente el residuo, el resultado sería 432+1=433). Por otra parte, cuando el número tiene un dígito (cuando es menor a 10) sin su primer dígito es 0, siendo esa la <dfn class="style1">condición base</dfn>.</p>
+
+  <p class="text">La función recursiva respectiva (sin validación) es:</p>
+
+  <div class="calculadora" spellcheck="false">
+    <div class="instruccion">spd = n =&gt; n&lt;10 ? 0 : spd((n-n%10)/10)*10+n%10;</div>
+    <div class="resultado"></div>
+    <div class="instruccion">spd(97382)</div>
+    <div class="resultado"></div>
+    <div class="instruccion">spd(87933)</div>
+    <div class="resultado"></div>
+  </div>
+
+  <p class="text">El problema de <b class="style1">invertir los dígitos de un número</b> se resuelve tomando en cuenta que el número invertido es igual a su cociente entre 10, con sus dígitos invertidos, añadiendo su residuo entre 10 como primer dígito. Por ejemplo, si el número es 12345, el número invertido se obtiene con 4321+5*10000 = 54321, donde 4321 es el cociente ((12345-12345%10)/10=1234) con sus dígitos invertidos, 5 es el residuo (12345%10=5) y 10000 es el múltiplo de 10 con el mismo número de dígitos que el número a invertir. Cuando el número tiene sólo un dígito (cuando es menor a 10) el número invertido es ese número, siendo esa la <dfn class="style1">condición base</dfn>.</p>
+
+  <p class="text">La función recursiva correspondiente (sin validación) es:</p>
+
+  <div class="calculadora" spellcheck="false">
+    <div class="instruccion">function invertir(n, d=1) {<br>  const inv = n =&gt; n&lt;10 ? n : inv((n-n%10)/10)+n%10*(d*=10);<br>  return n&lt;0 ? -inv(-n) : inv(n);<br>}</div>
+    <div class="resultado"></div>
+    <div class="instruccion">invertir(12345)</div>
+    <div class="resultado"></div>
+    <div class="instruccion">invertir(-74831)</div>
+    <div class="resultado"></div>
+  </div>
+
+  <p class="text">En este caso las operaciones se realizan en ambos sentidos: mientras se hacen las llamadas recursivas el número va dismininuyendo hasta que es menor a 10, luego, mientras se devuelven los resultados, se multiplica el residuo por "d", pero previamente "d" (que inicialmente es 1) se multiplica por 10, de manera que "d" es el múltiplo de 10 con el número de dígitos de "n" (en la última llamada recursiva "n" tiene 2 dígitos y "d" es 10, en la penúltima "n" tiene 3 dígitos y "d" es 100 y así sucesivamente).</p>
+
+  <p class="text">Sin embargo, es importante comprender que los valores de "d" deben ser calculados después de que la función recursiva devuelve un resultado, porque si se calculan antes, en la última llamada recursiva "d" sería el múltiplo de 10 del número original y no del número con el que se hace la llamada, además, ese valor permanecería constante. Por esa razón, en este caso, la función recursiva tiene que ser programada dentro de otra función, donde la variable "d" inicia en 1 y es modificada dentro de la función recursiva.</p>
+
+  <p class="text">En esta solución (como ejemplo) para que la función opere también con números negativos, antes de llamar a la función recursiva, se pregunta si el número es negativo y de ser así se llama a la función recursiva con el valor positivo (-n) y se cambia el signo del resultado (-inv), de esa manera, sin modificar la función recursiva, se obtienen los resultados correctos tanto para números positivos como para negativos.</p>
+
+  <p class="text">La potencia entera "n" de un número real "x", calculada como se ha ejemplificado previamente, es muy ineficiente, así, para calcular 3.4<sup>2500000</sup> el algoritmo hace ¡2 millones quinientas mil llamadas recursivas!. Se logra un <b class="style1">algoritmo más eficiente para calcular la potencia entera de un número real</b>, tomando en cuenta que 3.4<sup>2500000</sup> es igual a:</p>
+
+  <table class="ecuacionsn">
+      <tbody><tr>
+      <td>
+          \[           3.4^{2500000} = \left( 3.4^{1250000}\right)^2           \]
+      </td>
+      <td></td>
+      </tr>
+  </tbody></table>
+    
+  <p class="text">Con lo que se reduce a la mitad el número de llamadas recursivas, reduciendo ¡1 millón ciento veinticinco mil llamadas recursivas! Aplicando nuevamente el mismo procedimiento a la potencia restante, se reduce igualmente a la mitad el número de llamadas recursivas. Procediendo de esa manera con cada una de las potencias restantes, se reduce considerablemente el número de llamadas recursivas, así como el número de operaciones necesarias.</p>
+  
+  <p class="text">Por ejemplo para calcular el valor de:</p>
+
+  <table class="ecuacionsn">
+      <tbody><tr>
+      <td>
+          \[           x^{4561}           \]
+      </td>
+      <td></td>
+      </tr>
+  </tbody></table>
+  
+  <p class="text">Se lleva a cabo la siguiente operación:</p>
+  
+  <table class="ecuacionsn">
+      <tbody><tr>
+      <td>
+          \[           x^{4561} = \left( x\raisebox{0.9em}{$\frac{4561-1}{2}$}\right)^2 \cdot x = \left(x ^{2280}\right)^2 \cdot x           \]
+      </td>
+      <td></td>
+      </tr>
+  </tbody></table>
+  
+  <p class="text">Donde a la potencia se le resta 1 para que la división sea exacta y por esa misma razón, se multiplica por "x". Luego la nueva potencia (x<sup>2280</sup>), se calcula con:</p>
+  
+  <table class="ecuacionsn">
+      <tbody><tr>
+      <td>
+          \[           x^{2280} = \left( x\raisebox{0.9em}{$\frac{2280}{2}$}\right)^2 = \left(x ^{1140}\right)^2           \]
+      </td>
+      <td></td>
+      </tr>
+  </tbody></table>
+  
+  <p class="text">Prosiguiendo de esa manera hasta que la potencia es 0 o 1, se tiene:</p>
+  
+  <table class="ecuacionsn">
+      <tbody><tr>
+          <td>
+              \[               \begin{aligned}              x^{1140} &amp;= \left( x\raisebox{0.9em}{$\frac{1140}{2}$}\right)^2 = \left(x ^{570}\right)^2 \\[5mm]              x^{570} &amp;= \left( x\raisebox{0.9em}{$\frac{570}{2}$}\right)^2 = \left(x ^{285}\right)^2 \\[5mm]              x^{285} &amp;= \left( x\raisebox{0.9em}{$\frac{285-1}{2}$}\right)^2 \cdot x = \left(x ^{142}\right)^2\cdot x \\[5mm]              x^{142} &amp;= \left( x\raisebox{0.9em}{$\frac{142}{2}$}\right)^2 = \left(x ^{71}\right)^2 \\[5mm]              x^{71} &amp;= \left( x\raisebox{0.9em}{$\frac{71-1}{2}$}\right)^2 \cdot x = \left(x ^{35}\right)^2\cdot x \\[5mm]              x^{35} &amp;= \left( x\raisebox{0.9em}{$\frac{35-1}{2}$}\right)^2 \cdot x = \left(x ^{17}\right)^2\cdot x \\[5mm]              x^{17} &amp;= \left( x\raisebox{0.9em}{$\frac{17-1}{2}$}\right)^2 \cdot x = \left(x ^{8}\right)^2\cdot x \\[5mm]              x^{8} &amp;= \left( x\raisebox{0.9em}{$\frac{8}{2}$}\right)^2 = \left(x ^{4}\right)^2 \\[5mm]              x^{4} &amp;= \left( x\raisebox{0.9em}{$\frac{4}{2}$}\right)^2 = \left(x ^{2}\right)^2 \\[5mm]              x^{2} &amp;= \left( x\raisebox{0.9em}{$\frac{2}{2}$}\right)^2 = \left(x ^{1}\right)^2 \\[5mm]              x^{1} &amp;= \left( x\raisebox{0.9em}{$\frac{1-1}{2}$}\right)^2 = \left(x ^{0}\right)^2 \\[5mm]              x^{0} &amp;= 1              \end{aligned}               \]
+          </td>
+          <td></td>
+      </tr>
+  </tbody></table>
+  
+  <p class="text">Que implica un total de 13 repeticiones y 18 multiplicaciones, en lugar de ¡4561 repeticiones y 4561 multiplicaciones! (99.6% menos operaciones que en la versión anterior).</p>
+  
+  <p class="text">Se trata entonces de una solución mucho más eficiente, cuyas expresiones generales, son:</p>
+  
+  <table class="ecuacionsn">
+      <tbody><tr>
+      <td>
+          \[          \begin{aligned}          x^{n} &amp;= \left( x\raisebox{0.9em}{$\frac{n}{2}$}\right)^2          &amp;&amp;\begin{cases}\text{cuando "n" es par}\end{cases}\\[3mm]          x^{n} &amp;= \left( x\raisebox{0.9em}{$\frac{n-1}{2}$}\right)^2 \cdot x          &amp;&amp;\begin{cases}\text{cuando "n" es impar}\end{cases}          \end{aligned}           \]
+      </td>
+      <td></td>
+      </tr>
+  </tbody></table>
+
+  <p class="text">Cuando la potencia es 0 (es menor a 1) el resultado es 1 (<dfn class="style1">condición base</dfn>).</p>
+  
+  <p class="text">La función recursiva correspondiente (sin validación) es:</p>
+
+  <div class="calculadora" spellcheck="false">
+      <div class="instruccion">pe2 = (x, n) =&gt; n&lt;1 ? 1 : pe2(x,(n-n%2)/2)**2*(n%2?x:1);</div>
+      <div class="resultado"></div>
+      <div class="instruccion">pe2(1.2, 0)</div>
+      <div class="resultado"></div>            
+      <div class="instruccion">pe2(2.1, 5)</div>
+      <div class="resultado"></div>            
+      <div class="instruccion">pe2(0.25, 7)</div>
+      <div class="resultado"></div>            
+      <div class="instruccion">pe2(2, 8)</div>
+      <div class="resultado"></div>            
+      <div class="instruccion">pe2(1.5, 25)</div>
+      <div class="resultado"></div>            
+      <div class="instruccion">pe2(-6.7, 10)</div>
+      <div class="resultado"></div>            
+      <div class="instruccion">pe2(3.2, -20)</div>
+      <div class="resultado"></div>            
+      <div class="instruccion">pe2(4.2, 5.6)</div>
+      <div class="resultado"></div>            
+  </div>
+
+  <p class="text">Para calcular recursivamente <b class="style1">el Fibonacci de un número entero positivo</b>:</p>
+  
+  <table class="ecuacionsn">
+      <tbody><tr>
+      <td>
+          \[           \begin{aligned}          F_n &amp;= F_{n-1}+F_{n-2}\\[2mm]          F_1 &amp;= 1\\[2mm]          F_2 &amp;= 1          \end{aligned}                      \]
+      </td>
+      <td></td>
+      </tr>
+  </tbody></table>
+
+  <p class="text">Dado que la definición del Fibonacci es una definición recursiva, se puede pensar en programar directamente la fórmula recursiva (<span class="textocodigo">fib = n =&gt; fib(n-1)+fib(n-2);</span> ), pero, una expresión doblemente recursiva como esta, implica llamadas recursivas donde se calculan una y otra vez los mismos valores.</p>
+
+  <p class="text">Por esa razón el número de llamadas recursivas incrementa geométricamente. Así para calcular el Fibonacci de 3 se requieren 2 llamadas recursivas, el de 18, 65536 llamadas recursivas (en lugar de 16) y el de 34, 4294967296 llamadas recursivas (en lugar de 32) ¡más de 4 mil millones de llamadas recursivas innecesarias!. Este es uno de los casos donde, a pesar de ser la definición recursiva, la solución es iterativa.</p>
+  
+  <p class="text">En estos casos (de forma similar a las sumatorias) se puede emplear la recursividad simplemente para lograr el número de iteraciones requeridas, siendo la lógica iterativa:</p>
+
+  <div class="calculadora" spellcheck="false">
+      <div class="instruccion">fibo = (n,i=3,f1=1,f2=1,f3=2) =&gt; i===n ? f3 : fibo(n,i+1,f2,f3,f2+f3);</div>
+      <div class="resultado"></div>            
+      <div class="instruccion">fibo(5)</div>
+      <div class="resultado"></div>            
+      <div class="instruccion">fibo(10)</div>
+      <div class="resultado"></div>            
+      <div class="instruccion">fibo(39)</div>
+      <div class="resultado"></div>            
+      <div class="instruccion">fibo(50)</div>
+      <div class="resultado"></div>            
+      <div class="instruccion">fibo(100)</div>
+      <div class="resultado"></div>            
+      <div class="instruccion">fibo(200)</div>
+      <div class="resultado"></div>            
+  </div>
+
+  <p class="text">Los parámetros con valores por defecto se emplean de manera similar a las variables de una estructura iterativa: El contador "i" inicia en 3 (el primer Fibonacci que puede ser calculado) y su valor incrementa en uno en cada llamada recursiva. Las variables "f1", "f2" y "f3", se inician en los valores conocidos y en cada llamada recursiva se actualizan ("f1" toma el valor de "f2", "f2" el de "f3" y "f3" el nuevo valor del Fibonacci). El proceso concluye cuando el contador "i" es igual al número de Fibonacci "n" que se quiere calcular.</p>
+    
+  <p class="text">En la práctica para evitar la creación de nuevas variables en cada llamada recursiva, así como evitar mandar el mismo valor de "n" en cada llamada, debe ser programada dentro de otra función donde se declaran las variables una sola vez.</p>
+  
+  <p class="text">Para el cálculo de funciones matemáticas con series de Taylor, se pueden emplear también llamadas recursivas, no obstante (al igual que en el cálculo del Fibonacci) la solución tiene una lógica iterativa.</p>
+  
+  <p class="text">Por ejemplo, el seno de un ángulo "x" en radianes:</p>
+  
+  <table class="ecuacionsn">
+      <tbody><tr>
+          <td>
+              \[ \sin(x) = x-\dfrac{x^3}{3!}+\dfrac{x^5}{5!}-\dfrac{x^7}{7!} +\cdots \infty \]
+          </td>
+          <td></td>
+      </tr>
+  </tbody></table>
+
+  <p class="text">Puede ser calculado con la siguiente función recursiva (sin validación):</p>
+
+  <div class="calculadora" spellcheck="false">
+      <div class="instruccion">sen = (x,ter=x,s1=ter,i=2,xx=-x*x,s2) =&gt; (ter*=xx/(i*(i+1)),s2=s1+ter,Math.abs(s1/s2-1)&lt;1e-14) ? s2 : sen(x,ter,s2,i+2,xx);</div>
+      <div class="resultado"></div>            
+      <div class="instruccion">sen(2.45)</div>
+      <div class="resultado"></div>            
+      <div class="instruccion">sen(3.22)</div>
+      <div class="resultado"></div>            
+  </div>
+
+  <p class="text">Donde la función recibe el ángulo en radianes (x) así como las variables con los valores iniciales necesarios para el cálculo, luego, con esos valores se calcula el nuevo término (ter), la nueva sumatoria (s2) y si "s1" y "s2" son iguales en 14 dígitos se devuelve el resultado (s2), caso contrario la función se llama a sí misma con los nuevo valores del término (ter), la sumatoria (s2) y el contador (i+2) y se vuelve a mandar el ángulo (x) y el negativo del ángulo al cuadrado (xx=-x<sup>2</sup>) que son valores que no cambian.</p>
+
+  <p class="text">Las llamadas recursivas se emplean simplemente para repetir el proceso y mandar los valores necesarios para la siguiente iteración. El resultado devuelto cuando se cumple la <dfn class="style1">condición base</dfn>, no se emplea en el cálculo, sino que simplemente es devuelve por cada una de las llamadas recursivas.</p>
+
+  <p class="text">Una solución más eficiente (sin validación) se consigue programando la función recursiva dentro de otra función:</p>
+
+  <div class="calculadora" spellcheck="false">
+    <div class="instruccion">function sen2(x) {<br>  const xx = -x*x;<br>  let s2, ter=x, i=2;<br>  const senr = s1 =&gt; (ter*=xx/i/(i+1),s2=s1+ter,Math.abs(s1/s2-1)&lt;1e-14) ? s2 : (i+=2,senr(s2));<br>  return senr(ter);<br>};</div>
+    <div class="resultado"></div>            
+    <div class="instruccion">sen2(2.45)</div>
+    <div class="resultado"></div>            
+    <div class="instruccion">sen2(3.22)</div>
+    <div class="resultado"></div>            
+  </div>
+
+
+  <p class="text">Finalmente, algunas funciones que son por definición recursivas y que pueden ser programadas directamente, como es el caso del <b class="style1">Ackermann de dos números enteros "p" y "q"</b>:</p>
+
+  <table class="ecuacionsn">
+      <tbody><tr>
+      <td>
+          \[           a(p,q) =          \begin{cases}          q+1 &amp;\text{si ~p=0}\\          a(p-1,1)&amp;\text{si ~p&gt;0 ~y ~q = 0}\\          a(p-1,a(p,q-1))&amp;\text{si ~p&gt;0 ~y ~q&gt;0}          \end{cases}          \]
+      </td>
+      <td></td>
+      </tr>
+  </tbody></table>
+
+  <p class="text">Cuya función recursiva respectiva (sin validación) es:</p>
+
+  <div class="calculadora" spellcheck="false">
+      <div class="instruccion">ack = (p, q) =&gt; p===0 ? q+1 : q===0 ? ack(p-1,1) : ack(p-1, ack(p,q-1));</div>
+      <div class="resultado"></div>
+      <div class="instruccion">ack(1, 3)</div>
+      <div class="resultado"></div>            
+      <div class="instruccion">ack(3, 3)</div>
+      <div class="resultado"></div>            
+      <div class="instruccion">ack(3, 9)</div>
+      <div class="resultado"></div>            
+      <div class="instruccion">ack(4, 0)</div>
+      <div class="resultado"></div>            
+  </div>
+
+  <p class="text">Al ser doblemente recursiva, al igual que el Fibonacci, implica una lógica muy ineficiente, donde se calculan cientos, miles y millones de veces los mismos valores. No obstante, en este caso no existe una forma sencilla de reducir el número de llamadas recursivas, por lo que usualmente son programadas directamente (como se ha hecho en este ejemplo). Debido a ello, son útiles sólo para valores pequeños y en este caso, por ejemplo, no es posible calcular el Ackermann de (4, 1):</p>
+
+  <div class="calculadora" spellcheck="false">
+      <div class="instruccion">ack(4, 1)</div>
+      <div class="resultado"></div>
+  </div>
+
+  <p class="text">Si bien en los ejemplos y ejercicios de este y de los capítulos anteriores, se resuelven problemas relacionados al área de las matemáticas, la lógica involucrada es de utilidad práctica y aplicable en otros campos del área de la informática.</p>
+
+
+
+  <div class="ejercicio" id="ejercicio1" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Dentro de la función "sumEnteros", que recibe un número entero positivo "n", programe la función recursiva "sumr" que devuelva la sumatoria de los primeros "n" números enteros positivos. Pista: La sumatoria de los primeros "n" números enteros positivos (por ejemplo 1+2+3+4+5) es igual a la sumatoria de los primeros "n-1" números (1+2+3+4) más el último número "n" (5). Cuando "n" es 0 o 1 (cuando es menor a 2) el resultado es ese número. Debe validar que el número sea entero (%,!==) positivo (&lt;), error: "El número debe ser entero positivo". Posteriormente llame a la función con: 0, 10, 27, 43, 75, -50 y 60.7.</p><div id="pregunta1" class="calculadora" spellcheck="false"><div class="instruccion">sumEnteros = n =&gt; {<br>  if (n%1!==0 || n&lt;0) throw "El número debe ser entero positivo";<br>  const sumr = n =&gt; n&lt;2 ? n : sumr(n-1)+n;<br>  return sumr(n);<br>};</div><div class="resultado"></div><div class="instruccion">sumEnteros(0)</div><div class="resultado"></div><div class="instruccion">sumEnteros(10)</div><div class="resultado"></div><div class="instruccion">sumEnteros(27)</div><div class="resultado"></div><div class="instruccion">sumEnteros(43)</div><div class="resultado"></div><div class="instruccion">sumEnteros(75)</div><div class="resultado"></div><div class="instruccion">sumEnteros(-50)</div><div class="resultado"></div><div class="instruccion">sumEnteros(60.7)</div><div class="resultado"></div></div><p class="pregunta" id="pregunta2"><span class="pregunta"></span>La sumatoria de los primeros 3 números enteros, se calcula con (escriba los números y valores resultantes, puede emplear la calculadora del inciso anterior): sumr(<span class="campo_literal correcta" tabindex="0" contenteditable="true">2</span>)+<span class="campo_literal correcta" tabindex="0" contenteditable="true">3</span> = <span class="campo_literal correcta" tabindex="0" contenteditable="true">3</span>+<span class="campo_literal correcta" tabindex="0" contenteditable="true">3</span> = <span class="campo_literal correcta" tabindex="0" contenteditable="true">6</span>.<br>Para calcular la sumatoria de los primeros 7 números enteros, la función recursiva se llama a sí misma <span class="campo_literal correcta" tabindex="0" contenteditable="true">6</span> veces.<br>La cuarta llamada que se hace a sí misma la función recursiva, para calcular la sumatoria de los primeros 9 números enteros, es: sumr(<span class="campo_literal correcta" tabindex="0" contenteditable="true">5</span>).</p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="18" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 1 -->
+
+  <div class="ejercicio" id="ejercicio2" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Dentro de la función "dosAn", que recibe un número entero positivo "n", programe la función recursiva "potr" que devuelva el resultado de elevar 2 a "n". Pista: 2 elevado a "n" (por ejemplo 2<sup>5</sup>=2*2*2*2*2) es igual a 2 elevado a "n-1" (2<sup>4</sup>=2*2*2*2) multiplicado por 2 (2<sup>4</sup>*2 = 2*2*2*2 * 2). Cuando "n" es 0 el resultado es 1 (porque 2<sup>0</sup>=1). Debe validar que el número sea entero (%,!==) positivo (&lt;), error: "El número debe ser entero positivo". Posteriormente llame a la función con: 0, 1, 10, 15, 17, 25, -40 y 30.7.</p><div id="pregunta3" class="calculadora" spellcheck="false"><div class="instruccion">dosAn = n =&gt; {<br>  if (n%1!==0 || n&lt;0) throw "El número debe ser entero positivo";<br>  const potr = n =&gt; n===0 ? 1 : potr(n-1)*2;<br>  return potr(n);<br>};</div><div class="resultado"></div><div class="instruccion">dosAn(0)</div><div class="resultado"></div><div class="instruccion">dosAn(1)</div><div class="resultado"></div><div class="instruccion">dosAn(10)</div><div class="resultado"></div><div class="instruccion">dosAn(15)</div><div class="resultado"></div><div class="instruccion">dosAn(17)</div><div class="resultado"></div><div class="instruccion">dosAn(25)</div><div class="resultado"></div><div class="instruccion">dosAn(-40)</div><div class="resultado"></div><div class="instruccion">dosAn(30.7)</div><div class="resultado"></div></div><p class="pregunta" id="pregunta4"><span class="pregunta"></span>El valor de 2<sup>5</sup> se calcula con (escriba los números y valores resultantes, puede emplear la calculadora del inciso anterior): dosAn(<span class="campo_literal correcta" tabindex="0" contenteditable="true">4</span>)*<span class="campo_literal correcta" tabindex="0" contenteditable="true">2</span> = <span class="campo_literal correcta" tabindex="0" contenteditable="true">16</span>*<span class="campo_literal correcta" tabindex="0" contenteditable="true">2</span> = <span class="campo_literal correcta" tabindex="0" contenteditable="true">32</span>.<br>Para calcular 2<sup>0</sup>, la función recursiva se llama a sí misma <span class="campo_literal correcta" tabindex="0" contenteditable="true">0</span> veces.<br>La tercera llamada que se hace a sí misma la función recursiva, para calcular 2<sup>7</sup>, es: dosAn(<span class="campo_literal correcta" tabindex="0" contenteditable="true">4</span>).</p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="18" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 2 -->
+
+  <div class="ejercicio" id="ejercicio3" enunciado="1"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Dentro de la función "sPares", que recibe un número entero positivo "n", programe la función recusiva "sumr" que devuelva la sumatoria de los números pares que existen entre 2 y "n". Pista: La sumatoria de los números pares desde 2 hasta "n" (por ejemplo "n=8": 2+4+6+8=20) es igual a la sumatoria desde i=4 hasta "n" (4+6+8=18) más el primer número par: 2 (i=2). Cuando el valor del contador "i" es mayor a "n" el resultado es 0. Debe validar que el número sea entero (%,!==) positivo (&lt;), error: "El número debe ser entero positivo". Posteriormente llame a la función con valores de "n" iguales a: 0, 2, 8, 35, 83, 120, 37.4 y -45.</p><div id="pregunta8" class="calculadora" spellcheck="false"><div class="instruccion">sPares = n =&gt; {<br>  if (n%1!==0 || n&lt;0) throw "El número debe ser entero positivo";<br>  const sumr = i =&gt; i&gt;n ? 0 : sumr(i+2)+i;<br>  return sumr(2);<br>};</div><div class="resultado"></div><div class="instruccion">sPares(0)</div><div class="resultado"></div><div class="instruccion">sPares(2)</div><div class="resultado"></div><div class="instruccion">sPares(8)</div><div class="resultado"></div><div class="instruccion">sPares(35)</div><div class="resultado"></div><div class="instruccion">sPares(83)</div><div class="resultado"></div><div class="instruccion">sPares(120)</div><div class="resultado"></div><div class="instruccion">sPares(37.4)</div><div class="resultado"></div><div class="instruccion">sPares(-45)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="12" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 3 -->
+
+  <div class="ejercicio" id="ejercicio4" enunciado="1"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Dentro de la función "sImpares", que recibe un número entero positivo "n", programe la función recusiva "sumr" que devuelva la sumatoria de los números impares que existen entre 2 y "n". Pista: La sumatoria de los números impares desde 1 hasta "n" (por ejemplo "n=7": 1+3+5+7=16) es igual a la sumatoria desde i=3 hasta "n" (3+5+7=15) más el primer número impar: 1 (i=1). Cuando el valor del contador "i" es mayor a "n" el resultado es 0. Debe validar que el número sea entero (%,!==) positivo (&lt;), error: "El número debe ser entero positivo". Posteriormente llame a la función con valores de "n" iguales a: 0, 1, 9, 36, 84, 121, 37.4 y -45.</p><div id="pregunta10" class="calculadora" spellcheck="false"><div class="instruccion">sImpares = n =&gt; {<br>  if (n%1!==0 || n&lt;0) throw "El número debe ser entero positivo";<br>  const sumr = i =&gt; i&gt;n ? 0 : sumr(i+2)+i;<br>  return sumr(1);<br>};</div><div class="resultado"></div><div class="instruccion">sImpares(0)</div><div class="resultado"></div><div class="instruccion">sImpares(1)</div><div class="resultado"></div><div class="instruccion">sImpares(9)</div><div class="resultado"></div><div class="instruccion">sImpares(36)</div><div class="resultado"></div><div class="instruccion">sImpares(84)</div><div class="resultado"></div><div class="instruccion">sImpares(121)</div><div class="resultado"></div><div class="instruccion">sImpares(37.4)</div><div class="resultado"></div><div class="instruccion">sImpares(-45)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="12" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 4 -->
+
+  <div class="ejercicio" id="ejercicio5" enunciado="3"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Dentro de la función "sPImpares", que recibe un número entero positivo "n", programe la función recusiva "sumr" que devuelva la sumatoria de los números impares que existen entre 2 y "n". Pista: La sumatoria de los números impares desde 1 hasta "n" (por ejemplo "n=7": 1+3+5+7=16) es igual a la sumatoria desde i=3 hasta "n" (3+5+7=15) más el primer número impar: 1 (i=1). Cuando el valor del contador "i" es mayor a "n" el resultado es 0. Debe validar que el número sea entero (%,!==) positivo (&lt;), error: "El número debe ser entero positivo". Tome en cuenta que el último número impar a sumar es "2*n-1". Posteriormente llame a la función con valores de "n" iguales a: 0, 1, 5, 18, 42, 61, 37.4 y -45.</p><div id="pregunta14" class="calculadora" spellcheck="false"><div class="instruccion">sPImpares = n =&gt; {<br>  if (n%1!==0 || n&lt;0) throw "El número debe ser entero positivo";<br>  const sumr = i =&gt; i&gt;2*n-1 ? 0 : sumr(i+2)+i;<br>  return sumr(1);<br>};</div><div class="resultado"></div><div class="instruccion">sPImpares(0)</div><div class="resultado"></div><div class="instruccion">sPImpares(1)</div><div class="resultado"></div><div class="instruccion">sPImpares(5)</div><div class="resultado"></div><div class="instruccion">sPImpares(18)</div><div class="resultado"></div><div class="instruccion">sPImpares(42)</div><div class="resultado"></div><div class="instruccion">sPImpares(61)</div><div class="resultado"></div><div class="instruccion">sPImpares(37.4)</div><div class="resultado"></div><div class="instruccion">sPImpares(-45)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="12" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 5 -->
+
+  <div class="ejercicio" id="ejercicio6" enunciado="1"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Dentro de la función "sSerieA", que recibe dos números enteros positivos "m" y "n", programe la función recusiva "sumr" que devuelva la sumatoria de la serie aritmética cuya diferencia es 5 y cuyos elementos están comprendidos entre "m" y "n". Pista: La sumatoria de la serie 4, 9, 14, ..., 25 (m=4, n=25), es la sumatoria de los elementos "i" = 9, 14, 19, 24, más el primer elemento: 4. Si el elemento "i" (en este ejemplo 29) es mayor a "n" (mayor a 25) el resultado es 0 (porque entre los límites dados ya no existen más elementos que cumplan con la serie). Debe validar que los límites sean enteros (%,!==) positivos (&lt;, error: "Los límites deben ser enteros positivos") y que el límite inferior ("m") sea menor al superior ("n") (&gt;=, error: "El límite inferior debe ser menor al superior"). Posteriormente llame a la función con valores de "m" y "n" iguales a: (4, 25), (7, 54), (11, 14), (21, 12), (6.3, 33.6).</p><div id="pregunta16" class="calculadora" spellcheck="false"><div class="instruccion">sSerieA = (m,n) =&gt; {<br>  if (m%1!==0 || m&lt;0 || n%1!==0 || n&lt;0) throw "Los límites deben ser enteros positivos";<br>  if (m&gt;=n) throw "El límite inferior debe ser menor al superior";<br>  const sumr = i =&gt; i&gt;n ? 0 : sumr(i+5)+i;<br>  return sumr(m);<br>};</div><div class="resultado"></div><div class="instruccion">sSerieA(4,25)</div><div class="resultado"></div><div class="instruccion">sSerieA(7,54)</div><div class="resultado"></div><div class="instruccion">sSerieA(11,14)</div><div class="resultado"></div><div class="instruccion">sSerieA(21,12)</div><div class="resultado"></div><div class="instruccion">sSerieA(6.3,33.6)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="12" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 6 -->
+
+  <div class="ejercicio" id="ejercicio7" enunciado="1"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Dentro de la función "sSerieG", que recibe dos números enteros positivos "m" y "n", programe la función recusiva "sumr" que devuelva la sumatoria de la serie geométrica cuya razón es 4 y cuyos elementos están comprendidos entre "m" y "n". Pista: La sumatoria de la serie 1, 4, 16, ..., 1150 (m=1, n=1150), es la sumatoria de los elementos "i" = 4, 16, 64, 256, 1024, más el primer elemento: 1. Si el elemento "i" (en este ejemplo 4096) es mayor a "n" (mayor a 1024) el resultado es 0 (porque entre los límites dados ya no existen más elementos que cumplan con la serie). Debe validar que los límites sean enteros (%,!==) positivos (&lt;, error: "Los límites deben ser enteros positivos") y que el límite inferior ("m") sea menor al superior ("n") (&gt;=, error: "El límite inferior debe ser menor al superior"). Posteriormente llame a la función con valores de "m" y "n" iguales a: (1, 1150), (7, 1600), (6, 9), (21, 12), (5.3, 23.6).</p><div id="pregunta19" class="calculadora" spellcheck="false"><div class="instruccion">sSerieG = (m,n) =&gt; {<br>  if (m%1!==0 || m&lt;0 || n%1!==0 || n&lt;0) throw "Los límites deben ser enteros positivos";<br>  if (m&gt;=n) throw "El límite inferior debe ser menor al superior";<br>  const sumr = i =&gt; i&gt;n ? 0 : sumr(i*4)+i;<br>  return sumr(m);<br>};</div><div class="resultado"></div><div class="instruccion">sSerieG(1,1150)</div><div class="resultado"></div><div class="instruccion">sSerieG(7,1600)</div><div class="resultado"></div><div class="instruccion">sSerieG(6,9)</div><div class="resultado"></div><div class="instruccion">sSerieG(21,12)</div><div class="resultado"></div><div class="instruccion">sSerieG(5.3,23.6)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="12" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 7 -->
+
+  <div class="ejercicio" id="ejercicio8" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Dentro de la función "primerDigito", que recibe un número entero "n", programe la función recursiva "pd" que devuelva el primer dígito "n". Pista: El primer dígito de un número (por ejemplo 43256) simplemente es el primer dígito de su cociente entre 10 (el primer dígito de 4325, es decir el número 4). Si el número sólo tiene un dígito (si es menor a 10) ese es el primer dígito. Debe validar que el número sea entero (%,!==, error: "El número debe ser entero"). Si el número es negativo, para obtener el resultado correcto, debe llamar a la función recursiva con su valor positivo y cambiar el signo del resultado. Posteriormente llame a la función con: 8934, 34, 5, 102, -3456, 3892.6 y 0.</p><div id="pregunta21" class="calculadora" spellcheck="false"><div class="instruccion">primerDigito = n =&gt; {<br>  if (n%1!==0) throw "El número debe ser entero";<br>  const pd = n =&gt; n&lt;10 ? n : pd((n-n%10)/10);<br>  return n&lt;0 ? -pd(-n) : pd(n);<br>};</div><div class="resultado"></div><div class="instruccion">primerDigito(8934)</div><div class="resultado"></div><div class="instruccion">primerDigito(34)</div><div class="resultado"></div><div class="instruccion">primerDigito(5)</div><div class="resultado"></div><div class="instruccion">primerDigito(102)</div><div class="resultado"></div><div class="instruccion">primerDigito(-3456)</div><div class="resultado"></div><div class="instruccion">primerDigito(3892.6)</div><div class="resultado"></div><div class="instruccion">primerDigito(0)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="12" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 8 -->
+
+  <div class="ejercicio" id="ejercicio9" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Dentro de la función "sinPrimerDígito", que recibe un número entero "n", programe la función recursiva "spd", que reciba el valor positivo "n" y devuelva ese número sin su primer dígito, así si el número es 83234, deberá devolver 3234. Pista: El número (por ejemplo, 857734) sin su primer dígito, es el cociente del número entre 10 (85773) sin su primer dígito (5773) multiplicado por 10 (57730) más el residuo del número entre 10 (57734). Cuando el número tiene sólo un dígito (cuando es menor a 10) el número sin su primer dígito es 0 (la respuesta conocida). Debe validar que el número sea entero (%,!==, error: "El número debe ser entero"). Si el número es negativo, para obtener el resultado correcto, debe llamar a la función recursiva con su valor positivo y cambiar el signo del resultado. Posteriormente llame a la función con: 432, 24, 9324, 9, -6453, 8792.5, 0.</p><div id="pregunta23" class="calculadora" spellcheck="false"><div class="instruccion">sinPrimerDígito = n =&gt; {<br>  if (n%1!==0) throw "El número debe ser entero";<br>  const spd = n =&gt; n&lt;10 ? 0 : spd((n-n%10)/10)*10+n%10;<br>  return n&lt;0 ? -spd(-n) : spd(n);<br>};</div><div class="resultado"></div><div class="instruccion">sinPrimerDígito(432)</div><div class="resultado"></div><div class="instruccion">sinPrimerDígito(24)</div><div class="resultado"></div><div class="instruccion">sinPrimerDígito(9324)</div><div class="resultado"></div><div class="instruccion">sinPrimerDígito(9)</div><div class="resultado"></div><div class="instruccion">sinPrimerDígito(-6453)</div><div class="resultado"></div><div class="instruccion">sinPrimerDígito(8792.5)</div><div class="resultado"></div><div class="instruccion">sinPrimerDígito(0)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="12" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 9 -->
+
+  <div class="ejercicio" id="ejercicio10" enunciado="1"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Dentro de la función "múltiploDe10", que recibe un número entero "n", programe la función recursiva "md10" que devuelva el múltiplo de 10 con el mismo número de dígitos que "n". Así si el número es 12345 debe devolver 10000. Pista: El múltiplo de 10 con el número de dígitos de "n", es el múltiplo de 10 con el número de dígitos del cociente de "n" entre 10, multiplicado por 10. Si el número sólo tiene un dígito su múltiplo de 10 es 1 (valor conocido). Debe validar que el número sea entero (%,!==, error: "El número debe ser entero"). Si el número es negativo, para obtener el resultado correcto, debe llamar a la función recursiva con su valor positivo y cambiar el signo del resultado. Posteriormente llame a la función con: 31, 389424, 5, 123456789, -9835, 785.32 y 0.</p><div id="pregunta26" class="calculadora" spellcheck="false"><div class="instruccion">múltiploDe10 = n =&gt; {<br>  if (n%1!==0) throw "El número debe ser entero";<br>  const md10 = n =&gt; n&lt;10 ? 1 : md10((n-n%10)/10)*10;<br>  return n&lt;0 ? -md10(-n) : md10(n);<br>};</div><div class="resultado"></div><div class="instruccion">múltiploDe10(31)</div><div class="resultado"></div><div class="instruccion">múltiploDe10(389424)</div><div class="resultado"></div><div class="instruccion">múltiploDe10(5)</div><div class="resultado"></div><div class="instruccion">múltiploDe10(123456789)</div><div class="resultado"></div><div class="instruccion">múltiploDe10(-9835)</div><div class="resultado"></div><div class="instruccion">múltiploDe10(785.32)</div><div class="resultado"></div><div class="instruccion">múltiploDe10(0)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="12" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 10 -->
+
+  <div class="ejercicio" id="ejercicio11" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Dentro de la función "potEntera", que recibe un número real "x" y un número entero "n", programe la función recursiva "pe", que devuelva el resultado de elevar "x" a "n", tomando en cuenta que x<sup>n</sup> es igual a (x<sup>n\2</sup>)<sup>2</sup> cuando "n" es par y (x<sup>n\2</sup>)<sup>2</sup>*x, cuando es impar (donde n\2 es el cociente de n entre 2). Si "n" es 0 (si es menor a 1) el resultado es 1 (x<sup>0</sup> = 1, resultado conocido). Debe validar que la potencia sea entera (%,!==, "La potencia debe ser entera"). Si el número es negativo, para obtener el resultado correcto, debe llamar a la función recursiva con su valor positivo e invertir resultado. Posteriormente llame a la función con (x<sup>n</sup>): 1.2<sup>0</sup>, 2.1<sup>5</sup>, 0.25<sup>7</sup>, 2<sup>8</sup> 1.5<sup>25</sup>, -6.7<sup>10</sup>, 3.2<sup>-5</sup> y 4.2<sup>5.6</sup>.</p><div id="pregunta27" class="calculadora" spellcheck="false"><div class="instruccion">potEntera = (x,n) =&gt; {<br>  if (n%1!==0) throw "La potencia debe ser entera";<br>  const pe = n =&gt; n&lt;1 ? 1 : pe((n-n%2)/2)**2*(n%2?x:1);<br>  return n&lt;0 ? 1/pe(-n) : pe(n);<br>};</div><div class="resultado"></div><div class="instruccion">potEntera(1.2,0)</div><div class="resultado"></div><div class="instruccion">potEntera(2.1,5)</div><div class="resultado"></div><div class="instruccion">potEntera(0.25,7)</div><div class="resultado"></div><div class="instruccion">potEntera(2,8)</div><div class="resultado"></div><div class="instruccion">potEntera(1.5,25)</div><div class="resultado"></div><div class="instruccion">potEntera(-6.7,10)</div><div class="resultado"></div><div class="instruccion">potEntera(3.2,-5)</div><div class="resultado"></div><div class="instruccion">potEntera(4.2,5.6)</div><div class="resultado"></div></div><p class="pregunta" id="pregunta28"><span class="pregunta"></span>Cuando "potEntera" es llamada con "n=8", la función recursiva se llama a sí misma <span class="campo_literal correcta" tabindex="0" contenteditable="true">4</span> veces.<br>La expresión recursiva con la que se calcula 2<sup>5</sup>, es (escriba los números y valores resultantes, puede emplear la calculadora del inciso anterior): pe(<span class="campo_literal correcta" tabindex="0" contenteditable="true">2</span>)**2*<span class="campo_literal correcta" tabindex="0" contenteditable="true">2</span> = <span class="campo_literal correcta" tabindex="0" contenteditable="true">4</span>**2*<span class="campo_literal correcta" tabindex="0" contenteditable="true">2</span> = <span class="campo_literal correcta" tabindex="0" contenteditable="true">16</span>*<span class="campo_literal correcta" tabindex="0" contenteditable="true">2</span> = <span class="campo_literal correcta" tabindex="0" contenteditable="true">32</span>.</p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="18" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 11 -->
+  
+  <div class="ejercicio" id="ejercicio12" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Dentro de la función "MCD", que recibe dos números enteros positivos "A" y "B", programe la función recursiva "mcd" que, empleando la siguiente ecuación, devuelva el máximo común divisior de los números "A" y "B":\[\begin{aligned}MCD(A, B) &amp;= A &amp;\text{si A=B}\\[1mm]MCD(A, B) &amp;= MCD(B, A) &amp;\text{si A&gt;B}\\[1mm]MCD(A, B) &amp;= MCD(A, B-A)\hspace{0.5cm} &amp;\text{si A&lt;B}\end{aligned}\]Debe validar que "A" y "B" sean enteros (%,!==) positivos (&lt;, error: "Los números deben ser enteros positivos"). Posteriormente llame a la función con (a, b): (108, 81), (93, 12), (65, 26), (72, 16), (3475, 325),  (10), (-23, -15), (5.1, 6.3), (3.5, -4).</p><div id="pregunta29" class="calculadora" spellcheck="false"><div class="instruccion">MCD = (A,B) =&gt; {<br>  if(A%1!==0 || A&lt;0 || B%1!==0 || B&lt;0) throw "Los números deben ser enteros positivos";<br>  const MCD = (A,B) =&gt; A===B ? A : A&gt;B ? MCD(B,A) : MCD(A,B-A);<br>  return MCD(A,B);<br>};</div><div class="resultado"></div><div class="instruccion">MCD(108,81)</div><div class="resultado"></div><div class="instruccion">MCD(93,12)</div><div class="resultado"></div><div class="instruccion">MCD(65,26)</div><div class="resultado"></div><div class="instruccion">MCD(72,16)</div><div class="resultado"></div><div class="instruccion">MCD(3475,325)</div><div class="resultado"></div><div class="instruccion">MCD(10,)</div><div class="resultado"></div><div class="instruccion">MCD(-23,-15)</div><div class="resultado"></div><div class="instruccion">MCD(5.1,6.3)</div><div class="resultado"></div><div class="instruccion">MCD(3.5,-4)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="14" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- Ejercicio 12-->
+
+  <div class="ejercicio" id="ejercicio13" enunciado="2"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Dentro de la función "laguerre", que recibe un número real "x" y un número entero positivo  "n", programe la función recursiva "lag" que devuelva el laguerre enésimo "n" del número real "x":\[\begin{aligned}\text{La}_n(x) &amp;= \dfrac{\left({2n-1-x}\right)\text{La}_{n-1}(x)-\left({n-1}\right)\text{La}_{n-2}(x)}{n}\\[2mm]\text{La}_0(x) &amp;= 1\\[1mm]\text{La}_1(x) &amp;=1-x\end{aligned}\]En la función recursiva siga el razonamiento iterativo. Debe validar que el orden "n" sea entero (%,!==) positivo (&lt;, error: "El orden debe ser entero positivo"). Al llamar a la función recursiva si el orden es 0 o 1, debe devolver diretamente el resultado conocido. Posteriormente llame a la función "laguerre" con valores de (x, n) iguales a: (3.2, 15), (2.3, 12), (1.7, 21), (3.3, 23), (2.4, 33), (4.2, 35), (2.3, -15) y (14, 12.7).</p><div id="pregunta32" class="calculadora" spellcheck="false"><div class="instruccion">laguerre = (x,n) =&gt; {<br>  if (n%1!==0 || n&lt;0) throw "El orden debe ser entero positivo";<br>  let l0=1,l1=1-x,l2;<br>  const lag = i =&gt; (l2=((2*i-1-x)*l1-(i-1)*l0)/i,l0=l1,l1=l2,i===n) ? l2 : lag(i+1);<br>  return n===0 ? 1 : n===1 ? 1-x : lag(2);<br>};</div><div class="resultado"></div><div class="instruccion">laguerre(3.2,15)</div><div class="resultado"></div><div class="instruccion">laguerre(2.3,12)</div><div class="resultado"></div><div class="instruccion">laguerre(1.7,21)</div><div class="resultado"></div><div class="instruccion">laguerre(3.3,23)</div><div class="resultado"></div><div class="instruccion">laguerre(2.4,33)</div><div class="resultado"></div><div class="instruccion">laguerre(4.2,35)</div><div class="resultado"></div><div class="instruccion">laguerre(2.3,-15)</div><div class="resultado"></div><div class="instruccion">laguerre(14,12.7)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="15" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- Ejercicio 13-->
+
+  <div class="ejercicio" id="ejercicio14" enunciado="1"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Dentro de la función "cosenoh", que recibe un número real "x", programe la función recursiva "cosh" que calcule con la siguiente serie de Taylor (con 12 dígitos de precisión) el coseno hiperbólico de "x":\[\cosh(x) = 1+\dfrac{x^2}{2!}+\dfrac{x^4}{4!}+\dfrac{x^6}{6!}+\cdots \infty\]Programe la función recursiva siguiendo el razonamiento iterativo. Al llamar a la función recursiva, si el "x" es 0, debe devolver directamente el resultado. Posteriormente llame a la función con valores de "x" iguales a: a) 0; b) 3.6; c) 12.3; d) -29.3 y e) 145.7</p><div id="pregunta34" class="calculadora" spellcheck="false"><div class="instruccion">cosenoh = x =&gt; {<br>  const xx=x*x;<br>  let ter=1, s2;<br>  const cosh = (s1,i) =&gt; (ter*=xx/(i*(i+1)),s2=s1+ter,Math.abs(s1/s2-1)&lt;1e-12) ? s2 : cosh(s2,i+2);<br>  return x===0 ? 1 : cosh(ter,1);<br>};</div><div class="resultado"></div><div class="instruccion">cosenoh(0)</div><div class="resultado"></div><div class="instruccion">cosenoh(3.6)</div><div class="resultado"></div><div class="instruccion">cosenoh(12.3)</div><div class="resultado"></div><div class="instruccion">cosenoh(-29.3)</div><div class="resultado"></div><div class="instruccion">cosenoh(145.7)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="12" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- Ejercicio 14-->
+
+
+  <br>
+  
+
+
+  <div id="generarPrueba" data-scroll-y="20348"><br><hr><label class="lnotacapitulo">Nota del capítulo: </label><input type="text" id="notaCapitulo" disabled="disabled" class="itnotacapitulo"><br><br><button id="btGenerarPrueba" style="visibility: visible;" onclick="capitulo.registrarCapitulo()">Iniciar defensa</button><button id="btEmplearBono" style="margin-left:1.1rem;width:9.686rem;display:none;" onclick="capitulo.emplearBono()">Emplear Bono</button><br><br></div>
+
+
+<d id="dAutor" style="font-size: 0.9rem;text-align:center;color: #0808f24f;font-weight:bolder;position:fixed;top: 5px;right: 5px;user-select:none;display:inline-block;z-index:15;">Hernan G. Peñaranda V.</d></div><!-- Cierre del div capítulo -->
+
+
+<div id="dato" style="display:none;">KqbJCKyn938lCZ0oDYGpDIqsDZSn93CuCZ0aCJan934vCIGnC30aC2HLJcHMI000</div>
+<div id="reg" style="display:none;">CJ4xCJ4mEp8mCJioC34xD30mC34xCZ0nC3ioC34mEp4nC3inCJ0xCZ0nEp4nEp4nEpCmC34xCZ0nC000</div>
+
+
+
+
+<div id="divDialogo" style="display: none;"><div onfocus="document.querySelector('#divDialogo input').focus();"><div>Carnet universitario</div><div>Escriba el número de su carnet universitario, verificando que el guión haya sido correctamente insertado.</div><input type="text" onkeydown="return Capitulo.divDialogo.funKeydown(event)" onkeyup="Capitulo.divDialogo.funKeyup(event)"><div><button onclick="Capitulo.divDialogo.funClick('aceptar');">Aceptar</button><button style="margin-left:35px;" onclick="Capitulo.divDialogo.funClick('cancelar');">Cancelar</button></div></div></div></body>
