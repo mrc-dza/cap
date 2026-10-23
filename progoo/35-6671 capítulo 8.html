@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<head>
+
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Language" content="es">
+
+  <title>35-6671 capítulo 8</title>
+    
+    <!-- Librería y hoja de estilos KATEX  -->
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/katex/katex.min.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/katex/katex.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/katex/contrib/auto-render.min.js"></script>
+
+    <!-- Librerías y hojas de estilo CodeMirror -->
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/lib/codemirror.min.css">
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/theme/mdn-like.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/lib/codemirror.min.js"></script>
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/fold/foldgutter.min.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/fold/foldcode.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/fold/brace-fold.min.js"></script>
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/dialog/dialog.min.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/dialog/dialog.min.js"></script>
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/hint/show-hint.min.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/hint/show-hint.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/hint/javascript-hint.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/search/searchcursor.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/search/search.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/edit/matchbrackets.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/edit/closebrackets.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/comment/comment.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/wrap/hardwrap.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/javascript/javascript.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/mathematica/mathematica.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/octave/octave.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/python/python.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/css/css.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/xml/xml.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/markdown/markdown.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/htmlmixed/htmlmixed.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/keymap/sublime.min.js"></script>
+
+    <!-- Librería Plotly -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script><style id="plotly.js-style-global"></style>
+
+    <!-- Librerías y hojas de estilo function-plot -->
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/function-plot/site/js/vendor/d3.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/function-plot/dist/function-plot.js"></script>
+    
+    <!-- Librería quantities -->
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/quantities/quantities.min.js"></script>
+
+    <!-- Librería GoJs para la creación de diagramas de flujo -->
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/gojs/release/go.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/flowchart_gojs.js"></script>
+
+    <!-- Librerías matemáticas propias -->
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/math.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/number.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/array.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/string.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/cplx.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/function.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/object.js"></script>
+    <!-- <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/prq.js"></script> -->
+
+    <!-- Librería y hoja de estilos propias para la creación y manejo de la calculadora  -->
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/src/cjs.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/cjs.js"></script>
+
+    <!-- Librería y hoja de estilos propias para la creación y manejo de los capítulos -->
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/src/texto.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/texto.js"></script>
+
+   <!-- Librería del capítulo actual -->
+    <script src="https://cursosabiertos.usfx.bo/materias/progoo/capitulos/capitulo8/files/capitulo8.js"></script>
+
+    <!-- Fuentes empleadas en el capítulo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;600;700;800&amp;family=Roboto+Mono&amp;display=swap" rel="stylesheet">
+
+    <script>
+        function katexRender() {
+            renderMathInElement(document.getElementById("capitulo"));
+        }
+        document.addEventListener("DOMContentLoaded", katexRender);
+        window.onerror = function(msg, url, lineNo, columnNo, error) {
+            __error__ = msg;
+        };
+        window.onload = function(){
+            capitulo.iniciar();
+        };
+    </script>
+
+</head>
+
+<body class="text">  
+
+
+<div id="capitulo">
+
+
+    <button id="btGuardar" style="z-index:15;" onclick="savePage()">Guardar</button>
+
+
+    <h1 class="text" onclick="alerta(capitulo.idPagina,'')" style="cursor: pointer;">Arreglos 1</h1>
+
+    <p class="text">En el paradigma de la POO, gran parte del trabajo de programación consiste en el uso correcto de las clases existentes (reutilización de código). Por esa razón es muy importante conocer y saber emplear correctamente esas clases, así como extenderlas (heredarlas) o de ser conveniente, modificarlas.</p>
+
+    <p class="text">Es en ese sentido que en este capítulo comienza el estudio de la clase <strong class="style1">Array</strong>, que es la clase JavaScript especializada em el manejo de vectores (arrays unidimensionales) y matrices (arrays multidimensionales).</p>
+
+    <p class="text">Al estar conformado un <dfn class="style1">Array</dfn> por dos o más datos, se trata de un <strong class="style1">dato estructurado</strong> (todo dato que está conformado por dos o más datos es un dato estructurado).</p>
+
+
+    <h2 class="text">Formas de declarar un objeto de tipo Array</h2>
+
+    <p class="text">En capítulos previos ya se han empleado arrays y se ha utilizado la declaración simplificada, es decir, escribir los elementos del array entre corchetes separados con comas. Esta es la forma más empleada en la práctica y la que se seguirá empleando con más frecuencia. No obstante, es conveniente conocer las otras formas de crear <dfn class="style1">arrays</dfn> porque, por una parte, permite comprender mejor su naturaleza de <dfn class="style1">objetos</dfn> de la clase <dfn class="style1">Array</dfn> y por otra, porque algunas de esas formas son más útiles o eficientes en la resolución de algunos tipos de problemas.</p>
+    
+    <p class="text">Como son objetos de una clase, los <dfn class="style1">arrays</dfn> pueden ser declarados como se declara cualquier objeto a partir de una clase, es decir empleando la palabra reservada <strong class="style1">new</strong>:</p>
+        
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">a = new Array(1, 2, 3, 4, 5, 6); a</div>
+        <div class="resultado"></div>
+        <div class="instruccion">b = new Array("java", "PHP", "lenguajes"); b</div>
+        <div class="resultado"></div>
+        <div class="instruccion">c = new Array("uno", 1, "dos", 2, true, false); c</div>
+        <div class="resultado"></div>
+        <div class="instruccion">e = new Array(); e</div>
+        <div class="resultado"></div>
+        <div class="instruccion">d = new Array(12); d</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Como se puede ver en el último ejemplo, cuando se manda al constructor un solo elemento (12 en este ejemplo), en lugar de crear un vector con el valor de ese elemento (como se esperaría) el constructor crea un array con ese número de elementos indefinidos.</p>
+
+    <p class="text">Los arreglos pueden ser creados también con el método estático <b class="style1">of</b>, que devuelve los mismos resultados que <b clconass="style1">new Array</b>, excepto que, cuando se manda un sólo número, crea un vector con ese número y no (como ocurre con <dfn class="style1">new Array</dfn>) un vector con ese número de elementos indefinidos:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">a = Array.of(1, 2, 3, 4, 5, 6); a</div>
+        <div class="resultado"></div>
+        <div class="instruccion">b = Array.of("java", "PHP", "lenguajes"); b</div>
+        <div class="resultado"></div>
+        <div class="instruccion">c = Array.of("uno", 1, "dos", 2, true, false); c</div>
+        <div class="resultado"></div>
+        <div class="instruccion">d = Array.of(12); d</div>
+        <div class="resultado"></div>
+        <div class="instruccion">e = Array.of(); e</div>
+        <div class="resultado"></div>
+        <div class="instruccion">h = Array.of(15); h</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Esta forma, igualmente, no se emplea con mucha frecuencia en la práctica.</p>
+
+    <p class="text">Una tercera forma de crear arreglos, que resulta útil en algunas ocasiones, es con el método estático <b class="style1">from</b>, el cual crea un array a partir de los elementos de un objeto de tipo array o de un objeto iterable. Básicamente, un objeto de tipo array, es aquel que tiene la propiedad <dfn class="style1">length</dfn>, como es el caso, por ejemplo, de las cadenas de caracteres. La propiedad <dfn class="style1">length</dfn> devuelve el número de elementos del array (y en el caso de las cadenas el número de caracteres de la cadena).</p>
+
+    <p class="text">Así, con las siguientes instrucciones se crean dos arreglos a partir de los caracteres de dos cadenas (de dos strings):</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">Array.from("JavaScript")</div>
+        <div class="resultado"></div>
+        <div class="instruccion">Array.from("En un lugar de la mancha")</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Sin embargo, a diferencia de <dfn class="style1">new Array</dfn>, cuando se crea un array a partir de un objecto literal que solo tiene el atributo <dfn class="style">length</dfn>, se crea un array que tiene ese número de elementos con el valor <dfn class="style1">undefined</dfn>, mientras que <dfn class="style1">new Array(n)</dfn> sólo reserva espacio para "n" elementos (sólo asigna el valor de "n" a la propiedad <dfn class="style1">length</dfn>) pero en realidad no tiene ningún elemento.</p>
+
+    <p class="text">Así, en la siguiente instrucción, se crea un array con 7 elementos iguales a <dfn class="style1">undefined</dfn> y se muestran esos elementos en un ciclo <dfn class="style1">for</dfn>:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">y1 = Array.from({length:7}); y1</div>
+        <div class="resultado"></div>
+        <div class="instruccion">for (let i=0; i&lt;y1.length; i++) print(y1[i]);</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">El método <b class="style1">Array.from</b> admite, opcionalmente, una función que puede recibir el valor del elemento actual y su índice. Los resultados esta función pasan a ser los valores de los elementos del array.</p>
+
+    <p class="text">Por ejemplo, en las siguientes instrucciones se crean tres array, con 5, 7 y 3 elementos, con valores iguales a 7, 12 y "JavaScript":</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">Array.from({length:5}, ()=&gt;7)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">Array.from({length:7}, ()=&gt;12)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">Array.from({length:3}, ()=&gt;"JavaScript")</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">En este caso las funciones no reciben ningún valor, porque en los 3 casos son valores <dfn class="style1">undefined</dfn>, pero tampoco recibe ningún índice, porque lo que se quiere es que todos los elementos tengan el mismo valor: En el primer caso devuelve (en cada una de las 5 iteraciones) el número 7, en el segundo el número 12 y en el tercer la cadena "JavaScript".</p>
+
+    <p class="text">En la siguiente instrucción se crea un array con 6 números enteros consecutivos que comienzan con el número 0:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">Array.from({length:6}, (_,i)=&gt;i)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Como se puede ver la función recibe dos parámetros: el elemento "_" y el índice "i" de cada iteración, sin embargo, sólo utiliza el índice "i". Para denotar ese hecho, al parámetro que no se emplea dentro de la función, se le da el nombre: "<b class="style1">_</b>". Si ben esta no es una norma, es una práctica frecuente en programación. En este ejemplo la función simplemente devuelve (en cada iteración) el valor del índice "i".</p>
+    
+    <p class="text">En la siguiente instrucción se crea un array con 7 números enteros consecutivos, comenzando con el número 2:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">Array.from({length:7}, (_,i)=&gt;i+2)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Este ejemplo es similar al anterior, sólo que ahora el primer elemento es 2, por lo que se debe sumar 2 al índice (i+2).</p>
+    
+    <p class="text">En la siguiente instrucción se crea un array con 5 números pares consecutivos, comenzando con el número 4:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">Array.from({length:5}, (_,i)=&gt;i*2+4)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Para generar números pares, simplemente se multiplica el índice "i" por 2 (i*2) y se le suma el primer número par que se quiere generar (en este caso 4).</p>
+    
+    <p class="text">En la siguiente instrucción se crea un array con 7 números impares a partir del número 5:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">Array.from({length:7}, (_,i)=&gt;i*2+5)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Al igual que en el ejemplo anterior, para generar números impares se multiplica el índice "i" por 2 (i*2) y se le suma el primer número impar que se quiere generar (en este caso 5).</p>
+    
+    <p class="text">En la siguiente instrucción se crean un array con una serie de 9 números enteros, que inician en 2 y cuya diferencia es 6 (2, 8, 14, 20, ...):</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">Array.from({length:9}, (_,i)=&gt;i*6+2)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Al igual que en los anteriores ejemplos, para generar la serie, se multiplica el índice "i" por la separación entre los números (i*6) y se le suma el primer número de la serie (en este caso 2).</p>
+
+    <p class="text">Sin embargo, si lo que se quiere crear es un array con elementos conocidos, la forma más sencilla de hacerlo es mediante un array literal, es decir <dfn class="style1">escribir, entre corchetes, los elementos separados con comas</dfn>.</p>
+
+    <p class="text">Es importante recordar en todo momento que, <i class="style1">en Javascript, el índice del primer elemento es 0, no 1</i> y que, como ya se vio previamente, cada uno de los elementos del array se emplean igual que cualquier variable, excepto que es necesario escribir el indice del elemento (su posición) entre corchetes. Así, dado el siguiente vector:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">x = [1, 4, 3, 7, 9, 12]; x</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Para asignar nuevos valores a algunos de sus elementos, simplemente se escribe el nombre del array ("x"), el índice (el número entre corchetes [...]) y se le asigna ("=") el nuevo valor. Por ejemplo, en las siguientes instrucciones, se asigna al segundo elemento el número 40 y al quinto el número 90:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">x[1] = 40; x</div>
+        <div class="resultado"></div>
+        <div class="instruccion">x[4] = 90; x</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Y en la siguiente instrucción, se calcula la raíz cuadrada de la suma de sus elementos</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">Math.sqrt(x[0]+x[1]+x[2]+x[3]+x[4]+x[5])</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="text">Por defecto, <i class="style1">los array en Javascript son dinámicos</i>, es decir, que se le pueden añadir o quitar elementos según se requiera.</p>
+
+
+    <div class="ejercicio" id="ejercicio1" enunciado="1"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Empleando el método formal <dfn>new Array</dfn> o <dfn>Array.of</dfn>, cree y muestre:</p></div><p class="pregunta"><span class="pregunta"></span>El vector "a" con los elementos 1, 3, 5, 7, 9 y 11:</p><div id="pregunta5" class="calculadora" spellcheck="false"><div class="instruccion">a = Array.of(1,3,5,7,9,11); a</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>El vector "b" con las letras "r", "s", "t", "u" y "v":</p><div id="pregunta6" class="calculadora" spellcheck="false"><div class="instruccion">b = Array.of("r","s","t","u","v"); b</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>El vector vacío "c":</p><div id="pregunta7" class="calculadora" spellcheck="false"><div class="instruccion">c = Array.of(); c</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>El vector "d" con el  número 29:</p><div id="pregunta8" class="calculadora" spellcheck="false"><div class="instruccion">d = Array.of(29); d</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="8" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- Ejercicio 1 -->
+
+    <div class="ejercicio" id="ejercicio2" enunciado="2"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Empleando el método estático <dfn>Array.from</dfn>, cree y muestre:</p></div><p class="pregunta"><span class="pregunta"></span>Un vector con los caracteres de la cadena "Paradigma":</p><div id="pregunta23" class="calculadora" spellcheck="false"><div class="instruccion">Array.from("Paradigma")</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Un vector con los números consecutivos del 8 al 16:</p><div id="pregunta24" class="calculadora" spellcheck="false"><div class="instruccion">Array.from({length: 9}, (_,i)=&gt;i+8)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Un vector con los números pares del 12 al 24</p><div id="pregunta25" class="calculadora" spellcheck="false"><div class="instruccion">Array.from({length: 7}, (_,i)=&gt;i*2+12)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Un array con los números impares del 15 al 33</p><div id="pregunta26" class="calculadora" spellcheck="false"><div class="instruccion">Array.from({length: 10}, (_,i)=&gt;i*2+15)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Un array con los números 2, 7, 12, 17, ..., 37</p><div id="pregunta27" class="calculadora" spellcheck="false"><div class="instruccion">Array.from({length: 8}, (_,i)=&gt;i*5+2)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="15" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- Ejercicio 2 -->
+
+    <div class="ejercicio" id="ejercicio3" enunciado="1"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Empleando la notación simplificada:</p></div><p class="pregunta"><span class="pregunta"></span>Cree y muestre el vector "x" con los números 1, 3, 5, 7, 8 y 9:</p><div id="pregunta33" class="calculadora" spellcheck="false"><div class="instruccion">x = [1,3,5,7,8,9]; x</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Calcule la raíz cuadrada del segundo elemento:</p><div id="pregunta34" class="calculadora" spellcheck="false"><div class="instruccion">Math.sqrt(x[1])</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Calcule el logaritmo natural de la suma de los 3 primeros elementos:</p><div id="pregunta35" class="calculadora" spellcheck="false"><div class="instruccion">Math.log(x[0]+x[1]+x[2])</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Reemplace el valor del quinto elemento por 80 y muestre el vector resultante:</p><div id="pregunta36" class="calculadora" spellcheck="false"><div class="instruccion">x[4] = 80; x</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Reemplace el valor del último elemento por 90 y muestre el vector resultante:</p><div id="pregunta37" class="calculadora" spellcheck="false"><div class="instruccion">x[5] = 90; x</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="10" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- Ejercicio 3 -->
+
+    <div class="ejercicio" id="ejercicio4" enunciado="1"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Empleando la notación simplificada:</p></div><p class="pregunta"><span class="pregunta"></span>Cree el vector "v" con los números 1, 4, 5, 8, 11 y 12:</p><div id="pregunta48" class="calculadora" spellcheck="false"><div class="instruccion">v = [1,4,5,8,11,12]; v</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Calcule la raíz cúbica del segundo elemento:</p><div id="pregunta49" class="calculadora" spellcheck="false"><div class="instruccion">Math.cbrt(v[1])</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Calcule el coseno de la suma del segundo, cuarto y sexto elementos:</p><div id="pregunta50" class="calculadora" spellcheck="false"><div class="instruccion">Math.cos(v[1]+v[3]+v[5])</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Reemplace el valor del tercer elemento por 50 y muestre el vector resultante:</p><div id="pregunta51" class="calculadora" spellcheck="false"><div class="instruccion">v[2] = 50; v</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Reemplace el valor del penúltimo elemento por 110 y muestre el vector resultante:</p><div id="pregunta52" class="calculadora" spellcheck="false"><div class="instruccion">v[4] = 110; v</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="10" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- Ejercicio 4 -->
+
+    <div class="ejercicio" id="ejercicio5" enunciado="1"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Empleando la notación simplificada:</p></div><p class="pregunta"><span class="pregunta"></span>Cree y muestre el vector "a" con los números 1, 2, 3, 8, 9, 10, 11, 12:</p><div id="pregunta63" class="calculadora" spellcheck="false"><div class="instruccion">a = [1,2,3,8,9,10,11,12]; a</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Calcule el factorial del quinto elemento:</p><div id="pregunta64" class="calculadora" spellcheck="false"><div class="instruccion">Math.factorial(a[4])</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Calcule la raíz quinta de la suma del primer, tercer y sexto elementos:</p><div id="pregunta65" class="calculadora" spellcheck="false"><div class="instruccion">Math.nthroot(a[0]+a[2]+a[5],5)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Reemplace el valor del segundo elemento por 20 y muestre el vector resultante:</p><div id="pregunta66" class="calculadora" spellcheck="false"><div class="instruccion">a[1] = 20; a</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Reemplace el valor del séptimo elemento por 110 y muestre el vector resultante:</p><div id="pregunta67" class="calculadora" spellcheck="false"><div class="instruccion">a[6] = 110; a</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="10" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- Ejercicio 5 -->
+    
+
+
+    <h2 class="text">Métodos de la clase Array</h2>
+
+    <p class="text">Algunos de los métodos estándar, disponibles en Javascript para el trabajo con arrays, son:</p>
+
+    <div class="table borderAll">
+    <table style="width:550px;margin-left:auto; margin-right:auto;">
+        <caption>Métodos para vectores</caption>
+        <tbody><tr><th style="width:175px;">Método</th><th>Descripción</th></tr>
+        <tr><td><dfn class="style1">concat(v<sub>1</sub>,v<sub>2</sub>,...)</dfn></td><td>Crea un nuevo vector con los elementos del vector desde el que se llama al método y los elementos de los vectores "v<sub>1</sub>", "v<sub>2</sub>", etc.</td></tr>
+        <tr><td><dfn class="style1">copyWithin(i,j,k)</dfn></td><td>Copia a partir de la posición "i", los elementos desde la posición "j" hasta la posición "k-1". Si no se manda "k" o "k" es mayor al número de elementos, se copian los elementos desde "j" hasta el final del array.</td></tr>
+        <tr><td><dfn class="style1">every(f)</dfn></td><td>Devuelve verdadero si todos los elementos del array cumplen con la condición especificada en la función "f". Esta función: f(e[,i[,a]]) recibe uno a uno (en cada repetición) los elementos "e" del array desde el cual se hizo la llamada. Opcionalmente también puede recibir: el índice "i" y el array "a" desde el cual se llamó al método. Debe devolver un valor booleano</td></tr>
+        <tr><td><dfn class="style1">fill(v[,i[,j]])</dfn></td><td>Reemplaza los elementos del array original, por el valor "v". Si se manda "i", reemplaza los valores desde esa posición hasta el final. Si además se manda "j", reemplaza los elementos desde el elemento "i" hasta el elemento "j-1".</td></tr>
+        <tr><td><dfn class="style1">filter(f)</dfn></td><td>Devuelve un nuevo array con los elementos que cumplen la condición especificada en la función "f" ("f" recibe un elemento y debe devolver un valor booleano</td></tr>
+        <tr><td><dfn class="style1">find(f)</dfn></td><td>Devuelve el primer elemento que cumple la condición especificada en la función "f". La función: f(e[,i[,a]]) recibe, uno a uno (en cada repetición) los elementos "e" del array desde el cual se hizo la llamada. Opcionalmente también puede recibir: el índice "i" y el array "a" desde el cual se llamó al método. Debe devolver un valor booleano</td></tr>
+        <tr><td><dfn class="style1">findIndex(f)</dfn></td><td>Devuelve el índice del primer elemento que cumple la condición especificada en la función "f". La función: f(e[,i[,a]]) recibe uno a uno (en cada repetición) los elementos "e" del array desde el cual se hizo la llamada. Opcionalmente también puede recibir: el índice "i" y el array "a" desde el cual se llamó al método. Debe devolver un valor booleano</td></tr>
+        <tr><td><dfn class="style1">flat([p])</dfn></td><td>Devuelve un nuevo array donde los elementos que a su vez son arrays, dejan de ser array y sus elementos pasan a ser parte del array externo. Si se manda "p" (por defecto 1) el procedimiento continúa con los array que a su vez son array de otros elementos hasta la profundidad indicada (2, 3, ..., hasta Infinity). </td></tr>
+        <tr><td><dfn class="style1">forEach(f)</dfn></td><td>Ejecuta la función "f" para cada uno de los elementos del array. La función: f(e[,i[,a]]) recibe uno a uno (en cada repetición) los elementos "e" del array desde el cual se hizo la llamada. Opcionalmente también puede recibir: el índice "i" y el array "a" desde el cual se llamó al método.</td></tr>
+        <tr><td><dfn class="style1">includes(v[,i])</dfn></td><td>Devuelve "true" si "v" es uno de los elementos del array. Si se manda "i", la búsqueda comienza desde esa posición, si es negativo comienza desde esa posición, pero contando desde el final del array.</td></tr>
+        <tr><td><dfn class="style1">indexOf(v[,i])</dfn></td><td>Devuelve el índice del primer elemento cuyo valor es igual a "v", o -1 si "v" no existe en el vector. Si se manda "i", la búsqueda comienza desde ese elemento.</td></tr>
+        <tr><td><dfn class="style1">join("s")</dfn></td><td>Devuelve una cadena con los elementos del vector, separados entres si, por la cadena "s" (valor por defecto ",").</td></tr>
+        <tr><td><dfn class="style1">lastIndexOf(v[,i])</dfn></td><td>Devuelve el índice del último elemento cuyo valor es igual a "v", o -1 si "v" no existe en el vector. Si se manda "i", la búsqueda comienza desde ese elemento hacia atrás.</td></tr>
+        <tr><td><dfn class="style1">map(f)</dfn></td><td>Devuelve un nuevo array con los resultados de ejecutar la función "f" para cada uno de los elementos del array. La función: f(e[,i[,a]]) recibe uno a uno (en cada repetición) los elementos "e" del array desde el cual se hizo la llamada. Opcionalmente también puede recibir: el índice "i" y el array "a" desde el cual se llamó al método.</td></tr>
+        <tr><td><dfn class="style1">pop()</dfn></td><td>Quita el último elemento del vector y devuelve dicho elemento.</td></tr>
+        <tr><td><dfn class="style1">push(e<sub>1</sub>,e<sub>2</sub>,...)</dfn></td><td>Añade, al final del vector, los elementos e<sub>1</sub>, e<sub>2</sub>, etc. Devuelve el nuevo número de elementos del vector</td></tr>
+        <tr><td><dfn class="style1">reduce(f[, vi])</dfn></td><td>Ejecuta la función "f" para cada elemento del array y devuelve el resultado de la última iteración ("f(a,e)", recibe dos parámetros: la variable "a" donde se guarda automáticamente el resultado devuelto por la función en la iteración anterior y el elemento actual "e"). Si se manda "vi", se emplea como valor inicial de "a", sino, el valor inicial de "a" es el primer elemento del array.</td></tr>
+        <tr><td><dfn class="style1">reduceRight(f[, vi])</dfn></td><td>Igual que <dfn class="style1">reduce</dfn>, pero comenzando las iteraciones con el último elemento y terminando en el primero.</td></tr>
+        <tr><td><dfn class="style1">reverse()</dfn></td><td>Invierte el orden de los elementos del vector</td></tr>
+        <tr><td><dfn class="style1">shift()</dfn></td><td>Quita el primer elemento del vector y devuelve dicho elemento</td></tr>
+        <tr><td><dfn class="style1">slice(i,j)</dfn></td><td>Crea una copia de los elementos del vector desde el primer elemento (o desde el elemento "i") hasta el último elemento (o hasta el elemento "j-1").</td></tr>
+        <tr><td><dfn class="style1">some(f)</dfn></td><td>Devuelve verdadero si, alguno de los elementos del array, cumple con la condición especificada en la función "f". La función: f(e[,i[,a]]) recibe uno a uno (en cada repetición) los elementos "e" del array desde el cual se hizo la llamada. Opcionalmente también puede recibir: el índice "i" y el array "a" desde el cual se llamó al método. Debe devolver un valor booleano.</td></tr>
+        <tr><td><dfn class="style1">sort([f])</dfn></td><td>Ordena alfabéticamente los elementos del vector. Si se manda la función "f", ordena los elementos en base al resultado devuelto por la función: si el resultado es positivo, intercambia los elementos comparados, si es negativo o cero no los intercambia ("f(a,b)" recibe los elementos consecutivos "a" y "b" a comparar y debe devolver un valor numérico: positivo, negativo o cero.</td></tr>
+        <tr><td><dfn class="style1">splice(i[,n[,e<sub>1</sub>,e<sub>2</sub>,...]])</dfn></td><td>Quita los elementos del vector desde la posición "i" hasta el final. Si se manda "n" quita "n" elementos desde la posición "i". Si se mandan los elementos e<sub>1</sub>, e<sub>2</sub>, etc., inserta esos elementos a partir de la posición "i". Devuelve el vector, desde el cual se llamó al método, con los elementos removidos y/o añadidos.</td></tr>
+        <tr><td><dfn class="style1">toReversed()</dfn></td><td>Funciona igual que "reverse" excepto que devuelve un nuevo array en lugar de modificar el array original.</td></tr>
+        <tr><td><dfn class="style1">toSorted([f])</dfn></td><td>Funciona igual que "sort" excepto que devuelve un nuevo array en lugar de modificar el array original.</td></tr>
+        <tr><td><dfn class="style1">toSpliced(i[,n[,e<sub>1</sub>,e<sub>2</sub>,...]])</dfn></td><td>Funciona igual que "splice" excepto que devuelve un nuevo array en lugar de modificar el array original.</td></tr>
+        <tr><td><dfn class="style1">unshift(e<sub>1</sub>,e<sub>2</sub>...)</dfn></td><td>Añade los elementos e<sub>1</sub>, e<sub>2</sub>, etc. al principio del vector. Devuelve el nuevo número de elementos del vector.</td></tr>
+    </tbody></table>
+    </div>
+
+    <p class="text">Se recalca que esta es una lista incompleta de las funciones estándar disponibles para el trabajo con arreglos.</p>
+
+    <p class="text">De estos métodos, generalmente se emplean con con mayor frecuencia, aquellos que añaden (<dfn class="style1">push</dfn>) o quitan (<dfn class="style1">pop</dfn>), elementos del final del vector y aquellos que los quitan (<dfn class="style1">shift</dfn>) y añaden (<dfn class="style1">unshift</dfn>) al principio. Sin embargo, los otros métodos son también de utilidad práctica (sobre todo en programación funcional) por lo que es conveniente aprender a utilizarlos.</p>
+
+    <p class="text">Se recuerda también que, además de los métodos dinámicos presentados, la clase Array cuenta con la pseudo-propiedad  <b class="style1">length</b> (que en realidad es un par de métodos getter-setter) que devuelve o asigna la longitud del array (el número de elementos que tiene el array).</p>
+
+
+
+
+
+    <h3 class="text">Ejemplos</h3>
+
+    <p class="ejemplo"><span class="ejemplo"></span>Dado el siguiente vector:</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">x = [3, 4, 6, 8, 9];</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="ejemplosn">En los siguientes ejemplos, para tener en mente que los métodos no sólo pueden modificar el array, sino que además suelen devolver algún valor, se imprime (con print) el valor devuelto por el método y se muestra el array resultante.</p>
+    
+    <p class="ejemplosn">Con <dfn class="style1">unshift</dfn>:</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">print(x.unshift(0, 1, 2)); x</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="ejemplosn">Se añaden los números 0, 1 y 2, al principio del array y el método devuelve el nuevo número de elementos (su longitud: length = 8).</p>
+    
+    <p class="ejemplosn">Con <dfn class="style1">push</dfn>:</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">print(x.push(10, 11, 12)); x</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="ejemplosn">Se añaden los números 10, 11 y 12, al final de array y el método devuelve el nuevo número de elementos (length = 11).</p>
+    
+    <p class="ejemplosn">Con <dfn class="style1">shift</dfn>:</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">print(x.shift()); x</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="ejemplosn">Se quita el primer elemento del array y el método devuelve el elemento quitado (el número 0):</p>
+
+    <p class="ejemplosn">Con <dfn class="style1">pop</dfn>:</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">print(x.pop()); x</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="ejemplosn">Se quita el último elemento del array y el método devuelve el elemento quitado (el número 12)</p>
+
+    <p class="ejemplosn">Con <dfn class="style1">splice</dfn>:</p>
+    
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">print(x.splice(2, 1)); x</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="ejemplosn">Se quita desde el tercer elemento (desde la posición número 2), un elemento (1). El array queda sin ese elemento (sin el número 3) y devuelve un vector sin ese elemento.</p>
+
+    <p class="ejemplosn">Con <dfn class="style1">splice</dfn>:</p>
+    
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">print(x.splice(4, 0, 5.1, 5.2, 5.3)); x</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="ejemplosn">En el lugar del quinto elemento (en la posición 4), sin quitar ningún elemento (quitando 0 elementos), se insertan los números 5.1, 5.2 y 5.3. Como en este caso no se quita ningún elemento, el método devuelve un vector vacío ([]).</p>
+
+    <p class="ejemplosn">Con <dfn class="style1">splice</dfn>:</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">print(x.splice(6, 2, 7.1, 8.1)); x</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="ejemplosn">En el lugar del séptimo elemento (en el lugar del número 5.3, es decir en la posición 6), se quitan 2 elementos (los números 5.3 y 8) y en su lugar se insertan los elementos 7.1 y 8.1, es decir que se reemplazan los números 5.3 y 8 por los números 7.1 y 8.1. El método devuelve un vector con los elementos extraídos ([5.3, 8])</p>
+
+    <p class="ejemplosn">En el siguiente ejemplo, se emplea la estructura <dfn class="style1">for</dfn> estandar para calcular la sumatoria de los elementos del array:</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">s = 0;<br>for (let i=0; i&lt;x.length; i++) s += x[i];<br>s</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="ejemplosn">Sin embargo, el mismo resultado puede ser calculado, empleando el método <dfn class="style1">reduce</dfn>:</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">x.reduce((s,e)=&gt;s+e)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="ejemplosn">Como el método sólo recibe la función (no recibe el segundo parámetro: el valor inicial del acumulador), el valor inicial del acumulador "s" es el valor del primer elemento (el número 0), "e" inicia en 1 (el valor del segundo elemento) y la función devuelve su suma (0+1=1). En la siguiente iteración "s" recibe el resultado de la iteración anterior (1), "e" recibe el valor del siguiente elemento (2) y la función devuelve su suma (1+2=3). En la siguiente iteración "s" recibe el resultado de la iteración anterior (3), "e" recibe el valor del siguiente elemento (4) y la función devuelve su suma (3+4=7). El proceso continua de esa manera, sumando en cada repetición, al resultado de la anterior iteración (a la sumatoria de los elementos anteriores) el valor del nuevo elemento, hasta que, en la última iteración devuelve la sumatoria de todos los elementos (la sumatoria de los n-1 elementos anteriores más la suma del último elemento).</p>
+
+    <p class="ejemplosn">Si además de la función, se manda el valor inicial del acumulador, que en este caso debe ser 0 (el valor neutro de la suma):</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">x.reduce((s,e)=&gt;s+e, 0)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="ejemplosn">Se obtiene el mismo resultado, sólo que ahora <dfn class="style1">reduce</dfn> hace una iteración adicional: En la primera iteración, el acumulador "s", recibe el valor inicial (0) y "e" recibe el valor del primer elemento (0), entonces la función devuelve su suma (0+0=0). Posteriormente las iteraciones continuan como en el anterior ejemplo.</p>
+    
+    <p class="ejemplosn">En este caso en particular no es estrictamente necesario mandar un valor inicial, porque sólo causa un error cuando el array es vacío (porque en ese caso el acumulador no tiene un valor inicial). No obstante, en otros casos, cuando el valor del primer elemento no es adecuado como valor inicial, es impressincidible mandar, al método <dfn class="style1">reduce</dfn> un valor inicial adecuado.</p>
+
+
+    <p class="ejemplo"><span class="ejemplo"></span>Se crean los vectores "x1", "x2" y "x3" con los elementos (1, 3, 5, 7), (2, 4, 6, 8) y  (9, 10, 11, 12):</p><br>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">x1 = [1, 3, 5, 7];<br>x2 = [2, 4, 6, 8];<br>x3 = [9, 10, 11, 12];</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="ejemplosn">Se crea el vector "x" con la concatenación de los tres vectores:</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">x = x1.concat(x2, x3); x</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="ejemplosn">Se invierte el orden de los elementos del vector "x":</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">x.reverse(); x</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="ejemplosn">Se ordena alfabéticamente los elementos del vector "x":</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">x.sort()</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="ejemplosn">Como se puede ver, el orden alfabético (el orden por defecto) no siempre es numéricamente correcto (los números 10, 11 y 12, deberían estar al final, no después del número 1).</p>
+        
+    <p class="ejemplosn">Para que el orden sea numéricamente correcto, se debe mandar a "sort" una función que reciba dos valores (a, b) y devuelva un número positivo si el primer valor es mayor que el segundo, negativo si es menor y cero si son iguales. La expresión matemática que cumple con estas condiciones, es simplemente la resta: a-b, porque si "a" es mayor que "b" el resultado es positivo (por ejemplo con 5 y 2: 5-2=3), si son iguales el resultado es 0 (por ejemplo con 9 y 9: 9-9=0) y si "a" es menor que "b" el resultado es negativo (por ejemplo con 4 y 8: 4-8=-4):</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">x.sort((a,b)=&gt;a-b)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="ejemplosn">Para un orden descendente, simplemente se invierte la resta: b-a</p>
+
+    <p class="ejemplosn">Se crea el vector "a" con los primeros 6 elementos del vector "x":</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">a = x.slice(0, 6); a</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="ejemplosn">Se crea el vector "b" con los elementos cuarto a décimo del vector "x":</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">b = x.slice(3, 10); b</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="ejemplosn">Se crea el vector "c" con los elementos séptimo al último del vector "x":</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">c = x.slice(6); c</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="ejemplosn">Se crea el vector "d" con una copia del vector "x" y en la copia se invierte el orden de los elementos:</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">d = x.slice();<br>d.reverse()</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="ejemplosn">Se puede conseguir el mismo resultado empleando el método "toReversed":</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">e = x.toReversed()</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="ejemplosn">Finalmente, se crea un texto con los elementos del vector "d", separados con guiones.</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">d.join("-")</div>
+        <div class="resultado"></div>
+    </div>
+
+    <br>
+
+
+    <div class="ejercicio" id="ejercicio6" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Empleando la notación simplificada y algunos de los métodos y propiedades para vectores:</p></div><p class="pregunta"><span class="pregunta"></span>Cree y muestre el vector "x" con los números 20, 3, 4, 5, 6, 7 y 80:</p><div id="pregunta73" class="calculadora" spellcheck="false"><div class="instruccion">x = [20,3,4,5,6,7,80]; x</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Quite el último elemento del vector y muestre el vector resultante:</p><div id="pregunta74" class="calculadora" spellcheck="false"><div class="instruccion">x.pop(); x</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Añada el número 8 al final del vector y muestre el vector resultante:</p><div id="pregunta75" class="calculadora" spellcheck="false"><div class="instruccion">x.push(8); x</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Quite el primer elemento del vector y muestre el vector resultante:</p><div id="pregunta76" class="calculadora" spellcheck="false"><div class="instruccion">x.shift(); x</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Inserte al principio del vector el número 2 y muestre el vector resultante:</p><div id="pregunta77" class="calculadora" spellcheck="false"><div class="instruccion">x.unshift(2); x</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="10" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 6 -->
+
+    <div class="ejercicio" id="ejercicio7" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Empleando la notación simplificada:</p></div><p class="pregunta"><span class="pregunta"></span>Cree y muestre el vector "v" con los números 9, 4, 5, 3, 8, 7 y 2:</p><div id="pregunta88" class="calculadora" spellcheck="false"><div class="instruccion">v = [9,4,5,3,8,7,2]; v</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Ordene alfabéticamente los elementos:</p><div id="pregunta89" class="calculadora" spellcheck="false"><div class="instruccion">v.sort()</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Invierta el orden de los elementos:</p><div id="pregunta90" class="calculadora" spellcheck="false"><div class="instruccion">v.reverse()</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Quite el último elemento y muestre el vector resultante:</p><div id="pregunta91" class="calculadora" spellcheck="false"><div class="instruccion">v.pop(); v</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Quite el primer elemento y muestre el vector resultante:</p><div id="pregunta92" class="calculadora" spellcheck="false"><div class="instruccion">v.shift(); v</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="10" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 7 -->
+
+    <div class="ejercicio" id="ejercicio8" enunciado="1"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Empleando la notación simplificada:</p></div><p class="pregunta"><span class="pregunta"></span>Cree el vector "a" con los números 2, 3, 4, 5, 6, 7:</p><div id="pregunta108" class="calculadora" spellcheck="false"><div class="instruccion">a = [2,3,4,5,6,7]; a</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Añada al final del vector el número 8 y muestre el vector resultante:</p><div id="pregunta109" class="calculadora" spellcheck="false"><div class="instruccion">a.push(8); a</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Añada al principio del vector el número 1 y muestre el vector resultante:</p><div id="pregunta110" class="calculadora" spellcheck="false"><div class="instruccion">a.unshift(1); a</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Invierta el orden de los elementos:</p><div id="pregunta111" class="calculadora" spellcheck="false"><div class="instruccion">a.reverse()</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Quite el primer elemento y muestre el vector resultante:</p><div id="pregunta112" class="calculadora" spellcheck="false"><div class="instruccion">a.shift(); a</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="10" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 8 -->
+
+    <div class="ejercicio" id="ejercicio9" enunciado="2"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Empleando la notación simplificada:</p></div><p class="pregunta"><span class="pregunta"></span>Cree y muestre el vector "c" con los números 9, 8 y 3:</p><div id="pregunta128" class="calculadora" spellcheck="false"><div class="instruccion">c = [9,8,3]; c</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Inserte al principio de "c" los números 12, 11 y 10 y muestre el vector resultante:</p><div id="pregunta129" class="calculadora" spellcheck="false"><div class="instruccion">c.unshift(12,11,10); c</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Añada al final del vector "c" los números 2 y 1 y muestre el vector resultante:</p><div id="pregunta130" class="calculadora" spellcheck="false"><div class="instruccion">c.push(2,1); c</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Inserte los números 7, 6, 5 y 4 entre los números 8 y 3 y muestre el vector resultante:</p><div id="pregunta131" class="calculadora" spellcheck="false"><div class="instruccion">c.splice(5,0,7,6,5,4); c</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Invierta el orden los elementos del vector "c":</p><div id="pregunta132" class="calculadora" spellcheck="false"><div class="instruccion">c.reverse()</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="10" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 9 -->
+
+    <div class="ejercicio" id="ejercicio10" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Empleando la notación simplificada:</p></div><p class="pregunta"><span class="pregunta"></span>Cree y muestre el vector "a" con los números 9, 3, 7, 5, 4, 2, 1, 9, 6, 4, 1, 8 y 4:</p><div id="pregunta133" class="calculadora" spellcheck="false"><div class="instruccion">a = [9,3,7,5,4,2,1,9,6,4,1,8,4]; a</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Ordene los elementos del vector "a" ascendentemente:</p><div id="pregunta134" class="calculadora" spellcheck="false"><div class="instruccion">a.sort()</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Quite el primer elemento del vector "a" y muestre el vector resultante:</p><div id="pregunta135" class="calculadora" spellcheck="false"><div class="instruccion">a.shift(); a</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Quite el último elemento del vector "a" y muestre el vector resultante:</p><div id="pregunta136" class="calculadora" spellcheck="false"><div class="instruccion">a.pop(); a</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Quite los elementos centrales repetidos (a partir del segundo) y muestre el vector resultante:</p><div id="pregunta137" class="calculadora" spellcheck="false"><div class="instruccion">a.splice(4,2); a</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Construya una cadena con los elementos del vector "a" separados con " - ":</p><div id="pregunta138" class="calculadora" spellcheck="false"><div class="instruccion">a.join(" - ")</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="12" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 10 -->
+
+    <div class="ejercicio" id="ejercicio11" enunciado="1"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Sin emplear el objeto <dfn>Math</dfn>Empleando la notación simplificada:</p></div><p class="pregunta"><span class="pregunta"></span>Cree y muestre el vector "a" con las letras u, a, x, v, r:</p><div id="pregunta158" class="calculadora" spellcheck="false"><div class="instruccion">a = ["u","a","x","v","r"]; a</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Cree y muestre el vector "b" con las letras x, b, s, z:</p><div id="pregunta159" class="calculadora" spellcheck="false"><div class="instruccion">b = ["x","b","s","z"]; b</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Cree y muestre el vector "c" con las letras c, d, x, y:</p><div id="pregunta160" class="calculadora" spellcheck="false"><div class="instruccion">c = ["c","d","x","y"]; c</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Cree y muestre el vector "d" con la concatenación de los vectores "a", "b" y "c":</p><div id="pregunta161" class="calculadora" spellcheck="false"><div class="instruccion">d = a.concat(b,c); d</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Ordene ascendentemente el vector "d" e invierta sus elementos:</p><div id="pregunta162" class="calculadora" spellcheck="false"><div class="instruccion">d.sort().reverse()</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Copie el vector "d" en "e" y muestre el vector copiado:</p><div id="pregunta163" class="calculadora" spellcheck="false"><div class="instruccion">e = d.slice(); e</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Quite los elementos repetidos del vector "d" (a partir del segundo) y muestre el vector resultante:</p><div id="pregunta164" class="calculadora" spellcheck="false"><div class="instruccion">d.splice(3,2); d</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="14" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 11 -->
+
+
+
+
+    <h2 class="text">Funciones matemáticas implementadas como métodos</h2>
+    
+    <p class="text">En la calculadora Javascript, la mayoría de los métodos matemáticos han sido implementados también como métodos de las clases <dfn class="style1">Array</dfn> y <dfn class="style1">Number</dfn>, es decir que pueden ser llamados directamente desde variables o valores de uno de estos tipos y por supuesto, también desde cualquier resultado que sea de uno de esos tipos (como siempre, con la notación de punto).</p>
+
+    <p class="text">Por ejemplo el resultado de las siguientes expresiones:</p>
+    
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                \begin{aligned}                &amp;\sin(3.25)\\[3px]                &amp;\ln(2.2)/\ln(2.1)\\[5px]                &amp;\sqrt[5]{45/12}\\[3px]                &amp;\log_5(5.4)+\exp(3.1)\\[3px]                &amp;\sqrt[3]{\sin(1.3/2)}                \end{aligned}                     \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Pueden ser calculadas con:</p>
+    
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">(3.25).sin()</div>
+        <div class="resultado"></div>
+        <div class="instruccion">(2.2).log()/(2.1).log()</div>
+        <div class="resultado"></div>
+        <div class="instruccion">(45/12).nthroot(5)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">(5.4).log(5)+(3.1).exp()</div>
+        <div class="resultado"></div>
+        <div class="instruccion">(1.3/2).sin().cbrt()</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="text">Que en general son más cortas que las instrucciones escritas en la forma tradicional (la forma empleada en la PE), pero que (por lo menos al principio) son más difíciles de entender:</p>
+
+    <p class="text">Como se muestra en el último ejemplo, los métodos pueden ser llamados también desde un resultado, así, la siguiente expresión:</p>
+    
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[ \sqrt{|\tan(\log(3.45^4))|} \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Puede ser calculada, mostrando el resultado con 9 dígitos de precisión, con:</p>
+    
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">(3.45**4).log(10).tan().abs().sqrt().precision(9)</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="text">De igual formal, las funciones matemáticas pueden ser llamadas (en la calculadora) desde una variable o valor literal de tipo Array. Por ejemplo el seno, la raíz cuadrada, la raíz cúbica, el logaritmo natural y la raíz quinta de los elementos del vector: [1, 3, 9, 2, 5] (redondeados al segundo dígito después del punto) pueden ser calculados con:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">x = [1, 3, 9, 2, 5];</div>
+        <div class="resultado"></div>
+        <div class="instruccion">x.sin().round(2)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">x.sqrt().round(2)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">x.cbrt().round(2)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">x.log().round(2)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">x.nthroot(5).round(2)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Resultados que pueden ser obtenidos, igualmente, con el método estándar <dfn class="style1">map</dfn> (recuerde que <dfn class="style1">map</dfn> devuelve un nuevo array con los resultados de ejecutar la función que se le manda, con cada uno de los elementos del array):</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">x = [1, 3, 9, 2, 5];</div>
+        <div class="resultado"></div>
+        <div class="instruccion">x.map(Math.sin).round(2)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">x.map(Math.sqrt).round(2)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">x.map(Math.cbrt).round(2)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">x.map(Math.log).round(2)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">x.map(x=&gt;Math.nthroot(x,5)).round(2)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Observe que, en el último ejemplo, se emplea una función flecha, debido a que <dfn class="style1">nthroot</dfn> requiere dos parámetros (el número y el orden de la raíz), pero <dfn class="style1">map</dfn> sólo envía a la función el valor de un elemento (los valores del vector "x"), por lo tanto se requiere una función que reciba ese valor ("x") y en su interior calcule su raíz quinta (Math.nthroot(x,5) o x.nthroot(5)).</p>
+
+    <div class="ejercicio" id="ejercicio12" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Trabajando con vectores y redondeando los resultados en formato de texto (toFixed) calcule:</p></div><p class="pregunta"><span class="pregunta"></span>El logaritmo en base 10 de 4, 7, 9 y 12, redondeando los resultados al tercer dígito después del punto:</p><div id="pregunta172" class="calculadora" spellcheck="false"><div class="instruccion">[4,7,9,12].log10().toFixed(3)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>La raíz cuadrada de 5, 12, 3 y 9, redondeando los resultados al segundo dígito después del punto:</p><div id="pregunta173" class="calculadora" spellcheck="false"><div class="instruccion">[5,12,3,9].sqrt().toFixed(2)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>La secante de 8, 3, 1 y 9, redondeando los resultados al cuarto dígito después del punto:</p><div id="pregunta174" class="calculadora" spellcheck="false"><div class="instruccion">[8,3,1,9].sec().toFixed(4)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>La tangente hiperbólica de 3, 9, 2 y 6, redondeando los resultados al segundo dígito después del punto:</p><div id="pregunta175" class="calculadora" spellcheck="false"><div class="instruccion">[3,9,2,6].tanh().toFixed(2)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>El logaritmo en base 3 de 6, 9, 12 y 32, redondeando los resultados al tercer dígito después del punto</p><div id="pregunta176" class="calculadora" spellcheck="false"><div class="instruccion">[6,9,12,32].log(3).toFixed(3)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="10" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 12 -->
+
+    <div class="ejercicio" id="ejercicio13" enunciado="2"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Trabajando con vectores y redondeando los resultados en formato de texto (toFixed) calcule:</p></div><p class="pregunta"><span class="pregunta"></span>El logaritmo natural de 3, 5, 2 y 7, redondeando los resultados al primer dígito después del punto:</p><div id="pregunta197" class="calculadora" spellcheck="false"><div class="instruccion">[3,5,2,7].log().toFixed(1)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>La raíz cúbica de 3, 11, 8 y 5, redondeando los resultados al tercer dígito después del punto:</p><div id="pregunta198" class="calculadora" spellcheck="false"><div class="instruccion">[3,11,8,5].cbrt().toFixed(3)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>La cosecante de 9, 2, 3 y 6, redondeando los resultados al tercer dígito después del punto:</p><div id="pregunta199" class="calculadora" spellcheck="false"><div class="instruccion">[9,2,3,6].csc().toFixed(3)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>El seno hiperbólico de 1, 7, 5 y 4, redondeando los resultados al segundo dígito después del punto:</p><div id="pregunta200" class="calculadora" spellcheck="false"><div class="instruccion">[1,7,5,4].sinh().toFixed(2)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>La raíz quinta de 6, 9, 12 y 27, redondeando los resultados al cuarto dígito después del punto</p><div id="pregunta201" class="calculadora" spellcheck="false"><div class="instruccion">[6,9,12,27].nthroot(5).toFixed(4)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="10" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 13 -->
+
+    <div class="ejercicio" id="ejercicio14" enunciado="1"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Trabajando con vectores, el objeto estándar <dfn>map</dfn> y los métodos del objeto <dfn>Math</dfn>, redondeos en formato de texto (toFixed) calcule:</p></div><p class="pregunta"><span class="pregunta"></span>El exponente de 1, 4, 2 y 3, redondeando los resultados al tercer dígito después del punto:</p><div id="pregunta207" class="calculadora" spellcheck="false"><div class="instruccion">[1,4,2,3].map(Math.exp).toFixed(3)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>El cuadrado de 2, 10, 7 y 4, redondeando los resultados al segundo dígito después del punto:</p><div id="pregunta208" class="calculadora" spellcheck="false"><div class="instruccion">[2,10,7,4].map(x=&gt;x**2).toFixed(2)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>La cotangente de 3, 2, 1 y 5, redondeando los resultados al cuarto dígito después del punto:</p><div id="pregunta209" class="calculadora" spellcheck="false"><div class="instruccion">[3,2,1,5].map(Math.cot).toFixed(4)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>El arco coseno hiperbólico de 2, 6, 4 y 1, redondeando los resultados al tercer dígito después del punto:</p><div id="pregunta210" class="calculadora" spellcheck="false"><div class="instruccion">[2,6,4,1].map(Math.acosh).toFixed(3)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>La potencia cuarta de 5, 3, 4 y 8, redondeando los resultados al primer dígito después del punto:</p><div id="pregunta211" class="calculadora" spellcheck="false"><div class="instruccion">[5,3,4,8].map(x=&gt;x**4).toFixed(1)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="10" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 14 -->
+
+
+
+
+    <h2 class="text">Métodos adicionales del objeto Array</h2>
+
+    <p class="text">Además de los métodos estándar del objeto Array, la calculadora cuenta con algunos más:</p>
+
+    <div class="table borderAll">
+    <table style="width:580px;margin-left:auto;margin-right:auto;">
+        <caption>Métodos adicionales para el trabajo con vectores</caption>
+        <tbody><tr><th style="width:165px;">Método</th><th>Descripción</th></tr>
+        <tr><td><dfn class="style1">abs()</dfn></td><td>Devuelve el valor absoluto del objeto desde el cual es llamado.</td></tr>
+        <tr><td><dfn class="style1">add(b)</dfn></td><td>Suma <dfn class="style1">b</dfn> al objeto desde el cual es llamado.</td></tr>
+        <tr><td><dfn class="style1">const([n[,m],][c])</dfn></td><td>Crea un vector con 3 filas y 4 columnas de ceros. Si se manda "c", crea una matriz de 3 filas y 4 columnas con elementos iguales a "c". Si se manda "n" crea un vector con "n" elementos iguales a "c" y si se manda "m", crea una matriz con "n" filas y "m" columnas de elementos iguales a "c".</td></tr>
+        <tr><td><dfn class="style1">copy()</dfn></td><td>Devuelve una copia del objeto desde el cual es llamado.</td></tr>
+        <tr><td><dfn class="style1">div(b)</dfn></td><td>Divide, el objeto desde el cual es llamado, entre <dfn class="style1">b</dfn>.</td></tr>
+        <tr><td><dfn class="style1">isArray()</dfn></td><td>Devuelve verdadero si el objeto desde el cual es llamado es un array.</td></tr>
+        <tr><td><dfn class="style1">linspace([li[,ls[,n])</dfn></td><td>Crea un vector, con 100 números del 1 al 100. Si se manda "li", crea un vector con 100 elementos, igualmente espaciados, entre "li" y "li"+99. Si se manda "ls", 100 elementos igualmente espaciados entre "li" y "ls" y si se manda "n", un vector con "n" elementos igualmente espaciados entre "li" y "ls".</td></tr>
+        <tr><td><dfn class="style1">mul(b)</dfn></td><td>Multiplica el objeto desde el cual es llamado por el objeto <dfn class="style1">b</dfn>.</td></tr>
+        <tr><td><dfn class="style1">neg()</dfn></td><td>Devuelve el valor negado del objeto desde el cual es llamado.</td></tr>
+        <tr><td><dfn class="style1">rand([n[,m][,li,ls]])</dfn></td><td>Genera una matriz con 3 filas y 4 columnas de números aleatorios comprendidos entre 0 y 1. Si se manda "n", un vector con "n" números aleatorios comprendidos entre 0 y 1. Si se manda "li" y "ls", un vector con "n" números aleatorios comprendidos entre "li" y "ls". Si además se manda "m", devuelve una matriz con "n" filas y "m" columnas de números aleatorios comprendidos entre "li" y "ls".</td></tr>
+        <tr><td><dfn class="style1">range([li[,ls[,inc]]])</dfn></td><td>Genera un vector con los números enteros del 1 al 10. Si se manda "li", un vector con los números enteros desde 1 hasta "li", o, si "li" es negativo, con los múmeros enteros entre entre "li" y 0. Si se manda "li" y "ls", un vector con los números enteros comprendidos entre "li" y "ls" y si, además, se manda "inc", un vector los números comprendidos entre "li" y "ls", espaciados con el incremento "inc".</td></tr>
+        <tr><td><dfn class="style1">sub(b)</dfn></td><td>Resta, al objeto desde el cual se llama al método, el objeto <dfn class="style1">b</dfn>.</td></tr>
+        <tr><td><dfn class="style1">sum()</dfn></td><td>Devuelve la sumatoria, de los elementos del vector desde el cual es llamado.</td></tr>
+        <tr><td><dfn class="style1">zeros([n[,m]])</dfn></td><td>Genera una matriz con 3 filas y 4 columnas de ceros. Si se manda "n", devuelve un vector con "n" ceros y si además se manda "m", una matriz con "n" filas y "m" columnas de ceros.</td></tr>
+    </tbody></table>
+    </div>
+    
+    <p class="text">Algunos de estos métodos (<dfn class="style1">zeros</dfn>, <dfn class="style1">const</dfn> y <dfn class="style1">rand</dfn>) permiten generar no sólo vectores, sino también matrices.</p>
+
+    <p class="text">Empleando estos métodos se puede calcular, por ejemplo, la sumatoria de los números impares que existen entre 1 y 25. Con ese fin se genera un vector con esos elementos (con el método <dfn class="style1">range</dfn>) y se suman (con el método <dfn class="style1">sum</dfn>):</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">[].range(1, 25, 2).sum()</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Resultado que pueden ser obtenido, igualmente, con <dfn class="style1">reduce</dfn>:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">[].range(1, 25, 2).reduce((s,e)=&gt;s+e)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">E, igualmente, con <dfn class="style1">Array.from</dfn> y <dfn class="style1">reduce</dfn>:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">Array.from({length:13}, (_,i)=&gt;2*i+1).reduce((s,e)=&gt;s+e)</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="text">Y con una función recursiva inmediatamente invocada:</p>
+    
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">(s=n=&gt;n==1?1:s(n-2)+n)(25)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">En este caso, la función recursiva se llama a si misma, disminuyendo "n" en 2 en cada llamada hasta que "n" es igual a 1, entonces, a partir de ese resultado se va calculando el valor de la sumatoria: 1 + 3 = 4 + 5 = 9 + 7 = 16 +.... = 144 + 25 = 169.</p>
+
+    <p class="text">Por supuesto, con <dfn class="style1">reduce</dfn>, no solo se pueden resolver sumatorias, sino productorias y muchas otras operaciones y procesos iterativos. Así, con la siguiente instrucción se calcula la productoria de los números pares existentes entre 2 y 30:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">[].range(2, 30, 2).reduce((p,e)=&gt;p*e)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Mandando el valor inicial del acumulador (1, porque es una productoria) se obtiene el mismo resultado, sólo que ahora el método itera una vez más::</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">[].range(2, 30, 2).reduce((p,e)=&gt;p*e, 1)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Con la siguiente instrucción se genera un vector con 50 números aleatorios comprendidos entre 1 y 100 (<dfn class="style1">rand</dfn>), redondeados a enteros (<dfn class="style1">round</dfn>):</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">v = [].rand(50, 1, 100).round(); v</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Se ordenan los números de forma ascendente (<dfn class="style1">sort</dfn>):</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">v.sort((a,b)=&gt;a-b)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Y se invierte su orden (<dfn class="style1">reverse</dfn>):</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">v.reverse()</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Cada vez que se llama al método <dfn class="style1">rand</dfn>, genera un nuevo vector con diferentes números aleatorios, sin embargo, en ocasiones se requiere volver a generar un vector con los mismos números aleatoarios (por ejemplo para comparar dos métodos o alternativas de solución).</p>
+
+    <p class="text">Para generar la misma secuencia de números (números pseudoaleatorios), se debe iniciar la semilla de números aleatorios: la variable <dfn class="style1">randseed</dfn>, en el mismo valor numérico (por ejemplo 1). De esa manera, al repetir la instrucción, se vuelve a generar la misma secuencia:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">randseed = 1;<br>v = [].rand(50, 1, 100).round(); v</div>
+        <div class="resultado"></div>
+        <div class="instruccion">randseed = 1;<br>v = [].rand(50, 1, 100).round(); v</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="text">Por supuesto, si se inicia la semilla en un número diferente, se genera una secuencia diferente:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">randseed = 5;<br>v = [].rand(50, 1, 100).round(); v</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Como se dijo, para un orden descendente, sólo se requiere invertir el orden de la resta, así, para ordenar de forma descendente el siguiente vector de números aleatorios:</p>
+    
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">randseed = 1;<br>v = [].rand(50, 1, 100).round(); v</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Se escriben la siguiente instrucción:</p>
+    
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">v.sort((a,b)=&gt;b-a)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Para calcular el seno de 20 números igualmente espaciados (<dfn class="style1">linspace</dfn>) comprendidos entre 1 y 30, redondeados al segundo dígito después del punto (<dfn class="style1">round</dfn>) se escribe la instrucción:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">[].linspace(1, 3, 20).sin().round(2)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Con el constructor Array y la función estándar <dfn class="style1">fill</dfn>, así como con el método estático <dfn class="style1">Array.from</dfn>, se pueden conseguir los mismos resultados que con <dfn class="style1">zeros</dfn> y <dfn class="style1">const</dfn>:</p>
+    
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">[].zeros(7)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">new Array(7).fill(0)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">Array.from({length:7},()=&gt;0)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">[].const(5,9)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">new Array(5).fill(9)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">Array.from({length:5},()=&gt;9)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">El uso de <dfn class="style1">Array.from</dfn> ha sido explicado previamente. En cuanto a <b class="stle1">fill</b>, como no se mandan los índices inicial y final, simplemente reemplaza todos los elementos del array con el valor que se le manda, inclusive si los elementos en realidad no existen, como ocurre con las instrucciones <span class="textocodigo">new Array(7)</span> y <span class="textocodigo">new Array(5)</span>, que, como se vio previamente, no crean un array con ese número de elementos, sino que sólo establecen la dimensión del array (el número de elementos del array).</p>
+
+    <p class="text">Los métodos <dfn class="style1">add, sub, mul, div, copy, isArray, neg</dfn> y <dfn class="style1">abs</dfn>, pueden ser llamados no sólo desde vectores y matrices, sino también desde números reales y complejos.</p>    
+
+    <p class="text">Es importante tener en mente que, cuando se asigna una variable de tipo array a otra variable, no se hace una copia del array, sino simplemente se da un nombre extra al mismo array. Así cuando se asigna la variable "vx" a la variable "vy":</p>
+    
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">vx = [1, 2, 3, 4, 5, 6];</div>
+        <div class="resultado"></div>
+        <div class="instruccion">vy = vx;</div>
+        <div class="resultado"></div>
+    </div>
+        
+    <p class="text">Ahora, el vector [1, 2, 3, 4, 5, 6] tiene dos nombres: "vx" y "vy", por lo tanto, cualquier cambio en "vy", es también un cambio en "vx" y viceversa. Así, si se quita el último elemento de "vy", el cambio puede ser visto también con la variable "vx", porque, como se dijo, "vx" y "vy" son simplemente dos nombres para el mismo array:</p>
+    
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">vy.pop(); vy</div>
+        <div class="resultado"></div>
+        <div class="instruccion">vx</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Igualmente, si se quita el primer elemento de "vx", el cambio puede ser visto con "vy":</p>
+    
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">vx.shift(); vx</div>
+        <div class="resultado"></div>
+        <div class="instruccion">vy</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="text">Para hacer una copia de un array (no sólo asignarle otro nombre) se puede emplear el método <dfn class="style1">slice</dfn> o el método <dfn class="style1">copy</dfn>. Por ejemplo, con las siguientes instrucciones se genera el vector "va" y se crean dos copias, una con <dfn class="style1">copy</dfn> y otra con <dfn class="style1">slice</dfn>:</p>
+    
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">va = [].range(2, 22, 2); va</div>
+        <div class="resultado"></div>
+        <div class="instruccion">vb = va.slice(); vb</div>
+        <div class="resultado"></div>
+        <div class="instruccion">vc = va.copy(); vc</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="text">Si ahora se modifica "vb", quitando por ejemplo el último elemento, ese cambio no afecta ni al vector original (va) ni a la otra copia (vc)</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">vb.pop(); vb</div>
+        <div class="resultado"></div>
+        <div class="instruccion">va</div>
+        <div class="resultado"></div>
+        <div class="instruccion">vc</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Igualmente, si se modifica "vc", añadiendo por ejemplo los elementos 0 y 1 al principio del vector, ese cambio no afecta ni a "va" ni a "vb" (porque ahora son tres vectores diferentes):</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">vc.unshift(0,1); vc</div>
+        <div class="resultado"></div>
+        <div class="instruccion">va</div>
+        <div class="resultado"></div>
+        <div class="instruccion">vb</div>
+        <div class="resultado"></div>
+    </div>
+    <br>
+    
+    <div class="ejercicio" id="ejercicio15" enunciado="2"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Empleando la notación simplificada: Cree el vector "v" con los números 7, 1, 3, 6, 2, 5, luego calcule: <b>a)</b> la raíz cúbica del seno de sus elementos, redondeados (como números) al quinto dígito; <b>b)</b> el cubo del seno hiperbólico de sus elementos, con 10 dígitos de precision; <b>c)</b> el cuadrado del coseno de sus elementos, redondeandos al tercer dígito después del punto; <b>d)</b> el exponente de la raíz quinta de sus elementos, redondeados al cuarto dígito.</p></div><p class="pregunta"><span class="pregunta"></span>Cree y muestre el vector "v" con los números 7, 1, 3, 6, 2, 5:</p><div id="pregunta227" class="calculadora" spellcheck="false"><div class="instruccion">v = [7,1,3,6,2,5]; v</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Calcule la raíz cúbica del seno de los elementos de "v", redondeados al quinto dígito después del punto:</p><div id="pregunta228" class="calculadora" spellcheck="false"><div class="instruccion">v.sin().cbrt().round(5)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Calcule el cubo del seno hiperbólico de los elementos de "v", mostrandos con 10 dígitos de precisión:</p><div id="pregunta229" class="calculadora" spellcheck="false"><div class="instruccion">v.sinh().pow(3).precision(10)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Calcule el cuadrado del coseno de los elementos de "v", redondeados al tercer dígito después del punto:</p><div id="pregunta230" class="calculadora" spellcheck="false"><div class="instruccion">v.cos().pow(2).round(3)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Calcule el exponente de la raíz quinta de los elementos de "v", redondeados al cuarto dígito después del punto:</p><div id="pregunta231" class="calculadora" spellcheck="false"><div class="instruccion">v.nthroot(5).exp().round(4)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="10" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 15 -->
+
+    <div class="ejercicio" id="ejercicio16" enunciado="1"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Empleando los métodos adicionales disponibles para vectores:</p></div><p class="pregunta"><span class="pregunta"></span>Cree y muestre el vector "v1" con los números impares existentes entre 1 y 19:</p><div id="pregunta238" class="calculadora" spellcheck="false"><div class="instruccion">v1 = [].range(1,19,2); v1</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Calcule la sumatoria de los elementos del vector "v1":</p><div id="pregunta239" class="calculadora" spellcheck="false"><div class="instruccion">v1.sum()</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con "reduce", calcule la sumatoria de los elementos del vector "v1":</p><div id="pregunta240" class="calculadora" spellcheck="false"><div class="instruccion">v1.reduce((s,e)=&gt;s+e)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Cree y muestre el vector "v2" con 10 números aleatorios comprendidos entre 15 y 25 redondeados a enteros:</p><div id="pregunta241" class="calculadora" spellcheck="false"><div class="instruccion">v2 = [].rand(10,15,25).round(); v2</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Reste los vectores "v1" y "v2":</p><div id="pregunta242" class="calculadora" spellcheck="false"><div class="instruccion">v1.sub(v2)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Sume los vectores "v1" y "v2":</p><div id="pregunta243" class="calculadora" spellcheck="false"><div class="instruccion">v1.add(v2)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="12" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 16 -->
+
+    <div class="ejercicio" id="ejercicio17" enunciado="2"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Empleando los métodos adicionales disponibles para vectores:</p></div><p class="pregunta"><span class="pregunta"></span>Cree y muestre el vector "v1" con los números impares existentes entre 11 y 31:</p><div id="pregunta260" class="calculadora" spellcheck="false"><div class="instruccion">v1 = [].range(11,31,2); v1</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Calcule valor absoluto del vector "v1" redondeando el resultado al tercer dígito después del punto:</p><div id="pregunta261" class="calculadora" spellcheck="false"><div class="instruccion">v1.abs().round(3)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Cree el vector "v2" con los números pares existentes entre 12 y 32:</p><div id="pregunta262" class="calculadora" spellcheck="false"><div class="instruccion">v2 = [].range(12,32,2); v2</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Multiplique los vectores "v1" y "v2":</p><div id="pregunta263" class="calculadora" spellcheck="false"><div class="instruccion">v1.mul(v2)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Divida los vectores "v2" y "v1", redondeando el resultado al segundo dígitos después del punto:</p><div id="pregunta264" class="calculadora" spellcheck="false"><div class="instruccion">v2.div(v1).round(2)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="10" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 17 -->
+
+    <div class="ejercicio" id="ejercicio18" enunciado="2"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Empleando los métodos adicionales disponibles para vectores:</p></div><p class="pregunta"><span class="pregunta"></span>Cree y muestre el vector "v1" con 8 números aleatorios comprendidos entre 3 y 15, redondeados a enteros:</p><div id="pregunta275" class="calculadora" spellcheck="false"><div class="instruccion">v1 = [].rand(8,3,15).round(); v1</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Cree y muestre el vector "v2" con los números enteros existentes entre 3 y 10:</p><div id="pregunta276" class="calculadora" spellcheck="false"><div class="instruccion">v2 = [].range(3,10); v2</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Cree y muestre el vector "v3" con los números impares existentes entre 3 y 17:</p><div id="pregunta277" class="calculadora" spellcheck="false"><div class="instruccion">v3 = [].range(3,17,2); v3</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Sume los vectores "v1", "v2" y "v3":</p><div id="pregunta278" class="calculadora" spellcheck="false"><div class="instruccion">v1.add(v2).add(v3)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Sume los vectores "v1" y "v3" y multiplique el vector resultante por "v2":</p><div id="pregunta279" class="calculadora" spellcheck="false"><div class="instruccion">v1.add(v3).mul(v2)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="10" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 18 -->
+
+    
+    <p class="text">La calculadora JavaScript, cuenta con otros métodos más para el trabajo con arreglos, pero los mismos serán estudiados posteriormente, porque son de mayor utilidad en el trabajo con matrices.</p>
+  
+
+    
+    
+
+
+    <div id="generarPrueba" data-scroll-y="28566"><br><hr><label class="lnotacapitulo">Nota del capítulo: </label><input type="text" id="notaCapitulo" disabled="disabled" class="itnotacapitulo"><br><br><button id="btGenerarPrueba" style="visibility: visible;" onclick="capitulo.registrarCapitulo()">Iniciar defensa</button><button id="btEmplearBono" style="margin-left:1.1rem;width:9.686rem;display:none;" onclick="capitulo.emplearBono()">Emplear Bono</button><br><br></div>
+
+
+<d id="dAutor" style="font-size: 0.9rem;text-align:center;color: #0808f24f;font-weight:bolder;position:fixed;top: 5px;right: 5px;user-select:none;display:inline-block;z-index:15;">Hernan G. Peñaranda V.</d></div><!-- Cierre del div capítulo -->
+
+<div id="dato" style="display:none;">KqbJCKyn938lCZ0oDYGpDIqsDZSn93CuCZ0aCJan934vCIGnC30aC2HIHMPOIm00</div>
+<div id="reg" style="display:none;">CZ0nC3ipC30nEp8mCJ0xCZ0nC3ioC34mEp4nC30xCJ4mC3ioC34mEpCmC34xCJ4mC3ioC34mEp4nC30xCp0mCJioC34mEpCmC34xCZ0nC3ipC30nEpCmC340</div>
+
+
+
+
+<div id="divDialogo" style="display: none;"><div onfocus="document.querySelector('#divDialogo input').focus();"><div>Carnet universitario</div><div>Escriba el número de su carnet universitario, verificando que el guión haya sido correctamente insertado.</div><input type="text" onkeydown="return Capitulo.divDialogo.funKeydown(event)" onkeyup="Capitulo.divDialogo.funKeyup(event)"><div><button onclick="Capitulo.divDialogo.funClick('aceptar');">Aceptar</button><button style="margin-left:35px;" onclick="Capitulo.divDialogo.funClick('cancelar');">Cancelar</button></div></div></div></body>
