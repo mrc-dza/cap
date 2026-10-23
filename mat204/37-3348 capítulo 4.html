@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<head>
+
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Language" content="es">
+
+  <title>37-3348 capítulo 4</title>
+  
+    <!-- Librería y hoja de estilos KATEX  -->
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/katex/katex.min.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/katex/katex.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/katex/contrib/auto-render.min.js"></script>
+
+    <!-- Librerías y hojas de estilo CodeMirror -->
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/lib/codemirror.min.css">
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/theme/mdn-like.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/lib/codemirror.min.js"></script>
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/fold/foldgutter.min.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/fold/foldcode.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/fold/brace-fold.min.js"></script>
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/dialog/dialog.min.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/dialog/dialog.min.js"></script>
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/hint/show-hint.min.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/hint/show-hint.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/hint/javascript-hint.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/search/searchcursor.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/search/search.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/edit/matchbrackets.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/edit/closebrackets.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/comment/comment.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/wrap/hardwrap.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/javascript/javascript.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/mathematica/mathematica.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/octave/octave.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/python/python.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/css/css.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/xml/xml.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/markdown/markdown.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/htmlmixed/htmlmixed.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/keymap/sublime.min.js"></script>
+
+    <!-- Librería Plotly -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script><style id="plotly.js-style-global"></style>
+
+    <!-- Librerías y hojas de estilo function-plot -->
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/function-plot/site/js/vendor/d3.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/function-plot/dist/function-plot.js"></script>
+    
+    <!-- Librería quantities -->
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/quantities/quantities.min.js"></script>
+
+    <!-- Librería GoJs para la creación de diagramas de flujo -->
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/gojs/release/go.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/flowchart_gojs.js"></script>
+
+    <!-- Librerías matemáticas propias -->
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/math.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/number.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/array.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/string.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/cplx.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/function.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/object.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/prq.js"></script>
+
+    <!-- Librería y hoja de estilos propias para la creación y manejo de la calculadora  -->
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/src/cjs.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/cjs.js"></script>
+
+    <!-- Librería y hoja de estilos propias para la creación y manejo de los capítulos -->
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/src/texto.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/texto.js"></script>
+
+   <!-- Librería del capítulo actual -->
+    <script src="https://cursosabiertos.usfx.bo/materias/mat204/capitulos/capitulo4/files/capitulo4.js"></script>
+
+    <!-- Fuentes empleadas en el capítulo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&amp;family=Darker+Grotesque:wght@300;400;500;600;700;800&amp;family=Roboto+Mono&amp;display=swap" rel="stylesheet">
+
+    <script>
+        function katexRender() {
+            renderMathInElement(document.getElementById("capitulo"));
+        }
+        document.addEventListener("DOMContentLoaded", katexRender);
+        window.onerror = function(msg, url, lineNo, columnNo, error) {
+            __error__ = msg;
+        };
+        window.onload = function(){
+            capitulo.iniciar();
+        };
+    </script>
+
+<style></style></head>
+
+<body class="text">  
+
+
+<div id="capitulo">
+
+  <button id="btGuardar" style="z-index:15;" onclick="savePage()">Guardar</button>
+
+    <h1 class="text" onclick="alerta(capitulo.idPagina,'')" style="cursor: pointer;">Algoritmos</h1>
+
+
+    <p class="text">En este capítulo se hace una breve introducción a los algoritmos, las diferentes formas de expresarlos, así como la forma de implementarlos (codificarlos) en Javascript.</p>
+
+    <p class="text"><dfn class="style1">Un algoritmo describe la secuencia lógica de acciones que deben llevarse a cabo para resolver un problema, de manera que siempre se logre la solución correcta</dfn>. Cuando existen múltiples algoritmos para resolver un mismo problema (que es el caso más frecuente) el mejor algoritmo es aquel que resuelve correctamente el problema en el menor tiempo.</p>
+
+    <p class="text">Los bloques fundamentales para la construcción de algoritmos son <i class="style1">la secuencia</i>, es decir el conjunto de instrucciones que se ejecutan una a continuación de otra, <i class="style1">la selección</i> y la <i class="style1">iteración</i>.</p>
+
+    <p class="text">Hasta ahora, los problemas han sido resueltos empleando únicamente <dfn class="style1">la secuencia</dfn>, en capítulos posteriores se estudiarán los bloques fundamentales restantes.</p>
+
+    <p class="text">Los algoritmos pueden ser expresados en diferentes formas, siendo los más usuales: el lenguaje natural, pseudocódigo, código documentado y los diagramas de flujo.</p>
+
+
+
+    <h2 class="text">Lenguaje natural</h2>
+
+    <p class="text">El lenguaje natural es una de las formas más empleadas para expresar algoritmos. Esta forma ya ha sido empleada en la resolución de problemas en los anteriores capítulos.</p>
+
+    <p class="text">De manera formal el algoritmo, expresado en lenguaje natural, detalla los pasos a seguir en una lista ordenada.</p>
+
+    <p class="text">Por ejemplo, el algoritmo para cacular el perímetro y área, de un círculo de radio "r", puede ser expresado de la siguiente forma:</p>
+
+    <ol style="list-style-type:lower-alpha">
+        <li>Recibir el radio en "r"</li>
+        <li>Calcular el perímetro: p = 2∗π∗r</li>
+        <li>Calcular el área: a = π∗r<sup>2</sup></li>
+        <li>Devolver p y a</li>
+    </ol>
+
+
+
+    <h2 class="text">Funciones</h2>
+
+    <p class="text">Casi siempre, los algoritmos son codificadas (programados) en funciones.</p>
+
+    <p class="text">Las funciones son bloques de código independientes, se caracterizan porque reciben los datos que requieren, llevan a cabo las operaciones necesarias y devuelven él o los resultados requeridos.</p>
+
+    <p class="text">Al ser bloques de código independientes, permiten resolver problemas complejos dividiéndolos en problemas más simples. Cada uno de esos problemas más simples (cada una de las funciones) se conoce como módulo. Este principio (el principio de divide y vencerás): dividir un problema complejo en problemas más simples, es lo que se conoce como <dfn class="style1">programación modular</dfn>. </p>
+
+    <p class="text">En JavaScript las funciones pueden ser creadas en al menos 3 formas: funciones estándar, funciones anónimas y funciones flechas.</p>
+
+    <p class="text">Las <strong class="style1">funciones estándar</strong> tienen la siguiente sintaxis:</p>
+
+    <div class="codigo">function nombre_de_la_función(lista_de_parámetros) {<br>    Instrucciones JavaScript<br>    ...<br>    return valor/expresión;<br>}</div>
+
+    <p class="text">El <strong class="style1">nombre_de_la función</strong>, sigue las reglas generales para nombrar identificadores en JavaScript.</p>
+    
+    <p class="text">Las <strong class="style1">instrucciones JavaScript</strong> son instrucciones consecutivas separadas con puntos y comas (<strong class="style1">;</strong>). Una función puede tener entre 1 y cientos de instrucciones.</p>
+
+    <p class="text">La instrucción de retorno: <strong class="style1">return</strong>, termina la ejecución de la función y devuelve el <dfn class="style1">valor</dfn> o el resultado de la <dfn class="style1">expresión</dfn>.  Esta instrucción es opcional y puede estar ubicada en cualquier parte de la función, aunque generalmente se ubica al final de la misma. Si en la función no se escribe la instrucción <strong class="style1">return</strong>, la función termina cuando se ejecuta su última instrucción y no devuelve ningún valor (el resultado es indefinido: <dfn class="style1">undefined</dfn>).</p>
+
+    <p class="text">La <strong class="style1">lista_de_parámetros</strong> son los nombres de las variables (separadas con comas) en las que la función recibe los datos que necesita. Los parámetros, así como las variables declaradas dentro de la función, son locales y temporales, es decir que sólo son válidas dentro de la función y dejan de existir (son destruídas) cuando la función termina.</p>
+
+    <p class="text">Por ejemplo, en la siguiente función, se programa el algoritmo elaborado en la anterior sección (para calcular el perímetro y área de un círculo):</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">function paCirculo(r) {<br>  const p = 2*Math.PI*r;<br>  const a = Math.PI*r**2;<br>  return [p, a];<br>}</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Donde el resultado se devuelve en un arreglo (un array) porque no es un resultado, sino dos: el perímetro y el área.</p>
+
+    <p class="text">Una vez creada una función, se la llama (se la emplea), simplemente escribiendo su nombre, en este caso: <dfn class="style1">paCirculo</dfn> y mandando dentro los paréntesis él o los datos requeridos (los <dfn class="style1">argumentos</dfn>), en este caso sólo uno: el radio.</p>
+    
+    <p class="text">Por ejemplo, en las siguientes instrucciones, se llama a la función <dfn class="style1">paCirculo</dfn>, para calcula el perímetro y área de un círculo de radio 5 y otro de radio 2:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">paCirculo(5)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">paCirculo(2)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Las funciones pueden ser creadas también como <dfn class="style1">funciones expresión</dfn>, también denominadas <dfn class="style1">funciones anónimas</dfn> de acuerdo a la siguiente sintaxis:</p>
+
+    <div class="codigo">var|const|let nombre_de_la_función = function(lista_de_parámetros) {<br>    Instrucciones JavaScript<br>    ...<br>    return valor/expresión;<br>}</div>
+
+    <p class="text">Donde <strong class="style1">nombre_de_la_función</strong> es la variable en la cual se guarda la función. Este tipo de funciones se denominan <dfn class="style1">funciones expresión</dfn>, porque se crean en forma de una expresión de asignación y se denominan <dfn class="style1">funciones anónimas</dfn> porque la función en sí no tiene nombre, por eso es necesario guardarla en una variable. Como de costumbre, se emplea "var" cuando se trabaja en la calculadora (para poder hacer correcciones en caso de error) y <dfn class="style1">const</dfn> (más frecuentemente que <dfn class="style1">let</dfn>) cuando se crean variables al interior de una función o librería (se emplea <dfn class="style1">let</dfn> cuando el valor asignado a la variable debe, o puede cambiar, dentro del programa).</p>
+
+    <p class="text">El cuerpo de la función (el código que en realidad resuelve el problema) es el mismo que en la función estándar y en realidad es el mismo en todas las formas en las que se puede crear una función, sólo cambia la forma en la que se crea la función (la forma en que se declara la función), así la función "paCirculo", programada como una función anónima, es:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var paCirculo2 = function(r) {<br>  const p = 2*Math.PI*r;<br>  const a = Math.PI*r**2;<br>  return [p, a];<br>}</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Que se emplea igual que una función estándar, así el perímetro y área de un círculo con un radio igual a 3, es:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">paCirculo2(3)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Finalmente, las funciones pueden ser creadas también como <dfn class="style1">funciones flecha</dfn>, de acuerdo a la siguiente sintaxis:</p>
+
+    <div class="codigo">var|const|let nombre_de_la_función = (lista_de_parámetros) =&gt; {<br>    Instrucciones JavaScript<br>    ...<br>    return valor/expresión;<br>}</div>
+
+    <p class="text">Que es una forma parecida a las funciones anónimas, excepto que no se emplea la palabra <dfn class="style1">function</dfn> y después de los parámetros se escribe una flecha: <strong class="style1">=&gt;</strong>. Esta es la forma más práctica cuando la función consta de una sola expresión, pues en esos casos no se requieren ni las llaves, ni la instrucción de retorno (<strong class="style1">return</strong>). Además, si la función recibe solo un parámetro, no se requieren tampoco los paréntesis.</p>
+
+    <p class="text">La función "paCirculo", programada como una función flecha, es:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var paCirculo3 = r =&gt; {<br>  const p = 2*Math.PI*r;<br>  const a = Math.PI*r**2;<br>  return [p, a];<br>}</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Por supuesto, se emplea igual que cualquier función. Así, el perímetro y área de un círculo con un radio igual a 7, es:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">paCirculo3(7)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Como se dijo, si la función flecha sólo consta de una expresión, no requiere ni llaves ni la instrucción <dfn class="style1">return</dfn>. Si además, recibe un sólo parámetro, tampoco requiere los paréntesis. Así para programar la siguiente expresión:</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[ \sqrt[3] {{y+ 4! + y^{3.2}} \over {\text{e}^y + \cos(y)} } \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Se escribe:</p>
+    
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var fy = y =&gt; Math.cbrt((y+Math.factorial(4)+y**3.2)/(Math.exp(y)+Math.cos(y)));</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Por esta razón, las funciones flecha son la elección lógica cuando la función consta de una sola expresión.</p>
+    
+    <p class="text">Sin importar como haya sido creada una función, siempre se la emplea (se la llama) de la misma forma, es decir escribiendo el nombre de la función ("fy") y, entre paréntesis, el valor requerido ("y"). Así el valor de la expresión, para "y" igual a 3.1, se calcula con:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">fy(3.1)</div>
+        <div class="resultado"></div>
+    </div>
+    <br>
+    
+    <div class="ejercicio" id="ejercicio1" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Elabore la función (estándar) "fun1" que reciba el número "x" y devuelva el valor de la siguiente expresión\[f(x) = x^3+2x^2+3x+4\]Luego, empleando la función elaborada, calcule los valores de la expresión para valores de "x" iguales a 2, 5 y 7 (una en cada instrucción).</p></div><p class="pregunta"><span class="pregunta"></span></p><div id="pregunta1" class="calculadora" spellcheck="false"><div class="instruccion">function fun1(x){<br>  return x**3 + 2*x**2 + 3*x + 4;<br>}</div><div class="resultado"></div><div class="instruccion">fun1(2)</div><div class="resultado"></div><div class="instruccion">fun1(5)</div><div class="resultado"></div><div class="instruccion">fun1(7)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="5" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div> <!-- Ejercicio 1 -->
+    
+    <div class="ejercicio" id="ejercicio2" enunciado="2"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Elabore la función (anónima) "rsexta", que reciba un número "x" y devuelva la raíz sexta del número recibido, tomando en cuenta que:\[\sqrt[6]{x} = x^{1/6}\]Luego, empleando la función elaborada, calcule la raíz sexta de 1.7, 4.5 y 12.3</p></div><p class="pregunta"><span class="pregunta"></span></p><div id="pregunta6" class="calculadora" spellcheck="false"><div class="instruccion">var rsexta = function(x) {<br>  return x**(1/6);<br>}</div><div class="resultado"></div><div class="instruccion">rsexta(1.7)</div><div class="resultado"></div><div class="instruccion">rsexta(4.5)</div><div class="resultado"></div><div class="instruccion">rsexta(12.3)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="5" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div> <!-- Ejercicio 2 -->
+
+    <div class="ejercicio" id="ejercicio3" enunciado="2"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Elabore la función (flecha) "log9" que reciba un número "x" y devuelva el logaritmo en base 9 del número recibido, tomando en cuenta que:\[\log_9(x) = {\ln(x) \over \ln(9)}\]Luego, empleando la función elaborada, calcule el logaritmo en base 9 de 5.7, 12.3 y 31.2</p></div><p class="pregunta"><span class="pregunta"></span></p><div id="pregunta9" class="calculadora" spellcheck="false"><div class="instruccion">var log9 = x =&gt; Math.log(x)/Math.log(9)</div><div class="resultado"></div><div class="instruccion">log9(5.7)</div><div class="resultado"></div><div class="instruccion">log9(12.3)</div><div class="resultado"></div><div class="instruccion">log9(31.2)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="5" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div> <!-- Ejercicio 3 -->
+    
+    <div class="ejercicio" id="ejercicio4" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Elabore la función (estándar) "logb", que reciba un número entero "b" y un número real "x" y devuelva el logaritmo en base "b" del número real "x", recordando que:\[\log_b(x) = {\ln(x) \over \ln(b)}\]Luego, empleando la función elaborada, calcule el logaritmo en base 5 de 5.7, el logaritmo en base 7 de 12.3 y el logaritmo en base 9 de 31.2</p></div><p class="pregunta"><span class="pregunta"></span></p><div id="pregunta10" class="calculadora" spellcheck="false"><div class="instruccion">function logb(b, x){<br>  return Math.log(x)/Math.log(b);<br>}</div><div class="resultado"></div><div class="instruccion">logb(5,5.7)</div><div class="resultado"></div><div class="instruccion">logb(7,12.3)</div><div class="resultado"></div><div class="instruccion">logb(9,31.2)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="6" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div> <!-- Ejercicio 4 -->
+
+
+
+    <h2 class="text">Pseudocódigo</h2>
+
+    <p class="text">El pseudocódigo emplea instrucciones similares a las de un lenguaje de programación para expresar el algoritmo.</p>
+
+    <p class="text">Debido a que no existe un estándar oficial, cada programador escribe el pseudocódigo de forma diferente.</p>
+    
+    <p class="text">Por ejemplo, el algoritmo para caclular el perímetro y área de un círculo, en forma de pseudocódigo, puede ser escrito de la siguiente forma:</p>
+
+    <ul>
+    <span class="textocodigo">
+        <li>r &lt;-- radio</li>
+        <li>p = 2*π*r</li>
+        <li>a = π*r<sup>2</sup></li>
+        <li>--&gt; p, a</li>
+    </span>
+    </ul>
+    
+    <p class="text">Dado que es similar a un lenguaje de programación, el pseudocódigo no siempre resulta claro. Además, como cada programador emplea su propio pseudocódigo, los algoritmos son claros únicamente para el que los elabora. Por esta razón, en la asignatura no se empleará este tipo de algoritmos.</p>
+
+
+    
+    <h2 class="text">Código documentado</h2>
+
+    <p class="text">El código documentado, al igual que el lenguaje natural, ya ha sido empleado en los anteriores capítulos para explicar la lógica seguida en la elaboración del programa.</p>
+
+    <p class="text">Es una forma muy práctica, porque permite comprender la lógica y al mismo tiempo analizar el código que lo implementa. De esa forma es más sencillo corregir errores así como modificar y optimizar los programas. Por esta razón, actualmente, es una de las formas más empleadas en el desarrollo de software.</p>
+
+    <p class="text">El algoritmo para calcular el perímetro y área de un círculo, en forma de código documentado, es:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">// Función que recibe el rádio "r" de un círculo y devuelve su perímetro y área<br>function paCirculo(r) {<br>  // Se calcula el perímetro<br>  const p = 2*Math.PI*r;<br>  // Se calcula el área<br>  const a = Math.PI*r**2;<br>  // Se devuelve el perímetro y área calculados<br>  return [p, a];<br>}</div>
+        <div class="resultado"></div>
+    <div class="instruccion"></div><div class="resultado"></div></div>
+
+
+
+    <h2 class="text">Diagramas de flujo</h2>
+
+    <p class="text">Los de diagramas de flujo, son una de las formas favoritas para expresar algoritmos.</p>
+
+    <p class="text">Al ser una forma gráfica, es más expresiva, sin embargo, sólo son de utilidad para elaborar algoritmos simples. Los algoritmos complejos tienen tantos elementos gráficos que resultan difíciles de comprender, con lo que el diagrama pierde su propósito.</p>
+
+    <p class="text">En la asignatura, los diagramas de flujo son elaborados con la ayuda de la librería <a href="https://gojs.net/latest/index.html" target="_blank">GoJS</a>.</p>
+
+    <p class="text">En los diagramas de flujo se emplearán las formas geométricas estándar. Así, el inicio y el fin se representan con nodos rectangulares de lados redondeados (píldoras):</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">gojsGraph({divi, modelo: { "class": "go.GraphLinksModel",  "linkFromPortIdProperty": "fromPort",  "linkToPortIdProperty": "toPort",  "nodeDataArray": [ {"category":"Start", "text":"inicio", "key":-1, "loc":"-299 -366"},{"category":"Start", "text":"fin", "key":-2, "loc":"-202 -366"} ],  "linkDataArray": []}})</div>
+    </div>
+    
+    <p class="text">La entrada de datos y la salida de resultados, se representan, respectivamente, con un paralelogramo y un rectángulo de fondo ondulado:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">gojsGraph({divi, modelo: { "class": "go.GraphLinksModel",  "linkFromPortIdProperty": "fromPort",  "linkToPortIdProperty": "toPort",  "nodeDataArray": [ {"category":"Input", "text":"entrada", "key":-3, "loc":"-119-369"},{"category":"Output", "text":"salida", "key":-5, "loc":"-21-366"} ],  "linkDataArray": []}})</div>
+    </div>
+
+    <p class="text">Para las condiciones (preguntas) se emplea un rombo:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">gojsGraph({divi, modelo: { "class": "go.GraphLinksModel",  "linkFromPortIdProperty": "fromPort",  "linkToPortIdProperty": "toPort",  "nodeDataArray": [ {"category":"Conditional", "text":"condición", "key":-4, "loc":"-90-365"} ],  "linkDataArray": []}})</div>
+    </div>
+    
+    <p class="text">El símbolo para las instrucciones (procesos, operaciones, comandos) es un rectángulo:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">gojsGraph({divi, modelo: { "class": "go.GraphLinksModel",  "linkFromPortIdProperty": "fromPort",  "linkToPortIdProperty": "toPort",  "nodeDataArray": [ {"category":"Process", "text":"proceso", "key":-2, "loc":"-122-367"} ],  "linkDataArray": []}})</div>
+    </div>
+    
+    <p class="text">Los módulos (subrutinas) se representan con un rectángulo, con dos líneas verticales adicionales a ambos lados:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">gojsGraph({divi, modelo: { "class": "go.GraphLinksModel",  "linkFromPortIdProperty": "fromPort",  "linkToPortIdProperty": "toPort",  "nodeDataArray": [ {"category":"Procedure", "text":"subrutina", "key":-7, "loc":"-115-364"} ],  "linkDataArray": []}})</div>
+    </div>
+
+    <p class="text">Aunque no es propiamente un estándar (pero sí una forma ampliamente utilizada en la práctica) para representar la estructura <dfn class="style1">for</dfn>, se emplea un rectángulo con sus lados en forma de vértices:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">gojsGraph({divi, modelo: { "class": "go.GraphLinksModel",  "linkFromPortIdProperty": "fromPort",  "linkToPortIdProperty": "toPort",  "nodeDataArray": [ {"category":"For", "text":"desde", "key":-6, "loc":"-131-375"} ],  "linkDataArray": []}})</div>
+    </div>
+
+    <p class="text">Para conectar dos puntos separados del diagrama, se emplean círculos:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">gojsGraph({divi, modelo: { "class": "go.GraphLinksModel",  "linkFromPortIdProperty": "fromPort",  "linkToPortIdProperty": "toPort",  "nodeDataArray": [ {"category":"Connector", "text":"...", "key":-8, "loc":"-146-376"} ],  "linkDataArray": []}})</div>
+    </div>
+
+    <p class="text">Por ejemplo, el siguiente diagrama, corresponde al algoritmo para calcular (y devolver) el perímetro y área de un círculo de radio "r":</p>
+    
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">gojsGraph({divi, modelo: { "class": "go.GraphLinksModel",  "linkFromPortIdProperty": "fromPort",  "linkToPortIdProperty": "toPort",  "nodeDataArray": [ {"category":"Start", "text":"paCirculo", "key":-1, "loc":"-107 -374"},{"category":"Input", "text":"radio: r", "key":-3, "loc":"-107 -327"},{"category":"Process", "text":"p = 2*PI*r", "key":-2, "loc":"-107 -277"},{"category":"Process", "text":"a = PI*r**2", "key":-4, "loc":"-107 -226"},{"category":"Output", "text":"p, a", "key":-5, "loc":"-107 -169"},{"category":"Start", "text":"fin", "key":-6, "loc":"-107 -116"} ],  "linkDataArray": [ {"from":-1, "to":-3, "fromPort":"B", "toPort":"T", "points":[-107,-358.7333213806152,-107,-348.7333213806152,-107,-348.7333213806152,-107,-351.2666786193848,-107,-351.2666786193848,-107,-341.2666786193848]},{"from":-3, "to":-2, "fromPort":"B", "toPort":"T", "points":[-107,-312.7333213806152,-107,-302.7333213806152,-107,-302.7333213806152,-107,-304.2666786193848,-107,-304.2666786193848,-107,-294.2666786193848]},{"from":-2, "to":-4, "fromPort":"B", "toPort":"T", "points":[-107,-259.7333213806152,-107,-249.73332138061522,-107,-249.73332138061522,-107,-253.26667861938478,-107,-253.26667861938478,-107,-243.26667861938478]},{"from":-4, "to":-5, "fromPort":"B", "toPort":"T", "points":[-107,-208.73332138061525,-107,-198.73332138061525,-107,-197.6722262064616,-107,-197.6722262064616,-107,-196.61113103230795,-107,-186.61113103230795]},{"from":-5, "to":-6, "fromPort":"B", "toPort":"T", "points":[-107,-156.31998565673828,-107,-146.31998565673828,-107,-143.79333213806154,-106.99999999999999,-143.79333213806154,-106.99999999999999,-141.26667861938478,-106.99999999999999,-131.26667861938478]} ]}})</div>
+    </div>
+
+    <p class="text">Como se muestra en este ejemplo, para escribir expresiones matemáticas en los diagramas, se emplean los operadores y funciones de JavaScript, pero, las funciones y constantes matemáticas son escritas sin <b>Math.</b>, para que sean más universales y más cortas.</p>
+
+    <p class="text">Una vez elaborado el diagrama de flujo, la codificación (el escribir el programa propiamente) es mayormente un proceso mecánico, pues la lógica, que es la secuencia de acciones para resolver el problema, ya está definida en el diagrama de flujo.</p>
+    
+    <p class="text">Así, el código correspondiente a este diagrama, es:</p>
+    
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var paCirculo = function(r) {<br>  const p = 2*Math.PI*r;<br>  const a = Math.PI*r**2;<br>  return [p, a];<br>};</div>
+        <div class="resultado"></div>
+        <div class="instruccion">paCirculo(2.54)</div>
+        <div class="resultado"></div>
+    <div class="instruccion"></div><div class="resultado"></div></div>
+    
+    <p class="text">Los diagramas de flujo, en GoJS, se crean como se muestra en el siguiente video, donde se elabora el diagrama de flujo para sumar dos números:</p>
+        
+    <div class="video">
+        <video width="399" src="https://cursosabiertos.usfx.bo/materias/sis101/capitulos/capitulo4/files/cap4_diagrama_gojs_1.mp4" controls=""></video>
+    </div>
+
+    <p class="text">Además, cualquier acción puede ser deshecha (undo) con el atajo estándar <strong class="style1">Ctrl+Z</strong> y rehecha (redo) con el atajo estándar <strong class="style1">Ctrl+Y</strong>.</p>
+    
+    <p class="text">En los teléfonos y tabletas se trabaja de la misma forma, sólo que varias de las opciones, como: copiar (Copy), pegar (Paste), cortar (Cut), eliminar (Delete), deshacer (Undo), rehacer (Redo), etc., están disponibles a través del menú contextual que aparece cuando se hace una pulsación larga en uno de los elementos de la gráfica. Además, en los ejercicios, para evaluar la gráfica (con Shift+Enter) debe estar seleccionado un texto (cualquier texto de la gráfica), para que aparezca el teclado y sea posible pulsar las teclas Shift+Enter.</p>
+
+
+
+    <h3 class="text">Area de un triángulo</h3>
+
+    <p class="text">En este ejemplo se calcula y devuelve, el área de un triángulo de lados "a", "b" y "c", empleando la siguiente fórmula matemática:</p>
+    
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                \begin{aligned}                \text{Area} &amp;= \sqrt{s(s-a)(s-b)(s-c)}\\[0.3cm]                donde : &amp;\phantom{=}\\                s &amp;= \dfrac{a+b+c}{2}                \end{aligned}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">El algoritmo, en forma de diagrama de flujo, es:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">gojsGraph({divi, modelo: { "class": "go.GraphLinksModel",  "linkFromPortIdProperty": "fromPort",  "linkToPortIdProperty": "toPort",  "nodeDataArray": [ {"category":"Start", "text":"areaTriangulo", "key":-1, "loc":"172 -460"},{"category":"Input", "text":"lados: a, b, c", "key":-3, "loc":"172.00000000000009 -410.9999999999998"},{"category":"Start", "text":"fin", "key":-9, "loc":"172.00000000000009 -185"},{"category":"Output", "text":"area", "key":-10, "loc":"172.00000000000006 -236"},{"category":"Process", "text":"s = (a+b+c)/2", "key":-11, "loc":"172 -357"},{"category":"Process", "text":"area = sqrt(s*(s-a)*(s-b)*(s-c))", "key":-15, "loc":"171.99999999999997 -296.99999999999994"} ],  "linkDataArray": [ {"from":-1, "to":-3, "fromPort":"B", "toPort":"T", "points":[172.00000000000009,-444.733321380615,172.00000000000009,-434.733321380615,172.0000000000001,-434.733321380615,172.0000000000001,-435.2666786193845,172.0000000000001,-435.2666786193845,172.0000000000001,-425.2666786193845]},{"from":-10, "to":-9, "fromPort":"B", "toPort":"T", "points":[172.00000000000006,-223.31998565673828,172.00000000000006,-213.31998565673828,172.00000000000006,-211.7933321380615,172.00000000000003,-211.7933321380615,172.00000000000003,-210.26667861938472,172.00000000000003,-200.26667861938472]},{"from":-3, "to":-11, "fromPort":"B", "toPort":"T", "points":[172.0000000000001,-396.73332138061494,172.0000000000001,-386.73332138061494,172.0000000000001,-385.49999999999983,171.99999999999997,-385.49999999999983,171.99999999999997,-384.2666786193847,171.99999999999997,-374.2666786193847]},{"from":-15, "to":-10, "fromPort":"B", "toPort":"T", "points":[171.99999999999997,-279.73332138061517,171.99999999999997,-269.73332138061517,171.99999999999997,-266.6722262064616,172.00000000000006,-266.6722262064616,172.00000000000006,-263.611131032308,172.00000000000006,-253.61113103230795]},{"from":-11, "to":-15, "fromPort":"B", "toPort":"T", "points":[171.99999999999997,-339.73332138061517,171.99999999999997,-329.73332138061517,171.99999999999997,-326.99999999999994,171.99999999999997,-326.99999999999994,171.99999999999997,-324.2666786193847,171.99999999999997,-314.2666786193847]} ]}})</div>
+    </div>
+
+    <p class="text">Note que, aún en un problema tan simple como el presente, existe una secuencia lógica que es necesario respetar: primero se debe calcular "s" y luego el área, porque en el cálculo del área se emplea "s", es decir que no es posible calcular el área sin antes haber calculado "s", al igual que no es posible subir a un tercer piso, sin haber subido primero al segundo.</p>
+        
+    <p class="text">El código respectivo, implementado como una función estándar, es:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">function areaTriangulo(a,b,c) {<br>  const s = (a+b+c)/2;<br>  const area = Math.sqrt(s*(s-a)*(s-b)*(s-c));<br>  return area;<br>}</div>
+        <div class="resultado"></div>
+    <div class="instruccion"></div><div class="resultado"></div></div>
+
+    <p class="text">Donde, la variable local <strong class="style1">s</strong>, ha sido declarada como constante, porque su valor (una vez calculado) no cambia dentro de la función. Llamando a la función con algunos valores de prueba, se obtiene:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">areaTriangulo(10, 15, 12)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">areaTriangulo(17, 14, 19)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">areaTriangulo(20, 30, 40)</div>
+        <div class="resultado"></div>
+    <div class="instruccion"></div><div class="resultado"></div></div>
+
+
+
+
+    <h3 class="text">Altura de un cilindro</h3>
+
+    <p class="text">En este ejemplo se calcula y devuelve, la altura que deberá tener un cilindro de diámetro "d", para almacenar un volumen "V" de agua.</p>
+    
+    <p class="text">La altura se del cilindro se calcula con:</p>
+    
+    <table class="ecuacionsn">
+        <tbody><tr>
+        <td>
+            \[h = \dfrac{4 \cdot V}{\pi \cdot d^2}\]
+        </td>
+        <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">El algoritmo en forma de diagrama de flujo, es:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">gojsGraph({divi, modelo: { "class": "go.GraphLinksModel",  "linkFromPortIdProperty": "fromPort",  "linkToPortIdProperty": "toPort",  "nodeDataArray": [ {"category":"Start", "text":"alturaCilindro", "key":-1, "loc":"119.00000000000003 -461.99999999999994"},{"category":"Input", "text":"diámetro del cilindro: d\nvolumen a almacenar: V", "key":-3, "loc":"119.00000000000003 -399.99999999999955"},{"category":"Start", "text":"fin", "key":-9, "loc":"119.00000000000006 -216.00000000000009"},{"category":"Output", "text":"h", "key":-10, "loc":"119.00000000000003 -270.99999999999994"},{"category":"Process", "text":"h = 4*V/(PI*d**2)", "key":-11, "loc":"118.99999999999994 -331.9999999999999"} ],  "linkDataArray": [ {"from":-1, "to":-3, "fromPort":"B", "toPort":"T", "points":[119.00000000000003,-446.73332138061517,119.00000000000003,-436.73332138061517,119.00000000000003,-434.88333930969213,119.00000000000003,-434.88333930969213,119.00000000000003,-433.0333572387691,119.00000000000003,-423.0333572387691]},{"from":-10, "to":-9, "fromPort":"B", "toPort":"T", "points":[119.00000000000003,-258.3199856567382,119.00000000000003,-248.3199856567382,119.00000000000003,-244.7933321380615,119.0000000000001,-244.7933321380615,119.0000000000001,-241.26667861938478,119.0000000000001,-231.26667861938478]},{"from":-3, "to":-11, "fromPort":"B", "toPort":"T", "points":[119.00000000000003,-376.96664276123005,119.00000000000003,-366.96664276123005,119.00000000000003,-363.11666069030736,118.99999999999994,-363.11666069030736,118.99999999999994,-359.26667861938466,118.99999999999994,-349.26667861938466]},{"from":-11, "to":-10, "fromPort":"B", "toPort":"T", "points":[118.99999999999994,-314.7333213806151,118.99999999999994,-304.7333213806151,118.99999999999994,-301.67222620646146,119.00000000000003,-301.67222620646146,119.00000000000003,-298.61113103230787,119.00000000000003,-288.61113103230787]} ]}})</div>
+    </div>
+
+    <p class="text">Siendo el código respectivo, programado como una función anónima:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var alturaCilindro = function(d, V) {<br>  const h = 4*V/(Math.PI*d**2);<br>  return h<br>};</div>
+        <div class="resultado"></div>
+    <div class="instruccion"></div><div class="resultado"></div></div>
+
+    <p class="text">Llamando a la función (con valores en unidades compatibles) para calcular la altura del cilindro en los siguientes casos: diámetro = 4 pies, volumen = 55 pies<sup>3</sup>; diámetro = 48 pulgadas, volumen = 90000 pulgadas<sup>3</sup>; diámetro = 1 m, volumen = 1,5 m<sup>3</sup>, se obtiene:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">alturaCilindro(4, 55)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">alturaCilindro(48, 90000)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">alturaCilindro(1, 1.5)</div>
+        <div class="resultado"></div>
+    <div class="instruccion"></div><div class="resultado"></div></div>
+
+    <p class="text">Donde el primer resultado está en pies (porque los datos están en pies), el segundo en pulgadas y el tercero en metros.</p>
+    <br>
+    
+    <div class="ejercicio" id="ejercicio5" enunciado="1"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Complete el diagrama de flujo "areaC", que reciba el lado "l" de un cuadrado y devuelva su área:\[\text{área = }l^2\]</p><div id="pregunta15" class="calculadora" spellcheck="false"><div class="instruccion">gojsGraph({divi, modelo: { "class": "go.GraphLinksModel",  "linkFromPortIdProperty": "fromPort",  "linkToPortIdProperty": "toPort",  "nodeDataArray": [ {"category":"Start", "text":"areaC", "key":-1, "loc":"172 -460"},{"category":"Input", "text":"lado:l", "key":-3, "loc":"172.00000000000009 -410.9999999999998"},{"category":"Start", "text":"fin", "key":-9, "loc":"172 -246.99999999999994"},{"category":"Output", "text":"a", "key":-10, "loc":"172 -298"},{"category":"Process", "text":"a =l**2", "key":-11, "loc":"172 -357"} ],  "linkDataArray": [ {"from":-1, "to":-3, "fromPort":"B", "toPort":"T", "points":[172.00000000000003,-445.1828666563202,172.00000000000003,-435.1828666563202,172.00000000000003,-434.9999999999999,172.0000000000001,-434.9999999999999,172.0000000000001,-434.81713334367964,172.0000000000001,-424.81713334367964]},{"from":-3, "to":-11, "fromPort":"B", "toPort":"T", "points":[172.0000000000001,-397.18286665632024,172.0000000000001,-387.18286665632024,172.0000000000001,-385.5,172.00000000000014,-385.5,172.00000000000014,-383.8171333436798,172.00000000000014,-373.8171333436798]},{"from":-11, "to":-10, "fromPort":"B", "toPort":"T", "points":[172.00000000000014,-340.1828666563204,172.00000000000014,-330.1828666563204,172.00000000000014,-327.5223777812266,172,-327.5223777812266,172,-324.86188890613283,172,-314.86188890613283]},{"from":-10, "to":-9, "fromPort":"B", "toPort":"T", "points":[172,-285.8594399875844,172,-275.8594399875844,172,-273.83828666563204,172,-273.83828666563204,172,-271.81713334367964,172,-261.81713334367964]} ]}}), modeloc: {"class":"go.GraphLinksModel","linkFromPortIdProperty":"fromPort","linkToPortIdProperty":"toPort","nodeDataArray":[{"category":"Start","text":"areaC","key":-1,"loc":"172 -460"},{"category":"Input","text":"lado: l","key":-3,"loc":"172.00000000000009 -410.9999999999998"},{"category":"Start","text":"fin","key":-9,"loc":"172 -246.99999999999994"},{"category":"Output","text":"a","key":-10,"loc":"172 -298"},{"category":"Process","text":"a = l*l_|l**2","key":-11,"loc":"172 -357"}],"linkDataArray":[{"from":-1,"to":-3,"fromPort":"B","toPort":"T","points":[171.9999999999999,-444.7333213806152,171.9999999999999,-434.7333213806152,172,-434.7333213806152,172,-435.26667861938455,172.00000000000009,-435.26667861938455,172.00000000000009,-425.26667861938455]},{"from":-10,"to":-9,"fromPort":"B","toPort":"T","points":[172,-285.3199856567383,172,-275.3199856567383,172,-273.7933321380615,172.00000000000006,-273.7933321380615,172.00000000000006,-272.2666786193847,172.00000000000006,-262.2666786193847]},{"from":-3,"to":-11,"fromPort":"B","toPort":"T","points":[172.00000000000009,-396.733321380615,172.00000000000009,-386.733321380615,172.00000000000009,-385.5,172.0000000000001,-385.5,172.0000000000001,-384.266678619385,172.0000000000001,-374.266678619385]},{"from":-11,"to":-10,"fromPort":"B","toPort":"T","points":[172.0000000000001,-339.73332138061545,172.0000000000001,-329.73332138061545,172.0000000000001,-327.6722262064617,172,-327.6722262064617,172,-325.6111310323079,172,-315.6111310323079]}]}</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Codifique el diagrama de flujo como una función anónima, luego llame a la función con los números a) 12 y b) 15.</p><div id="pregunta16" class="calculadora" spellcheck="false"><div class="instruccion">var areaC = function(l){<br>  const a = l**2;<br>  return a;<br>}</div><div class="resultado"></div><div class="instruccion">areaC(12)</div><div class="resultado"></div><div class="instruccion">areaC(15)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="10" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div> <!-- Ejercicio 5 -->
+    
+    <div class="ejercicio" id="ejercicio6" enunciado="2"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Complete el diagrama de flujo "areaCirculo", que reciba el radio "r" de un círculo y devuelva su área: (\(\text{area=}\pi\cdotr^2\)).</p><div id="pregunta23" class="calculadora" spellcheck="false"><div class="instruccion">gojsGraph({divi, modelo: { "class": "go.GraphLinksModel",  "linkFromPortIdProperty": "fromPort",  "linkToPortIdProperty": "toPort",  "nodeDataArray": [ {"category":"Start", "text":"areaCirculo", "key":-1, "loc":"172 -460"},{"category":"Input", "text":"radio: r", "key":-3, "loc":"172.00000000000009 -410.9999999999998"},{"category":"Start", "text":"fin", "key":-9, "loc":"172.00000000000009 -244"},{"category":"Output", "text":"a", "key":-10, "loc":"172.00000000000006 -295"},{"category":"Process", "text":"a = PI*r**2", "key":-11, "loc":"172 -357"} ],  "linkDataArray": [ {"from":-1, "to":-3, "fromPort":"B", "toPort":"T", "points":[171.99999999999997,-445.18286665632013,171.99999999999997,-435.18286665632013,171.99999999999997,-434.99999999999983,171.99999999999997,-434.99999999999983,171.99999999999997,-434.81713334367953,171.99999999999997,-424.81713334367953]},{"from":-3, "to":-11, "fromPort":"B", "toPort":"T", "points":[171.99999999999997,-397.18286665632013,171.99999999999997,-387.18286665632013,171.99999999999997,-385.4999999999999,172.00000000000006,-385.4999999999999,172.00000000000006,-383.8171333436797,172.00000000000006,-373.8171333436797]},{"from":-11, "to":-10, "fromPort":"B", "toPort":"T", "points":[172.00000000000006,-340.1828666563203,172.00000000000006,-330.1828666563203,172.00000000000006,-326.0223777812266,171.99999999999983,-326.0223777812266,171.99999999999983,-321.86188890613295,171.99999999999983,-311.86188890613295]},{"from":-10, "to":-9, "fromPort":"B", "toPort":"T", "points":[171.99999999999983,-282.8594399875845,171.99999999999983,-272.8594399875845,171.99999999999983,-270.83828666563215,172,-270.83828666563215,172,-268.81713334367976,172,-258.81713334367976]} ]}}), modeloc: {"class":"go.GraphLinksModel","linkFromPortIdProperty":"fromPort","linkToPortIdProperty":"toPort","nodeDataArray":[{"category":"Start","text":"areaCirculo","key":-1,"loc":"172 -460"},{"category":"Input","text":"radio: r","key":-3,"loc":"172.00000000000009 -410.9999999999998"},{"category":"Start","text":"fin","key":-9,"loc":"172.00000000000009 -244"},{"category":"Output","text":"a","key":-10,"loc":"172.00000000000006 -295"},{"category":"Process","text":"a = PI*r**2","key":-11,"loc":"172 -357"}],"linkDataArray":[{"from":-1,"to":-3,"fromPort":"B","toPort":"T","points":[172.00000000000009,-444.733321380615,172.00000000000009,-434.733321380615,172.0000000000001,-434.733321380615,172.0000000000001,-435.2666786193845,172.0000000000001,-435.2666786193845,172.0000000000001,-425.2666786193845]},{"from":-10,"to":-9,"fromPort":"B","toPort":"T","points":[172.00000000000006,-282.3199856567383,172.00000000000006,-272.3199856567383,172.00000000000006,-270.7933321380615,172.00000000000003,-270.7933321380615,172.00000000000003,-269.2666786193847,172.00000000000003,-259.2666786193847]},{"from":-3,"to":-11,"fromPort":"B","toPort":"T","points":[172.0000000000001,-396.73332138061494,172.0000000000001,-386.73332138061494,172.0000000000001,-385.49999999999983,171.99999999999997,-385.49999999999983,171.99999999999997,-384.2666786193847,171.99999999999997,-374.2666786193847]},{"from":-11,"to":-10,"fromPort":"B","toPort":"T","points":[171.99999999999997,-339.73332138061517,171.99999999999997,-329.73332138061517,171.99999999999997,-326.1722262064616,172.00000000000006,-326.1722262064616,172.00000000000006,-322.611131032308,172.00000000000006,-312.611131032308]}]}</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Codifique el diagrama de flujo como una función flecha, luego llame a la función para calcular el área de los círculos de radio: a) 3.45 pies, b) 35.52 pulgadas y c) 105 centímetros.</p><div id="pregunta24" class="calculadora" spellcheck="false"><div class="instruccion">var areaCirculo = r =&gt; {<br>  const a =Math.PI*r**2;<br>  return a;<br>}</div><div class="resultado"></div><div class="instruccion">areaCirculo(3.45)</div><div class="resultado"></div><div class="instruccion">areaCirculo(35.52)</div><div class="resultado"></div><div class="instruccion">areaCirculo(105)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="10" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div> <!-- Ejercicio 6 -->
+    
+    <div class="ejercicio" id="ejercicio7" enunciado="2"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Complete el diagrama de flujo "alcance", que reciba el ángulo "O" (en radianes) y la velocidad inicial "v" (en m/s) de un proyectil, así como la aceleración de la gravedad "g" (en m/s<sup>2</sup>) y que, empleando la siguiente ecuación, devuelva la distancia "x" que alcanza el proyectil:\[x = \dfrac{v^2 \cdot sin(2\theta)}{g}\]</p><div id="pregunta29" class="calculadora" spellcheck="false"><div class="instruccion">gojsGraph({divi, modelo: { "class": "go.GraphLinksModel",  "linkFromPortIdProperty": "fromPort",  "linkToPortIdProperty": "toPort",  "nodeDataArray": [ {"category":"Start", "text":"alcance", "key":-1, "loc":"119.00000000000003 -461.99999999999994"},{"category":"Input", "text":"ángulo (radianes): O\nvelocidad inicial (m/s): v \ngravedad (m/s2): g", "key":-3, "loc":"118.99999999999993 -388.9999999999995"},{"category":"Start", "text":"fin", "key":-9, "loc":"119.00000000000001 -198"},{"category":"Output", "text":"x", "key":-10, "loc":"119 -253.0000000000001"},{"category":"Process", "text":"x  = v**2 * sin(2*O)/g", "key":-11, "loc":"118.99999999999997 -314"} ],  "linkDataArray": [ {"from":-1, "to":-3, "fromPort":"B", "toPort":"T", "points":[119,-447.18286308263663,119,-437.18286308263663,119,-433.3171369173633,118.99999999999997,-433.3171369173633,118.99999999999997,-429.45141075208994,118.99999999999997,-419.45141075208994]},{"from":-3, "to":-11, "fromPort":"B", "toPort":"T", "points":[118.99999999999997,-358.5485892479094,118.99999999999997,-348.5485892479094,118.99999999999997,-344.68286308263646,119.00000000000004,-344.68286308263646,119.00000000000004,-340.81713691736354,119.00000000000004,-330.81713691736354]},{"from":-11, "to":-10, "fromPort":"B", "toPort":"T", "points":[119.00000000000004,-297.1828630826367,119.00000000000004,-287.1828630826367,119.00000000000004,-283.5223789724546,119,-283.5223789724546,119,-279.86189486227255,119,-269.86189486227255]},{"from":-10, "to":-9, "fromPort":"B", "toPort":"T", "points":[119,-240.85943569916404,119,-230.85943569916404,119,-226.83828630826375,119.00000000000003,-226.83828630826375,119.00000000000003,-222.81713691736346,119.00000000000003,-212.81713691736346]} ]}}), modeloc: {"class":"go.GraphLinksModel","linkFromPortIdProperty":"fromPort","linkToPortIdProperty":"toPort","nodeDataArray":[{"category":"Start","text":"alcance","key":-1,"loc":"119.00000000000003 -461.99999999999994"},{"category":"Input","text":"ángulo (radianes): O\nvelocidad inicial (m/s): v\ngravedad (m/s2): g","key":-3,"loc":"119.00000000000003 -388.99999999999955"},{"category":"Start","text":"fin","key":-9,"loc":"119.00000000000006 -197.00000000000009"},{"category":"Output","text":"x","key":-10,"loc":"119.00000000000003 -251.99999999999994"},{"category":"Process","text":"x  = (_?v**2*sin(2*O))_?/g","key":-11,"loc":"118.99999999999994 -312.9999999999999"}],"linkDataArray":[{"from":-1,"to":-3,"fromPort":"B","toPort":"T","points":[119.00000000000003,-446.73332138061517,119.00000000000003,-436.73332138061517,119.00000000000003,-433.7666786193845,119.00000000000003,-433.7666786193845,119.00000000000003,-430.8000358581538,119.00000000000003,-420.8000358581538]},{"from":-10,"to":-9,"fromPort":"B","toPort":"T","points":[119.00000000000003,-239.3199856567382,119.00000000000003,-229.3199856567382,119.00000000000003,-225.7933321380615,119.0000000000001,-225.7933321380615,119.0000000000001,-222.26667861938478,119.0000000000001,-212.26667861938478]},{"from":-3,"to":-11,"fromPort":"B","toPort":"T","points":[119.00000000000003,-357.1999641418452,119.00000000000003,-347.1999641418452,119.00000000000003,-343.73332138061494,118.99999999999994,-343.73332138061494,118.99999999999994,-340.26667861938466,118.99999999999994,-330.26667861938466]},{"from":-11,"to":-10,"fromPort":"B","toPort":"T","points":[118.99999999999994,-295.7333213806151,118.99999999999994,-285.7333213806151,118.99999999999994,-282.67222620646146,119.00000000000003,-282.67222620646146,119.00000000000003,-279.61113103230787,119.00000000000003,-269.61113103230787]}]}</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Codifique el diagrama de flujo como una función flecha, luego llame a la función para calcular el alcance de los proyectiles lanzados con: a) ángulo de 36 grados, velocidad inicial de 45 m/s y 9.8 m/s<sup>2</sup> de gravedad; b) ángulo de 30 grados, velocidad inicial de 50 m/s y 9.8 m/s<sup>2</sup> de gravedad; c) ángulo de 40 grados, velocidad inicial de 47 m/s y 9.8 m/s<sup>2</sup> de gravedad.</p><div id="pregunta30" class="calculadora" spellcheck="false"><div class="instruccion">var alcance = (O, v, g) =&gt;{<br>  const x = v**2 * Math.sin(2*O)/g;<br>  return x;<br>}</div><div class="resultado"></div><div class="instruccion">alcance(Math.toRad(36), 45, 9.8)</div><div class="resultado"></div><div class="instruccion">alcance(Math.toRad(30), 50, 9.8)</div><div class="resultado"></div><div class="instruccion">alcance(Math.toRad(40), 47, 9.8)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="14" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div> <!-- Ejercicio 7 -->
+    
+    <div class="ejercicio" id="ejercicio8" enunciado="2"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Complete el diagrama de flujo "masa", que reciba el volumen "V" en m<sup>3</sup>, la presión "P" en atm y la temperatura "T" en Kelvin, de un depósito de gas natural y calcule y devuelva (con la ecuación del gas ideal) los kg de gas natural de petróleo que pueden ser almacenados en el depósito:\[\begin{aligned}R &amp;= 0.082057 \\[2mm]M &amp;= 16.04 \\[2mm]n &amp;= \dfrac{P\cdot V}{R\cdot T} \\[3mm]m &amp;= n\cdot M\end{aligned}\]Donde "R" está en m<sup>3</sup>*atm/(K*kmol) y "M" (el peso molecular del gas natural) en kg/kmol.</p><div id="pregunta37" class="calculadora" spellcheck="false"><div class="instruccion">gojsGraph({divi, modelo: { "class": "go.GraphLinksModel",  "linkFromPortIdProperty": "fromPort",  "linkToPortIdProperty": "toPort",  "nodeDataArray": [ {"category":"Start", "text":"masa", "key":-1, "loc":"119.00000000000003 -461.99999999999994"},{"category":"Input", "text":"volumen (l): V\npresión (atm): P\nTemperatura (K): T", "key":-3, "loc":"119.00000000000003 -388.99999999999955"},{"category":"Start", "text":"fin", "key":-9, "loc":"119.00000000000006 -4.000000000000085"},{"category":"Output", "text":"m", "key":-10, "loc":"119.00000000000003 -58.99999999999994"},{"category":"Process", "text":"M = 16.04", "key":-11, "loc":"118.99999999999994 -312.9999999999999"},{"category":"Process", "text":"R = 0.082057", "key":-6, "loc":"118.99999999999994 -249.9999999999999"},{"category":"Process", "text":"n = P*V/(R*T)", "key":-7, "loc":"118.99999999999994 -185.9999999999999"},{"category":"Process", "text":"m = n*M", "key":-8, "loc":"118.99999999999991 -127.08984374999986"} ],  "linkDataArray": [ {"from":-1, "to":-3, "fromPort":"B", "toPort":"T", "points":[119.00000000000003,-447.18286308263635,119.00000000000003,-437.18286308263635,119.00000000000003,-433.3171369173632,119.00000000000001,-433.3171369173632,119.00000000000001,-429.45141075209,119.00000000000001,-419.45141075209]},{"from":-3, "to":-11, "fromPort":"B", "toPort":"T", "points":[119.00000000000001,-358.54858924790943,119.00000000000001,-348.54858924790943,119.00000000000001,-344.1828630826364,118.99999999999987,-344.1828630826364,118.99999999999987,-339.81713691736337,118.99999999999987,-329.81713691736337]},{"from":-11, "to":-6, "fromPort":"B", "toPort":"T", "points":[118.99999999999987,-296.1828630826365,118.99999999999987,-286.1828630826365,118.99999999999987,-281.5,118.99999999999991,-281.5,118.99999999999991,-276.8171369173635,118.99999999999991,-266.8171369173635]},{"from":-6, "to":-7, "fromPort":"B", "toPort":"T", "points":[118.99999999999991,-233.18286308263663,118.99999999999991,-223.18286308263663,118.99999999999991,-217.99999999999994,118.99999999999987,-217.99999999999994,118.99999999999987,-212.81713691736329,118.99999999999987,-202.81713691736329]},{"from":-7, "to":-8, "fromPort":"B", "toPort":"T", "points":[118.99999999999987,-169.18286308263643,118.99999999999987,-159.18286308263643,118.99999999999987,-154.49999999999986,118.99999999999991,-154.49999999999986,118.99999999999991,-153.90698066736329,118.99999999999991,-143.90698066736329]},{"from":-8, "to":-10, "fromPort":"B", "toPort":"T", "points":[118.99999999999991,-110.27270683263643,118.99999999999991,-100.27270683263643,118.99999999999991,-93.06730084745438,118.99999999999996,-93.06730084745438,118.99999999999996,-85.86189486227232,118.99999999999996,-75.86189486227232]},{"from":-10, "to":-9, "fromPort":"B", "toPort":"T", "points":[118.99999999999996,-46.85943569916382,118.99999999999996,-36.85943569916382,118.99999999999996,-32.83828630826367,119.00000000000001,-32.83828630826367,119.00000000000001,-28.81713691736352,119.00000000000001,-18.81713691736352]} ]}}), modeloc: {"class":"go.GraphLinksModel","linkFromPortIdProperty":"fromPort","linkToPortIdProperty":"toPort","nodeDataArray":[{"category":"Start","text":"masa","key":-1,"loc":"119.00000000000003 -461.99999999999994"},{"category":"Input","text":"volumen (l): V\npresión (atm): P\nTemperatura (K): T","key":-3,"loc":"119.00000000000003 -388.99999999999955"},{"category":"Start","text":"fin","key":-9,"loc":"119.00000000000006 -4.000000000000085"},{"category":"Output","text":"m","key":-10,"loc":"119.00000000000003 -58.99999999999994"},{"category":"Process","text":"M = 16.04","key":-11,"loc":"118.99999999999994 -312.9999999999999"},{"category":"Process","text":"R = 0.082057","key":-6,"loc":"118.99999999999994 -249.9999999999999"},{"category":"Process","text":"n = (_?P*V)_?/(R*T)","key":-7,"loc":"118.99999999999994 -185.9999999999999"},{"category":"Process","text":"m = n*M","key":-8,"loc":"118.99999999999994 -122.99999999999989"}],"linkDataArray":[{"from":-1,"to":-3,"fromPort":"B","toPort":"T","points":[119.00000000000003,-446.73332138061517,119.00000000000003,-436.73332138061517,119.00000000000003,-433.7666786193845,119.00000000000003,-433.7666786193845,119.00000000000003,-430.8000358581538,119.00000000000003,-420.8000358581538]},{"from":-10,"to":-9,"fromPort":"B","toPort":"T","points":[119.00000000000003,-46.319985656738226,119.00000000000003,-36.319985656738226,119.00000000000003,-32.7933321380615,119.0000000000001,-32.7933321380615,119.0000000000001,-29.266678619384777,119.0000000000001,-19.266678619384777]},{"from":-3,"to":-11,"fromPort":"B","toPort":"T","points":[119.00000000000003,-357.1999641418452,119.00000000000003,-347.1999641418452,119.00000000000003,-343.73332138061494,118.99999999999994,-343.73332138061494,118.99999999999994,-340.26667861938466,118.99999999999994,-330.26667861938466]},{"from":-11,"to":-6,"fromPort":"B","toPort":"T","points":[118.99999999999994,-295.7333213806151,118.99999999999994,-285.7333213806151,118.99999999999994,-281.4999999999999,118.99999999999994,-281.4999999999999,118.99999999999994,-277.26667861938466,118.99999999999994,-267.26667861938466]},{"from":-6,"to":-7,"fromPort":"B","toPort":"T","points":[118.99999999999994,-232.73332138061514,118.99999999999994,-222.73332138061514,118.99999999999994,-217.9999999999999,118.99999999999994,-217.9999999999999,118.99999999999994,-213.26667861938466,118.99999999999994,-203.26667861938466]},{"from":-7,"to":-8,"fromPort":"B","toPort":"T","points":[118.99999999999994,-168.73332138061514,118.99999999999994,-158.73332138061514,118.99999999999994,-154.4999999999999,118.99999999999994,-154.4999999999999,118.99999999999994,-150.26667861938466,118.99999999999994,-140.26667861938466]},{"from":-8,"to":-10,"fromPort":"B","toPort":"T","points":[118.99999999999994,-105.73332138061514,118.99999999999994,-95.73332138061514,118.99999999999994,-91.17222620646152,119.00000000000003,-91.17222620646152,119.00000000000003,-86.6111310323079,119.00000000000003,-76.6111310323079]}]}</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Codifique el diagrama de flujo como una función flecha, luego llame a la función para calcular los kilogramos de gas que pueden ser almacenados en un depósito de: a) 70.8 m<sup>3</sup>, a 9.87 atm y 299.26 K; b) 68.81 m<sup>3</sup> a 10 atm y 300.15 K; c) 69 m<sup>3</sup>, a 9.87 atm y 299.44 K.</p><div id="pregunta38" class="calculadora" spellcheck="false"><div class="instruccion">var masa = (V, P, T) =&gt;{<br>  const M = 16.04;<br>  const R = 0.082057;<br>  const n = P*V/(R*T);<br>  const m = n*M;<br>  return m;<br>}</div><div class="resultado"></div><div class="instruccion">masa(70.8, 9.87, 299.26)</div><div class="resultado"></div><div class="instruccion">masa(68.81, 10, 300.15)</div><div class="resultado"></div><div class="instruccion">masa(69, 9.87, 299.44)</div><div class="resultado"></div></div><p class="pregunta" id="pregunta39"><span class="pregunta"></span>Seleccione el texto que completa las siguientes afirmaciones:<br>Si primero se calcula "R" y luego "M", se obtiene <span class="campo_arrastrar correcta" tabindex="0" data-opciones="el mismo&amp;@%otro" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">el mismo</span> resultado.<br>No es posible calcular primero "m" y después "n", porque, para calcular <span class="campo_arrastrar correcta" tabindex="0" data-opciones="n&amp;@%m" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">m</span> se requiere el valor de <span class="campo_arrastrar correcta" tabindex="0" data-opciones="n&amp;@%m" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">n</span>.<br>Si el valor de "m" se calcula con M*n, en lugar de n*M, se obtiene <span class="campo_arrastrar correcta" tabindex="0" data-opciones="el mismo&amp;@%otro" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">el mismo</span> resultado.</p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="19" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div> <!-- Ejercicio 8 -->
+
+    <div class="ejercicio" id="ejercicio9" enunciado="1"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Complete el diagrama de flujo "ec_1", que reciba el número real "x" y calcule y devuelva el valor de la siguiente ecuación:\[r = \dfrac{a+b+c+d}{4}\\[5mm] \begin{aligned} a &amp;= 3+\dfrac{b}{5}\\[2mm] b &amp;= x^3+2\\[2mm] d &amp;= \ln{(c)}\\[2mm] c &amp;= \sqrt{a} \end{aligned}\]</p><div id="pregunta42" class="calculadora" spellcheck="false"><div class="instruccion">gojsGraph({divi, modelo: { "class": "go.GraphLinksModel",  "linkFromPortIdProperty": "fromPort",  "linkToPortIdProperty": "toPort",  "nodeDataArray": [ {"category":"Start", "text":"ec_1", "key":-1, "loc":"178.99999999999991 -459.99999999999966"},{"category":"Input", "text":"número real: x", "key":-3, "loc":"179 -410.46664276123016"},{"category":"Process", "text":"b = x**3 + 2", "key":-2, "loc":"179 -358.9332855224606"},{"category":"Start", "text":"fin", "key":-9, "loc":"179 -33.044237263997076"},{"category":"Output", "text":"r", "key":-10, "loc":"179 -85.92204691568975"},{"category":"Process", "text":"a = 3 + b/5", "key":-8, "loc":"179 -304.39992828369105"},{"category":"Process", "text":"c = sqrt(a)", "key":-11, "loc":"178.99999999999997 -249.8665710449215"},{"category":"Process", "text":"d = log(c)", "key":-12, "loc":"178.99999999999997 -195.33321380615197"},{"category":"Process", "text":"r = (a+b+c+d)/4", "key":-13, "loc":"178.09088134765636 -144.4365753173825"} ],  "linkDataArray": [ {"from":-1, "to":-3, "fromPort":"B", "toPort":"T", "points":[178.9999999999999,-445.1828630826363,178.9999999999999,-435.1828630826363,178.9999999999999,-434.73332138061494,179.00000000000003,-434.73332138061494,179.00000000000003,-434.2837796785936,179.00000000000003,-424.2837796785936]},{"from":-3, "to":-2, "fromPort":"B", "toPort":"T", "points":[179.00000000000003,-396.64950584386673,179.00000000000003,-386.64950584386673,179.00000000000003,-386.1999641418454,178.99999999999994,-386.1999641418454,178.99999999999994,-385.750422439824,178.99999999999994,-375.750422439824]},{"from":-2, "to":-8, "fromPort":"B", "toPort":"T", "points":[178.99999999999994,-342.1161486050971,178.99999999999994,-332.1161486050971,178.99999999999994,-331.66660690307583,178.99999999999997,-331.66660690307583,178.99999999999997,-331.21706520105454,178.99999999999997,-321.21706520105454]},{"from":-8, "to":-11, "fromPort":"B", "toPort":"T", "points":[178.99999999999997,-287.5827913663277,178.99999999999997,-277.5827913663277,178.99999999999997,-277.1332496643063,179.0000000000001,-277.1332496643063,179.0000000000001,-276.6837079622849,179.0000000000001,-266.6837079622849]},{"from":-11, "to":-12, "fromPort":"B", "toPort":"T", "points":[179.0000000000001,-233.04943412755807,179.0000000000001,-223.04943412755807,179.0000000000001,-222.59989242553675,179.0000000000001,-222.59989242553675,179.0000000000001,-222.15035072351543,179.0000000000001,-212.15035072351543]},{"from":-12, "to":-13, "fromPort":"B", "toPort":"T", "points":[179.0000000000001,-178.51607688878858,179.0000000000001,-168.51607688878858,179.0000000000001,-168.51607688878858,179.0000000000001,-171.25371223474593,178.09088134765636,-171.25371223474593,178.09088134765636,-161.25371223474593]},{"from":-13, "to":-10, "fromPort":"B", "toPort":"T", "points":[178.09088134765636,-127.61943840001908,178.09088134765636,-117.61943840001908,178.09088134765636,-115.2016900889906,178.9999999999999,-115.2016900889906,178.9999999999999,-112.78394177796213,178.9999999999999,-102.78394177796213]},{"from":-10, "to":-9, "fromPort":"R", "toPort":"T", "points":[198.4999999999999,-85.92204691568975,208.4999999999999,-85.92204691568975,208.4999999999999,-59.46076311738893,179,-59.46076311738893,179,-57.8613741813605,179,-47.8613741813605]} ]}}), modeloc: {"class":"go.GraphLinksModel","linkFromPortIdProperty":"fromPort","linkToPortIdProperty":"toPort","nodeDataArray":[{"category":"Start","text":"ec_1","key":-1,"loc":"178.99999999999991 -459.99999999999966"},{"category":"Input","text":"número real: x","key":-3,"loc":"179 -410.46664276123016"},{"category":"Process","text":"b = x**3+2","key":-2,"loc":"179 -358.9332855224606"},{"category":"Start","text":"fin","key":-9,"loc":"179 -33.044237263997076"},{"category":"Output","text":"r","key":-10,"loc":"179 -85.92204691568975"},{"category":"Process","text":"a = 3+b/5","key":-8,"loc":"179 -304.39992828369105"},{"category":"Process","text":"c = sqrt(a)","key":-11,"loc":"178.99999999999997 -249.8665710449215"},{"category":"Process","text":"d = log(c)","key":-12,"loc":"178.99999999999997 -195.33321380615197"},{"category":"Process","text":"r = (a+b+c+d)/4","key":-13,"loc":"178.99999999999997 -140.79985656738245"}],"linkDataArray":[{"from":-1,"to":-3,"fromPort":"B","toPort":"T","points":[178.99999999999997,-444.73332138061494,178.99999999999997,-434.73332138061494,178.99999999999997,-434.73332138061494,178.99999999999997,-434.73332138061494,179,-434.73332138061494,179,-424.73332138061494]},{"from":-3,"to":-2,"fromPort":"B","toPort":"T","points":[179,-396.1999641418454,179,-386.1999641418454,178.99999999999997,-386.1999641418454,178.99999999999997,-386.19996414184527,179.00000000000006,-386.19996414184527,179.00000000000006,-376.19996414184527]},{"from":-2,"to":-8,"fromPort":"B","toPort":"T","points":[179.00000000000006,-341.6666069030757,179.00000000000006,-331.6666069030757,178.99999999999997,-331.6666069030757,178.99999999999997,-331.6666069030759,178.99999999999991,-331.6666069030759,178.99999999999991,-321.6666069030759]},{"from":-8,"to":-11,"fromPort":"B","toPort":"T","points":[179,-287.1332496643063,179,-277.1332496643063,178.99999999999997,-277.1332496643063,178.99999999999997,-277.1332496643063,178.99999999999997,-277.1332496643063,178.99999999999997,-267.1332496643063]},{"from":-11,"to":-12,"fromPort":"B","toPort":"T","points":[178.99999999999997,-232.59989242553675,178.99999999999997,-222.59989242553675,178.99999999999997,-222.59989242553675,178.99999999999997,-222.59989242553675,178.99999999999997,-222.59989242553675,178.99999999999997,-212.59989242553675]},{"from":-12,"to":-13,"fromPort":"B","toPort":"T","points":[178.99999999999997,-178.06653518676723,178.99999999999997,-168.06653518676723,178.99999999999997,-168.06653518676723,178.99999999999997,-168.06653518676723,178.99999999999997,-168.06653518676723,178.99999999999997,-158.06653518676723]},{"from":-13,"to":-10,"fromPort":"B","toPort":"T","points":[178.99999999999997,-123.5331779479977,178.99999999999997,-113.5331779479977,178.99999999999997,-113.5331779479977,178.99999999999997,-113.5331779479977,178.99999999999997,-113.5331779479977,178.99999999999997,-103.5331779479977]},{"from":-10,"to":-9,"fromPort":"B","toPort":"T","points":[178.99999999999997,-73.24203257242803,178.99999999999997,-63.24203257242803,178.99999999999997,-60.77647422790492,178.99999999999997,-60.77647422790492,178.99999999999997,-58.31091588338181,178.99999999999997,-48.31091588338181]}]}</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Codifique el diagrama de flujo como una función expresión (función anónima), luego llame a la función para calcular el valor de la ecuación para valores de "x" iguales a: a) 4.5; b) 12.3; c) 6.7 y d) 2.3.</p><div id="pregunta43" class="calculadora" spellcheck="false"><div class="instruccion">var ec_1 = function(x){<br>  const b = x**3 + 2;<br>  const a = 3 + b/5;<br>  const c = Math.sqrt(a);<br>  const d = Math.log(c);<br>  const r = (a+b+c+d)/4;<br>  return r;<br>}</div><div class="resultado"></div><div class="instruccion">ec_1(4.5)</div><div class="resultado"></div><div class="instruccion">ec_1(12.3)</div><div class="resultado"></div><div class="instruccion">ec_1(6.7)</div><div class="resultado"></div><div class="instruccion">ec_1(2.3)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="20" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div> <!-- Ejercicio 9 -->
+
+    
+
+
+    <div id="generarPrueba" data-scroll-y="17155.7109375"><br><hr><label class="lnotacapitulo">Nota del capítulo: </label><input type="text" id="notaCapitulo" disabled="disabled" class="itnotacapitulo"><br><br><button id="btGenerarPrueba" style="visibility: hidden;" onclick="capitulo.registrarCapitulo()">Iniciar defensa</button><button id="btEmplearBono" style="margin-left:1.1rem;width:9.686rem;display:none;" onclick="capitulo.emplearBono()">Emplear Bono</button><br><br></div>
+          
+    
+    
+<d id="dAutor" style="font-size: 0.9rem;text-align:center;color: #0808f24f;font-weight:bolder;position:fixed;top: 5px;right: 5px;user-select:none;display:inline-block;z-index:15;">Hernan G. Peñaranda V.</d></div><!-- Cierre del div capítulo -->
+
+<div id="dato" style="display:none;">JK5KCZ0q934lCZ0oDYGpDoqpCpGu934uDZKaEJGaC2Gm930aGqrjRNa0</div>
+<div id="reg" style="display:none;">C30mC3imC30mEp0mC30xC30mC3imC30mEp0mC30xC30mC3imC30mEp0mC300</div>
+
+
+
+<div style="top: 0px; z-index: 10002; position: fixed; display: none; text-align: center; left: 25%; width: 50%; background-color: rgb(245, 245, 245); padding: 16px; border: 16px solid rgb(68, 68, 68); border-radius: 10px; margin-top: 10px;"></div><div style="z-index: 10001; position: fixed; display: none; top: 0px; left: 0px; width: 100%; height: 100%; background-color: black; opacity: 0.8;"></div><div id="divDialogo" style="display: none;"><div onfocus="document.querySelector('#divDialogo input').focus();"><div>Carnet universitario</div><div>Escriba el número de su carnet universitario, verificando que el guión haya sido correctamente insertado.</div><input type="text" onkeydown="return Capitulo.divDialogo.funKeydown(event)" onkeyup="Capitulo.divDialogo.funKeyup(event)"><div><button onclick="Capitulo.divDialogo.funClick('aceptar');">Aceptar</button><button style="margin-left:35px;" onclick="Capitulo.divDialogo.funClick('cancelar');">Cancelar</button></div></div></div></body>
