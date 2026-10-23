@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<head>
+
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Language" content="es">
+  
+  <title>57-3850 capítulo 8</title>
+
+  
+    <!-- Librería y hoja de estilos KATEX  -->
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/katex/katex.min.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/katex/katex.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/katex/contrib/auto-render.min.js"></script>
+
+    <!-- Librerías y hojas de estilo CodeMirror -->
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/lib/codemirror.min.css">
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/theme/mdn-like.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/lib/codemirror.min.js"></script>
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/fold/foldgutter.min.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/fold/foldcode.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/fold/brace-fold.min.js"></script>
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/dialog/dialog.min.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/dialog/dialog.min.js"></script>
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/hint/show-hint.min.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/hint/show-hint.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/hint/javascript-hint.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/search/searchcursor.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/search/search.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/edit/matchbrackets.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/edit/closebrackets.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/comment/comment.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/wrap/hardwrap.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/javascript/javascript.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/mathematica/mathematica.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/octave/octave.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/python/python.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/css/css.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/xml/xml.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/markdown/markdown.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/htmlmixed/htmlmixed.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/keymap/sublime.min.js"></script>
+    
+    <!-- Librería Plotly -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script><style id="plotly.js-style-global"></style>
+
+    <!-- Librerías y hojas de estilo function-plot -->
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/function-plot/site/js/vendor/d3.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/function-plot/dist/function-plot.js"></script>
+    
+    <!-- Librería quantities -->
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/quantities/quantities.min.js"></script>
+
+    <!-- Librería GoJs para la creación de diagramas de flujo -->
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/gojs/release/go.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/flowchart_gojs.js"></script>
+
+    <!-- Librerías matemáticas propias -->
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/math.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/number.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/array.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/string.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/cplx.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/function.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/object.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/prq.js"></script>
+
+    <!-- Librería y hoja de estilos propias para la creación y manejo de la calculadora  -->
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/src/cjs.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/cjs.js"></script>
+
+    <!-- Librería y hoja de estilos propias para la creación y manejo de los capítulos -->
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/src/texto.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/texto.js"></script>
+
+   <!-- Librería del capítulo actual -->
+    <script src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo8/files/capitulo8.js"></script>
+
+    <!-- Fuentes empleadas en el capítulo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;600;700;800&amp;family=Roboto+Mono&amp;display=swap" rel="stylesheet">
+
+    <script>
+        function katexRender() {
+            renderMathInElement(document.getElementById("capitulo"));
+        }
+        document.addEventListener("DOMContentLoaded", katexRender);
+        window.onerror = function(msg, url, lineNo, columnNo, error) {
+            __error__ = msg;
+        };
+        window.onload = function(){
+            capitulo.iniciar();
+        };
+    </script>
+
+<style id="plotly.js-style-modebar-d02bec"></style><style id="plotly.js-style-modebar-e241e4"></style><style id="plotly.js-style-modebar-db8d9d"></style><style id="plotly.js-style-modebar-5913c6"></style></head>
+
+<body class="text">  
+
+
+<div id="capitulo">
+
+    <button id="btGuardar" style="z-index:15;" onclick="savePage()">Guardar</button>
+
+        
+
+    <h1 class="text" onclick="alerta(capitulo.idPagina,'')" style="cursor: pointer;">Sistemas de Ecuaciones No Lineales</h1>
+
+
+
+    <p class="text">En este capítulo se estudian algunos métodos para resolver sistemas de ecuaciones no lineales. Estos sistemas se caracterizan porque generalmente no tienen soluciones analíticas, siendo la única alternativa la numérica.</p>
+
+
+
+    <h2 class="text">Método Simplex</h2>
+
+    <p class="text">El método Simplex es un método de optimización, es decir un método que permite encontrar máximos y mínimos, pero, la solución de un sistema de ecuaciones no lineales, puede ser expresada como un problema de optimización, por lo que, estos métodos, permiten resolver sistemas de ecuaciones no lineales.</p>
+
+    <p class="text">Para expresar un sistema de ecuaciones no lineales como un problema de optimización, se igualan todas las ecuaciones del sistema a cero, se calcula su sumatoria y se minimiza la misma. En el mínimo la sumatoria será igual a cero (o cercana a cero) y en consecuencia las ecuaciones del sistema serán también iguales a cero (o cercanas a cero). Cuando eso ocurre es porque se han encontrado las soluciones del sistema, es decir los valores que al ser reemplazados en las ecuaciones las igualan a cero (esto es los valores para los cuales se cumplen las igualdades del sistema).</p>
+
+    <p class="text">En general, si la función a resolver, es:</p>
+    
+    <table class="ecuacion" id="ec1">
+        <tbody><tr>
+            <td>
+                \[                f(x_0, x_1, \cdots, x_{n-1}) = \alpha                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">Donde "n" es el número de incógnitas del sistema. La solución se encuentra cuando al reemplazar los valores de las variables (x<sub>0</sub> a x<sub>n-1</sub>), la igualdad se cumple. Para convertir este problema, en un problema de optimización, simplemente se iguala la función a 0:</p>
+
+    <table class="ecuacion" id="ec2">
+        <tbody><tr>
+            <td>
+                \[                g(x_0, x_1, \cdots, x_{n-1}) =                f(x_0, x_1, \cdots, x_{n-1})-\alpha =0                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">Sin embargo, para garantizar que se encuentre el mínimo, es necesario que la función devuelva sólo valores positivos, porque si se permiten valores negativos darían lugar a falsos mínimos (por ejemplo, cuando se suman dos valores iguales pero de distinto signo).</p>
+    
+    <p class="text">Para que los valores sean siempre positivos, simplemente se eleva al cuadrado ambos lados de la ecuación:</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                \big(g(x_0, x_1, \cdots, x_{n-1})\big)^2 =                \big(f(x_0, x_1, \cdots, x_{n-1})-\alpha \big)^2=0^2                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">Cuando la función a optimizar se encuentra en esta forma, es decir cuando está igualada a cero y se puede garantizar que devuelve sólo valores positivos, se conoce como la <dfn class="style1">función de error "e"</dfn>:</p>
+
+    <table class="ecuacion" id="ec3">
+        <tbody><tr>
+            <td>
+                \[                e(x_0, x_1, \cdots, x_{n-1}) =                \big(f(x_0, x_1, \cdots, x_{n-1})-\alpha \big)^2=0                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">El método Simplex se aplica a este tipo de funciones y encuentra el mínimo mediante una serie de interpolaciones o extrapolaciones lineales multidimencionales, conocidas como <dfn class="style1">proyecciones n-dimensionales</dfn>.</p>
+    
+    <p class="text">En consecuencia, lo primero que se requiere en el método es la ecuación general para llevar a cabo dichas proyecciones.</p>
+    
+    
+    
+    
+    <h3 class="text">Proyección lineal n-dimensional</h3>
+    
+    <p class="text">En un sistema de ecuaciones, cada valor asumido constituye un vector, o, lo que es lo mismo un punto <dfn class="style1">n-dimensional</dfn>, con tantas dimensiones como incógnitas tiene el sistema.</p>
+    
+    <p class="text">Por simplicidad, la deducción de la ecuación para proyectar (extrapolar) un punto a  través de otros dos, se la hace con puntos bidimensionales, sin embargo, las ecuaciones resultantes tienen carácter general.</p>
+    
+    <p class="text">Tomando en cuenta la siguiente figura:</p>
+    
+    <p class="figurasn"><img src="files/figura_01.png" alt="Simplex proyección lineal n-dimensional"></p>
+    
+    <p class="text">Donde se conocen los puntos P<sub>1</sub> y P<sub>2</sub> y se quiere calcular el punto P<sub>3</sub>, en base a la relación de distancias que existen entre los puntos P<sub>1</sub>, P<sub>2</sub> y P<sub>1</sub>, P<sub>3</sub>, es decir en base al valor de:</p>
+
+    <table class="ecuacion" id="ec4">
+        <tbody><tr>
+            <td>
+                \[                k = \dfrac{\overline{P_1P_3}}{\overline{P_1P_2}}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">Por relación de triángulos, se cumple que:</p>
+    
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                \begin{aligned}                k &amp;=\dfrac{x_3-x_1}{x_2-x_1}\\                x_3&amp;=k\cdot x_2+(1-k)\cdot x_1\\[5mm]                k &amp;=\dfrac{y_3-y_1}{y_2-y_1}\\                y_3&amp;=k\cdot y_2+(1-k)\cdot y_1                \end{aligned}                                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">De donde se deduce que, para un punto "n" dimensional "P<sub>i</sub>" cualquiera, se cumple:</p>
+
+    <table class="ecuacion" id="ec5">
+        <tbody><tr>
+            <td>
+                \[                P_i = k\cdot P_{i-1}+(1-k)\cdot P_{i-2}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    
+    
+    
+    
+    <h3 class="text">Plan inicial Simplex</h3>
+    
+    <p class="text">Para comenzar el proceso, el método Simplex requiere un conjunto de "n+1" puntos iniciales, conocidos como plan inicial Simplex.</p>
+    
+    <p class="text">Por ejemplo, si el sistema tiene dos incógnitas (n=2), el método Simplex requiere 3 puntos (cada uno con 2 incógnitas), lo que implica asumir 6 valores. Si se tiene 5 incógnitas (n=5), el método Simplex requiere 6 puntos (cada uno con 5 incógnitas), lo que implica asumir 30 valores.</p>
+    
+    <p class="text">Para evitar la necesidad de asumir tantos valores, existen algunos procedimientos que permiten generar los "n" puntos a partir de uno.</p>
+    
+    <p class="text">Uno de dichos procedimientos es el siguiente: Sea P<sub>1</sub> el punto asumido, entonces el segundo punto (P<sub>2</sub>) se genera multiplicando el primer elemento del punto P<sub>1</sub> por 1.1, el tercer punto (P<sub>3</sub>) multiplicando el segundo elemento del punto P<sub>1</sub> por 1.1, el cuarto punto (P<sub>4</sub>) multiplicando el tercer elemento del punto P<sub>1</sub> por 1.1 y así sucesivamente, con lo que se generan los n+1 puntos.</p>
+    
+    <p class="text">Por ejemplo, si el sistema tiene 3 dimensiones (o variables) y el punto asumido es P<sub>0</sub>=(15,15,150), los otros puntos del plan Simplex se obtienen de la siguiente forma:</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                \begin{aligned}                P_1&amp;= (15*1.1, 15, 150)=(16.5, 15, 150)\\                P_1&amp;= (15, 15*1.1, 150)=(15, 16.5, 150)\\                P_1&amp;= (15, 15, 150*1.1)=(16.5, 15, 165)                \end{aligned}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    
+    
+    
+    <h3 class="text">Mayor y menor valor de la función de error</h3>
+    
+    <p class="text">Con el plan inicial Simplex, se calculan los valores de la función de error para cada uno de los puntos, determinando cuál es el  mayor de ellos "h" (highest) y el menor "s" (smallest).</p>
+    
+    <p class="text">Por ejemplo, si el problema tiene 2 incógnitas, los puntos del plan quedan identificados como se muestra en la siguiente figura:</p>
+    
+    <p class="figurasn"><img src="files/figura_02.png" alt="Simplex mayor y menor puntos"></p>
+    
+    
+    <h3 class="text">Centroide</h3>
+    
+    <p class="text">En el método Simplex, los nuevos puntos del plan se obtienen proyectando los puntos del plan actual a través de su promedio, sin incluir en el promedio el peor punto (el punto p<sub>h</sub>). Dicho promedio se denomina <dfn class="style1">centroide</dfn> y se calcula con la siguiente expresión:</p>
+
+    <table class="ecuacion" id="ec6">
+        <tbody><tr>
+            <td>
+                \[                C = \dfrac{1}{n}\sum_{i=0}^n P_i                \hspace{0.5cm}                \begin{cases}                i \ne h                \end{cases}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    
+    
+    
+    <h3 class="text">Reflexión</h3>
+    
+    <p class="text">Para reemplazar el peor punto del plan (p<sub>h</sub>), por uno mejor, se proyecta dicho punto (a través del centroide) al doble de su distancia con relación al centroide, como se muestra en la siguiente figura (caso bidimensional):</p>
+    
+    <p class="figurasn"><img src="files/figura_03.png" alt="Simplex reflexión"></p>
+    
+    <p class="text">De esa manera el nuevo punto es el reflejo del original, razón por la cual a esta proyección se conoce con el nombre de <dfn class="style1">reflexión</dfn></p>
+    
+    <p class="text">Si se denomina <dfn class="style1">a</dfn> al término <dfn class="style1">k</dfn> de la ecuación de proyección n-dimensional (ecuación <a href="#ec5">5</a>), la ecuación resultante (la ecuación de reflexión) toma la forma:</p>
+
+    <table class="ecuacion" id="ec7">
+        <tbody><tr>
+            <td>
+                \[                P_r = a\cdot C +(1-a)\cdot P_h                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">En esta ecuación, el valor de "<dfn class="style1">a</dfn>" debería ser 2 (pues se proyecta al doble de la distancia original). En la práctica, sin embargo, se emplea un valor cercano a 2 (generalmente 1.95), porque un valor entero suele provocar problemas de convergencia.</p>
+    
+    <p class="text">Si se denomina e<sub>r</sub> al valor de la función de error en el punto reflejado P<sub>r</sub>, e<sub>h</sub> al valor de la función de error en el punto P<sub>h</sub> y e<sub>s</sub> al valor de la función de error en el punto P<sub>s</sub>, al realizar la reflexión se pueden presentar los siguientes casos:</p>
+    
+    <ol class="letras">
+        <li>Si e<sub>r</sub> es menor a e<sub>s</sub>, entonces la reflexión ha sido muy buena: el nuevo punto es más cercano a cero (el mínimo) que el mejor punto del plan actual (P<sub>s</sub>), por lo tanto se prosigue en esa dirección con la expansión (que se explica más adelante).</li>
+        <li>Si e<sub>r</sub> es menor e<sub>h</sub> pero no menor a e<sub>s</sub>, entonces la reflexión ha sido buena: el nuevo punto es más cercano a cero que el peor punto del plan actual (P<sub>h</sub>). En este caso se reemplaza el punto P<sub>h</sub> por el punto reflejado P<sub>r</sub>.</li>
+        <li>Si e<sub>r</sub> es mayor a e<sub>h</sub>, entonces la reflexión ha sido mala: el nuevo punto está más alejado de cero (del mínimo) que el peor punto del plan actual (P<sub>h</sub>). En este caso se procede con la contracción (que se explica más adelante).</li>
+    </ol>
+    
+    
+    
+    
+    <h3 class="text">Expansión</h3>
+    
+    <p class="text">Como se dijo, cuando la reflexión es muy buena (e<sub>r</sub>&lt;e<sub>s</sub>), se procede con la expansión, que simplemente consiste en proyectar el punto P<sub>r</sub> al doble de su distancia actual con relación al centroide, tal como se muestra en la siguiente figura (caso bidimensional):</p>
+    
+    <p class="figurasn"><img src="files/figura_04.png" alt="Simplex expansión"></p>
+    
+    <p class="text">Si se denomina <dfn class="style1">b</dfn> al término <dfn class="style1">k</dfn> de la ecuación de proyección n-dimensional (ecuación <a href="#ec5">5</a>), la ecuación para la expansión toma la forma:</p>
+
+    <table class="ecuacion" id="ec8">
+        <tbody><tr>
+            <td>
+                \[                P_x = b\cdot C +(1-b)\cdot P_r                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">Donde “b” debería ser 2 (se proyecta al doble de su distancia actual) sin embargo y al igual que en la reflexión, en la práctica se toma un valor cercano a 2 (generalmente 1.95).</p>
+    
+    <p class="text">Si se denomina e<sub>x</sub> al valor de la función de error en P<sub>x</sub>, entonces se pueden presentar los siguientes casos:</p>
+    
+    <ol class="letras">
+        <li>Si e<sub>x</sub> es menor a e<sub>r</sub>, la expansión ha sido buena, por tanto P<sub>x</sub>  reemplaza a P<sub>h</sub>.</li>
+        <li>Si e<sub>x</sub> es mayor a e<sub>r</sub>, la expansión no ha sido buena, entonces P<sub>r</sub> reemplaza a P<sub>h</sub>.</li>
+    </ol>
+    
+    
+    
+    
+    <h3 class="text">Contracción</h3>
+    
+    <p class="text">Como se dijo, cuando la reflexión es mala, se procede en dirección contraria con la <dfn class="style1">contracción</dfn>, que consiste en recorrer el punto reflejado a la mitad de su distancia actual con relación al centroide, tal como se muestra en la siguiente figura (caso bidimensional):</p>
+    
+    <p class="figurasn"><img src="files/figura_05.png" alt="Simplex contracción"></p>
+    
+    <p class="text">Si se denomina <dfn class="style1">d</dfn> al término <dfn class="style1">k</dfn>, de la ecuación de proyección n-dimensional (ecuación <a href="#ec5">5</a>), la ecuación de contracción, toma la forma:</p>
+
+    <table class="ecuacion" id="ec9">
+        <tbody><tr>
+            <td>
+                \[                P_c = d\cdot C +(1-d)\cdot P_h                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">Donde “d” debería ser igual a 0.5 (se proyecta a la mitad de su distancia actual). En la práctica, se emplea un valor cercano a 0.5 (generalmente 0.45), para reducir los problemas de convergencia.</p>
+    
+    <p class="text">Si se denomina e<sub>c</sub> al valor de la función de error en el punto P<sub>c</sub>, se pueden presentar los siguientes casos:</p>
+    
+    <ol class="letras">
+        <li>Si e<sub>c</sub> es menor a e<sub>h</sub>, la contracción ha sido buena, entonces P<sub>c</sub> reemplaza a P<sub>h</sub>.</li>
+        <li>Si e<sub>c</sub> es mayor a e<sub>h</sub>, la contracción ha sido mala, en ese caso se procede con el escalamiento (que se explica a continuación).</li>
+    </ol>
+    
+    
+    
+    
+    <h3 class="text">Escalamiento</h3>
+    
+    <p class="text">En el escalamiento, que se lleva a cabo cuando la contracción es mala, se proyectan todos los puntos del plan Simplex, a través del mejor punto del plan actual (P<sub>s</sub>), ya sea al doble de su distancia actual, o a la mitad de dicha distancia, tal como se muestra en la siguiente figura (para el caso bidimensional):</p>
+    
+    <p class="figurasn"><img src="files/figura_06.png" alt="Simplex escalamiento"></p>
+    
+    <p class="text">Donde P* son los nuevos puntos del plan. En este caso el valor del término <dfn class="style1">k</dfn>, de la ecuación de proyección n-dimensional (ecuación <a href="#ec5">5</a>), puede ser 0.5 (en la práctica 0.45) cuando se proyecta a la mitad de la distancia actual o 2 (en la práctica 1.95) cuando se proyecta al doble de la distancia actual.</p>
+    
+    <p class="text">La ecuación de proyección, para el escalamiento, es:</p>
+
+    <table class="ecuacion" id="ec10">
+        <tbody><tr>
+            <td>
+                \[                P_i^* = k\cdot P_s+(1-k)\cdot P_i                \hspace{5mm}                \begin{cases}                i = 0 \rightarrow n\text{; }~~i\ne s                \end{cases}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Como el escalamiento cambia todos los puntos del plan (con excepción de P<sub>s</sub>), es necesario volver a calcular los valores de la función de error para todos los puntos del plan, excepto, por supuesto, para P<sub>s</sub>.</p>
+
+
+
+
+    <h3 class="text">Algoritmo</h3>
+
+    <p class="text">En el método Simplex, las operaciones de reflexión y las consiguientes operaciones de expansión, contracción y/o escalamiento se repiten hasta que se encuentra un valor de la función de error cercano a cero o hasta que los valores de P<sub>s</sub> y P<sub>h</sub> son iguales en un determinado número de dígitos.</p>
+
+    <p class="text">Dado que la convergencia no está asegurada, se debe emplear también un contador de iteraciones, para terminar el proceso cuando se alcanza un límite establecido.</p>
+
+    <p class="text">El algoritmo que automatiza la aplicación del método es el siguiente.</p>
+
+    <p class="figurasn"><img src="files/figura_07.png" alt="Simplex, algoritmo"></p>
+
+    <p class="text">En este algoritmo “planInicial”, "errores", "indice_s", "indice_h", "centroide", "reflexion", "expansion" y "contraccion", son funciones internas que llevan a cabo los procesos que sus nombres sugieren.</p>
+
+    <p class="text">El código respectivo, ha sido añadido como un método dinámico de la clase <dfn class="style1">Function</dfn>, por lo que debe ser llamado desde la función que devuelve el vector con los restos de las ecuaciones del sistema:</p>
+
+    <p class="text">El método devuelve un objeto con el vector (v) el cual contiene las soluciones del sistema y el valor de la función de error (e).</p>
+
+    <p class="text">El valor de la función de error (e) permite determinar cuan cercano al mínimo es el punto encontrado, es decir cuan correctas son las soluciones obtenidas. Si es cero o cercano a cero, las soluciones son correctas, caso contrario el punto es un mínimo (una inflexión) pero no las soluciones del sistema.</p>
+
+
+
+    <h3 class="text">Ejemplo</h3>
+
+    <a id="ejem_1"></a><p class="ejemplo"><span class="ejemplo"></span>Encuentre las soluciones del siguiente sistema de ecuaciones no lineales con el método Simplex. Trabaje con una precisión/exactitud de 4 dígitos y redondee los resultados al cuarto dígitos después del punto.</p>
+
+    <table class="ecuacion" id="ec11" style="margin-left:1cm; width:calc(100% - 1cm);">
+        <tbody><tr>
+            <td>
+                \[                \begin{alignedat}{2}                x^2+2y^2 &amp;=&amp; 22\\                -2x^2+xy-3y &amp;=&amp;-11                \end{alignedat}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Primero se igualan las ecuaciones del sistema a cero:</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                \begin{alignedat}{2}                x^2+2y^2-22 &amp;=&amp;~0\\                -2x^2+xy-3y+11 &amp;=&amp;~0                \end{alignedat}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">Se programan estas ecuaciones en una función que devuelve el vector con los restos de las ecuaciones:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var f = ([x, y]) =&gt;{<br>  const e1 = x**2+2*y**2-22;<br>  const e2 = -2*x**2+x*y-3*y+11;<br>  return [e1, e2];<br>};</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Sin embargo, dado que es un sólo resultado (un vector) es más sencillo calcular los valores de las ecuaciones directamente en el vector resultante:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var f = ([x, y]) =&gt;[<br>  x**2+2*y**2-22,<br>  -2*x**2+x*y-3*y+11<br>];</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Observe que, en este caso, las ecuaciones se separan con comas (no puntos y comas) porque son los elementos de un vector.</p>
+    
+    <p class="text">Una vez programadas las ecuaciones, se resuelve el sistema de ecuaciones con el método Simplex, asumiendo para ello un vector con los valores iniciales (en este ejemplo x=1, y=2) y mandando el error permitido (en este ejemplo 4):</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var r = f.simplex({vi:[1, 2], err:4}); r</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="text">En este caso, las soluciones (el vector "v") son correctas, porque el error "e", es cercano a 0 (tiene 8 ceros después del punto). Las soluciones y el valor de la función de error, mostradas en forma de vector (array) y redondeados al cuarto dígito después del punto (como requiere el enunciado), son:</p>
+    
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">[r.v, r.e].round(4)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Alternativamente, en lugar de recibir el objeto resultante en una variable (como se ha hecho previamente), los resultados pueden ser recibidos directamente en variables:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var {v, e} = f.simplex({vi:[1, 2], err:4});<br>[v,e].round(4)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Si no se requiere el valor de la función de error (e), porque, por la naturaleza del problema se sabe que las soluciones son correctas, se puede recibir sólo el vector de soluciones:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var {v} = f.simplex({vi:[1, 2], err:4});<br>v.round(4)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">O, si se quieren mostrar directamente los resultados, sin guardarlos en una variable (que es lo más práctico cuando sólo se resuelve un sistema de ecuaciones), se accede al campo "v", directamente desde la solución devuelta por "simplex":</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">f.simplex({vi:[1, 2], err:4}).v.round(4)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Por supuesto, es posible guardar las soluciones (o el valor de la función de error) en variables con otros nombres, por ejemplo, en las siguientes instrucciones se muestra dos formas para guardar el vector de resultados en la variable "z":</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var {v: z} = f.simplex({vi:[1, 2], err:4}); z.round(4)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">var z = f.simplex({vi:[1,2], err:4}).v.round(4); z</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Finalmente, es posible obtener las soluciones (y/o el valor de la función de error) directamente, sin guardar ni la función con el sistema de ecuaciones, ni los resultados (empleando una función inmediatamente invocada, una IIFE), como se muestra en la siguiente instrucción:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">(([x, y]) =&gt;[<br>  x**2+2*y**2-22,<br>  -2*x**2+x*y-3*y+11<br>]).simplex({vi:[1, 2], err:4}).v.round(4)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Gráficamente, cuando se trabaja con un sistema de dos ecuaciones no lineales, cada función representa una superficie (no una curva), por lo tanto, no se tienen uno o más puntos de intersección (una o más soluciones), sino una o más curvas de solución (una o más funciones de solución), por esa razón, en la solución de un sistema de ecuaciones no lineales, es mucho más probable encontrar soluciones diferentes al emplear valores iniciales diferentes.</p>
+
+    <p class="text">En sistemas con dos ecuaciones no lineales, como en este ejemplo, es posible dibujar la gráfica de las dos funciones para apreciar visualmente la curva de las soluciones (la intersección de las dos superficies). En la calculadora JavaScript, para elaborar gráficas tridimensionales, que son las gráficas resultantes de dibujar funciones con dos variables, se hace uso de la librería <a href="https://plotly.com/javascript/" target="_blank" rel="noopener">Plotly</a>. Esta librería permite dibujar diez tipos de gráficas tridimensionales y más de 30 gráficas bidimensionales.</p>
+
+    <p class="text">Los más de 40 tipos de gráficas disponibles en <a href="https://plotly.com/javascript/" target="_blank" rel="noopener">Plotly</a> pueden ser dibujados en la calculadora empleando la función <b class="style1">plotly</b>, la cual recibe los mismos parámetros que el método <strong class="style1">Plotly.newPlot</strong>, con excepción del primer parámetro: el elemento donde se dibuja la gráfica, que no es necesario en la calculadora, porque la gráfica se dibuja en la celda de resultados.</p>
+
+    <p class="text">Así, en las siguientes instrucciones, se han copiado los datos del ejemplo disponible en el sitio de la librería (<a href="https://plotly.com/javascript/3d-mesh/" target="_blank" rel="noopener">Plotly 3D Mesh</a>), para dibujar un cubo empleando una gráfica de tipo <dfn class="style1">mesh3d</dfn>:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var intensity = [0, 0.14285714285714285, 0.2857142857142857, 0.42857142857142855, 0.5714285714285714, 0.7142857142857143, 0.8571428571428571, 1];<br><br>var data = [{<br>    type: "mesh3d",<br>    x: [0, 0, 1, 1, 0, 0, 1, 1],<br>    y: [0, 1, 1, 0, 0, 1, 1, 0],<br>    z: [0, 0, 0, 0, 1, 1, 1, 1],<br>    i: [7, 0, 0, 0, 4, 4, 6, 6, 4, 0, 3, 2],<br>    j: [3, 4, 1, 2, 5, 6, 5, 2, 0, 1, 6, 3],<br>    k: [0, 7, 2, 3, 6, 7, 1, 1, 5, 5, 7, 6],<br>    intensity: intensity,<br>    colorscale: [<br>      [0, 'rgb(255, 0, 255)'],<br>      [0.5, 'rgb(0, 255, 0)'],<br>      [1, 'rgb(0, 0, 255)']<br>    ]<br>  }<br>];<br><br>plotly(data)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">En función al dispositivo empleado, Plotly puede demorar unos cuantos segundos en dibujar la gráfica (sobre todo la primera vez que se llama a la función).</p>
+    
+    <p class="text">Como se puede comprobar, la gráfica puede ser ampliada o reducida con la rueda del mouse, rotada alrededor del eje z <img src="./files/rotar-z.png" alt="Rotar alrededor del eje z">, rotada libremente <img src="./files/rotar-xyz.png" alt="Rotar libremente">, movida <img src="./files/mover.png" alt="Mover la gráfica">, ampliada o reducida arrastrando el puntero del mouse <img src="./files/ampliar.png" alt="Ampliar/reducir">, vuelta a la posición inicial <img src="./files/inicio.png" alt="Posición inicial">, guardada en un archivo <img src="./files/foto.png" alt="Guardar imagen">, se pueden ocultar o mostrar los valores de los puntos <img src="./files/mostrar_puntos.png" alt="Mostrar/ocultar puntos"> y, en animaciones, volver a la última posición guardada <img src="./files/posicion_anterior.png" alt="Posición anterior">.</p>
+    
+    <p class="text">Para el caso específico de las gráficas de superficie, dibujadas a partir de funciones bidimensionales, para facilitar el proceso, se ha creado la función <b class="style1">surfacePlot</b>, que recibe la función o funciones a dibujar: <b class="style1">fun</b>, valor por defecto: (x,y)=&gt;x**2+y**2, en caso de dos o más funciones se debe mandar un array con las funciones a dibujar. Los límites del eje "x": <b class="style1">xmin</b> y <b class="style1">xmax</b>, valores por defecto -5 y 5 y el incremento de los valores de "x": <b class="style1">dx</b>, valor por defecto 0.5. Igualmente, recibe los límites e incremento de "y": <b class="style1">ymin</b>, <b class="style1">ymax</b> y <b class="style1">dy</b>, valores por defecto -5, 5 y 0.5.</p>
+
+    <p class="text">Además, puede recibir todos los parámetros que son válidos en las gráficas de tipo <a href="https://plotly.com/javascript/3d-surface-plots/">surface</a>.</p>
+
+    <p class="text">Así, las dos ecuaciones del sistema, pueden ser dibujadas con la siguiente instrucción:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">surfacePlot({fun:[(x,y)=&gt;Math.sqr(x)+2*Math.sqr(y)-22, (x,y)=&gt;-2*Math.sqr(x)+x*y-3*y+11], ymin:-6, ymax:5})</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">En esta gráfica, las soluciones se encuentran en la curva (de forma circular) que se crea en la intersección de las dos superficies. Todos los valores de esa curva son las soluciones del sistema de ecuaciones no lineales.</p>
+
+    <p class="text">En la solución de sistemas de ecuaciones no lineales, los métodos gráficos son de utilidad limitada, básicamente ayudan a tener una idea del lugar y forma de la curva de solución. En sistemas con 3 o más ecuaciones no lineales, no es posible emplear método gráficos.</p>
+
+    <br>
+    <div class="ejercicio" id="ejercicio1" enunciado="1"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Para resolver el siguiente sistema de ecuaciones no lineales:</p>\[\begin{aligned}2x^2+4xy-4x&amp;=115\\[2mm]\text{e}\raisebox{0.9em}{$\frac{x+y}{5}$}+x^2y^2-50y&amp;=\hspace{2mm}15\end{aligned}\]</div><p class="pregunta"><span class="pregunta"></span>Complete la función flecha "f", que recibe (en un vector) las variables del sistema y devuelve un vector con los valores de las ecuaciones del sistema igualadas a cero. Luego, en otra celda de código, encuentre las soluciones ("v") con el método Simplex (precisión/exactitud: 6, redondeado: cuarto dígito) empleando los siguientes valores iniciales <b>a)</b> x = 1, y =2; <b>b)</b> x = 3, y = 5; <b>c)</b> x = -7, y = 2.</p><div id="pregunta2" class="calculadora" spellcheck="false"><div class="instruccion">f = ([x,y]) =&gt;[<br>  2*x**2+4*x*y-4*x-115,<br>  Math.exp((x+y)/5)+x**2*y**2-50*y-15<br>  ];</div><div class="resultado"></div><div class="instruccion">f.simplex({vi:[1,2],err:6}).v.round(4) </div><div class="resultado"></div><div class="instruccion">f.simplex({vi:[3,5],err:6}).v.round(4) </div><div class="resultado"></div><div class="instruccion">f.simplex({vi:[-7,2],err:6}).v.round(4) </div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="13" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 1 -->
+
+    <div class="ejercicio" id="ejercicio2" enunciado="1"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Para resolver el siguiente sistema de ecuaciones no lineales:</p>\[\begin{aligned}x^2+2y^2+z^2&amp;=\hspace{1mm}17\\[2mm]xyz&amp;=\hspace{3mm}3\\[2mm]x+y-2z^2&amp;=-4\end{aligned}\]</div><p class="pregunta"><span class="pregunta"></span>Complete la función flecha "f", que recibe (en un vector) las variables del sistema y devuelve un vector con los valores de las ecuaciones del sistema igualadas a cero. Luego, en otra celda de código, encuentre las soluciones ("v") con el método Simplex (precisión/exactitud: 8, redondeado: cuarto dígito) empleando los siguientes valores iniciales: <b>a)</b> x = -3, y = 1, z = 2; <b>b)</b> x = 1, y = 2, z = 3; <b>c)</b> x = 4, y = 1, z = 2.</p><div id="pregunta5" class="calculadora" spellcheck="false"><div class="instruccion">f = ([x,y,z])=&gt;[<br>  x**2+2*y**2+z**2-17,<br>  x*y*z-3,<br>  x+y-2*z**2+4<br>  ];</div><div class="resultado"></div><div class="instruccion">f.simplex({vi:[-3,1,2],err:8}).v.round(4)</div><div class="resultado"></div><div class="instruccion">f.simplex({vi:[1,2,3],err:8}).v.round(4)</div><div class="resultado"></div><div class="instruccion">f.simplex({vi:[4,1,2],err:8}).v.round(4)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="13" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 2 -->
+
+    <div class="ejercicio" id="ejercicio3" enunciado="1"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Para resolver el siguiente sistema de ecuaciones no lineales:</p>\[\begin{array}{r c r}4x-\cos(yz)&amp;=&amp;0.5\\[2mm]x^2-75(y+0.2)^2+\sin(z)&amp;=&amp;-1.06\\[2mm]\text{e}\raisebox{0.7em}{$\small{-xy}$}+25z&amp;=&amp;-10.42\end{array}\]</div><p class="pregunta"><span class="pregunta"></span>Complete la función flecha "f", que recibe (en un vector) las variables del sistema y devuelve un vector con los valores de las ecuaciones del sistema igualadas a cero. Luego, en otra celda de código, encuentre las soluciones ("v") con el método Simplex (precisión/exactitud: 7, redondeado: quinto dígito) empleando los siguientes valores iniciales: <b>a)</b> x = 1, y = 2, z = 3; <b>b)</b> x = 0.6, y = 0.4, z = 0.3; <b>c)</b> x = -2, y = -3, z = -4.</p><div id="pregunta8" class="calculadora" spellcheck="false"><div class="instruccion">f = ([x,y,z])=&gt;[<br>  4*x-Math.cos(y*z)-0.5,<br>    x**2-75*(y+0.2)**2+Math.sin(z)+1.06,<br>    Math.exp(-x*y)+25*z+10.42<br>  ];</div><div class="resultado"></div><div class="instruccion">f.simplex({vi:[1,2,3],err:7}).v.round(5)</div><div class="resultado"></div><div class="instruccion">f.simplex({vi:[0.6,0.4,0.3],err:7}).v.round(5)</div><div class="resultado"></div><div class="instruccion">f.simplex({vi:[-2,-3,-4],err:7}).v.round(5)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="16" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 3 -->
+
+
+
+
+    <h2 class="text">Método del descenso acelerado</h2>
+
+    <p class="text">Al igual que en Simplex, en el método del descenso acelerado se trabaja con la función de error, ecuación <a href="#ec_3">(3)</a>:</p>
+
+    <table class="ecuacion" id="ec3_" style="counter-reset: ecuación 2">
+        <tbody><tr>
+            <td>
+                \[                e(x_0, x_1, \cdots, x_{n-1}) =                \big(f(x_0, x_1, \cdots, x_{n-1})-\alpha \big)^2=0                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">Pero, la dirección a seguir, se determina mediante la gradiente de la función de error, que viene definida por la siguiente expresión:</p>
+    
+    <table class="ecuacion" id="ec12" style="counter-reset: ecuación 11">
+        <tbody><tr>
+            <td>
+                \[                \overrightarrow{~z~} = \nabla \text{fe}(\overrightarrow{~x~})                =                \begin{bmatrix}                \dfrac{\partial{\text{fe}(\overrightarrow{~x~})}}{\partial{x_0}}\\[4mm]                \dfrac{\partial{\text{fe}(\overrightarrow{~x~})}}{\partial{x_1}}\\[5mm]                \vdots\\[3mm]                \dfrac{\partial{\text{fe}(\overrightarrow{~x~})}}{\partial{x_{n-1}}}                \end{bmatrix}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">Para acercarse al mínimo, se resta, a los valores iniciales asumidos, el gradiente de la función multiplicado por un factor α:</p>
+    
+    <table class="ecuacion" id="ec13">
+        <tbody><tr>
+            <td>
+                \[                \overrightarrow{x_n}=\overrightarrow{x}-\alpha \cdot \overrightarrow{z}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">La forma en la que se calcula este factor (α) es lo que da lugar a las diferentes variantes del método.</p>
+    
+    <p class="text">De dichas variantes, en la asignatura se toma aquella donde el valor de α se calcula normalizando los valores del vector <dfn class="style1">z</dfn> (para que su suma sea 1) y probando luego valores de α que comienzan en 1 y que en cada iteración disminuyen a la mitad de su valor anterior, hasta que la función de error es menor al valor obtenido con el vector asumido.</p>
+    
+    <p class="text">Posteriormente, se comprueba si es posible o no, mejorar este valor mediante una extrapolación y de ser así se emplea el valor extrapolado.</p>
+    
+    <p class="text">Para el cálculo del gradiente, el principal problema radica en el cálculo de las derivadas. La deducción de las fórmulas analíticas, para cada problema, no es una alternativa práctica, por lo que dicho cálculo debe ser numérico</p>
+    
+    <p class="text">En este capítulo se empleará la fórmula de diferencia central de segundo orden, adaptada para el cálculo de derivadas parciales:</p>
+    
+    <table class="ecuacion" id="ec14">
+        <tbody><tr>
+            <td>
+                \[                \dfrac{\partial{\text{fe}(\overrightarrow{x})}}{\partial{x_i}}=                \dfrac{\text{fe}(x_0, \cdots, x_i+h,\cdots, x_{n-1})-                \text{fe}(x_0,\cdots,x_{i-h},\cdots,x_{n-1})}                {2h}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Donde el valor de “h” se calcula con:</p>
+    
+    <table class="ecuacion" id="ec15">
+        <tbody><tr>
+            <td>
+                \[                h = x_i \cdot 10^{-6}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">El proceso comienza calculando el valor de la función de error con los valores asumidos (vector <dfn class="style1">x</dfn>):</p>
+    
+    <table class="ecuacion" id="ec16">
+        <tbody><tr>
+            <td>
+                \[                \text{fe}_1 = \text{fe}(\overrightarrow{x})                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">Para determinar la dirección a seguir se calcula el valor absoluto del gradiente (\(|\overrightarrow{z}|\)):</p>
+    
+    <table class="ecuacion" id="ec17">
+        <tbody><tr>
+            <td>
+                \[                z_0 = |\overrightarrow{z}|                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">Si este valor es cero, el proceso concluye, siendo las soluciones los valores del vector <dfn class="style1">x</dfn>, caso contrario, se normalizan los valores de <dfn class="style1">z</dfn>:</p>
+    
+    <table class="ecuacion" id="ec18">
+        <tbody><tr>
+            <td>
+                \[                \overrightarrow{z} = \dfrac{\overrightarrow{z}}{z_0}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">Entonces se fija el valor de <dfn class="style1">α</dfn> (<dfn class="style1">a<sub>3</sub></dfn>) en 1 y con el mismo se calcula el nuevo vector de prueba y los respectivos valores de la función de error:</p>
+    
+    <table class="ecuacion" id="ec19">
+        <tbody><tr>
+            <td>
+                \[                \begin{aligned}                \overrightarrow{x_3} &amp;= \overrightarrow{x}-a_3\overrightarrow{z}\\                \text{fe}_{3}&amp;=\text{fe}(\overrightarrow{x_3})                \end{aligned}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">Si <dfn class="style1">fe<sub>3</sub></dfn> no es menor a <dfn class="style1">fe<sub>1</sub></dfn>, <dfn class="style1">a<sub>3</sub></dfn> se divide entre dos y el proceso se repite hasta que <dfn class="style1">fe<sub>3</sub></dfn> sea menor a <dfn class="style1">fe<sub>1</sub></dfn> o hasta que <dfn class="style1">a<sub>3</sub></dfn> sea menor al error permitido, en cuyo caso el proceso concluye, siendo las soluciones los valores actuales de <dfn class="style1">x</dfn>.</p>
+    
+    <p class="text">Una vez que <dfn class="style1">fe<sub>3</sub></dfn> es menor a <dfn class="style1">fe<sub>1</sub></dfn>, se calcula un nuevo valor de α extrapolado <dfn class="style1">a<sub>0</sub></dfn> y para ello se calculan previamente los siguientes parámetros:</p>
+    
+    <table class="ecuacion" id="ec20">
+        <tbody><tr>
+            <td>
+                \[                \begin{aligned}                a_2 &amp;= \dfrac{a_3}{2}\\                \overrightarrow{x_2}&amp;=\overrightarrow{x}-a_2\overrightarrow{z}\\                \text{fe}_2 &amp;= \text{fe}(\overrightarrow{x_2})                \end{aligned}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <table class="ecuacion" id="ec21">
+        <tbody><tr>
+            <td>
+                \[                h_1 = \dfrac{\text{fe}_2-\text{fe}_0}{a_2}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <table class="ecuacion" id="ec22">
+        <tbody><tr>
+            <td>
+                \[                h_2 = \dfrac{\text{fe}_3-\text{fe}_2}{a_3-a_2}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <table class="ecuacion" id="ec23">
+        <tbody><tr>
+            <td>
+                \[                h_2 = \dfrac{\text{fe}_3-\text{fe}_2}{a_3-a_2}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <table class="ecuacion" id="ec24">
+        <tbody><tr>
+            <td>
+                \[                h_3 = \dfrac{h_2-h_1}{a_3}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">Con los cuales se calcula <dfn class="style1">a<sub>0</sub></dfn>:</p>
+    
+    <table class="ecuacion" id="ec25">
+        <tbody><tr>
+            <td>
+                \[                a_0 = 0.5\left({a_2-\dfrac{h_1}{h_3}}\right)                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">Con este nuevo valor de α (<dfn class="style1">a<sub>0</sub></dfn>) se calcula un nuevo valor de prueba y el correspondiente valor de la función de error:</p>
+    
+    <table class="ecuacion" id="ec26">
+        <tbody><tr>
+            <td>
+                \[                \begin{aligned}                \overrightarrow{x_0}&amp;=\overrightarrow{x}-a_0\overrightarrow{z}\\                \text{fe}_0 &amp;=\text{fe}(\overrightarrow{x_0})                \end{aligned}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Si <dfn class="style1">fe<sub>0</sub></dfn> es menor a <dfn class="style1">fe<sub>3</sub></dfn>, los nuevos valores de prueba son los valores del vector <dfn class="style1">x<sub>0</sub></dfn>, caso contrario los nuevos valores de prueba son los valores del vector <dfn class="style1">x<sub>3</sub></dfn>.</p>  
+
+
+
+
+    <h3 class="text">Algoritmo</h3>
+
+    <p class="text">El algoritmo del método, que sigue el procedimiento descrito en el anterior acápite, es el siguiente:</p>
+
+    <p class="figurasn"><img src="files/figura_08.png" alt="Descenso acelerado, algoritmo"></p>
+
+    <p class="text">Donde los vectores, se escriben en color celeste, para diferenciarlos de los valores escalares.</p>
+
+    <p class="text">El código respectivo, ha sido añadido como un método dinámico de la clase <dfn class="style1">Function</dfn> y al igual que el método <dfn class="style1">Simplex</dfn>, debe ser llamado desde la función que devuelve los restos del sistema de ecuaciones y devuelve (igualmente) el vector con las soluciones del sistema (v) y el valor de la función de error (e).</p>
+
+
+
+
+    <h3 class="text">Ejemplo</h3>
+
+    <p class="ejemplo"><span class="ejemplo"></span>Resuelva el sistema de ecuaciones del ejemplo 1 (ecuación <a href="#ec_11">11</a>) empleando el método del Descenso Acelerado con un error permitido de 6 dígitos, redondeando el resultado al cuarto dígito después del punto.</p>
+
+    <table class="ecuacion" id="ec11_" style="counter-reset: ecuación 10; margin-left:1cm; width:calc(100% - 1cm);">
+        <tbody><tr>
+            <td>
+                \[                \begin{alignedat}{2}                x^2+2y^2 &amp;=&amp; 22\\                -2x^2+xy-3y &amp;=&amp;-11                \end{alignedat}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text" style="counter-reset: ecuación 26">El problema se resuelve de manera similar al mencionado ejemplo, sólo que ahora se llama al método del Descenso Acelerado, en lugar del método Simplex:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var f = ([x, y]) =&gt;[<br>  x**2+2*y**2-22,<br>  -2*x**2+x*y-3*y+11<br>];</div>
+        <div class="resultado"></div>
+        <div class="instruccion">f.descensoa({vi:[1, 2], err:4}).v.round(4)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Si no se logra convergencia (con este o con cualquiera de los métodos) se puede incrementar el límite de iteraciones, para verificar si, con un mayor número de iteraciones, se logra convergencia.</p>
+
+    <p class="text">Así, asumiendo que con valores iniciales iguales a -3 y -1, no se logra convergencia, se puede incrementar el límite de iteraciones, por ejemplo a 5000, para verificar si, con ese número de iteraciones, se logra convergencia:</p>
+ 
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">f.descensoa({vi:[-3, -1], err:4, li:5000}).v.round(4)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <br>
+    <div class="ejercicio" id="ejercicio4" enunciado="1"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Para resolver el siguiente sistema de ecuaciones no lineales:</p>\[\begin{array}{r c r}xyz-x^2+y^2&amp;=&amp;125\\[2mm]2xy-z^2&amp;=&amp;0.09\\[2mm]\text{e}^x-\text{e}^y+z&amp;=&amp;0.52\end{array}\]</div><p class="pregunta"><span class="pregunta"></span>Complete la función flecha "f", que recibe (en un vector) las variables del sistema y devuelve un vector con los valores de las ecuaciones del sistema igualadas a cero. Luego, en otra celda de código, encuentre las soluciones ("v") con el método del descenso acelerado (precisión/exactitud: 4, redondeado: tercer dígito) empleando los siguientes valores iniciales: <b>a)</b> x = 1, y = 2, z = 3; <b>b)</b> x = -1, y = -9, z = -1; <b>c)</b> x = 3, y = 2, z = 1.</p><div id="pregunta11" class="calculadora" spellcheck="false"><div class="instruccion">f = ([x,y,z])=&gt;[<br>  x*y*z-x**2+y**2-125,<br>  2*x*y-z**2-0.09,<br>  Math.exp(x)-Math.exp(y)+z-0.52<br>  ];</div><div class="resultado"></div><div class="instruccion">f.descensoa({vi:[1,2,3],err:4}).v.round(3)</div><div class="resultado"></div><div class="instruccion">f.descensoa({vi:[-1, -9, -1],err:4}).v.round(3)</div><div class="resultado"></div><div class="instruccion">f.descensoa({vi:[3,2,1],err:4}).v.round(3)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="13" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 4 -->
+
+    <div class="ejercicio" id="ejercicio5" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Para resolver el siguiente sistema de ecuaciones no lineales:</p>\[\begin{aligned}\sin(4\pi xy)-2y-x~&amp;=\hspace{1mm}0\\[2mm]\left(\dfrac{4\pi -1}{4\pi}\right)\left(\text{e}^{2x}-\text{e}\right)+4\text{e}y^2-2\text{e}x~&amp;=\hspace{1mm}0\\\end{aligned}\]</div><p class="pregunta"><span class="pregunta"></span>Complete la función flecha "f", que recibe (en un vector) las variables del sistema y devuelve un vector con los valores de las ecuaciones del sistema igualadas a cero. Luego, en otra celda de código, encuentre las soluciones ("v") con el método del descenso acelerado (precisión/exactitud: 6, redondeado: cuarto dígito) empleando los siguientes valores iniciales (si el método no converge debe incrementar el límite de iteraciones "li" hasta lograr convergencia): <b>a)</b> x = 1, y = 2; <b>b)</b> x = 5, y = 1; <b>c)</b> x = -7, y = 1.</p><div id="pregunta13" class="calculadora" spellcheck="false"><div class="instruccion">f = ([x,y])=&gt; [<br>  Math.sin(4*Math.PI*x*y)-2*y-x-0,<br>    ((4*Math.PI-1)/(4*Math.PI))*(Math.exp(2*x)-Math.E)+4*Math.E*y**2-2*Math.E*x<br>  ];</div><div class="resultado"></div><div class="instruccion">f.descensoa({vi:[1,2],err:6}).v.round(4)</div><div class="resultado"></div><div class="instruccion">f.descensoa({vi:[5,1],err:6}).v.round(4)</div><div class="resultado"></div><div class="instruccion">f.descensoa({vi:[-7,1],err:6}).v.round(4)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="13" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 5 -->
+
+    <div class="ejercicio" id="ejercicio6" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Para resolver el siguiente sistema de ecuaciones no lineales:</p>\[\begin{aligned}\ln\left(x^2+y^2\right)-\sin(xy)&amp;=\ln(2)+\ln(\pi)\\[2mm]\text{e}^{x-y}+\cos(xy)&amp;=0\end{aligned}\]</div><p class="pregunta"><span class="pregunta"></span>Complete la función flecha "f", que recibe (en un vector) las variables del sistema y devuelve un vector con los valores de las ecuaciones del sistema igualadas a cero. Luego, en otra celda de código, encuentre las soluciones ("v") con el método del descenso acelerado (precisión/exactitud: 8, redondeado: quinto dígito) empleando los siguientes valores iniciales (si el método no converge debe incrementar el límite de iteraciones "li" hasta lograr convergencia): <b>a)</b> x = 1, y = 2; <b>b)</b> x = -5, y = 1; <b>c)</b> x = -1, y = -2.</p><div id="pregunta16" class="calculadora" spellcheck="false"><div class="instruccion">f = ([x,y])=&gt;[<br>  Math.log(x**2+y**2)-Math.sin(x*y)-Math.log(2)-Math.log(Math.PI),<br>  Math.exp(x-y)+Math.cos(x*y)-0<br>  ];</div><div class="resultado"></div><div class="instruccion">f.descensoa({vi:[1,2],err:8}).v.round(5)</div><div class="resultado"></div><div class="instruccion">f.descensoa({vi:[-5,1],err:8}).v.round(5)</div><div class="resultado"></div><div class="instruccion">f.descensoa({vi:[-1,-2],err:8}).v.round(5)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="16" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 6 -->
+
+
+
+
+    <h2 class="text">Método de Newton (Gradiente)</h2>
+
+    <p class="text">El método de Newton para sistemas de ecuaciones no lineales, conocido también como el método de la Gradiente, requiere, casi siempre, menos iteraciones que los dos métodos anteriores. En contrapartida sólo logra convergencia si los valores iniciales son cercanos a las soluciones, por esta razón, con frecuencia, los valores iniciales se encuentran con un método más estable (como el método Simplex) y las soluciones más exactas con el método de Newton.</p>
+
+    <p class="text">En este método se expanden las ecuaciones del sistema empleando series de Taylor. Por ejemplo, para un sistema de 3 ecuaciones con 3 incógnitas:</p>
+
+    <table class="ecuacion" id="ec27" style="counter-reset: ecuación 26">
+        <tbody><tr>
+            <td>
+                \[                \begin{aligned}                f_0(x_0, x_1, x_2)&amp;= 0\\                f_1(x_0, x_1, x_2)&amp;= 0\\                f_2(x_0, x_1, x_2)&amp;= 0                \end{aligned}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">La expansión de este sistema, en series de Taylor, es:</p>
+
+    <table class="ecuacion" id="ec28">
+        <tbody><tr>
+            <td>
+                \[                \begin{aligned}                f_0(x_0+\Delta x_0, x_1+\Delta x_1, x_2+\Delta x_2)&amp;=                f_0+\dfrac{\partial f_0}{\partial x_0}\Delta x_0+                \dfrac{\partial f_0}{\partial x_1}\Delta x_1+                \dfrac{\partial f_0}{\partial x_2}\Delta x_2+\cdots +\infty = 0\\                f_1(x_0+\Delta x_0, x_1+\Delta x_1, x_2+\Delta x_2)&amp;=                f_1+\dfrac{\partial f_1}{\partial x_0}\Delta x_0+                \dfrac{\partial f_1}{\partial x_1}\Delta x_1+                \dfrac{\partial f_1}{\partial x_2}\Delta x_2+\cdots +\infty = 0\\                f_2(x_0+\Delta x_0, x_1+\Delta x_1, x_2+\Delta x_2)&amp;=                f_2+\dfrac{\partial f_2}{\partial x_0}\Delta x_0+                \dfrac{\partial f_2}{\partial x_1}\Delta x_1+                \dfrac{\partial f_2}{\partial x_2}\Delta x_2+\cdots +\infty = 0                \end{aligned}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">Donde Δx<sub>0</sub>, Δx<sub>1</sub> y Δx<sub>2</sub> son los valores que deberían añadirse a los valores asumidos (x<sub>0</sub>, x<sub>1</sub> y x<sub>2</sub>) para que las funciones (f<sub>0</sub>, f<sub>1</sub> y f<sub>2</sub>) sean iguales a cero. En otras palabras, si fuera posible calcular los valores de Δx<sub>0</sub>, Δx<sub>1</sub> y Δx<sub>2</sub>, las soluciones del sistema serían x<sub>0</sub>=x<sub>0</sub>+Δx<sub>0</sub>, x<sub>1</sub>=x<sub>1</sub>+Δx<sub>1</sub> y x<sub>2</sub>=x<sub>2</sub>+Δx<sub>2</sub>.</p>
+    
+    <p class="text">Por supuesto, al tratarse de series infinitas, no es posible en la práctica calcular dichos valores, sin embargo, es posible obtener un valor aproximado tomando en cuenta sólo los términos de primer orden:</p>
+
+    <table class="ecuacion" id="ec29">
+        <tbody><tr>
+            <td>
+                \[                \begin{aligned}                f_0(x_0+\Delta x_0, x_1+\Delta x_1, x_2+\Delta x_2)&amp;{\approx}                f_0+\dfrac{\partial f_0}{\partial x_0}\Delta x_0+                \dfrac{\partial f_0}{\partial x_1}\Delta x_1+                \dfrac{\partial f_0}{\partial x_2}\Delta x_2= 0\\                f_1(x_0+\Delta x_0, x_1+\Delta x_1, x_2+\Delta x_2)&amp;{\approx}                f_1+\dfrac{\partial f_1}{\partial x_0}\Delta x_0+                \dfrac{\partial f_1}{\partial x_1}\Delta x_1+                \dfrac{\partial f_1}{\partial x_2}\Delta x_2= 0\\                f_2(x_0+\Delta x_0, x_1+\Delta x_1, x_2+\Delta x_2)&amp;{\approx}                f_2+\dfrac{\partial f_2}{\partial x_0}\Delta x_0+                \dfrac{\partial f_2}{\partial x_1}\Delta x_1+                \dfrac{\partial f_2}{\partial x_2}\Delta x_2= 0                \end{aligned}                                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Que, al ser un sistema de ecuaciones lineales, puede ser resuelto, obteniéndose así los valores de: Δx<sub>0</sub>, Δx<sub>1</sub> y Δx<sub>2</sub>, pero como son sólo valores aproximados el proceso de cálculo es iterativo: comenzando con los valores asumidos x<sub>0</sub> a x<sub>2</sub>, se calculan los valores de Δx<sub>0</sub>, Δx<sub>1</sub> y Δx<sub>2</sub>, con los que se calculan nuevos valores de prueba: x<sub>0</sub>=x<sub>0</sub>+Δx<sub>0</sub>, x<sub>1</sub>=x<sub>1</sub>+Δx<sub>1</sub>, x<sub>2</sub>=x<sub>2</sub>+Δx<sub>2</sub>. Entonces el proceso se repite, empleando en cada repetición los nuevos valores calculados, hasta que los valores de Δx<sub>i</sub> son cero o cercanos a cero (exactitud), o hasta que los valores de prueba, de dos iteraciones sucesivas, son iguales en un determinado número de dígitos (precisión).</p>
+
+    <p class="text">Las derivadas parciales se calculan igual que en el método del descenso acelerado, es decir empleando la ecuación <a href="#ec14">(14)</a>.</p>
+
+
+
+
+    <h3 class="text">Algoritmo</h3>
+
+    <p class="text">El algoritmo que automatiza el proceso descrito en el anterior acápite, es el siguiente:</p>
+
+    <p class="figurasn"><img src="files/figura_09.png" alt="Newton para sistemas no lineales, algoritmo"></p>
+
+    <p class="text">El código respectivo, ha sido añadido como un método dinámico de la clase <dfn class="style1">Function</dfn>, por lo que debe ser llamado desde la función que devuelve el vector con los restos de las ecuaciones del sistema y se emplea igual que los dos métodos anteriores.</p>
+
+
+
+
+    <h3 class="text">Ejemplo</h3>
+
+    <p class="ejemplo"><span class="ejemplo"></span>Resuelva el sistema de ecuaciones del ejemplo 1 (ecuación <a href="#ec_11">11</a>) con el método de Newton con un error permitido de 6 dígitos, redondeando los resultados al sexto dígito después del punto.</p>
+
+    <table class="ecuacion" id="ec11a" style="counter-reset: ecuación 10; margin-left:1cm; width:calc(100% - 1cm);">
+        <tbody><tr>
+            <td>
+                \[                \begin{alignedat}{2}                x^2+2y^2 &amp;=&amp; 22\\                -2x^2+xy-3y &amp;=&amp;-11                \end{alignedat}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">La solución es similar a la de los otros métodos, excepto que ahora se llama al método de Newton:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var f = ([x, y]) =&gt;[<br>  x**2+2*y**2-22,<br>  -2*x**2+x*y-3*y+11<br>];</div>
+        <div class="resultado"></div>
+        <div class="instruccion">f.newtonnl({vi:[1,2], err:6}).v.round(6)</div>
+        <div class="resultado"></div>
+    </div>
+
+
+    <br>
+    <div class="ejercicio" id="ejercicio7" enunciado="1"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Para resolver el siguiente sistema de ecuaciones no lineales:</p>\[\begin{gathered}\begin{aligned}x_1+x_4 &amp;= 3\\2x_1+x_2+x_4+x_7+x_8+x_9+2x_{10} &amp;=10+r\\x_2+2x_5+x_6+x_7 &amp;=8\\2x_3+x_5 &amp;=4r\\x_1x_5 &amp;=a_1x_2x_4\\x_6\sqrt{x_2} &amp;=a_2\sqrt{x_2x_4x_{11}}\\x_7\sqrt{x_4} &amp;=a_3\sqrt{x_1x_4x_{11}}\\x_8x_4 &amp;=a_4x_2x_{11}\\x_9x_4 &amp;=a_5x_1\sqrt{x_3x_{11}}\\x_{10}x_4^2 &amp;=a_6x_4^2x_{11}\\x_{11} &amp;=x_1+x_2+x_3+x_4+x_5+x_6+x_7+x_8+x_9+x_{10}\end{aligned}\\\begin{gathered}a_1=0.193;~a_2=0.002597; ~a_3=0.003448;~a_4=0.00001799;\\a_5=0.0002155;~a_6=0.00003846;~r=4.056734\end{gathered}\end{gathered}\]</div><p class="pregunta"><span class="pregunta"></span>Complete la función flecha "f", que recibe (en un vector) las variables del sistema y devuelve un vector con los valores de las ecuaciones del sistema igualadas a cero. Luego, en otra celda de código, encuentre las soluciones ("v") con el método Simplex (precisión/error: 5, resultados redondeados al tercer dígito), empleando los siguientes valores iniciales para x<sub>1</sub> a x<sub>11</sub> (si el método no converge debe incrementar el límite de iteraciones "li" hasta lograr convergencia): <b>a)</b> 1.1, 1.1, 1.1, 1.1, 1.1, 1.1, 1.1, 1.1, 1.1, 1.1, 11.1; <b>b)</b> 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2.0, 15.5. Para evitar valores imaginarios, en las ecuaciones que tienen raíces cuadradas, debe elevar ambos miembros al cuadrado.</p><div id="pregunta20" class="calculadora" spellcheck="false"><div class="instruccion">var f = ([x1,x2,x3,x4,x5,x6,x7,x8,x9,x10,x11]) =&gt; {<br>  const a1= 0.193, a2= 0.002597, a3= 0.003448, a4= 0.00001799,<br>        a5= 0.0002155, a6= 0.00003846, r= 4.056734;<br>  return [ <br>    x1+x4-3,<br>    2*x1+x2+x4+x7+x8+x9+2*x10-10-r,<br>    x2+2*x5+x6+x7-8,<br>    2*x3+x5-4*r,<br>    x1*x5-a1*x2*x4,<br>    x6**2*x2-a2**2*x2*x4*x11,<br>    x7**2*x4-a3**2*x1*x4*x11,<br>    x8*x4-a4*x2*x11,<br>    (x9*x4)**2-(a5*x1)**2*x3*x11,<br>    x10*x4**2-a6*x4**2*x11,<br>    x11-x1-x2-x3-x4-x5-x6-x7-x8-x9-x10<br>    ];<br>  }</div><div class="resultado"></div><div class="instruccion">f.simplex({vi:[1.1, 1.1, 1.1, 1.1, 1.1, 1.1, 1.1, 1.1, 1.1, 1.1, 11.1], err:5, li:10000}).v.round(3)</div><div class="resultado"></div><div class="instruccion">f.simplex({vi:[1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2.0, 15.5], err:5, li:10000}).v.round(3)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="39" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 7 -->
+    <div class="ejercicio" id="ejercicio8" enunciado="1"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Para resolver el siguiente sistema de ecuaciones no lineales (calcular los valores de "x", "y" y "z"): </p>\[\begin{gathered}\begin{array}{r c l}xyz-x^{2.1}+z^{2.3} &amp;=&amp;2r+0.41\\[0.5mm]xz-y^2 &amp;=&amp;r-1.7\\[1mm]xy+yz &amp;=&amp;2.52r\end{array}\\[10mm]\text{f}(r) = r^{3.1}+2.1r^{1.3}-r-5.572=0\end{gathered}\]</div><p class="pregunta"><span class="pregunta"></span>Complete el código que programa (función flecha) la ecuación no lineal "fr". En otra celda de código, encuentre el segmento de solución dibujando la gráfica de la función entre 0 y 2. En otra celda, con el segmento de solución leído de la gráfica, resuelva la ecuación no lineal con el método de regula-falsi (precisión/exactitud: 8, resultado redondeado al segundo dígito). Luego, en otra celda, complete el código que programa (función flecha) el sistema de ecuaciones no lineales "f" y encuentre las soluciones con el método Simplex (valores iniciales: 1, 2, 3; precisión/exactitud: 6 dígitos; redondeo: tercer dígito), si el método no converge, se debe incrementar el límite de iteraciones "li" hasta lograr convergencia.</p><div id="pregunta24" class="calculadora" spellcheck="false"><div class="instruccion">var fr = r =&gt; r**3.1+2.1*r**1.3-r-5.572;</div><div class="resultado"></div><div class="instruccion">plot({f:[fr],xi:0,xf:2})</div><div class="resultado"></div><div class="instruccion">var r = fr.refa({xi:1.4,xf:1.6,err:8}).round(2); r</div><div class="resultado"></div><div class="instruccion">var f = ([x,y,z])=&gt;[<br>  x*y*z-x**2.1+z**2.3-2*r-0.41,<br>  x*z-y**2-r+1.7,<br>  x*y+y*z-2.52*r<br>  ];</div><div class="resultado"></div><div class="instruccion">f.simplex({vi:[1,2,3],err:6}).v.round(3)</div><div class="resultado"></div></div><p class="pregunta" id="pregunta25"><span class="pregunta"></span>El valor de "y" calculado con el método es: <span class="campo_literal correcta" tabindex="0" contenteditable="true">1.409</span></p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="23" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 8 -->
+    <div class="ejercicio" id="ejercicio9" enunciado="2"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Para resolver el siguiente sistema de ecuaciones no lineales (encontrar los valores de "x", "y" y "z"):</p>\[\begin{gathered}\begin{array}{r c l}x^2+y^2 +z^2 &amp;=&amp;t_1\\[0.5mm]xy+yz+xz &amp;=&amp;t_0\\[1mm]xyz^2+xzy^2 &amp;=&amp;t_2\end{array}\\[10mm]\text{p}(t) = t^{3}-23.926t^2+186.35t-475.28=0\end{gathered}\]</div><p class="pregunta"><span class="pregunta"></span>Complete el código que resuelve la ecuación polinomial con cub (redondeo: segundo dígito). En otra celda de código, complete el código que programa (función flecha) el sistema de ecuaciones no lineales "f" y encuentre las soluciones con el método del descenso acelerado (valores iniciales: 1,2,3; precisión/exactitud: 5 dígitos; redondeo: primer dígito), si el método no converge, se debe incrementar el límite de iteraciones "li" hasta lograr convergencia.</p><div id="pregunta32" class="calculadora" spellcheck="false"><div class="instruccion">var t = [1,-23.926,186.35,-475.28].cub().round(2); t</div><div class="resultado"></div><div class="instruccion">var f = ([x,y,z]) =&gt;[<br>  x**2+y**2+z**2-t[1],<br>  x*y+y*z+x*z-t[0],<br>  x*y*z**2+x*z*y**2-t[2]<br>  ];<br>f.descensoa({vi:[1,2,3],err:5,li:100000}).v.round(1)</div><div class="resultado"></div><div class="instruccion">f.descensoa({vi:[1,2,3],err:5,li:100000}).v.round(1)</div><div class="resultado"></div></div><p class="pregunta" id="pregunta33"><span class="pregunta"></span>El valor de "x" calculado es: <span class="campo_literal correcta" tabindex="0" contenteditable="true">1.4</span></p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="21" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 9 -->
+    <div class="ejercicio" id="ejercicio10" enunciado="2"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Para resolver el siguiente sistema de ecuaciones no lineales (encontrar los valores de "x", "y" y "z"):</p>\[\begin{gathered}\begin{aligned}\left(x+y-z\right)^2 &amp;=r_0\\[2mm]\dfrac{x+y}{y+z}+\dfrac{x-z}{2z} &amp;=r_1\\[3.7mm]\left(y+z\right)^2-\left(x+y\right)^2 &amp;=r_2\end{aligned}\\[15mm]\begin{aligned}3r_0+2r_1-r_2 &amp;=12.064\\2r_0-3r_1+3r_2 &amp;=10.544\\5r_0+6r_1-7r_2 &amp;=13.152\end{aligned}\end{gathered}\]</div><p class="pregunta"><span class="pregunta"></span>Complete el código que resuelve el sistema de ecuaciones lineales con el método doolittle (redondeo: sexto dígito, resultado en forma de vector). En otra celda de código complete el código que programa (función flecha) el sistema de ecuaciones no lineales "f" y encuentre las soluciones con el método del descenso acelerado (valores iniciales: 2, 3, 4; precisión/exactitud: 4 dígitos; redondeo: segundo dígito), si el método no converge, se debe incrementar el límite de iteraciones "li" hasta lograr convergencia.</p><div id="pregunta38" class="calculadora" spellcheck="false"><div class="instruccion">var r = [[3,2,-1],<br>         [2,-3,3],<br>         [5,6,-7]].doolittle([12.064, 10.544, 13.152]).transpose().round(6);r</div><div class="resultado"></div><div class="instruccion">var f = ([x,y,z])=&gt;[<br>  (x+y-z)**2-r[0],<br>  (x+y)/(y+z)+(x-z)/(2*z)-r[1],<br>  (y+z)**2-(x+y)**2-r[2]<br>];<br>f.descensoa({vi:[2, 3, 4], err:4}).v.round(2)</div><div class="resultado"></div><div class="instruccion">f.descensoa({vi:[2, 3, 4], err:4}).v.round(2)</div><div class="resultado"></div></div><p class="pregunta" id="pregunta39"><span class="pregunta"></span>El valor de "y" calculado es: <span class="campo_literal correcta" tabindex="0" contenteditable="true">2.18</span></p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="21" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 10 -->
+
+
+
+
+    <h2 class="text">Ecuaciones no lineales en Octave</h2>
+
+    <p class="text">Para resolver un sistemas de ecuaciones no lineales en Octave (y MatLab), se emplea la función <b class="style1">fsolve</b>, la cual recibe una función, que devuelve un vector con los valores de cada una de las ecuaciones del sistema igualadas a cero y un vector con los valores inicialmente asumidos para las soluciones.</p>
+
+    <p class="text">La función que se manda a <b class="style1">fsolve</b>, debe recibir un vector, con un número de elementos, igual al número de ecuaciones del sistema. Cada uno de dichos elementos, corresponde a cada una de la variables del sistema.</p>
+
+    <p class="text">Así, para resolver el siguiente sistema de ecuaciones lineales (ecuación 11):</p>
+
+    <table class="ecuacion" id="ec11b" style="counter-reset: ecuación 10">
+        <tbody><tr>
+            <td>
+                \[                \begin{alignedat}{2}                x^2+2y^2 &amp;=&amp; 22\\                -2x^2+xy-3y &amp;=&amp;-11                \end{alignedat}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Se escribe, en myCompiler:</p>
+
+    <div class="codigo octave">format shortG;<br>    <br>function res = f2(v)<br>    [x, y] = num2cell(v){:};<br>    res = [x^2+2*y^2-22, -2*x^2+x*y-3*y+11];<br>end<br><br>fsolve(@f2,[1.1,1.2])<br><br>% Resultados obtenidos:<br><br> 2.0000    3.0000</div>
+ 
+    <p class="text">En este ejemplo, en "v", se recibe el vector con los valores de las dos varíables (x, y) del sistema. Por claridad y para reducir la probabilidad de error, esos valores se guardan en las variables locales "x" y "y". Con esas variables se calculan (en un vector) los resultados de las dos ecuaciones del sistema. Los valores inicialmente asumidos, para "x" y "y", son 1.1 y 1.2.</p>
+
+
+    <div class="ejercicio" id="ejercicio11" enunciado="0"><hr><div class="enunciado"><p class="ejercicio extern"><span class="ejercicio"></span>Para resolver, en Otave (formato shortG) el siguiente sistema de ecuaciones no lineales:</p>\[\begin{gathered}\begin{aligned}x_1+x_4 &amp;= 3\\2x_1+x_2+x_4+x_7+x_8+x_9+2x_{10} &amp;=10+r\\x_2+2x_5+x_6+x_7 &amp;=8\\2x_3+x_5 &amp;=4r\\x_1x_5 &amp;=a_1x_2x_4\\x_6\sqrt{x_2} &amp;=a_2\sqrt{x_2x_4x_{11}}\\x_7\sqrt{x_4} &amp;=a_3\sqrt{x_1x_4x_{11}}\\x_8x_4 &amp;=a_4x_2x_{11}\\x_9x_4 &amp;=a_5x_1\sqrt{x_3x_{11}}\\x_{10}x_4^2 &amp;=a_6x_4^2x_{11}\\x_{11} &amp;=x_1+x_2+x_3+x_4+x_5+x_6+x_7+x_8+x_9+x_{10}\end{aligned}\\\begin{gathered}a_1=0.193;~a_2=0.002597; ~a_3=0.003448;~a_4=0.00001799;\\a_5=0.0002155;~a_6=0.00003846;~r=4.056734\end{gathered}\end{gathered}\]</div><p class="pregunta"><span class="pregunta"></span>Complete la función estándar "f" (resultado: res), que recibe un vector "v" con los valores de las variables del sistema, asigna esos valores a variables locales (x1, x2, ..., x11) y devuelve un vector con los valores de las ecuaciones del sistema igualadas a cero. Luego encuentre las soluciones con fsolve, empleando como valores iniciales 1.1, 1.1, 1.1, 1.1, 1.1, 1.1, 1.1, 1.1, 1.1, 1.1, 11.1. Al programar las ecuaciones, para evitar valores imaginarios debido a las raíces cuadradas, debe elevar al cuadrado los dos lados de la ecuación, cuando existan raíces cuadradas. Luego ejecute el código en Octave, corrija los errores cometidos al completar el código y evalúe la celda. Copie los resultados en la subsiguiente (entre las tildes invertidas).</p><div id="pregunta40" class="calculadora" spellcheck="false"><div class="instruccion">`<br>format shortG;<br>function res=f(v)<br>    [x1, x2, x3, x4, x5, x6, x7, x8, x9, x10, x11] = num2cell(v){:};<br>    a1 = 0.193;<br>    a2 = 0.002597;<br>    a3 = 0.003448;<br>    a4 = 0.00001799;<br>    a5 = 0.0002155;<br>    a6 = 0.00003846;<br>    r = 4.056734;<br>    res = [<br>        x1 + x4 - 3,<br>        2*x1 + x2 + x4 + x7 + x8 + x9 + 2*x10 - 10 - r,<br>        x2 + 2*x5 + x6 + x7 - 8,<br>        2*x3 + x5 - 4*r,<br>        x1*x5 - a1*x2*x4,<br>        x6^2*x2 - a2^2*x2*x4*x11,<br>        x7^2*x4 - a3^2*x1*x4*x11,<br>        x8*x4 - a4*x2*x11,<br>        (x9*x4)^2 - (a5*x1)^2*x3*x11,<br>        x10*x4^2 - a6*x4^2*x11,<br>        x11 - x1 - x2 - x3 - x4 - x5 - x6 - x7 - x8 - x9 - x10<br>    ];<br>endfunction<br>fsolve(@f, [1.1, 1.1, 1.1, 1.1, 1.1, 1.1, 1.1, 1.1, 1.1, 1.1, 11.1])<br>`;</div><div class="resultado"></div><div class="instruccion">`<br>ans =<br>Columns 1 through 6:<br>2.9331       7.8973       8.0961     0.066915     0.034763   -0.0029706<br>Columns 7 through 11:<br>0.036111     0.038988      0.14171    0.0047513       19.247<br>`;</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="45" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 11 -->
+    <div class="ejercicio" id="ejercicio12" enunciado="0"><hr><div class="enunciado"><p class="ejercicio extern"><span class="ejercicio"></span>Para resolver, en Octave (formato shortG), el siguiente sistema de ecuaciones no lineales (calcular los valores de "x", "y" y "z"):</p>\[\begin{gathered}\begin{array}{r c l}xyz-x^{2.1}+z^{2.3} &amp;=&amp;2r+0.41\\[0.5mm]xz-y^2 &amp;=&amp;r-1.7\\[1mm]xy+yz &amp;=&amp;2.52r\end{array}\\[10mm]\text{f}(r) = r^{3.1}+2.1r^{1.3}-r-5.572=0\end{gathered}\]</div><p class="pregunta"><span class="pregunta"></span>Programe (función anónima) la ecuación no lineal "fr" (como se trabaja con arrays, se debe emplear el operador ".^" en lugar de "^"). Encuentre el segmento de solución dibujando la gráfica de la función entre 1 y 2 (vectores a dibujar: "vx" y "vy") y con el segmento de solución leído de la gráfica, resuelva la ecuación no lineal con fzero y guarde la solución, redondeada al primer dígito, en la variable global "r" (global r = ...). Luego, programe (función estándar) el sistema de ecuaciones no lineales "f(v)" (resultado: res; variables locales: "x", "y", "z"; variable "r": global r;) y encuentre las soluciones con fsolve (valores iniciales: 1, 2, 3, resultado redondeado al segundo dígito). Luego ejecute el código en Octave, corrija los errores cometidos al completar el código y evalúe la celda. Copie los resultados en la subsiguiente (entre las tildes invertidas).</p><div id="pregunta41" class="calculadora" spellcheck="false"><div class="instruccion">`format shortG;<br>fr = @(r) r.^3.1+2.1*r.^1.3-r-5.572;<br>vx = 1:0.01:2;<br>vy = fr(vx);<br>plot(vx, vy);<br>grid on;<br>global r =round(fzero(fr,[1.4,1.6])*1e1)/1e1<br>function res = f(v)<br>  x=v(1); y=v(2); z=v(3);<br>  global r;<br>  res = [<br>  x*y*z-x^2.1+z^2.3-2*r-0.41,<br>  x*z-y^2-r+1.7,<br>  x*y+y*z-2.52*r];<br>endfunction<br>round(fsolve(@f,[1,2,3])*1e2)/1e2<br>`;</div><div class="resultado"></div><div class="instruccion">`<br>ans =<br>1.22 1.41 1.47<br>`;</div><div class="resultado"></div></div><p class="pregunta" id="pregunta42"><span class="pregunta"></span>El valor de "x" calculado con el método es: <span class="campo_literal correcta" tabindex="0" contenteditable="true">1.22</span></p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="30" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 12 -->
+    <div class="ejercicio" id="ejercicio13" enunciado="0"><hr><div class="enunciado"><p class="ejercicio extern"><span class="ejercicio"></span>Para resolver, en Octave (formato shortG), el siguiente sistema de ecuaciones no lineales (encontrar los valores de "x", "y" y "z"):</p>\[\begin{gathered}\begin{array}{r c l}x^2+y^2 +z^2 &amp;=&amp;t_1\\[0.5mm]xy+yz+xz &amp;=&amp;t_0\\[1mm]xyz^2+xzy^2 &amp;=&amp;t_2\end{array}\\[10mm]\text{p}(t) = t^{3}-23.926t^2+186.35t-475.28=0\end{gathered}\]</div><p class="pregunta"><span class="pregunta"></span>Complete el código que resuelve la ecuación polinomial con roots, redondeando los resultados al tercer dígito e invirtiendo (flip) el orden de los resultados (variable global "t": global t = ...). Luego programe (función estándar) el sistema de ecuaciones no lineales "f(v)" (resultado: res; variables locales: "x", "y", "z"; variable global "t": global t;) y encuentre las soluciones con fsolve (valores iniciales: 1, 2, 3, resultado redondeado al tercer dígito). Luego ejecute el código en Octave, corrija los errores cometidos al completar el código y evalúe la celda. Copie los resultados en la subsiguiente (entre las tildes invertidas).</p><div id="pregunta43" class="calculadora" spellcheck="false"><div class="instruccion">`format shortG;<br>global t = flip(round(roots([1,-23.926,186.35,-475.28])*1e3)/1e3)<br>function res = f(v)<br>  x=v(1); y=v(2); z=v(3);<br>  global t;<br>  res = [x^2+y^2+z^2-t(2), x*y+y*z+x*z-t(1), x*y*z^2+x*z*y^2-t(3)];<br>endfunction <br>round(fsolve(@f,[1,2,3])*1e3)/1e3<br>`;</div><div class="resultado"></div><div class="instruccion">`<br>ans= <br>    1.398  1.492  1.61<br>`;</div><div class="resultado"></div></div><p class="pregunta" id="pregunta44"><span class="pregunta"></span>El valor de "x" calculado es: <span class="campo_literal correcta" tabindex="0" contenteditable="true">1.398</span></p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="27" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 13 -->
+    <div class="ejercicio" id="ejercicio14" enunciado="0"><hr><div class="enunciado"><p class="ejercicio extern"><span class="ejercicio"></span>Para resolver, en Octave (formato shortG), el siguiente sistema de ecuaciones no lineales (encontrar los valores de "x", "y" y "z"):</p>\[\begin{gathered}\begin{aligned}\left(x+y-z\right)^2 &amp;=r_0\\[2mm]\dfrac{x+y}{y+z}+\dfrac{x-z}{2z} &amp;=r_1\\[3.7mm]\left(y+z\right)^2-\left(x+y\right)^2 &amp;=r_2\end{aligned}\\[15mm]\begin{aligned}3r_0+2r_1-r_2 &amp;=12.064\\2r_0-3r_1+3r_2 &amp;=10.544\\5r_0+6r_1-7r_2 &amp;=13.152\end{aligned}\end{gathered}\]</div><p class="pregunta"><span class="pregunta"></span>Complete el código que resuelve el sistema de ecuaciones lineales con rref (resultado en forma de vector, variable global "r": global r = ...)). Luego programe (función estándar) el sistema de ecuaciones no lineales "f(v)" (resultado: res; variables locales: "x", "y", "z"; variable global "r": global r;) y encuentre las soluciones con fsolve (valores iniciales: 1.1, 1.2, 1.3, resultado redondeado al segundo dígito).<br>Una vez resuelto el problema en myCompiler, copie el código que resuelve el problema en la siguiente celda de código (entre las tildes invertidas) y los resultados obtenidos en la siguiente celda (igualmente entre las tildes invertidas)</p><div id="pregunta45" class="calculadora" spellcheck="false"><div class="instruccion">`format shortG;<br>global r = rref([3,2,-1,12.064; 2,-3,3,10.544; 5,6,-7,13.152])(:,4)'<br>function res = f(v)<br>  x=v(1); y=v(2); z=v(3);<br>  global r;<br>  res =[<br>  (x+y-z)^2-r(1),<br>  (x+y)/(y+z)+(x-z)/(2*z)-r(2),<br>  (y+z)^2-(x+y)^2-r(3)];<br>endfunction<br>round(fsolve(@f,[1.1,1.2,1.3])*1e2)/1e2<br>`;</div><div class="resultado"></div><div class="instruccion">`<br>ans = <br> 2.1 2.2 2.3<br>`;</div><div class="resultado"></div></div><p class="pregunta" id="pregunta46"><span class="pregunta"></span>El valor de "x" calculado es: <span class="campo_literal correcta" tabindex="0" contenteditable="true">2.1</span></p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="27" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 14 -->
+
+
+
+
+    <h2 class="text">Ecuaciones no lineales en Python</h2>
+
+    <p class="text">Para resolver un sistemas de ecuaciones no lineales en Python, se emplea, igualmente, la función <b class="style1">fsolve</b>, de la sublibrería <b class="style1">optimize</b>, de la librería <b class="style1">scipy</b>. Al igual que en JavaScript, Octave y MatLab, <b class="style1">fsolve</b>, recibe una función que, devuelve un vector, con los valores de cada una de las ecuaciones del sistema igualadas a cero.</p>
+
+    <p class="text">La función que se manda a <b class="style1">fsolve</b>, debe recibir un vector con un número de elementos, igual al número de ecuaciones del sistema. Cada uno de dichos elementos corresponde a cada una de la variables del sistema.</p>
+
+    <p class="text">Así, para resolver el siguiente sistema de ecuaciones lineales (ecuación 11):</p>
+
+    <table class="ecuacion" id="ec11d" style="counter-reset: ecuación 10">
+        <tbody><tr>
+            <td>
+                \[                \begin{alignedat}{2}                x^2+2y^2 &amp;=&amp; 22\\                -2x^2+xy-3y &amp;=&amp;-11                \end{alignedat}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Se escribe, en myCompiler:</p>
+
+    <div class="codigo python">from scipy.optimize import fsolve<br>import numpy as np<br>np.set_printoptions(suppress=True)<br><br>def f(v):<br>  [x, y] = v<br>  return [x**2+2*y**2-22, -2*x**2+x*y-3*y+11]<br><br><br>r = fsolve(f, [1.1, 1.2])<br>print(r.round(5))<br><br>% Resultados obtenidos:<br><br>[2. 3.]</div>
+
+    <p class="text">Que son los mismos resultados obtenidos con las otras aplicaciones (redondeados al quinto dígito después del punto). En este ejemplo se importa la librería <dfn class="style1">numpy</dfn> (como "np"), para suprimir la impresión de resultados en notación científica, con la función <strong class="style1">set_printoptions</strong>, mandando el parámetro <strong class="style1">suppress</strong> con un valor igual a <strong class="style1">True</strong>, porque, por defecto, los resultados que son arrays numpy, se muestran en notación científica.</p>
+    
+    <p class="text">Al igual que en Octave y Javascript, los valores del vector se asignan a variables locales, con los mismos nombres que en las ecuaciones, para poder escribir más fácilmente las ecuaciones y reducir así la probabilidad de cometer errores.</p>
+    
+
+
+    <div class="ejercicio" id="ejercicio15" enunciado="0"><hr><div class="enunciado"><p class="ejercicio extern"><span class="ejercicio"></span>Para resolver, en Python (suprimiendo la impresión en notación científica: np.set_printoptions(suppress=True)) el siguiente sistema de ecuaciones no lineales:</p>\[\begin{gathered}\begin{aligned}x_1+x_4 &amp;= 3\\2x_1+x_2+x_4+x_7+x_8+x_9+2x_{10} &amp;=10+r\\x_2+2x_5+x_6+x_7 &amp;=8\\2x_3+x_5 &amp;=4r\\x_1x_5 &amp;=a_1x_2x_4\\x_6\sqrt{x_2} &amp;=a_2\sqrt{x_2x_4x_{11}}\\x_7\sqrt{x_4} &amp;=a_3\sqrt{x_1x_4x_{11}}\\x_8x_4 &amp;=a_4x_2x_{11}\\x_9x_4 &amp;=a_5x_1\sqrt{x_3x_{11}}\\x_{10}x_4^2 &amp;=a_6x_4^2x_{11}\\x_{11} &amp;=x_1+x_2+x_3+x_4+x_5+x_6+x_7+x_8+x_9+x_{10}\end{aligned}\\\begin{gathered}a_1=0.193;~a_2=0.002597; ~a_3=0.003448;~a_4=0.00001799;\\a_5=0.0002155;~a_6=0.00003846;~r=4.056734\end{gathered}\end{gathered}\]</div><p class="pregunta"><span class="pregunta"></span>Complete la función estándar "f", que recibe un vector "v" con los valores de las variables del sistema, asigna esos valores a variables locales (x1, x2, ..., x11) y devuelve un vector con los valores de las ecuaciones del sistema igualadas a cero. Luego encuentre las soluciones con fsolve (librería scipy.optimize), empleando como valores iniciales: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 y redondeando los resultados al cuarto dígito después del punto. Al programar las ecuaciones, para evitar valores imaginarios debido a las raíces cuadradas, debe elevar al cuadrado los dos lados de la ecuación, cuando existan raíces cuadradas. Luego ejecute el código en Python, corrija los errores cometidos al completar el código y evalúe la celda. Copie los resultados en la subsiguiente (entre las tildes invertidas).</p><div id="pregunta47" class="calculadora" spellcheck="false"><div class="instruccion">`from scipy.optimize import fsolve<br>import numpy as np<br>np.set_printoptions(suppress=True)<br>def f(v):<br>  [x1, x2, x3, x4, x5, x6, x7, x8, x9, x10, x11] = v<br>  a1=0.193<br>  a2=0.002597<br>  a3=0.003448<br>  a4=0.00001799<br>  a5=0.0002155<br>  a6=0.00003846<br>  r=4.056734<br>  return [<br>  x1+x4-3,<br>  2*x1+x2+x4+x7+x8+x9+2*x10-10-r,<br>  x2+2*x5+x6+x7-8,<br>  2*x3+x5-4*r,<br>  x1*x5-a1*x2*x4,<br>  x6**2*x2-a2**2*x2*x4*x11,<br>  x7**2*x4-a3**2*x1*x4*x11,<br>  x8*x4-a4*x2*x11,<br>  (x9*x4)**2-(a5*x1)**2*x3*x11,<br>  x10*x4**2-a6*x4**2*x11,<br>  x11-x1-x2-x3-x4-x5-x6-x7-x8-x9-x10<br>]<br>r = fsolve(f, [1,2,3,4,5,6,7,8,9,10,11])<br>print(r.round(4))<br>`;</div><div class="resultado"></div><div class="instruccion">`<br><br>[ 2.9395  7.9654  8.0976  0.0605  0.0316 -0.0028 -0.0259  0.0456  0.1307<br>  0.0007 19.243 ]<br>`;</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="45" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 15 -->
+    <div class="ejercicio" id="ejercicio16" enunciado="0"><hr><div class="enunciado"><p class="ejercicio extern"><span class="ejercicio"></span>Para resolver, en Python (suprimiendo la impresión en notación científica: np.set_printoptions(suppress=True)), el siguiente sistema de ecuaciones no lineales (calcular los valores de "x", "y" y "z"):</p>\[\begin{gathered}\begin{array}{r c l}xyz-x^{2.1}+z^{2.3} &amp;=&amp;2r+0.41\\[0.5mm]xz-y^2 &amp;=&amp;r-1.7\\[1mm]xy+yz &amp;=&amp;2.52r\end{array}\\[10mm]\text{f}(r) = r^{3.1}+2.1r^{1.3}-r-5.572=0\end{gathered}\]</div><p class="pregunta"><span class="pregunta"></span>Complete la función lambda, que programa la ecuación no lineal "fr". Encuentre el segmento de solución dibujando la gráfica de la función (librería matplotlib.pyplot como "plt") entre 1 y 2 (vectores a dibujar: "vx" y "vy") y con el segmento de solución leído de la gráfica, resuelva la ecuación no lineal con bisect (librería scipy.optimize), guardando la solución, redondeada al primer dígito (.round), en la variable "r". Luego, programe (función estándar) el sistema de ecuaciones no lineales "f(v)" (variables locales: "x", "y", "z") y encuentre las soluciones con fsolve (librería scipy.optimize, valores iniciales: 1, 2, 3, resultado redondeado al segundo dígito: .round). Luego ejecute el código en Python, corrija los errores cometidos al completar el código y evalúe la celda. Copie los resultados en la subsiguiente (entre las tildes invertidas).</p><div id="pregunta48" class="calculadora" spellcheck="false"><div class="instruccion">`from scipy.optimize import fsolve<br>import numpy as np<br>np.set_printoptions(suppress=True)<br>import matplotlib.pyplot as plt<br>from scipy.optimize import *<br>fr = lambda r: r**3.1+2.1*r**1.3-r-5.572<br>vx = np.arange(1,2,0.1)<br>vy = fr(vx)<br>plt.plot(vx,vy)<br>plt.grid(True)<br>plt.show()<br>r = round(bisect(fr, 1.4, 1.6),1)<br>def f(v):<br>  [x, y, z] = v<br>  return [x*y*z-x**2.1+z**2.3-2*r-0.41, x*z-y**2-r+1.7, x*y+y*z-2.52*r ]<br>print(fsolve(f, [1, 2, 3]).round(2))<br>`;</div><div class="resultado"></div><div class="instruccion">`<br>[1.22 1.41 1.47]`;</div><div class="resultado"></div></div><p class="pregunta" id="pregunta49"><span class="pregunta"></span>El valor de "z" calculado con el método es: <span class="campo_literal correcta" tabindex="0" contenteditable="true">1.47</span></p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="30" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 16 -->
+    <div class="ejercicio" id="ejercicio17" enunciado="0"><hr><div class="enunciado"><p class="ejercicio extern"><span class="ejercicio"></span>Para resolver, en Python (suprimiendo la impresión en notación científica: np.set_printoptions(suppress=True)), el siguiente sistema de ecuaciones no lineales (encontrar los valores de "x", "y" y "z"):</p>\[\begin{gathered}\begin{array}{r c l}x^2+y^2 +z^2 &amp;=&amp;t_1\\[0.5mm]xy+yz+xz &amp;=&amp;t_0\\[1mm]xyz^2+xzy^2 &amp;=&amp;t_2\end{array}\\[10mm]\text{p}(t) = t^{3}-23.926t^2+186.35t-475.28=0\end{gathered}\]</div><p class="pregunta"><span class="pregunta"></span>Complete el código que resuelve la ecuación polinomial con roots (numpy), redondeando los resultados al tercer dígito (.round) e invirtiendo, con flip (numpy) el orden de los resultados. Luego, programe (función estándar) el sistema de ecuaciones no lineales "f(v)" (variables locales: "x", "y", "z") y encuentre las soluciones con fsolve (valores iniciales: 1, 2, 3, resultado redondeado al tercer dígito: .round). Luego ejecute el código en Python, corrija los errores cometidos al completar el código y evalúe la celda. Copie los resultados en la subsiguiente (entre las tildes invertidas).</p><div id="pregunta50" class="calculadora" spellcheck="false"><div class="instruccion">`from scipy.optimize import fsolve<br>import numpy as np<br>np.set_printoptions(suppress=True)<br>t = np.flip(np.roots([1,-23.926,186.35,-475.28]).round(3))<br>def f(v):<br>  [x, y, z] = v<br>  return [x**2+y**2+z**2-t[1], x*y+y*z+x*z-t[0], x*y*z**2+x*z*y**2-t[2] ]<br>print(fsolve(f, [1, 2, 3]).round(3))]<br>`;</div><div class="resultado"></div><div class="instruccion">`<br>[1.398 1.61  1.492]<br>`;</div><div class="resultado"></div></div><p class="pregunta" id="pregunta51"><span class="pregunta"></span>El valor de "z" calculado es: <span class="campo_literal correcta" tabindex="0" contenteditable="true">1.492</span></p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="27" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 17 -->
+    <div class="ejercicio" id="ejercicio18" enunciado="0"><hr><div class="enunciado"><p class="ejercicio extern"><span class="ejercicio"></span>Para resolver, en Python (suprimiendo la impresión en notación científica: np.set_printoptions(suppress=True)), el siguiente sistema de ecuaciones no lineales (encontrar los valores de "x", "y" y "z"):</p>\[\begin{gathered}\begin{aligned}\left(x+y-z\right)^2 &amp;=r_0\\[2mm]\dfrac{x+y}{y+z}+\dfrac{x-z}{2z} &amp;=r_1\\[3.7mm]\left(y+z\right)^2-\left(x+y\right)^2 &amp;=r_2\end{aligned}\\[15mm]\begin{aligned}3r_0+2r_1-r_2 &amp;=12.064\\2r_0-3r_1+3r_2 &amp;=10.544\\5r_0+6r_1-7r_2 &amp;=13.152\end{aligned}\end{gathered}\]</div><p class="pregunta"><span class="pregunta"></span>Complete el código que resuelve el sistema de ecuaciones lineales con solve (librería linalg de numpy, matriz de coeficientes A, vector de constantes b). Luego, programe (función estándar) el sistema de ecuaciones no lineales "f(v)" (variables locales: "x", "y", "z") y encuentre las soluciones con fsolve (valores iniciales: 1.1, 1.2, 1.3, resultado redondeado al segundo dígito: .round). Luego ejecute el código en Python, corrija los errores cometidos al completar el código y evalúe la celda. Copie los resultados en la subsiguiente (entre las tildes invertidas).</p><div id="pregunta52" class="calculadora" spellcheck="false"><div class="instruccion">`from scipy.optimize import fsolve<br>import numpy as np<br>np.set_printoptions(suppress=True)<br>A = [[3,2,-1],[2,-3,3],[5,6,-7]]<br>b = [12.064, 10.544, 13.152]<br>r = np.linalg.solve(A, b)<br>def f(v):<br>  [x, y, z] = v<br>  return [(x+y-z)**2-r[0], (x+y)/(y+z)+(x-z)/(2*z)-r[1], (y+z)**2-(x+y)**2-r[2]]<br>print(fsolve(f, [1.1, 1.2, 1.3]).round(2))<br>`;</div><div class="resultado"></div><div class="instruccion">`<br>[2.1 2.2 2.3]`;</div><div class="resultado"></div></div><p class="pregunta" id="pregunta53"><span class="pregunta"></span>El valor de "x" calculado es: <span class="campo_literal correcta" tabindex="0" contenteditable="true">2.1</span></p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="27" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 18 -->
+
+
+
+
+
+
+    <div id="generarPrueba" data-scroll-y="31252"><br><hr><label class="lnotacapitulo">Nota del capítulo: </label><input type="text" id="notaCapitulo" disabled="disabled" class="itnotacapitulo"><br><br><button id="btGenerarPrueba" style="visibility: visible;" onclick="capitulo.registrarCapitulo()">Iniciar defensa</button><button id="btEmplearBono" style="margin-left:1.1rem;width:9.686rem;display:none;" onclick="capitulo.emplearBono()">Emplear Bono</button><br><br></div>
+
+
+
+<d id="dAutor" style="font-size: 0.9rem;text-align:center;color: #0808f24f;font-weight:bolder;position:fixed;top: 5px;right: 5px;user-select:none;display:inline-block;z-index:15;">Hernan G. Peñaranda V.</d></div><!-- Cierre del div capítulo -->
+
+<div id="dato" style="display:none;">JK5KCZ0r938lCZ0oDYGrDoqpE3Km93WrDZ0aD3Gs93GqDYGnC30aC2GuI4StU000</div>
+<div id="reg" style="display:none;">CZ0nC3ioC34mEp8mCJ0xCZ0nC3inCJ0mEp4nC30xCZ0nC3ioC34mEpCmC34xCp0mCJinCJinCJinCJinCJinCJinCJinCJinCG00</div>
+
+
+
+
+<svg id="js-plotly-tester" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="position: absolute; left: -10000px; top: -10000px; width: 9000px; height: 9000px; z-index: 1;"><path class="js-reference-point" d="M0,0H1V1H0Z" style="stroke-width: 0; fill: black;"></path></svg><div id="divDialogo" style="display: none;"><div onfocus="document.querySelector('#divDialogo input').focus();"><div>Carnet universitario</div><div>Escriba el número de su carnet universitario, verificando que el guión haya sido correctamente insertado.</div><input type="text" onkeydown="return Capitulo.divDialogo.funKeydown(event)" onkeyup="Capitulo.divDialogo.funKeyup(event)"><div><button onclick="Capitulo.divDialogo.funClick('aceptar');">Aceptar</button><button style="margin-left:35px;" onclick="Capitulo.divDialogo.funClick('cancelar');">Cancelar</button></div></div></div></body>
