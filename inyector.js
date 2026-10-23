@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         Inyector Maestro V32.2 (GitHub Auto-Fetch + GoJS + Limpieza al Guardar)
+// @name         Inyector Maestro V32.3 (GitHub Auto-Fetch + GoJS + Omitir Iniciados)
 // @namespace    http://tampermonkey.net/
-// @version      32.2
-// @description  Descarga desde GitHub (mrc-dza/cap) o local. Se auto-elimina al presionar el botón Guardar.
+// @version      32.3
+// @description  Descarga desde GitHub (mrc-dza/cap) o local. Omite ejercicios ya iniciados y se limpia al Guardar.
 // @author       Marcos
 // @match        https://cursosabiertos.usfx.bo/materias/*/capitulos/*
 // @grant        none
@@ -30,7 +30,6 @@
     const ESPERA_MS = 300;
     const timers = new Map();
 
-    // Elimina absolutamente todo rastro del inyector en el DOM y desactiva sus listeners
     function limpiarRastro() {
         document.removeEventListener('click', alHacerClic, true);
         document.removeEventListener('click', interceptarGuardar, true);
@@ -39,7 +38,6 @@
         document.querySelectorAll('.tm-inyectado').forEach(el => el.remove());
     }
 
-    //Se ejecuta en fase de captura (antes que el onclick="savePage()" del botón)
     function interceptarGuardar(evento) {
         const btnGuardar = evento.target.closest && evento.target.closest('#btGuardar, button[onclick*="savePage"]');
         if (btnGuardar) {
@@ -48,7 +46,6 @@
     }
     document.addEventListener('click', interceptarGuardar, true);
 
-    // Respaldo adicional: envuelve window.savePage por si se invoca por código
     if (typeof window.savePage === 'function' && !window.savePage._envuelto) {
         const saveOriginal = window.savePage;
         const reemplazo = function () {
@@ -542,11 +539,26 @@
 
         const liveEjercicios = Array.from(document.querySelectorAll('div.ejercicio[id]'));
         let reemplazados = 0;
+        let omitidos = 0;
 
         for (let i = 0; i < liveEjercicios.length; i++) {
             const ejActual = liveEjercicios[i];
             const id = ejActual.id;
             if (!id) continue;
+
+            // -----------------------------------------------------------------
+            // RESTRICCIÓN AL INICIO: Si ya tiene btRepetir (o no tiene btGenerar), se salta
+            // -----------------------------------------------------------------
+            const btnGenInicial = ejActual.querySelector('.btGenerar');
+            const btnRepInicial = ejActual.querySelector('.btRepetir');
+            const tieneRepetirActivo = btnRepInicial && esVisible(btnRepInicial);
+            const tieneGenerarActivo = btnGenInicial && esVisible(btnGenInicial);
+
+            if (tieneRepetirActivo || !tieneGenerarActivo) {
+                console.log(`[${id}] Ejercicio ya iniciado (btRepetir presente). Se omite.`);
+                omitidos++;
+                continue;
+            }
 
             btnGitHub.innerHTML = `${iconoDescarga}Procesando ${i + 1}/${liveEjercicios.length}...`;
 
@@ -710,13 +722,20 @@
             }
         }
 
+        if (reemplazados === 0 && omitidos > 0) {
+            showToast(`No se inyectó nada: ${omitidos} ejercicios ya estaban iniciados.`, 'info');
+            resetearBtn();
+            return;
+        }
+
         if (reemplazados === 0) {
             showToast('No se pudo emparejar ningún ejercicio con el archivo.', 'warning');
             resetearBtn();
             return;
         }
 
-        showToast(`Flujo completado: ${reemplazados} ejercicios procesados.`, 'success');
+        const msgOmitidos = omitidos > 0 ? ` (${omitidos} omitidos por estar iniciados)` : '';
+        showToast(`Flujo completado: ${reemplazados} ejercicios procesados${msgOmitidos}.`, 'success');
         resetearBtn();
     }
 
