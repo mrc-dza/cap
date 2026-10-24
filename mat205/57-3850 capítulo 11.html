@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<head>
+
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Language" content="es">
+  
+  <title>57-3850 capítulo 11</title>
+
+  
+    <!-- Librería y hoja de estilos KATEX  -->
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/katex/katex.min.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/katex/katex.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/katex/contrib/auto-render.min.js"></script>
+
+    <!-- Librerías y hojas de estilo CodeMirror -->
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/lib/codemirror.min.css">
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/theme/mdn-like.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/lib/codemirror.min.js"></script>
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/fold/foldgutter.min.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/fold/foldcode.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/fold/brace-fold.min.js"></script>
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/dialog/dialog.min.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/dialog/dialog.min.js"></script>
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/hint/show-hint.min.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/hint/show-hint.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/hint/javascript-hint.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/search/searchcursor.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/search/search.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/edit/matchbrackets.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/edit/closebrackets.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/comment/comment.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/wrap/hardwrap.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/javascript/javascript.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/mathematica/mathematica.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/octave/octave.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/python/python.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/css/css.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/xml/xml.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/markdown/markdown.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/htmlmixed/htmlmixed.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/keymap/sublime.min.js"></script>
+    
+    <!-- Librería Plotly -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script><style id="plotly.js-style-global"></style><style id="plotly.js-style-global"></style>
+
+    <!-- Librerías y hojas de estilo function-plot -->
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/function-plot/site/js/vendor/d3.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/function-plot/dist/function-plot.js"></script>
+    
+    <!-- Librería quantities -->
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/quantities/quantities.min.js"></script>
+
+    <!-- Librería GoJs para la creación de diagramas de flujo -->
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/gojs/release/go.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/flowchart_gojs.js"></script>
+
+    <!-- Librerías matemáticas propias -->
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/math.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/number.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/array.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/string.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/cplx.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/function.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/object.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/prq.js"></script>
+
+    <!-- Librería y hoja de estilos propias para la creación y manejo de la calculadora  -->
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/src/cjs.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/cjs.js"></script>
+
+    <!-- Librería y hoja de estilos propias para la creación y manejo de los capítulos -->
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/src/texto.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/texto.js"></script>
+
+   <!-- Librería del capítulo actual -->
+    <script src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo11/files/capitulo11.js"></script>
+
+    <!-- Fuentes empleadas en el capítulo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;600;700;800&amp;family=Roboto+Mono&amp;display=swap" rel="stylesheet">
+
+    <script>
+        function katexRender() {
+            renderMathInElement(document.getElementById("capitulo"));
+        }
+        document.addEventListener("DOMContentLoaded", katexRender);
+        window.onerror = function(msg, url, lineNo, columnNo, error) {
+            __error__ = msg;
+        };
+        window.onload = function(){
+            capitulo.iniciar();
+        };
+    </script>
+
+<meta name="viewport" content="width=1280, user-scalable=1" data-width="646"><style type="text/css" id="__via_marker__"></style></head>
+
+<body class="text">  
+
+
+<div id="capitulo">
+
+    <button id="btGuardar" style="z-index:15;" onclick="savePage()">Guardar</button>
+
+
+
+    <h1 class="text" onclick="alerta(capitulo.idPagina,'')" style="cursor: pointer;">Integración y Diferenciación Numérica</h1>
+
+
+    <p class="text">La integración y diferenciación numérica se emplea cuando las funciones a integrar o diferenciar, se encuentran en forma tabular, gráfica o son muy complejas como para integrarlas o derivarlas analíticamente.</p>
+
+    <p class="text">Sin embargo, aún con funciones sencillas se recurre a la integración y diferenciación numérica, simplemente porque es más rápido y sencillo resolver una integral o calcular el valor de una derivada, con la ayuda de un dispositivo programable.</p>
+
+
+    <h2 class="text">Diferenciación Numérica</h2>
+
+    <p class="text">El cálculo numérico de las derivadas se basa en su concepto, es decir en la ecuación:</p>
+    
+    <table id="ec_1" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                \dfrac{dy}{dx} = \lim_{\Delta x \rightarrow 0} \dfrac{\Delta y}{\Delta x}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Numéricamente se consigue una aproximación al límite empleando valores suficientemente pequeños de “Δx”, de manera que “Δx” tienda a cero. En la aproximación más simple, se toman dos valores alrededor de “x” de manera que su diferencia se aproxime a cero (tienda a cero), con estos valores se calculan los correspondientes valores de “y” (reemplazando los valores de “x” en la función a diferenciar) y con los mismos se calcula el valor de la <a href="#ec_1">ecuación 1</a>.</p>
+
+    <p class="text">Así para calcular la derivada primera de una función “f”, en un punto cualquiera "x", se toman dos valores cercanos a "x": uno ubicado al lado izquierdo (x-h) y otro al derecho (x+h), siendo "h" una fracción pequeña de “x”. Reemplazando estas expresiones en la <a href="#ec_1">ecuación 1</a>, se obtiene:</p>
+    
+    <table id="ec_2" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                \dfrac{dy}{dx} \approx \dfrac{f(x+h)-f(x-h)}{(x+h)-(x-h)} = \dfrac{f(x+h)-f(x-h)}{2h}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Que es la fórmula empleada en el método de Newton-Raphson. Esta fórmula es conocida como fórmula de diferencia central, porque, como se ha explicado, los puntos se toman a ambos lados de “x” y por lo tanto, el valor para el cual se calcula la derivada, queda al centro de los mismos.</p>
+
+    <p class="text">Si en lugar de tomar dos valores a ambos lados de “x”, se toma sólo un valor ubicado a la izquierda: “x-h”, se obtiene:</p>
+    
+    <table id="ec_3" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                \dfrac{dy}{dx} \approx \dfrac{f(x)-f(x-h)}{x-(x-h)} = \dfrac{f(x)-f(x-h)}{h}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Que se conoce como fórmula de diferencia hacia atrás, porque el valor con el que se calcula la diferencia (Δx) se encuentra ubicado antes de “x” (x-h).</p>
+
+    <p class="text">Si, por el contrario, se toma sólo un valor ubicado a la derecha de “x”: “x+h”, se obtiene:</p>
+    
+    <table id="ec_4" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                \dfrac{dy}{dx} \approx \dfrac{f(x+h)-f(x)}{(x+h)-x} = \dfrac{f(x+h)-f(x)}{h}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Que se conoce como fórmula de diferencia hacia adelante, porque el valor con el que se calcula la diferencia (Δx) se encuentra ubicado después de “x” (x+h).</p>
+
+    <p class="text">Estas ecuaciones pueden ser deducidas tomando no sólo uno o dos puntos, sino cuatro o más, antes y/o después del valor de “x”. Mientras más puntos se tomen para el cálculo de Δx más preciso es el resultado obtenido, así, de las tres fórmulas deducidas, la más precisa es la de diferencia central (<a href="#ec_2">ecuación 2</a>), porque en su deducción se emplean dos puntos.</p>
+
+    <p class="text">La deducción de las fórmulas para las derivadas de segundo, tercer y cuarto orden siguen el mismo principio, pero en lugar de la función original se emplean las fórmulas deducidas para las derivadas de orden inferior. Así para obtener la derivada segunda se emplean las fórmulas de la derivada primera (pues como se sabe la derivada segunda se obtiene derivando a su vez la derivada primera), para la tercera las fórmulas de la derivada segunda y así sucesivamente.</p>
+
+    <p class="text">En función al número de puntos que se toman para el cálculo de "Δx" se tienen diferentes tipos de errores: de primer orden, si sólo se toma un punto; de segundo orden, si se toman dos puntos y de cuarto orden, si se toman 4 puntos.</p>
+
+    <p class="text">A continuación se presentan las fórmulas de diferenciación (central, hacia adelante y hacia atrás) para calcular las derivadas hasta de cuarto orden, con errores de hasta cuarto orden:</p>
+
+    <h4 class="text">Fórmulas de diferencia central. Error de orden h<sup>2</sup></h4>
+    
+    <table id="ec_5" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                \begin{aligned}                f'(x) &amp;= \dfrac{f(x+h)-f(x-h)}{2h}\\[5mm]                f''(x) &amp;= \dfrac{f(x+h)-2f(x)+f(x-h)}{h^2}\\[5mm]                f'''(x) &amp;= \dfrac{f(x+2h)-2f(x+h)+2f(x-h)-f(x-2h)}{2h^3}\\[5mm]                f''''(x) &amp;= \dfrac{f(x+2h)-4f(x+h)+6f(x)-4f(x-h)+f(x-2h)}{h^4}                \end{aligned}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <h4 class="text">Fórmulas de diferencia central. Error de orden h<sup>4</sup></h4>
+    
+    <table id="ec_6" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                \begin{aligned}                f'(x) &amp;= \dfrac{-f(x+2h)+8f(x+h)-8f(x-h)+f(x-2h)}{12h}\\[5mm]                f''(x) &amp;= \dfrac{-f(x+2h)+16f(x+h)-30f(x)+16f(x-h)-f(x-2h)}{12h^2}\\[5mm]                f'''(x) &amp;= \dfrac{-f(x+3h)+8f(x+2h)-13f(x+h)+13f(x-h)-8f(x-2h)+f(x-3h)}{8h^3}\\[5mm]                f''''(x) &amp;= \dfrac{-f(x+3h)+12f(x+2h)-39f(x+h)+56f(x)-39f(x-h)+12f(x-2h)-f(x-3h)}{6h^4}                \end{aligned}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <h4 class="text">Fórmulas de diferencia hacia adelante. Error de orden h</h4>
+    
+    <table id="ec_7" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                \begin{aligned}                f'(x) &amp;= \dfrac{f(x+h)-f(x)}{h}\\[5mm]                f''(x) &amp;= \dfrac{f(x+2h)-2f(x+h)+f(x)}{h^2}\\[5mm]                f'''(x) &amp;= \dfrac{f(x+3h)-3f(x+2h)+3f(x+h)-f(x)}{h^3}\\[5mm]                f''''(x) &amp;= \dfrac{f(x+4h)-4f(x+3h)+6f(x+2h)-4f(x+h)+f(x)}{h^4}                \end{aligned}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <h4 class="text">Fórmulas de diferencia hacia adelante. Error de orden h<sup>2</sup></h4>
+    
+    <table id="ec_8" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                \begin{aligned}                f'(x) &amp;= \dfrac{-f(x+2h)+4f(x+h)-3f(x)}{2h}\\[5mm]                f''(x) &amp;= \dfrac{-f(x+3h)+4f(x+2h)-5f(x+h)+2f(x)}{h^2}\\[5mm]                f'''(x) &amp;= \dfrac{-3f(x+4h)+14f(x+3h)-24f(x+2h)+18f(x+h)-5f(x)}{2h^3}\\[5mm]                f''''(x) &amp;= \dfrac{-2f(x+5h)+11f(x+4h)-24f(x+3h)+26f(x+2h)-14f(x+h)-3f(x)}{h^4}                \end{aligned}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <h4 class="text">Fórmulas de diferencia hacia atrás. Error de orden h</h4>
+    
+    <table id="ec_9" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                \begin{aligned}                f'(x) &amp;= \dfrac{f(x)-f(x-h)}{h}\\[5mm]                f''(x) &amp;= \dfrac{f(x)-2f(x-h)+f(x-2h)}{h^2}\\[5mm]                f'''(x) &amp;= \dfrac{f(x)-3f(x-h)+3f(x-2h)-f(x-3h)}{h^3}\\[5mm]                f''''(x) &amp;= \dfrac{f(x)-4f(x-h)+6f(x-2h)-4f(x-3h)+f(x-4h)}{h^4}                \end{aligned}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <h4 class="text">Fórmulas de diferencia hacia atrás. Error de orden h<sup>2</sup></h4>
+    
+    <table id="ec_10" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                \begin{aligned}                f'(x) &amp;= \dfrac{3f(x)-4f(x-h)+f(x-2h)}{2h}\\[5mm]                f''(x) &amp;= \dfrac{2f(x)-5f(x-h)+4f(x-2h)-f(x-3h)}{h^2}\\[5mm]                f'''(x) &amp;= \dfrac{5f(x)-18f(x-h)+24f(x-2h)-14(fx-3h)+3f(x-4h)}{2h^3}\\[5mm]                f''''(x) &amp;= \dfrac{3f(x)-14f(x-h)+26f(x-2h)-24f(x-3h)+11f(x-4h)-2f(x-5h)}{h^4}                \end{aligned}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Como se dijo, cuanto mayor es el orden de la fórmula más exacto es el resultado obtenido, no obstante, las fórmulas de mayor orden implican también un mayor número de operaciones, lo que se traduce en mayores errores de redondeo. Por esta razón (a menos que se trabaje con números de alta precisión) se recomienda trabajar con fórmulas de primer o segundo orden.</p>
+
+    <p class="text">Igualmente, en teoría, cuanto más pequeño sea el valor de “h” más exacto será el resultado (porque más se acerca Δx al límite 0), una vez más esto no es cierto en la práctica debido a los errores de redondeo (para valores muy pequeños de “h” el error de redondeo puede ser muy grande). Por ello el valor de “h” suele estar comprendido entre 10<sup>-2</sup> y 10<sup>-6</sup> del valor de "x", siendo más grande cuanto mayor es el orden de la derivada.</p>
+
+    <p class="text">Una vez que se cuenta con las fórmulas de diferenciación numérica, simplemente se las programa. Así se han añadido los siguientes métodos, al objeto <dfn class="style1">Function</dfn>, para calcular las derivadas primera a cuarta:</p>
+
+    <div class="codigo">// Devuelve la derivada primera de la función para el valor dado de "x"<br> Function.prototype.df1 = function(x, {h=1e-6}={}) {<br>    h *= x;<br>    return (this(x+h)-this(x-h))/(2*h);<br>};<br><br>// Devuelve la derivada segunda de la función para el valor dado de "x"<br>Function.prototype.df2 = function(x, {h=1e-5}={}) {<br>    h *= x;<br>    return (this(x+h)-2*this(x)+this(x-h))/(h*h);<br>};<br><br>// Devuelve la derivada tercera de la función para el valor dado de "x"<br>Function.prototype.df3 = function(x, {h=1e-4}={}) {<br>    h *= x;<br>    return (this(x+2*h)-2*this(x+h)+2*this(x-h)-this(x-2*h))/(2*h*h*h);<br>};<br><br>// Devuelve la derivada cuarta de la función para el valor dado de "x"<br>Function.prototype.df4 = function(x, {h=1e-3}={}) {<br>    h *= x;<br>    return (this(x+2*h)-4*this(x+h)+6*this(x)-4*this(x-h)+this(x-2*h))/(h*h*h*h);<br>};<br></div>
+
+    <p class="text">Donde los valores de “h” por defecto se han elegido por prueba y error, pero no constituyen una regla y en consecuencia pueden ser modificados en caso de comprobar que otros valores resultan más adecuados para un problema en particular.</p>
+
+    <p class="text">Al haber sido implementados como métodos de los objetos <dfn class="style1">Function</dfn>, deben ser llamados directamente desde la función a derivar, mandando el valor de "x" para el cual se quiere calcular la derivada.</p>
+
+    <p class="text">Por ejemplo para calcular las derivadas primera a tercera de la siguiente función, para “x=7.2”, redondeando los resultados al tercer dígito después del punto:</p>
+    
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                f(x) = x^3+2x^2+3x+4 = 0                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Se escriben las siguientes instrucciones:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">f = x =&gt; x**3+2*x**2+3*x+4;</div>
+        <div class="resultado"></div>
+        <div class="instruccion">f.df1(7.2).round(3)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">f.df2(7.2).round(3)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">f.df3(7.2).round(3)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Como esta función es fácil de derivar analíticamente, se pueden comparar estos resultados con los obtenidos a partir de la derivada analítica.</p>
+
+
+    <h3 class="text">Ejemplos</h3>
+
+    <p class="ejemplo"><span class="ejemplo"></span>Para encontrar el valor de "y", con las ecuaciones del pie de la pregunta, haga lo siguiente: <b class="style1">a)</b> Programe (en un párrafo de instrucción) con el nombre "fx" la función de x; calcule y guarde en "d3" la derivada tercera de "fx" para x = 7.2, redondeando el resultado al tercer dígito después del punto; programe con el nombre "fy" la función de "y"; <b class="style1">b)</b> Encuentre la solución aproximada, dibujando la gráfica de la función "fy", cuantas veces sea necesario hasta que la solución se vea claramente (se sabe que la solución es mayor a 0); <b class="style1">c)</b> Con la solución aproximada, leída de la gráfica, encuentre la solución (el valor de "y") con el método de Newton-Raphson, con el error por defecto pero redondeando el resultado al segundo dígito después del punto.</p>
+    
+    <table class="ecuacionsn" style="margin-left:1cm;">
+        <tbody><tr>
+            <td>
+                \[                \begin{aligned}                f_y(y) = y^{1.5}+3y-f_x^{\prime\prime\prime}(7.2) = 0\\[2mm]                f_x(x) = x^3+2*x^2+3*x+4                \end{aligned}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="ejemplosn">Entonces, primero se programa la función de "x" (fx), luego con esa función se calcula la derivada tercera par x=7.2 (d3), finalmente se programa la función de "y" (fy):</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">fx = x =&gt; x**3+2*x**2+3*x+4;<br>var d3 = fx.df3(7.2).round(3);<br>fy = y =&gt; y**1.5+3*y-d3;</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="ejemplosn">Entonces se dibuja la gráfica la función, repitiendo el proceso hasta que la solución se visualice claramente:</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">plot({f:[fy], xi:0, xf:5})</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="ejemplosn">Finalmente, con la solución leída de la gráfica, se calcula una solución más precisa con el método de Newton:</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">fy.newton(1.398).round(2)</div>
+        <div class="resultado"></div>
+    </div>
+
+
+
+    <p class="ejemplo"><span class="ejemplo"></span>Para resolver el sistema de ecuaciones lineales, que se presenta al pie de la pregunta (en un párrafo de instrucción) haga lo siguiente: Programe la función de "x" con el nombre "f"; calcule y guarde en "d1", "d2", "d3" y "d4", las derivadas primera, segunda, tercera y cuarta de "f" para x = 0.5, redondeados a enteros; Encuentre las soluciones del sistema de ecuaciones lineales con el método de la matriz inversa redondeando los resultados al tercer dígito después del punto.</p>
+    
+    <table class="ecuacionsn" style="margin-left:1cm;">
+        <tbody><tr>
+            <td>
+                \[                \begin{gathered}                \begin{alignedat}{5}                2y_1&amp;+&amp;4y_2&amp;+&amp;y_3&amp;+&amp;2y_4&amp;=&amp;f'(0.5)\\[1mm]                4y_1&amp;+&amp;6y_2&amp;+&amp;5y_3&amp;+&amp;6y_4&amp;=&amp;f''(0.5)\\[1mm]                7y_1&amp;+&amp;2y_2&amp;+&amp;10y_3&amp;+&amp;30y_4&amp;=&amp;f'''(0.5)\\[1mm]                29y_1&amp;+&amp;32y_2&amp;+&amp;40y_3&amp;+&amp;50y_4&amp;=&amp;f''''(0.5)\\                \end{alignedat}\\[14mm]                f(x) = x^6+2x^5+3x^4+4x^3+5x^2+7=0                \end{gathered}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="ejemplosn">Siguiendo el enunciado, se programa la función "f", se calculan las derivadas (d1, d2, d3, d4) y se resuelve el sistema de ecuaciones lineales:</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">f = x =&gt; x**6+2*x**5+3*x**4+4*x**3+5*x**2+7;<br>var d1 = f.df1(0.5).round();<br>var d2 = f.df2(0.5).round();<br>var d3 = f.df3(0.5).round();<br>var d4 = f.df4(0.5).round();<br>[[2,4,1,2],[4,6,5,6],[7,2,10,30],[29,32,40,50]].inv().<br>mul([d1,d2,d3,d4]).round(3)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="ejemplosn">Con lo que se obtienen los resultados buscados (y<sub>1</sub> = -7.131, y<sub>2</sub> = 3.078, y<sub>3</sub> = 6.102, y<sub>4</sub> = 2.925).</p>
+
+
+    <div class="ejercicio" id="ejercicio1" enunciado="2"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Complete el siguiente código que programa la siguiente función ("fy", función flecha) y calcule sus derivadas primera, segunda, tercera y cuarta (d1, d2, d3, d4) para y = 0.3, redondeando los resultados al segundo dígito después del punto.\[f(y)=\dfrac{sin(y)+2cos(y)}{2y+4}\]</p><div id="pregunta5" class="calculadora" spellcheck="false"><div class="instruccion">var fy = y =&gt; (Math.sin(y)+2*Math.cos(y))/(2*y+4);<br>var d1 = fy.df1(0.3).round(2);<br>var d2 = fy.df2(0.3).round(2);<br>var d3 = fy.df3(0.3).round(2);<br>var d4 = fy.df4(0.3).round(2);</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con las derivadas calculadas en el inciso anterior, resuelva la siguiente ecuación polinomial con "roots", redondeando los resultados al tercer dígito después del punto.\[x^4+f^{\prime}(0.3)x^3+f^{\prime\prime}(0.3)x^2+f^{\prime\prime\prime}(0.3)x+f^{\prime\prime\prime\prime}(0.3)=0\]</p><div id="pregunta6" class="calculadora" spellcheck="false"><div class="instruccion">[1,d1,d2,d3,d4].roots().round(3)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="7" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 1 -->
+    
+    <div class="ejercicio" id="ejercicio2" enunciado="2"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Complete el siguiente código que programa la siguiente función ("fw", función flecha) y calcule sus derivadas primera, segunda y tercera (d1, d2, d3) para w = 1.2, redondeando los resultados al segundo dígito después del punto.\[f(w)=\sqrt{\dfrac{3w^{2.1}+5w-3}{w^{1.7}+3w+1}}\]</p><div id="pregunta11" class="calculadora" spellcheck="false"><div class="instruccion">var fw = w =&gt; Math.sqrt((3*w**2.1+5*w-3)/(w**1.7+3*w+1));<br>var d1 = fw.df1(1.2).round(2);<br>var d2 = fw.df2(1.2).round(2);<br>var d3 = fw.df3(1.2).round(2);</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con las derivadas calculadas en el inciso anterior, Complete el código que encuentra las soluciones de siguiente sistema de ecuaciones no lineales ("fe", función flecha) con newtonnl (valores iniciales: 0.6, 0.4, 0.2; precisión/exactitud: 8 dígitos; redondeo: segundo dígito).\[\begin{aligned}1.15\ln(x)+(5y)^2+z &amp;=f^{\prime}(1.2)\\[2mm]x^{1.2}-0.074\text{e}^y-\cos(z) &amp;=f^{\prime\prime}(1.2)\\[2mm]4x^2+3.25y^2+5z^2&amp;=f^{\prime\prime\prime}(1.2)\end{aligned}\]</p><div id="pregunta12" class="calculadora" spellcheck="false"><div class="instruccion">var fe = ([x,y,z]) =&gt; [<br>  1.15*Math.log(x)+(5*y)**2+z-d1,<br>  x**1.2-0.074*Math.exp(y)-Math.cos(z)-d2,<br>  4*x**2+3.25*y**2+5*z**2-d3<br>];<br>fe.newtonnl({vi:[0.6,0.4,0.2],err:8 }).v.round(2)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="18" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 2 -->
+    
+    <div class="ejercicio" id="ejercicio3" enunciado="2"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Complete el siguiente código que programa la siguiente función ("fx", función flecha) y calcule sus derivadas primeras (d1, d2, d3) para x = 0.256, 1.09 y 0.64, redondeando los resultados al primer dígito después del punto.\[f(x)=\ln\left(\dfrac{5x+8x^2-9x^{1.2}}{4x+7}\right)\]</p><div id="pregunta17" class="calculadora" spellcheck="false"><div class="instruccion">var fx = x =&gt; Math.log((5*x+8*x**2-9*x**1.2)/(4*x+7));<br>var d1 = fx.df1(0.256).round(1);<br>var d2 = fx.df1(1.09).round(1);<br>var d3 = fx.df1(0.64).round(1);</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con las derivadas calculadas en el inciso anterior, Complete el código que encuentra las soluciones de siguiente sistema de ecuaciones no lineales ("fe", función flecha) con newtonnl (valores iniciales: 1.1, 1.3, 1.2; precisión/exactitud: 7 dígitos; redondeo: primer dígito).\[\begin{aligned}x^2+y^2+z^2&amp;=\phantom{-}f^{\prime}(0.256)\\[2mm]xyz&amp;=\phantom{-}f^{\prime}(1.09)\\[2mm]x+y-z^2&amp;=-f^{\prime}(0.64)\end{aligned}\]</p><div id="pregunta18" class="calculadora" spellcheck="false"><div class="instruccion">var fe = ([x,y,z]) =&gt; [<br>  x**2+y**2+z**2-d1,<br>  x*y*z-d2,<br>  x+y-z**2+d3<br>];<br>fe.newtonnl({vi:[1.1,1.3,1.2],err:7 }).v.round(1)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="18" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 3 -->
+
+
+
+
+    <h2 class="text">Integración Numérica</h2>
+
+    <p class="text">Como se recordará, la integral de una función entre dos límites dados, es el área que existe bajo la curva entre dichos límites, es decir:</p>
+
+    <p class="figurasn"><img src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo11/files/integral.png" alt="Integral: área bajo la curva"></p>
+
+    <p class="text">Los métodos numéricos encuentran la integral calculando esta área, es decir:</p>
+    
+    <table id="ec_11" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                \int_a^b f(x)dx = \text{área bajo la curva}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Con ese fin, la mayoría de los métodos divide el área bajo la curva en una serie de segmentos:</p>
+
+    <p class="figurasn"><img src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo11/files/integral_segmentos.png" alt="Integral = segmentos bajo la curva"></p>
+
+    <p class="text">Entonces la integral (el área bajo la curva) se calcula sumando las áreas de cada uno de estos segmentos:</p>
+    
+    <table id="ec_12" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                \int_a^b f(x)dx = \sum_{i=1}^n a_i                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">En general, los métodos difieren unos de otros por la forma en que se calculan estos segmentos.</p>
+
+
+
+    <h3 class="text">Método del Trapecio</h3>
+
+
+    <p class="text">En el método del trapecio se asume que los segmentos tienen la forma de un trapecio, o lo que es lo mismo, se asume que los segmentos están unidos entre si por líneas rectas.</p>
+
+    <p class="text">Como se puede observar en la siguiente figura, esta simplificación, da lugar a un error en el cálculo, error que es más grande cuanto mayor es el ancho del segmento (y menos uniforme la curva).</p>
+
+    <p class="figurasn"><img src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo11/files/segmentos_trapecio.png" alt="Trapecio error en los segmentos"></p>
+
+    <p class="text">Por esta razón, este método es uno de los menos precisos.</p>
+
+    <p class="text">Como se infiere del nombre del método, el área de cualquier segmento “i”, se calcula con la ecuación del trapecio:</p>
+    
+    <table id="ec_13" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                a_i = \dfrac{(x_{i+1}-x_i)(y_{i+1}+y_i)}{2}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Si se denomina h<sub>i</sub> al ancho del segmento:</p>
+    
+    <table id="ec_14" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                h_i = x_{i+1}-x_i                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">La <a href="#ec_13">ecuación 13</a> queda en la forma:</p>
+    
+    <table id="ec_15" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                a_i=\dfrac{h_i}{2}(y_i+y_{i+1})                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Ahora, si todos los segmentos tienen el mismo ancho, es decir si h = h<sub>1</sub> = h<sub>2</sub> = … = h<sub>n</sub>, entonces la integral, la sumatoria de los segmentos, se calcula con:</p>
+    
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                \begin{aligned}                \int_a^b f(x)dx &amp;= \sum_{i=1}^n \left(\dfrac{h}{2}(y_1+y_2)+\dfrac{h}{2}(y_2+y_3)+\cdots +\dfrac{h}{2}(y_n+y_{n+1})\right)\\[5mm]                \int_a^b f(x)dx &amp;= \dfrac{h}{2}\sum_{i=1}^n \left(y_1+2y_2+2y_3+\cdots+2y_n+y_{n+1}\right)                \end{aligned}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">De donde resulta:</p>
+    
+    <table id="ec_16" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                \int_a^b f(x)dx = \dfrac{h}{2}\left( y_1+2\sum_{i=2}^{n} y_i+y_{n+1}\right)                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Que es la ecuación conocida como la fórmula del Trapecio.</p>
+
+
+    <h4 class="text">Algoritmo</h4>
+
+
+    <p class="text">Para automatizar el proceso, básicamente se programa la <a href="#ec_16">ecuación 16</a>, siendo el algoritmo respectivo el siguiente:</p>
+
+    <p class="figurasn"><img src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo11/files/trapecio.png" alt="Algoritmo método del trapecio."></p>
+
+    <p class="text">El código ha sido añadido como un método de la clase <dfn class="style1">Function</dfn>, por lo que debe ser llamado desde la función a integrar, mandando los límites y opcionalmente, el número de divisiones. Por ejemplo, para calcular la siguiente integral, redondeando los resultados la sexto dígito después del punto:</p>
+    
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                \int_{1.2}^{4.5} (x^3+2x^2+3x+4)dx                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Primero se programa la función:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var f = x =&gt; x**3+2*x**2+3*x+4;</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Luego se llama al método del trapecio mandando los límites:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">f.trapecio({a:1.2, b:4.5}).round(6)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">El resultado exacto, obtenido integrando analíticamente la función, es:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var fi = x  =&gt; x**4/4+2*x**3/3+3*x**2/2+4*x;</div>
+        <div class="resultado"></div>
+        <div class="instruccion">fi(4.5)-fi(1.2)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Entonces el resultado del método es preciso en los primeros 5 dígitos. Se puede mejora la precisión incrementando el número de segmentos, por ejemplo, con 500 segmentos se obtiene</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">f.trapecio({a:1.2, b:4.5, n:500}).round(6)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Que ahora es preciso en los primeros 6 dígitos. Para lograr un resultado aún más preciso, este método requiere un elevado número de segmentos, así, en este caso, sólo se consigue el resultado preciso con 12000 segmentos:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">f.trapecio({a:1.2, b:4.5, n:12000}).round(6)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">En ocasiones no se logra el resultado preciso inclusive con un elevado número de segmentos, porque a partir de cierto límite, los errores de redondeo incrementan tanto, que en lugar de mejorar, la precisión empeora.</p>
+
+
+    <h4 class="text">Ejemplo</h4>
+
+    <p class="ejemplo"><span class="ejemplo"></span>Para encontrar el valor de "y", con las ecuaciones que se presentan al pie de la pregunta (en un párrafo de instrucción) haga lo siguiente: Programe la función a integrar con el nombre "fx"; calcule y guarde en "r" la integral, empleando 400 segmentos y redondeando el resultado al quinto dígito después del punto; programe la ecuación no lineal con el nombre "fy"; encuentre el segmento de solución ("y1", "y2"), redondeados al tercer dígito, con el método incremental: segmentoSol (incremento por defecto, valor inicial 1); finalmente, con el segmento de solución, resuelva la ecuación no lineal con el método de Regula Falsi (precisión/exactitud por defecto) redondeando la solución buscada al quinto dígito después del punto.</p>
+    
+    <table class="ecuacionsn" style="margin-left:1cm;">
+        <tbody><tr>
+            <td>
+                \[                \begin{gathered}                f(y) = 3y^{1.2}+5\ln(y)+5r = 17.8\\[5mm]                r = \int_{1.2}^{1.7}\dfrac{3\sin(x)+\cos(x)}{2\tan(x)}dx                \end{gathered}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="ejemplosn">Siguiendo las instrucciones del enunciado, se programa la función a integrar (fx), se calcula el valor de la integral (r), se program la función de "y" (fy), se encuentra el segmento de solución (y1, y2) y se encuentra el valor buscado con el método de Regula Falsi:</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">var fx = x =&gt; (3*Math.sin(x)+Math.cos(x))/(2*Math.tan(x));<br>var r = fx.trapecio({a:1.2, b:1.7, n:400}).round(5);<br>var fy = y =&gt; 3*y**1.2+5*Math.log(y)+5*r-17.8;<br>var [y1, y2] = fy.segmentoSol({xi:1}).round(3);<br>fy.refa({xi:y1, xf:y2}).round(5)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="ejemplosn">Con lo que se obtiene la solución buscada (y = 3.09826).</p>
+
+
+    <div class="ejercicio" id="ejercicio4" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Complete el código que encuentra el valor de la siguiente integral ("f", función flecha):\[\int_{1.1}^{3.2}\left(x^6+2x^5+3x^4+4x^3+5x^2+6x+7\right)dx\]Con el método del Trapecio (segmentos: 1000, redondeo: quinto dígito).</p><div id="pregunta19" class="calculadora" spellcheck="false"><div class="instruccion">var f = x =&gt;x**6+2*x**5+3*x**4+4*x**3+5*x**2+6*x+7 ;<br>f.trapecio({a:1.1, b:3.2,n:1000 }).round(5)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="5" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 4 -->
+
+    <div class="ejercicio" id="ejercicio5" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Complete el código que encuentra el valor de la siguiente integral ("f", función flecha):\[\Large\int_{\scriptsize2.3}^{\scriptsize7.2}\normalsize\sqrt{\dfrac{x^{2.3}+4x^{1.3}-3}{x^{1.6}+3x^{1.2}+1}}dx\]Con el método del Trapecio (segmentos: 1000, redondeo: quinto dígito).</p><div id="pregunta22" class="calculadora" spellcheck="false"><div class="instruccion"> var f = x =&gt;Math.sqrt((x**2.3+4*x**1.3-3)/(x**1.6+3*x**1.2+1)) ;<br>f.trapecio({a:2.3, b:7.2,n:1000 }).round(5)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="5" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 5 -->
+
+    <div class="ejercicio" id="ejercicio6" enunciado="1"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Complete el código que encuentra el valor de la siguiente integral ("f", función flecha):\[\large\int_{\scriptsize0.7}^{\scriptsize1.5}\normalsize\left(\dfrac{x+4x^{2.2}-8x^{1.4}}{5x^{1.4}+7x}\right)dx\]Con el método del Trapecio (segmentos: 1500, redondeo: cuarto dígito).</p><div id="pregunta26" class="calculadora" spellcheck="false"><div class="instruccion">var f = x =&gt; (x+4*x**2.2-8*x**1.4)/(5*x**1.4+7*x);<br>f.trapecio({a:0.7, b:1.5,n:1500 }).round(4)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="5" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 6 -->
+
+    <div class="ejercicio" id="ejercicio7" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Complete el código que encuentra las soluciones de la siguiente ecuación polinomial con roots (vectore "r", redondeo: sexto dígito):\[p_6(r) = r^6-27r^5+295r^4-1665r^3+5104r^2-8028r+5040 = 0\]</p><div id="pregunta28" class="calculadora" spellcheck="false"><div class="instruccion">var r = [1,-27,295,-1665,5104,-8028,5040].roots().round(6);</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con las soluciones de la ecuación polinomial, calculadas en el inciso anterior, encuentre el valor de la siguiente integral ("f", función flecha) con el método del trapecio (segmentos: 1000, redondeo: segundo dígito).\[\large\int_{\scriptsize1.1}^{\scriptsize3.2}\normalsize\left(x^6+r_5x^5+r_4x^4+r_3x^3+r_2x^2+r_1x+r_0\right)dx\]</p><div id="pregunta29" class="calculadora" spellcheck="false"><div class="instruccion">var f = x =&gt; x**6+r[5]*x**5+r[4]*x**4+r[3]*x**3+r[2]*x**2+r[1]*x+r[0];<br>f.trapecio({a:1.1, b:3.2, n:1000}).round(2)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="9" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 7 -->
+
+    <div class="ejercicio" id="ejercicio8" enunciado="1"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Complete el código que calcula el valor de "r", resolviendo la siguiente integral ("fy", función flecha):\[r = \large\int_{\scriptsize0.2}^{\scriptsize1.9}\normalsize\left(\dfrac{\sin(2y)+2\cos(y)}{4y+5}\right)dy\]Con el método del Trapecio (segmentos: 500, redondeo: cuarto dígito).</p><div id="pregunta37" class="calculadora" spellcheck="false"><div class="instruccion">var fy = y =&gt;(Math.sin(2*y)+2*Math.cos(y))/(4*y+5) ;<br>var r = fy.trapecio({a:0.2, b:1.9,n:500 }).round(4);</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con el valor de "r" calculado en el inciso anterior, programe la siguiente ecuación no lineal ("fx", función flecha) y dibuje la función entre 0 y 3.\[f(x) = \text{e}\raisebox{0.8em}{$\normalsize\frac{4x+3}{2}$}+3x^{2.1}-r^{-5}=0\]</p><div id="pregunta38" class="calculadora" spellcheck="false"><div class="instruccion">var fx = x =&gt;Math.exp((4*x+3)/2)+3*x**2.1-r**-5 ;</div><div class="resultado"></div><div class="instruccion">plot({f:fx, xi:0, xf:3})</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con el segmento de solución leído de la gráfica, encuentre la solución numérica de la ecuación no lineal, con el método de la bisección (redondeo: segundo dígito).</p><div id="pregunta39" class="calculadora" spellcheck="false"><div class="instruccion">fx.biseccion({xi:2, xf:2.5}).round(2)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="14" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 8 -->
+    
+
+
+
+
+    <h3 class="text">Método de Simpson</h3>
+
+    <p class="text">En el método de Simpson, a diferencia del método del Trapecio, se asume que los segmentos están unidos por una ecuación cuadrática:</p>
+
+    <p class="figurasn"><img src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo11/files/segmentos_simpson.png" alt="Segmentos en el método de Simpson"></p>
+
+    <p class="text">Como se trata de una ecuación cuadrática se requieren 3 puntos (2 segmentos) para resolverla (hallar los valores de los coeficientes). Por tanto, <dfn class="style1">en el método de Simpson se requiere siempre un número par de segmentos</dfn>.</p>
+    
+    <table id="ec_17" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                Area_{\text{dos segmentos}} = \int_{x_1}^{x_3}(ax^2+bx+c)dx = \dfrac{a}{3}\left(x_3^3-x_1^3\right)+\dfrac{b}{2}\left(x_3^2-x_1^2\right)+c\left(x_3-x_1\right)                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Los coeficientes pueden ser calculados tomando dos segmentos cualesquiera. Si los puntos del segmento son “i”, “j” y “k”, el sistema de ecuaciones que se forma es:</p>
+    
+    <table id="ec_18" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                \begin{aligned}                y_i &amp;= a+bx_i+cx_i^2\\[2mm]                y_j &amp;= a+bx_j+cx_j^2\\[2mm]                y_k &amp;= a+bx_k+cx_k^2                \end{aligned}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Si el ancho de los segmentos es constante e igual a “h”, la solución del sistema de ecuaciones puede ser expresada en la siguiente forma:</p>
+    
+    <table id="ec_19" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                \begin{aligned}                a &amp;= \dfrac{y_i-y_j+y_k}{2h^2}\\[2mm]                b &amp;= \dfrac{y_k-y_i}{2h}\\[2mm]                c &amp;= y_j                \end{aligned}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Reemplazando estas expresiones en la <a href="#ec_17">ecuación 17</a>, se obtiene:</p>
+    
+    <table id="ec_20" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                Area_{\text{dos segmentos}} = \dfrac{h}{3}\left(y_i+4y_j+y_k\right)                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Entonces la sumatoria de los “n” segmentos (siendo “n” un número par) es:</p>
+    
+    <table id="ec_21" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                \begin{aligned}                \int_a^b f(x)dx &amp;= \dfrac{h}{3}(y_1+4y_2+y_3)+\dfrac{h}{3}(y_3+4y_4+y_5)+\dfrac{h}{3}(y_5+4y_6+y_7)+\cdots +\dfrac{h}{3}(y_{n-1}+4y_n+y_{n-1})\\[3mm]                \int_a^b f(x)dx &amp;= \dfrac{h}{3}\Big(y_1+4(y_2+y_4+y_6+\cdots +y_n)+2(y_3+y_5+y_7+\cdots +y_{n-1})+y_{n+1}\Big)\\[3mm]                \int_a^b f(x)dx &amp;= \dfrac{h}{3}\left(y_1+4\sum_{i=2,4,6}^{n}y_i+2\sum_{i=3,5,7}^{n-1}y_i+y_{n+1}\right)                \end{aligned}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Que es conocida como la fórmula de Simpson.</p>
+
+
+    <h4 class="text">Algoritmo</h4>
+
+
+    <p class="text">Para automatizar el proceso de cálculo, lo único que se debe hacer es programar la ecuación del método (<a href="#ec_21">ecuación 21</a>), siendo el algoritmo para ese fin, el siguiente:</p>
+
+    <p class="figurasn"><img src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo11/files/simpson.png" alt="Algoritmo método de Simpson"></p>
+
+    <p class="text">Como se puede ver, en el algoritmo se pregunta primero si el número de segmentos "n" es impar y de ser así se incrementa su valor en 1 (para que sea par), pues como se ha dicho, en el método de Simpson el número de segmentos debe ser siempre par.</p>
+
+    <p class="text">El código respectivo, ha sido añadido como un método de la clase <dfn class="style1">Function</dfn>, por lo que debe ser llamado desde la función a integrar. Por ejemplo, para calcular la siguiente integral (redondeando el resultado al sexto dígito después del punto):</p>
+    
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                \int_{1.2}^{4.5} (x^3+2x^2+3x+4)dx                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Primero se programa la función:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var f = x =&gt; x**3+2*x**2+3*x+4;</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Luego se llama al método de Simpson mandando los límites (en este caso con el número de segmentos por defecto):</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">f.simpson({a:1.2, b:4.5}).round(6)</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="text">Que es el resultado exacto (calculado en el ejemplo del anterior método). Disminuyendo el número de segmentos a 20:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">f.simpson({a:1.2, b:4.5, n:20}).round(6)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Se obtiene igualmente el resultado exacto, e inclusive con 10 segmentos:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">f.simpson({a:1.2, b:4.5, n:10}).round(6)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Se obtiene igualmente el resultado exacto, lo que demuestra la mayor precisión de este método (comparado con el método del Trapecio).</p>
+
+
+
+    <h4 class="text">Ejemplo</h4>
+
+    <p class="ejemplo"><span class="ejemplo"></span>Para calcular el valor de la siguiente integral (en un párrafo de instrucción) haga lo siguiente: Programe la ecuación no lineal con el nombre "fy";  Calcule las derivadas de "fy" para valores de "y" iguales a: 1.57, 1.67 y 1.78, redondeando los resultados a enteros y guardándolos en "d1", "d2" y "d3"; Programe la función a integrar con el nombre "fx"; finalmente, calcule la integral con el método de Simpson (número de segmentos por defecto), redondeando el resultado al séptimo dígito después del punto.</p>
+    
+    <table class="ecuacionsn" style="margin-left:1cm;">
+        <tbody><tr>
+            <td>
+                \[                \begin{gathered}                \Large\int_{\scriptsize 1.1}^{\scriptsize 1.5}\normalsize\sqrt{\dfrac{f_y^\prime(1.67)x+f_y^\prime(1.78)x^2-f_y^\prime(1.57)}{f_y^\prime(1.57)x+f_y^\prime(1.67)}}dx\\[7mm]                f(y) = \dfrac{\sin^2(y)+\cos^2(y)}{\left(\sin(y)+\cos(y)\right)^2}                \end{gathered}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="ejemplosn">Siguiendo las instrucciones del enunciado, se programa la función de "y" (fy), se calculan las derivadas (d1, d2, y d3), se programa la función a integrar (fx) y se calcula el valor de la integral:</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">var fy = y =&gt; (Math.sin(y)**2+Math.cos(y)**2)/<br>    (Math.sin(y)+Math.cos(y))**2;<br>var d1 = fy.df1(1.57).round();<br>var d2 = fy.df1(1.67).round();<br>var d3 = fy.df1(1.78).round();<br>var fx = x =&gt; Math.sqrt((d2*x+d3*x*x-d1)/(d1*x+d2));<br>fx.simpson({a:1.1, b:1.5}).round(7)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="ejemplosn">Por lo tanto la solución (el valor buscado), es 0.5427182.</p>
+
+
+    <div class="ejercicio" id="ejercicio9" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Complete el código que encuentra el valor de la siguiente integral ("f", función flecha):\[\int_{1.1}^{3.2}\left(x^6+2x^5+3x^4+4x^3+5x^2+6x+7\right)dx\]Con el método de Simpson (segmentos: 60, redondeo: quinto dígito).</p><div id="pregunta43" class="calculadora" spellcheck="false"><div class="instruccion">var f = x =&gt;x**6+2*x**5+3*x**4+4*x**3+5*x**2+6*x+7 ;<br>f.simpson({a:1.1, b:3.2,n:60 }).round(5)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="5" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 9 -->
+
+    <div class="ejercicio" id="ejercicio10" enunciado="2"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Complete el código que encuentra el valor de la siguiente integral ("f", función flecha):\[\Large\int_{\scriptsize2.5}^{\scriptsize7.6}\normalsize\sqrt{\dfrac{x^{2.3}+4x^{1.3}-6}{x^{1.6}+3x^{1.2}+2}}dx\]Con el método de Simpson (segmentos: 80, redondeo: tercer dígito).</p><div id="pregunta48" class="calculadora" spellcheck="false"><div class="instruccion">var f = x =&gt;Math.sqrt((x**2.3+4*x**1.3-6)/(x**1.6+3*x**1.2+2)) ;<br>f.simpson({a:2.5, b:7.6, n:80}).round(3)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="5" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 10 -->
+
+    <div class="ejercicio" id="ejercicio11" enunciado="2"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Complete el código que encuentra el valor de la siguiente integral ("f", función flecha):\[\large\int_{\scriptsize0.8}^{\scriptsize1.6}\normalsize\left(\dfrac{x+3x^{2.2}-9x^{1.4}}{4x^{1.4}+6x}\right)dx\]Con el método de Simpson (segmentos: 80, redondeo: tercer dígito).</p><div id="pregunta51" class="calculadora" spellcheck="false"><div class="instruccion">var f = x =&gt;(x+3*x**2.2-9*x**1.4)/(4*x**1.4+6*x);<br>f.simpson({a:0.8, b:1.6,n:80 }).round(3)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="5" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 11 -->
+
+    <div class="ejercicio" id="ejercicio12" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p><p></p></div><p class="pregunta"><span class="pregunta"></span>Complete el código que resuelve el siguiente sistema de ecuaciones lineales con crout (resultado vector "x", redondeo: segundo dígito).\[\begin{alignedat}{4}3x_0&amp;+&amp;x_1&amp;-&amp;5x_2&amp;=&amp;-14\\x_0&amp;+&amp;4x_1&amp;-&amp;2x_2&amp;=&amp;5\\2x_0&amp;+&amp;3x_1&amp;+&amp;x_2&amp;=&amp;15\end{alignedat}\]</p><div id="pregunta52" class="calculadora" spellcheck="false"><div class="instruccion">var x = [[3,1,-5],<br>         [1,4,-2],<br>         [2,3,1]].crout([-14,5,15]).transpose().round(2);</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con las soluciones del sistema de ecuaciones lineales, calculadas en el inciso anterior, encuentre el valor de la siguiente integral ("fy", función flecha) con el método de Simpson (segmentos: 50, redondeo: quinto dígito).\[\large\int_{\scriptsize2.3}^{\scriptsize7.2}\normalsize\sqrt{\dfrac{y^{2.3}+x_2y^{1.3}-x_1}{y^{1.6}+x_1y^{1.2}+x_0}}dx\]</p><div id="pregunta53" class="calculadora" spellcheck="false"><div class="instruccion">var fy = y =&gt; Math.sqrt((y**2.3+x[2]*y**1.3-x[1])/(y**1.6+x[1]*y**1.2+x[0]));<br>fy.simpson({a:2.3, b:7.2, n:50}).round(5)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="10" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 12 -->
+
+    <div class="ejercicio" id="ejercicio13" enunciado="2"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Complete el código que calcula las derivadas primera, segunda y tercera (d1, d2, d3) de la siguiente ecuación ("fy", función flecha), para y = 0.1 (redondeo: cuarto dígito).\[f(y) = \dfrac{4y^{3.1}+3y-8}{y^2+5}\]</p><div id="pregunta62" class="calculadora" spellcheck="false"><div class="instruccion">var fy = y =&gt;(4*y**3.1+3*y-8)/(y**2+5) ;<br>var d1 = fy.df1(0.1).round(4);<br>var d2 = fy.df2(0.1).round(4);<br>var d3 = fy.df3(0.1).round(4);</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con las derivadas calculadas en el inciso anterior, Complete el código que calcula el valor de la siguiente integral ("fx", función flecha) con el método de Simpson (segmentos: 100, redondeo: cuarto dígito).\[\large\int_{\scriptsize0.3}^{\scriptsize1.8}\normalsize\left(-\dfrac{x+6f_y^{\prime}(0.1)x^{1.8}-5f_y^{\prime\prime\prime}(0.1)x^{1.2}}{4x^{1.5}+3f_y^{\prime\prime}(0.1)x}\right)dx\]</p><div id="pregunta63" class="calculadora" spellcheck="false"><div class="instruccion">var fx = x =&gt; -(x+6*d1*x**1.8-5*d3*x**1.2)/(4*x**1.5+3*d2*x);<br>fx.simpson({a:0.3, b:1.8, n:100}).round(4)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="10" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 13 -->
+
+
+
+
+    <h3 class="text">Método de Romberg</h3>
+
+
+    <p class="text">El método de Romberg es básicamente la regla del trapecio combinada con el método de extrapolación de Richardson.</p>
+
+    <p class="text">En este método se aplica la regla del trapecio para calcular inicialmente dos áreas: una tomando toda el área como un solo segmento (I<sub>0,1</sub>) y la segunda dividiendo el área en dos segmentos (I<sub>0,2</sub>), luego, con estos valores y la fórmula de extrapolación de Richardson, se obtiene un valor más aproximado.</p>
+
+    <p class="text">La fórmula de extrapolación de Richardson es:</p>
+    
+    <table id="ec_22" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                I_{n,k} = \dfrac{4^nI_{n-1,k+1}-I_{n-1,k}}{4^n-1}                                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Donde “n” es el nivel de extrapolación, “k” es el k-ésimo valor dentro del nivel al que pertenece (“n” o “n-1”), así I<sub>n-1,k+1</sub> es el valor de la integral en el nivel de extrapolación “n-1” y en la posición “k+1”, I<sub>n-1,k</sub>, es el valor de la integral en el nivel de extrapolación “n-1” y en la posición “k”.</p>
+
+    <p class="text">Aplicando esta ecuación a los valores calculados con el método del trapecio (que como aún no han sido extrapolados pertenecen al nivel 0), se tiene:</p>
+    
+    <table id="ec_23" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                I_{1,1} = \dfrac{4^1I_{0,2}-I_{0,1}}{4^1-1}                                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Si el valor extrapolado (I<sub>1,1</sub>) es aproximadamente igual al último valor del nivel anterior (I<sub>0,2</sub>), el proceso concluye, siendo el valor de la integral el valor extrapolado (I<sub>1,1</sub>). Caso contrario se vuelve a aplicar la regla del trapecio para calcular un nuevo valor de la integral (I<sub>0,3</sub>), pero empleando el doble de segmentos del cálculo anterior, es decir 4.</p>
+
+    <p class="text">Con el nuevo valor de la integral (I<sub>0,3</sub>) y el penúltimo valor de este nivel (I<sub>0,2</sub>) se realiza otra extrapolación:</p>
+    
+    <table id="ec_24" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                I_{1,2} = \dfrac{4^1I_{0,3}-I_{0,2}}{4^1-1}                                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Ahora el nivel 1 tiene dos valores (I<sub>1,1</sub> e I<sub>1,2</sub>), con los cuales se realiza otra extrapolación de segundo nivel:</p>
+    
+    <table id="ec_25" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                I_{2,1} = \dfrac{4^2I_{1,2}-I_{1,1}}{4^2-1}                                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Si este valor es aproximadamente igual al último valor del nivel anterior (I<sub>1,2</sub>) el proceso concluye, siendo la solución el último valor extrapolado (I<sub>2,1</sub>). Caso contrario se calcula un nuevo valor de la integral con la regla del Trapecio (I<sub>0,4</sub>), pero empleando el doble de segmentos del cálculo anterior, es decir 8 segmentos.</p>
+
+    <p class="text">Con el nuevo valor de la integral (I<sub>0,4</sub>) y el penúltimo valor de este nivel (I<sub>0,3</sub>) se realiza una nueva extrapolación:</p>
+    
+    <table id="ec_26" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                I_{1,3} = \dfrac{4^1I_{0,4}-I_{0,3}}{4^1-1}                                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Ahora en el nivel 1 se tienen tres valores. Con los dos últimos (I<sub>1,2</sub> e I<sub>1,3</sub>) se realiza una segunda extrapolación:</p>
+    
+    <table id="ec_27" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                I_{2,2} = \dfrac{4^2I_{1,3}-I_{1,2}}{4^2-1}                                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Con lo que se tienen dos valores en el nivel 2 (I<sub>2,1</sub> e I<sub>2,2</sub>). Entonces se puede realizar una extrapolación al tercer nivel: </p>
+    
+    <table id="ec_28" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                I_{3,1} = \dfrac{4^3I_{2,2}-I_{2,1}}{4^3-1}                                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Si este valor es aproximadamente igual al último valor del nivel anterior (I<sub>2,2</sub>), el proceso concluye, siendo el resultado el último valor extrapolado, caso contrario se repite (calculando un nuevo valor de la integral con el doble de segmentos del cálculo anterior).</p>
+
+    <p class="text">Como se puede ver, en el proceso sólo se emplean los dos últimos valores de cada nivel, en consecuencia sólo es necesario guardar dichos valores, además, dado que en cada iteración siempre se emplea un número de segmentos igual al doble del anterior, es posible aprovechar los valores calculados en la iteración previa.</p>
+
+    <p class="text">Si los dos últimos valores, de cada nivel de extrapolación, se guardan en los vectores “r” y “s”, la fórmula de Richardson toma la forma:</p>
+    
+    <table id="ec_29" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                s_{i+1} = \dfrac{4^is_{i}-r_{i}}{4^i-1}\hspace{5mm} \begin{cases} i=1\rightarrow n\end{cases}                    \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Y si en la regla del trapecio se aprovechan los valores calculados en la iteración previa, la fórmula del trapecio toma la forma:</p>
+    
+    <table id="ec_30" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                s_1 = \dfrac{r_1+h\displaystyle\sum_{i=1}^mf\left(x+(i-1)h\right)}{2}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Donde “r<sub>1</sub>” es la integral calculada en la iteración anterior, “m” es el número de segmentos y “h” es el ancho del segmento (el cual se reduce a la mitad en cada iteración). Para aplicar esta ecuación, la variable “x” debe ser iniciada en “a+h/2”.</p>
+
+    <p class="text">En la primera iteración existe un sólo segmento, por lo que “h” es igual a “b-a” (siendo “a” y “b” los límites de la integral), por lo tanto, en esa iteración, el valor de la integral se calcula con:</p>
+    
+    <table id="ec_31" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                r_1 = \dfrac{h}{2}\bigg(f(a)+f(b)\bigg)                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+
+    <h4 class="text">Algoritmo</h4>
+
+    <p class="text">El algoritmo, que automatiza el proceso descrito en el anterior acápite, es:</p>
+
+    <p class="figurasn"><img src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo11/files/romberg.png" alt="Algoritmo, método de Romberg"></p>
+
+    <p class="text">El código respectivo, ha sido añadido como un método de la clase Function, por lo que debe ser llamado desde la función a integrar. La única diferencia con relación a los métodos anteriores es que, en este método, en lugar de mandar el número de segmentos, se manda el número de dígitos de precisión/exactitud (por defecto 12).</p>
+
+    <p class="text">Por ejemplo, para obtener el valor de la siguiente integral (redondeando el resultado al sexto dígito después del punto):</p>
+    
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                \int_{1.2}^{4.5} (x^3+2x^2+3x+4)dx                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Primero se programa la función:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var f = x =&gt; x**3+2*x**2+3*x+4;</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Y se llama al método:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">f.romberg({a:1.2, b:4.5}).round(6)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Con lo que se obtiene el resultado exacto. Con un precisión/exactitud de 5 dígitos:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">f.romberg({a:1.2, b:4.5, err:5}).round(6)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Se obtiene igualmente el resultado exacto, lo que demuestra que este método es bastante preciso.</p>
+
+
+    <h4 class="text">Ejemplo</h4>
+
+    <p class="ejemplo"><span class="ejemplo"></span>Para calcular el valor de la siguiente integral (en un párrafo de instrucción) haga lo siguiente: Programe la ecuación no lineal con el nombre "fy";  Calcule las derivadas de "fy" para valores de "y" iguales a: 1.57, 1.67 y 1.78, redondeando los resultados a enteros y guardándolos en "d1", "d2" y "d3"; Programe la función a integrar con el nombre "fx"; finalmente, calcule la integral con el método de Romberg (error por defecto), redondeando el resultado al séptimo dígito después del punto.</p>
+    
+    <table class="ecuacionsn" style="margin-left:1cm;">
+        <tbody><tr>
+            <td>
+                \[                \begin{gathered}                \Large\int_{\scriptsize 1.1}^{\scriptsize 1.5}\normalsize\sqrt{\dfrac{f_y^\prime(1.67)x+f_y^\prime(1.78)x^2-f_y^\prime(1.57)}{f_y^\prime(1.57)x+f_y^\prime(1.67)}}dx\\[7mm]                f(y) = \dfrac{\sin^2(y)+\cos^2(y)}{\left(\sin(y)+\cos(y)\right)^2}                \end{gathered}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="ejemplosn">Siguiendo las instrucciones del enunciado, se programa la función de "y" (fy), se calculan las derivadas (d1, d2, y d3), se programa la función a integrar (fx) y se calcula el valor de la integral:</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">var fy = y =&gt; (Math.sin(y)**2+Math.cos(y)**2)/<br>    (Math.sin(y)+Math.cos(y))**2;<br>var d1 = fy.df1(1.57).round();<br>var d2 = fy.df1(1.67).round();<br>var d3 = fy.df1(1.78).round();<br>var fx = x =&gt; Math.sqrt((d2*x+d3*x*x-d1)/(d1*x+d2));<br>fx.romberg({a:1.1, b:1.5}).round(7)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="ejemplosn">Por lo tanto la solución (el valor buscado), es 0.5427182.</p>
+
+
+    <div class="ejercicio" id="ejercicio14" enunciado="1"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Complete el código que encuentra el valor de la siguiente integral ("f", función flecha):\[\int_{1.3}^{3.5}\left(x^6+3x^5+4x^4+5x^3+2x^2+6x+7\right)dx\]Con el método de Romberg (precisión/exactitud: 8 dígitos, redondeo: cuarto dígito).</p><div id="pregunta65" class="calculadora" spellcheck="false"><div class="instruccion">var f = x =&gt;x**6+3*x**5+4*x**4+5*x**3+2*x**2+6*x+7 ;<br>f.romberg({a:1.3, b:3.5, err:8}).round(4)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="5" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 14 -->
+
+    <div class="ejercicio" id="ejercicio15" enunciado="2"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Complete el código que encuentra el valor de la siguiente integral ("f", función flecha):\[\Large\int_{\scriptsize2.5}^{\scriptsize7.6}\normalsize\sqrt{\dfrac{x^{2.3}+4x^{1.3}-6}{x^{1.6}+3x^{1.2}+2}}dx\]Con el método de Romberg (precisión/exactitud: 9, redondeo: tercer dígito).</p><div id="pregunta69" class="calculadora" spellcheck="false"><div class="instruccion">var f = x =&gt; Math.sqrt((x**2.3+4*x**1.3-6)/(x**1.6+3*x**1.2+2));<br>f.romberg({a:2.5, b:7.6,err:9 }).round(3)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="5" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 15 -->
+
+    <div class="ejercicio" id="ejercicio16" enunciado="1"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Complete el código que encuentra el valor de la siguiente integral ("f", función flecha):\[\large\int_{\scriptsize0.7}^{\scriptsize1.5}\normalsize\left(\dfrac{x+4x^{2.2}-8x^{1.4}}{5x^{1.4}+7x}\right)dx\]Con el método de Romberg (precisión/exactitud: 8 dígitos, redondeo: cuarto dígito).</p><div id="pregunta71" class="calculadora" spellcheck="false"><div class="instruccion">var f = x =&gt;(x+4*x**2.2-8*x**1.4)/(5*x**1.4+7*x) ;<br>f.romberg({a:0.7, b:1.5,err:8 }).round(4)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="5" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 16 -->
+
+    <div class="ejercicio" id="ejercicio17" enunciado="2"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Tomando en cuenta los datos de la siguiente tabla:</p><div class="table borderAll"><table align="center"><tbody><tr><th class="center">x</th><td class="center">2.3</td><td class="center">4.5</td><td class="center">6.7</td><td class="center">8.4</td><td class="center">9.2</td><td class="center">10.1</td><td class="center">11.2</td><td class="center">12.6</td><td class="center">14.5</td><td class="center">16.3</td><td class="center">17.2</td><td class="center">18.1</td></tr><tr><th class="center">y</th><td class="center">11</td><td class="center">41</td><td class="center">90</td><td class="center">141</td><td class="center">169</td><td class="center">205</td><td class="center">251</td><td class="center">318</td><td class="center">421</td><td class="center">545</td><td class="center">592</td><td class="center">655</td></tr></tbody></table></div></div><p class="pregunta"><span class="pregunta"></span>Complete el código que obtiene la función de interpolación (f) con el método de Lagrange (vectores de datos: "vx", "vy").</p><div id="pregunta81" class="calculadora" spellcheck="false"><div class="instruccion">var vx = [2.3,4.5,6.7,8.4,9.2,10.1,11.2,12.6,14.5,16.3,17.2,18.1];<br>var vy = [11,41,90,141,169,205,251,318,421,545,592,655];<br>var f = [vx,vy].inLagrange();</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Complete el código que calcula el valor de la siguiente integral con el método de romberg (precisión/exactitud: 8 dígitos, redondeo: tercer dígito).\[\int_{7}^{15}y~dx \quad=\quad \int_{7}^{15}f(x)~dx\]</p><div id="pregunta82" class="calculadora" spellcheck="false"><div class="instruccion">f.romberg({a:7,b:15,err:8}).round(3)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Complete el código que calcula el valor de la siguiente integral con el método de romberg (precisión/exactitud: 7 dígitos, redondeo: tercer dígito).\[\int_{3}^{10}y~dx \quad=\quad \int_{3}^{10}f(x)~dx\]</p><div id="pregunta83" class="calculadora" spellcheck="false"><div class="instruccion">f.romberg({a:3,b:10,err:7}).round(3)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Complete el código que calcula el valor de la siguiente integral con el método de romberg (precisión/exactitud: 6 dígitos, redondeo: tercer dígito).\[\int_{14}^{18}y~dx \quad=\quad \int_{14}^{18}f(x)~dx\]</p><div id="pregunta84" class="calculadora" spellcheck="false"><div class="instruccion">f.romberg({a:14,b:18,err:6}).round(3)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="14" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 17 -->
+
+    <div class="ejercicio" id="ejercicio18" enunciado="2"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Tomando en cuenta los datos de la siguiente tabla:</p><div class="table borderAll"><table align="center"><tbody><tr><th class="center">x</th><td class="center">3</td><td class="center">5</td><td class="center">7</td><td class="center">11</td><td class="center">14</td><td class="center">16</td><td class="center">19</td><td class="center">21</td><td class="center">24</td><td class="center">25</td><td class="center">26</td><td class="center">27</td><td class="center">29</td><td class="center">33</td><td class="center">36</td><td class="center">40</td><td class="center">44</td></tr><tr><th class="center">y</th><td class="center">0</td><td class="center">0</td><td class="center">0</td><td class="center">0</td><td class="center">1</td><td class="center">3</td><td class="center">13</td><td class="center">22</td><td class="center">29</td><td class="center">26</td><td class="center">18</td><td class="center">8</td><td class="center">3</td><td class="center">0</td><td class="center">0</td><td class="center">0</td><td class="center">0</td></tr></tbody></table></div></div><p class="pregunta"><span class="pregunta"></span>Complete el código que obtiene las funciones de interpolación (f1 y f2) empleando los métodos de Newton y spline cúbico (vectores de datos: "vx", "vy", matriz de datos "td").</p><div id="pregunta91" class="calculadora" spellcheck="false"><div class="instruccion">var vx = [3,5,7,11,14,16,19,21,24,25,26,27,29,33,36,40,44];<br>var vy = [0,0,0,0,1,3,13,22,29,26,18,8,3,0,0,0,0];<br>var td = [vx,vy];<br>var f1 = td.inNewton();<br>var f2 = td.splineCubico();</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Complete el código que dibuja las dos gráficas de las funciones de interpolación (f1 y f2) y los datos conocido (td), entre 11 y 33.</p><div id="pregunta92" class="calculadora" spellcheck="false"><div class="instruccion">plot({f:[f1,td],xi:11 ,xf:33 })</div><div class="resultado"></div><div class="instruccion">plot({f:[f2,td],xi:11 ,xf:33 })</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Analizando las gráficas, elija la función más confiable y con la misma Complete el código que calcula el valor de la siguiente integral con el método del trapecio (segmentos: por defecto, redondeo: segundo dígito).\[\int_{11.5}^{32.5}y~dx \quad=\quad \int_{11.5}^{32.5}f(x)~dx\]</p><div id="pregunta93" class="calculadora" spellcheck="false"><div class="instruccion">f2.trapecio({a:11.5,b:32.5}).round(2)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="15" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 18 -->
+
+
+
+
+    <h2 class="text">Derivación e integración numérica en Octave y MatLab</h2>
+
+    <p class="text">Tanto Octave, como MatLab, no cuenta con funciones directas para la derivación numérica, pero pueden ser importadas. Así, en el caso de Octave, se puede emplear la funcion <b class="style1">deriv</b>, del paquete <b class="style1">optim</b>, la cual recibe la función a derivar (función en línea o manejador de la función), el valor o vector con los valores a derivar, el incremento de x (por defecto 1e-7), el orden de error de la ecuación de derivación (2 o 4, por defecto 2) y el orden de la derivada (1, 2, 3, o 4, por defecto 1).</p>
+
+    <p class="text">Por ejemplo, para calcular las derivadas primera, segunda y tercera de la siguiente función, para x = 7.2:</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                f(x) = x^3+2x^2+3x+4 = 0                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Se escriben las siguientes instrucciones en Octave:</p>
+
+    <div class="codigo octave">pkg load optim;<br>format shortG;<br><br>f = @(x) x.^3+2*x.^2+3*x+4;<br><br>deriv(f,7.2)<br>deriv(f,7.2,1e-5,4,2)<br>deriv(f,7.2,1e-3,4,3)<br><br>% Resultados obtenidos:<br><br>ans = 187.32<br>ans =  47.2<br>ans = 5.9996</div>
+
+    <p class="text">Las funciones Octave, equivalentes a los métodos JavaScript de derivación, son:</p>
+
+    <div class="codigo octave">function r = df1(f, x, h=1e-6)<br>    h = h*x;<br>    r = (f(x+h)-f(x-h))./(2*h);<br>endfunction<br><br>function r = df2(f, x, h=1e-5)<br>    h *= x;<br>    r = (f(x+h)-2*f(x)+f(x-h))./h.^2;<br>endfunction<br><br>function r = df3(f, x, h=1e-4)<br>    h *= x;<br>    r = (f(x+2*h)-2*f(x+h)+2*f(x-h)-f(x-2*h))./(2*h.^3);<br>endfunction<br><br>function r = df4(f, x, h=1e-3)<br>    h *= x;<br>    r = (f(x+2*h)-4*f(x+h)+6*f(x)-4*f(x-h)+f(x-2*h))./(h.^4);<br>endfunction</div>
+
+
+    <p class="text">Con estas funciones, las derivadas primera, segunda y tercera de la siguiente función:</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                f(x) = x^3+2x^2+3x+4 = 0                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Se calculan (tanto en Octave, como en MatLab) con:</p>
+
+    <div class="codigo octave">format shortG;<br><br>f = @(x) x.^3+2*x.^2+3*x+4;<br><br>df1(f,7.2)<br>df2(f,7.2)<br>df3(f,7.2)<br><br>% Resultados obtenidos:<br><br>ans = 187.32<br>ans =  47.2<br>ans = 5.9995</div>
+
+    <p class="text">Para la integración numérica, en Octave/MatLab, se puede emplear la función <i class="style1">integral</i>. Esta función recibe la función a integrar "f" (función en línea o un manejador de la función) y los límites inicial y final de la integral.</p>
+
+    <p class="text">Por ejemplo, para calcular el valor de la siguiente integral:</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                \int_{1.2}^{4.5} (x^3+2x^2+3x+4)dx                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Se escriben las siguientes instrucciones (tanto en Octave como en MatLab):</p>
+
+    <div class="codigo octave">format shortG;<br><br>f = @(x) x.^3+2*x.^2+3*x+4;<br><br>integral(f, 1.2, 4.5)<br><br>% Resultado obtenido:<br><br>ans = 203.01</div>
+
+<br>
+
+<div class="ejercicio" id="ejercicio19" enunciado="0"><hr><div class="enunciado"><p class="ejercicio extern"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Complete el código que, en Octave (formato longG), encuentra el valor de la siguiente integral:\[\Large\int_{\scriptsize2.3}^{\scriptsize7.2}\normalsize\sqrt{\dfrac{x^{2.3}+4x^{1.3}-3}{x^{1.6}+3x^{1.2}+1}}dx\]Resultado redondeado al quinto dígito. Luego ejecute el código en Octave, corrija los errores cometidos al completar el código y evalúe la celda. Copie los resultados en la subsiguiente (entre las tildes invertidas).</p><div id="pregunta94" class="calculadora" spellcheck="false"><div class="instruccion">`<br>format longG;<br>f = @(x) sqrt((x.^2.3 + 4*x.^1.3 - 3)./(x.^1.6 + 3*x.^1.2 + 1));<br>round(integral(f, 2.3, 7.2)*1e5)/1e5<br>`;</div><div class="resultado"></div><div class="instruccion">`<br>ans =          6.75878<br>`;</div><div class="resultado"></div><div class="instruccion"></div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="10" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 19 -->
+
+<div class="ejercicio" id="ejercicio20" enunciado="1"><hr><div class="enunciado"><p class="ejercicio extern"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Complete el código que, en Octave (formato longG), encuentra el valor de la siguiente integral:\[\large\int_{\scriptsize0.7}^{\scriptsize1.5}\normalsize\left(\dfrac{x+4x^{2.2}-8x^{1.4}}{5x^{1.4}+7x}\right)dx\]Resultado redondeado al cuarto dígito. Luego ejecute el código en Octave, corrija los errores cometidos al completar el código y evalúe la celda. Copie los resultados en la subsiguiente (entre las tildes invertidas).</p><div id="pregunta98" class="calculadora" spellcheck="false"><div class="instruccion">`<br>format longG;<br>f=@(x) (x+4*x.^2.2-8*x.^1.4)./(5*x.^1.4+7*x);<br>round(integral(f,0.7,1.5)*1e4)/1e4<br>`;</div><div class="resultado"></div><div class="instruccion">`<br>ans =          -0.1825<br>`;</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="10" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 20 -->
+
+<div class="ejercicio" id="ejercicio21" enunciado="2"><hr><div class="enunciado"><p class="ejercicio extern"><span class="ejercicio"></span>En Octave (formato longG), tomando en cuenta los datos de la siguiente tabla:</p><div class="table borderAll"><table align="center"><tbody><tr><th class="center">x</th><td class="center">2.3</td><td class="center">4.5</td><td class="center">6.7</td><td class="center">8.4</td><td class="center">9.2</td><td class="center">10.1</td><td class="center">11.2</td><td class="center">12.6</td><td class="center">14.5</td><td class="center">16.3</td><td class="center">17.2</td><td class="center">18.1</td></tr><tr><th class="center">y</th><td class="center">11</td><td class="center">41</td><td class="center">90</td><td class="center">141</td><td class="center">169</td><td class="center">205</td><td class="center">251</td><td class="center">318</td><td class="center">421</td><td class="center">545</td><td class="center">592</td><td class="center">655</td></tr></tbody></table></div></div><p class="pregunta"><span class="pregunta"></span>Complete el código que obtiene la función de interpolación (f) con polyfit (vectores: vx, vy, coeficientes: p, función: polyval). Luego ejecute el código en Octave, corrija los errores cometidos al completar el código y evalúe la celda.</p><div id="pregunta108" class="calculadora" spellcheck="false"><div class="instruccion">`<br>format longG;<br>vx=[2.3,4.5,6.7,8.4,9.2,10.1,11.2,12.6,14.5,16.3,17.2,18.1];<br>vy=[11,41,90,141,169,205,251,318,421,545,592,655];<br>p=polyfit(vx,vy,length(vx)-1);<br>f=@(x)polyval(p,x);<br>`;</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con la función de interpolación, complete el código que calcula el valor de la siguiente integral redondeando el resultado al tercer dígito.\[\int_{7}^{15}y~dx \quad=\quad \int_{7}^{15}f(x)~dx\]Luego ejecute el código en Octave, corrija los errores cometidos al completar el código y evalúe la celda. Copie los resultados en la subsiguiente (entre las tildes invertidas).</p><div id="pregunta109" class="calculadora" spellcheck="false"><div class="instruccion">`<br>round(integral(f,7,15)*1e3)/1e3<br>`;</div><div class="resultado"></div><div class="instruccion">`<br>ans =               2027.573<br>`;</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con la función de interpolación, complete el código que calcula el valor de la siguiente integral redondeando el resultado al tercer dígito.\[\int_{3}^{10}y~dx \quad=\quad \int_{3}^{10}f(x)~dx\]Luego ejecute el código en Octave, corrija los errores cometidos al completar el código y evalúe la celda. Copie los resultados en la subsiguiente (entre las tildes invertidas).</p><div id="pregunta110" class="calculadora" spellcheck="false"><div class="instruccion">`<br>round(integral(f,3,10)*1e3)/1e3<br>`;</div><div class="resultado"></div><div class="instruccion">`<br>ans =               939.657<br>`;</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con la función de interpolación, complete el código que calcula el valor de la siguiente integral redondeando el resultado al tercer dígito.\[\int_{14}^{18}y~dx \quad=\quad \int_{14}^{18}f(x)~dx\]Luego ejecute el código en Octave, corrija los errores cometidos al completar el código y evalúe la celda. Copie los resultados en la subsiguiente (entre las tildes invertidas).</p><div id="pregunta111" class="calculadora" spellcheck="false"><div class="instruccion">`<br>round(integral(f,14,18)*1e3)/1e3<br>`;</div><div class="resultado"></div><div class="instruccion">`<br>ans =               2067.521<br>`;</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="22" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 21 -->
+
+<div class="ejercicio" id="ejercicio22" enunciado="0"><hr><div class="enunciado"><p class="ejercicio extern"><span class="ejercicio"></span>En Octave (formato longG), tomando en cuenta los datos de la siguiente tabla:</p><div class="table borderAll"><table align="center"><tbody><tr><th class="center">x</th><td class="center">3</td><td class="center">5</td><td class="center">7</td><td class="center">11</td><td class="center">14</td><td class="center">16</td><td class="center">19</td><td class="center">21</td><td class="center">24</td><td class="center">25</td><td class="center">26</td><td class="center">27</td><td class="center">29</td><td class="center">33</td><td class="center">36</td><td class="center">40</td><td class="center">44</td></tr><tr><th class="center">y</th><td class="center">0</td><td class="center">0</td><td class="center">0</td><td class="center">0</td><td class="center">1</td><td class="center">3</td><td class="center">13</td><td class="center">22</td><td class="center">29</td><td class="center">26</td><td class="center">18</td><td class="center">8</td><td class="center">3</td><td class="center">0</td><td class="center">0</td><td class="center">0</td><td class="center">0</td></tr></tbody></table></div></div><p class="pregunta"><span class="pregunta"></span>Complete el código que obtiene las funciones de interpolación (f1 y f2) empleando polyfit  y spline (vectores: vx, vy, coeficientes p y pp, funciones: polyval y ppval). Luego ejecute el código en Octave, corrija los errores cometidos al completar el código y evalúe la celda.</p><div id="pregunta112" class="calculadora" spellcheck="false"><div class="instruccion">`<br>format longG;<br>vx=[3,5,7,11,14,16,19,21,24,25,26,27,29,33,36,40,44];<br>vy=[0,0,0,0,1,3,13,22,29,26,18,8,3,0,0,0,0];<br>p=polyfit(vx,vy,length(vx)-1);<br>f1=@(x)polyval (p,x);<br>pp=spline(vx,vy);<br>f2=@(x)ppval(pp,x);<br>`;</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Complete el código que dibuja las dos gráficas de las funciones de interpolación (f1 y f2) y los datos conocido pero sólo entre 14 y 29 (vectores con los datos: vx1, vy1, puntos rojos "."; vector con los puntos de la curva: "x", incremento: 0.01, líneas azules "-b"). Luego ejecute el código en Octave, corrija los errores cometidos al completar el código y evalúe la celda.</p><div id="pregunta113" class="calculadora" spellcheck="false"><div class="instruccion">`<br>vx1=[14,16,19,21,24,25,26,27,29];<br> vy1=[1,3,13,22,29,26,18,8,3];<br>x=14:0.01:29;<br>plot(vx1,vy1,".r",x,f1(x),"-b")<br>plot(vx1,vy1,".r",x,f2(x),"-b");<br>`;</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Analizando las gráficas, elija la función más confiable y con la misma Complete el código que calcula el valor de la siguiente integral redondeando el resultado al segundo dígito.\[\int_{15}^{28}y~dx \quad=\quad \int_{15}^{28}f(x)~dx\]Luego ejecute el código en Octave, corrija los errores cometidos al completar el código y evalúe la celda. Copie los resultados en la subsiguiente (entre las tildes invertidas).</p><div id="pregunta114" class="calculadora" spellcheck="false"><div class="instruccion">`<br>round(integral(f2,15,28)*1e2)/1e2<br>`;</div><div class="resultado"></div><div class="instruccion">`<br>ans =           208.24<br>`;</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="30" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 22 -->
+
+
+
+
+
+    <h2 class="text">Derivación e integración Python</h2>
+
+    <p class="text">Python, al igual que Octave/MatLab, no cuenta con una función directa para la derivación numérica. Las funciones equivalentes a los métodos derivativos de JavaScript, son:</p>
+
+    <p class="text">El módulo, será denominado <b class="style1">nderiv</b>, pero puede tener cualquier nombre:</p>
+
+    <div class="codigo python">def df1(f, x, h=1e-6):<br>    h *= x<br>    return (f(x+h)-f(x-h))/(2*h)<br><br>def df2(f, x, h=1e-5):<br>    h *= x<br>    return (f(x+h)-2*f(x)+f(x-h))/(h**2)<br><br>def df3(f, x, h=1e-4):<br>    h *= x<br>    return (f(x+2*h)-2*f(x+h)+2*f(x-h)-f(x-2*h))/(2*h**3)<br><br>def df4(f, x, h=1e-3):<br>    h *= x<br>    return (f(x+2*h)-4*f(x+h)+6*f(x)-4*f(x-h)+f(x-2*h))/(h**4)<br></div>
+
+    <p class="text">En los ejercicios donde se requiera derivar numéricamente, este código debe ser copiado al inicio del ejercicio.</p>
+
+    <p class="text">Por ejemplo, para calcular las derivadas primera, segunda y tercera de la siguiente función, para x = 7.2:</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                f(x) = x^3+2x^2+3x+4 = 0                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Después de copiar las funciones de derivación, al principio del ejercicio, se escribe el siguiente código::</p>
+
+    <div class="codigo octave">f = lambda x: x**3+2*x**2+3*x+4;<br><br>print(df1(f,7.2))<br>print(df2(f,7.2))<br>print(df3(f,7.2))<br><br># Resultados obtenidos:<br><br>187.31999999330483<br>47.19999425599971<br>5.999544711055655</div>
+
+    <p class="text">Para la integración numérica, en Python, se puede emplear, entre otras, la función <b class="style1">romberg</b> del módulo <b class="style1">integrate</b> de la librería <b class="style1">scipy</b>. Esta función recibe la función a integrar y los límites inicial y final de la integral.</p>
+
+    <p class="text">Por ejemplo, para calcular el valor de la siguiente integral:</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                \int_{1.2}^{4.5} (x^3+2x^2+3x+4)dx                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Se escriben las siguientes instrucciones:</p>
+
+    <div class="codigo python">from scipy.integrate import romberg<br><br>print(romberg(f,1.2,4.5).round(5))<br><br># Resultado obtenido:<br><br>203.01022</div>
+
+    <br>
+
+    <div class="ejercicio" id="ejercicio23" enunciado="1"><hr><div class="enunciado"><p class="ejercicio extern"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>En Python ("quad" de scipy.integrate), encuentre el valor de la siguiente integral:\[\Large\int_{\scriptsize2.1}^{\scriptsize7.3}\normalsize\sqrt{\dfrac{x^{2.3}+3x^{1.3}-3}{x^{1.6}+4x^{1.2}+1}}dx\]Resultado redondeado al cuarto dígito. Luego ejecute el código en Python, corrija los errores cometidos al completar el código y evalúe la celda. Copie los resultados en la subsiguiente (entre las tildes invertidas).</p><div id="pregunta122" class="calculadora" spellcheck="false"><div class="instruccion">`<br>from scipy.integrate import quad<br>import math<br>f = lambda x: math.sqrt((x**2.3+3*x**1.3-3)/(x**1.6+4*x**1.2+1))<br>print(round(quad(f,2.1,7.3)[0],4))<br>`;</div><div class="resultado"></div><div class="instruccion">`<br>6.0956<br>`;</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="10" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 23 -->
+
+    <div class="ejercicio" id="ejercicio24" enunciado="0"><hr><div class="enunciado"><p class="ejercicio extern"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>En Python ("quad" de scipy.integrate"), encuentre el valor de la siguiente integral:\[\large\int_{\scriptsize0.6}^{\scriptsize1.4}\normalsize\left(\dfrac{x+4x^{2.2}-9x^{1.4}}{4x^{1.4}+7x}\right)dx\]Redondeando el resultado al quinto dígito. Luego ejecute el código en Python, corrija los errores cometidos al completar el código y evalúe la celda. Copie los resultados en la subsiguiente (entre las tildes invertidas).</p><div id="pregunta124" class="calculadora" spellcheck="false"><div class="instruccion">`<br>from scipy.integrate import quad<br>import math<br>f = lambda x: (x+4*x**2.2-9*x**1.4)/(4*x**1.4+7*x)<br>print(round(quad(f,0.6,1.4)[0],5))<br>`;</div><div class="resultado"></div><div class="instruccion">`<br>-0.28635<br>`;</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="10" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 24 -->
+    
+    <div class="ejercicio" id="ejercicio25" enunciado="1"><hr><div class="enunciado"><p class="ejercicio extern"><span class="ejercicio"></span>En Python ("quad" de scipy.integrate; "interp1d" de scipy.interpolate), tomando en cuenta los datos de la siguiente tabla:</p><div class="table borderAll"><table align="center"><tbody><tr><th class="center">x</th><td class="center">2.3</td><td class="center">4.5</td><td class="center">6.7</td><td class="center">8.4</td><td class="center">9.2</td><td class="center">10.1</td><td class="center">11.2</td><td class="center">12.6</td><td class="center">14.5</td><td class="center">16.3</td><td class="center">17.2</td><td class="center">18.1</td></tr><tr><th class="center">y</th><td class="center">11</td><td class="center">41</td><td class="center">90</td><td class="center">141</td><td class="center">169</td><td class="center">205</td><td class="center">251</td><td class="center">318</td><td class="center">421</td><td class="center">545</td><td class="center">592</td><td class="center">655</td></tr></tbody></table></div></div><p class="pregunta"><span class="pregunta"></span>Complete el código que obtiene la función de interpolación (f) con interp1d (vectores: vx, vy). Para suprimir los mensajes de advertencia se debe importar "warnings" y llamar a <span class="textocodigo">warnings.filterwarnings("ignore")</span>. Luego ejecute el código en Python, corrija los errores cometidos al completar el código y evalúe la celda.</p><div id="pregunta131" class="calculadora" spellcheck="false"><div class="instruccion">`<br>import warnings<br>warnings.filterwarnings("ignore")<br>from scipy.integrate import quad<br>from scipy.interpolate import interp1d<br>vx = [2.3, 4.5, 6.7, 8.4, 9.2, 10.1, 11.2, 12.6, 14.5, 16.3, 17.2, 18.1]<br>vy = [11, 41, 90, 141, 169, 205, 251, 318, 421, 545, 592, 655]<br>f = interp1d(vx, vy)<br>`;</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con la función de interpolación, complete el código que calcula el valor de la siguiente integral redondeando el resultado al tercer dígito.\[\int_{7}^{15}y~dx \quad=\quad \int_{7}^{15}f(x)~dx\]Luego ejecute el código en Python, corrija los errores cometidos al completar el código y evalúe la celda. Copie los resultados en la subsiguiente (entre las tildes invertidas).</p><div id="pregunta132" class="calculadora" spellcheck="false"><div class="instruccion">`<br>print(round(quad(f, 7, 15)[0], 3))<br>`;</div><div class="resultado"></div><div class="instruccion">`<br>2030.561<br>`;</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con la función de interpolación, complete el código que calcula el valor de la siguiente integral redondeando el resultado al tercer dígito.\[\int_{3}^{10}y~dx \quad=\quad \int_{3}^{10}f(x)~dx\]Luego ejecute el código en Python, corrija los errores cometidos al completar el código y evalúe la celda. Copie los resultados en la subsiguiente (entre las tildes invertidas).</p><div id="pregunta133" class="calculadora" spellcheck="false"><div class="instruccion">`<br>print(round(quad(f, 3, 10)[0], 3))<br>`;</div><div class="resultado"></div><div class="instruccion">`<br>658.609<br>`;</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con la función de interpolación, complete el código que calcula el valor de la siguiente integral redondeando el resultado al tercer dígito.\[\int_{14}^{18}y~dx \quad=\quad \int_{14}^{18}f(x)~dx\]Luego ejecute el código en Python, corrija los errores cometidos al completar el código y evalúe la celda. Copie los resultados en la subsiguiente (entre las tildes invertidas).</p><div id="pregunta134" class="calculadora" spellcheck="false"><div class="instruccion">`<br>print(round(quad(f, 14, 18)[0], 3))<br>`;</div><div class="resultado"></div><div class="instruccion">`<br>2080.774<br>`;</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="22" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 25 -->
+    
+    <div class="ejercicio" id="ejercicio26" enunciado="1"><hr><div class="enunciado"><p class="ejercicio extern"><span class="ejercicio"></span>En Python ("quad" de scipy.integrate; "interp1d" de scipy.interpolate; numpy como "np", matplotlib.pyplot como "plt"), tomando en cuenta los datos de la siguiente tabla:</p><div class="table borderAll"><table align="center"><tbody><tr><th class="center">x</th><td class="center">3</td><td class="center">5</td><td class="center">7</td><td class="center">11</td><td class="center">14</td><td class="center">16</td><td class="center">19</td><td class="center">21</td><td class="center">24</td><td class="center">25</td><td class="center">26</td><td class="center">27</td><td class="center">29</td><td class="center">33</td><td class="center">36</td><td class="center">40</td><td class="center">44</td></tr><tr><th class="center">y</th><td class="center">0</td><td class="center">0</td><td class="center">0</td><td class="center">0</td><td class="center">1</td><td class="center">3</td><td class="center">13</td><td class="center">22</td><td class="center">29</td><td class="center">26</td><td class="center">18</td><td class="center">8</td><td class="center">3</td><td class="center">0</td><td class="center">0</td><td class="center">0</td><td class="center">0</td></tr></tbody></table></div></div><p class="pregunta"><span class="pregunta"></span>Complete el código que obtiene las funciones de interpolación (f1 y f2) empleando interp1d y spline cúbico (interp1d, "cubic"; vectores: vx, vy). Luego ejecute el código en Python, corrija los errores cometidos al completar el código y evalúe la celda.</p><div id="pregunta142" class="calculadora" spellcheck="false"><div class="instruccion">`<br>import warnings<br>warnings.filterwarnings("ignore")<br>from scipy.integrate import quad<br>from scipy.interpolate import interp1d<br>import numpy as np<br>import matplotlib.pyplot as plt<br>vx = [3, 5, 7, 11, 14, 16, 19, 21, 24, 25, 26, 27, 29, 33, 36, 40, 44]<br>vy = [0, 0, 0, 0, 1, 3, 13, 22, 29, 26, 18, 8, 3, 0, 0, 0, 0]<br>f1 = interp1d(vx, vy)<br>f2 = interp1d(vx, vy, kind="cubic")<br>`;</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Complete el código que dibuja las dos gráficas de las funciones de interpolación (f1 y f2) y los datos conocido  pero sólo entre 16 y 27 (vectores con los datos: vx1, vy1, puntos rojos "."; vector con los puntos de la curva: "x", incremento: 0.01, líneas azules "-b"). Para dibujar dos o más gráficas escriba, antes de cada gráfica: <span class="textocodigo">plt.figure(número)</span>, siendo número: 1, 2, ..., etc. Luego ejecute el código en Python, corrija los errores cometidos al completar el código y evalúe la celda.</p><div id="pregunta143" class="calculadora" spellcheck="false"><div class="instruccion">`<br>vx1=[16,19,21,24,25,26,27]<br>vy1=[3,13,22,29,26,18,8]<br>x=np.arange(16,27,0.01)<br>plt.figure(1)<br>plt.plot(vx1,vy1,".r",x,f1(x),"-b")<br>plt.show()<br>plt.figure(2)<br>plt.plot(vx1,vy1,".r",x,f2(x),"-b")<br>plt.show()<br>`;</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Analizando las gráficas, elija la función más confiable y con la misma Complete el código que calcula el valor de la siguiente integral redondeando el resultado al segundo dígito.\[\int_{18}^{26.5}y~dx \quad=\quad \int_{18}^{26.5}f(x)~dx\]Luego ejecute el código en Python, corrija los errores cometidos al completar el código y evalúe la celda. Copie los resultados en la subsiguiente (entre las tildes invertidas).</p><div id="pregunta144" class="calculadora" spellcheck="false"><div class="instruccion">`<br>print(round(quad(f2, 18, 26.5)[0], 2))<br>`;</div><div class="resultado"></div><div class="instruccion">`<br>184.35<br>`;</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="30" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 26 -->
+    
+
+
+
+    <div id="generarPrueba" data-scroll-y="24582.271484375"><br><hr><label class="lnotacapitulo">Nota del capítulo: </label><input type="text" id="notaCapitulo" disabled="disabled" class="itnotacapitulo"><br><br><button id="btGenerarPrueba" style="visibility: visible;" onclick="capitulo.registrarCapitulo()">Iniciar defensa</button><button id="btEmplearBono" style="margin-left:1.1rem;width:9.686rem;display:none;" onclick="capitulo.emplearBono()">Emplear Bono</button><br><br></div>
+
+
+<d id="dAutor" style="font-size: 0.9rem;text-align:center;color: #0808f24f;font-weight:bolder;position:fixed;top: 5px;right: 5px;user-select:none;display:inline-block;z-index:15;">Hernan G. Peñaranda V.</d></div><!-- Cierre del div capítulo -->
+
+<div id="dato" style="display:none;">JK5KCZ0r938lCZ0oDYGrDoqpE3Km93OmE30aCp0q93CmD2GnC30aC2H8PpLACm00</div>
+<div id="reg" style="display:none;">Cp0mCJipC30nEpCmC34xCJ4mC3inCJ0mEp8mCJ0xCJ4mC3ioC34mEp4nC30xCp0mCJipC30nEp4nC30xCp0mCJioC34mEpCmC34xCZ0nC3ipC30nEpCmC34xCJ4nCJioCJ4nEpCnCJ4xCJ4nCJioCJ4mEp4nC34xCZ4nC3ioCJ4n</div>
+
+
+
+
+<div id="divDialogo" style="display: none;"><div onfocus="document.querySelector('#divDialogo input').focus();"><div>Carnet universitario</div><div>Escriba el número de su carnet universitario, verificando que el guión haya sido correctamente insertado.</div><input type="text" onkeydown="return Capitulo.divDialogo.funKeydown(event)" onkeyup="Capitulo.divDialogo.funKeyup(event)"><div><button onclick="Capitulo.divDialogo.funClick('aceptar');">Aceptar</button><button style="margin-left:35px;" onclick="Capitulo.divDialogo.funClick('cancelar');">Cancelar</button></div></div></div></body><div id="tm-desbloqueador-host" style="color-scheme: initial !important; forced-color-adjust: initial !important; math-depth: initial !important; position-anchor: initial !important; text-size-adjust: initial !important; appearance: initial !important; color: initial !important; font: initial !important; font-palette: initial !important; font-synthesis: initial !important; position-area: initial !important; text-orientation: initial !important; text-rendering: initial !important; text-spacing-trim: initial !important; -webkit-font-smoothing: initial !important; -webkit-locale: initial !important; -webkit-text-orientation: initial !important; -webkit-writing-mode: initial !important; writing-mode: initial !important; zoom: initial !important; accent-color: initial !important; place-content: initial !important; place-items: initial !important; place-self: initial !important; alignment-baseline: initial !important; anchor-name: initial !important; anchor-scope: initial !important; animation-composition: initial !important; animation: initial !important; animation-trigger: initial !important; app-region: initial !important; aspect-ratio: initial !important; backdrop-filter: initial !important; backface-visibility: initial !important; background: initial !important; background-blend-mode: initial !important; baseline-shift: initial !important; baseline-source: initial !important; block-size: initial !important; border-block: initial !important; border: initial !important; border-radius: initial !important; border-collapse: initial !important; border-end-end-radius: initial !important; border-end-start-radius: initial !important; border-inline: initial !important; border-shape: initial !important; border-start-end-radius: initial !important; border-start-start-radius: initial !important; box-decoration-break: initial !important; box-shadow: initial !important; box-sizing: initial !important; break-after: initial !important; break-before: initial !important; break-inside: initial !important; buffered-rendering: initial !important; caption-side: initial !important; caret-animation: initial !important; caret-color: initial !important; caret-shape: initial !important; clear: initial !important; clip: initial !important; clip-path: initial !important; clip-rule: initial !important; color-interpolation: initial !important; color-interpolation-filters: initial !important; color-rendering: initial !important; columns: initial !important; column-fill: initial !important; gap: initial !important; rule-break: initial !important; rule: initial !important; rule-inset: initial !important; rule-visibility-items: initial !important; column-span: initial !important; contain-intrinsic-block-size: initial !important; contain-intrinsic-size: initial !important; contain-intrinsic-inline-size: initial !important; container: initial !important; content: initial !important; content-visibility: initial !important; corner-shape: initial !important; corner-block-end-shape: initial !important; corner-block-start-shape: initial !important; counter-increment: initial !important; counter-reset: initial !important; counter-set: initial !important; cursor: initial !important; cx: initial !important; cy: initial !important; d: initial !important; display: initial !important; dominant-baseline: initial !important; dynamic-range-limit: initial !important; empty-cells: initial !important; field-sizing: initial !important; fill: initial !important; fill-opacity: initial !important; fill-rule: initial !important; filter: initial !important; flex: initial !important; flex-flow: initial !important; flex-line-count: initial !important; float: initial !important; flood-color: initial !important; flood-opacity: initial !important; frame-sizing: initial !important; grid: initial !important; grid-area: initial !important; hyphenate-character: initial !important; hyphenate-limit-chars: initial !important; hyphens: initial !important; image-orientation: initial !important; image-rendering: initial !important; initial-letter: initial !important; inline-size: initial !important; inset-block: initial !important; inset-inline: initial !important; interactivity: initial !important; interest-delay: initial !important; interpolate-size: initial !important; isolation: initial !important; letter-spacing: initial !important; lighting-color: initial !important; line-break: initial !important; list-style: initial !important; margin-block: initial !important; margin: initial !important; margin-inline: initial !important; margin-trim: initial !important; marker: initial !important; mask: initial !important; mask-type: initial !important; math-shift: initial !important; math-style: initial !important; max-block-size: initial !important; max-height: initial !important; max-inline-size: initial !important; max-width: initial !important; min-block-size: initial !important; min-height: initial !important; min-inline-size: initial !important; min-width: initial !important; mix-blend-mode: initial !important; object-fit: initial !important; object-position: initial !important; object-view-box: initial !important; offset: initial !important; opacity: initial !important; order: initial !important; orphans: initial !important; outline: initial !important; outline-offset: initial !important; overflow-anchor: initial !important; overflow-block: initial !important; overflow-clip-margin: initial !important; overflow-inline: initial !important; overflow-wrap: initial !important; overflow: initial !important; overlay: initial !important; overscroll-behavior-block: initial !important; overscroll-behavior-inline: initial !important; overscroll-behavior: initial !important; padding-block: initial !important; padding: initial !important; padding-inline: initial !important; page: initial !important; page-margin-safety: initial !important; page-orientation: initial !important; paint-order: initial !important; perspective: initial !important; perspective-origin: initial !important; position-try: initial !important; position-visibility: initial !important; print-color-adjust: initial !important; quotes: initial !important; r: initial !important; reading-flow: initial !important; reading-order: initial !important; resize: initial !important; rotate: initial !important; ruby-align: initial !important; ruby-overhang: initial !important; ruby-position: initial !important; rule-overlap: initial !important; rx: initial !important; ry: initial !important; scale: initial !important; scroll-axis-lock: initial !important; scroll-behavior: initial !important; scroll-initial-target: initial !important; scroll-margin-block: initial !important; scroll-margin: initial !important; scroll-margin-inline: initial !important; scroll-marker-group: initial !important; scroll-padding-block: initial !important; scroll-padding: initial !important; scroll-padding-inline: initial !important; scroll-snap-align: initial !important; scroll-snap-stop: initial !important; scroll-snap-type: initial !important; scroll-target-group: initial !important; scroll-timeline: initial !important; scrollbar-gutter: initial !important; shape-image-threshold: initial !important; shape-margin: initial !important; shape-outside: initial !important; shape-rendering: initial !important; size: initial !important; speak: initial !important; stop-color: initial !important; stop-opacity: initial !important; stroke: initial !important; stroke-dasharray: initial !important; stroke-dashoffset: initial !important; stroke-linecap: initial !important; stroke-linejoin: initial !important; stroke-miterlimit: initial !important; stroke-opacity: initial !important; stroke-width: initial !important; tab-size: initial !important; table-layout: initial !important; text-align: initial !important; text-align-last: initial !important; text-anchor: initial !important; text-autospace: initial !important; text-box: initial !important; text-combine-upright: initial !important; text-decoration: initial !important; text-decoration-inset: initial !important; text-decoration-skip-ink: initial !important; text-emphasis: initial !important; text-emphasis-position: initial !important; text-fit: initial !important; text-indent: initial !important; text-justify: initial !important; text-overflow: initial !important; text-shadow: initial !important; text-transform: initial !important; text-underline-offset: initial !important; text-underline-position: initial !important; text-wrap: initial !important; timeline-scope: initial !important; timeline-trigger: initial !important; touch-action: initial !important; transform: initial !important; transform-box: initial !important; transform-origin: initial !important; transform-style: initial !important; transition: initial !important; translate: initial !important; trigger-scope: initial !important; user-select: initial !important; vector-effect: initial !important; vertical-align: initial !important; view-timeline: initial !important; view-transition-class: initial !important; view-transition-group: initial !important; view-transition-name: initial !important; view-transition-scope: initial !important; visibility: initial !important; border-spacing: initial !important; -webkit-box-align: initial !important; -webkit-box-decoration-break: initial !important; -webkit-box-direction: initial !important; -webkit-box-flex: initial !important; -webkit-box-ordinal-group: initial !important; -webkit-box-orient: initial !important; -webkit-box-pack: initial !important; -webkit-box-reflect: initial !important; -webkit-line-break: initial !important; -webkit-line-clamp: initial !important; -webkit-mask-box-image: initial !important; -webkit-rtl-ordering: initial !important; -webkit-ruby-position: initial !important; -webkit-tap-highlight-color: initial !important; -webkit-text-combine: initial !important; -webkit-text-decorations-in-effect: initial !important; -webkit-text-fill-color: initial !important; -webkit-text-security: initial !important; -webkit-text-stroke: initial !important; -webkit-user-drag: initial !important; white-space-collapse: initial !important; widows: initial !important; will-change: initial !important; window-drag: initial !important; word-break: initial !important; word-spacing: initial !important; x: initial !important; y: initial !important; position: fixed !important; inset: 0px !important; width: 100vw !important; height: 100vh !important; pointer-events: none !important; z-index: 2147483647 !important; contain: layout style !important;"></div>
