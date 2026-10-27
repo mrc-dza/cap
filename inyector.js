@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name         Inyector Maestro V32.3 (GitHub Auto-Fetch + GoJS + Omitir Iniciados)
+// @name         Inyector Maestro V32.4 (GitHub Auto-Fetch + GoJS + Omitir Iniciados)
 // @namespace    http://tampermonkey.net/
-// @version      32.3
+// @version      32.4
 // @description  Descarga desde GitHub (mrc-dza/cap) o local. Omite ejercicios ya iniciados y se limpia al Guardar.
 // @author       Marcos
 // @match        https://cursosabiertos.usfx.bo/materias/*/capitulos/*
@@ -24,17 +24,23 @@
     const MAX_INTENTOS = 15;
     const VERIFICAR_DIAGRAMA = true;
 
+    let cancelado = false;
+    let cacheHTMLGitHub = null;
+
     // =========================================================================
     // MÓDULO 1: AUTO-DESBLOQUEADOR Y LIMPIEZA AL GUARDAR
     // =========================================================================
     const ESPERA_MS = 300;
     const timers = new Map();
+    const KB_KEY = 'tm_kb_opciones_' + location.pathname;
 
     function limpiarRastro() {
+        cancelado = true;
         document.removeEventListener('click', alHacerClic, true);
         document.removeEventListener('click', interceptarGuardar, true);
         timers.forEach(id => clearTimeout(id));
         timers.clear();
+        try { localStorage.removeItem(KB_KEY); } catch (e) {}
         document.querySelectorAll('.tm-inyectado').forEach(el => el.remove());
     }
 
@@ -87,8 +93,7 @@
     // MÓDULO 2: DETECCIÓN DE MATERIA Y BUSCADOR EN GITHUB
     // =========================================================================
     function obtenerMetadatosCapitulo() {
-        const scripts = Array.from(document.querySelectorAll('script[src]'));
-        for (const s of scripts) {
+        for (const s of document.querySelectorAll('script[src]')) {
             const m = s.src.match(/materias\/([a-zA-Z0-9_-]+)\/capitulos\/(capitulo\d+)/i);
             if (m) {
                 return {
@@ -111,19 +116,24 @@
     }
 
     async function descargarHTMLDesdeGitHub(meta) {
+        if (cacheHTMLGitHub) return cacheHTMLGitHub;
+
         const baseRaw = `https://raw.githubusercontent.com/${GITHUB_USER}/${GITHUB_REPO}/${GITHUB_BRANCH}/${meta.materia}`;
+        const num = String(meta.num);
+        const numPad = num.padStart(2, '0');
 
         const candidatosDirectos = [
-            `${baseRaw}/${meta.num}.html`,
-            `${baseRaw}/${meta.capitulo}.html`
+            `${baseRaw}/${num}.html`,
+            `${baseRaw}/${ meta.capitulo }.html`,
+            `${baseRaw}/${numPad}.html`
         ];
 
         for (const url of candidatosDirectos) {
             try {
                 const r = await fetch(url, { cache: 'no-store' });
                 if (r.ok) {
-                    console.log('[Inyector V32] Descargado directo:', url);
-                    return await r.text();
+                    cacheHTMLGitHub = await r.text();
+                    return cacheHTMLGitHub;
                 }
             } catch (e) {}
         }
@@ -139,7 +149,6 @@
             throw new Error('Respuesta inesperada al listar la carpeta en GitHub.');
         }
 
-        const num = String(meta.num);
         const limpiar = s => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
 
         const coincidencias = [
@@ -159,19 +168,20 @@
         }
 
         const urlFinal = archivoElegido.download_url || `${baseRaw}/${encodeURIComponent(archivoElegido.name)}`;
-        console.log('[Inyector V32] Archivo encontrado por API:', archivoElegido.name);
-
         const respHtml = await fetch(urlFinal, { cache: 'no-store' });
         if (!respHtml.ok) {
             throw new Error(`Error al descargar "${archivoElegido.name}" (${respHtml.status})`);
         }
-        return await respHtml.text();
+
+        cacheHTMLGitHub = await respHtml.text();
+        return cacheHTMLGitHub;
     }
 
     // =========================================================================
     // MÓDULO 3: UTILIDADES
     // =========================================================================
     function showToast(message, type = 'info') {
+        if (cancelado) return;
         const toast = document.createElement('div');
         toast.className = 'tm-inyectado';
         const colors = { info: '#3b82f6', success: '#16a34a', error: '#ef4444', warning: '#f59e0b' };
@@ -207,6 +217,7 @@
     async function esperarHasta(cond, max = 2000, paso = 40) {
         const fin = Date.now() + max;
         while (Date.now() < fin) {
+            if (cancelado) return false;
             try { if (cond()) return true; } catch (e) {}
             await sleep(paso);
         }
@@ -216,7 +227,7 @@
     const SEL_CAMPOS = '.campo_literal, .campo_arrastrar, .campo_dato';
     const SEL_TODO   = SEL_CAMPOS + ', p.opcionMultiple';
     const norm = t => (t || '').replace(/\u200B/g, '').replace(/\s+/g, ' ').trim();
-    const esVisible = el => !!(el.offsetParent || el.getClientRects().length);
+    const esVisible = el => !!(el && (el.offsetParent || el.getClientRects().length));
 
     function textoInst(el) {
         const d = document.createElement('div');
@@ -241,10 +252,9 @@
         return partes.sort().join('||');
     }
 
-    const KB_KEY = 'tm_kb_opciones_' + location.pathname;
     const conocimiento = new Map();
     try { JSON.parse(localStorage.getItem(KB_KEY) || '[]').forEach(([k, v]) => conocimiento.set(k, v)); } catch (e) {}
-    const guardarKB = () => { try { localStorage.setItem(KB_KEY, JSON.stringify([...conocimiento])); } catch (e) {} };
+    const guardarKB = () => { if (!cancelado) { try { localStorage.setItem(KB_KEY, JSON.stringify([...conocimiento])); } catch (e) {} } };
     const textoOpcion = p => norm((p.querySelector('label') || {}).textContent);
 
     function llenarOpciones(ej) {
@@ -272,7 +282,8 @@
     }
 
     async function elegirOpcion(campo, respuesta) {
-        const buscar = () => Array.from(document.body.querySelectorAll('*')).filter(el =>
+        const SEL_POPUP = 'div, li, span, a, p, td';
+        const buscar = () => Array.from(document.body.querySelectorAll(SEL_POPUP)).filter(el =>
             el !== campo && !campo.contains(el) &&
             !el.closest('.CodeMirror') && !el.closest('.tm-inyectado') &&
             norm(el.textContent) === respuesta && esVisible(el) &&
@@ -292,7 +303,6 @@
         }
 
         if (norm(campo.textContent) !== respuesta) {
-            console.warn('Menú no respondió; se escribe el texto directo:', respuesta);
             campo.textContent = respuesta;
             campo.dispatchEvent(new Event('input', { bubbles: true }));
             campo.dispatchEvent(new Event('change', { bubbles: true }));
@@ -300,7 +310,7 @@
     }
 
     async function escribirCelda(liveCalc, indice, texto) {
-        if (!texto) return;
+        if (!texto || cancelado) return;
         let liveCM = liveCalc.querySelectorAll('.CodeMirror')[indice];
         if (!liveCM) {
             await esperarHasta(() => liveCalc.querySelectorAll('.CodeMirror')[indice], 2000);
@@ -414,13 +424,12 @@
             d.commitTransaction('InyeccionModelo');
             return true;
         } catch (e) {
-            console.error('Error inyectando el modelo GoJS:', e);
             try { d.rollbackTransaction(); } catch (e2) {}
             return false;
         }
     }
 
-    async function procesarDiagrama(liveCalc, srcCalc, id, intento) {
+    async function procesarDiagrama(liveCalc, srcCalc) {
         const modelo = extraerModeloGoJS(srcCalc.textContent) || extraerModeloGoJS(liveCalc.textContent);
         if (!modelo) return null;
 
@@ -431,7 +440,6 @@
             await sleep(60);
             shiftEnterEn(liveCalc.querySelector('canvas'));
         } else {
-            console.warn(`[${id}] sin diagrama GoJS accesible; se usa la celda de código.`);
             const textos = Array.from(srcCalc.querySelectorAll('.instruccion'))
                 .map(textoInst).map(limpiarComodines);
             for (let k = 0; k < textos.length; k++) await escribirCelda(liveCalc, k, textos[k]);
@@ -440,7 +448,7 @@
         if (!VERIFICAR_DIAGRAMA) return true;
 
         let ok = await esperarHasta(() => correctoEn(liveCalc), 2500, 100);
-        if (!ok) {
+        if (!ok && !cancelado) {
             const cv = liveCalc.querySelector('canvas');
             shiftEnterEn(cv);
             if (cv && cv.parentElement) shiftEnterEn(cv.parentElement);
@@ -453,7 +461,7 @@
     // MÓDULO 5: INTERFAZ GRÁFICA
     // =========================================================================
     const metaActual = obtenerMetadatosCapitulo();
-    const etiquetaCap = metaActual ? `${metaActual.materia.toUpperCase()} - Cap ${metaActual.num}` : 'V32';
+    const etiquetaCap = metaActual ? `${metaActual.materia.toUpperCase()} - Cap ${metaActual.num}` : 'V32.4';
 
     const contenedorBotones = document.createElement('div');
     contenedorBotones.className = 'tm-inyectado';
@@ -503,6 +511,7 @@
     document.body.appendChild(inputFile);
 
     function resetearBtn() {
+        if (cancelado) return;
         btnGitHub.disabled = false;
         btnLocal.disabled = false;
         btnGitHub.innerHTML = TEXTO_BTN;
@@ -542,29 +551,28 @@
         let omitidos = 0;
 
         for (let i = 0; i < liveEjercicios.length; i++) {
+            if (cancelado) return;
+
             const ejActual = liveEjercicios[i];
             const id = ejActual.id;
             if (!id) continue;
 
-            // -----------------------------------------------------------------
             // RESTRICCIÓN AL INICIO: Si ya tiene btRepetir (o no tiene btGenerar), se salta
-            // -----------------------------------------------------------------
             const btnGenInicial = ejActual.querySelector('.btGenerar');
             const btnRepInicial = ejActual.querySelector('.btRepetir');
             const tieneRepetirActivo = btnRepInicial && esVisible(btnRepInicial);
             const tieneGenerarActivo = btnGenInicial && esVisible(btnGenInicial);
 
             if (tieneRepetirActivo || !tieneGenerarActivo) {
-                console.log(`[${id}] Ejercicio ya iniciado (btRepetir presente). Se omite.`);
                 omitidos++;
                 continue;
             }
 
             btnGitHub.innerHTML = `${iconoDescarga}Procesando ${i + 1}/${liveEjercicios.length}...`;
 
-            let resueltoConExito = false;
-
             for (let intento = 0; intento < MAX_INTENTOS; intento++) {
+                if (cancelado) return;
+
                 const botonAccion = (intento === 0) ? ejActual.querySelector('.btGenerar') : ejActual.querySelector('.btRepetir');
                 if (botonAccion) {
                     const antesHTML = ejActual.innerHTML;
@@ -572,6 +580,8 @@
                     await esperarHasta(() => ejActual.innerHTML !== antesHTML, 2500);
                     await sleep(150);
                 }
+
+                if (cancelado) return;
 
                 const numEnunciado = ejActual.getAttribute('enunciado');
                 let ejResuelto = doc.querySelector(`div.ejercicio[id="${id}"][enunciado="${numEnunciado}"]`);
@@ -583,9 +593,6 @@
                         .every(p => conocimiento.has(textoOpcion(p)));
                     if (!todasConocidas) ejResuelto = null;
                 } else if (ejResuelto && tieneCampos && firmaCampos(ejResuelto) !== firmaCampos(ejActual)) {
-                    if (intento === MAX_INTENTOS - 1) {
-                        console.warn(`[${id}] firma NO coincide.\nPÁGINA: ${firmaCampos(ejActual)}\nARCHIVO: ${firmaCampos(ejResuelto)}`);
-                    }
                     ejResuelto = null;
                 }
 
@@ -596,8 +603,8 @@
                     const liveCalculadoras = Array.from(ejActual.querySelectorAll('.calculadora'));
                     const sourceCalculadoras = Array.from(ejResuelto.querySelectorAll('.calculadora'));
 
-                    const srcDiag   = sourceCalculadoras.filter(esDiagramaSrc);
-                    const srcNoDiag = sourceCalculadoras.filter(c => !esDiagramaSrc(c));
+                    const srcDiag    = sourceCalculadoras.filter(esDiagramaSrc);
+                    const srcNoDiag  = sourceCalculadoras.filter(c => !esDiagramaSrc(c));
                     const liveNoDiag = liveCalculadoras.filter(c => !esDiagramaVivo(c));
 
                     const planPorCalc = new Map();
@@ -618,10 +625,11 @@
                     let diagramaFallo = false;
                     let idxDiag = 0;
                     for (const liveCalc of liveCalculadoras) {
+                        if (cancelado) return;
                         if (esDiagramaVivo(liveCalc)) {
                             const srcCalc = srcDiag[idxDiag++];
                             if (!srcCalc) continue;
-                            const res = await procesarDiagrama(liveCalc, srcCalc, id, intento);
+                            const res = await procesarDiagrama(liveCalc, srcCalc);
                             if (res === false) diagramaFallo = true;
                         } else {
                             const textos = planPorCalc.get(liveCalc) || [];
@@ -632,7 +640,7 @@
                     }
 
                     if (diagramaFallo && intento < MAX_INTENTOS - 1) {
-                        if (btnCorregir) {
+                        if (btnCorregir && !cancelado) {
                             btnCorregir.removeAttribute('disabled');
                             btnCorregir.disabled = false;
                             btnCorregir.click();
@@ -642,11 +650,11 @@
                     }
 
                     // B) CAMPOS (literal, arrastrar, dato, opción múltiple)
-                    if (tieneCampos) {
+                    if (tieneCampos && !cancelado) {
                         const srcLit = ejResuelto.querySelectorAll('.campo_literal');
                         const liveLit = ejActual.querySelectorAll('.campo_literal');
                         for (let k = 0; k < liveLit.length; k++) {
-                            if (!srcLit[k]) continue;
+                            if (!srcLit[k] || cancelado) continue;
                             const campo = liveLit[k];
                             campo.textContent = norm(srcLit[k].textContent);
                             campo.dispatchEvent(new Event('input', { bubbles: true }));
@@ -663,6 +671,7 @@
                             return td && !td.contains(c) ? norm(td.textContent) : null;
                         };
                         for (let k = 0; k < liveSel.length; k++) {
+                            if (cancelado) return;
                             const clave = claveFila(liveSel[k]);
                             let origen = clave ? srcSel.find(c => claveFila(c) === clave) : null;
                             if (!origen) origen = srcSel[k];
@@ -691,14 +700,13 @@
                     await sleep(100);
 
                     // D) CORREGIR
-                    if (btnCorregir) {
+                    if (btnCorregir && !cancelado) {
                         btnCorregir.removeAttribute('disabled');
                         btnCorregir.disabled = false;
                         btnCorregir.click();
                         await sleep(700);
                     }
 
-                    resueltoConExito = true;
                     reemplazados++;
                     break;
 
@@ -709,13 +717,13 @@
                         enviado = new Map(Array.from(ejActual.querySelectorAll('p.opcionMultiple'))
                             .map(p => [textoOpcion(p), p.querySelector('input').checked]));
                     }
-                    if (btnCorregir) {
+                    if (btnCorregir && !cancelado) {
                         btnCorregir.removeAttribute('disabled');
                         btnCorregir.disabled = false;
                         btnCorregir.click();
                         await sleep(700);
                     }
-                    if (enviado) {
+                    if (enviado && !cancelado) {
                         aprenderOpciones(ejActual, enviado);
                     }
                 }
@@ -734,12 +742,10 @@
             return;
         }
 
-        const msgOmitidos = omitidos > 0 ? ` (${omitidos} omitidos por estar iniciados)` : '';
-        showToast(`Flujo completado: ${reemplazados} ejercicios procesados${msgOmitidos}.`, 'success');
         resetearBtn();
     }
 
-    // Accion 1: Descarga bajo demanda desde GitHub
+    // Acción 1: Descarga bajo demanda desde GitHub
     btnGitHub.addEventListener('click', async () => {
         if (btnGitHub.disabled) return;
 
@@ -758,13 +764,12 @@
             const html = await descargarHTMLDesdeGitHub(meta);
             await ejecutarInyeccionConHTML(html);
         } catch (err) {
-            console.error('[Inyector V32]', err);
             showToast(err.message || 'Error al conectar con GitHub.', 'error');
             resetearBtn();
         }
     });
 
-    // Accion 2: Carga manual desde PC
+    // Acción 2: Carga manual desde PC
     btnLocal.addEventListener('click', () => {
         if (!btnLocal.disabled) inputFile.click();
     });
