@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         Inyector Maestro V32.4 (GitHub Auto-Fetch + GoJS + Omitir Iniciados)
+// @name         Inyector Maestro V32.5 (GitHub Auto-Fetch + GoJS + Sin Robo de Foco)
 // @namespace    http://tampermonkey.net/
-// @version      32.4
-// @description  Descarga desde GitHub (mrc-dza/cap) o local. Omite ejercicios ya iniciados y se limpia al Guardar.
+// @version      32.5
+// @description  Descarga desde GitHub (mrc-dza/cap) o local. Omite iniciados, no roba foco y se limpia al Guardar.
 // @author       Marcos
 // @match        https://cursosabiertos.usfx.bo/materias/*/capitulos/*
 // @grant        none
@@ -124,7 +124,7 @@
 
         const candidatosDirectos = [
             `${baseRaw}/${num}.html`,
-            `${baseRaw}/${ meta.capitulo }.html`,
+            `${baseRaw}/${meta.capitulo}.html`,
             `${baseRaw}/${numPad}.html`
         ];
 
@@ -178,7 +178,7 @@
     }
 
     // =========================================================================
-    // MÓDULO 3: UTILIDADES
+    // MÓDULO 3: UTILIDADES (SIN ROBO DE FOCO NI SCROLL)
     // =========================================================================
     function showToast(message, type = 'info') {
         if (cancelado) return;
@@ -290,8 +290,7 @@
             !Array.from(el.children).some(h => norm(h.textContent) === respuesta));
 
         const antes = new Set(buscar());
-        campo.scrollIntoView({ block: 'center' });
-        campo.click();
+        campo.click(); // Sin scrollIntoView para no mover la pantalla
         await esperarHasta(() => buscar().some(el => !antes.has(el)), 1500);
 
         const nuevas = buscar().filter(el => !antes.has(el));
@@ -319,8 +318,7 @@
         if (liveCM && liveCM.CodeMirror) {
             const cm = liveCM.CodeMirror;
             cm.setValue(texto);
-            cm.focus();
-            cm.setCursor(cm.lineCount(), 0);
+            // Sin cm.focus() ni cm.setCursor() para no robar el foco de la ventana
             cm.getInputField().dispatchEvent(new KeyboardEvent('keydown', {
                 key: 'Enter', code: 'Enter', keyCode: 13, which: 13,
                 shiftKey: true, bubbles: true, cancelable: true
@@ -387,7 +385,7 @@
 
     function shiftEnterEn(el) {
         if (!el) return;
-        if (el.focus) el.focus();
+        // Sin el.focus() para mantener la ejecución en segundo plano
         ['keydown', 'keyup'].forEach(tipo =>
             el.dispatchEvent(new KeyboardEvent(tipo, {
                 key: 'Enter', code: 'Enter', keyCode: 13, which: 13,
@@ -461,7 +459,7 @@
     // MÓDULO 5: INTERFAZ GRÁFICA
     // =========================================================================
     const metaActual = obtenerMetadatosCapitulo();
-    const etiquetaCap = metaActual ? `${metaActual.materia.toUpperCase()} - Cap ${metaActual.num}` : 'V32.4';
+    const etiquetaCap = metaActual ? `${metaActual.materia.toUpperCase()} - Cap ${metaActual.num}` : 'V32.5';
 
     const contenedorBotones = document.createElement('div');
     contenedorBotones.className = 'tm-inyectado';
