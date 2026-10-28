@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         Inyector Maestro V32.5 (GitHub Auto-Fetch + GoJS + Sin Robo de Foco)
+// @name         Inyector Maestro V32.6 (GitHub Auto-Fetch + GoJS + Cero Foco/Scroll)
 // @namespace    http://tampermonkey.net/
-// @version      32.5
-// @description  Descarga desde GitHub (mrc-dza/cap) o local. Omite iniciados, no roba foco y se limpia al Guardar.
+// @version      32.6
+// @description  Descarga desde GitHub (mrc-dza/cap) o local. Bloquea robo de foco/scroll de la página y se limpia al Guardar.
 // @author       Marcos
 // @match        https://cursosabiertos.usfx.bo/materias/*/capitulos/*
 // @grant        none
@@ -28,6 +28,40 @@
     let cacheHTMLGitHub = null;
 
     // =========================================================================
+    // ESCUDO ANTI-ROBO DE FOCO Y SCROLL (BLOQUEA TAMBIÉN SCRIPTS DE LA PÁGINA)
+    // =========================================================================
+    const focusOriginal = HTMLElement.prototype.focus;
+    const scrollOriginal = Element.prototype.scrollIntoView;
+    const windowScrollTo = window.scrollTo;
+    let bloqueoFocoActivo = false;
+
+    function activarEscudoFoco() {
+        if (bloqueoFocoActivo) return;
+        bloqueoFocoActivo = true;
+        const posX = window.scrollX;
+        const posY = window.scrollY;
+
+        HTMLElement.prototype.focus = function () {
+            // Ignorar cualquier intento de foco (de CodeMirror, campo_literal, botones, etc.)
+        };
+        Element.prototype.scrollIntoView = function () {
+            // Ignorar saltos de pantalla hacia los campos
+        };
+        window.scrollTo = function () {
+            // Mantener posición actual si la página intenta saltar arriba/abajo
+            return windowScrollTo.call(window, posX, posY);
+        };
+    }
+
+    function desactivarEscudoFoco() {
+        if (!bloqueoFocoActivo) return;
+        bloqueoFocoActivo = false;
+        HTMLElement.prototype.focus = focusOriginal;
+        Element.prototype.scrollIntoView = scrollOriginal;
+        window.scrollTo = windowScrollTo;
+    }
+
+    // =========================================================================
     // MÓDULO 1: AUTO-DESBLOQUEADOR Y LIMPIEZA AL GUARDAR
     // =========================================================================
     const ESPERA_MS = 300;
@@ -36,6 +70,7 @@
 
     function limpiarRastro() {
         cancelado = true;
+        desactivarEscudoFoco();
         document.removeEventListener('click', alHacerClic, true);
         document.removeEventListener('click', interceptarGuardar, true);
         timers.forEach(id => clearTimeout(id));
@@ -178,7 +213,7 @@
     }
 
     // =========================================================================
-    // MÓDULO 3: UTILIDADES (SIN ROBO DE FOCO NI SCROLL)
+    // MÓDULO 3: UTILIDADES
     // =========================================================================
     function showToast(message, type = 'info') {
         if (cancelado) return;
@@ -290,7 +325,7 @@
             !Array.from(el.children).some(h => norm(h.textContent) === respuesta));
 
         const antes = new Set(buscar());
-        campo.click(); // Sin scrollIntoView para no mover la pantalla
+        campo.click();
         await esperarHasta(() => buscar().some(el => !antes.has(el)), 1500);
 
         const nuevas = buscar().filter(el => !antes.has(el));
@@ -318,7 +353,6 @@
         if (liveCM && liveCM.CodeMirror) {
             const cm = liveCM.CodeMirror;
             cm.setValue(texto);
-            // Sin cm.focus() ni cm.setCursor() para no robar el foco de la ventana
             cm.getInputField().dispatchEvent(new KeyboardEvent('keydown', {
                 key: 'Enter', code: 'Enter', keyCode: 13, which: 13,
                 shiftKey: true, bubbles: true, cancelable: true
@@ -385,7 +419,6 @@
 
     function shiftEnterEn(el) {
         if (!el) return;
-        // Sin el.focus() para mantener la ejecución en segundo plano
         ['keydown', 'keyup'].forEach(tipo =>
             el.dispatchEvent(new KeyboardEvent(tipo, {
                 key: 'Enter', code: 'Enter', keyCode: 13, which: 13,
@@ -459,7 +492,7 @@
     // MÓDULO 5: INTERFAZ GRÁFICA
     // =========================================================================
     const metaActual = obtenerMetadatosCapitulo();
-    const etiquetaCap = metaActual ? `${metaActual.materia.toUpperCase()} - Cap ${metaActual.num}` : 'V32.5';
+    const etiquetaCap = metaActual ? `${metaActual.materia.toUpperCase()} - Cap ${metaActual.num}` : 'V32.6';
 
     const contenedorBotones = document.createElement('div');
     contenedorBotones.className = 'tm-inyectado';
@@ -509,6 +542,7 @@
     document.body.appendChild(inputFile);
 
     function resetearBtn() {
+        desactivarEscudoFoco();
         if (cancelado) return;
         btnGitHub.disabled = false;
         btnLocal.disabled = false;
@@ -521,6 +555,8 @@
     // MÓDULO 6: MOTOR CENTRAL DE INYECCIÓN
     // =========================================================================
     async function ejecutarInyeccionConHTML(htmlTexto) {
+        activarEscudoFoco();
+
         let doc;
         try {
             doc = new DOMParser().parseFromString(htmlTexto, 'text/html');
@@ -657,7 +693,7 @@
                             campo.textContent = norm(srcLit[k].textContent);
                             campo.dispatchEvent(new Event('input', { bubbles: true }));
                             campo.dispatchEvent(new KeyboardEvent('keyup', { bubbles: true }));
-                            campo.dispatchEvent(new Event('blur', { bubbles: true }));
+                            campo.dispatchEvent(new Event('change', { bubbles: true }));
                             await sleep(20);
                         }
 
