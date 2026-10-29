@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         Inyector Maestro V32.6 (GitHub Auto-Fetch + GoJS + Cero Foco/Scroll)
+// @name         Inyector Maestro V32.8 (Pestaña Oculta + 3 Modos de Selección)
 // @namespace    http://tampermonkey.net/
-// @version      32.6
-// @description  Descarga desde GitHub (mrc-dza/cap) o local. Bloquea robo de foco/scroll de la página y se limpia al Guardar.
+// @version      32.8
+// @description  Descarga desde GitHub (mrc-dza/cap) o local. Menú en pestaña semi-transparente, 3 modos (no iniciados / iniciados / todos), bloqueo de foco/scroll y autolimpieza al Guardar.
 // @author       Marcos
 // @match        https://cursosabiertos.usfx.bo/materias/*/capitulos/*
 // @grant        none
@@ -489,50 +489,121 @@
     }
 
     // =========================================================================
-    // MÓDULO 5: INTERFAZ GRÁFICA
+    // MÓDULO 5: INTERFAZ GRÁFICA (PESTAÑA DISCRETA + MENÚ DESPLEGABLE)
     // =========================================================================
     const metaActual = obtenerMetadatosCapitulo();
-    const etiquetaCap = metaActual ? `${metaActual.materia.toUpperCase()} - Cap ${metaActual.num}` : 'V32.6';
+    const etiquetaCap = metaActual ? `${metaActual.materia.toUpperCase()} - Cap ${metaActual.num}` : 'V32.8';
 
-    const contenedorBotones = document.createElement('div');
-    contenedorBotones.className = 'tm-inyectado';
-    Object.assign(contenedorBotones.style, {
-        position: 'fixed', bottom: '30px', right: '30px', zIndex: '9999', display: 'flex', gap: '8px', alignItems: 'center'
+    const contenedorRaiz = document.createElement('div');
+    contenedorRaiz.className = 'tm-inyectado';
+    Object.assign(contenedorRaiz.style, {
+        position: 'fixed', bottom: '28px', right: '0', zIndex: '9999',
+        display: 'flex', alignItems: 'center', fontFamily: 'system-ui, sans-serif'
     });
 
+    // Panel desplegable (oculto por defecto)
+    const panelMenu = document.createElement('div');
+    Object.assign(panelMenu.style, {
+        display: 'none', alignItems: 'center', gap: '8px',
+        background: 'rgba(15, 23, 42, 0.92)', backdropFilter: 'blur(6px)',
+        padding: '8px 12px', borderRadius: '14px 0 0 14px',
+        boxShadow: '0 4px 20px rgba(0,0,0,0.35)', border: '1px solid rgba(255,255,255,0.12)',
+        borderRight: 'none', marginRight: '0'
+    });
+
+    // Selector de alcance con los 3 modos
+    const selectModo = document.createElement('select');
+    selectModo.title = 'Elegir qué ejercicios inyectar';
+    Object.assign(selectModo.style, {
+        padding: '7px 10px', background: '#1e293b', color: '#e2e8f0',
+        border: '1px solid #475569', borderRadius: '8px', fontSize: '12px',
+        fontWeight: '500', cursor: 'pointer', outline: 'none'
+    });
+
+    const optNoIniciados = document.createElement('option');
+    optNoIniciados.value = 'no_iniciados';
+    optNoIniciados.textContent = 'Solo no iniciados';
+
+    const optIniciados = document.createElement('option');
+    optIniciados.value = 'iniciados';
+    optIniciados.textContent = 'Solo iniciados';
+
+    const optTodos = document.createElement('option');
+    optTodos.value = 'todos';
+    optTodos.textContent = 'Todos';
+
+    selectModo.appendChild(optNoIniciados);
+    selectModo.appendChild(optIniciados);
+    selectModo.appendChild(optTodos);
+
+    // Botón GitHub
     const btnGitHub = document.createElement('button');
-    const iconoDescarga = `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 6px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>`;
+    const iconoDescarga = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 5px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>`;
     const TEXTO_BTN = `${iconoDescarga}Inyectar (${etiquetaCap})`;
     btnGitHub.innerHTML = TEXTO_BTN;
     Object.assign(btnGitHub.style, {
-        display: 'flex', alignItems: 'center', padding: '10px 18px', background: '#2563eb', color: '#ffffff',
-        border: 'none', borderRadius: '50px', cursor: 'pointer', fontSize: '13px', fontWeight: '600',
-        fontFamily: 'system-ui, sans-serif', boxShadow: '0 4px 14px rgba(37, 99, 235, 0.4)', transition: 'all 0.2s ease'
+        display: 'flex', alignItems: 'center', padding: '8px 14px', background: '#2563eb', color: '#ffffff',
+        border: 'none', borderRadius: '8px', cursor: 'pointer', fontSize: '12px', fontWeight: '600',
+        whiteSpace: 'nowrap', transition: 'all 0.2s ease'
     });
 
+    // Botón Local
     const btnLocal = document.createElement('button');
     btnLocal.textContent = 'Local';
     btnLocal.title = 'Cargar archivo HTML manualmente desde tu PC';
     Object.assign(btnLocal.style, {
-        padding: '10px 14px', background: '#334155', color: 'white', border: 'none',
-        borderRadius: '50px', cursor: 'pointer', fontSize: '12px', fontWeight: '600',
-        fontFamily: 'system-ui, sans-serif', boxShadow: '0 4px 10px rgba(0,0,0,0.2)'
+        padding: '8px 12px', background: '#334155', color: 'white', border: 'none',
+        borderRadius: '8px', cursor: 'pointer', fontSize: '12px', fontWeight: '600'
     });
 
+    // Botón Cerrar definitivo (X)
     const btnCerrar = document.createElement('button');
-    btnCerrar.textContent = 'X';
+    btnCerrar.textContent = '✕';
     btnCerrar.title = 'Eliminar inyector de la página';
     Object.assign(btnCerrar.style, {
-        width: '34px', height: '34px', background: '#64748b', color: 'white', border: 'none',
-        borderRadius: '50%', cursor: 'pointer', fontSize: '12px', fontWeight: 'bold',
-        fontFamily: 'system-ui, sans-serif'
+        width: '28px', height: '28px', background: '#ef4444', color: 'white', border: 'none',
+        borderRadius: '8px', cursor: 'pointer', fontSize: '12px', fontWeight: 'bold',
+        display: 'flex', alignItems: 'center', justifyContent: 'center'
     });
     btnCerrar.addEventListener('click', limpiarRastro);
 
-    contenedorBotones.appendChild(btnGitHub);
-    contenedorBotones.appendChild(btnLocal);
-    contenedorBotones.appendChild(btnCerrar);
-    document.body.appendChild(contenedorBotones);
+    // Pestañita casi transparente para abrir/cerrar el menú
+    const btnPestana = document.createElement('button');
+    btnPestana.textContent = '‹';
+    btnPestana.title = 'Mostrar / ocultar menú inyector';
+    Object.assign(btnPestana.style, {
+        width: '18px', height: '38px', background: '#0f172a', color: '#ffffff',
+        border: '1px solid rgba(255,255,255,0.2)', borderRight: 'none',
+        borderRadius: '8px 0 0 8px', cursor: 'pointer', fontSize: '14px', fontWeight: 'bold',
+        display: 'flex', alignItems: 'center', justifyContent: 'center',
+        opacity: '0.22', transition: 'opacity 0.2s ease, background 0.2s ease',
+        padding: '0', userSelect: 'none'
+    });
+
+    let menuAbierto = false;
+    btnPestana.addEventListener('mouseenter', () => {
+        btnPestana.style.opacity = '0.85';
+    });
+    btnPestana.addEventListener('mouseleave', () => {
+        btnPestana.style.opacity = menuAbierto ? '0.75' : '0.22';
+    });
+
+    btnPestana.addEventListener('click', () => {
+        menuAbierto = !menuAbierto;
+        panelMenu.style.display = menuAbierto ? 'flex' : 'none';
+        btnPestana.textContent = menuAbierto ? '›' : '‹';
+        btnPestana.style.borderRadius = menuAbierto ? '0' : '8px 0 0 8px';
+        btnPestana.style.opacity = menuAbierto ? '0.75' : '0.22';
+    });
+
+    panelMenu.appendChild(selectModo);
+    panelMenu.appendChild(btnGitHub);
+    panelMenu.appendChild(btnLocal);
+    panelMenu.appendChild(btnCerrar);
+
+    contenedorRaiz.appendChild(panelMenu);
+    contenedorRaiz.appendChild(btnPestana);
+    document.body.appendChild(contenedorRaiz);
 
     const inputFile = document.createElement('input');
     inputFile.className = 'tm-inyectado';
@@ -546,6 +617,7 @@
         if (cancelado) return;
         btnGitHub.disabled = false;
         btnLocal.disabled = false;
+        selectModo.disabled = false;
         btnGitHub.innerHTML = TEXTO_BTN;
         btnGitHub.style.opacity = '1';
         btnGitHub.style.cursor = 'pointer';
@@ -556,6 +628,8 @@
     // =========================================================================
     async function ejecutarInyeccionConHTML(htmlTexto) {
         activarEscudoFoco();
+
+        const modo = selectModo.value; // 'no_iniciados' | 'iniciados' | 'todos'
 
         let doc;
         try {
@@ -591,15 +665,28 @@
             const id = ejActual.id;
             if (!id) continue;
 
-            // RESTRICCIÓN AL INICIO: Si ya tiene btRepetir (o no tiene btGenerar), se salta
             const btnGenInicial = ejActual.querySelector('.btGenerar');
             const btnRepInicial = ejActual.querySelector('.btRepetir');
-            const tieneRepetirActivo = btnRepInicial && esVisible(btnRepInicial);
-            const tieneGenerarActivo = btnGenInicial && esVisible(btnGenInicial);
+            const tieneRepetirActivo = !!(btnRepInicial && esVisible(btnRepInicial));
+            const tieneGenerarActivo = !!(btnGenInicial && esVisible(btnGenInicial));
 
-            if (tieneRepetirActivo || !tieneGenerarActivo) {
-                omitidos++;
-                continue;
+            // Filtro según los 3 modos:
+            if (modo === 'no_iniciados') {
+                if (tieneRepetirActivo || !tieneGenerarActivo) {
+                    omitidos++;
+                    continue;
+                }
+            } else if (modo === 'iniciados') {
+                if (!tieneRepetirActivo) {
+                    omitidos++;
+                    continue;
+                }
+            } else {
+                // modo === 'todos'
+                if (!tieneGenerarActivo && !tieneRepetirActivo) {
+                    omitidos++;
+                    continue;
+                }
             }
 
             btnGitHub.innerHTML = `${iconoDescarga}Procesando ${i + 1}/${liveEjercicios.length}...`;
@@ -607,7 +694,11 @@
             for (let intento = 0; intento < MAX_INTENTOS; intento++) {
                 if (cancelado) return;
 
-                const botonAccion = (intento === 0) ? ejActual.querySelector('.btGenerar') : ejActual.querySelector('.btRepetir');
+                const btnGen = ejActual.querySelector('.btGenerar');
+                const btnRep = ejActual.querySelector('.btRepetir');
+                const usarGenerar = (intento === 0 && btnGen && esVisible(btnGen) && !(btnRep && esVisible(btnRep)));
+                const botonAccion = usarGenerar ? btnGen : btnRep;
+
                 if (botonAccion) {
                     const antesHTML = ejActual.innerHTML;
                     botonAccion.click();
@@ -765,7 +856,10 @@
         }
 
         if (reemplazados === 0 && omitidos > 0) {
-            showToast(`No se inyectó nada: ${omitidos} ejercicios ya estaban iniciados.`, 'info');
+            const motivo = modo === 'no_iniciados'
+                ? 'ya estaban iniciados'
+                : (modo === 'iniciados' ? 'ninguno estaba iniciado' : 'sin botones activos');
+            showToast(`No se inyectó nada: ${omitidos} ejercicios omitidos (${motivo}).`, 'info');
             resetearBtn();
             return;
         }
@@ -791,6 +885,7 @@
 
         btnGitHub.disabled = true;
         btnLocal.disabled = true;
+        selectModo.disabled = true;
         btnGitHub.innerHTML = `${iconoDescarga}Buscando en GitHub...`;
         btnGitHub.style.opacity = '0.7';
 
@@ -814,6 +909,7 @@
 
         btnGitHub.disabled = true;
         btnLocal.disabled = true;
+        selectModo.disabled = true;
         btnGitHub.innerHTML = `${iconoDescarga}Leyendo archivo...`;
         btnGitHub.style.opacity = '0.7';
 
