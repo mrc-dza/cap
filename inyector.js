@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         Inyector Maestro V32.8 (Pestaña Oculta + 3 Modos de Selección)
+// @name         Inyector Maestro V32.9 (Diseño Rectangular + Botón Pildorita)
 // @namespace    http://tampermonkey.net/
-// @version      32.8
-// @description  Descarga desde GitHub (mrc-dza/cap) o local. Menú en pestaña semi-transparente, 3 modos (no iniciados / iniciados / todos), bloqueo de foco/scroll y autolimpieza al Guardar.
+// @version      32.9
+// @description  Descarga desde GitHub (mrc-dza/cap) o local. Panel rectangular, botón circular azul, sección de capítulo separada y 3 modos de selección.
 // @author       Marcos
 // @match        https://cursosabiertos.usfx.bo/materias/*/capitulos/*
 // @grant        none
@@ -28,7 +28,7 @@
     let cacheHTMLGitHub = null;
 
     // =========================================================================
-    // ESCUDO ANTI-ROBO DE FOCO Y SCROLL (BLOQUEA TAMBIÉN SCRIPTS DE LA PÁGINA)
+    // ESCUDO ANTI-ROBO DE FOCO Y SCROLL
     // =========================================================================
     const focusOriginal = HTMLElement.prototype.focus;
     const scrollOriginal = Element.prototype.scrollIntoView;
@@ -41,14 +41,9 @@
         const posX = window.scrollX;
         const posY = window.scrollY;
 
-        HTMLElement.prototype.focus = function () {
-            // Ignorar cualquier intento de foco (de CodeMirror, campo_literal, botones, etc.)
-        };
-        Element.prototype.scrollIntoView = function () {
-            // Ignorar saltos de pantalla hacia los campos
-        };
+        HTMLElement.prototype.focus = function () {};
+        Element.prototype.scrollIntoView = function () {};
         window.scrollTo = function () {
-            // Mantener posición actual si la página intenta saltar arriba/abajo
             return windowScrollTo.call(window, posX, posY);
         };
     }
@@ -224,7 +219,7 @@
         toast.textContent = message;
         Object.assign(toast.style, {
             position: 'fixed', bottom: '20px', left: '50%', transform: 'translateX(-50%) translateY(100px)',
-            background: colors[type] || colors.info, color: 'white', padding: '12px 24px', borderRadius: '8px',
+            background: colors[type] || colors.info, color: 'white', padding: '12px 24px', borderRadius: '0px',
             fontFamily: 'system-ui, sans-serif', fontSize: '14px', fontWeight: '500',
             boxShadow: '0 4px 15px rgba(0,0,0,0.2)', zIndex: '10000', opacity: '0',
             transition: 'all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)'
@@ -489,10 +484,10 @@
     }
 
     // =========================================================================
-    // MÓDULO 5: INTERFAZ GRÁFICA (PESTAÑA DISCRETA + MENÚ DESPLEGABLE)
+    // MÓDULO 5: INTERFAZ GRÁFICA (PANEL RECTANGULAR + BOTÓN PILDORITA)
     // =========================================================================
     const metaActual = obtenerMetadatosCapitulo();
-    const etiquetaCap = metaActual ? `${metaActual.materia.toUpperCase()} - Cap ${metaActual.num}` : 'V32.8';
+    const etiquetaCap = metaActual ? `${metaActual.materia.toUpperCase()} · Cap ${metaActual.num}` : 'V32.9';
 
     const contenedorRaiz = document.createElement('div');
     contenedorRaiz.className = 'tm-inyectado';
@@ -501,22 +496,37 @@
         display: 'flex', alignItems: 'center', fontFamily: 'system-ui, sans-serif'
     });
 
-    // Panel desplegable (oculto por defecto)
+    // Panel rectangular puro (sin esquinas redondeadas)
     const panelMenu = document.createElement('div');
     Object.assign(panelMenu.style, {
-        display: 'none', alignItems: 'center', gap: '8px',
-        background: 'rgba(15, 23, 42, 0.92)', backdropFilter: 'blur(6px)',
-        padding: '8px 12px', borderRadius: '14px 0 0 14px',
-        boxShadow: '0 4px 20px rgba(0,0,0,0.35)', border: '1px solid rgba(255,255,255,0.12)',
+        display: 'none', flexDirection: 'column', gap: '8px',
+        background: 'rgba(15, 23, 42, 0.95)', backdropFilter: 'blur(6px)',
+        padding: '10px 12px', borderRadius: '0px',
+        boxShadow: '0 4px 20px rgba(0,0,0,0.4)', border: '1px solid rgba(255,255,255,0.15)',
         borderRight: 'none', marginRight: '0'
+    });
+
+    // Sección independiente para la información de la materia y capítulo
+    const seccionInfo = document.createElement('div');
+    seccionInfo.textContent = etiquetaCap;
+    Object.assign(seccionInfo.style, {
+        background: '#1e293b', color: '#38bdf8', padding: '5px 8px',
+        fontSize: '11px', fontWeight: '700', textAlign: 'center',
+        border: '1px solid #334155', borderRadius: '0px', letterSpacing: '0.5px'
+    });
+
+    // Contenedor horizontal para los controles (Select, Botones)
+    const filaControles = document.createElement('div');
+    Object.assign(filaControles.style, {
+        display: 'flex', alignItems: 'center', gap: '6px'
     });
 
     // Selector de alcance con los 3 modos
     const selectModo = document.createElement('select');
-    selectModo.title = 'Elegir qué ejercicios inyectar';
+    selectModo.title = 'Modo de inyección';
     Object.assign(selectModo.style, {
-        padding: '7px 10px', background: '#1e293b', color: '#e2e8f0',
-        border: '1px solid #475569', borderRadius: '8px', fontSize: '12px',
+        padding: '6px 8px', background: '#1e293b', color: '#e2e8f0',
+        border: '1px solid #475569', borderRadius: '0px', fontSize: '11px',
         fontWeight: '500', cursor: 'pointer', outline: 'none'
     });
 
@@ -536,33 +546,34 @@
     selectModo.appendChild(optIniciados);
     selectModo.appendChild(optTodos);
 
-    // Botón GitHub
+    // Botón GitHub en pildorita redonda azul (solo icono)
     const btnGitHub = document.createElement('button');
-    const iconoDescarga = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 5px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>`;
-    const TEXTO_BTN = `${iconoDescarga}Inyectar (${etiquetaCap})`;
-    btnGitHub.innerHTML = TEXTO_BTN;
+    const iconoDescarga = `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>`;
+    btnGitHub.innerHTML = iconoDescarga;
+    btnGitHub.title = `Inyectar capítulo (${etiquetaCap})`;
     Object.assign(btnGitHub.style, {
-        display: 'flex', alignItems: 'center', padding: '8px 14px', background: '#2563eb', color: '#ffffff',
-        border: 'none', borderRadius: '8px', cursor: 'pointer', fontSize: '12px', fontWeight: '600',
-        whiteSpace: 'nowrap', transition: 'all 0.2s ease'
+        display: 'flex', alignItems: 'center', justifyContent: 'center',
+        width: '32px', height: '32px', background: '#2563eb', color: '#ffffff',
+        border: 'none', borderRadius: '50%', cursor: 'pointer',
+        boxShadow: '0 2px 8px rgba(37, 99, 235, 0.4)', transition: 'all 0.2s ease', padding: '0'
     });
 
     // Botón Local
     const btnLocal = document.createElement('button');
     btnLocal.textContent = 'Local';
-    btnLocal.title = 'Cargar archivo HTML manualmente desde tu PC';
+    btnLocal.title = 'Cargar archivo HTML desde PC';
     Object.assign(btnLocal.style, {
-        padding: '8px 12px', background: '#334155', color: 'white', border: 'none',
-        borderRadius: '8px', cursor: 'pointer', fontSize: '12px', fontWeight: '600'
+        padding: '6px 10px', background: '#334155', color: 'white', border: 'none',
+        borderRadius: '0px', cursor: 'pointer', fontSize: '11px', fontWeight: '600'
     });
 
-    // Botón Cerrar definitivo (X)
+    // Botón Cerrar (X)
     const btnCerrar = document.createElement('button');
     btnCerrar.textContent = '✕';
-    btnCerrar.title = 'Eliminar inyector de la página';
+    btnCerrar.title = 'Cerrar inyector';
     Object.assign(btnCerrar.style, {
-        width: '28px', height: '28px', background: '#ef4444', color: 'white', border: 'none',
-        borderRadius: '8px', cursor: 'pointer', fontSize: '12px', fontWeight: 'bold',
+        width: '26px', height: '26px', background: '#ef4444', color: 'white', border: 'none',
+        borderRadius: '0px', cursor: 'pointer', fontSize: '11px', fontWeight: 'bold',
         display: 'flex', alignItems: 'center', justifyContent: 'center'
     });
     btnCerrar.addEventListener('click', limpiarRastro);
@@ -570,36 +581,34 @@
     // Pestañita casi transparente para abrir/cerrar el menú
     const btnPestana = document.createElement('button');
     btnPestana.textContent = '‹';
-    btnPestana.title = 'Mostrar / ocultar menú inyector';
+    btnPestana.title = 'Mostrar / ocultar panel';
     Object.assign(btnPestana.style, {
-        width: '18px', height: '38px', background: '#0f172a', color: '#ffffff',
+        width: '16px', height: '36px', background: '#0f172a', color: '#ffffff',
         border: '1px solid rgba(255,255,255,0.2)', borderRight: 'none',
-        borderRadius: '8px 0 0 8px', cursor: 'pointer', fontSize: '14px', fontWeight: 'bold',
+        borderRadius: '0px', cursor: 'pointer', fontSize: '14px', fontWeight: 'bold',
         display: 'flex', alignItems: 'center', justifyContent: 'center',
         opacity: '0.22', transition: 'opacity 0.2s ease, background 0.2s ease',
         padding: '0', userSelect: 'none'
     });
 
     let menuAbierto = false;
-    btnPestana.addEventListener('mouseenter', () => {
-        btnPestana.style.opacity = '0.85';
-    });
-    btnPestana.addEventListener('mouseleave', () => {
-        btnPestana.style.opacity = menuAbierto ? '0.75' : '0.22';
-    });
+    btnPestana.addEventListener('mouseenter', () => { btnPestana.style.opacity = '0.85'; });
+    btnPestana.addEventListener('mouseleave', () => { btnPestana.style.opacity = menuAbierto ? '0.75' : '0.22'; });
 
     btnPestana.addEventListener('click', () => {
         menuAbierto = !menuAbierto;
         panelMenu.style.display = menuAbierto ? 'flex' : 'none';
         btnPestana.textContent = menuAbierto ? '›' : '‹';
-        btnPestana.style.borderRadius = menuAbierto ? '0' : '8px 0 0 8px';
         btnPestana.style.opacity = menuAbierto ? '0.75' : '0.22';
     });
 
-    panelMenu.appendChild(selectModo);
-    panelMenu.appendChild(btnGitHub);
-    panelMenu.appendChild(btnLocal);
-    panelMenu.appendChild(btnCerrar);
+    filaControles.appendChild(selectModo);
+    filaControles.appendChild(btnGitHub);
+    filaControles.appendChild(btnLocal);
+    filaControles.appendChild(btnCerrar);
+
+    panelMenu.appendChild(seccionInfo);
+    panelMenu.appendChild(filaControles);
 
     contenedorRaiz.appendChild(panelMenu);
     contenedorRaiz.appendChild(btnPestana);
@@ -618,18 +627,18 @@
         btnGitHub.disabled = false;
         btnLocal.disabled = false;
         selectModo.disabled = false;
-        btnGitHub.innerHTML = TEXTO_BTN;
+        btnGitHub.innerHTML = iconoDescarga;
         btnGitHub.style.opacity = '1';
         btnGitHub.style.cursor = 'pointer';
     }
 
     // =========================================================================
-    // MÓDULO 6: MOTOR CENTRAL DE INYECCIÓN
+    // MÓDULO 6: MOTOR CENTRAL DE INYECCIÓN (INTACTO)
     // =========================================================================
     async function ejecutarInyeccionConHTML(htmlTexto) {
         activarEscudoFoco();
 
-        const modo = selectModo.value; // 'no_iniciados' | 'iniciados' | 'todos'
+        const modo = selectModo.value;
 
         let doc;
         try {
@@ -670,7 +679,6 @@
             const tieneRepetirActivo = !!(btnRepInicial && esVisible(btnRepInicial));
             const tieneGenerarActivo = !!(btnGenInicial && esVisible(btnGenInicial));
 
-            // Filtro según los 3 modos:
             if (modo === 'no_iniciados') {
                 if (tieneRepetirActivo || !tieneGenerarActivo) {
                     omitidos++;
@@ -682,14 +690,13 @@
                     continue;
                 }
             } else {
-                // modo === 'todos'
                 if (!tieneGenerarActivo && !tieneRepetirActivo) {
                     omitidos++;
                     continue;
                 }
             }
 
-            btnGitHub.innerHTML = `${iconoDescarga}Procesando ${i + 1}/${liveEjercicios.length}...`;
+            btnGitHub.innerHTML = `<span style="font-size:10px; font-weight:bold;">${i + 1}</span>`;
 
             for (let intento = 0; intento < MAX_INTENTOS; intento++) {
                 if (cancelado) return;
@@ -724,7 +731,6 @@
                 const btnCorregir = ejActual.querySelector('.btCorregir, #btCorregir');
 
                 if (ejResuelto) {
-                    // A) CALCULADORAS: diagramas y celdas de código
                     const liveCalculadoras = Array.from(ejActual.querySelectorAll('.calculadora'));
                     const sourceCalculadoras = Array.from(ejResuelto.querySelectorAll('.calculadora'));
 
@@ -774,7 +780,6 @@
                         continue;
                     }
 
-                    // B) CAMPOS (literal, arrastrar, dato, opción múltiple)
                     if (tieneCampos && !cancelado) {
                         const srcLit = ejResuelto.querySelectorAll('.campo_literal');
                         const liveLit = ejActual.querySelectorAll('.campo_literal');
@@ -811,7 +816,6 @@
                         });
                     }
 
-                    // C) INPUTS DE TEXTO REGULARES
                     const sourceInputs = ejResuelto.querySelectorAll('input[type="text"]:not(.notas):not(.ittiempo)');
                     const liveInputs = ejActual.querySelectorAll('input[type="text"]:not(.notas):not(.ittiempo)');
                     liveInputs.forEach((input, index) => {
@@ -824,7 +828,6 @@
 
                     await sleep(100);
 
-                    // D) CORREGIR
                     if (btnCorregir && !cancelado) {
                         btnCorregir.removeAttribute('disabled');
                         btnCorregir.disabled = false;
@@ -856,9 +859,7 @@
         }
 
         if (reemplazados === 0 && omitidos > 0) {
-            const motivo = modo === 'no_iniciados'
-                ? 'ya estaban iniciados'
-                : (modo === 'iniciados' ? 'ninguno estaba iniciado' : 'sin botones activos');
+            const motivo = modo === 'no_iniciados' ? 'ya estaban iniciados' : (modo === 'iniciados' ? 'ninguno estaba iniciado' : 'sin botones activos');
             showToast(`No se inyectó nada: ${omitidos} ejercicios omitidos (${motivo}).`, 'info');
             resetearBtn();
             return;
@@ -886,7 +887,7 @@
         btnGitHub.disabled = true;
         btnLocal.disabled = true;
         selectModo.disabled = true;
-        btnGitHub.innerHTML = `${iconoDescarga}Buscando en GitHub...`;
+        btnGitHub.innerHTML = `<span style="font-size:10px; font-weight:bold;">...</span>`;
         btnGitHub.style.opacity = '0.7';
 
         try {
@@ -910,7 +911,7 @@
         btnGitHub.disabled = true;
         btnLocal.disabled = true;
         selectModo.disabled = true;
-        btnGitHub.innerHTML = `${iconoDescarga}Leyendo archivo...`;
+        btnGitHub.innerHTML = `<span style="font-size:10px; font-weight:bold;">...</span>`;
         btnGitHub.style.opacity = '0.7';
 
         const reader = new FileReader();
