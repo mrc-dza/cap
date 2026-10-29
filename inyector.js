@@ -1,4 +1,4 @@
-8// ==UserScript==
+// ==UserScript==
 // @name         Inyector Maestro V32.10 (Filtro por Nota < 100 en Iniciados)
 // @namespace    http://tampermonkey.net/
 // @version      32.10
