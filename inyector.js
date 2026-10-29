@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         Inyector Maestro V32.9 (Diseño Rectangular + Botón Pildorita)
+// @name         Inyector Maestro V32.10 (Filtro por Nota < 100 en Iniciados)
 // @namespace    http://tampermonkey.net/
-// @version      32.9
-// @description  Descarga desde GitHub (mrc-dza/cap) o local. Panel rectangular, botón circular azul, sección de capítulo separada y 3 modos de selección.
+// @version      32.10
+// @description  Descarga desde GitHub (mrc-dza/cap) o local. Panel rectangular, botón pildorita, y en modo "iniciados" solo reinyecta si la nota es menor a 100.
 // @author       Marcos
 // @match        https://cursosabiertos.usfx.bo/materias/*/capitulos/*
 // @grant        none
@@ -487,7 +487,7 @@
     // MÓDULO 5: INTERFAZ GRÁFICA (PANEL RECTANGULAR + BOTÓN PILDORITA)
     // =========================================================================
     const metaActual = obtenerMetadatosCapitulo();
-    const etiquetaCap = metaActual ? `${metaActual.materia.toUpperCase()} · Cap ${metaActual.num}` : 'V32.9';
+    const etiquetaCap = metaActual ? `${metaActual.materia.toUpperCase()} · Cap ${metaActual.num}` : 'V32.10';
 
     const contenedorRaiz = document.createElement('div');
     contenedorRaiz.className = 'tm-inyectado';
@@ -496,7 +496,6 @@
         display: 'flex', alignItems: 'center', fontFamily: 'system-ui, sans-serif'
     });
 
-    // Panel rectangular puro (sin esquinas redondeadas)
     const panelMenu = document.createElement('div');
     Object.assign(panelMenu.style, {
         display: 'none', flexDirection: 'column', gap: '8px',
@@ -506,7 +505,6 @@
         borderRight: 'none', marginRight: '0'
     });
 
-    // Sección independiente para la información de la materia y capítulo
     const seccionInfo = document.createElement('div');
     seccionInfo.textContent = etiquetaCap;
     Object.assign(seccionInfo.style, {
@@ -515,13 +513,11 @@
         border: '1px solid #334155', borderRadius: '0px', letterSpacing: '0.5px'
     });
 
-    // Contenedor horizontal para los controles (Select, Botones)
     const filaControles = document.createElement('div');
     Object.assign(filaControles.style, {
         display: 'flex', alignItems: 'center', gap: '6px'
     });
 
-    // Selector de alcance con los 3 modos
     const selectModo = document.createElement('select');
     selectModo.title = 'Modo de inyección';
     Object.assign(selectModo.style, {
@@ -536,7 +532,7 @@
 
     const optIniciados = document.createElement('option');
     optIniciados.value = 'iniciados';
-    optIniciados.textContent = 'Solo iniciados';
+    optIniciados.textContent = 'Solo iniciados (<100)';
 
     const optTodos = document.createElement('option');
     optTodos.value = 'todos';
@@ -546,7 +542,6 @@
     selectModo.appendChild(optIniciados);
     selectModo.appendChild(optTodos);
 
-    // Botón GitHub en pildorita redonda azul (solo icono)
     const btnGitHub = document.createElement('button');
     const iconoDescarga = `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>`;
     btnGitHub.innerHTML = iconoDescarga;
@@ -558,7 +553,6 @@
         boxShadow: '0 2px 8px rgba(37, 99, 235, 0.4)', transition: 'all 0.2s ease', padding: '0'
     });
 
-    // Botón Local
     const btnLocal = document.createElement('button');
     btnLocal.textContent = 'Local';
     btnLocal.title = 'Cargar archivo HTML desde PC';
@@ -567,7 +561,6 @@
         borderRadius: '0px', cursor: 'pointer', fontSize: '11px', fontWeight: '600'
     });
 
-    // Botón Cerrar (X)
     const btnCerrar = document.createElement('button');
     btnCerrar.textContent = '✕';
     btnCerrar.title = 'Cerrar inyector';
@@ -578,7 +571,6 @@
     });
     btnCerrar.addEventListener('click', limpiarRastro);
 
-    // Pestañita casi transparente para abrir/cerrar el menú
     const btnPestana = document.createElement('button');
     btnPestana.textContent = '‹';
     btnPestana.title = 'Mostrar / ocultar panel';
@@ -587,7 +579,7 @@
         border: '1px solid rgba(255,255,255,0.2)', borderRight: 'none',
         borderRadius: '0px', cursor: 'pointer', fontSize: '14px', fontWeight: 'bold',
         display: 'flex', alignItems: 'center', justifyContent: 'center',
-        opacity: '0.1', transition: 'opacity 0.2s ease, background 0.2s ease',
+        opacity: '0.22', transition: 'opacity 0.2s ease, background 0.2s ease',
         padding: '0', userSelect: 'none'
     });
 
@@ -633,7 +625,7 @@
     }
 
     // =========================================================================
-    // MÓDULO 6: MOTOR CENTRAL DE INYECCIÓN (INTACTO)
+    // MÓDULO 6: MOTOR CENTRAL DE INYECCIÓN CON FILTRO DE NOTA < 100
     // =========================================================================
     async function ejecutarInyeccionConHTML(htmlTexto) {
         activarEscudoFoco();
@@ -679,17 +671,24 @@
             const tieneRepetirActivo = !!(btnRepInicial && esVisible(btnRepInicial));
             const tieneGenerarActivo = !!(btnGenInicial && esVisible(btnGenInicial));
 
+            // Leer nota actual del ejercicio si la tuviera registrada
+            const inputNota = ejActual.querySelector('input.notas');
+            const notaActual = inputNota ? parseFloat(inputNota.value || inputNota.getAttribute('value') || '0') : 0;
+
+            // Filtrado según el modo seleccionado
             if (modo === 'no_iniciados') {
                 if (tieneRepetirActivo || !tieneGenerarActivo) {
                     omitidos++;
                     continue;
                 }
             } else if (modo === 'iniciados') {
-                if (!tieneRepetirActivo) {
+                // Solo iniciados: debe tener botón repetir activo Y su nota debe ser menor a 100
+                if (!tieneRepetirActivo || notaActual >= 100) {
                     omitidos++;
                     continue;
                 }
             } else {
+                // Todos
                 if (!tieneGenerarActivo && !tieneRepetirActivo) {
                     omitidos++;
                     continue;
@@ -788,7 +787,7 @@
                             const campo = liveLit[k];
                             campo.textContent = norm(srcLit[k].textContent);
                             campo.dispatchEvent(new Event('input', { bubbles: true }));
-                            campo.dispatchEvent(new KeyboardEvent('keyup', { bubbles: true }));
+                            campo.dispatchEvent(new Event('keyboard', { bubbles: true }));
                             campo.dispatchEvent(new Event('change', { bubbles: true }));
                             await sleep(20);
                         }
@@ -859,7 +858,7 @@
         }
 
         if (reemplazados === 0 && omitidos > 0) {
-            const motivo = modo === 'no_iniciados' ? 'ya estaban iniciados' : (modo === 'iniciados' ? 'ninguno estaba iniciado' : 'sin botones activos');
+            const motivo = modo === 'no_iniciados' ? 'ya estaban iniciados' : (modo === 'iniciados' ? 'todos los iniciados ya tienen nota 100' : 'sin botones activos');
             showToast(`No se inyectó nada: ${omitidos} ejercicios omitidos (${motivo}).`, 'info');
             resetearBtn();
             return;
