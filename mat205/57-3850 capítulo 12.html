@@ -1,0 +1,1496 @@
+<!DOCTYPE html>
+<head>
+
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Language" content="es">
+  
+    <title>57-3850 capítulo 12</title>
+
+  
+    <!-- Librería y hoja de estilos KATEX  -->
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/katex/katex.min.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/katex/katex.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/katex/contrib/auto-render.min.js"></script>
+
+    <!-- Librerías y hojas de estilo CodeMirror -->
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/lib/codemirror.min.css">
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/theme/mdn-like.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/lib/codemirror.min.js"></script>
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/fold/foldgutter.min.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/fold/foldcode.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/fold/brace-fold.min.js"></script>
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/dialog/dialog.min.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/dialog/dialog.min.js"></script>
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/hint/show-hint.min.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/hint/show-hint.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/hint/javascript-hint.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/search/searchcursor.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/search/search.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/edit/matchbrackets.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/edit/closebrackets.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/comment/comment.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/wrap/hardwrap.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/javascript/javascript.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/mathematica/mathematica.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/octave/octave.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/python/python.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/css/css.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/xml/xml.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/markdown/markdown.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/htmlmixed/htmlmixed.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/keymap/sublime.min.js"></script>
+    
+    <!-- Librería Plotly -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script><style id="plotly.js-style-global"></style>
+
+    <!-- Librerías y hojas de estilo function-plot -->
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/function-plot/site/js/vendor/d3.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/function-plot/dist/function-plot.js"></script>
+    
+    <!-- Librería quantities -->
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/quantities/quantities.min.js"></script>
+
+    <!-- Librería GoJs para la creación de diagramas de flujo -->
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/gojs/release/go.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/flowchart_gojs.js"></script>
+
+    <!-- Librerías matemáticas propias -->
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/math.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/number.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/array.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/string.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/cplx.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/function.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/object.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/prq.js"></script>
+
+    <!-- Librería y hoja de estilos propias para la creación y manejo de la calculadora  -->
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/src/cjs.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/cjs.js"></script>
+
+    <!-- Librería y hoja de estilos propias para la creación y manejo de los capítulos -->
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/src/texto.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/texto.js"></script>
+
+   <!-- Librería del capítulo actual -->
+    <script src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo12/files/capitulo12.js"></script>
+
+    <!-- Fuentes empleadas en el capítulo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;600;700;800&amp;family=Roboto+Mono&amp;display=swap" rel="stylesheet">
+
+    <script>
+        function katexRender() {
+            renderMathInElement(document.getElementById("capitulo"));
+        }
+        document.addEventListener("DOMContentLoaded", katexRender);
+        window.onerror = function(msg, url, lineNo, columnNo, error) {
+            __error__ = msg;
+        };
+        window.onload = function(){
+            capitulo.iniciar();
+        };
+    </script>
+
+</head>
+
+<body class="text">  
+
+
+<div id="capitulo">
+
+    <button id="btGuardar" style="z-index:15;" onclick="savePage()">Guardar</button>
+
+        
+
+    <h1 class="text" onclick="alerta(capitulo.idPagina,'')" style="cursor: pointer;">Ecuaciones Diferenciales</h1>
+    
+    <p class="text">Con frecuencia, los modelos matemáticos en ingeniería, involucran ecuaciones diferenciales. Una ecuación diferencial ordinaria de enésimo orden puede ser representada de la siguiente manera:</p>
+    
+    <table id="ec_1" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                y^n = f\left(x,~y,~y^{\prime},~y^{\prime\prime},~y^{\prime\prime\prime},~\cdots,~y^{n-1}\right)                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">Donde <dfn class="style1">x</dfn> es la variable independiente, <dfn class="style1">y</dfn> la variable dependiente, <dfn class="style1">y'</dfn>, <dfn class="style1">y''</dfn>, etc., son la derivada primera: <dfn class="style1">y'=dy/dx</dfn>; segunda: <dfn class="style1">y''=d<sup>2</sup>y/dx<sup>2</sup></dfn>, etc.</p>
+
+    <p class="text">Generalmente, cuando se trabaja con ecuaciones diferenciales, la variable independiente se representa por la letra <dfn class="style1">t</dfn> porque, en la mayoría de los casos, la variable independiente es el tiempo, sin embargo, en este capítulo, se ha optado por seguir empleando la variable "x", para representar la variable independiente.</p>
+    
+    <p class="text">Las ecuaciones diferenciales se resuelven porque, en la solución de problemas prácticos, es necesario calcular valores de la variable dependiente (<dfn class="style1">y</dfn>), para valores conocidos de la variable independiente (<dfn class="style1">x</dfn>).</p>
+    
+    <p class="text">En el caso de las ecuaciones diferenciales este cálculo no es directo, porque se desconoce la forma que tiene la función original (la ecuación <dfn class="style1">y = f(x)</dfn>), siendo esa justamente la solución que se busca al resolver la ecuación diferencial.</p>
+    
+    <p class="text">No obstante, la mayoría de las ecuaciones diferenciales de aplicación práctica, son demasiado complejas como para ser resueltas analíticamente. Esto sumado a lo moroso de los procesos analíticos y a la infinidad de posibles casos, hace que, en aplicaciones reales, sean resueltas casi exclusivamente empleando métodos numéricos.</p>
+    
+    <p class="text">El encontrar la forma de la función analítica (la forma de la ecuación y = f(x)) es complejo porque una misma función puede dar lugar a un infinito número de ecuaciones diferenciales. Para ilustrar este hecho, se puede tomar como ejemplo, la siguiente función:</p>
+    
+    <table id="ec_2" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                y = f(x) = 3x^3+2x^2+5x                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">Cuyas derivadas primera, segunda y tercera son:</p>
+    
+    <table class="ecuacionsn" style="margin-left:1cm; width:calc(100% - 1cm)">
+        <tbody><tr>
+            <td>
+                \[                \begin{aligned}                y^{\prime} &amp;= 9x^2+4x+5\\                y^{\prime\prime} &amp;= 18x+4\\                y^{\prime\prime\prime} &amp;= 18                \end{aligned}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">Con estas derivadas y la función original se pueden generar, por ejemplo, las siguientes ecuaciones diferenciales:</p>
+    
+    <table class="ecuacionsn" style="margin-left:1cm; width:calc(100% - 1cm)">
+        <tbody><tr>
+            <td>
+                \[                \begin{gathered}                \begin{aligned}                2xy^{\prime}+3y^{\prime\prime}&amp;=2x(9x^2+4x)+3(18x+4)\\                &amp;=18x^3+10x+54x+12                \end{aligned}\\                2xy^{\prime}+3y^{\prime\prime}-18x^3-64x-12 = 0\\[7mm]                \begin{aligned}                3yy^{\prime\prime\prime}-2y^{\prime\prime}&amp;=3y(18)-2(18x+4)-36x-8\\                &amp;=54y-36x-8                \end{aligned}\\                3yy^{\prime\prime\prime}-2y^{\prime\prime}-54y+36x+8 = 0                \end{gathered}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">La solución de estas ecuaciones diferenciales, aparentemente muy diferentes y sin relación alguna, es la misma: (la ecuación original: <a href="#ec_2">ecuación 2</a>). Se puede generar un número infinito de ecuaciones diferenciales en base a esta ecuación y la solución de todas ellas seguiría siendo la ecuación original (la <a href="#ec_2">ecuación 2</a>).</p>
+    
+    <p class="text">Por supuesto, en un caso real, no se cuenta con la función original (pues si así fuera, no habría necesidad de resolver la ecuación diferencial).</p>
+    
+    <p class="text">Como se dijo, con los métodos analíticos se busca deducir la la ecuación original, mientras que con los métodos numéricos se busca calcular, de manera aproximada, el valor de la variable dependiente para valores conocidos de la variable independiente (sin resolver propiamente la ecuación diferencial).</p>
+
+
+
+
+
+    <h2 class="text">Problemas del valor inicial y problemas del valor límite</h2>
+    
+    <p class="text">En general al resolver ecuaciones diferenciales ordinarias se presentan dos tipos de problemas:</p>
+    
+    <p class="text"><i class="style1">Problemas del valor inicial</i>: en este caso se conoce el valor de la variable dependiente y de todas sus derivadas, para un valor inicial conocido de la variable independiente.</p>
+    
+    <p class="text"><i class="style1">Problemas del valor límite</i>: en este caso se conocen algunos valores de la variable dependiente y de sus derivadas, para un valor conocido (inicial) de la variable independiente, mientras que se conocen los valores restantes para otro valor conocido (final) de la variable independiente.</p>
+    
+    <p class="text">Los métodos que se estudian en este tema permiten resolver problemas del valor inicial. Estos métodos combinados con métodos iterativos (como el de Newton – Raphson) permiten resolver también los problemas del valor límite, aunque, para los problemas del valor límite, se cuentan con métodos específicos.</p>
+    
+    <p class="text">De los muchos métodos disponibles para resolver los problemas del valor inicial, en este capítulo se estudian los métodos de Euler y de Runge-Kutta. El primero porque, al ser el más sencillo, permite comprender fácilmente los procedimientos que se siguen en la solución numérica de ecuaciones diferenciales y el segundo, porque al ser más exacto, permite encontrar resultados de utilidad práctica en la solución de problemas reales.</p>
+
+
+
+
+
+    <h2 class="text">Método de Euler</h2>
+    
+    <p class="text">El método de Euler, como todos los métodos numéricos, sólo permite resolver ecuaciones diferenciales de primer orden, sin embargo, esta no es una limitante, porque una ecuación diferencial de enésimo orden puede ser transformada en un sistema de “n” ecuaciones diferenciales de primer orden.</p>
+    
+    
+    
+    <h3 class="text">Ecuaciones diferenciales de primer orden</h3>
+    
+    <p class="text">Consideremos la siguiente ecuación diferencial de primer orden:</p>
+    
+    <table id="ec_3" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                y^{\prime} = f(x,y)                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">Para los problemas del valor inicial, se conoce el valor de la variable dependiente (y<sub>0</sub>) para un valor inicial de la variable independiente (x<sub>0</sub>).</p>
+    
+    <p class="text">El problema radica en calcular el valor de la variable dependiente (y<sub>n</sub>) para un valor conocido de la variable independiente (x<sub>n</sub>).</p>
+    
+    <p class="text">Si se conociera la forma que tiene la curva y’ versus f(x,y) el valor de la variable dependiente podría ser calculado integrando la función entre x<sub>0</sub> y x<sub>n</sub>, es decir calculando el área bajo la curva entre esos límites, es decir:</p>
+    
+    <table id="ec_4" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                \int_{y_0}^{y_n} y^{\prime} = y_n-y_0 = \int_{x_0}^{x_n}f(x,y)dx                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <table id="ec_5" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                y_n = y_0+\int_{x_0}^{x_n}f(x,y)dx                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">Como en la práctica no se conoce la forma de la curva, lo que se hace es asumir una y emplear la curva resultante para calcular el área bajo la curva (la integral).</p>
+    
+    <p class="text">El procedimiento que se sigue al asumir la forma de la curva es lo que diferencia un método de otro. En el método de Euler se divide el área comprendida entre x<sub>0</sub> y x<sub>n</sub> en un número de segmentos igualmente espaciados y se asume que el área de cada uno de esos segmentos es un rectángulo:</p> 
+    
+    
+    <p class="figurasn"><img src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo12/files/segmentos_Euler.png" alt="Segmentos en el método de Euler"></p>
+    
+    <p class="text">Como el ancho de los segmentos es conocido:</p>
+    
+    <table id="ec_6" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                h = \dfrac{x_n-x_0}{n}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">El área del primer segmento (A<sub>1</sub>) se calcula multiplicando la altura del rectángulo (y'<sub>0</sub>) por su ancho (h). La altura (y'<sub>0</sub>) se calcula sustituyendo los valores iniciales (x<sub>0</sub>, y<sub>0</sub>) en la ecuación <a href="#ec_3">(3)</a>:</p>
+    
+    <table id="ec_7" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                y^{\prime}_0 = f(x_0, y_0)                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">Entonces, el valor de la variable dependiente en el segundo punto (y<sub>1</sub>), se calcula con:</p>
+    
+    <table class="ecuacionsn" style="margin-left:1cm; width:calc(100% - 1cm)">
+        <tbody><tr>
+            <td>
+                \[                \int_{y_0}^{y_1} y^{\prime} = y_1-y_0 \approx A_1 = y^{\prime}_0h                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <table id="ec_8" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                y_1 = y_0+y^{\prime}_0h                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">El valor de la variable independiente en este punto (x<sub>1</sub>) es x<sub>1</sub>=x<sub>0</sub>+h. Ahora, con este nuevo punto y la ecuación <a href="#ec_3">(3)</a>, se calcula el valor de y'<sub>1</sub>:</p>
+    
+    <table id="ec_9" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                y^{\prime}_1 = f(x_1, y_1)                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">Entonces se puede calcular el área del segundo segmento (A<sub>2</sub>) y con este el valor de y<sub>2</sub>:</p>
+    
+    <table class="ecuacionsn" style="margin-left:1cm; width:calc(100% - 1cm)">
+        <tbody><tr>
+            <td>
+                \[                \int_{y_1}^{y_2} y^{\prime} = y_2-y_1 \approx A_2 = y^{\prime}_1h                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <table id="ec_10" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                y_2 = y_1+y^{\prime}_1h                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">Donde el valor de x<sub>2</sub> se calcula con:</p>
+    
+    <table id="ec_11" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                x_2 = x_1+h                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">Con este nuevo punto se puede calcular A<sub>3</sub> y con A<sub>3</sub> el valor y<sub>3</sub>, prosiguiendo de esta manera hasta llegar a A<sub>n</sub>, segmento en el cual se obtiene el valor de y<sub>n</sub>.</p>
+    
+    <p class="text">Por tanto, las ecuaciones para calcular los n puntos, hasta llegar al segmento A<sub>n</sub> y en consecuencia al valor de y<sub>n</sub>, son:</p>
+    
+    <table id="ec_12" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                \left.                \begin{aligned}                y_{j+1}&amp;=y_j+y^{\prime}_jh=y_j+f(x_j,y_j)h\\[3mm]                x_{j+1}&amp;=x_j+h                \end{aligned}                \hspace{5mm}                \right\lbrace j=0\rightarrow n-1                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">Que son las ecuaciones del método de Euler.</p>
+    
+    <p class="text">Sin embargo, en lugar de aplicar repetidamente estas ecuaciones para cada nuevo valor de  x<sub>n</sub>, es más eficiente calcular valores de “y” (una sola vez) para un intervalo dado de valores "x", entonces, con estos valores se genera una función de interpolación, que es la solución numérica de la ecuación diferencial. Esta función numérica es el equivalente a la función que se obtiene en la solución analítica, con la limitante de ser sólo aproximada y de ser válida sólo en el intervalo para el cual fue calculado.</p>
+    
+    <p class="text">El método de Euler no devuelve resultados confiables porque se asumen áreas rectangulares para los segmentos en los que se divide el área bajo la curva y con ello se introduce un error apreciable en los cálculos. Por esta razón este método no se emplea en la solución de problemas reales, sin embargo, el procedimiento es básicamente el mismo que en otros métodos más complejos y confiables.</p>
+    
+    <p class="text">Por ejemplo, si en lugar de asumir áreas rectangulares, se asumen áreas trapezoidales, la exactitud mejora considerablemente y en ese caso el método se conoce con el nombre del método de Euler modificado.</p>
+
+
+
+
+
+    <h3 class="text">Ecuaciones diferenciales de enésimo orden</h3>
+    
+    <p class="text">Las ecuaciones diferenciales de enésimo orden, se resuelven siguiendo el mismo procedimiento que las de primera orden, pues pueden ser transformadas en un sistema de ecuaciones diferenciales de primer orden.</p>
+    
+    <p class="text">Por ejemplo, dada la siguiente ecuación diferencial de cuarto orden:</p>
+    
+    <table id="ec_13" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                \begin{aligned}                3x\dfrac{d^4y}{dx^4}+(x-y)\dfrac{d ^3y}{dx^3}+5\dfrac{d^2y}{dx^2}-\dfrac{dy}{dx}-\dfrac{x^2-y^2}{xy}&amp;=0\\[3mm]                3xy^{\prime\prime\prime\prime}+(x-y)y^{\prime\prime\prime}+5y^{\prime\prime}-y^{\prime}-\dfrac{x^2-y^2}{xy}&amp;=0                \end{aligned}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">Realizando los siguientes cambios de variable:</p>
+    
+    <table id="ec_14" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                \begin{aligned}                \dfrac{dy}{dx}&amp;=y^{\prime}=y_1\\[3mm]                \dfrac{d^2y}{dx^2}&amp;=\dfrac{d}{dx}\left(\dfrac{dy}{dx}\right)=\dfrac{d}{dx}\left(y_1\right)=y^{\prime}_1=y_2\\[3mm]                \dfrac{d^3y}{dx^3}&amp;=\dfrac{d}{dx}\left(\dfrac{d^2y}{dx^2}\right)=\dfrac{d}{dx}\left(y_2\right)=y^{\prime}_2=y_3\\[3mm]                \dfrac{d^4y}{dx^4}&amp;=\dfrac{d}{dx}\left(\dfrac{d^3y}{dx^3}\right)=\dfrac{d}{dx}\left(y_3\right)=y^{\prime}_3=y_4                \end{aligned}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">Se transforma en un sistema de 4 ecuaciones diferenciales de primer orden:</p>
+    
+    <table id="ec_15" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                \begin{aligned}                y^{\prime}_3 &amp;= f(x,y_0,y_1,y_2,y_3) = \dfrac{(y_0-x)y_3-5y_2+y_1+\dfrac{x^2-y_0^2}{xy_0}}{3x}=y_4\\[3mm]                y^{\prime}_0&amp;=y_1\\[3mm]                y^{\prime}_1&amp;=y_2\\[3mm]                y^{\prime}_2&amp;=y_3                \end{aligned}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">Donde se ha denominado y<sub>0</sub> a la variable dependiente "y".</p>
+    
+    <p class="text">Dado que se están tratando los problemas del valor inicial, para resolver una ecuación de cuarto orden se deben conocer los valores de y<sub>0</sub>, y<sub>1</sub>, y<sub>2</sub> y y<sub>3</sub> para un valor inicial dado de “x” (x<sub>0</sub>), es decir que es necesario conocer el valor de la variable dependiente y el de sus derivadas para un valor inicial dado de la variable independiente.</p>
+    
+    <p class="text">Si se aplican las ecuaciones de Euler (<a href="#ec_12">12</a>) a cada una de las ecuaciones de este sistema (en un segmento “j” cualquiera), empleando para todas ellas el mismo ancho de segmento “h”, se obtiene:</p>
+    
+    <table id="ec_16" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                \begin{aligned}                y_{4,j} &amp;= f(x_j,y_{0,j},y_{1,j} ,y_{2,j},y_{3,j}) = \dfrac{(y_{0,j}-x_j)y_{3,j}-5y_{2,j}+y_{1,j}+\dfrac{x^2_j-y^2_{0,j}}{x_jy_{0,j}}}{3x_j}\\[3mm]                y_{0,j+1}&amp;=y_{0,j}+y^{\prime}_{0,j}h=y_{0,j}+y_{1,j}h\\[3mm]                y_{1,j+1}&amp;=y_{1,j}+y^{\prime}_{1,j}h=y_{1,j}+y_{2,j}h\\[3mm]                y_{2,j+1}&amp;=y_{2,j}+y^{\prime}_{2,j}h=y_{2,j}+y_{3,j}h                \\[3mm]                y_{3,j+1}&amp;=y_{3,j}+y^{\prime}_{3,j}h=y_{3,j}+y_{4,j}h\\[3mm]                x_{j+1}&amp;=x_j+h                \end{aligned}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">Como se puede observar, en este sistema, la única función que realmente necesita ser evaluada es la correspondiente a la derivada de enésimo orden (y<sub>4</sub> en el ejemplo), pues las otras (que son variables simples) se calculan empleando los valores de la iteración anterior y el incremento "h".</p>
+    
+    <p class="text">Generalizando las ecuaciones de Euler para una ecuación diferencial de orden “m”, se tiene:</p>
+    
+    <table id="ec_17" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                \left.                \begin{aligned}                y_{m,j} &amp;= f(x_j,y_{0,j},y_{1,j} ,y_{2,j},\cdots,y_{m-1,j})\\[3mm]                y_{i,j+1}&amp;=y_{i,j}+y^{\prime}_{i,j}h=y_{i,j}+y_{i+1,j}h\hspace{3mm}\left\lbrace i=0\rightarrow m-1\right.\\[3mm]                x_{j+1}&amp;=x_j+h                \end{aligned}\hspace{3mm}                \right\lbrace j=0\rightarrow n-1                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">Donde, como se ha visto, y<sub>0</sub>, y<sub>1</sub>, y<sub>2</sub>, y<sub>3</sub>, etc., son los nombres que se dan a la variable dependiente (y<sub>0</sub>) y sus derivadas:</p>
+    
+    <table id="ec_18" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                \left.                \dfrac{d^îy}{dx^i} = y^{\prime}_{i-1} = y_i\hspace{3mm}                \right\lbrace i=1\rightarrow n                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+
+
+
+
+    <h3 class="text">Sistemas de ecuaciones diferenciales</h3>
+    
+    <p class="text">Cuando en lugar de una ecuación diferencial se debe resolver un sistema de ecuaciones diferenciales y en dicho sistema existen ecuaciones de segundo o mayor orden, las mismas deben ser transformadas previamente en ecuaciones diferenciales de primer orden (siguiendo el procedimiento descrito en el anterior acápite). De esa manera es posible transformar cualquier sistema de ecuaciones diferenciales, en un sistema de "m" ecuaciones diferenciales de primer orden:</p>
+    
+    <table id="ec_19" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                \begin{aligned}                y^{\prime}_0&amp;=f_0(x,y_0,y_1,y_2,\cdots,y_{m-1})\\[2mm]                y^{\prime}_1&amp;=f_1(x,y_0,y_1,y_2,\cdots,y_{m-1})\\[2mm]                &amp;\cdots\\[2mm]                y^{\prime}_{m-1}&amp;=f_{m-1}(x,y_0,y_1,y_2,\cdots,y_{m-1})                                \end{aligned}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">Donde “x” es la variable independiente (común a todas las ecuaciones del sistema) y y<sub>0</sub>, y<sub>1</sub>, y<sub>2</sub>, ... , y<sub>m-1</sub> son las variables dependientes. Aplicando las ecuaciones de Euler (<a href="#ec_12">12</a>) a cada una de las ecuaciones de este sistema, en un punto “j” cualquiera, se tiene:</p>
+    
+    <table id="ec_20" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                \begin{aligned}                y_{0,j+1}&amp;=y_{0,j}+y^{\prime}_{0,j}h=y_{0,j}+f_0(x,y_0,y_1,\cdots,y_{m-1})h\\[2mm]                y_{1,j+1}&amp;=y_{1,j}+y^{\prime}_{1,j}h=y_{1,j}+f_1(x,y_0,y_1,\cdots,y_{m-1})h\\[2mm]                &amp;\cdots\\[2mm]                y_{m-1,j+1}&amp;=y_{m-1,j}+y^{\prime}_{m-1,j}h=y_{m-1,j}+f_{m-1}(x,y_0,y_1,\cdots,y_{m-1})h\\[2mm]                x_{j+1}&amp;=x_j+h                \end{aligned}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">Estas ecuaciones pueden ser empleadas también para resolver una ecuación diferencial de enésimo orden (transformándola en un sistema de ecuaciones diferenciales de primer orden), sin embargo, si lo que se quiere es resolver una sola ecuación de enésimo orden es más sencillo y eficiente emplear las ecuaciones del anterior acápite, no obstante, si se quiere calcular los valores de las derivadas intermedias, entonces se deben emplear las ecuaciones de este acápite.</p>
+    
+    <p class="text">Como es de suponer, cuando se resuelve un sistema de "m" ecuaciones diferenciales, se obtiene no una, sino "m" funciones de interpolación (una para cada una de las "m" ecuaciones diferenciales del sistema).</p>
+
+
+
+
+
+    <h3 class="text">Código</h3>
+    
+    
+    <p class="text">Para automatizar el método se debe determinar primero si se quiere resolver una ecuación de primer orden, una de enésimo o un sistema de ecuaciones diferenciales y en función al caso se programan las ecuaciones (<a href="#ec_12">12</a>), (<a href="#ec_17">17</a>) o (<a href="#ec_20">20</a>)).</p>
+    
+    <p class="text">La función de interpolación puede ser creada con cualquiera de los métodos de interpolación estudiados previamente. En este caso se ha elegido el método <dfn class="style1">spline cúbico</dfn>, por ser más estable que los métodos polinomiales y más preciso que los lineales. No obstante, la función de interpolación no se crea con todos los puntos calculados en el proceso (que pueden ser cientos o inclusive miles), sino (por defecto) con 30 puntos equidistantes. Dicho número (que es adecuado para la mayoría de los casos) puede ser modificado al momento de llamar al método.</p>
+    
+    <p class="text">El método de Euler ha sido añadido, con el nombre <i class="style1">euler</i>, como un método de la clase <dfn class="style1">Function</dfn>, por lo que debe ser llamado desde la función que corresponde a la ecuación diferencial o al sistema de ecuaciones diferenciales a resolver.</p>
+    
+    <p class="text">En este caso no se presenta el diagrama de actividades del método, pero (al igual que todos los métodos estudiados en la asignatura), el código (comentado) puede ser recuperado escribiendo: <strong class="style1">Function.prototype.nombre_del_método</strong>, es decir que para este método se debe escribir: <strong class="style1">Function.prototype.euler</strong> (haga la prueba en cualquier celda de cualquier ejemplo donde se emplee la calculadora).</p>
+
+    <p class="text">Como parámetros se deben mandar el valor inicial (<dfn class="style1">xi</dfn>), el final (<dfn class="style1">xf</dfn>) y él o los valores iniciales (<dfn class="style1">yi</dfn>) de la variable dependiente. Si se está resolviendo una ecuación diferencial de primer orden, <dfn class="style1">yi</dfn> es un escalar (un número), pero si se está resolviendo una ecuación de enésimo orden o un sistema de ecuaciones diferenciales, <dfn class="style1">yi</dfn> es un vector con todos los valores iniciales conocidos. Opcionalmente, se puede mandar también el número de segmentos <dfn class="style1">n</dfn>, en los que se divide el intervalo de integración (valor por defecto 200) y el número de puntos a tomar en cuenta para crear la función de interpolación resultante <dfn class="style1">np</dfn> (valor por defecto 30).</p>
+
+
+
+
+
+    <h3 class="text">Ejemplos</h3>
+
+    <p class="ejemplo"><span class="ejemplo"></span>Como primer ejemplo, se resolverá (se obtendrá la función de interpolación) de la siguiente ecuación diferencial de primer orden, integrándola hasta x<sub>n</sub> = 7:</p>
+    
+    <table class="ecuacionsn" style="margin-left:1cm; width:calc(100% - 1cm)">
+        <tbody><tr>
+            <td>
+                \[                \begin{gathered}                3y^{\prime}+4xy-8x^3+4x = 0\\[3mm]                y = 4\text{ para } x=2                    \end{gathered}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="ejemplosn">Donde, en la misma ecuación, se dan los valores iniciales necesarios para resolverla: xi = 2, yi = 4.</p>
+    
+    <p class="ejemplosn">Primero se coloca la ecuación diferencial en forma de la ecuación (<a href="#ec_3">3</a>), es decir se despeja el término correspondiente a la derivada de primer orden:</p>
+    
+    <table class="ecuacionsn" style="margin-left:1cm; width:calc(100% - 1cm)">
+        <tbody><tr>
+            <td>
+                \[                y^{\prime}=f(x,y)=\dfrac{8x^3-4xy-4x}{3}                 \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="ejemplosn">Y se la programa:</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">var f = (x, y) =&gt; (8*x**3-4*x*y-4*x)/3;</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="ejemplosn">Ahora puede ser integrada (entre 2 y 7):</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">var fy = f.euler({xi:2, xf:7, yi:4});</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="ejemplosn">Una vez obtenida la función de interpolación "fy", puede ser empleada igual que cualquier otra función, cuidando de no sobreparar los límites de integración (en este caso 2 y 7). Por ejemplo se puede dibujar su gráfica:</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">plot({f:fy, xi:2.5, xf:6.5})</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="ejemplosn">Que, como se puede ver, es uniforme en el intervalo de integración.</p>
+
+    <p class="ejemplosn">Igualmente, se puede calcular el valor de la variable dependiente para x = 4.6 y calcular, también, su derivada en ese punto:</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">fy(4.6)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">fy.df1(4.6)</div>
+        <div class="resultado"></div>
+    </div>
+    
+
+
+
+
+    <br>
+    <p class="ejemplo"><span class="ejemplo"></span>Como segundo ejemplo, se resolverá la siguiente ecuación diferencial de cuarto orden (se obtendrá la función de interpolación) integrándola entre 1 y 5:</p>
+    
+    <table class="ecuacionsn" style="margin-left:1cm; width:calc(100% - 1cm)">
+        <tbody><tr>
+            <td>
+                \[                \begin{gathered}                3y^{\prime\prime\prime\prime}-3xy^{\prime\prime}+y^{\prime}+1.8711x^{-1.9}+14.49x^{1.1}-5 = 0\\[3mm]                y = 4,\quad y^{\prime}=11.3,\quad y^{\prime\prime}=6.93,\quad y^{\prime\prime\prime}=0.693\quad para\quad x = 1                \end{gathered}                 \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="ejemplosn">Al igual que en el ejemplo anterior y como es usual, los valores iniciales se dan en la misma ecuación: xi = 1, yi = [y<sub>0</sub>=4, y<sub>1</sub>=11.3, y<sub>2</sub>=6.93, y<sub>3</sub>=0.693].</p>
+    
+    <p class="ejemplosn">Como se trata de una ecuación diferencial de enésimo orden, primero se llevan a cabo los cambios de variable correspondientes a la ecuación (<a href="#ec_15">15</a>), es decir: y<sub>1</sub> = y', y<sub>2</sub> = y'', y<sub>3</sub> = y''', y<sub>4</sub> = y'''' y se despeja la derivada de mayor orden (en este caso la de cuarto orden):</p>
+    
+    <table class="ecuacionsn" style="margin-left:1cm; width:calc(100% - 1cm)">
+        <tbody><tr>
+            <td>
+                \[                y^{\prime\prime\prime\prime}=y^{\prime}_3=y_4= \dfrac{3xy_2-y_1-1.8711x^{-1.9}-14.49x^{1.1}+5}{3} = 0                 \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="ejemplosn">Entonces se programa la ecuación diferencial:</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">var f = (x, [y, y1, y2, y3]) =&gt; (3*x*y2-y1-1.8711*x**-1.9-14.49*x**1.1+5)/3;</div>
+        <div class="resultado"></div>
+    </div>        
+    
+    <p class="ejemplosn">Y se la resuelve con el método de Euler:</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">var fy = f.euler({xi:1, xf:5, yi:[4, 11.3, 6.93, 0.693]});</div>
+        <div class="resultado"></div>        
+    </div>
+    
+    <p class="ejemplosn">Como en el ejemplo anterior, la función de interpolación (fy), puede ser empleada igual que cualquier función (cuidando de no sobrepasar los límies de integración). Así, su gráfica es:</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">plot({f:fy, xi:1, xf:4.5})</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="ejemplosn">Los valores de "y", para x=3.1 y x=4.3, así como la derivada segunda para x=2.6, se obtienen con:</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">[3.1, 4.3].map(fy)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">fy.df2(2.6)</div>
+        <div class="resultado"></div>
+    </div>
+
+
+
+
+
+    <br>
+    <p class="ejemplo"><span class="ejemplo"></span>Como tercer ejemplo, se resolverá el siguiente sistema de 3 ecuaciones diferenciales de primer orden (se obtendrán las 3 funciones de interpolación), entre 0 y 0.4:</p>
+    
+    <table class="ecuacionsn" style="margin-left:1cm; width:calc(100% - 1cm)">
+        <tbody><tr>
+            <td>
+                \[                \begin{gathered}                \begin{aligned}                u^{\prime}-v+2w+t^2-2t^{1.5}-1.2t^{0.2}+10 = 0\\[2mm]                v^{\prime}+5w-5t^{1.5}-2t+35=0\\[2mm]                w^{\prime}-2u+v-t^2+2t^{1.2}-1.5t^{0.5}+10 = 0                \end{aligned}\\[12mm]                u=3,\quad v= -4,\quad w=-7\quad para \quad t=0                \end{gathered}                 \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="ejemplosn">Como es usual cuando se trabaja con ecuaciones diferenciales, los valores iniciales se proporcionan en la misma ecuación: xi=t<sub>0</sub>=0, y = [y<sub>0</sub>=u<sub>0</sub>=3, y<sub>1</sub>=v<sub>0</sub>=-4, y<sub>2</sub>=w<sub>0</sub>=-7]</p>
+    
+    <p class="ejemplosn">Primero se despejan las derivadas de primer orden, de manera que las ecuaciones del sistema queden en forma de la ecuación (<a href="#ec_19">19</a>):</p>
+    
+    <table class="ecuacionsn" style="margin-left:1cm; width:calc(100% - 1cm)">
+        <tbody><tr>
+            <td>
+                \[                \begin{gathered}                \begin{aligned}                u^{\prime}&amp;=v-2w-t^2+2t^{1.5}+1.2t^{0.2}-10\\[2mm]                v^{\prime}&amp;=-5w+5t^{1.5}+2t-35\\[2mm]                w^{\prime}&amp;=2u-v+t^2-2t^{1.2}+1.5t^{0.5}-10                \end{aligned}\\[12mm]                u=3,\quad v= -4,\quad w=-7\quad para \quad t=0                \end{gathered}                 \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="ejemplosn">Entonces se las programa en una función que devuelve un vector con los valores de cada una de las ecuaciones del sistema:</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">var f = (t, [u, v, w]) =&gt; [<br>&nbsp; v-2*w-t**2+2*t**1.5+1.2*t**0.2-10,<br>&nbsp; -5*w+5*t**1.5+2*t-35,<br>&nbsp; 2*u-v+t**2-2*t**1.2+1.5*t.sqrt()-10<br>];</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="ejemplosn">Y se resuelve el sistema con el método de Euler:</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">var [fu, fv, fw] = f.euler({xi:0, xf:0.4, yi:[3, -4, -7]});</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="ejemplosn">Una vez resuelto el sistema, las funciones de interpolación resultantes (fu, fv y fw), pueden ser empleadas igual que cualquier función (como siempre cuidando de no sobrepasar los límites de integración).</p>
+
+    <p class="ejemplosn">Por ejemplo, se pueden dibujar sus gráficas, así, la gráfica de la primera función de interpolación, es:</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">plot({f:fu, xi:0, xf:0.4})</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="ejemplosn">El de la segunda:</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">plot({f:fv, xi:0, xf:0.4})</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="ejemplosn">Y el de la tercera:</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">plot({f:fv, xi:0, xf:0.4})</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="ejemplosn">Igualmente, se pueden calcular los valores de "u", "v" y "w" para valores conocidos de "t" (así como derivarlas, emplearlas en otras operaciones, etc.):</p>
+
+    <p class="ejemplosn">Por ejemplo los valores de "u" para valores de "t" iguales a 0.14 y 0.27, así como la derivada primera para "t" igual a 0.31, son:</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">[0.14, 0.27].map(fu)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">fu.df1(0.31)</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="ejemplosn">Los valores de "v":</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">[0.14, 0.27].map(fv)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">fv.df1(0.31)</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="ejemplosn">Y los valores de "w":</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">[0.14, 0.27].map(fw)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">fw.df1(0.31)</div>
+        <div class="resultado"></div>
+    </div>
+    <br>
+
+    
+    <div class="ejercicio" id="ejercicio1" enunciado="1"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Para resolver la siguiente ecuación diferencial.</p><table class="ecuacionsn"><tbody><tr><td>\[\begin{gathered}y^{\prime} = 4e^{0.7x}-0.5y\\[3mm]y=2\quad para\quad x=0\end{gathered}\]</td><td></td></tr></tbody></table></div><p class="pregunta"><span class="pregunta"></span>Programe la ecuación diferencial.</p><div id="pregunta5" class="calculadora" spellcheck="false"><div class="instruccion">var f=(x,y)=&gt;4*Math.exp(0.7*x)-0.5*y;</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Resuelva la ecuación diferencial (obtenga la función de interpolación) integrándola, con el método de Euler, entre 0 y 2.</p><div id="pregunta6" class="calculadora" spellcheck="false"><div class="instruccion">var fy=f.euler({xi:0,xf:2,yi:2})</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Dibuje la función de interpolación entre los límites de integración</p><div id="pregunta7" class="calculadora" spellcheck="false"><div class="instruccion">plot({f:fy,xi:0,xf:2})</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Calcule los valores de "y" para x=1.2 y x=2 (método "map"), redondeando los resultados al primer dígito después del punto.</p><div id="pregunta8" class="calculadora" spellcheck="false"><div class="instruccion">[1.2,2].map(fy).round(1)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="12" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 1 -->
+    
+    <div class="ejercicio" id="ejercicio2" enunciado="1"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Para resolver la siguiente ecuación diferencial:</p><table class="ecuacionsn"><tbody><tr><td>\[\begin{gathered}y^{\prime\prime\prime} = t+2.1y+ty^{\prime}-ty^{\prime\prime}\\[3mm]y=0;\quad y^{\prime}=0;\quad y^{\prime\prime}=0\quad para\quad t=0\end{gathered}\]</td><td></td></tr></tbody></table></div><p class="pregunta"><span class="pregunta"></span>Programe la ecuación diferencial.</p><div id="pregunta17" class="calculadora" spellcheck="false"><div class="instruccion">var f=(t,[y,y1,y2])=&gt;t+2.1*y+t*y1-t*y2;</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Resuelva la ecuación diferencial (obtenga la función de interpolación) integrándola, con el método de Euler, entre 0 y 1.5.</p><div id="pregunta18" class="calculadora" spellcheck="false"><div class="instruccion">var fy=f.euler({xi:0,xf:1.5,yi:[0,0,0]});</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Dibuje la función de interpolación entre los límites de integración</p><div id="pregunta19" class="calculadora" spellcheck="false"><div class="instruccion">plot({f:fy,xi:0,xf:1.5})</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Calcule (con map) los valores de "y" para t=0.2 y t=1.4, redondeando los resultados al quinto dígito después del punto.</p><div id="pregunta20" class="calculadora" spellcheck="false"><div class="instruccion">[0.2,1.4].map(fy).round(5)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="12" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 2 -->
+    
+    <div class="ejercicio" id="ejercicio3" enunciado="1"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Para resolver el siguiente sistema de ecuaciones diferenciales:</p><table class="ecuacionsn"><tbody><tr><td>\[\begin{gathered}\begin{aligned}\dfrac{dx}{dt} &amp;= x^{\prime} = 2.1x+3y\\[3mm]\dfrac{dy}{dt} &amp;= y^{\prime} = 2x+1.2y\end{aligned}\\[12mm]x=2.7;\quad y=2\quad para\quad t=0\end{gathered}\]</td><td></td></tr></tbody></table></div><p class="pregunta"><span class="pregunta"></span>Programe la ecuación diferencial.</p><div id="pregunta31" class="calculadora" spellcheck="false"><div class="instruccion">var f=(t,[x,y])=&gt;[2.1*x+3*y, 2*x+1.2*y];</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Resuelva el sistema de ecuaciones diferenciales (obtenga las funciones de interpolación) integrándolas, con el método de Euler, entre 0 y 1.3.</p><div id="pregunta32" class="calculadora" spellcheck="false"><div class="instruccion">var [fx,fy]=f.euler({xi:0,xf:1.3,yi:[2.7,2]})</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Dibuje la solución de la primera ecuación entre los límites de integración</p><div id="pregunta33" class="calculadora" spellcheck="false"><div class="instruccion">plot({f:fx,xi:0,xf:1.3})</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Dibuje la solución de la segunda ecuación entre los límites de integración</p><div id="pregunta34" class="calculadora" spellcheck="false"><div class="instruccion">plot({f:fy,xi:0,xf:1.3})</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Calcule los valores de "x" para t=0.2 y t=1.2 (método "map"), redondeando los resultados al tercer dígito después del punto.</p><div id="pregunta35" class="calculadora" spellcheck="false"><div class="instruccion">[0.2,1.2].map(fx).round(3)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Calcule los valores de "y" para t=0.2 y t=1.2 (método "map"), redondeando los resultados al tercer dígito después del punto.</p><div id="pregunta36" class="calculadora" spellcheck="false"><div class="instruccion">[0.2,1.2].map(fy).round(3)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="18" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 3 -->
+    
+    <div class="ejercicio" id="ejercicio4" enunciado="1"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Resuelva la siguiente ecuación diferencial, integrándola entre 0 y 2, con el método de Euler (función de interpolación "fy").</p><table class="ecuacionsn"><tbody><tr><td>\[\begin{aligned}y^{\prime} = \dfrac{6x}{y}-2xy\\[1mm]y=2\quad para\quad x=0\end{aligned}\]</td><td></td></tr></tbody></table><p></p><div id="pregunta46" class="calculadora" spellcheck="false"><div class="instruccion">var f=(x,y)=&gt;6*x/y-2*x*y;<br>var fy=f.euler({xi:0,xf:2,yi:2})</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con la función de interpolación y el método map, calcule los valores de "r" (r<sub>0</sub>, r<sub>1</sub>, r<sub>2</sub>), para valores de "x" iguales a 0, 1 y 2, redondeando los resultados al tercer dígito después del punto.</p><table class="ecuacionsn"><tbody><tr><td>\[r_0=fy(0),\enspace r_1=fy(1),\enspace r_2 = fy(2)\]</td><td></td></tr></tbody></table><p></p><div id="pregunta47" class="calculadora" spellcheck="false"><div class="instruccion">var r=[0,1,2].map(fy).round(3);r</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con los valores de "r" calculados, resuelva el siguiente sistema de ecuaciones lineales, con el método de crout, redondeando los resultados al tercer dígito después del punto.</p><table class="ecuacionsn"><tbody><tr><td>\[\begin{alignedat}{4}4x_1&amp;+&amp;x_2&amp;-&amp;2x_2&amp;=&amp;\phantom{1}r_0\\[1mm]x_1&amp;-&amp;3x_2&amp;+&amp;4x_3&amp;=&amp;r_1\\[1mm]-2x_1&amp;+&amp;5x_2&amp;-&amp;x_3&amp;=&amp;r_2\end{alignedat}\]</td><td></td></tr></tbody></table><p></p><div id="pregunta48" class="calculadora" spellcheck="false"><div class="instruccion">[[4,1,-2],<br> [1,-3,4],<br> [-2,5,-1]].crout([r[0],r[1],r[2]]).round(3)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="10" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 4 -->
+    
+    <div class="ejercicio" id="ejercicio5" enunciado="2"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Resuelva la siguiente ecuación diferencial, integrándola entre 1 y 1.4, con el método de Euler (función de interpolación "fy").</p><table class="ecuacionsn"><tbody><tr><td>\[\begin{aligned}y^{\prime} = y^{1.9}+t^{2.1}\\[1mm]y=2\quad para\quad t=1\end{aligned}\]</td><td></td></tr></tbody></table><p></p><div id="pregunta56" class="calculadora" spellcheck="false"><div class="instruccion">var f=(t,y)=&gt;y**1.9+t**2.1;<br>var fy=f.euler({xi:1,xf:1.4,yi:2});</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con la función de interpolación, calcule el valor de la siguiente integral con el método del trapecio (300 segmentos), redondeando el resultado al cuarto dígito después del punto.</p><table class="ecuacionsn"><tbody><tr><td>\[\int_{1.1}^{1.4}fy\,dt\]</td><td></td></tr></tbody></table><p></p><div id="pregunta57" class="calculadora" spellcheck="false"><div class="instruccion">fy.trapecio({a:1.1,b:1.4,n:300}).round(4)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="6" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 5 -->
+    
+    <div class="ejercicio" id="ejercicio6" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Resuelva la siguiente ecuación diferencial, integrándola entre 0 y 0.8, con el método de Euler (función de interpolación "fx").</p><table class="ecuacionsn"><tbody><tr><td>\[\begin{aligned}x^{\prime\prime} = 16\cos(8t)-64x\\[1mm]x=0,\enspace x^{\prime}=0\quad\text{para}\quad t=0\end{aligned}\]</td><td></td></tr></tbody></table><p></p><div id="pregunta58" class="calculadora" spellcheck="false"><div class="instruccion">var f=(t,[x,x1])=&gt;16*Math.cos(8*t)-64*x;<br>var fx=f.euler({xi:0,xf:0.8,yi:[0,0]});</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con la función de interpolación y el método map, calcule valores de "r" (r<sub>0</sub>, r<sub>1</sub>) para valores de "t" iguales a 0.8 y 0.2, redondeando los resultados al tercer dígito después del punto.</p><table class="ecuacionsn"><tbody><tr><td>\[r_0=fx(0.8),\quad r_1=fx(0.2)\]</td><td></td></tr></tbody></table><p></p><div id="pregunta59" class="calculadora" spellcheck="false"><div class="instruccion">var r=[0.8,0.2].map(fx).round(3);r</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con los valores de "r", resuelva el siguiente sistema de ecuaciones no lineales con el método de Newton (valores iniciales: 1,2, precisión/exactitud: 7 dígitos, redondeo: tercer dígito).</p><table class="ecuacionsn"><tbody><tr><td>\[\begin{alignedat}{4}1.2x^{1.2}&amp;+&amp;y^{1.1}&amp;-&amp;100r_0&amp;=&amp;\phantom{2}0\\[2mm]3x^2&amp;-&amp;1.5y^{1.7}&amp;-&amp;10r_1&amp;=&amp;0\end{alignedat}\]</td><td></td></tr></tbody></table><p></p><div id="pregunta60" class="calculadora" spellcheck="false"><div class="instruccion">var fe=([x,y])=&gt;[<br>  1.2*x**1.2+y**1.1-100*r[0],<br>  3*x**2-1.5*y**1.7-10*r[1]<br>];<br>fe.newtonnl({vi:[1,2],err:7}).v.round(3)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="12" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 6 -->
+    
+    <div class="ejercicio" id="ejercicio7" enunciado="1"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Resuelva el siguientes sistema de ecuaciones diferenciales, integrándolas entre 0.3 y 0.5, con el método de Euler (funciones de interpolación "fu", "fv", "fw").</p><table class="ecuacionsn"><tbody><tr><td>\[\begin{gathered}\begin{aligned}u^{\prime}&amp;=2v-2.1w-t^2+2t^{1.5}-1.3t^{0.2}-7\\[1mm]v^{\prime}&amp;=-3w+4t^{1.5}+2t-25\\[1mm]w^{\prime}&amp;=3u-1.9v+t^2-t^{1.2}+1.5t^{0.5}-9\end{aligned}\\[5mm]u=3,\enspace v=-4,\enspace w=-7\enspace\text{para}\enspace t=0.3\end{gathered}\]</td><td></td></tr></tbody></table><p></p><div id="pregunta70" class="calculadora" spellcheck="false"><div class="instruccion">var f=(t,[u,v,w])=&gt;[<br>  2*v-2.1*w-t**2+2*t**1.5-1.3*t**0.2-7,<br>  -3*w+4*t**1.5+2*t-25,<br>  3*u-1.9*v+t**2-t**1.2+1.5*t**0.5-9<br>];<br>var [fu,fv,fw]=f.euler({xi:0.3,xf:0.5,yi:[3,-4,-7]});</div><div class="resultado"></div><div class="instruccion">var f=(t,[u,v,w])=&gt;[<br>  2*v-2.1*w-t**2+2*t**1.5-1.3*t**0.2-7,<br>  -3*w+4*t**1.5+2*t-25,<br>  3*u-1.9*v+t**2-t**1.2+1.5*t**0.5-9<br>];<br>var [fu,fv,fw]=f.euler({xi:0.3,xf:0.5,yi:[3,-4,-7]});</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con las funciones de interpolación, calcule (en una sola expresión) los valores de "a", "b" y "c" para t=0.5, redondeando los resultados al segundo dígito después del punto.</p><table class="ecuacionsn"><tbody><tr><td>\[a=\text{fu}(0.5),\enspace b=\text{fv}(0.5),\enspace c =\text{fw}(0.5)\]</td><td></td></tr></tbody></table><p></p><div id="pregunta71" class="calculadora" spellcheck="false"><div class="instruccion">var [a,b,c]=[fu(0.5),fv(0.5),fw(0.5)].round(2);[a,b,c]</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con los valores de "a", "b" y "c", resuelva el siguiente sistema de ecuaciones lineales con el método de la matriz inversa, redondeando los resultados al segundo dígito después del punto.</p><table class="ecuacionsn"><tbody><tr><td>\[\begin{alignedat}{4}2x&amp;-&amp;4y&amp;+&amp;5z&amp;=&amp;a\\2x&amp;-&amp;5y&amp;-&amp;4z&amp;=&amp;b\\5x&amp;-&amp;3y&amp;-&amp;5z&amp;=&amp;c\end{alignedat}\]</td><td></td></tr></tbody></table><p></p><div id="pregunta72" class="calculadora" spellcheck="false"><div class="instruccion">[[2,-4,5],<br> [2,-5,-4],<br> [5,-3,-5]].inv().mul([a,b,c]).round(2)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="14" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 7 -->
+
+
+
+
+    <br>
+    <h2 class="text">Métodos de Runge - Kutta</h2>
+
+    <p class="text">Los métodos de Runge - kutta, son aquellos que se ajustan a la siguiente forma general:</p>
+    
+    <table id="ec_21" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                y_{j+1}=y_j+a_1k_1+a_2k_2+a_3k_3+\cdots + a_nk_n                 \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">Donde los valores de <dfn class="style1">k</dfn> se calculan con ecuaciones que tienen la siguiente forma:</p>
+    
+    <table id="ec_22" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                \begin{aligned}                k_1 &amp;= hf(x_j,\, y_j)\\[2mm]                k_2 &amp;= hf(x_j,\,p_1h,\, y_j+q_{1,\,1}k_1)\\[2mm]                k_3 &amp;= hf(x_j,\,p_2h,\, y_j+q_{2,\,1}k_1+q_{2,\,2}k_2)\\[2mm]                k_4 &amp;= hf(x_j,\,p_3h,\, y_j+q_{3,\,1}k_1+q_{3,\,2}k_2+q_{3,\,3}k_3)\\[2mm]                &amp;\cdots\\[2mm]                k_n &amp;= hf(x_j,\,p_{n-1}h,\, y_j+q_{n-1,\,1}k_1+q_{n-1,\,2}k_2+\cdots +q_{n-1,\,n-1}k_{n-1})                \end{aligned}                 \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">En estas ecuaciones <dfn class="style1">f(x,y)</dfn> es la función correspondiente a la ecuación diferencial de primer orden, <dfn class="style1">x<sub>j</sub></dfn>, <dfn class="style1">y<sub>j</sub></dfn> son los valores conocidos de las variables (independiente y dependiente) en el punto <defn>j</defn>, <dfn class="style1">y<sub>j+1</sub></dfn> es el valor de la variable dependiente en el punto siguiente al punto <dfn class="style1">j</dfn> y <dfn class="style1">h</dfn> es el incremento de la variable independiente.</p>
+
+    <p class="text">El valor de la variable independiente, en el punto siguiente al punto <dfn class="style1">j</dfn>, se calcula igual que en el método de Euler, es decir simplemente sumándole el incremento:</p>
+    
+    <table id="ec_23" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                x_{j+1} = x_j+h                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Fijando el número de evaluaciones funcionales (valores de <dfn class="style1">k</dfn>) y calculando los parámetros <dfn class="style1">a</dfn>, <dfn class="style1">p</dfn> y <dfn class="style1">q</dfn> de las ecuaciones (<a href="#ec_21">21</a>)  y (<a href="#ec_22">22</a>), se puede deducir un número infinito de ecuaciones <dfn class="style1">Runge - kutta</dfn>.</p>
+
+    <p class="text">No obstante, no todas las formas <dfn class="style1">Runge - Kutta</dfn> que se deducen predicen correctamente los valores de la variable dependiente, por lo que, una vez deducidas, deben ser probadas para determinar su confiabilidad.</p>
+
+    <p class="text">Algunos investigadores han deducido y puesto a prueba varias formas. Las ecuaciones deducidas se clasifican como métodos <dfn class="style1">(m, n)</dfn>, donde <dfn class="style1">m</dfn> es el número de parámetros <dfn class="style1">a<sub>i</sub></dfn> y <dfn class="style1">n</dfn> es el número de valores <dfn class="style1">k</dfn> que deben ser calculados. Dentro de una misma clasificación, las ecuaciones se diferencian entre si mediante un nombre específico.</p>
+
+    <p class="text">Algunas de las formas que han resultado de utilidad práctica son las siguientes:</p>
+
+    <p class="text"><i class="style1">Ecuación (2,2) de Runge-Kutta</i> con una exactitud comparable a la del método de Euler modificado:</p>
+    
+    <table id="ec_24" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                \begin{aligned}                y_{j+1} &amp;= y_j+\dfrac{1}{2}\left(k_1+k_2\right)\\[5mm]                k_1 &amp;= h\,f(x_j,\,y_j)\\[2mm]                k_2 &amp;= h\,f(x_j+h,\,y_j+k_1)                \end{aligned}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text"><i class="style1">Ecuación (3,3) de Runge-Kutta</i> con un error de orden h<sup>4</sup>:</p>
+    
+    <table id="ec_25" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                \begin{aligned}                y_{j+1} &amp;= y_j+\dfrac{1}{6}\left(k_1+4k_2+k_3\right)\\[6mm]                k_1 &amp;= h\,f\left(x_j,\,y_j\right)\\[2mm]                k_2 &amp;= h\,f\left(x_j+\dfrac{h}{2},\,y_j+\dfrac{k_1}{2}\right)\\[4mm]                k_3&amp;=h\,f\left(x_j+h,\,y_j-k_1+2k_2\right)                \end{aligned}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text"><i class="style1">Ecuación (4,4) de Runge-Kutta</i>, conocida como la <i class="style1">forma clásica</i>:</p>
+    
+    <table id="ec_26" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                \begin{aligned}                y_{j+1} &amp;= y_j+\dfrac{1}{6}\left(k_1+2k_2+2k_3+k_4\right)\\[6mm]                k_1 &amp;= h\,f\left(x_j,\,y_j\right)\\[2mm]                k_2 &amp;= h\,f\left(x_j+\dfrac{h}{2},\,y_j+\dfrac{k_1}{2}\right)\\[4mm]                k_3 &amp;= h\,f\left(x_j+\dfrac{h}{2},\,y_j+\dfrac{k_2}{2}\right)\\[4mm]                k_4&amp;=h\,f\left(x_j+h,\,y_j+k_3\right)                \end{aligned}                                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text"><i class="style1">Ecuación (4,4) de Runge-Kutta</i> conocida como la <i class="style1">forma de Gil</i>, la cual minimiza los errores de redondeo:</p>
+    
+    <table id="ec_27" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                \begin{aligned}                y_{j+1} &amp;= y_j+\dfrac{1}{6}\left(k_1+\left(2-\sqrt{2}\right)k_2+\left(2+\sqrt{2}\right)k_3+k_4\right)\\[6mm]                k_1 &amp;= h\,f\left(x_j,\,y_j\right)\\[2mm]                k_2 &amp;= h\,f\left(x_j+\dfrac{h}{2},\,y_j+\dfrac{k_1}{2}\right)\\[4mm]                k_3 &amp;= h\,f\left(x_j+\dfrac{h}{2},\,y_j+\left(\sqrt{2}-1\right)\dfrac{k_1}{2}+\left(2-\sqrt{2}\right)\dfrac{k_2}{2}\right)\\[4mm]                k_4&amp;=h\,f\left(x_j+h,\,y_j-\sqrt{2}\,\dfrac{k_2}{2}+\left(1+\dfrac{\sqrt{2}}{2}\right)k_3\right)                \end{aligned}                                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text"><i class="style1">Ecuación (5,6)</i> conocida como la <i class="style1">forma de Butcher</i>, que suele ser empleada cuando se requiere gran exactitud en los cálculos:</p>
+    
+    <table id="ec_28" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                \begin{aligned}                y_{j+1} &amp;= y_j+\dfrac{1}{90}\left(7k_1+32k_3+12k_4+35k_5+7k_6\right)\\[6mm]                k_1 &amp;= h\,f\left(x_j,\,y_j\right)\\[2mm]                k_2 &amp;= h\,f\left(x_j+\dfrac{h}{4},\,y_j+\dfrac{k_1}{4}\right)\\[4mm]                k_3 &amp;= h\,f\left(x_j+\dfrac{h}{4},\,y_j+\dfrac{k_1}{8}+\dfrac{k_2}{8}\right)\\[4mm]                k_4 &amp;= h\,f\left(x_j+\dfrac{h}{2},\,y_j+\dfrac{k_2}{2}+k_3\right)\\[4mm]                k_5&amp;=h\,f\left(x_j+\dfrac{3}{4}h,\,y_j+\dfrac{3}{16}k_1+\dfrac{9}{16}k_4\right)\\[4mm]                k_6&amp;=h\,f\left(x_j+h,\,y_j-\dfrac{3}{7}k_1+\dfrac{2}{7}k_2+\dfrac{12}{7}k_3-\dfrac{12}{7}k_4+\dfrac{8}{7}k_5\right)                \end{aligned}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+
+
+    <p class="text">De las diferentes formas que pueden tomar las ecuaciones de <dfn class="style1">Runge - Kutta</dfn>, la forma clásica (<a href="#ec_26">ec. 26</a>) es la más empleada en la práctica, por ser lo suficientemente precisa como para resolver problemas reales y no demasiado compleja como para requerir demasiado tiempo de cómputo. Por estas razones, esa es la forma que se implementará en la asignatura y en lo futuro, cuando se hable del <dfn class="style1">método de Runge - kutta</dfn>, se sobreentenderá que se está haciendo referencia a la forma clásica (clasificación (4, 4)) de los métodos de Runge - Kutta.</p>
+
+
+
+
+
+    <h3 class="text">Ecuaciones diferenciales de primer orden</h3>
+
+    <p class="text">Al igual que ocurre con el método de Euler (y todos los métodos en general) los métodos de Runge - Kutta sólo permiten resolver ecuaciones diferenciales de primer orden.</p>
+
+    <p class="text">El procedimiento que se sigue en el método de Runge - Kutta, es el mismo que con el método de Euler, sólo que ahora se emplea la ecuación (<a href="#ec_26">26</a>) para calcular los nuevos valores de la variable dependiente, lo que implica calcular los cuatro valores de <dfn class="style1">k</dfn> para cada uno de los puntos del segmento. Si bien el cálculo es más complejo (requiere 4 evaluaciones funcionales para los 4 valores de <dfn class="style1">k</dfn>), es más preciso, por lo que se puede emplear un menor número de segmentos que en el método de Euler.</p>
+
+
+
+
+
+    <h3 class="text">Ecuaciones diferenciales de enésimo orden</h3>
+
+    <p class="text">En el caso de las ecuaciones de enésimo orden se sigue, igualmente, el mismo procedimiento que en el método de Euler, sin embargo, el cálculo de los nuevos valores de la variable dependiente requiere aún más evaluaciones, porque para cada una de las "n" ecuaciones diferenciales de primer orden (en que se transforma la ecuación diferencial), se deben calcular los cuatro valores de <dfn class="style1">k</dfn>.</p>
+
+    <p class="text">Como de las "n" ecuaciones diferenciales resultantes, n-1 son simples cambios de variable, los valores de <dfn class="style1">k</dfn>, para las mismas, son los valores modificados de la variable dependiente multiplicados por el incremento (<dfn class="style1">h</dfn>).</p>
+
+    <p class="text">En consecuencia, para una ecuación diferencial de enésimo orden, los valores de la variable dependiente, sus derivadas y el de la variable independiente en el nuevo punto, se calculan con las siguientes ecuaciones:</p>
+    
+    <table id="ec_29" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                \begin{aligned}                k_{1,i}&amp;=h \,y_{i+1,j}\hspace{5mm}\left\lbrace i=0\rightarrow m-2\right.\\[2mm]                k_{1,m-1}&amp;=h\,f\left(x_j,\,y_{0,j},\,y_{1,j},\cdots,\,y_{m-1,j}\right)\\[6mm]                k_{2,i}&amp;=h\,\left(y_{i+1,j}+\dfrac{k_{1,i+1}}{2}\right)\hspace{5mm}\left\lbrace i=0\rightarrow m-2 \right.\\[2mm]                k_{2,m-1}&amp;=h\,f\left(x_j+\dfrac{h}{2},\,y_{0,j}+\dfrac{k_{1,0}}{2},\,y_{1,j}+\dfrac{k_{1,1}}{2},\cdots,\,y_{m-1,j}+\dfrac{k_{1,m-1}}{2}\right)\\[6mm]                k_{3,i}&amp;=h\,\left(y_{i+1,j}+\dfrac{k_{2,i+1}}{2}\right)\hspace{5mm}\left\lbrace i=0\rightarrow m-2 \right.\\[2mm]                k_{3,m-1}&amp;=h\,f\left(x_j+\dfrac{h}{2},\,y_{0,j}+\dfrac{k_{2,0}}{2},\,y_{1,j}+\dfrac{k_{2,1}}{2},\cdots,\,y_{m-1,j}+\dfrac{k_{2,m-1}}{2}\right)\\[6mm]                k_{4,i}&amp;=h\,\left(y_{i+1,j}+k_{3,i+1}\right)\hspace{5mm}\left\lbrace i=0\rightarrow m-2 \right.\\[2mm]                k_{4,m-1}&amp;=h\,f\left(x_j+h,\,y_{0,j}+k_{3,0},\,y_{1,j}+k_{3,1},\cdots,\,y_{m-1,j}+k_{3,m-1}\right)\\[6mm]                y_{i,j+1}&amp;=y_{i,j}+\dfrac{1}{6}\left(k_{1,i}+                2k_{2,i}+2k_{3,i}+k_{4,i}\right)\hspace{5mm}\left\lbrace i=0\rightarrow m-1\right.\\[6mm]                x_{j+1}&amp;=x_j+h                \end{aligned}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Donde "m" es el orden de la ecuación diferencial. Estas ecuaciones tienen que ser evaluadas de manera secuencial, es decir calcular primero todos los valores de <dfn class="style1">k<sub>1</sub></dfn>, luego los de <dfn class="style1">k<sub>2</sub></dfn>, <dfn class="style1">k<sub>3</sub></dfn>, <dfn class="style1">k<sub>4</sub></dfn>, el valor de la variable dependiente <dfn class="style1">y</dfn> y finalmente el valor de la variable independiente <dfn class="style1">x</dfn>.</p>
+
+
+
+
+
+    <h3 class="text">Sistemas de ecuaciones diferenciales</h3>
+
+    <p class="text">Al igual que con el método de Euler, para resolver un sistema de ecuaciones diferenciales con el método de Runge-Kutta, las ecuaciones diferenciales deben estar en la forma:</p>
+    
+    <table id="ec_30" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                \begin{aligned}                y^{\prime}_0&amp;=f_0(x,y_0,y_1,y_2,\cdots,y_{m-1})\\[2mm]                y^{\prime}_1&amp;=f_1(x,y_0,y_1,y_2,\cdots,y_{m-1})\\[2mm]                &amp;\cdots\\[2mm]                y^{\prime}_{m-1}&amp;=f_{m-1}(x,y_0,y_1,y_2,\cdots,y_{m-1})                \end{aligned}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">Es decir, se deben despejar las derivadas de primer orden de todas las ecuaciones del sistema. Como se recordará, en este sistema “x” es la variable independiente (común a todas las ecuaciones del sistema) y y<sub>0</sub>, y<sub>1</sub>, y<sub>2</sub>, ... , y<sub>m-1</sub> son las variables dependientes.</p>
+    
+    <p class="text">En este caso el cálculo de las variables dependientes, para los nuevos puntos, es aún más moroso que en una ecuación diferencial de enésimo orden, porque los valores de <dfn class="style1">k</dfn> deben ser evaluados para cada una de las ecuaciones del sistema.</p>
+    
+    <p class="text">Si el sistema consta de "m" ecuaciones diferenciales, las ecuaciones para el cálculo de los valores de las variables dependientes en el punto <dfn class="style1">j+1</dfn>, son:</p>
+    
+    <table id="ec_31" class="ecuacion">
+        <tbody><tr>
+            <td>
+                \[                \begin{aligned}                k_{1,i}&amp;=h\,f_i\left(x_j,\,y_{0,j},\,y_{1,j},\cdots,\,y_{m,j}\right)\hspace{3mm}\left\lbrace i=0\rightarrow m-1\right.\\[5mm]                k_{2,i}&amp;=h\,f_i\left(x_j+\dfrac{h}{2},\,y_{0,j}+\dfrac{k_{1,0}}{2},\,y_{1,j}+\dfrac{k_{1,1}}{2},\cdots,\,y_{m-1,j}+\dfrac{k_{1,m-1}}{2}\right)\hspace{3mm}\left\lbrace i=0\rightarrow m-1\right.\\[6mm]                k_{3,i}&amp;=h\,f_i\left(x_j+\dfrac{h}{2},\,y_{0,j}+\dfrac{k_{2,0}}{2},\,y_{1,j}+\dfrac{k_{2,1}}{2},\cdots,\,y_{m-1,j}+\dfrac{k_{2,m-1}}{2}\right)\hspace{3mm}\left\lbrace i=0\rightarrow m-1\right.\\[6mm]                k_{4,i}&amp;=h\,f_i\left(x_j+h,\,y_{0,j}+k_{3,0},\,y_{1,j}+k_{3,1},\cdots,\,y_{m-1,j}+k_{3,m-1}\right)\hspace{3mm}\left\lbrace i=0\rightarrow m-1\right.\\[5mm]                y_{i,j+1}&amp;=y_{i,j}+\dfrac{1}{6}\left(k_{1,i}+                2k_{2,i}+2k_{3,i}+k_{4,i}\right)\hspace{5mm}\left\lbrace i=0\rightarrow m-1\right.\\[5mm]                x_{j+1}&amp;=x_j+h                \end{aligned}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Al igual que ocurre con las ecuaciones de enésimo orden, estas ecuaciones tienen que ser evaluadas de forma secuencial, es decir calcular primero todos los valores de <dfn class="style1">k<sub>1</sub></dfn> para cada una de las ecuaciones del sistema, luego los de <dfn class="style1">k<sub>2</sub></dfn>, después los de <dfn class="style1">k<sub>3</sub></dfn>, <dfn class="style1">k<sub>4</sub></dfn>, los valores de la variable dependiente <dfn class="style1">y</dfn> y finalmente el valor de la variable independiente <dfn class="style1">x</dfn>.</p>
+
+
+
+
+
+    <h3 class="text">Código</h3>
+
+
+    <p class="text">Con excepción de las ecuaciones, el algoritmo para resolver ecuaciones diferenciales de primer orden, de enésimo orden o sistemas de ecuaciones diferenciales de primer orden, es el mismo que en el método de Euler.</p>
+
+    <p class="text">Al método resultante (añadido a la clase <dfn class="style1">Function</dfn>) se denominado <i class="style1">rungek</i>, por lo que debe ser llamado desde la función que corresponde a la ecuación diferencial o al sistema de ecuaciones diferenciales a resolver.</p>
+
+    <p class="text">Al igual que en el método de Euler (y todos los métodos en general), el código correspondiente al método de euler puede ser recuperado en la calculadora escribiendo: <strong class="style1">Function.prototype.rungek</strong> (haga la prueba).</p>
+
+    <p class="text">El método de Runge Kutta se llama, mandando el valor inicial (<dfn class="style1">xi</dfn>) y final (<dfn class="style1">xf</dfn>) de la variable independiente, así como el valor o valores iniciales (yi: valor escalar o vector) de la variable dependiente. Los otros dos parámetros (opcionales al igual que en Euler) son: el número de segmentos en los que se divide el intervalo de integración <dfn class="style1">n</dfn> (por defecto 50) y el número de puntos a tomar en cuenta para generar la función de interpolación resultante <dfn class="style1">np</dfn> (por defecto 30).</p>
+
+
+
+
+
+    <h3 class="text">Ejemplos</h3>
+
+    <p class="ejemplo"><span class="ejemplo"></span>Como primer ejemplo, se resolverá (se obtendrá la función de interpolación) de la siguiente ecuación diferencial de primer orden, integrándola hasta x<sub>n</sub> = 7:</p>
+    
+    <table class="ecuacionsn" style="margin-left:1cm; width:calc(100% - 1cm)">
+        <tbody><tr>
+            <td>
+                \[                \begin{gathered}                3y^{\prime}+4xy-8x^3+4x = 0\\[3mm]                y = 4\text{ para } x=2                    \end{gathered}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="ejemplosn">Donde, en la misma ecuación, se dan los valores iniciales necesarios para resolverla: xi = 2, yi = 4.</p>
+    
+    <p class="ejemplosn">Primero se coloca la ecuación diferencial en forma de la ecuación (<a href="#ec_3">3</a>), es decir se despeja el término correspondiente a la derivada de primer orden:</p>
+    
+    <table class="ecuacionsn" style="margin-left:1cm; width:calc(100% - 1cm)">
+        <tbody><tr>
+            <td>
+                \[                y^{\prime}=f(x,y)=\dfrac{8x^3-4xy-4x}{3}                 \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="ejemplosn">Y se la programa:</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">var f = (x, y) =&gt; (8*x**3-4*x*y-4*x)/3;</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="ejemplosn">Ahora puede ser integrada (entre 2 y 7):</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">var fy = f.rungek({xi:2, xf:7, yi:4});</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="ejemplosn">Una vez obtenida la función de interpolación "fy", puede ser empleada igual que cualquier otra función, cuidando de no sobreparar los límites de integración (en este caso 2 y 7). Por ejemplo se puede dibujar su gráfica:</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">plot({f:fy, xi:2.5, xf:6.5})</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="ejemplosn">Que, como se puede ver, es uniforme en el intervalo de integración.</p>
+
+    <p class="ejemplosn">Igualmente, se puede calcular el valor de la variable dependiente para x = 4.6 y calcular, también, su derivada en ese punto:</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">fy(4.6)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">fy.df1(4.6)</div>
+        <div class="resultado"></div>
+    </div>
+
+
+
+
+
+    <br>
+    <p class="ejemplo"><span class="ejemplo"></span>Como segundo ejemplo, se resolverá la siguiente ecuación diferencial de cuarto orden (se obtendrá la función de interpolación), integrándola entre 1 y 5:</p>
+    
+    <table class="ecuacionsn" style="margin-left:1cm; width:calc(100% - 1cm)">
+        <tbody><tr>
+            <td>
+                \[                \begin{gathered}                3y^{\prime\prime\prime\prime}-3xy^{\prime\prime}+y^{\prime}+1.8711x^{-1.9}+14.49x^{1.1}-5 = 0\\[3mm]                y = 4,\quad y^{\prime}=11.3,\quad y^{\prime\prime}=6.93,\quad y^{\prime\prime\prime}=0.693\quad para\quad x = 1                \end{gathered}                 \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="ejemplosn">Al igual que en el ejemplo anterior y como es usual, los valores iniciales se dan en la misma ecuación: xi = 1, yi = [y<sub>0</sub>=4, y<sub>1</sub>=11.3, y<sub>2</sub>=6.93, y<sub>3</sub>=0.693].</p>
+    
+    <p class="ejemplosn">Como se trata de una ecuación diferencial de enésimo orden, primero se llevan a cabo los cambios de variable correspondientes a la ecuación (<a href="#ec_15">15</a>), es decir: y<sub>1</sub> = y', y<sub>2</sub> = y'', y<sub>3</sub> = y''', y<sub>4</sub> = y'''' y se despeja la derivada de mayor orden (en este caso la de cuarto orden):</p>
+    
+    <table class="ecuacionsn" style="margin-left:1cm; width:calc(100% - 1cm)">
+        <tbody><tr>
+            <td>
+                \[                y^{\prime\prime\prime\prime}=y^{\prime}_3=y_4= \dfrac{3xy_2-y_1-1.8711x^{-1.9}-14.49x^{1.1}+5}{3} = 0                 \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="ejemplosn">Entonces se programa la ecuación diferencial:</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">var f = (x, [y, y1, y2, y3]) =&gt; (3*x*y2-y1-1.8711*x**-1.9-14.49*x**1.1+5)/3;</div>
+        <div class="resultado"></div>
+    </div>        
+    
+    <p class="ejemplosn">Y se la resuelve con el método de Runge-Kutta:</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">var fy = f.rungek({xi:1, xf:5, yi:[4, 11.3, 6.93, 0.693]});</div>
+        <div class="resultado"></div>        
+    </div>
+    
+    <p class="ejemplosn">Como en el ejemplo anterior, la función de interpolación (fy), puede ser empleada igual que cualquier función (cuidando de no sobrepasar los límies de integración). Así, su gráfica es:</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">plot({f:fy, xi:1, xf:4.5})</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="ejemplosn">Los valores de "y", para x=3.1 y x=4.3, así como la derivada segunda para x=2.6, se obtienen con:</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">[3.1, 4.3].map(fy)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">fy.df2(2.6)</div>
+        <div class="resultado"></div>
+    </div>
+
+
+
+
+
+    <br>
+    <p class="ejemplo"><span class="ejemplo"></span>Como tercer ejemplo, se resolverá el siguiente sistema de 3 ecuaciones diferenciales de primer orden (se obtendrán las 3 funciones de interpolación), entre 0 y 0.4:</p>
+    
+    <table class="ecuacionsn" style="margin-left:1cm; width:calc(100% - 1cm)">
+        <tbody><tr>
+            <td>
+                \[                \begin{gathered}                \begin{aligned}                u^{\prime}-v+2w+t^2-2t^{1.5}-1.2t^{0.2}+10 = 0\\[2mm]                v^{\prime}+5w-5t^{1.5}-2t+35=0\\[2mm]                w^{\prime}-2u+v-t^2+2t^{1.2}-1.5t^{0.5}+10 = 0                \end{aligned}\\[12mm]                u=3,\quad v= -4,\quad w=-7\quad para \quad t=0                \end{gathered}                 \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="ejemplosn">Como es usual cuando se trabaja con ecuaciones diferenciales, los valores iniciales se proporcionan en la misma ecuación: xi=t<sub>0</sub>=0, y = [y<sub>0</sub>=u<sub>0</sub>=3, y<sub>1</sub>=v<sub>0</sub>=-4, y<sub>2</sub>=w<sub>0</sub>=-7]</p>
+    
+    <p class="ejemplosn">Primero se despejan las derivadas de primer orden, de manera que las ecuaciones del sistema queden en forma de la ecuación (<a href="#ec_19">19</a>):</p>
+    
+    <table class="ecuacionsn" style="margin-left:1cm; width:calc(100% - 1cm)">
+        <tbody><tr>
+            <td>
+                \[                \begin{gathered}                \begin{aligned}                u^{\prime}&amp;=v-2w-t^2+2t^{1.5}+1.2t^{0.2}-10\\[2mm]                v^{\prime}&amp;=-5w+5t^{1.5}+2t-35\\[2mm]                w^{\prime}&amp;=2u-v+t^2-2t^{1.2}+1.5t^{0.5}-10                \end{aligned}\\[12mm]                u=3,\quad v= -4,\quad w=-7\quad para \quad t=0                \end{gathered}                 \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="ejemplosn">Entonces se las programa en una función que devuelve un vector con los valores de cada una de las ecuaciones del sistema:</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">var f = (t, [u, v, w]) =&gt; [<br>&nbsp; v-2*w-t**2+2*t**1.5+1.2*t**0.2-10,<br>&nbsp; -5*w+5*t**1.5+2*t-35,<br>&nbsp; 2*u-v+t**2-2*t**1.2+1.5*t.sqrt()-10<br>];</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="ejemplosn">Y se resuelve el sistema con el método de Runge-Kutta:</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">var [fu, fv, fw] = f.rungek({xi:0, xf:0.4, yi:[3, -4, -7]});</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="ejemplosn">Una vez resuelto el sistema, las funciones de interpolación resultantes (fu, fv y fw), pueden ser empleadas igual que cualquier función (como siempre cuidando de no sobrepasar los límites de integración).</p>
+
+    <p class="ejemplosn">Por ejemplo, se pueden dibujar sus gráficas, así, la gráfica de la primera función de interpolación, es:</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">plot({f:fu, xi:0, xf:0.4})</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="ejemplosn">El de la segunda:</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">plot({f:fv, xi:0, xf:0.4})</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="ejemplosn">Y el de la tercera:</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">plot({f:fv, xi:0, xf:0.4})</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="ejemplosn">Igualmente, se pueden calcular los valores de "u", "v" y "w", para valores conocidos de "t" (así como derivarlas, emplearlas en otras operaciones, etc.):</p>
+
+    <p class="ejemplosn">Por ejemplo los valores de "u" para valores de "t" iguales a 0.14 y 0.27, así como la derivada primera para "t" igual a 0.31, son:</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">[0.14, 0.27].map(fu)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">fu.df1(0.31)</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="ejemplosn">Los valores de "v":</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">[0.14, 0.27].map(fv)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">fv.df1(0.31)</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="ejemplosn">Y los valores de "w":</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">[0.14, 0.27].map(fw)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">fw.df1(0.31)</div>
+        <div class="resultado"></div>
+    </div>
+
+
+    <br>
+    <div class="ejercicio" id="ejercicio8" enunciado="1"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Para resolver la siguiente ecuación diferencial.</p><table class="ecuacionsn"><tbody><tr><td>\[\begin{gathered}y^{\prime} = 4e^{0.7x}-0.5y\\[3mm]y=2\quad para\quad x=0\end{gathered}\]</td><td></td></tr></tbody></table></div><p class="pregunta"><span class="pregunta"></span>Programe la ecuación diferencial.</p><div id="pregunta80" class="calculadora" spellcheck="false"><div class="instruccion">var f=(x,y)=&gt;4*Math.exp(0.7*x)-0.5*y;</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Resuelva la ecuación diferencial (obtenga la función de interpolación) integrándola, con el método de Runge-Kutta, entre 0 y 2.</p><div id="pregunta81" class="calculadora" spellcheck="false"><div class="instruccion">var fy=f.rungek({xi:0,xf:2,yi:2})</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Dibuje la función de interpolación entre los límites de integración</p><div id="pregunta82" class="calculadora" spellcheck="false"><div class="instruccion">plot({f:fy,xi:0,xf:2})</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Calcule (método map) los valores de "y" para x=1.2 y x=2, redondeando los resultados al primer dígito después del punto.</p><div id="pregunta83" class="calculadora" spellcheck="false"><div class="instruccion">[1.2,2].map(fy).round(1)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="12" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 8 -->
+    
+    <div class="ejercicio" id="ejercicio9" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Para resolver la siguiente ecuación diferencial:</p><table class="ecuacionsn"><tbody><tr><td>\[\begin{gathered}y^{\prime\prime\prime} = t+2y+ty^{\prime}-ty^{\prime\prime}\\[3mm]y=0;\quad y^{\prime}=0;\quad y^{\prime\prime}=0\quad para\quad t=0\end{gathered}\]</td><td></td></tr></tbody></table></div><p class="pregunta"><span class="pregunta"></span>Programe la ecuación diferencial.</p><div id="pregunta88" class="calculadora" spellcheck="false"><div class="instruccion">var f=(t,[y,y1,y2])=&gt;t+2*y+t*y1-t*y2;</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Resuelva la ecuación diferencial (obtenga la función de interpolación) integrándola, con el método de Euler, entre 0 y 1.5.</p><div id="pregunta89" class="calculadora" spellcheck="false"><div class="instruccion">var fy=f.rungek({xi:0,xf:1.5,yi:[0,0,0]})</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Dibuje la función de interpolación entre los límites de integración</p><div id="pregunta90" class="calculadora" spellcheck="false"><div class="instruccion">plot({f:fy,xi:0,xf:1.5})</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Calcule (método map) los valores de "y" para t=0.2 y t=1.4, redondeando los resultados al cuarto dígito después del punto.</p><div id="pregunta91" class="calculadora" spellcheck="false"><div class="instruccion">[0.2,1.4].map(fy).round(4)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="12" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 9 -->
+    
+    <div class="ejercicio" id="ejercicio10" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>Para resolver el siguiente sistema de ecuaciones diferenciales:</p><table class="ecuacionsn"><tbody><tr><td>\[\begin{gathered}\begin{aligned}\dfrac{dx}{dt} &amp;= x^{\prime} = 2x+3y\\[3mm]\dfrac{dy}{dt} &amp;= y^{\prime} = 2x+y\end{aligned}\\[12mm]x=2.7;\quad y=2\quad para\quad t=0\end{gathered}\]</td><td></td></tr></tbody></table></div><p class="pregunta"><span class="pregunta"></span>Programe la ecuación diferencial.</p><div id="pregunta100" class="calculadora" spellcheck="false"><div class="instruccion">var f=(t,[x,y])=&gt;[2*x+3*y,2*x+y];</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Resuelva el sistema de ecuaciones diferenciales (obtenga las funciones de interpolación) integrándolas, con el método de Euler, entre 0 y 1.3.</p><div id="pregunta101" class="calculadora" spellcheck="false"><div class="instruccion">var [fx,fy]=f.rungek({xi:0,xf:1.3,yi:[2.7,2]})</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Dibuje la solución de la primera ecuación entre los límites de integración</p><div id="pregunta102" class="calculadora" spellcheck="false"><div class="instruccion">plot({f:fx,xi:0,xf:1.3})</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Dibuje la solución de la segunda ecuación entre los límites de integración</p><div id="pregunta103" class="calculadora" spellcheck="false"><div class="instruccion">plot({f:fy,xi:0,xf:1.3})</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Calcule (con map) los valores de "x" para t=0.2 y t=1.2, redondeando los resultados al tercer dígito después del punto.</p><div id="pregunta104" class="calculadora" spellcheck="false"><div class="instruccion">[0.2 ,1.2].map(fx).round(3)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Calcule (con map) los valores de "y" para t=0.2 y t=1.2, redondeando los resultados al tercer dígito después del punto.</p><div id="pregunta105" class="calculadora" spellcheck="false"><div class="instruccion">[0.2 ,1.2].map(fy).round(3)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="18" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 10 -->
+    
+    <div class="ejercicio" id="ejercicio11" enunciado="2"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Resuelva la siguiente ecuación diferencial ("f(x,y)", función flecha), integrándola entre 0 y 2, con el método de Runge-Kutta (función de interpolación "fy").</p><table class="ecuacionsn"><tbody><tr><td>\[\begin{aligned}y^{\prime} = y(x^{2.1}-1)\\[1mm]y=1\quad para\quad x=0\end{aligned}\]</td><td></td></tr></tbody></table><p></p><div id="pregunta124" class="calculadora" spellcheck="false"><div class="instruccion">var f=(x,y)=&gt;y*(x**2.1-1);<br>var fy=f.rungek({xi:0,xf:2,yi:1})</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con la función de interpolación y el método map, calcule valores de "r" (r<sub>0</sub>, r<sub>1</sub>, r<sub>2</sub>, r<sub>3</sub>), para valores de "x" iguales a 0.5, 1, 1.5 y 2, redondeando los resultados al primer dígito después del punto.</p><table class="ecuacionsn"><tbody><tr><td>\[r_0=fy(0.5),\enspace r_1=fy(1),\enspace r_2 = fy(1.5),\enspace r_3=fy(2)\]</td><td></td></tr></tbody></table><p></p><div id="pregunta125" class="calculadora" spellcheck="false"><div class="instruccion">var r=[0.5,1,1.5,2].map(fy).round(1);r</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con los valores de "r" calculados, resuelva la siguiente ecuación no lineal, con el método de regula-falsi (valores inicial y final: -2 y 2), redondeando los resultados al cuarto dígito después del punto.</p><table class="ecuacionsn"><tbody><tr><td>\[f(x) = r_0x^3+r_1x^2+r_2x+r_3 = 0\]</td><td></td></tr></tbody></table><p></p><div id="pregunta126" class="calculadora" spellcheck="false"><div class="instruccion">var fx = x =&gt; r[0]*x**3+r[1]*x**2+r[2]*x+r[3];<br>fx.refa({xi:-2,xf:2}).round(4)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="12" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 11 -->
+
+    <div class="ejercicio" id="ejercicio12" enunciado="2"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Resuelva la siguiente ecuación diferencial, integrándola entre 0 y 0.45, con el método de Runge-Kutta (función de interpolación "fy").</p><table class="ecuacionsn"><tbody><tr><td>\[\begin{aligned}y^{\prime} = x^{3.1}+y^{1.9}\\[1mm]y=2\quad para\quad x=0\end{aligned}\]</td><td></td></tr></tbody></table><p></p><div id="pregunta133" class="calculadora" spellcheck="false"><div class="instruccion">var f=(x,y)=&gt;x**3.1+y**1.9;<br>var fy=f.rungek({xi:0,xf:0.45,yi:2})</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con la función de interpolación y el método map, calcule valores de "r" (r<sub>0</sub> a r<sub>9</sub>), para valores de "x" iguales a 0, 0.2, 0.3, 0.35, 0.4 y 0.45, redondeando los resultados al segundo dígito después del punto.</p><table class="ecuacionsn"><tbody><tr><td>\[\text{$r_0$=fy(0), $r_1$=fy(0.2), $r_2$ = fy(0.3), $r_3$=fy(0.35), $r_4$=fy(0.4), $r_5$=fy(0.45)}\]</td><td></td></tr></tbody></table><p></p><div id="pregunta134" class="calculadora" spellcheck="false"><div class="instruccion">var r=[0,0.2,0.3,0.35,0.4,0.45].map(fy).round(2);r</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con los valores de "r" calculados, resuelva la siguiente ecuación polinomial, con roots (valores por defecto), redondeando los resultados al tercer dígito después del punto.</p><table class="ecuacionsn"><tbody><tr><td>\[p(x) = r_0x^5+r_1x^4+r_2x^3+r_3x^2+r_4x+r_5\]</td><td></td></tr></tbody></table><p></p><div id="pregunta135" class="calculadora" spellcheck="false"><div class="instruccion">r.roots().round(3)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="12" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 12 -->
+
+    <div class="ejercicio" id="ejercicio13" enunciado="1"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p>.</div><p class="pregunta"><span class="pregunta"></span>Resuelva la siguiente ecuación diferencial, integrándola entre 0 y 1.2, con el método de Runge-Kutta (función de interpolación "fq").</p><table class="ecuacionsn"><tbody><tr><td>\[\begin{gathered}q^{\prime\prime} = 2.1\left(23sin(10t)-7q^{\prime}-50q\right)\\[2mm]q=0,\quad q^{\prime}=0\quad\text{para}\quad t=0\end{gathered}\]</td><td></td></tr></tbody></table><p></p><div id="pregunta139" class="calculadora" spellcheck="false"><div class="instruccion">var f=(t,[q,q1])=&gt;2.1*(23*Math.sin(10*t)-7*q1-50*q);<br>var fq=f.rungek({xi:0,xf:1.2,yi:[0,0]})</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Dibuje la solución (la función de interpolación) entre los límites de integración.</p><div id="pregunta140" class="calculadora" spellcheck="false"><div class="instruccion">plot({f:fq,xi:0,xf:1.2})</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Complete el código que leyendo los segmentos de solución de la gráfica, encuentre las 3 soluciones positivas de la función de interpolación, empleando el método de la secante (resto de los valores por defecto, redondeo: quinto dígito).</p><div id="pregunta141" class="calculadora" spellcheck="false"><div class="instruccion">print(fq.secante({xi:0.4,xf:0.5}).round(5));</div><div class="resultado"></div><div class="instruccion">fq.secante({xi:0.7,xf:0.8}).round(5)</div><div class="resultado"></div><div class="instruccion">fq.secante({xi:1,xf:1.1}).round(5)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="14" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 13 -->
+    
+    <div class="ejercicio" id="ejercicio14" enunciado="2"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Resuelva el siguiente sistema de ecuaciones diferenciales, integrándolas entre 0 y 1.5, con el método de Runge-Kutta (funciones de interpolación: "fx", "fy").</p><table class="ecuacionsn"><tbody><tr><td>\[\begin{gathered}\begin{aligned}x^{\prime}&amp;=1.2xy+t\\[1mm]y^{\prime}&amp;=x-1.1t\end{aligned}\\[2mm]x=0,\enspace y=1\quad\text{para}\quad t=0\end{gathered}\]</td><td></td></tr></tbody></table><p></p><div id="pregunta151" class="calculadora" spellcheck="false"><div class="instruccion">var f=(t,[x,y])=&gt;[1.2*x*y+t, x-1.1*t];<br>var [fx,fy]=f.rungek({xi:0,xf:1.5,yi:[0,1]})</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con la función de interpolación (en una sola expresión), calcule los valores de "w" y "z", para valores de "t" iguales a 0.5 y 1.5.</p><table class="ecuacionsn"><tbody><tr><td>\[w=fy(0.5),\quad z=fx(1.5)\]</td><td></td></tr></tbody></table><p></p><div id="pregunta152" class="calculadora" spellcheck="false"><div class="instruccion">var [w,z]=[fy(0.5),fx(1.5)];[w,z]</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con los valores de "w" y "z" resuelva el siguiente sistema de ecuaciones no lineales ("fe", función flecha) con el método descensoa (valores iniciales: 3.1, 1.9, precisión/exactitud: 7 dígitos, redondeo: segundo dígito).</p><table class="ecuacionsn"><tbody><tr><td>\[\begin{alignedat}{5}u^{2.4}&amp;+&amp;v^{1.3}&amp;-&amp;uv&amp;-&amp;10w&amp;=&amp;\phantom{2}0\\[2mm]3u^{2.1}&amp;-&amp;uv^{2.2}&amp;-&amp;v^{3}&amp;-&amp;7z&amp;=&amp;0\end{alignedat}\]</td><td></td></tr></tbody></table><p></p><div id="pregunta153" class="calculadora" spellcheck="false"><div class="instruccion">var fe=([u,v])=&gt;[<br>  u**2.4+v**1.3-u*v-10*w,<br>  3*u**2.1-u*v**2.2-v**3-7*z<br>];<br>fe.descensoa({vi:[3.1,1.9],err:7}).v.round(2)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="11" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 14 -->
+    
+    <div class="ejercicio" id="ejercicio15" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Ajuste los siguientes datos:</p><div class="table borderAll"><table align="center"><tbody><tr><th class="center" style="width:30px;">x</th><td class="center">2.3</td><td class="center">4.5</td><td class="center">6.7</td><td class="center">8.4</td><td class="center">9.2</td><td class="center">10.1</td><td class="center">11.2</td><td class="center">12.6</td><td class="center">14.5</td><td class="center">16.3</td><td class="center">17.2</td><td class="center">18.1</td></tr><tr><th class="center">y</th><td class="center">11</td><td class="center">41</td><td class="center">90</td><td class="center">141</td><td class="center">169</td><td class="center">205</td><td class="center">251</td><td class="center">318</td><td class="center">421</td><td class="center">545</td><td class="center">592</td><td class="center">655</td></tr></tbody></table></div><p class="ejerciciosn">A la ecuación (vector de funciones: "vf"; vector de datos: "vx", "vy"; función ajustada: "f"):</p><table class="ecuacionsn"><tbody><tr><td>\[f = ax^2+\dfrac{b}{x}+c\,\text{e}\raisebox{0.8em}{$\frac{x}{8}$}\]</td><td></td></tr></tbody></table><p class="ejerciciosn">Mostrando los coeficientes "c" resultantes del ajuste.</p><p></p><div id="pregunta154" class="calculadora" spellcheck="false"><div class="instruccion">var vf = [x =&gt; x**2, x =&gt; 1/x, x =&gt; Math.exp(x/8)];<br>var vx = [2.3, 4.5, 6.7, 8.4, 9.2, 10.1, 11.2, 12.6, 14.5, 16.3, 17.2, 18.1];<br>var vy = [11, 41, 90, 141, 169, 205, 251, 318, 421, 545, 592, 655];<br>var f = vf.mincuad([vx, vy]).f;</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con la ecuación ajustada (f), resuelva la siguiente ecuación diferencial (encuentre la función de interpolación) integrándola entre 5.2 y 9.3, con el método de Runge-Kutta (ecuación diferencial, función flecha: "fd(x,[y,y1,y2])"; función resultante: "fy").</p><table class="ecuacionsn"><tbody><tr><td>\[\begin{gathered}y^{\prime\prime\prime}=12x^2+12x+36-2y^{\prime}-y^{\prime\prime}\\[3mm]y=4\text{f}(5.96),\;y^{\prime}=3\text{f}(5.24),\;y^{\prime\prime}=2\text{f}(3.98)\quad\text{para}\quad x=5.2\end{gathered}\]</td><td></td></tr></tbody></table><p></p><div id="pregunta155" class="calculadora" spellcheck="false"><div class="instruccion">var fd = (x, [y, y1, y2]) =&gt; 12*x**2 + 12*x + 36 - 2*y1 - y2;<br>var fy = fd.rungek({xi: 5.2, xf: 9.3, yi: [4*f(5.96), 3*f(5.24), 2*f(3.98)]});</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con la función de interpolación (fy), calcule el valor de la siguiente integral con el método de Romberg (precisión/error: 9 dígitos, redondeo: segundo dígito).</p><table class="ecuacionsn"><tbody><tr><td>\[\int_{6}^{9.2}f_y\,dx\]</td><td></td></tr></tbody></table><p></p><div id="pregunta156" class="calculadora" spellcheck="false"><div class="instruccion">fy.romberg({a: 6, b: 9.2, err: 9}).round(2)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="17" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 15 -->
+
+
+
+
+
+    <h2 class="text">Ecuaciones diferenciales en Octave/MatLab</h2>
+
+    <p class="text">Para resolver ecuaciones diferenciales en Octave/MatLab, se puede emplear la función <b class="style1">ode45</b>, que recibe como primer parámetro, la función a integrar. La función a integrar debe recibir dos parámetros: la variable independiente y la variable dependiente (escalar o vector). Debe devolver un escalar cuando se trata de una ecuación diferencial de primer orden y un vector cuando se trata de una ecuación de enésimo orden o de un sistema de ecuaciones diferenciales de primer orden.</p>
+
+    <p class="text">Como segundo parámetro recibe un vector con los valores correspondientes a los límites inicial y final del intervalo de integración. Como tercer parámetro recibe un vector con los valores iniciales conocidos (o un escalar si se trata de una sola ecuación diferencial). Como en la mayoría de las funciones, <b class="style1">ode45</b>, puede recibir otros parámetros adicionales, los cuales no serán empleados en este capítulo.</p>
+    
+    <p class="text">Devuelve dos resultados: Un vector con los valores de la variable independiente (generados por la función en el intérvalo de integración dado) y un vector o matriz, con los valores correspondientes de la variable dependiente y (si corresponde) de sus derivadas (es decir los vectores de soluciones).</p>
+
+    <p class="text">Con los valores devueltos, se puede crear una función de interpolación, empleando un método de interpolación, por ejemplo, el método <b class="style1">spline</b>.</p>
+
+    <p class="text">Así, para resolver la siguiente ecuación diferencial (obtener la función de interpolación) integrándola entre 2 y 6:</p>
+    
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                \begin{gathered}                3y^{\prime}+4xy-8x^3+4x = 0\\[3mm]                y = 4\text{ para } x=2                    \end{gathered}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Primero se despeja la derivada primera:</p>
+    
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                y^{\prime}=f(x,y)=\dfrac{8x^3-4xy-4x}{3}                 \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>        
+        
+    <p class="text">Y se escriben las siguientes instrucciones:</p>
+
+    <div class="codigo octave">format shortG;<br>f = @(x,y) (8*x.^3-4*x*y-4*x)/3;<br>[vx, vy] = ode45(f, [2,6], 4);<br>pp = spline(vx,vy);<br>fy = @(x) ppval(pp,x);</div>
+
+    <p class="text">Con lo que se obtiene la función de interpolación "fy". Con la función de interpolación (al igual que en JavaScript) se pueden llevar a cabo todas las operaciones admitidas por el lenguaje (calcular valores de la variable dependiente, derivar, integrar, encontrar las raíces, etc.).</p>
+
+    <p class="text">Por ejemplo, para calcular los valores de la variable dependiente para x = 4.6 y x = 5.3, se escribe:</p>
+
+    <div class="codigo octave">fy([4.6, 5.3])<br><br># Resultados obtenidos<br><br>ans =<br><br>       38.337       52.203</div>
+
+    <p class="text">Es necesario tomar en cuenta que, a pesar de ser la misma función (<dfn class="style1">ode45</dfn>) Octave y MatLab, devuelven resultados ligeramente diferentes, debido a que, las funciones respectivas de estas herramientas, no emplean, exactamente, el mismo número de puntos. <dfn class="style1">En este capítulo, tanto en los ejemplos como en los ejercicios, se emplearán y mostrarán los resultados devueltos por Octave</dfn>.</p>
+
+    <p class="text">Para dibujar la gráfica de solución (la gráfica de la función de interpolación) se genera un vector con números igualmente espaciados entre los límites de integración y se calcula el vector respectivo con la función de interpolación:</p>
+
+    <div class="codigo octave">x = 2:0.01:6;<br>plot(x, fy(x), "-b")</div>
+
+    <p class="figurasn"><img src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo12/files/octave_graph_1.png" style="width:597px;"></p>    
+
+
+
+    <p class="text">Para resolver una ecuación diferencial de enésimo orden, se debe convertir la ecuación diferencial en un sistema de "n" ecuaciones diferenciales de primer orden (como se demuestra en los métodos de Euler y Runge-Kutta), sin embargo, en Octave/MatLab, es necesario mandar ese sistema de ecuaciones lineales al método (no solo la ecuación diferencial de enésimo orden).</p>
+    
+    <p class="text">Además, se debe tomar en cuenta que, en Octave/MatLab, el índice del primer elemento es 1 (no 0, como en JavaScript/Python), por lo que las otras ecuaciones del sistema (los cambios de variable necesarios) deberán ser: y=y<sub>1</sub>, y'=y<sub>2</sub>, y''=y<sub>3</sub>, y'''=y<sub>4</sub>, etc.</p>
+
+    <p class="text">Por ejemplo, para resolver la siguiente ecuación diferencial de cuarto orden, integrándola entre 1 y 4:</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                \begin{gathered}                3y^{\prime\prime\prime\prime}-3xy^{\prime\prime}+y^{\prime}+1.8711x^{-1.9}+14.49x^{1.1}-5 = 0\\[3mm]                y = 4,\quad y^{\prime}=11.3,\quad y^{\prime\prime}=6.93,\quad y^{\prime\prime\prime}=0.693\quad para\quad x = 1                \end{gathered}                 \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Primero se despeja la derivada de mayor orden (la cuarta):</p>
+    
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                y^{\prime\prime\prime\prime}=\dfrac{3xy\prime\prime-y\prime-1.8711x^{-1.9}-14.49x^{1.1}+5}{3} = 0                 \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Siendo los cambios de variables, las ecuaciones diferenciales restantes:</p>
+    
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                \begin{aligned}                y^\prime &amp;= y_2\\                y^{\prime\prime} &amp;= y_3\\                y^{\prime\prime\prime} &amp;= y_4                \end{aligned}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">La función donde se programa la ecuación diferencial, debe devolver los resultados en un vector columna, comenzando con la derivada de menor orden (la derivada de primer orden) continuando hasta la de mayor orden (la derivada de enésimo orden).</p>
+
+    <p class="text">Cuando se resuelve una ecuación de enésimo orden, el segundo resultado devuelto por <dfn class="style1">ode45</dfn> es una matriz: la matriz de soluciones, donde la primera columna corresponde a los valores: el vector de soluciones de la ecuación de enésimo orden (la ecuación que se quiere resolver). Las restantes columnas son las derivadas de primer orden, segundo orden y así hasta la derivada de orden "n-1".</p>
+    
+    <p class="text">Cuando se resuelve una ecuación de enésimo orden, en la práctica, sólo se trabaja con la primera columna de la matriz de soluciones.</p>
+
+    <p class="text">En consecuencia, las instrucciones con las que se resuelve la ecuación diferencial de cuarto orden (se encuentra la función de interpolación), son:</p>
+
+    <div class="codigo octave">f = @(x,y) [y(2); y(3); y(4); (3*x*y(3)-y(2)-1.8711*x.^-1.9-14.49*x.^1.1+5)/3];<br>[vx, mr] = ode45(f, [1,4], [4, 11.3, 6.93, 0.693]);<br>vy = mr(:,1);<br>pp = spline(vx, vy);<br>fy = @(x) ppval(pp, x);</div>
+
+    <p class="text">Como en el ejemplo anterior, una vez que se tiene la función de interpolación (fy), puede ser empleada igual que cualquier función normal (cuidando de no sobrepasar los límites de integración). Por ejemplo, para calcular los valores de la variable independiente, para valores de "x" iguales a 1.8 y 2.9, se escribe:</p>
+
+    <div class="codigo octave">fy([1.8, 2.9])<br><br>% Resultados obtenidos:<br><br>ans =<br><br>       38.315       52.193</div>
+
+    <p class="text">La gráfica de la solución (de la función de interpolación), puede ser dibujada igual que en el anterior ejemplo, es decir generando valores de "x" entre los límites de integración y calculando los valores de la función de interpolación para esos valores de "x":</p>
+
+    <div class="codigo octave">x = 1:0.01:4;<br>plot(x, fy(x), "-b")</div>
+
+    <p class="figurasn"><img src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo12/files/octave_graph_2.png" style="width:528px"></p>
+
+
+
+    <p class="text">Para resolver un sistema de ecuaciones diferenciales de primer orden, se debe programar una función que devuelva un vector columna, con los resultados de cada una de las ecuaciones del sistema (igualadas a su derivadas primeras). Al igual que ocurre con la ecuación diferencial de enésimo orden, el segundo resultado devuelto por <dfn class="style1">ode45</dfn>, es una matriz con tantas columnas como ecuaciones tiene el sistema, correspondiendo, cada una de ellas, a la solución de cada una de las ecuaciones del sistema.</p>
+    
+    <p class="text">Así, para resolver el siguiente sistema de ecuaciones diferenciales, integrándolas entre 0 y 0.4:</p>
+    
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                \begin{gathered}                \begin{aligned}                u^{\prime}-v+2w+t^2-2t^{1.5}-1.2t^{0.2}+10 = 0\\[2mm]                v^{\prime}+5w-5t^{1.5}-2t+35=0\\[2mm]                w^{\prime}-2u+v-t^2+2t^{1.2}-1.5t^{0.5}+10 = 0                \end{aligned}\\[12mm]                u=3,\quad v= -4,\quad w=-7\quad para \quad t=0                \end{gathered}                 \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">Primero, se colocan las ecuaciones de manera que estén igualadas a sus derivadas respectivas:</p>
+    
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                \begin{gathered}                \begin{aligned}                u^{\prime}&amp;=v-2w-t^2+2t^{1.5}+1.2t^{0.2}-10\\[2mm]                v^{\prime}&amp;=-5w+5t^{1.5}+2t-35\\[2mm]                w^{\prime}&amp;=2u-v+t^2-2t^{1.2}+1.5t^{0.5}-10                \end{aligned}\\[12mm]                u=3,\quad v= -4,\quad w=-7\quad para \quad t=0                \end{gathered}                 \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">Y se las programa haciendo (por claridad) los siguientes cambios de variables (correspondientes al segundo parámetro de la función a integrar): u = y<sub>1</sub>, v = y<sub>2</sub>, w = y<sub>3</sub>, con lo que las instruciones con las que se lleva a cabo la integración, son:</p>
+
+    <div class="codigo octave">format shortG;<br>function r = f(t,y)<br>  u=y(1); v=y(2); w=y(3);<br>  r =[v-2*w-t.^2+2*t.^1.5+1.2*t.^0.2-10;<br>      -5*w+5*t.^1.5+2*t-35;<br>      2*u-v+t.^2-2*t.^1.2+1.5*t.^0.5-10];<br>end<br>[vt, mr] = ode45(@f, [0,0.35], [3,-4,-7]);<br>vu=mr(:,1);<br>vv=mr(:,2);<br>vw=mr(:,3);<br>ppu = spline(vt,vu);<br>fu = @(t) ppval(ppu,t);<br>ppv = spline(vt,vv);<br>fv = @(t) ppval(ppv,t);<br>ppw = spline(vt,vw);<br>fw = @(t) ppval(ppw,t);</div>
+
+    <p class="text">Tome en cuenta que en MatLab, sólo se puede programar una función estándar en un archivo (en un escript .m), por lo que para hacer correr este ejemplo en MatLab, es necesario programar previamente la función "f" en el archivo "f.m".</p>
+
+    <p class="text">Como en los otros casos, con las funciones de interpolación (fu, fv y fw) se pueden llevar a cabo todas las operaciones admitidas por el lenguaje. Por ejemplo, calcular los valores de "u", "v" y "w" para valores de "t" iguales a 0.14 y 0.27:</p>
+
+    <div class="codigo octave">fu([0.14,0.27])<br>fv([0.14,0.27])<br>fw([0.14,0.27])<br><br>% Resultados obtenidos:<br><br>ans =<br><br>       3.0945       3.2078<br><br>ans =<br><br>      -3.9804      -3.9271<br><br>ans =<br><br>      -6.9476      -6.8597</div>
+
+    <p class="text">Como en los otros casos, las gráficas de las funciones de interpolación pueden ser dibujadas generando un vector con los valores de la variable independiente (t), entre los límites de integración y calculando los vectores respectivos de las funciones de interpolación:.</p>
+
+    <div class="codigo octave">t = 0:0.01:0.35;<br>plot(t, fu(t), "-b")</div>
+
+    <p class="figurasn"><img src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo12/files/octave_graph_3.png" style="width:526px"></p>
+
+    <div class="codigo octave">plot(t, fv(t), "-b")</div>
+
+    <p class="figurasn"><img src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo12/files/octave_graph_4.png" style="width:526px"></p>
+
+    <div class="codigo octave">plot(t, fw(t), "-b")</div>
+
+    <p class="figurasn"><img src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo12/files/octave_graph_5.png" style="width:526px"></p>
+
+
+    <br>
+
+    <div class="ejercicio" id="ejercicio16" enunciado="2"><hr><div class="enunciado"><p class="ejercicio extern"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Complete el código que, en Octave, (formato shortG) resuelve la siguiente ecuación diferencial ("f", función anónima), integrándola entre 0 y 0.45, con ode45 (resultados: "vx" y "vy") y programe la función de interpolación "fy" con spline y ppval (coeficientes: "pp").</p><table class="ecuacionsn"><tbody><tr><td>\[\begin{aligned}y^{\prime} = x^{3.1}+y^{1.9}\\[1mm]y=2\quad para\quad x=0\end{aligned}\]</td><td></td></tr></tbody></table><p class="preguntasn">Luego ejecute el código en Octave, corrija los errores cometidos al completar el código y evalúe la celda.</p><p></p><div id="pregunta169" class="calculadora" spellcheck="false"><div class="instruccion">`<br>format shortG;<br>f=@(x,y)x.^3.1+y.^1.9;<br>[vx,vy]=ode45(f,[0,0.45],2);<br>pp=spline(vx,vy);<br>fy=@(x)ppval(pp,x);<br>`;</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Complete el código que, con la función de interpolación, calcula valores de "r" (r<sub>0</sub> a r<sub>9</sub>), para valores de "x" iguales a 0, 0.2, 0.3, 0.35, 0.4 y 0.45, redondeando los resultados al segundo dígito después del punto.</p><table class="ecuacionsn"><tbody><tr><td>\[\text{$r_0$=fy(0), $r_1$=fy(0.2), $r_2$ = fy(0.3), $r_3$=fy(0.35), $r_4$=fy(0.4), $r_5$=fy(0.45)}\]</td><td></td></tr></tbody></table><p class="preguntasn">Luego ejecute el código en Octave, corrija los errores cometidos al completar el código y evalúe la celda. Copie los resultados en la subsiguiente celda (entre las comillas invertidas).</p><p></p><div id="pregunta170" class="calculadora" spellcheck="false"><div class="instruccion">`<br>r=round(fy([0,0.2,0.3,0.35,0.4,0.45])*1e2)/1e2<br>`;</div><div class="resultado"></div><div class="instruccion">`<br>r =<br>            2         3.15         4.36         5.36         6.91          9.6<br>`;</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Complete el código que, con los valores de "r" calculados, resuelva la siguiente ecuación polinomial, con roots, redondeando los resultados al tercer dígito después del punto.</p><table class="ecuacionsn"><tbody><tr><td>\[p(x) = r_0x^5+r_1x^4+r_2x^3+r_3x^2+r_4x+r_5\]</td><td></td></tr></tbody></table><p class="preguntasn">Luego ejecute el código en Octave, corrija los errores cometidos al completar el código y evalúe la celda. Copie los resultados en la subsiguiente celda (entre las comillas invertidas).</p><p></p><div id="pregunta171" class="calculadora" spellcheck="false"><div class="instruccion">`<br>round(roots(r)*1e3)/1e3<br>`;</div><div class="resultado"></div><div class="instruccion">`<br>ans =<br>        0.626 +       1.159i<br>        0.626 -       1.159i<br>       -1.391 +           0i<br>       -0.718 +       1.213i<br>       -0.718 -       1.213i<br>`;</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="26" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 16 -->
+
+    <div class="ejercicio" id="ejercicio17" enunciado="2"><hr><div class="enunciado"><p class="ejercicio extern"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Complete el código que, en Octave, (formato longG) resuelve la siguiente ecuación diferencial (f(t,q), función anónima), integrándola entre 0 y 1.2, con ode45 (resultados: "vx", "mr"; "vy" primera columna de "mr") y programe la función de interpolación "fq" con spline (vectores "vx" y "vy") y ppval (coeficientes: "pp").</p><table class="ecuacionsn"><tbody><tr><td>\[\begin{gathered}q^{\prime\prime} = 2\left(20sin(11t)-7q^{\prime}-48q\right)\\[2mm]q=0,\quad q^{\prime}=0\quad\text{para}\quad t=0\end{gathered}\]</td><td></td></tr></tbody></table><p class="preguntasn">Luego ejecute el código en Octave, corrija los errores cometidos al completar el código y evalúe la celda.</p><p></p><div id="pregunta178" class="calculadora" spellcheck="false"><div class="instruccion">`<br>format longG;<br>f=@(t,q) [q(2); 2*(20*sin(11*t)-7*q(2)-48*q(1))];<br>[vx,mr]=ode45(f,[0,1.2],[0,0]);<br>vy=mr(:,1);<br>pp=spline(vx,vy);<br>fq=@(x)ppval(pp,x);<br>`;</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Complete el código que dibuje la solución (la función de interpolación) entre los límites de integración (vector "x"; incremento 0.01; línea azul "-b"; cuadrícula visible). Luego ejecute el código en Octave, corrija los errores cometidos al completar el código y evalúe la celda.</p><div id="pregunta179" class="calculadora" spellcheck="false"><div class="instruccion">`<br>x=0:0.01:1.2;<br>plot(x,fq(x), "-b");<br>grid on;<br>`;</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Complete el código que, leyendo los segmentos de solución de la gráfica, encuentre las 3 soluciones positivas de la función de interpolación, redonando los resultados al quinto dígito. Luego ejecute el código en Octave, corrija los errores cometidos al completar el código y evalúe la celda. Copie los resultados en la subsiguiente celda (entre las comillas invertidas).</p><div id="pregunta180" class="calculadora" spellcheck="false"><div class="instruccion">`<br>round(fzero(fq,[0.4, 0.6])*1e5)/1e5<br>round(fzero(fq,[0.6, 0.8])*1e5)/1e5<br>round(fzero(fq,[1,1.2])*1e5)/1e5<br>`;</div><div class="resultado"></div><div class="instruccion">`<br>ans =          0.43962<br>ans =          0.72916<br>ans =          1.01437<br>`;</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="26" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 17 -->
+    
+    <div class="ejercicio" id="ejercicio18" enunciado="0"><hr><div class="enunciado"><p class="ejercicio extern"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Complete el código que, en Octave, (formato longG) resuelve el siguiente sistema de ecuaciones diferenciales (f(t,v), función estándar; variables locales "x", "y"; resultado: "r"), integrándolas entre 0 y 1.5, con ode45 (resultados: "vt", "mr"; "vx", "vy" primera y segunda columnas de "mr") y programe las funciones de interpolación (funciones anónimas: "fx", "fy") con spline y ppval (vectores "vt, vx", "vt, vy", coeficientes "ppx", "ppy").</p><table class="ecuacionsn"><tbody><tr><td>\[\begin{gathered}\begin{aligned}x^{\prime}&amp;=xy+t\\[1mm]y^{\prime}&amp;=x-t\end{aligned}\\[2mm]x=0,\enspace y=1\quad\text{para}\quad t=0\end{gathered}\]</td><td></td></tr></tbody></table><p class="preguntasn">Luego ejecute el código en Octave, corrija los errores cometidos al completar el código y evalúe la celda.</p><p></p><div id="pregunta181" class="calculadora" spellcheck="false"><div class="instruccion">`<br>format longG;<br>function r=f(t,v)<br> x=v(1);y=v(2);<br>r=[x*y+t; x-t];<br>endfunction<br>[vt,mr]=ode45(@f,[0,1.5],[0,1]);<br>vx=mr(:,1)<br>vy=mr(:,2);<br>ppx=spline(vt,vx);<br>fx=@(t)ppval(ppx,t);<br>ppy=spline(vt,vy);<br>fy=@(t)ppval(ppy,t);<br>`;</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Complete el código que, con la función de interpolación, calcula y muestra los valores de "w" y "z" (declarándolas previamente como variables globales), para valores de "t" iguales a 0.5 y 1.5.</p><table class="ecuacionsn"><tbody><tr><td>\[w=fy(0.5),\quad z=fx(1.5)\]</td><td></td></tr></tbody></table><p class="preguntasn">Luego ejecute el código en Octave, corrija los errores cometidos al completar el código y evalúe la celda. Copie los resultados en la subsiguiente celda (entre las comillas invertidas):</p><p></p><div id="pregunta182" class="calculadora" spellcheck="false"><div class="instruccion">`<br>global w;<br>global z;<br>w=fy(0.5);<br>z=fx(1.5);<br>`;</div><div class="resultado"></div><div class="instruccion">`<br>w=0.8985833611929371<br>z=1.656008096844849<br>`;</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Complete el código que, con los valores de "w" y "z", resuelva el siguiente sistema de ecuaciones no lineales ("fe(c)": función estándar; variables locales: "u", "v") con fsolve (valores iniciales: 3.1, 1.9, resultados redondeados al segundo dígito).</p><table class="ecuacionsn"><tbody><tr><td>\[\begin{alignedat}{5}u^{2.3}&amp;+&amp;v^{1.2}&amp;-&amp;uv&amp;-&amp;10w&amp;=&amp;\phantom{2}0\\[2mm]3u^{2}&amp;-&amp;uv^{2}&amp;-&amp;v^{2.9}&amp;-&amp;7z&amp;=&amp;0\end{alignedat}\]</td><td></td></tr></tbody></table><p class="preguntasn">Luego ejecute el código en Octave, corrija los errores cometidos al completar el código y evalúe la celda. Copie los resultados en la subsiguiente celda (entre las comillas invertidas).</p><p></p><div id="pregunta183" class="calculadora" spellcheck="false"><div class="instruccion">`<br>function r = fe(c)<br>    global w;global z;<br>    u=c(1); v=c(2); <br>    r = [u^2.3+v^1.2-u*v-10*w;<br>        3*u^2-u*v^2-v^2.9-7*z];<br>endfunction<br>round(fsolve(@fe,[3.1,1.9])*1e2)/1e2<br>`;</div><div class="resultado"></div><div class="instruccion">`<br>ans =<br>                    2.98                    1.79<br>`;</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="28" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 18 -->
+    
+    <div class="ejercicio" id="ejercicio19" enunciado="1"><hr><div class="enunciado"><p class="ejercicio extern"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Complete el código que, en Octave, (formato longG, paquete optim, función nlinfit) ajuste los siguientes datos (función a ajustar, anónima: "fa(c,x)"; vectores de datos: "vx", "vy"; valores iniciales 1.1, 1.2,...: "vi"; coeficientes calculados "c"; función ajustada, anónima: "f"):</p><div class="table borderAll"><div class="table borderAll"></div><table align="center"></table><table align="center"><tbody><tr><th class="center" style="width:30px;">x</th><td class="center">2.4</td><td class="center">4.5</td><td class="center">6.6</td><td class="center">8.4</td><td class="center">9.3</td><td class="center">10.2</td><td class="center">11.1</td><td class="center">12.5</td><td class="center">14.7</td><td class="center">16.1</td><td class="center">17.4</td><td class="center">18.3</td></tr><tr><th class="center">y</th><td class="center">11</td><td class="center">41</td><td class="center">90</td><td class="center">141</td><td class="center">169</td><td class="center">205</td><td class="center">251</td><td class="center">318</td><td class="center">421</td><td class="center">545</td><td class="center">592</td><td class="center">655</td></tr></tbody></table></div><p class="ejerciciosn">A la ecuación (<dfn>f</dfn>):</p><table class="ecuacionsn"><tbody><tr><td>\[f = ax^2+\dfrac{b}{x}+c\,\text{e}\raisebox{0.8em}{$\frac{x}{8}$}\]</td><td></td></tr></tbody></table><p class="ejerciciosn"></p><p class="ejerciciosn">Mostrando los coeficientes "c" resultantes del ajuste. Luego ejecute el código en Octave, corrija los errores cometidos al completar el código y evalúe la celda. Copie los resultados en la subsiguiente celda (entre las comillas invertidas).</p><p></p><div id="pregunta193" class="calculadora" spellcheck="false"><div class="instruccion">`<br>pkg load optim;<br>format longG;<br>vx = [2.4,4.5,6.6,8.4,9.3,10.2,11.1,12.5,14.7,16.1,17.4,18.3];<br>vy = [11, 41, 90, 141, 169, 205, 251, 318, 421, 545, 592, 655];<br>vi = [1.1, 1.2, 1.3];<br>fa = @(c, x) c(1)*x.^2 + c(2)./x + c(3)*exp(x/8);<br>c = nlinfit(vx, vy, fa, vi)<br>f = @(x) fa(c, x);<br>`;</div><div class="resultado"></div><div class="instruccion">`<br>c =<br>       2.061079943682952<br>       13.89870581229874<br>      -2.514889855073845<br>`;</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Complete el código que con, la ecuación ajustada (f), resuelva la siguiente ecuación diferencial ("fd(x,y)", función anónima) integrándola entre 5.2 y 9.3, con ode45 (resultados: "vx", "mr"; "vy" primera columnas de "mr") y programe las funciones de interpolación ("fy", función anónima) con spline y ppval (vectores "vx", "vy"; coeficientes "pp").</p><table class="ecuacionsn"><tbody><tr><td>\[\begin{gathered}y^{\prime\prime\prime}=12x^2+10x+36-2y^{\prime}-y^{\prime\prime}\\[3mm]y=4\text{f}(5.96),\;y^{\prime}=3\text{f}(5.24),\;y^{\prime\prime}=2\text{f}(3.98)\quad\text{para}\quad x=5.2\end{gathered}\]</td><td></td></tr></tbody></table><p class="ejerciciosn">Luego ejecute el código en Octave, corrija los errores cometidos al completar el código y evalúe la celda.</p><p></p><div id="pregunta194" class="calculadora" spellcheck="false"><div class="instruccion">`<br>fd=@(x,y)[y(2);y(3); 12*x.^2+10*x+36-2*y(2)-y(3)];<br>[vx,mr]=ode45(fd,[5.2,9.3],[4*f(5.96),3*f(5.24),2*f(3.98)]);<br>vy=mr(:,1);<br>pp=spline(vx,vy);<br>fy=@(x)ppval(pp,x);<br>`;</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Complete el código que con, la función de interpolación (fy), calcule el valor de la siguiente integral, redondeando el resultado al segundo dígito.</p><table class="ecuacionsn"><tbody><tr><td>\[\int_{6.1}^{9.1}f_y\enspace dx\]</td><td></td></tr></tbody></table><p class="ejerciciosn">Luego ejecute el código en Octave, corrija los errores cometidos al completar el código y evalúe la celda. Copie los resultados en la subsiguiente celda (entre las comillas invertidas).</p><p></p><div id="pregunta195" class="calculadora" spellcheck="false"><div class="instruccion">`<br>round(integral(fy,6.1,9.1)*1e2)/1e2<br>`;</div><div class="resultado"></div><div class="instruccion">`<br>ans =          2770.98<br>`;</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="32" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 19 -->
+
+
+
+
+
+    <h2 class="text">Ecuaciones diferenciales en Python</h2>
+
+    <p class="text">Para resolver ecuaciones diferenciales en Python, se puede emplear la función <b class="style1">solve_ivp</b> (solve initial value problems: resolver problemas del valor inicial), la cual se encuentra en el módulo <b class="style1">integrate</b>, de la librería <b class="style1">scipy</b>.</p>
+    
+    <p class="text">Esta función recibe, como primer parámetro, la función correspondiente a la ecuación diferencial a integrar. La función a integrar, debe recibir dos parámetros: la variable independiente y la variable dependiente (escalar o vector). Debe devolver un escalar si se trata de una ecuación diferencial de primer orden y un vector cuando es una ecuación de enésimo orden o un sistema de ecuaciones diferenciales de primer orden.</p>
+
+    <p class="text">Como segundo parámetro recibe un vector con los valores correspondientes a los límites inicial y final del intervalo de integración. Como tercer parámetro recibe un vector con los valores iniciales conocidos. Los otros parámetros de <b class="style1">solve_ivp</b> son opcionales y de ellos se emplearán, en el presente capítulo, <strong class="style1">dense_output</strong>, que recibe un valor booleano y cuando el mismo es establecido en <dfn class="style1">True</dfn>, genera automáticamente la función de interpolación correspondiente al intervalo de integración (algo que se busca cuando se resuelven ecuaciones diferenciales), además (debido a un bug en la función), para obtener resultados más precisos, se debe fijar la tolerancia <strong class="style1">rtol</strong> en 1e-5.</p>
+
+    <p class="text">La función (<b class="style1">solve_ivp</b>) devuelve un objeto con varios valores (propiedades): Un vector con los valores de la variable independiente: <b class="style1">t</b>, una matriz: <b class="style1">y</b> (la matriz de soluciones), con vectores correspondientes a los valores de las variables dependientes y/o las derivadas, la función de interpolación: <b class="style1">sol</b> y otras propiedades más, sin embargo, como lo que se busca, al integrar una ecuación diferencial, es la función de interpolación correspondiente a la ecuación integrada (sol), ese es el único resultado que se empleará en el presente capítulo. Esta función, la función de interpolación <b class="style1">sol</b>, devuelve (para cada valor de la variable independiente) un vector, donde el primer elemento (el elemento 0) corresponde a los valores de la variable dependiente (la solución), el segundo elemento (el elemento 1) el valor de la primera derivada, el tercer elemento (el elemento 2) a el valor de la segunda derivada y así sucesivamente. En ecuaciones de primer orden o de enésimo orden, sólo es de interés práctico la primera solución (el primer elemento, el elemento 0).</p>
+
+
+    <p class="text">Así, para resolver la siguiente ecuación diferencial (obtener la función de interpolación), integrándola entre 2 y 6:</p>
+    
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                \begin{gathered}                3y^{\prime}+4xy-8x^3+4x = 0\\[3mm]                y = 4\text{ para } x=2                    \end{gathered}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Primero se despeja la derivada primera:</p>
+    
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                y^{\prime}=f(x,y)=\dfrac{8x^3-4xy-4x}{3}                 \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Y se escriben las siguientes instrucciones:</p>
+
+    <div class="codigo python">from scipy.integrate import solve_ivp<br>import numpy as np<br><br>f = lambda x, y: (8*x**3-4*x*y-4*x)/3<br>s = solve_ivp(f, [2,6], [4], dense_output=True, rtol=1e-5).sol<br>fy = lambda x: s(x)[0]</div>
+
+    <p class="text">Donde se extrae directamente la solución (sol) y se guarda en la variable "s". Luego esa solución se emplea para crear la función de interpolación "fy", que devuelve el valor de "y" (el elemento 0) para el valor recibido de "x".</p>
+
+    <p class="text">Una vez que se tiene la función de interpolación ("fy" en este ejemplo) puede ser empleada como cualquier función estándar (cuidando de no sobrepasar los límites de integración).</p>
+
+    <p class="text">Por ejemplo, para calcular los valores de la variable dependiente para x = 4.6 y x = 5.3, se escribe:</p>
+
+    <div class="codigo python">print(fy([4.6, 5.3]))<br><br># Resultados obtenidos:<br><br>[38.32013189 52.18021298]</div>
+
+    <p class="text">Para dibujar la gráfica de la solución (la curva de solución) se generan valores igualmente espaciados (incremento 0.01) entre los límites de integración y se dibujan esos valores, conjuntamente los valores correspondientes de la función de solución:</p>
+
+    <div class="codigo python">import matplotlib.pyplot as plt<br><br>x = np.arange(4,6,0.01)<br>plt.figure(1)<br>plt.plot(x,fy(x),"-b")<br>plt.show()</div>
+
+    <p class="figurasn"><img src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo12/files/python_graph_1.png" style="width:489px;"></p>    
+
+
+
+    <p class="text">Para resolver una ecuación diferencial de enésimo orden, se procede de manera similar a MatLab, es decir se convierte la ecuación diferencial en un sistema de "n" ecuaciones diferenciales de primer orden (como se demuestra en los métodos de Euler y Runge-Kutta).</p>
+    
+    <p class="text">Como en Python, el índice del primer elemento es 0 (no 1, como en Octave/MatLab/Mathematica), los cambios de variable deberán ser: y=y<sub>0</sub>, y'=y<sub>1</sub>, y''=y<sub>2</sub>, y'''=y<sub>3</sub>, etc. (igual que en JavaScript).</p>
+
+    <p class="text">Por ejemplo, para resolver la siguiente ecuación diferencial de cuarto orden, integrándola entre 1 y 4:</p>
+
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                \begin{gathered}                3y^{\prime\prime\prime\prime}-3xy^{\prime\prime}+y^{\prime}+1.8711x^{-1.9}+14.49x^{1.1}-5 = 0\\[3mm]                y = 4,\quad y^{\prime}=11.3,\quad y^{\prime\prime}=6.93,\quad y^{\prime\prime\prime}=0.693\quad para\quad x = 1                \end{gathered}                 \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Primero se despeja la derivada de mayor orden (la cuarta):</p>
+    
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                y^{\prime\prime\prime\prime}=\dfrac{3xy\prime\prime-y\prime-1.8711x^{-1.9}-14.49x^{1.1}+5}{3} = 0                 \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">Siendo las ecuaciones diferenciales restantes, los cambios de variable:</p>
+    
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                \begin{aligned}                y^\prime &amp;= y_1\\                y^{\prime\prime} &amp;= y_2\\                y^{\prime\prime\prime} &amp;= y_3                \end{aligned}                \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <p class="text">La función correspondiente a la ecuación diferencial, debe devolver los resultados en un vector, comenzando con la derivada de menor orden (la derivada de primer orden) continuando hasta la de mayor orden (la derivada de enésimo orden).</p>
+
+    <p class="text">En este caso, la matriz de soluciones (<b class="style1">y</b>) devuelta por <b class="style1">solve_ivp</b>, tiene tantas filas (vectores) como el orden de la ecuación diferencial que se está resolviendo (en este ejemplo 4). La primera fila es el vector con los valores de la variable dependiente (las soluciones de la ecuación diferencial), la segunda fila es el vector con los valores de la derivada primera, la tercera los valores de la derivada segunda y así sucesivamente.</p>
+    
+    <p class="text">En la práctica, en las ecuaciones de enécimo orden, sólo es de interés la solución propiamente (<b class="style1">y</b>), es decir el primer elemento del vector de soluciones, por esa razón, la función de interpolación sólo devuelve el primer elemento del vector de soluciones.</p>
+
+    <p class="text">Entonces, las instrucciones con las que se resuelve la ecuación diferencial de cuarto orden, son:</p>
+
+    <div class="codigo python">from scipy.integrate import solve_ivp<br><br>f = lambda x, y: [y[1],y[2],y[3],(3*x*y[2]-y[1]-1.8711*x**-1.9-14.49*x**1.1+5)/3]<br>s = solve_ivp(f, [1,4], [4,11.3,6.93,0.693], dense_output=True, rtol=1e-5).sol<br>fy = lambda x: s(x)[0]</div>
+
+    <p class="text">Como en el ejemplo anterior, una vez que se tiene la función de interpolación (fy), puede ser empleada igual que cualquier función normal (cuidando de no sobrepasar los límites de integración). Por ejemplo, para calcular los valores de la variable independiente, para valores de "x" iguales a 1.8 y 2.9, se escribe:</p>
+
+    <div class="codigo python">print(fy([1.8, 2.9]))<br><br># Resultados obtenidos:<br><br>[15.30845305 38.56448097]</div>
+
+    <p class="text">Al igual que en el caso anterior, la gráfica de la solución, puede ser dibujada generando un vector de valores igualmente espaciados (incremento 0.01) de la variable independiente:</p>
+
+    <div class="codigo python">import matplotlib.pyplot as plt<br><br>x = np.arange(1,4,0.01)<br>plt.figure(2)<br>plt.plot(x, fy(x), "-b")<br>plt.show()</div>
+
+    <p class="figurasn"><img src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo12/files/python_graph_2.png" style="width:528px"></p>
+
+
+
+    <p class="text">Para resolver un sistema de ecuaciones diferenciales de primer orden, la función correspondiente al sistema de ecuaciones diferenciales, debe devolver un vector con los resultados de cada una de las ecuaciones del sistema (igualadas a su derivadas primeras).</p>
+
+    <p class="text">En este caso, la función de interpolación <b class="style1">sol</b>, devuelve, para el valor de "x" que recibe, un vector con las soluciones para cada una de las ecuaciones del sistema (el primer elemento es la solución de la primera ecuación, el segundo el de la segunda y el del tercero el de la tercera).</p>
+    
+    <p class="text">Así, para resolver el siguiente sistema de ecuaciones diferenciales, integrándolas entre 0 y 0.35:</p>
+    
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                \begin{gathered}                \begin{aligned}                u^{\prime}-v+2w+t^2-2t^{1.5}-1.2t^{0.2}+10 = 0\\[2mm]                v^{\prime}+5w-5t^{1.5}-2t+35=0\\[2mm]                w^{\prime}-2u+v-t^2+2t^{1.2}-1.5t^{0.5}+10 = 0                \end{aligned}\\[12mm]                u=3,\quad v= -4,\quad w=-7\quad para \quad t=0                \end{gathered}                 \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="ejemplosn">Primero, se colocan las ecuaciones de manera que estén igualadas a su derivada respectiva:</p>
+    
+    <table class="ecuacionsn">
+        <tbody><tr>
+            <td>
+                \[                \begin{gathered}                \begin{aligned}                u^{\prime}&amp;=v-2w-t^2+2t^{1.5}+1.2t^{0.2}-10\\[2mm]                v^{\prime}&amp;=-5w+5t^{1.5}+2t-35\\[2mm]                w^{\prime}&amp;=2u-v+t^2-2t^{1.2}+1.5t^{0.5}-10                \end{aligned}\\[12mm]                u=3,\quad v= -4,\quad w=-7\quad para \quad t=0                \end{gathered}                 \]
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    
+    <p class="text">Y se las programa haciendo (por claridad) los siguientes cambios de variables (correspondientes al segundo parámetro de la función a integrar): u = y<sub>0</sub>, v = y<sub>1</sub>, w = y<sub>2</sub>, siendo las instrucciones con las cuales se resuelve el sistema:</p>
+
+    <div class="codigo python">from scipy.integrate import solve_ivp<br><br>def f(t,y):<br>  u, v, w = y<br>  return [v-2*w-t**2+2*t**1.5+1.2*t**0.2-10,\<br>   -5*w+5*t**1.5+2*t-35,\<br>    2*u-v+t**2-2*t**1.2+1.5*t**0.5-10]<br>s = solve_ivp(f, [0,0.4], [3,-4,-7], dense_output=True, rtol=1e-5).sol<br>fu = lambda t: s(t)[0]<br>fv = lambda t: s(t)[1]<br>fw = lambda t: s(t)[2]</div>
+
+    <p class="text">Donde, al escribir el vector de resultados, se ha empleado el carácter <b class="style1">\</b>, para dividir el vector en tres líneas (lo que no se permite por defecto en Python) y poder ver más claramente, las ecuaciones del sistema. Las funciones "fu", "fv" y "fw" son las funciones de interpolación de cada una de las ecuaciones del sistema.</p>
+
+    <p class="text">Una vez que se cuenta con las funciones de interpolación (fu, fv y fw), se puede trabajar con ellas igual que con cualquier función estándar (cuidando, como siempre, de no sobrepasar los límites de integración). Por ejemplo, para calcular los valores de "u", "v" y "w" para valores de "t" iguales a 0.14 y 0.27, se escribe:</p>
+
+    <div class="codigo python">print(fu([0.14, 0.27]))<br>print(fv([0.14, 0.27]))<br>print(fw([0.14, 0.27]))<br><br># Resultados obtenidos;<br><br>[3.09448017 3.20779738]<br>[-3.98039824 -3.92709334]<br>[-6.94761934 -6.85971031]</div>
+
+    <p class="text">Como en los otros casos, las gráficas de las soluciones se dibujan generando previamente un vector ("x") con valores igualmente espaciados (incremento: 0.01) entre los límites de integración:</p>
+
+    <div class="codigo python">import matplotlib.pyplot as plt<br><br>t = np.arange(0,0.4,0.01)<br>plt.figure(3)<br>plt.plot(t, fu(t), "-b")<br>plt.show()<br>plt.figure(4)<br>plt.plot(t, fv(t), "-g")<br>plt.show()<br>plt.figure(5)<br>plt.plot(t, fw(t), "-y")<br>plt.show()</div>
+
+    <p class="figurasn"><img src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo12/files/python_graph_3a.png" style="width:526px"></p>
+
+    <p class="figurasn"><img src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo12/files/python_graph_3b.png" style="width:526px"></p>
+
+    <p class="figurasn"><img src="https://cursosabiertos.usfx.bo/materias/mat205/capitulos/capitulo12/files/python_graph_3c.png" style="width:526px"></p>
+
+
+
+    <br>
+
+    <div class="ejercicio" id="ejercicio20" enunciado="1"><hr><div class="enunciado"><p class="ejercicio extern"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Complete el código que, en Python, ("solve_ivp" de scipy.integrate; numpy como "np") resuelve la siguiente ecuación diferencial ("f", función lambda), integrándola entre 0 y 0.45, con solve_ivp (resultado: "s") y programando, con la función resultante (sol) la función de interpolación "fy" (función lambda).</p><table class="ecuacionsn"><tbody><tr><td>\[\begin{aligned}y^{\prime} = x^3+1.1y^2\\[1mm]y=2\quad para\quad x=0\end{aligned}\]</td><td></td></tr></tbody></table><p class="preguntasn">Luego ejecute el código en Python, corrija los errores cometidos al completar el código y evalúe la celda.</p><p></p><div id="pregunta202" class="calculadora" spellcheck="false"><div class="instruccion">`<br>from scipy.integrate import solve_ivp<br>import numpy as np<br>f=lambda x,y: x**3+1.1*y**2<br>s=solve_ivp(f,[0,0.45],[2],dense_output=True,rtol=1e-5)<br>fy=lambda x:s.sol(x)[0]<br>`;</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Complete el código que, con la función de interpolación, calcule valores de "r" (r<sub>0</sub> a r<sub>9</sub>), para valores de "x" iguales a 0, 0.2, 0.3, 0.35, 0.4 y 0.45, redondeando los resultados al segundo dígito después del punto.</p><table class="ecuacionsn"><tbody><tr><td>\[\text{$r_0$=fy(0), $r_1$=fy(0.2), $r_2$ = fy(0.3), $r_3$=fy(0.35), $r_4$=fy(0.4), $r_5$=fy(0.45)}\]</td><td></td></tr></tbody></table><p class="preguntasn">Luego ejecute el código en Python, corrija los errores cometidos al completar el código y evalúe la celda. Copie los resultados en la subsiguiente celda (entre las comillas invertidas):</p><p></p><div id="pregunta203" class="calculadora" spellcheck="false"><div class="instruccion">`<br>r=fy([0,0.2,0.3,0.35,0.4,0.45]).round(2)<br>print(r)<br>`;</div><div class="resultado"></div><div class="instruccion">`<br>[ 2.     3.57   5.89   8.71  16.71 207.3]<br>`;</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Complete el código que, con los valores de "r" calculados, resuelva la siguiente ecuación polinomial, con roots, redondeando los resultados al tercer dígito después del punto.</p><table class="ecuacionsn"><tbody><tr><td>\[p(x) = r_0x^5+r_1x^4+r_2x^3+r_3x^2+r_4x+r_5\]</td><td></td></tr></tbody></table><p class="preguntasn">Luego ejecute el código en Python, corrija los errores cometidos al completar el código y evalúe la celda. Copie los resultados en la subsiguiente celda (entre las comillas invertidas).</p><p></p><div id="pregunta204" class="calculadora" spellcheck="false"><div class="instruccion">`<br>print(np.roots(r).round(3))<br>`;</div><div class="resultado"></div><div class="instruccion">`<br>[-2.735+0.j -1.098+2.436j -1.098-2.436j 1.573+1.684j 1.573-1.684j]<br>`;</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="26" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 20 -->
+
+    <div class="ejercicio" id="ejercicio21" enunciado="1"><hr><div class="enunciado"><p class="ejercicio extern"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Complete el código que, en Python, ("solve_ivp" de scipy.integrate; "newton" de scipy.optimize; matplotlib.pyplot como "plt", numpy como "np"; librería math) resuelve la siguiente ecuación diferencial (f(t,q), función lambda), integrándola entre 0 y 1.2, con solve_ivp (resultados: "vx", "mr"; "vy" primera columna de "mr") y programe la función de interpolación "fq" con spline (vectores "vx" y "vy") y ppval (coeficientes: "pp").</p><table class="ecuacionsn"><tbody><tr><td>\[\begin{gathered}q^{\prime\prime} = 2.1\left(23sin(10t)-7q^{\prime}-50q\right)\\[2mm]q=0,\quad q^{\prime}=0\quad\text{para}\quad t=0\end{gathered}\]</td><td></td></tr></tbody></table><p class="preguntasn">Luego ejecute el código en Python, corrija los errores cometidos al completar el código y evalúe la celda.</p><p></p><div id="pregunta211" class="calculadora" spellcheck="false"><div class="instruccion">`<br>from scipy.integrate import solve_ivp<br>from scipy.optimize import newton<br>import numpy as np<br>import matplotlib.pyplot as plt <br>import math<br>f=lambda t,q: [q[1], 2.1*(23*math.sin(10*t)-7*q[1]-50*q[0])]<br>s=solve_ivp(f,[0,1.2],[0,0],dense_output=True,rtol=1e-5).sol<br>fq=lambda x:s(x)[0]<br>`;</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Complete el código que dibuja la solución (la función de interpolación) entre los límites de integración (vector "x"; incremento 0.01; línea azul "-b"; cuadrícula visible). Luego ejecute el código en Python, corrija los errores cometidos al completar el código y evalúe la celda.</p><div id="pregunta212" class="calculadora" spellcheck="false"><div class="instruccion">`<br>x=np.arange(0,1.2,0.01)<br>plt.plot(x,fq(x),"-b")<br>plt.grid(True)<br>plt.show()<br>`;</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Complete el código que, con las soluciones aproximadas leídas de la gráfica, encuentre las 3 soluciones positivas de la función de interpolación, redonando los resultados al quinto dígito. Luego ejecute el código en Python, corrija los errores cometidos al completar el código y evalúe la celda. Copie los resultados en la subsiguiente celda (entre las comillas invertidas).</p><div id="pregunta213" class="calculadora" spellcheck="false"><div class="instruccion">`<br>print(round(newton(fq, 0.47), 5))<br>print(round(newton(fq, 0.77), 5))<br>print(round(newton(fq, 1.1), 5))<br>`;</div><div class="resultado"></div><div class="instruccion">`<br>0.46403<br>0.78196<br>1.09619<br>`;</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="26" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 21 -->
+    
+    <div class="ejercicio" id="ejercicio22" enunciado="0"><hr><div class="enunciado"><p class="ejercicio extern"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Complete el código que, en Python, ("solve_ivp" de scipy.integrate; "fsolve" de scipy.optimize) resuelve el siguiente sistema de ecuaciones diferenciales (f(t,v), función estándar; variables locales "x", "y"; resultado: "r"), integrándolas entre 0 y 1.5, con solve_ivp (resultado: "s") y programe las funciones de interpolación (funciones lambda: "fx", "fy").</p><table class="ecuacionsn"><tbody><tr><td>\[\begin{gathered}\begin{aligned}x^{\prime}&amp;=xy+t\\[1mm]y^{\prime}&amp;=x-t\end{aligned}\\[2mm]x=0,\enspace y=1\quad\text{para}\quad t=0\end{gathered}\]</td><td></td></tr></tbody></table><p class="preguntasn">Luego ejecute el código en Python, corrija los errores cometidos al completar el código y evalúe la celda.</p><p></p><div id="pregunta217" class="calculadora" spellcheck="false"><div class="instruccion">`<br>from scipy.integrate import solve_ivp<br>from scipy.optimize import fsolve<br>def f(t,v):<br>  x,y=v<br>  return[x*y+t,<br>         x-t]<br>s=solve_ivp(f,[0,1.5],[0,1],dense_output=True,rtol=1e-5).sol<br>fx=lambda x:s(x)[0]<br>fy=lambda x:s(x)[1]<br>`;</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Complete el código que, con la función de interpolación, calcule y muestre los valores de "w" y "z", para valores de "t" iguales a 0.5 y 1.5.</p><table class="ecuacionsn"><tbody><tr><td>\[w=fy(0.5),\quad z=fx(1.5)\]</td><td></td></tr></tbody></table><p class="preguntasn">Luego ejecute el código en Python, corrija los errores cometidos al completar el código y evalúe la celda. Copie los resultados en la subsiguiente celda (entre las comillas invertidas):</p><p></p><div id="pregunta218" class="calculadora" spellcheck="false"><div class="instruccion">`<br>w=fy(0.5)<br>z=fx(1.5)<br>print(w,z)<br>`;</div><div class="resultado"></div><div class="instruccion">`<br>0.8985849753116771 1.6559841497212981<br>`;</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Complete el códiog que, con los valores de "w" y "z", resuelve el siguiente sistema de ecuaciones no lineales ("fe(c)": función estándar; variables locales: "u", "v") con fsolve (valores iniciales: 3.1, 1.9, resultados redondeados al segundo dígito).</p><table class="ecuacionsn"><tbody><tr><td>\[\begin{alignedat}{5}u^{2.3}&amp;+&amp;v^{1.2}&amp;-&amp;uv&amp;-&amp;10w&amp;=&amp;\phantom{2}0\\[2mm]3u^{2}&amp;-&amp;uv^{2}&amp;-&amp;v^{2.9}&amp;-&amp;7z&amp;=&amp;0\end{alignedat}\]</td><td></td></tr></tbody></table><p class="preguntasn">Luego ejecute el código en Python, corrija los errores cometidos al completar el código y evalúe la celda. Copie los resultados en la subsiguiente celda (entre las comillas invertidas):</p><p></p><div id="pregunta219" class="calculadora" spellcheck="false"><div class="instruccion">`<br>def fe(c):<br>  u,v=c<br>  return [u**2.3+v**1.2-u*v-10*w, <br>          3*u**2-u*v**2-v**2.9-7*z]<br>print(fsolve(fe,[3.1,1.9]).round(2))<br>`;</div><div class="resultado"></div><div class="instruccion">`<br>[2.98 1.79]<br>`;</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="28" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 22 -->
+    
+    <div class="ejercicio" id="ejercicio23" enunciado="1"><hr><div class="enunciado"><p class="ejercicio extern"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Complete el código que, en Python, ("solve_ivp" de scipy.integrate; "curve_fit" de scipy.optimize; "quad" de scipy.integrate, numpy como "np") ajusta los siguientes datos (función lambda a ajustar: "fa(x,a,b,c)"; vectores de datos, arrays numpy: "vx", "vy"; valores iniciales, array numpy: "vi" = 1.1, 1.2,...; coeficientes calculados "[a,b,c]", varianza "e"; función lambda ajustada: "f"):</p><div class="table borderAll"><div class="table borderAll"></div><table align="center"></table><table align="center"><tbody><tr><th class="center" style="width:30px;">x</th><td class="center">2.4</td><td class="center">4.5</td><td class="center">6.6</td><td class="center">8.4</td><td class="center">9.3</td><td class="center">10.2</td><td class="center">11.1</td><td class="center">12.5</td><td class="center">14.7</td><td class="center">16.1</td><td class="center">17.4</td><td class="center">18.3</td></tr><tr><th class="center">y</th><td class="center">11</td><td class="center">41</td><td class="center">90</td><td class="center">141</td><td class="center">169</td><td class="center">205</td><td class="center">251</td><td class="center">318</td><td class="center">421</td><td class="center">545</td><td class="center">592</td><td class="center">655</td></tr></tbody></table></div><p class="ejerciciosn">A la ecuación (<dfn>f</dfn>):</p><table class="ecuacionsn"><tbody><tr><td>\[f = ax^2+\dfrac{b}{x}+c\,\text{e}\raisebox{0.8em}{$\frac{x}{8}$}\]</td><td></td></tr></tbody></table><p class="ejerciciosn"></p><p class="ejerciciosn">Mostrando los coeficientes "a", "b", "c", resultantes del ajuste. Luego ejecute el código en Python, corrija los errores cometidos al completar el código y evalúe la celda. Copie los resultados en la subsiguiente celda (entre las comillas invertidas).</p><p></p><div id="pregunta229" class="calculadora" spellcheck="false"><div class="instruccion">`<br>from scipy.integrate import solve_ivp<br>from scipy.optimize import curve_fit<br>from scipy.integrate import quad<br>import numpy as np<br>fa = lambda x, a, b, c: a*x**2 + b/x + c*np.exp(x/8)<br>vx = np.array([2.4, 4.5, 6.6, 8.4, 9.3, 10.2, 11.1, 12.5, 14.7, 16.1, 17.4, 18.3])<br>vy = np.array([11, 41, 90, 141, 169, 205, 251, 318, 421, 545, 592, 655])<br>vi = np.array([1.1, 1.2, 1.3])<br>[a, b, c], e = curve_fit(fa, vx, vy, vi)<br>print(a, b, c)<br>f = lambda x: fa(x, a, b, c)<br>`;</div><div class="resultado"></div><div class="instruccion">`<br>2.0610886946576006 13.899898970405246 -2.515194611440039<br>`;</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Complete el código que, con la ecuación ajustada (f), resuelva la siguiente ecuación diferencial ("fd(x,y)", función lambda) integrándola entre 5.2 y 9.3, con solve_ivp (resultado: "s") y programe las funciones de interpolación ("fy", función lambda).</p><table class="ecuacionsn"><tbody><tr><td>\[\begin{gathered}y^{\prime\prime\prime}=12x^2+10x+36-2y^{\prime}-y^{\prime\prime}\\[3mm]y=4\text{f}(5.96),\;y^{\prime}=3\text{f}(5.24),\;y^{\prime\prime}=2\text{f}(3.98)\quad\text{para}\quad x=5.2\end{gathered}\]</td><td></td></tr></tbody></table><p class="ejerciciosn">Luego ejecute el código en Python, corrija los errores cometidos al completar el código y evalúe la celda.</p><p></p><div id="pregunta230" class="calculadora" spellcheck="false"><div class="instruccion">`<br>fd = lambda x, y: [y[1], y[2], 12*x**2 + 10*x + 36 - 2*y[1] - y[2]]<br>s = solve_ivp(fd, [5.2, 9.3], [4*f(5.96), 3*f(5.24), 2*f(3.98)], dense_output=True, rtol=1e-5).sol<br>fy = lambda x: s(x)[0]<br>`;</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Complete el código que, con la función de interpolación (fy), calcule el valor de la siguiente integral, redondeando el resultado al segundo dígito.</p><table class="ecuacionsn"><tbody><tr><td>\[\int_{6.1}^{9.1}f_y\enspace dx\]</td><td></td></tr></tbody></table><p class="ejerciciosn">Luego ejecute el código en Python, corrija los errores cometidos al completar el código y evalúe la celda. Copie los resultados en la subsiguiente celda (entre las comillas invertidas).</p><p></p><div id="pregunta231" class="calculadora" spellcheck="false"><div class="instruccion">`<br>print(round(quad(fy, 6.1, 9.1)[0], 2))<br>`;</div><div class="resultado"></div><div class="instruccion">`<br>2770.97<br>`;</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="32" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 23 -->
+
+
+
+
+
+    <div id="generarPrueba" data-scroll-y="69488.625"><br><hr><label class="lnotacapitulo">Nota del capítulo: </label><input type="text" id="notaCapitulo" disabled="disabled" class="itnotacapitulo"><br><br><button id="btGenerarPrueba" style="visibility: visible;" onclick="capitulo.registrarCapitulo()">Iniciar defensa</button><button id="btEmplearBono" style="margin-left:1.1rem;width:9.686rem;display:none;" onclick="capitulo.emplearBono()">Emplear Bono</button><br><br></div>
+
+
+<d id="dAutor" style="font-size: 0.9rem;text-align:center;color: #0808f24f;font-weight:bolder;position:fixed;top: 5px;right: 5px;user-select:none;display:inline-block;z-index:15;">Hernan G. Peñaranda V.</d></div><!-- Cierre del div capítulo -->
+
+<div id="dato" style="display:none;">JK5KCZ0r938lCZ0oDYGrDoqpE3Km93WpCZ0aD34s93GnDYGnC30aC2HvHsXuSG00</div>
+<div id="reg" style="display:none;">CZ0nC3ioC34mEp8mCJ0xCZ0nC3ipC30nEp4nC30xCZ0nC3ioC34mEp4nC30xCJ4mC3ipC30nEpCmC34xCZ0nC3ipC30nEp4nC30xCp0mCJipC30nEp4nC30xCZ0nC3ioC34mEp8mCJ0xCJ4mC3ioC34m</div>
+
+
+
+
+<div id="divDialogo" style="display: none;"><div onfocus="document.querySelector('#divDialogo input').focus();"><div>Carnet universitario</div><div>Escriba el número de su carnet universitario, verificando que el guión haya sido correctamente insertado.</div><input type="text" onkeydown="return Capitulo.divDialogo.funKeydown(event)" onkeyup="Capitulo.divDialogo.funKeyup(event)"><div><button onclick="Capitulo.divDialogo.funClick('aceptar');">Aceptar</button><button style="margin-left:35px;" onclick="Capitulo.divDialogo.funClick('cancelar');">Cancelar</button></div></div></div></body>
