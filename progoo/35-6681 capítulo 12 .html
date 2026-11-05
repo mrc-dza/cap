@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<head>
+
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Language" content="es">
+
+  <title>35-6681 capítulo 12</title>
+
+  <!-- Librería y hoja de estilos KATEX  -->
+  <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/katex/katex.min.css">
+  <script src="https://cursosabiertos.usfx.bo/materias/librerias/katex/katex.min.js"></script>
+  <script src="https://cursosabiertos.usfx.bo/materias/librerias/katex/contrib/auto-render.min.js"></script>
+
+  <!-- Librerías y hojas de estilo CodeMirror -->
+  <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/lib/codemirror.min.css">
+  <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/theme/mdn-like.css">
+  <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/lib/codemirror.min.js"></script>
+  <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/fold/foldgutter.min.css">
+  <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/fold/foldcode.min.js"></script>
+  <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/fold/brace-fold.min.js"></script>
+  <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/dialog/dialog.min.css">
+  <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/dialog/dialog.min.js"></script>
+  <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/hint/show-hint.min.css">
+  <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/hint/show-hint.min.js"></script>
+  <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/hint/javascript-hint.min.js"></script>
+  <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/search/searchcursor.min.js"></script>
+  <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/search/search.min.js"></script>
+  <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/edit/matchbrackets.min.js"></script>
+  <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/edit/closebrackets.min.js"></script>
+  <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/comment/comment.min.js"></script>
+  <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/wrap/hardwrap.min.js"></script>
+  <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/javascript/javascript.min.js"></script>
+  <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/css/css.min.js"></script>
+  <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/xml/xml.min.js"></script>
+  <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/markdown/markdown.min.js"></script>
+  <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/htmlmixed/htmlmixed.min.js"></script>
+  <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/keymap/sublime.min.js"></script>
+
+  <!-- Librería Plotly -->
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script><style id="plotly.js-style-global"></style><style id="plotly.js-style-global"></style><style id="plotly.js-style-global"></style>
+
+  <!-- Librerías y hojas de estilo function-plot -->
+  <script src="https://cursosabiertos.usfx.bo/materias/librerias/function-plot/site/js/vendor/d3.min.js"></script>
+  <script src="https://cursosabiertos.usfx.bo/materias/librerias/function-plot/dist/function-plot.js"></script>
+  
+  <!-- Librería quantities -->
+  <script src="https://cursosabiertos.usfx.bo/materias/librerias/quantities/quantities.min.js"></script>
+
+  <!-- Librería GoJs para la creación de diagramas de flujo -->
+  <script src="https://cursosabiertos.usfx.bo/materias/librerias/gojs/release/go.js"></script>
+  <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/flowchart_gojs.js"></script>
+
+  <!-- Librerías matemáticas propias -->
+  <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/math.js"></script>
+  <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/number.js"></script>
+  <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/array.js"></script>
+  <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/string.js"></script>
+  <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/cplx.js"></script>
+  <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/function.js"></script>
+  <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/object.js"></script>
+  <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/prq.js"></script>
+
+  <!-- Librería y hoja de estilos propias para la creación y manejo de la calculadora  -->
+  <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/src/cjs.css">
+  <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/cjs.js"></script>
+
+  <!-- Librería y hoja de estilos propias para la creación y manejo de los capítulos -->
+  <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/src/texto.css">
+  <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/texto.js"></script>
+
+ <!-- Librería del capítulo actual -->
+  <script src="https://cursosabiertos.usfx.bo/materias/progoo/capitulos/capitulo12/files/capitulo12.js"></script>
+
+    <!-- Fuentes empleadas en el capítulo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;600;700;800&amp;family=Roboto+Mono&amp;display=swap" rel="stylesheet">
+
+    <script>
+        function katexRender() {
+            renderMathInElement(document.getElementById("capitulo"), {delimiters: [{left: "&[", right: "&]", display: true}, {left: "$(", right: "$)", display: false}]});
+        }
+        document.addEventListener("DOMContentLoaded", katexRender);
+        window.onerror = function(msg, url, lineNo, columnNo, error) {
+            __error__ = msg;
+        };
+        window.onload = function(){
+            capitulo.iniciar();
+        };
+    </script>
+
+</head>
+
+<body class="text">  
+
+
+<div id="capitulo">
+
+    <button id="btGuardar" style="z-index:15;" onclick="savePage()">Guardar</button>
+
+
+
+    <h1 class="text" onclick="alerta(capitulo.idPagina,'')" style="cursor: pointer;">Cadenas 2 - Expresiones regulares</h1>
+
+
+    <p class="text">Las expresiones regulares son patrones que se emplean para encontrar combinaciones de caracteres en las cadenas. Las expresiones regulares son empleadas para validar datos, buscar información, reemplazar cadenas, automatizar procesos, etc.</p>
+
+    <p class="text">La mayoría de los editores de código actuales, como Visual Studio Code e inclusive CodeMirror (el editor empleado en la calculadora Javascript), así como algunos editores de texto (como Microsoft Word) y herramientas como Google Forms, soportan el uso de expresiones regulares.</p>
+
+    <p class="text">Como se dijo en el capítulo anterior, la verdadera potencia de métodos como: <dfn class="style1">match</dfn>, <dfn class="style1">replace</dfn>, <dfn class="style1">search</dfn> y <dfn class="style1">split</dfn>, se aprovecha cuando se emplean conjuntamente las expresiones regulares.</p>
+
+    <p class="text">Como casi todo en Javascript, las expresiones regulares son también objetos, en este caso, objetos de la clase <i>RegExp</i>, cuyo constructor acepta dos parámetros: el <dfn class="style1">patrón de búsqueda</dfn>, que es la expresión regular propiamente (la secuencia de caracteres con significado específico) y los <dfn class="style1">modificadores</dfn> que son caracteres especiales que amplían o restringen el alcance de la expresión regular.</p>
+
+    <p class="text">En consecuencia, formalmente, una expresión regular (r) se crea con:</p>
+
+    <div class="codigo"><br>    r = new RegExp("patrón", "modificadores");<br>    </div>
+
+    <p class="text">Sin embargo, al igual que ocurre con los array, Javascript dispone de un método abreviado para crear expresiones regulares, el cual consiste en encerrar el patrón entre quebrados ("//") y escribir los modificadores después del segundo quebrado, es decir:</p>
+
+    <div class="codigo"><br>    r = /patrón/modificadores;<br>    </div>
+
+    <p class="text">Ambas formas producen el mismo resultado (un objeto) pero esta última (la forma abreviada) es la más empleada en la práctica y es la forma que se empleará en la asignatura.</p>
+
+    <p class="text">Los modificadores, que pueden ser empleados en las expresiones regulares, son:</p>
+
+    <div class="table borderAll">
+    <table align="center">
+        <caption>Modificadores de las Expresiones Regulares</caption>
+        <tbody><tr>
+        <th style="width:50px;">Modificador</th>
+        <th>Descripción</th>
+        </tr> 
+        <tr>
+        <td><dfn class="style1">d</dfn></td>
+        <td class="texto">Este modificador hace que, al ejecutar la expresión regular, el objeto resultante contenga la propiedad <dfn class="style1">in<b class="style1">d</b>ices</dfn>, que es un array con las posiciones inicial y final de la coincidencia.</td>
+        </tr>
+        <tr>
+        <td><dfn class="style1">g</dfn></td>
+        <td>Este modificador hace que la expresión regular se aplique a toda la cadena, es decir que se ejecute de manera <b class="style1">g</b>lobal, encontrando todas las coincidencias existentes y no solo la primera.</td>
+        </tr>
+        <tr>
+        <td><dfn class="style1">i</dfn></td>
+        <td class="texto">Este modificador hace que, al buscar las coincidencias, se traten por igual las letras en mayúsculas y minúsculas (es decir que se <b class="style1">i</b>gnore su diferencia).</td>
+        </tr>
+        <tr><td><dfn class="style1">m</dfn></td>
+        <td>Cuando la cadena tiene <b class="style1">m</b>últiples líneas, este modificador hace que sea posible ubicar el principio (^) y el final ($) de cada línea (no sólo el principio y el final de toda la cadena).</td>
+        </tr><tr>
+        <td><dfn class="style1">s</dfn></td>
+        <td>Este modificador hace que el carácter especial "<b class="style1">.</b>", que representa a cualquier carácter con excepción de los saltos de línea, represente también a los <b class="style1">s</b>altos de línea.</td>
+        </tr>
+        <tr>
+        <td><dfn class="style1">u</dfn></td>
+        <td>Este modificador habilita el soporte completo a códigos <b class="style1">u</b>nicode, tratando las secuencias de escape (\u{XX...}) y los pares sustitutos (emojis y caracteres multiocteto) como un solo carácter.</td>
+        </tr>
+        <tr>
+        <td><dfn class="style1">v</dfn></td>
+        <td>Es la e<b class="style1">v</b>olución moderna del modificador <b class="style1">u</b>. Añade soporte para diferencias de conjuntos, intersecciones entre clases de caracteres y coincidencia de propiedades Unicode con múltiples caracteres.</td>
+        </tr>
+        <tr>
+        <td><dfn class="style1">y</dfn></td>
+        <td>Este modificador (de stick<b class="style1">y</b>) hace que la búsqueda de la siguiente coincidencia (con <dfn class="style1">exec</dfn> y <dfn class="style1">test</dfn>) se lleve a cabo exactamente después de la última coincidencia encontrada. Si el patrón buscado no está en esa posición devuelve una cadena vacío (exec) o false (test).</td>
+        </tr>
+    </tbody></table>
+    </div>
+
+    <p class="text">Si bien el <dfn class="style1">patrón</dfn> puede ser un texto normal, en cuyo caso sencillamente se busca ese texto, casi siempre involucra uno o más caracteres o metacaracteres con un significado especial:</p>
+
+    <div class="table borderAll">
+    <table align="center">
+        <caption>Caracteres especiales de las Expresiones Regulares</caption>
+        <tbody><tr>
+        <th style="width:125px;">Carácter</th>
+        <th>Descripción</th>
+        </tr>
+        <tr>
+        <td><b class="style1">[</b>caracteres<b class="style1">]</b></td>
+        <td class="texto">Encuentra cualquiera de los caracteres escritos entre los corchetes. Por ejemplo <b>/[aefg]/</b> encuentra cualquiera de los caracteres “a”, “e”, “f” o “g”.</td>
+        </tr>
+        <tr>
+        <td><b class="style1">[^</b>caracteres<b class="style1">]</b></td>
+        <td class="texto">Encuentra cualquier carácter, excepto los escritos después de <b class="style1">^</b>. Por ejemplo <b>/[^begxz]/</b> encuentra cualquier carácter que no sea igual a “b”, “e”, “g”, “x” o “z”.</td>
+        </tr>
+        <tr>
+        <td><b class="style1">[</b>x<b class="style1">-</b>z<b class="style1">]</b></td>
+        <td class="texto">Encuentra todos los caracteres comprendidos entre el carácter "x" y "z". Por ejemplo <b>/[A-Z]/</b> encuentra todas las letras comprendidas entre "A" y "Z" (es decir todas las letras mayúsculas, con excepción de la Ñ y las letras acentuadas).</td>
+        </tr>
+        <tr>
+        <td><b class="style1"></b>tx1<b class="style1">|</b>tx2<b class="style1">|</b>tx3<b class="style1"><b class="style1">|</b>...</b></td>
+        <td class="texto">Encuentra las cadenas de texto que sean iguales a “tx1” o a “tx2” o a "tx3", etc. Por ejemplo <b>/código|Javascript|lenguaje/</b> encuentra las cadenas de texto iguales a “código” o a “Javascript” o a “lenguaje”.</td>
+        </tr>
+        <tr>
+        <td><b class="style1">.</b></td>
+        <td class="texto">Representa a cualquier carácter, excepto los saltos de línea: "\n". Por ejemplo <b>/l.s/</b> encuentra "las", "los", "lxs", etc. Sin embargo, si se emplea conjuntamente el modificador <b>s</b> representa también a los saltos de línea.</td>
+        </tr>
+        <tr>
+        <td><b class="style1">\w</b></td>
+        <td class="texto">Representa a cualquier carácter alfanumérico, incluido el carácter de subrayado “_”. Por ejemplo <b>/M\wT/</b> encuentra "MAT", "Mat", "MET, "MdT", "M_T", etc., pero no "M T", "M?T", "MÁT", etc.</td>
+        </tr>
+        <tr>
+        <td><b class="style1">\W</b></td>
+        <td class="texto">Complemento de “\w”, representa cualquier carácter que no sea alfanumérico o “_”. Por ejemplo <b>/ci\Wn/</b> encuentra "ción", "cién", "ci n", "ci?n", etc., pero no "cien", "ci_n", "ci4n", etc.</td>
+        </tr>
+        <tr>
+        <td><b class="style1">\d</b></td>
+        <td class="texto">Representa cualquier dígito, por ejemplo <b>/\d-\d\d/</b> encuentra "2-32", "5-64", "0-43", etc.</td>
+        </tr>
+        <tr>
+        <td><b class="style1">\D</b></td>
+        <td class="texto">Complemento de “\d”, representa cualquier carácter que no sea un dígito. Por ejemplo <b>/\D\D\D\d\d\d/</b> encuentra "MAT100", "MAT205", "SIS101", "¿!x002", etc., pero no "S2S300", "M4T500", etc.</td>
+        </tr>
+        <tr>
+        <td><b class="style1">\s</b></td>
+        <td class="texto">Representa un carácter blanco. Un carácter blanco puede ser un espacio, un tabulador (\t), un retorno de carro (\r), un salto de línea (\n), un tabulador vertical (\v) o un alimentador de forma (\f). Por ejemplo <b>/\w\w\sda/</b>, encuentra "os da", "on\nda", "as\tda", etc., pero no "to_da"</td>
+        </tr>
+        <tr>
+        <td><b class="style1">\S</b></td>
+        <td class="texto">Complemento de "\s", representa cualquier carácter que no es un carácter blanco. Por ejemplo /d\Sl/, encuentra "del", "dal", "dxl", "d?l" etc., pero no "d l", "d\nl", "d\rn", etc.</td>
+        </tr>
+        <tr>
+        <td><b class="style1">\b</b></td>
+        <td class="texto">Representa un carácter no alfanúmerico pero cuyo valor no es incluido en la cadena encontrada. Por ejemplo <b>/\ben/</b> encuentra todas las cadenas "en" que están después de cualquier carácter no alfanumérico como en: " <strong class="style1">en</strong>tonces" "#<strong class="style1">en</strong>umerar", "?<strong class="style1">en</strong>", "ñ<strong class="style1">en</strong>ra", etc., <b>/res\b/</b> encuentra todas las cadenas "res" que están antes de cualquier carácter no alfanumérico como en "ma<strong class="style1">res</strong> ", "pa<strong class="style1">res</strong>!", "se<strong class="style1">res</strong>.", etc., y /\bde\b/ todas las cadenas "de" que están entre caracteres no alfanuméricos como en: " <strong class="style1">de</strong> ", "-<strong class="style1">de</strong>#", "ó<strong class="style1">de</strong>á", " <strong class="style1">de</strong>." etc.<br>.</td>
+        </tr>
+        <tr>
+        <td><b class="style1">\B</b></td>
+        <td class="texto">Es el complemento de \b, es decir que representa un carácter alfanumérico que no es incluido en la cadena encontrada. Por ejemplo <b>/\Bla/</b> encuentra las cadenas "la" que están después de un carácter alfanumérico, como en "pa<strong class="style1">la</strong>bra", "te<strong class="style1">la</strong>r", "_<strong class="style1">la</strong>s", etc., pero no en " las", ".lana", "ólan", etc. Igualmente, <b>/na\B/</b> encuentra las cadenas "na" que están seguidas por un carácter alfanumérico, como en "cami<strong class="style1">na</strong>r". "termi<strong class="style1">na</strong>r", "maña<strong class="style1">na</strong>s", "a<strong class="style1">na</strong>conda", etc., pero no en "temprana ", "mañana.", "persona!", etc. Y <b>/\Bpe\B/</b> encuentra las cadenas "pe" en palabras como "re<strong class="style1">pe</strong>tir", "de<strong class="style1">pe</strong>nder" y "o<strong class="style1">pe</strong>ración", pero no en palabras como "supe ", " pensamiento", "¡perdón!", "gripe?" etc.</td>
+        </tr>
+        <tr>
+        <td>x<b class="style1">+</b></td>
+        <td class="texto">Encuentra la cadena que tenga una o más veces el carácter, metacarácter o patrón "x". Por ejemplo <b>/Ja+vascript/</b> encuentra palabras como “Javascript”, “JaaavaScript”, pero no “Jvascript”.</td>
+        </tr>
+        <tr>
+        <td>x<b class="style1">*</b></td>
+        <td class="texto">Encuentra la cadena que contenga cero o más veces el carácter, metacarácter o patrón "x". Por ejemplo <b>/co*dificar/</b> encuentra palabras como “cooodificar”, “cdificar”, “coodificar”, pero no “oodificar” (porque la palabra no tienen una "c" antes de la primera "o").</td>
+        </tr>
+        <tr>
+        <td>x<b class="style1">?</b></td>
+        <td class="texto">Encuentra la cadena que contenga cero o una vez el carácter, metacarácter o patrón "x". Por ejemplo <b>/pro?grama/</b> encuentra palabras como  “prgrama” y “programa”, pero no “proograma”.</td>
+        </tr>
+        <tr>
+        <td>x<b class="style1">{</b>n<b class="style1">}</b></td>
+        <td class="texto">Encuentra la cadena que contenga “n” caracteres, metacaracteres o patrones iguales a “x”. Por ejemplo <b>/\d{4}/</b> encuentra cadenas que contengan 4 dígitos, como en “34-<dfn class="style1">1234</dfn>” “SCR<dfn class="style1">6032</dfn>” pero no en “14_12”, “32-344” o "32.43".</td>
+        </tr>
+        <tr>
+        <td>x<b class="style1">{</b>n, m<b class="style1">}</b></td>
+        <td class="texto">Encuentra la cadena que contenga entre “n” y “m” caracteres, metacaracteres o patrones “x”. Por ejemplo <b>/Ja{2,4}vascript/</b> encuentra cadenas como “Jaavascript”, “Jaaavascript”, “Jaaaavascript”, pero no “Javascript” o “Jaaaaavascript”.</td>
+        </tr>
+        <tr>
+        <td>x<b class="style1">{</b>n, <b class="style1">}</b></td>
+        <td class="texto">Encuentra la cadena que contenga “n” o más caracteres, metacaracteres o patrones iguales a “x”. Por ejemplo /cade{2,}na/ encuentra cadenas como “cadeena”, “cadeeena”, "cadeeeeena", pero no “cadena” o “cadna”.</td>
+        </tr>
+        <tr>
+        <td><b class="style1">^</b>x</td>
+        <td class="texto">Encuentra la cadena, al principio de una línea o al principio del texto, que comience con el carácter, metacarácter o patrón “x”. Conjuntamente los modificadores “g” y "m" encuentra todas las líneas que comienzan con el carácter, metacarácter o patrón “x”. Por ejemplo <b>/^En/gm</b> encuentra todas las líneas que comienzan con el texto "En".</td>
+        </tr>
+        <tr>
+        <td>x<b class="style1">$</b></td>
+        <td class="texto">Es el complemento de "^". Encuentra la cadena, al final de una línea o al final del texto, que termine con el carácter, metacarácter o patrón “x”. Conjuntamente los modificadores "g" y “m” encuentra todas las líneas que terminan con el carácter, metacarácter o patrón “x”. Por ejemplo <b><b>/ón\.$/gm</b></b> encuentra todas las líneas que terminan con el texto "ón.".</td>
+        </tr>
+        <tr>
+        <td><b class="style1">(?=</b>x<b class="style1">)</b></td>
+        <td class="texto">Encuentra la cadena que está seguida por el carácter, metacarácter, patrón o cadena “x”, pero "x" no forma parte de la cadena encontrada. Por ejemplo <b>/lla(?=ma)/</b> encuentra la cadena de caracteres "lla" que está seguida por la cadena "ma", como en "<dfn class="style1">lla</dfn>ma", "<dfn class="style1">lla</dfn>maré", etc., pero no en "llamo", "ellas", etc.</td>
+        </tr>
+        <tr>
+        <td><b class="style1">(?!</b>x<b class="style1">)</b></td>
+        <td class="texto">Es el complemento de “(?=x)”, es decir que encuentra la cadena que no está seguida por el carácter, metacarácter o patrón “x”. Por ejemplo <b>/\w+a(?!\s)/</b> encuentra la cadena que tenga uno o más caracteres alfanuméricos, seguidos de la letra "a", pero no seguido por un espacio en blanco, como en "<dfn class="style1">fina</dfn>l", "<dfn class="style1">mientra</dfn>s", "<dfn class="style1">cara</dfn>s", "<dfn class="style1">java</dfn>script", etc., pero no en "cera ", "encuentra ", "la lógica ", etc.</td>
+        </tr>
+        <tr>
+        <td><b class="style1">(?&lt;=</b>x<b class="style1">)</b></td>
+        <td class="texto">Encuentra la cadena que esté precedida por el carácter, metacarácter o patrón “x”, pero "x" no forma parte de la cadena encontrada. Por ejemplo <b>/(?&lt;=lla)ma/</b> encuentra la cadena de caracteres "ma" que está precedida por la cadena "lla", como en "lla<dfn class="style1">ma</dfn>", "lla<dfn class="style1">ma</dfn>ré", etc., pero no en "cama", "Roma", etc.</td>
+        </tr>
+        <tr>
+        <td><b class="style1">(?&lt;!</b>x<b class="style1">)</b></td>
+        <td class="texto">Es el complemento de "(?&lt;=x)", es decir que encuentra la cadena que no está precedida por el carácter, metacarácter o patrón “x”. Por ejemplo <b>/(?&lt;!m)\w+\b/</b> encuentra las cadenas que no estén precidadas por una "m", como en "<dfn class="style1">cadena</dfn>", "<dfn class="style1">refugio</dfn>", "<dfn class="style1">cara</dfn>", etc., pero no cadenas como "modificar", "mantener", "mirar", etc.</td>
+        </tr>
+    </tbody></table>
+    </div>
+
+
+    <p class="text">En las expresiones regulares se puede emplear y en ocasiones es necesario hacerlo, secuencias de escape, por ejemplo para buscar un punto y que el punto sea interpretado como tal y no como un carácter especial, debe ser escrito como una secuencia de escape, es decir precediendo "\" al carácter, así <b class="style1">/ción\./</b> busca específicamente la cadena <b class="style1">"ción."</b>, no cadenas como <b class="style1">ción:</b>, <b class="style1">ción,</b>, <b class="style1">ción;</b>, etc., es decir no la cadena <b class="style1">"ción"</b> seguida de cualquier otro carácter (que es lo que ocurriría si se escribe "." en lugar de "\."). Por supuesto se pueden emplear también las secuencias de escape estudiadas previamente (como \n, \0, \t, \uXXXX, etc.).</p>
+
+
+
+
+
+    <h2 class="text">Ejemplos</h2>
+
+    <p class="ejemplo"><span class="ejemplo"></span></p>
+
+    <p class="ejemplosn">Cree la variable "s" con la cadena 'Si la cadena tiene más de una línea, el modificador "m" hace que la expresión regular se aplique a todas ellas'.</p>
+    
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">s = 'Si la cadena tiene más de una línea, el modificador "m" hace que la expresión regular se aplique a todas ellas';<br>s</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="ejemplosn">Obtenga la primera cadena que tenga una "d" seguida de una "a", "e", o "i"</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">s.match(/d[aei]/)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="ejemplosn">La expresión regular: "d[aei]", ubica las cadenas que tienen una "d" seguidas de una "a", una "e" o una "i" [aei].</p>
+
+    <p class="ejemplosn">Obtenga todas las cadena que tenga una "d" seguidas de una "a", "e", o "i"</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">s.match(/d[aei]/g)</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="ejemplosn">La expresión regular para este inciso es la misma que para el inciso anterior, sólo que ahora se emplea el modificador "g", para que ubique todas las cadenas y no sólo la primera:</p>
+
+    <p class="ejemplosn">Este problema puede ser resuelto también con el método <dfn class="style1">matchAll</dfn>, obteniéndose las mismas cadenas, sólo que <dfn class="style1">matchAll</dfn> devuelve un iterador (no un array) y cada cadena es devuelta en un array:</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">[...s.matchAll(/d[aei]/g)]</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="ejemplosn">Donde el resultado, que es un iterador, ha sido transformado en un array empleando el operador de expansión <b class="style1">...</b>, para este fin, se puede emplear igualmente el método estático <dfn class="style1">Array.from</dfn>:</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">Array.from(s.matchAll(/d[aei]/g))</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="ejemplosn">El método <dfn class="style1">matchAll</dfn>, devuelve cada resultado en un array, porque cuando se trabaja con grupos, devuelve no solo el texto encontrado, sino también él o los grupos encontrados. Por ejemplo, si se crea un grupo para la parte de la vocal (encerrando las vocales entre paréntesis), se obtiene:</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">[...s.matchAll(/d([aei])/g)]</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="ejemplosn">Ahora cada array contiene no sólo el texto encontrado, sino también el grupo encontrado (la vocal). Sin embargo, en esta sección del capítulo no tiene sentido emplear <dfn class="style1">matchAll</dfn>, porque no se emplean grupos en las expresiones regulares y por lo tanto <dfn class="style1">matchAll</dfn> devuelve la misma información que <dfn class="style1">match</dfn>.</p>
+
+    <p class="ejemplosn">Ubique la primera cadena que tenga una "c" o una "r" y que estén seguidas de una "a" o "e".</p>
+    
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">s.match(/[cr][ae]/)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="ejemplosn">La expresión regular: "[cr][ai]", ubica las palabras que tienen una la letra "c" o "r" ([cr]) y que están seguidas por una letra "a" o "i" ([ai]).</p>
+
+    <p class="ejemplosn">Obtenga todas las cadenas que tengan una "c" o una "r" y que estén seguidas de una "a" o "e".</p>
+    
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">s.match(/[cr][ae]/g)</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="ejemplosn">Al igual que en el ejemplo anterior, la única diferencia es que ahora se emplea el modificador "g", para ubicar todas las cadenas y no sólo la primera.</p>
+
+    <p class="ejemplosn">Obtenga todas las cadenas que tengan una "d" pero que no estén seguidas de una "a" o "i"</p>
+    
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">s.match(/d[^ai]/g)</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="ejemplosn">La expresión regular: "d[^ai]", ubica todas las cadenas que tienen la letra "d", pero que NO estan seguidas por una "a" o una "i" [^ai].</p>
+
+    <p class="ejemplosn">Ubique todas las cadenas que tengan la letra "l" seguidas de una letra comprendida entre la "a" y "l".</p>
+    
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">s.match(/l[a-l]/g)</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="ejemplosn">La expresión regular es "l[a-l]", ubica todas las cadenas que tienen una letra "l" seguida por cualquiera de las letras comprendidas entre "a" y "l" ([a-l]).</p>
+
+    <p class="ejemplosn">Todas las cadenas que sean "de", "el" o "la".</p>
+    
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">s.match(/de|el|la/g)</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="ejemplosn">La expresión regular: "de|el|la", ubica las cadenas conformadas por "de" o "el" o "la".</p>
+
+    <p class="ejemplosn">Ubique todas las cadenas que tengan una "m", seguidas de cualquier carácter.</p>
+    
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">s.match(/m./g)</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="ejemplosn">La expresión regular: "m.", ubica todas las cadenas que tengan la letra "m" seguida por un carácter cualquier ".".</p>
+
+
+
+
+
+    <p class="ejemplo"><span class="ejemplo"></span></p>
+
+    <p class="ejemplosn">Cree la variable "s" con la cadena 'Si la cadena tiene más de una línea, el modificador "m" hace que la expresión regular se aplique a todas ellas.'.</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">s = 'Si la cadena tiene más de una línea, el modificador "m" hace que la expresión regular se aplique a todas ellas.';<br>s</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="ejemplosn">Ubique todas las cadenas con uno o más caracteres alfanuméricos.</p>
+    
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">s.match(/\w+/g)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="ejemplosn">La expresión regular: "\w+", ubica uno o más ("+") caracteres alfanuméricos ("\w"). Observe que las vocales acentuadas no son reconocidas como caracteres alfanuméricos, por eso en el resultado aparecen caracteres sueltos, como "m" y "s", en lugar de la cadena "más". En general los metacaracteres \w, \W, \b y \B han sido creados para ser empleados con el alfabeto inglés, por lo que no funcionan como se esperaría con otros idiomas.</p>
+
+    <p class="ejemplosn">Ubique todas las cadenas con uno o más caracteres NO alfanuméricos.</p>
+    
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">s.match(/\W+/g)</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="ejemplosn">La expresión regular: "\W+", ubica uno o más ("+") caracteres no alfanuméricos ("\W"). Como se puede ver, las vocales acentuadas son consideradas NO alfanuméricos.</p>
+
+    <p class="ejemplosn">Ubique todas las cadenas con uno o más caracteres no blancos</p>
+    
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">s.match(/\S+/g)</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="ejemplosn">La expresión regular: "\S+" ubica uno o más ("+") caracteres no blancos ("\S"). Observe que en el resultado se incluyen cadenas como "más", "línea," ""m""" y "ellas.", porque todo carácter que no sea un espacio en blanco, tabulador o salto de línea, es un carácter no blanco.</p>
+
+    <p class="ejemplosn">Todas las cadenas con uno o más caracteres blancos</p>
+    
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">s.match(/\s+/g)</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="ejemplosn">La expresión regular: "\s+", ubica uno o más ("+") caracteres blancos ("\s"). En este caso en particular, todos los caracteres blancos son sólamente los espacios (pues no existen ni tabuladores ni saltos de línea).</p>
+
+    <p class="ejemplosn">Ubique todas las cadenas con una o más letras en mayúsculas o minúsculas, incluidas vocales acentuadas y la ñ:</p>    
+    
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">s.match(/[a-záéíóúñ]+/gi)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="ejemplosn">La expresión regular: "[a-záéíóúñ]+", ubica una o más ("+") letras ("a-z"), vocales acentuadas ("áéíóú") o eñes ("ñ"), tanto en mayúsculas como minúsculas (modificador "i"). Observe que ahora el resultado incluye únicamente letras en español, no otros caracteres como la coma, el punto, etc., (que es lo que ocurría con \S). Si el texto fuera en inglés, se conseguiría el mismo resultado simplemente con "\w+" o más precisamente con "[a-z]+".</p>
+    
+    <p class="ejemplosn">Ubique todas las letras (alfabeto español) que estén entre dos caracteres alfanuméricos, sin incluir esos caracteres en el resultado.</p>
+    
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">s.match(/\B[a-záéíóúñ]+\B/gi)</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="ejemplosn">La expresión regular: "\B[a-záéíóúñ]+\B", ubica una o más ("+") letras ([a-záéíóúñ]), que estén precedidas y seguidas por un carácter alfanumérico pero sin incluir ese carácter en el resultado (\B). Observe que no aparecen en el resultado cadenas como "Si",  "la", "de", porque los dos caracteres alfanuméricos que las conforman son los correspondientes a "\B". Por otra parte no aparece la "á" de "más", porque ni la primera (m), ni la última letra (s) están precedidas o seguidas de un carácter alfanumérico (ní el espacio ni la á son caracteres alfanuméricos). Algo similar ocurre con las otras palabras acentuadas, que sólo aparecen parcialmente, así de "expresión", sólo se ubica "xpres", porque la última letra (n) no está precedida o seguida de un carácter alfanumérico, siendo la última letra que cumple esa condición la letra "i".</p>
+
+    <p class="ejemplosn">Eso ocurre, como se dijo, porque los caracteres especiales para palabras, como \w, \W, \b y \B, están pensadas en el alfabeto inglés, por lo que no funcionan correctamente con otros alfabetos como el español.</p>
+
+    <p class="ejemplosn">Para obtener el resultado correcto en español, es necesario emplear aserciones de búsqueda anterior y posterior, como se muestra a continuación:</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">s.match(/(?&lt;=[a-záéíóúñ])[a-záéíóúñ]+(?=[a-záéíóúñ])/gi)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="ejemplosn">Ubique todas las cadenas con una o más letras que tengan la vocal "e".</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">s.match(/[a-záéíóúñ]*e[a-záéíóúñ]*/gi)</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="ejemplosn">La expresión regular: "[a-záéíóúñ]*e[a-záéíóúñ]*", ubica 0 o más ("*") letras ("[a-záéíóúñ]*") seguidas por la letra "e" y luego por 0 o más letras ([a-záéíóúñ]*). En este caso se emplea el cuantificador "*" porque algunas palabras como "el" no tienen caracteres antes de la "e" y otras como "hace" no tienen caracteres después de la "e":</p>
+
+    <p class="ejemplosn">Ubique todas las cadenas con una o más letras que terminen en una vocal y estén seguidas de un carácter blanco o una coma (no incluidos en el resultado).</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">s.match(/[a-záéíóúñ]*[aeiou](?=[\s,])/gi)</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="ejemplosn">La expresión regular: "[a-záéíóúñ]*[aeiou](?=[\s,])", ubica cero o más letras ("[a-záéíóúñ]*") seguidas de una vocal ("[aeiou]") y seguida (pero sin incluir en el resultado) por un carácter blanco o una coma ("(?=[\s,])"). En este caso se emplea igualmente el cuantificador "*" porque algunas palabras (como la "a") no tienen caracteres antes de la vocal.</p>
+
+    <p class="ejemplosn">Ubique todas las cadenas con una o más letras que terminen en un carácter no alfanumérico y que estén seguidas de un carácter blanco (no incluido en el resultado).</p>
+    
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">s.match(/[a-záéíóúñ]+\W(?=\s)/gi)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="ejemplosn">La expresión regular: "[a-záéíóúñ]+\W(?=\s)", ubica una o más letras ("[a-záéíóúñ]+"), seguidas de un carácter no alfanumérico ("\W") y un carácer blanco (no incluido en el resultado) ("(?=\s)"):</p>
+
+    <p class="ejemplosn">Ubique todas las cadenas con una o más letras que inicien con una vocal.</p>
+    
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">s.match(/\b[aeiou][a-záéíóúñ]*/gi)</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="ejemplosn">La expresión regular: "\b[aeiou][a-záéíóúñ]*", ubica las cadenas que inician ("\b") en una vocal ("[aeiou]") seguida por 0 o más letras ("[a-záéíóúñ]*"):</p>
+
+    <p class="ejemplosn">Ubique todas las cadenas con una o más letras que terminen en una letra "r" o "s".</p>
+    
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">s.match(/[a-záéíóúñ]*[rs]\b/gi)</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="ejemplosn">La expresión regular: "[a-záéíóúñ]*[rs]\b", ubica cero o más letras ("[a-záéíóúñ]*") que terminen ("\b") en una letra "r" o "s" ("[rs]").</p>
+
+    <p class="ejemplosn">Ubique todas las cadenas con una o más letras que no estén seguidas por un carácter blanco o un carácter alfanumérico o vocal acentuada (no incluidos en el resultado).</p>
+    
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">s.match(/[a-záéíóúñ]+(?![\s\wáéíóú])/gi)</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="ejemplosn">La expresión regular: "[a-záéíóúñ]+(?![\s\wáéíóú]", ubica una o más letras ("[a-záéíóúñ]+") que no estén seguidas de un carácter (no incluido en el resultado) blanco, alfanumérico o vocal acentuada ("(?![\s\wáéíóú])"):</p>
+
+
+
+
+
+    <p class="ejemplo"><span class="ejemplo"></span></p>
+
+    <p class="ejemplosn">Cree la variable "s" con la cadena "Primer semestre: FIS100.\nSegundo semestre: FIS102.\nTercer semestre: FIS200.\nCuarto semestre: FIS202.".</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">s = "Primer semestre: FIS100.\nSegundo semestre: FIS102.\nTercer semestre: FIS200.\nCuarto semestre: FIS202.";<br>s</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="ejemplosn">Ubique todas las cadenas con uno o más caracteres alfanuméricos que estén al principio de una línea.</p>
+    
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">s.match(/^\w+/gm)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="ejemplosn">La expresión regular: "^\w+", ubica uno o más caracteres alfanuméricos ("\w+") al principio ("^") de una línea, con los modificadores "g", para que se ubiquen todas las coincidencias y "m" para que se ubique el principio de cada línea:</p>
+
+    <p class="ejemplosn">Ubique todas las cadenas con uno o más caracteres no blancos que estén al final de una línea.</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">s.match(/\S+$/gm)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="ejemplosn">La expresión regular: "\S+$", ubica uno o más caracteres no blancos ("\S+") al final ("$") de una línea, con los modificadores "g", para que se ubiquen todas las coincidencias y "m" para que se ubique el final de cada línea:</p>
+
+    <p class="ejemplosn">Ubique todas las cadenas con uno o más dígitos.</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">s.match(/\d+/g)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="ejemplosn">La expresión regular: "\d+", ubica uno o más dígitos (con el modificador "g", para que se ubiquen todas las coincidencias):</p>
+
+    <p class="ejemplosn">Ubique todas las cadenas con uno o más caracteres alfanuméricos seguidos de uno o más dígitos</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">s.match(/\w+\d+/g)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="ejemplosn">La expresión regular: "\w+\d+", ubica uno o más caracteres alfanuméricos ("\w+") seguidos de uno o más dígitos ("\d+"):</p>
+
+    <p class="ejemplosn">Ubique todas las cadenas con 6 caracteres alfanuméricos en total.</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">s.match(/\b\w{6}\b/g)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="ejemplosn">La expresión regular: "b\w{6}\b", ubica cadenas que antes y después tienen un carácter no alfanumérico ("\b") y seis ("{6}") caracteres alfanuméricos ("\w") en total. Esta expresión regular funciona porque, en este caso en particular, la cadena no tiene eñes ni vocales acentuada, si existieran dichos caracteres tendría que emplearse una expresión como la siguiente (lo mismo es válido para los incisos posteriores):</p>
+    
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">s.match(/\b[\wáéíóúñ]{6}\b/gi)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="ejemplosn">Ubique todas las cadenas con entre 7 y 8 caracteres alfanuméricos en total.</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">s.match(/\b\w{7,8}\b/g)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="ejemplosn">La expresión regular: "\b\w{7,8}\b", ubica una cadena que antes y después tiene un carácter no alfanumérico ("\b") y entre 7 y 8 ("{7,8}") caracteres alfanuméricos ("\w").</p>
+
+    <p class="ejemplosn">Ubique todas las cadenas con 6 o más caracteres alfanuméricos en total</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">s.match(/\b\w{6,}\b/g)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="ejemplosn">La expresión regular: "\b\w{6,}\b", ubica una cadena que antes y después tiene un carácter no alfanumérico (\b) y 6 o más ("{6,}") caracteres alfanuméricos ("\w").</p>
+
+    <p class="ejemplosn">Ubique todas las cadenas con uno o más caracteres no blancos.</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">s.match(/\S+/g)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="ejemplosn">La expresión regular: "\S+", ubica uno o más caracteres no blancos.</p>
+
+    <p class="ejemplosn">Ubique todas las cadenas con una o más letras, que terminen en un carácter no alfanumérico y que estén seguidas de un carácter blanco (no incluido en el resultado).</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">s.match(/[a-z]+\W(?=\s)/gi)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="ejemplosn">La expresión regular: "[a-z]+\W(?=\s)", ubica una o más letras ("[a-z]+"), seguidas de un carácter no alfanumérico ("\W") y de un carácter blanco, no incluido en el resultado, ("(?=\s)"):</p>
+
+    <p class="ejemplosn">Ubique todas las cadenas con una o más letras, que al final estén seguidas por un carácter diferente a ":" (sin incluir ese carácter en el resultado).</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">s.match(/[a-z]+\b(?!:)/gi)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="ejemplosn">La expresión regular: "[a-z]+\b(?!:)", ubica una o más letras ("[a-z]+"), que al final ("\b") no estén seguidas por el carácter ":", sin incluir el carácter en el resultado ("(?!:)").</p>
+
+
+
+    <p class="text">En la resolución de los ejercicios, un carácter que generalmente no está disponible en el teclado, es el símbolo de grados: <b class="style1">°</b>. En las computadoras y portátiles con teclado numérico, se obtiene este símbolo pulsando las teclas <b class="style1">Alt+248</b> o <b class="style1">Alt+0176</b>, estando encendido el teclado numérico (haga la prueba).</p>
+
+    <p class="text">Si no se cuenta con un teclado numérico, se puede imprimir el símbolo empleando la entidad HTML: <b class="style1">&amp;deg;</b> o el código unicode: <b class="style1">B0</b>, o también <b class="style1">00B0</b>:</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">print("&amp;deg;")</div>
+        <div class="resultado"></div>
+        <div class="instruccion">print("\xB0")</div>
+        <div class="resultado"></div>
+        <div class="instruccion">print("\u00B0")</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Entonces se puede copiar el símbolo resultante (Ctrl+C) y pegar (Ctrl+V) en las instrucciones de la calculadora (o en el lugar que se requiera).</p>
+
+    <p class="text">Alternativamente, en Windows, se puede acceder a todos los símbolos pulsando las teclas <b class="style1">Windows+.</b> (Windows+punto) y haciendo clic en el icono de símbolos:</p>
+
+    <p class="figurasn"><img src="./files/symbols_windows.png" alt="símbolos" style="width:324px"></p>
+    
+    <div class="ejercicio" id="ejercicio1" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Cree la variable "s" con la cadena 'El modificador "i" hace que la expresión regular ignore la diferencia entre mayúsculas y minúsculas', luego, con <dfn>match</dfn> obtenga.</p><div id="pregunta1" class="calculadora" spellcheck="false"><div class="instruccion">s = 'El modificador "i" hace que la expresión regular ignore la diferencia entre mayúsculas y minúsculas';</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Ubique la primera cadena que tenga una "c"  seguida de una "a", "e", o "i".</p><div id="pregunta2" class="calculadora" spellcheck="false"><div class="instruccion">s.match(/c[aei]/)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Ubique todas las cadena que tengan una "c" seguida de una "a", "e", o "i"</p><div id="pregunta3" class="calculadora" spellcheck="false"><div class="instruccion">s.match(/c[aei]/g)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Ubique, con matchAll, todas las cadena que tengan una "c" seguida de una "a", "e", o "i"</p><div id="pregunta4" class="calculadora" spellcheck="false"><div class="instruccion">[...s.matchAll(/c[aei]/g)]</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Ubique la primera cadena que tenga una "c" o una "r" y que esté seguida de una "a" o "e".</p><div id="pregunta5" class="calculadora" spellcheck="false"><div class="instruccion">s.match(/[cr][ae]/)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Ubique todas las cadenas que tengan una "c" o una "r" y que estén seguidas de una "a" o "e"</p><div id="pregunta6" class="calculadora" spellcheck="false"><div class="instruccion">s.match(/[cr][ae]/g)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Todas las cadenas que tengan una "s" pero que no estén seguidas de una vocal no acentuada</p><div id="pregunta7" class="calculadora" spellcheck="false"><div class="instruccion">s.match(/s[^aeiou]/g)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Todas las cadenas que tengan una "g" seguidas de una letra comprendida entre la "l" y "v"</p><div id="pregunta8" class="calculadora" spellcheck="false"><div class="instruccion">s.match(/g[l-v]/g)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Todas las cadenas que sean o "di" o "re" o "la"</p><div id="pregunta9" class="calculadora" spellcheck="false"><div class="instruccion">s.match(/di|re|la/g)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Todas las cadenas que tengan una "m", seguidas de un carácter cualquiera</p><div id="pregunta10" class="calculadora" spellcheck="false"><div class="instruccion">s.match(/m./g)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>En base a los incisos resueltos, marque las afirmaciones correctas:</p><p class="opcionMultiple correcta"><input type="checkbox" name="pregunta11" id="opcion23"><span class="opcionMultiple"></span><label for="opcion23">La expresión regular <span class="textocodigo">[cr][ae]</span> permite ubicar las cadenas "cr", "ae" y "crae"</label></p><p class="opcionMultiple correcta"><input type="checkbox" name="pregunta11" id="opcion29"><span class="opcionMultiple"></span><label for="opcion29">La expresión regular <span class="textocodigo">di|re|la</span> permite ubicar las cadenas "dire", "dila", "redi", "rela", "ladi" y "lare"</label></p><p class="opcionMultiple correcta"><input type="checkbox" name="pregunta11" id="opcion27"><span class="opcionMultiple"></span><label for="opcion27">La expresión regular <span class="textocodigo">g[l-v]</span> permite ubicar cadenas como "gi", "ga", "gd"</label></p><p class="opcionMultiple correcta"><input type="checkbox" name="pregunta11" id="opcion22" checked=""><span class="opcionMultiple"></span><label for="opcion22">La expresión regular <span class="textocodigo">[cr][ae]</span> permite ubicar las cadenas "ca", "ce", "ra" y "re"</label></p><p class="opcionMultiple correcta"><input type="checkbox" name="pregunta11" id="opcion28" checked=""><span class="opcionMultiple"></span><label for="opcion28">La expresión regular <span class="textocodigo">di|re|la</span> permite ubicar las cadenas "di", "re" y "la"</label></p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="26" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 4 -->
+    
+    <div class="ejercicio" id="ejercicio2" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Cree la variable "s" con la cadena 'El modificador "i" hace que la expresión regular ignore la diferencia entre mayúsculas y minúsculas', luego, con <dfn>match</dfn> obtenga</p><div id="pregunta12" class="calculadora" spellcheck="false"><div class="instruccion">s = 'El modificador "i" hace que la expresión regular ignore la diferencia entre mayúsculas y minúsculas';</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Ubique la primera cadena que tenga una "d" seguida de una "i" u "o"</p><div id="pregunta13" class="calculadora" spellcheck="false"><div class="instruccion">s.match(/d[io]/)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Ubique todas las cadenas que tengan una "d" seguida de una "i" u "o"</p><div id="pregunta14" class="calculadora" spellcheck="false"><div class="instruccion">s.match(/d[io]/g)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Ubique la primera cadena que tenga una "m" o una "s" y que estén seguidas de una "a", "i" u "o"</p><div id="pregunta15" class="calculadora" spellcheck="false"><div class="instruccion">s.match(/[ms][aio]/)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Ubique todas las cadenas que tengan una "m" o una "s" y que estén seguidas de una "a", "i" u "o"</p><div id="pregunta16" class="calculadora" spellcheck="false"><div class="instruccion">s.match(/[ms][aio]/g)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Ubique todas las cadenas que tengan una "g", "p" o "s" pero que no estén seguidas de una vocal no acentuada</p><div id="pregunta17" class="calculadora" spellcheck="false"><div class="instruccion">s.match(/[gps][^aeiou]/g)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Ubique todas las cadenas que tengan una "c" o "n" seguidas de una letra comprendida entre la "o" y "v".</p><div id="pregunta18" class="calculadora" spellcheck="false"><div class="instruccion">s.match(/[cn][o-v]/g)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Ubique todas las cadenas que sean o "as" o "re" o "cu"</p><div id="pregunta19" class="calculadora" spellcheck="false"><div class="instruccion">s.match(/as|re|cu/g)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Ubique todas las cadenas que tengan una "l", seguidas de dos caracteres cualesquiera</p><div id="pregunta20" class="calculadora" spellcheck="false"><div class="instruccion">s.match(/l../g)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>En base a los incisos resueltos, marque las afirmaciones correctas:</p><p class="opcionMultiple correcta"><input type="checkbox" name="pregunta21" id="opcion50"><span class="opcionMultiple"></span><label for="opcion50">La expresión regular <span class="textocodigo">d[io]</span> permite ubicar la cadena "dio"</label></p><p class="opcionMultiple correcta"><input type="checkbox" name="pregunta21" id="opcion58"><span class="opcionMultiple"></span><label for="opcion58">La expresión regular <span class="textocodigo">as|re|cu</span> permite ubicar las cadenas "asre", "ascu", "reas", "recu", "cuas" y "cure"</label></p><p class="opcionMultiple correcta"><input type="checkbox" name="pregunta21" id="opcion54"><span class="opcionMultiple"></span><label for="opcion54">La expresión regular <span class="textocodigo">[gps][^aeiou]</span> permite ubicar cadenas como "ga", "po", "si"</label></p><p class="opcionMultiple correcta"><input type="checkbox" name="pregunta21" id="opcion53" checked=""><span class="opcionMultiple"></span><label for="opcion53">La expresión regular <span class="textocodigo">[gps][^aeiou]</span> permite ubicar cadenas como "gn", "pr", "sc"</label></p><p class="opcionMultiple correcta"><input type="checkbox" name="pregunta21" id="opcion57" checked=""><span class="opcionMultiple"></span><label for="opcion57">La expresión regular <span class="textocodigo">as|re|cu</span> permite ubicar las cadenas "as", "re" y "cu"</label></p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="24" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 5 -->
+    
+    <div class="ejercicio" id="ejercicio3" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Cree la variable "s" con la cadena 'El modificador "g" hace que la búsqueda sea global, es decir que se ubican todas las coincidencias de la expresión regular.'. luego, con <dfn>match</dfn> obtenga.</p><div id="pregunta22" class="calculadora" spellcheck="false"><div class="instruccion">s = 'El modificador "g" hace que la búsqueda sea global, es decir que se ubican todas las coincidencias de la expresión regular.';</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Todas las cadenas con uno o más caracteres alfanuméricos</p><div id="pregunta23" class="calculadora" spellcheck="false"><div class="instruccion">s.match(/\w+/g)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Todas las cadenas con uno o más caracteres no alfanuméricos</p><div id="pregunta24" class="calculadora" spellcheck="false"><div class="instruccion">s.match(/\W+/g)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Todas las cadenas con uno o más caracteres no blancos</p><div id="pregunta25" class="calculadora" spellcheck="false"><div class="instruccion">s.match(/\S+/g)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Todas las cadenas con uno o más caracteres blancos.</p><div id="pregunta26" class="calculadora" spellcheck="false"><div class="instruccion">s.match(/\s+/g)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Todas las cadenas con una o más letras (en mayúsculas o minúsculas, incluidas vocales acentuadas y la ñ).</p><div id="pregunta27" class="calculadora" spellcheck="false"><div class="instruccion">s.match(/[a-záéíóúñ]+/gi)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Todas las cadenas con una o más letras (en mayúsculas o minúsculas, incluídas vocales acentuadas y la ñ) que estén entre dos caracteres alfanuméricos (no incluidos en el resultado).</p><div id="pregunta28" class="calculadora" spellcheck="false"><div class="instruccion">s.match(/\B[a-záéíóúñ]+\B/gi)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Todas las cadenas con una o más letras (en mayúsculas o minúsculas, incluídas vocales acentuadas y la ñ) que tengan por lo menos una "a".</p><div id="pregunta29" class="calculadora" spellcheck="false"><div class="instruccion">s.match(/[a-záéíóúñ]*a[a-záéíóúñ]*/gi)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Todas las cadenas (en mayúsculas o minúsculas, incluídas vocales acentuadas y la ñ) que terminen en una "r" o "s" y que estén seguidas de un carácter blanco o un punto (no incluidos en el resultado).</p><div id="pregunta30" class="calculadora" spellcheck="false"><div class="instruccion">s.match(/[a-záéíóúñ]*[rs](?=[\s.])/gi)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Todas las cadenas con una o más letras (en mayúsculas o minúsculas, incluídas vocales acentuadas y la ñ) que terminen en un carácter no alfanumérico y que estén seguidas de un carácter blanco (no incluido en el resultado).</p><div id="pregunta31" class="calculadora" spellcheck="false"><div class="instruccion">s.match(/[a-záéíóúñ]+\W(?=\s)/gi)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Todas las cadenas (en mayúsculas o minúsculas, incluídas vocales acentuadas y la ñ) que inicien con una letra que no sea una vocal o un carácter blanco, seguidas por una o más letras.</p><div id="pregunta32" class="calculadora" spellcheck="false"><div class="instruccion">s.match(/\b[^aeiou\s][a-záéíóúñ]+/gi)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Todas las cadenas (en mayúsculas o minúsculas, incluídas vocales acentuadas y la ñ) con letras que terminen en una vocal seguida de un carácter blanco (no incluido en el resultado).</p><div id="pregunta33" class="calculadora" spellcheck="false"><div class="instruccion">s.match(/[a-záéíóúñ]*[aeiou](?=\s)/gi)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Todas las cadenas (en mayúsculas o minúsculas, incluídas vocales acentuadas y la ñ) con una o más letras que no estén seguidas por un carácter blanco, alfanumérico o vocal acentuada (no incluído en el resultado).</p><div id="pregunta34" class="calculadora" spellcheck="false"><div class="instruccion">s.match(/[a-záéíóúñ]+(?![\s\wáéíóú])/gi)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>En base a los incisos resueltos, marque las afirmaciones correctas:</p><p class="opcionMultiple correcta"><input type="checkbox" name="pregunta35" id="opcion95"><span class="opcionMultiple"></span><label for="opcion95">La expresión regular <span class="textocodigo">[^a-záéíóúñ]+/gi</span> permite ubicar cadenas como "El" y "expresión"</label></p><p class="opcionMultiple correcta"><input type="checkbox" name="pregunta35" id="opcion94" checked=""><span class="opcionMultiple"></span><label for="opcion94">La expresión regular <span class="textocodigo">[a-záéíóúñ]+/gi</span> permite ubicar cadenas como "El" y "expresión"</label></p><p class="opcionMultiple correcta"><input type="checkbox" name="pregunta35" id="opcion100" checked=""><span class="opcionMultiple"></span><label for="opcion100">La expresión regular <span class="textocodigo">[a-záéíóúñ]*[rs](?=[\s\.])/gi</span> permite ubicar palabras como "decir" y "todas"</label></p><p class="opcionMultiple correcta"><input type="checkbox" name="pregunta35" id="opcion92" checked=""><span class="opcionMultiple"></span><label for="opcion92">La expresión regular <span class="textocodigo">\s+/g</span> permite ubicar cadenas como los espacios en blanco " "</label></p><p class="opcionMultiple correcta"><input type="checkbox" name="pregunta35" id="opcion96" checked=""><span class="opcionMultiple"></span><label for="opcion96">La expresión regular <span class="textocodigo">\B[a-záéíóúñ]+\B/gi</span> permite ubicar cadenas como "bic" (en "ubica") y "oincidencia" (en "coincidencias")</label></p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="46" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 6 -->
+    
+    <div class="ejercicio" id="ejercicio4" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Cree la variable "s" con la cadena "Temperatura inicial: 34.52 °C.\nTemperatura intermedia: 178.37 °C.\nTemperatura en el proceso: 198.34  °C.\nTemperatura final: 120.48 °C.". Donde las cadenas de escape \n, generan los saltos de línea.</p><div id="pregunta36" class="calculadora" spellcheck="false"><div class="instruccion">s = "Temperatura inicial: 34.52 °C.\nTemperatura intermedia: 178.37 °C.\nTemperatura en el proceso: 198.34 °C.\nTemperatura final: 120.48 °C.";<br>s</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Ubique todas las cadenas con uno o más caracteres alfanuméricos (alfabeto inglés) que estén al principio de una línea (se requiere el modificador "m").</p><div id="pregunta37" class="calculadora" spellcheck="false"><div class="instruccion">s.match(/^\w+/gm)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Ubique todas las cadenas con uno o más caracteres no blancos que estén al final de una línea (se requiere el modificador "m").</p><div id="pregunta38" class="calculadora" spellcheck="false"><div class="instruccion">s.match(/\S+$/gm)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Ubique todas las cadenas con uno o más dígitos.</p><div id="pregunta39" class="calculadora" spellcheck="false"><div class="instruccion">s.match(/\d+/g)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Ubique todas las cadenas con números reales, es decir uno o más dígitos seguidos de un punto y de uno  o más dígitos.</p><div id="pregunta40" class="calculadora" spellcheck="false"><div class="instruccion">s.match(/\d+\.\d+/g)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Ubique todas las palabras con 7 caracteres alfanuméricos (alfabeto inglés) en total.</p><div id="pregunta41" class="calculadora" spellcheck="false"><div class="instruccion">s.match(/\b\w{7}\b/g)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Ubique todas las palabras con entre 2 y 5 caracteres alfanuméricos (alfabeto inglés) en total.</p><div id="pregunta42" class="calculadora" spellcheck="false"><div class="instruccion">s.match(/\b\w{2,5}\b/g)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Ubique todas las palabras con 8 o más caracteres alfanuméricos (alfabeto inglés) en total.</p><div id="pregunta43" class="calculadora" spellcheck="false"><div class="instruccion">s.match(/\b\w{8,}\b/g)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Ubique todas las cadenas con uno o más caracteres no blancos.</p><div id="pregunta44" class="calculadora" spellcheck="false"><div class="instruccion">s.match(/\S+/g)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Ubique todos los valores de temperatura incluida su unidad, es decir (en este caso) cadenas que comiencen con un dígito, seguido de uno o más caracteres cualesquiera y que terminen en una "C".</p><div id="pregunta45" class="calculadora" spellcheck="false"><div class="instruccion">s.match(/\d.+C/g)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Ubique todas las palabras que terminen en ":", es decir (en este caso) cadenas con uno o más caracteres alfanuméricos (alfabeto inglés) que terminen en ":".</p><div id="pregunta46" class="calculadora" spellcheck="false"><div class="instruccion">s.match(/\w+:/g)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Ubique todas las palabras que terminen en ":", pero sin incluir los ":", es decir (en este caso) cadenas con uno o más caracteres alfanuméricos (alfabeto inglés) que estén seguidos por ":".</p><div id="pregunta47" class="calculadora" spellcheck="false"><div class="instruccion">s.match(/\w+(?=:)/g)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>En base a los incisos resueltos, marque las afirmaciones correctas:</p><p class="opcionMultiple correcta"><input type="checkbox" name="pregunta48" id="opcion151"><span class="opcionMultiple"></span><label for="opcion151">La expresión regular <span class="textocodigo">/\d.+C/g</span> permite ubicar cadenas como "198.34 °F"</label></p><p class="opcionMultiple correcta"><input type="checkbox" name="pregunta48" id="opcion135"><span class="opcionMultiple"></span><label for="opcion135">La expresión regular <span class="textocodigo">/^\w+/gm</span> permite ubicar cadenas  como "Condición", "Empeño", "234.54", que estén al principio de una línea.</label></p><p class="opcionMultiple correcta"><input type="checkbox" name="pregunta48" id="opcion142" checked=""><span class="opcionMultiple"></span><label for="opcion142">La expresión regular <span class="textocodigo">/\b\w{7}\b/g</span> permite ubicar palabras como "inicial" y "termina"</label></p><p class="opcionMultiple correcta"><input type="checkbox" name="pregunta48" id="opcion144" checked=""><span class="opcionMultiple"></span><label for="opcion144">La expresión regular <span class="textocodigo">/\b\w{2,5}\b/g</span> permite ubicar palabras como "en" y "final"</label></p><p class="opcionMultiple correcta"><input type="checkbox" name="pregunta48" id="opcion143"><span class="opcionMultiple"></span><label for="opcion143">La expresión regular <span class="textocodigo">/\b\w{7}\b/g</span> permite ubicar palabras como "pensión" y "corazón"</label></p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="33" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 7 -->
+
+
+
+
+
+    <p class="text">Dado que las expresiones regulares son objetos, tienen propiedades y métodos. Las propiedades dinámicas de la clase <dfn class="style1">RegExp</dfn>, más propiamente sus métodos <dfn class="style1">getter</dfn>, son:</p>
+
+    <div class="table borderAll">
+    <table align="center">
+        <caption>Propiedades de los objetos RegExp</caption>
+        <tbody><tr>
+        <th style="width: 117px;">Propiedad</th>
+        <th>Descripción</th>
+        </tr>
+        <tr>
+        <td><dfn class="style1">flags</dfn></td>
+        <td class="texto">Devuelve una cadena con los modificadores de la expresión regular.</td>
+        </tr>
+        <tr>
+        <td><dfn class="style1">global</dfn></td>
+        <td class="texto">Devuelve verdadero si la expresión regular tiene el modificador "g".</td>
+        </tr>
+        <tr>
+        <td><dfn class="style1">ignoreCase</dfn></td>
+        <td class="texto">Devuelve verdadero si la expresión regular tiene el modificador "i".</td>
+        </tr>
+        <tr>
+        <td><dfn class="style1">multiline</dfn></td>
+        <td class="texto">Devuelve verdadero si la expresión regular tiene el modificador "m".</td>
+        </tr>
+        <tr>
+        <td><dfn class="style1">dotAll</dfn></td>
+        <td class="texto">Devuelve verdadero si la expresión regular tiene el modificador "s".</td>
+        </tr>
+        <tr>
+        <td><dfn class="style1">sticky</dfn></td>
+        <td class="texto">Devuelve verdadero si la expresión regular tiene el modificador "y".</td>
+        </tr>
+        <tr>
+        <td><dfn class="style1">hasIndices</dfn></td>
+        <td class="texto">Devuelve verdadero si la expresión regular tiene el modificador "d".</td>
+        </tr>
+        <tr>
+        <td><dfn class="style1">unicode</dfn></td>
+        <td class="texto">Devuelve verdadero si la expresión regular tiene el modificador "u".</td>
+        </tr>
+        <tr>
+        <td><dfn class="style1">unicodeSets</dfn></td>
+        <td class="texto">Devuelve verdadero si la expresión regular tiene el modificador "v".</td>
+        </tr>
+        <tr>
+        <td><dfn class="style1">source</dfn></td>
+        <td class="texto">Devuelve el texto correspondiente a la expresión regular del objeto.</td>
+        </tr>
+        <tr>
+        <td><dfn class="style1">lastIndex</dfn></td>
+        <td class="texto">La posición (el índice) donde comienza la siguiente búsqueda.</td>
+        </tr>
+        </tbody></table>
+    </div>
+
+    <p class="text">Las expresiones regulares tienen también propiedades estáticas, pero son propiedades obsoletas, por lo que no deben ser empleadas en la solución de problemas.</p>
+
+    <p class="text">Los métodos dinámicos, son:</p>
+
+    <div class="table borderAll">
+    <table align="center">
+        <caption>Métodos de los objetos RegExp</caption>
+        <tbody><tr>
+        <th style="width:100px;">Método</th>
+        <th>Descripción</th>
+        </tr>
+        <tr>
+        <td><dfn class="style1">exec(s)</dfn></td>
+        <td class="texto">Prueba la expresión regular en la cadena "s", devuelve la cadena que coincide con la expresión regular (o nulo si no hay coincidencias). En la primera llamada devuelve la primera coincidencia, en la segunda la segunda, etc.</td>
+        </tr>
+        <tr>
+        <td><dfn class="style1">test(s)</dfn></td>
+        <td class="texto">Prueba la expresión regular en la cadena "s", devuelve verdadero si existe una coincidencia y falso en caso contrario. En la primera llamada busca la primera coincidencia, en la segunda la segunda, etc.</td>
+        </tr>
+    </tbody></table>
+    </div>
+
+    <p class="text">Las expresiones regulares cuentan con otros métodos dinámicos: <dfn class="style1">[@@match]</dfn>, <dfn class="style1">[@@matchAll]</dfn>, <dfn class="style1">[@@replace]</dfn>, <dfn class="style1">[@@replaceAll]</dfn>, <dfn class="style1">[@@search]</dfn> y <dfn class="style1">[@@split]</dfn>. Estos métodos son equivalentes a los métodos de la clase <dfn class="style1">String</dfn> y son empleados principalmente para personalizar el comportamiento de estos métodos en las clases heredadas de la clase <dfn class="style1">RegExp</dfn>.</p>
+
+
+
+    <h2 class="text">Uso de los paréntesis</h2>
+
+    <p class="text">Si se encierran entre paréntesis dos o más caracteres de una expresión regular, dichos caracteres quedan agrupados y pueden ser manipulados como si se tratara de un carácter simple, así es posible aplicar al grupo cuantificadores como <b class="style1">?</b>, <b class="style1">+</b>, etc., buscar 2 o más secuencias de caracteres y otras acciones que sólo serían posibles con caracteres simples.</p>
+
+    <p class="text">Por ejemplo, dada la siguiente cadena (una expresión matemática):</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">s = "(x.exp() + y.sqrt() + z.log())/(2*y.exp() + z.pow(3) - 4*x.log())";</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Se pueden obtener todas las variables sobre las que se lleva a cabo una operación exponencial (exp) o logarítmica (log), con la siguiente expresión regular:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">s.match(/\w+\.(exp|log)\(\)/g)</div> 
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Es decir se ubican todas las cadenas que tienen uno o más caracteres alfanuméricos (<dfn class="style1">\w+</dfn>) seguidas de un punto (<dfn class="style1">\.</dfn>), de la cadena "exp" o "log" (<dfn class="style1">(exp|log)</dfn>) y que terminan con paréntesis "<dfn class="style1">\(\)</dfn>". Observe que tanto el punto como los paréntesis, al ser caracteres especiales, deben ser escritos como secuencias de escape (es decir con "\" por delante).</p>
+
+    <p class="text">Pero los paréntesis en una expresión regular, no sólo permiten agrupar partes de la misma, sino que además permiten recordarlas. Luego se puede acceder a las cadenas encontradas, con las variables:  <b class="style1">$1</b>, <b class="style1">$2</b>, <b class="style1">$3</b>, ...., etc., donde $1 es la cadena ubicada con el primer paréntesis, $2 la del segundo, $3 la del tercero y así sucesivamente.</p>
+
+    <p class="text">Por ejemplo, en la siguiente cadena se intercambiar los nombres con los apellidos:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">"Juan Perez, Rodolfo Paz, Pedro Vargas, Janeth Rivera".<br>replace(/(\w+) (\w+)/g, "$2 $1")</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Es decir se ubican todas las cadenas que tienen dos palabras separadas por un espacio (<dfn class="style1">(\w+) (\w+)</dfn>), pero se las recuerdan (en las variables $1 y $2), pues están encerradas entre paréntesis. Luego en la expresión de reemplazo, se intercambia el orden, al escribir primero la segunda palabra (<dfn class="style1">$2</dfn>) seguida de la primera palabra (<dfn class="style1">$1</dfn>) y separándolas con un espacio.</p>
+
+    <p class="text">Los grupos encontrados no sólo pueden ser recordados y empleados en las operaciones de reemplazo, sino también en la misma expresión regular. En ese caso, en lugar de emplear <b class="style1">$</b> para hacer referencia a los grupos, se emplea <b class="style1">\</b>, así <b class="style1">\1</b> hace referencia al primer grupo encontrado, <b class="style1">\2</b> al segundo y así sucesivamente. Por ejemplo, para encontrar dos palabras repetidas, se escribe la siguiente instrucción:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">"Las expresiones expresiones regulares simplifican simplifican las operaciones de de búsqueda".<br>match(/(\b\w+\b) \1/g)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Esta expresión encuentra las expresiones que tengan una palabra (<dfn class="style1">\b\w+\b</dfn>), que es recordada (por los paréntesis), seguida por un espacio y por la misma palabra (<dfn class="style1">\1</dfn>). De esa manera la expresión regular se cumple sólo si existen dos palabras iguales separadas por un espacio.</p>
+
+    <p class="text">En ocasiones, se agrupan los elementos de una expresión regular, para cumplir con un criterio de búsqueda, pero no se quiere recordar el grupo. En esos casos los paréntesis deben comenzar con <b class="style1">?:</b>, es decir se debe emplear <b class="style1">(?:)</b>, en lugar de paréntesis simples. Con esta modificación se crea el grupo pero no es recordado. Las expresiones que emplean un grupo no recordado, se evalúan más rápido que aquellas con grupos recordados.</p>
+    
+    <p class="text">Por ejemplo, para encontrar, en la siguiente cadena, las variables en las que se calcula el logaritmo natural (<dfn class="style1">log</dfn>), la raíz cuadrada (<dfn class="style1">sqrt</dfn>) o la potencia (<dfn class="style1">pow</dfn>), se escribe la siguiente instrucción:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">"3*x.pow(3) + 5*y.log() + 2*x.pow(1.23) - z.sqrt() + (5*x+3) / y".<br>match(/[a-z]\.(?:log|sqrt|pow)\(\d?\.?\d*\)/g)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Esta expresión busca una letra (<dfn class="style1">[a-z]</dfn>) seguida de un punto (<dfn class="style1">\.</dfn>), de la cadena "log", "sqrt" o "pow" (<dfn class="style1">(?:log|sqrt|pow)</dfn>) y de paréntesis, que pueden estar vacíos o con un número entero o real (<dfn class="style1">\(\d?\.?\d*\)</dfn>). Observe que tanto el punto como los paréntesis se escriben con secuencias de escape, pues son caracteres especiales.</p>
+
+    <div class="ejercicio" id="ejercicio5" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Cree la variable "s" con la cadena "z = (sin(x)+cos(2*y)-exp(3+x)+tan(x*y)+log(5*y))/(sin(2+x)+sin(3*y)-cos(2+x)+cos(y)+exp(5*x)+log(x+y))".</p><div id="pregunta49" class="calculadora" spellcheck="false"><div class="instruccion">s = "z = (sin(x)+cos(2*y)-exp(3+x)+tan(x*y)+log(5*y))/(sin(2+x)+sin(3*y)-cos(2+x)+cos(y)+exp(5*x)+log(x+y))";</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Ubique todas las cadenas (recordadas) que sean "sin" o "cos" y que estén seguidas (entre paréntesis) de uno o más caracteres alfanúmericos (alfabeto inglés), astericos (*) o signos más (+).</p><div id="pregunta50" class="calculadora" spellcheck="false"><div class="instruccion">s.match(/(sin|cos)\([\w*+]+\)/g)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Ubique todas las cadenas (recordadas) que sean "exp" o "log" y que estén seguidas (entre paréntesis) de uno o más caracteres alfanuméricos (alfabeto inglés), asteriscos (*) o signos más (+).</p><div id="pregunta51" class="calculadora" spellcheck="false"><div class="instruccion">s.match(/(exp|log)\([\w*+]+\)/g)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Ubique todas las cadenas (recordadas) que tengan un carácter alfanumérico (alfabeto inglés) o un dígito multiplicado por un carácter alfanumérico (alfabeto inglés) y que estén encerradas entre paréntesis.</p><div id="pregunta52" class="calculadora" spellcheck="false"><div class="instruccion">s.match(/\((\w|\d\*\w)\)/g)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Ubique todas las cadenas (recordadas) que sean "sin" o "cos" y que estén seguidas por un grupo (recordado) encerrado entre paréntesis, con un carácter alfanumérico (alfabeto inglés) o por un dígito sumado a un carácter alfanumérico (alfabeto inglés).</p><div id="pregunta53" class="calculadora" spellcheck="false"><div class="instruccion">s.match(/(sin|cos)\((\w|\d\+\w)\)/g)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Ubique todas las cadenas (recordadas) que sean "tan" o "log" y que estén seguidas (entre paréntesis) por una "x" o "y", sumadas o multiplicadas por otra "x" o "y".</p><div id="pregunta54" class="calculadora" spellcheck="false"><div class="instruccion">s.match(/(tan|log)\([xy][+*][xy]\)/g)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Ubique todas las cadenas (no recordadas) que sean "sin", "cos", "exp", "log" o "tan" y que estén seguidas (entre paréntesis) por un carácter alfanumérico (alfabeto inglés).</p><div id="pregunta55" class="calculadora" spellcheck="false"><div class="instruccion">s.match(/(?:sin|cos|exp|log|tan)\(\w\)/g)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Ubique todas las cadenas (no recordadas) que sean "sin", "cos", "exp", "log" o "tan" y que estén seguidas (entre paréntesis) por dos o más caracteres alfanuméricos (alfabeto inglés) o signos más (+) o por (*).</p><div id="pregunta56" class="calculadora" spellcheck="false"><div class="instruccion">s.match(/(?:sin|cos|exp|log|tan)\([\w+*]{2,}\)/g)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Invierta (con replace) el orden de los caracteres alfanuméricos (alfabeto inglés) que estén separados por un signo por (*).</p><div id="pregunta57" class="calculadora" spellcheck="false"><div class="instruccion">s.replace(/(\w)\*(\w)/g, "$2*$1")</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Invierta (con replace) el orden de los caracteres alfanuméricos (alfabeto inglés) que estén separados por un signo más (+).</p><div id="pregunta58" class="calculadora" spellcheck="false"><div class="instruccion">s.replace(/(\w)\+(\w)/g, "$2+$1")</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Invierta (con replace) el orden de los caracteres alfanuméricos (alfabeto inglés) que estén separados por un signo por (*) o más (+).</p><div id="pregunta59" class="calculadora" spellcheck="false"><div class="instruccion">s.replace(/(\w)([*+])(\w)/g, "$3$2$1")</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>En base a los incisos resueltos, marque las afirmaciones correctas:</p><p class="opcionMultiple correcta"><input type="checkbox" name="pregunta60" id="opcion186"><span class="opcionMultiple"></span><label for="opcion186">La expresión regular <span class="textocodigo">/(tan|log)\([xy][+*][xy]\)/g</span> permite ubicar palabras como "tan(xy+y)" y "log(yx*x)", recordando (en $1) las cadenas "tan" y "log" y (en $2) "xy+y" y "yx*x".</label></p><p class="opcionMultiple correcta"><input type="checkbox" name="pregunta60" id="opcion192"><span class="opcionMultiple"></span><label for="opcion192">La expresión <span class="textocodigo">s.replace(/(\w)\*(\w)/g,"$2*$1")</span> permite convertir cadenas como "x+y" y "(2+x)", en "y+x" y "(x+2)".</label></p><p class="opcionMultiple correcta"><input type="checkbox" name="pregunta60" id="opcion180"><span class="opcionMultiple"></span><label for="opcion180">La expresión regular <span class="textocodigo">/(exp|log)\([\w*+]+\)/g</span> permite ubicar cadenas como "exp(6/x)" y "log(x-6)", recordando (en $1) las cadenas "exp" y "log".</label></p><p class="opcionMultiple correcta"><input type="checkbox" name="pregunta60" id="opcion196"><span class="opcionMultiple"></span><label for="opcion196">La expresión <span class="textocodigo">s.replace(/(\w)([*+])(\w)/g,"$3$2$1") </span> permite convertir cadenas como "3-x", "x-y", "5/x" y "x/y", en "x-3", "y-x", "x/5" y "y/x".</label></p><p class="opcionMultiple correcta"><input type="checkbox" name="pregunta60" id="opcion181" checked=""><span class="opcionMultiple"></span><label for="opcion181">La expresión regular <span class="textocodigo">/\((\w|\d\*\w)\)/g</span> permite ubicar cadenas como "(a)" y "(3*b)", recordando (en $1) la cadena encontrada.</label></p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="60" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 8 -->
+
+
+
+
+
+    <h2 class="text">Expresiones regulares con split, search y test</h2>
+
+    <p class="text">Los métodos más simples que pueden hacer uso de las expresiones regulares son <dfn class="style1">split</dfn>, <dfn class="style1">search</dfn> y <dfn class="style1">test</dfn>.</p>
+
+    <p class="text">En el caso de <dfn class="style1">split</dfn>, la expresión regular se emplea simplemente para encontrar los lugares en los cuales se divide la cadena (con las cuales <dnf class="style1">split</dnf> crea el vector). Por ejemplo, para obtener un array con todas las cadenas que estén separadas por un carácter blanco, se escribe la siguiente instrucción:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">`El método		split permite<br>obtener	un array		a partir<br>de <br>los<br>caracteres  de una cadena`.split(/\s+/)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Esta expresión regular ubica las partes de la cadena que están formadas por uno o más caracteres blancos (<dfn class="style1">\s+</dfn>), lo que incluye tabuladores y saltos de línea. Entonces <dfn class="style1">split</dfn> divide la cadena en esas partes. Note que este tipo de división no sería posible sin recurrir a una expresión regular.</p>
+
+    <p class="text">El método <dfn class="style1">search</dfn>, igualmente, emplea las expresiones regulares para ubicar la posición de la primera cadena que cumple con el criterio de búsqueda. Por ejemplo, para encontrar, en la siguiente cadena, la posición del primer número en notación científica, se escribe la siguiente instrucción:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">'Alumnos: 75; edad media: 20.24; desviación estándar: +53.647e-18; promedio: 77.43'.<br>search(/[+-]?\d*\.?\d+[eE][+-]?\d+/)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Esta expresión regular ubica la parte de la cadena que puede estar precedida o no, por un signo más o menos (<dfn class="style1">[+-]?</dfn>), seguida por 0 o más dígitos (<dfn class="style1">\d*</dfn>), uno o ningún punto (<dfn class="style1">\.?</dfn>), uno o más dígitos (<dfn class="style1">\d+</dfn>), una letra "e" en mayúsculas o minúsculas (<dfn class="style1">[eE]</dfn>), uno o ningún signo "+" o "-" (<dfn class="style1">[+-]?</dfn>) y uno o más dígitos (<dfn class="style1">\d+</dfn>). Es necesaria un expresión regular así de compleja, porque los números en notación científica pueden tener o no, un signo (3.2e5, +3.2e5), tener o no, dígitos antes del punto (-0.2e9, -.2e9), tener o no, un punto (3.e6, 3e6), pueden ser escritos con una letra "e" en mayúsculas o minúsculas (4.5e12, 4.5E12) y pueden tener o no, un signo antes del exponente (2.12e+34, 2.12e34).</p>
+
+    <p class="text">El método <dfn class="style1">test</dfn> se emplea de manera similar, sólo que devuelve <dfn class="style1">true</dfn> (en lugar de la posición) si el patrón buscado existe y <dfn class="style1">false</dfn> (en lugar de -1) cuando no. Además, al ser un método del objeto <dfn class="style1">RegExp</dfn> (no de <dfn class="style1">String</dfn>) es llamado desde la expresión regular (no desde la cadena). Así, aplicado al anterior ejemplo se tiene:</p>
+    
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">/[+-]?\d*\.?\d+[eE][+-]?\d+/.test(<br> 'Alumnos: 75; edad media: 20.24; desviación estándar: +53.647e-18; promedio: 77.43')</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="text">Que devuelve <dfn class="style1">true</dfn> (verdad) porque en este caso existe el patrón buscado.</p>
+
+    <p class="text">No obstante, cuando la expresión regular lleva a cabo una búsqueda global (modificador "g") y es creada y guardada en una variable independiente, como ocurre en la siguiente instrucción, que ubica todas las fechas que estén en el formato (d)d(/-)(m)m(/-)(aa)aa:</p>
+    
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">er = /\d?\d([/-])\d?\d\1(\d\d)?\d\d/g</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Con la cual se pueden ubicar las partes de una cadena que tengan uno o dos dígitos (el día: <dfn class="style1">\d?\d</dfn>), un separador (<dfn class="style1">[/-]</dfn>), uno o dos dígitos (el mes: <dfn class="style1">\d?\d</dfn>), otro separador (<dfn class="style1">\1</dfn>) y dos o cuatro dígitos (el año: <dfn class="style1">(\d\d)?\d\d</dfn>). Expresión que también puede ser creada (de modo formal) con:</p>
+    
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">er = new RegExp("\\d?\\d([/-])\\d?\\d\\1(\\d\\d)?\\d\\d", "g")</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Observe que en esta forma (que como se dijo, no será empleada en la asignatura) las secuencias de escape deben ser creadas con dos quebrados invertidos (\\), porque Javascript elimina automáticamente las secuencias de escape no válidas y \d, es una secuencia de escape no válida pues no tiene significado especial, por lo que es reemplazada por la letra "d". Al emplear <dfn class="style1">\\</dfn>, que es una secuencia válida y que es reemplazada por <dfn class="style1">\</dfn>, se consigue crear los metacaracteres necesarios en las expresiones regulares.</p>
+
+    <p class="text">Ahora, si se tiene la siguiente cadena:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">s = "Los resultados se publicaron el 1/2/93, luego el 05/03/2011, el 12-10-43 y el 09-07-98";</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Y se aplica la expresión regular "er" a la misma, se obtiene:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">er.test(s)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Que es <dfn class="style1">true</dfn>, porque en la cadena existen fechas con el formato buscado, pero ahora, como la expresión regular ha sido guardada en una variable, es posible averiguar además (con la propiedad <dfn class="style1">lastIndex</dfn>) la posición del carácter posterior a la cadena encontrada (en este caso la posición de la coma después de la fecha 1/2/93):</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">er.lastIndex</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">La siguiente vez que se prueba la expresión regular la búsqueda comienza desde este carácter, no desde el principio de la cadena, por lo que se obtiene:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">er.test(s)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">er.lastIndex</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Que como se puede deducir del valor del último carácter, corresponde a la segunda fecha. De la misma manera se pueden encontrar las otras dos fechas:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">er.test(s)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">er.lastIndex</div>
+        <div class="resultado"></div>
+        <div class="instruccion">er.test(s)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">er.lastIndex</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Ahora, no existen más fechas en la cadena, por lo que al volver a llamar al método, se obtiene:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">er.test(s)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">er.lastIndex</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">El resultado <dfn class="style1">false</dfn> informa que no se han encontrado más fechas en la cadena y el índice 0, informa que el método ha buscado en toda la cadena, por lo que el cursor ha vuelto al principio de la misma.</p>
+
+    <div class="ejercicio" id="ejercicio6" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Cree la variable "s" con la cadena "Como casi todo en Javascript, las expresiones regulares son objetos"</p><div id="pregunta61" class="calculadora" spellcheck="false"><div class="instruccion">s = "Como casi todo en Javascript, las expresiones regulares son objetos";</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Verifique con <dfn>search</dfn> si en "s" existe una cadena con la letra "l", seguida de una "e" o una "o" y a continuación una "s".</p><div id="pregunta62" class="calculadora" spellcheck="false"><div class="instruccion">s.search(/l[eo]s/)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Verifique con <dfn>search</dfn> si en "s" existe una cadena con la letra "o", seguida de una letra en minúsculas (no acentuada ni "ñ") y a continuación una "o".</p><div id="pregunta63" class="calculadora" spellcheck="false"><div class="instruccion">s.search(/o[a-z]o/)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Verifique con <dfn>test</dfn> si en "s" existe una cadena con la letra "r", seguida de una "a", una "i" o una "o" y a continuación con una "s".</p><div id="pregunta64" class="calculadora" spellcheck="false"><div class="instruccion">/r[aio]s/.test(s)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Verifique con <dfn>test</dfn> si en "s" existe una cadena con la letra "j", seguida de una letra en minúsculas (no acentuada ni "ñ") y a continuación con una "t".</p><div id="pregunta65" class="calculadora" spellcheck="false"><div class="instruccion">/j[a-z]t/.test(s)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Cree un vector con las subcadenas de la cadena "s" que están separadas por vocales.</p><div id="pregunta66" class="calculadora" spellcheck="false"><div class="instruccion">s.split(/[aeiou]/)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Cree un vector con las subcadenas de la cadena "s" que están separadas por una "a" o una "e", seguidas de una "s".</p><div id="pregunta67" class="calculadora" spellcheck="false"><div class="instruccion">s.split(/[ae]s/)</div><div class="resultado"></div></div><p class="pregunta" id="pregunta68"><span class="pregunta"></span>La cadena buscada en el inciso (c) <span class="campo_arrastrar correcta" tabindex="0" data-opciones="no existe&amp;@%existe" onclick="Pregunta.mostrarOpcionesCampo(this)" onkeydown="if (event.key=='Enter' || event.key==' ') {Pregunta.mostrarOpcionesCampo(this); event.preventDefault(); event.stopPropagation();}">existe</span></p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="24" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 9 -->
+
+
+
+    <h2 class="text">Expresiones regulares con match y exec</h2>
+
+    <p class="text">Si se hace una búsqueda simple (sin el modificador "g"), <dfn class="style1">match</dfn> devuelve un vector con la cadena encontrada y, si existen, los grupos encontrados. Por ejemplo al buscar una fecha (en la cadena "s")  se obtiene:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">s = "Los resultados se publicaron el 1/2/93, luego el 05/03/2011, el 12-10-43 y el 09-07-98";</div>
+        <div class="resultado"></div>
+        <div class="instruccion">s.match(/\d\d?([/-])\d\d?\1\d\d(\d\d)?/)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Donde el primer elemento es la cadena encontrada (la primera fecha de la cadena), el segundo corresponde al primer grupo de la expresión regular (<dfn class="style1">[/-]</dfn>) y el tercero, que en este caso no ha sido encontrado (porque no existe), al segundo grupo (<dfn class="style1">(\d\d)?</dfn>).</p>
+
+    <p class="text">Pero, si se hace una búsqueda global, se obtiene:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">s.match(/\d\d?([/-])\d\d?\1\d\d(\d\d)?/g)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Donde los cuatro elementos corresponden a las cuatro fechas existentes en la cadena. De esta manera (como ya se vio en ejemplos y ejercicios previos) cuando se realiza una búsqueda global con este método, se  obtiene un vector con todas las coincidencias (por lo que es posible averiguar el número de coincidencias).</p>
+
+    <p class="text">El método <dfn class="style1">exec</dfn>, opera de manera similar a <dfn class="style1">test</dfn>, pero en lugar de devolver un resultado booleano, devuelve un vector con la cadena encontrada y, si existen, los grupos encontrados. Al igual que ocurre con <dfn class="style1">match</dfn>, si se realiza una búsqueda simple (sin el modificador "g") sólo devuelve la primera cadena encontrada.</p>
+
+    <p class="text">Por ejemplo con la siguiente expresión regular:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">ers = /\d?\d([/-])\d?\d\1(\d\d)?\d\d/;</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Y el método <dfn class="style1">exec</dfn>, se obtiene:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">ers.exec(s)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Que es el mismo resultado obtenido con <dfn class="style1">match</dfn> cuando se lleva a cabo una búsqueda simple. Por lo tanto, el primer elemento es la fecha encontrada, el segundo el primer grupo dentro de esa fecha y el tercero el segundo grupo (que en este caso no tiene coincidencias, razón por la cual es <dfn class="style1">undefined</dfn>).</p>
+
+    <p class="text">Cuando la búsqueda es simple, como en este caso, o cuando no se guarda la expresión regular en una variable (sin importar que tenga o no el modificador "g"), <dfn class="style1">exec</dfn> devuelve siempre la primera cadena encontrada, así llamando nuevamente al método se vuelve a obtener el mismo resultado:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">ers.exec(s)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Si se emplea una expresión regular con el modificador global (y se guarda en una variable):</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">erg = /\d?\d([/-])\d?\d\1(\d\d)?\d\d/g;</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Devuelve inicialmente el mismo resultado que en la búsqueda simple:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">erg.exec(s)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Pero, al llamar nuevamente al método, se obtiene la segunda fecha:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">erg.exec(s)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Donde ahora se han encontrado valores para los dos grupos ("/" en el primer grupo y "20" en el segundo). Se procede igual con las dos fechas restantes:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">erg.exec(s)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">erg.exec(s)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Además, en todos los casos (al igual que con <dfn class="style1">test</dfn>) se puede obtener el índice del carácter posterior a la cadena encontrada (con <dfn class="style1">lastIndex</dfn>):</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">erg.lastIndex</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Como no existen más fechas en la cadena, al llamar nuevamente al método, se obtiene:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">erg.exec(s)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Donde <dfn class="style1">null</dfn> indica que no existen más cadenas con el formato buscado. Igualmente, <dfn class="style1">lastIndex</dfn> devuelve 0:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">erg.lastIndex</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="text">Porque al no existir más cadenas con el formato buscado, el cursor vuelve al principio de toda la cadena.</p>
+
+    <p class="text">Como se vio previamente, los mismos resulados pueden ser obtenidos, en una sola instrucción, con <dfn class="style1">matchAll</dfn>:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">r = [...s.matchAll(erg)]; r</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">De manera similar, se pueden obtener los índices, pero del primer carácter de las cadenas encontradas, a partir del resultado devuelto por <dfn class="style1">matchAll</dfn>:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">for(e of r) print(e.index);</div>
+        <div class="resultado"></div>
+    </div>
+
+
+    <div class="ejercicio" id="ejercicio7" enunciado="2"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Cree la variable "s" con la cadena "La vida es muy simple pero insistimos en hacerla complicada"</p><div id="pregunta105" class="calculadora" spellcheck="false"><div class="instruccion">s = "La vida es muy simple pero insistimos en hacerla complicada";</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Encuentre con <dfn>match</dfn> todas las palabras (\b...\b) en "s" que no tengan (^) una "d", una "t" o un carácter blanco .</p><div id="pregunta106" class="calculadora" spellcheck="false"><div class="instruccion">s.match(/\b[^dt\s]+\b/g)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Guarde en "er", la expresión regular que ubica todas las palabras (\b...\b) que no tengan (^) una "e", una "p" o un espacio en blanco.</p><div id="pregunta107" class="calculadora" spellcheck="false"><div class="instruccion">er = /\b[^ep\s]+\b/g;</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Encuentre, una a la vez, las cadenas en "s" que cumplen con la expresión relacional "er", hasta que no existan más cadenas que cumplan con la misma (null).</p><div id="pregunta108" class="calculadora" spellcheck="false"><div class="instruccion">er.exec(s)</div><div class="resultado"></div><div class="instruccion">er.exec(s)</div><div class="resultado"></div><div class="instruccion">er.exec(s)</div><div class="resultado"></div><div class="instruccion">er.exec(s)</div><div class="resultado"></div><div class="instruccion">er.exec(s)</div><div class="resultado"></div><div class="instruccion"></div><div class="resultado"></div><div class="instruccion"></div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Encuentre, con matchAll, todas las cadenas en "s" que cumplen con la expresión relacional "er".</p><div id="pregunta109" class="calculadora" spellcheck="false"><div class="instruccion">er.lastIndex = 0;<br>[...s.matchAll(er)]</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Encuentre con <dfn>match</dfn> todas las palabras (\b...\b) que tengan una "ca", una "la" o una "da" (en mayúsculas o minúsculas: i), es decir todas las palabras que tengan cero o más letras (a-z) seguidas (en un grupo no recordado (?:...)) de "ca", "la" o "da" y seguidas de cero o más letras.</p><div id="pregunta110" class="calculadora" spellcheck="false"><div class="instruccion">s.match(/\b[a-z]*(?:ca|la|da)[a-z]*\b/gi)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Guarde en "er", la expresión regular que ubica todas las palabras que tengan una "ic", una "id" o una "im" (en mayúsculas o minúsculas).</p><div id="pregunta111" class="calculadora" spellcheck="false"><div class="instruccion">er = /\b[a-z]*(?:ic|id|im)[a-z]*\b/gi;</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Encuentre, una a la vez, las cadenas en "s" que cumplen con la expresión relacional "er", hasta que no existan más cadenas que cumplan con la misma (null).</p><div id="pregunta112" class="calculadora" spellcheck="false"><div class="instruccion">er.exec(s)</div><div class="resultado"></div><div class="instruccion">er.exec(s)</div><div class="resultado"></div><div class="instruccion">er.exec(s)</div><div class="resultado"></div><div class="instruccion">er.exec(s)</div><div class="resultado"></div><div class="instruccion">er.exec(s)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Encuentre, con matchAll, todas las cadenas en "s" que cumplen con la expresión relacional "er".</p><div id="pregunta113" class="calculadora" spellcheck="false"><div class="instruccion">er.lastIndex = 0;<br>[...s.matchAll(er)]</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con relación a las expresiones regulares elaboradas:</p><p class="opcionMultiple correcta"><input type="checkbox" name="pregunta114" id="opcion357" checked=""><span class="opcionMultiple"></span><label for="opcion357">El carácter ^ se emplea para excluir de la búsqueda caracteres.</label></p><p class="opcionMultiple correcta"><input type="checkbox" name="pregunta114" id="opcion366"><span class="opcionMultiple"></span><label for="opcion366">Se agrupan las cadenas con "(?:)" porque es necesario recordar el grupo.</label></p><p class="opcionMultiple correcta"><input type="checkbox" name="pregunta114" id="opcion360"><span class="opcionMultiple"></span><label for="opcion360">Se emplea el cuantificador "+" porque tiene que existir o o más coincidencias.</label></p><p class="opcionMultiple correcta"><input type="checkbox" name="pregunta114" id="opcion356"><span class="opcionMultiple"></span><label for="opcion356">El carácter especial \S se emplea para ubicar un carácter blanco como el espacio.</label></p><p class="opcionMultiple correcta"><input type="checkbox" name="pregunta114" id="opcion363" checked=""><span class="opcionMultiple"></span><label for="opcion363">Se emplea el cuantificador "*" porque tiene que existir 0 o más coincidencias.</label></p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="33" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 10 -->
+
+
+
+    <h2 class="text">Expresiones regulares con replace</h2>
+
+    <p class="text"><dfn class="style1">Replace</dfn> es el método que mejor permite aprovechar la potencia de las expresiones regulares. En el caso más simple se busca la cadena (o cadenas) y se reemplaza por una cadena simple. Por ejemplo, dada la siguiente cadena (que contiene una expresión matemática):</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">s = "(sin(x) + 2*cos(x) + cos(2*y)/sin(3*x)) / (sin(2*x) + cos(2*y) - sin(x*y)*cos(x*y))";</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Para reemplazar todas las funciones <dfn class="style1">sin</dfn> y <dfn class="style1">cos</dfn> por <dfn class="style1">tan</dfn>, se puede emplear la siguiente expresión regular:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">s.replace(/(?:sin|cos)/g, "tan")</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Donde se ha empleado <b class="style1">(?:)</b>, en lugar de <b class="style1">( )</b>, porque en este caso no es necesario recordar el grupo, pues no se emplea ni en la expresión regular ni en la cadena de reemplazo.</p>
+
+    <p class="text">Por el contrario, para reemplazar todas las funciones <dfn class="style1">sin</dfn> por <dfn class="style1">sinh</dfn> y todas las funciones <dfn class="style1">cos</dfn> por <dfn class="style1">cosh</dfn>, es necesario recordar el grupo y añadirle la letra "h", es decir:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">s.replace(/(sin|cos)/g, "$1h")</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Resultado que se consigue igualmente con:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">s.replace(/(sin|cos)/g, "$&amp;h")</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Donde <b class="style1">$&amp;</b> es la cadena encontrada (toda la cadena, no sólo el grupo). En este caso se puede emplear <b class="style1">$&amp;</b>, en lugar de <b class="style1">$1</b> porque el grupo y la cadena buscada son iguales.</p>
+
+    <p class="text">Además de <b class="style1">$&amp;</b>, en <dfn class="style1">Javascript</dfn> se pueden emplear también <b class="style1">$`</b>, que representa la porción de la cadena que precede a la cadena encontrada y <b class="style1">$'</b>, que representa la porción de la cadena que sigue a la cadena encontrada.</p>
+
+    <p class="text">Por ejemplo, dado que en la cadena "s":</p>
+    
+    <p class="ejemplosn">"(sin(x) + 2*cos(x) + cos(2*y)/sin(3*x)) / (sin(2*x) + cos(2*y) - sin(x*y)*cos(x*y))"</p>
+
+    <p class="text">La expresión: "2*cos(x)", está precedida por la cadena "sin(x) + ", es posible reemplazar "sin(x) + 2*cos(x)" por "sin(x) + 5)", con la siguiente expresión regular:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">s.replace(/2\*cos\(x\)/, "$`5)")</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Es decir, se ubica la cadena "2*cos(x)" y se reemplaza la misma por la cadena que le precede ("sin(x) + ") seguida del número 5 y un paréntesis de cierre ("5)").</p>
+
+    <p class="text">Igualmente, dado que en "s" la cadena "sin(x*y)" está seguida por "*cos(x*y))", es posible reemplazarla por "(7*cos(x*y))", con la siguiente expresión regular:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">s.replace(/sin\(x\*y\)/, "(7$'")</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Como de costumbre es importante no olvidar escapar los símbolos especiales (en este caso el asterisco y los paréntesis), para que sean tratados como caracteres normales y no como caracteres especiales de la expresión regular.</p>
+
+    <p class="text">Aprovechando los grupos se puede cambiar el orden de las cadenas, por ejemplo, para invertir todas las expresiones que involucran <dfn class="style1">sin+cos</dfn>, por <dfn class="style1">cos+sin</dfn>, se escribe la siguiente instrucción:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">s.replace(/(sin\(\d?\*?[xy]\)) \+ (\d?\*?cos\(\d?\*?[xy]\))/g, "$2 + $1")</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">En esta expresión se buscan (y agrupan) todas las partes que tengan la cadena "sin(" seguidas de cero o un dígito, cero o un asterisco, una letra "x" o "y" y un paréntesis de cierre (<dfn class="style1">sin\(\d?\*?[xy]\)</dfn>), seguida por " + " (<dfn class="style1"> \+ </dfn>) y seguida por otro grupo formado por cero o un dígito, cero o un asterisco, la cadena "cos(", cero o un dígito, cero o un asterisco, la letra "x" o "y" y un paréntesis de cierre (\d?\*?cos\(\d?\*?[xy]\)). En la expresión de reemplazo simplemente se invierten los grupos ("$2 + $1").</p>
+
+    <p class="text">Sin embargo, si se quiere reemplazar todas las funciones "sin" por "cos" y viceversa, no es suficiente una cadena de reemplazo, pues las cadenas "sin" y "cos" no se encuentran ni en un formato ni en un orden predecible. En estos casos <dfn class="style1">Javascript</dfn> permite emplear una función de reemplazo, en lugar de una cadena de reemplazo.</p>
+
+    <p class="text">Dicha función recibe los siguientes parámetros: <dfn class="style1">match</dfn>, que corresponde a la cadena encontrada (equivalente a <dfn class="style1">$&amp;</dfn>); <dfn class="style1">p1, p2, ...</dfn>, que corresponde a los grupos encontrados (equivalentes a <dfn class="style1">$1</dfn>, <dfn class="style1">$2</dfn>, ...); <dfn class="style1">offset</dfn>, que es la posición en la cual se ha encontrado la cadena y <dfn class="style1">string</dfn> que es la cadena donde se ha realizado la búsqueda (la cadena original). Por supuesto, los parámetros pueden tener cualquier nombre, pero siempre, el primero será la cadena encontrada, el segundo el primer grupo, el tercero el segundo grupo, etc., y el último la cadena donde se ha realizado la búsqueda.</p>
+    
+    <p class="text"> Como Javascript permite enviar un número menor (o mayor) de datos, no es necesario que la función reciba todos los datos, sino sólo aquellos que serán empleados en la función. El resultado que devuelve la función es la cadena que reemplaza a la cadena encontrada.</p>
+
+    <p class="text">Así, para resolver el problema (reemplazar las cadenas "sin" por "cos" y viceversa), se escribe la siguiente instrucción y la correspondiente función de reemplazo:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">s.replace(/sin|cos/g, match=&gt;match==="sin"?"cos":"sin")</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">En este caso, en la función de reemplazo, sólo se emplea un parámetro: la cadena encontrada (<dfn class="style1">match</dfn>). La función consta de una sola instrucción, la cual devuelve "cos" si el grupo encontrado es "sin" y "sin" en caso contrario.</p>
+
+    <p class="text">Tomando en cuenta la siguiente cadena:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">s = "Estando los materiales a -22.8°C, se precalienta a 123.5 °C, se sube la temperatura a 342.3 °C y se estabiliza en 420.2 °C";</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Para transformar todas las temperaturas que se encuentran en grados Celsius, a grados Fahrenheit (redondeado los resultados al segundo dígito después del punto), se puede emplear la siguiente instrucción:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">s.replace(/(-?\d+(?:\.\d*)?)\s*°C/g, (match, p1)=&gt;`${(p1*9/5+32).round(2)} °F`)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">En este caso, la función de reemplazo recibe dos parámetros: <dfn class="style1">match</dfn> y <dfn class="style1">p1</dfn> (que, se reitera, pueden tener cualquier nombre). Estos parámetros son la cadena encontrada (match) y el primer grupo encontrado (p1), pero sólo se emplea el primer grupo encontrado (p1), por lo que, por claridad, el parámetro no empleado podría tener un nombre más significativo, como "_":</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">s.replace(/(-?\d+(?:\.\d*)?)\s*°C/g, (_, p1)=&gt;`${(p1*9/5+32).round(2)} °F`)</div>
+        <div class="resultado"></div>
+    </div>
+        
+    <p class="text">No se emplea el primer parámetro (la cadena encontrada) porque incluye tanto el valor como la unidad de temperatura (°C), pues esa es la cadena que ubica la expresión regular, sin embargo, en la función sólo se requiere el valor de la temperatura (<dfn class="style1">p1</dfn>). Por esa razón, en la expresión regular se encierra el número entre paréntesis. Note que en ese grupo se emplea un segundo subgrupo (no recordado) que agrupa el punto y los dígitos después del mismo (<dfn class="style1">(?:\.\d*)?</dfn>), esto para aquellos casos donde las temperaturas sean enteras. Además, la expresión regular permite 0 o más espacios ("\s*") entre el valor de la temperatura y la unidad respectiva.</p>
+    
+    <p class="text">La función simplemente convierte el número (<dfn class="style1">p1</dfn>) en su equivalente en grados Fahrenheit, redondea el resultado al segundo dígito después del punto y le añade la cadena correspondiente a la nueva unidad ("°F").</p>
+    
+    <p class="text">Se hace notar también que, en este caso, no son necesarias conversiones explícitas (<dfn class="style1">parseFloat</dfn>), porque el operador <b class="style1">*</b> (al igual que el operador <b class="style1">/</b>) convierte automáticamente una cadena en un número.</p>
+
+    <div class="ejercicio" id="ejercicio8" enunciado="1"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Cree la variable "s" con la cadena "El que es bueno para poner excusas rara vez es bueno para cualquier otra cosa".</p><div id="pregunta123" class="calculadora" spellcheck="false"><div class="instruccion">s = "El que es bueno para poner excusas rara vez es bueno para cualquier otra cosa";</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Reemplace los espacios que están precedidos por una "o" o una "r" (grupo recordado), con un salto de línea (\n).</p><div id="pregunta124" class="calculadora" spellcheck="false"><div class="instruccion">s.replace(/([or]) /g, "$1\n")</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Subraye las palabras (\b...\b, alfabeto inglés, mayúsculas o minúsculas) que terminan con "er", encerrándolas entre las etiquetas &lt;u&gt; y &lt;/u&gt; (cadena encontrada: <b>$&amp;</b>).</p><div id="pregunta125" class="calculadora" spellcheck="false"><div class="instruccion">s.replace(/\b[a-z]*er\b/gi, "&lt;u&gt;$&amp;&lt;/u&gt;")</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Coloque en negrita todas las vocales en minúsculas, encerrándolas entre las etiquetas &lt;b&gt; y &lt;/b&gt; (cadena encontrada: <b>$&amp;</b>).</p><div id="pregunta126" class="calculadora" spellcheck="false"><div class="instruccion">s.replace(/[aeiou]/g, "&lt;b&gt;$&amp;&lt;/b&gt;")</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Tache las palabras (\b, alfabeto inglés, mayúsculas o minúsculas) que tengan entre 1 y 4 letras, encerrándolas entre las etiquetas &lt;s&gt; y &lt;/s&gt; (cadena encontrada <b>$&amp;</b>).</p><div id="pregunta127" class="calculadora" spellcheck="false"><div class="instruccion">s.replace(/\b[a-z]{1,4}\b/gi, "&lt;s&gt;$&amp;&lt;/s&gt;")</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Resalte las palabras (\b, alfabeto inglés, mayusculas o minúsculas) que tengan las letras "er" o "es" (grupo no recordado), encerrándolas entre las etiquetas &lt;mark&gt; y &lt;/mark&gt;, es decir palabras que tengan "er" o "es" y cero o más letras antes y después (cadena encontrada <b>$&amp;</b>).</p><div id="pregunta128" class="calculadora" spellcheck="false"><div class="instruccion">s.replace(/\b[a-z]*(?:er|es)[a-z]*\b/gi, "&lt;mark&gt;$&amp;&lt;/mark&gt;")</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Convierta en superíndice la primera letra de todas las palabras (\b, alfabeto inglés, mayúsculas o minúsculas), encerrándola entre las etiquetas &lt;sup&gt; y &lt;,/sup&gt; (cadena encontrada <b>$&amp;</b>).</p><div id="pregunta129" class="calculadora" spellcheck="false"><div class="instruccion">s.replace(/\b[a-z]/gi, "&lt;sup&gt;$&amp;&lt;/sup&gt;")</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con relación a las expresiones elaboradas:</p><p class="opcionMultiple correcta"><input type="checkbox" name="pregunta130" id="opcion413" checked=""><span class="opcionMultiple"></span><label for="opcion413">Se emplea el modificador <span class="textocodigo">g</span> porque se busca todas las coincidencias.</label></p><p class="opcionMultiple correcta"><input type="checkbox" name="pregunta130" id="opcion411" checked=""><span class="opcionMultiple"></span><label for="opcion411">El patrón <span class="textocodigo">[aeiou]</span> encuentra cualquier vocal.</label></p><p class="opcionMultiple correcta"><input type="checkbox" name="pregunta130" id="opcion409" checked=""><span class="opcionMultiple"></span><label for="opcion409">El patrón <span class="textocodigo">\w{1,4}</span> o <span class="textocodigo">[a-z]{1,4}</span> encuentra cadenas que tengan entre una y 4 letras.</label></p><p class="opcionMultiple correcta"><input type="checkbox" name="pregunta130" id="opcion415" checked=""><span class="opcionMultiple"></span><label for="opcion415">En la expresión de reemplazo <span class="textocodigo">$&amp;</span> es la cadena encontrada.</label></p><p class="opcionMultiple correcta"><input type="checkbox" name="pregunta130" id="opcion414"><span class="opcionMultiple"></span><label for="opcion414">Se emplea el modificador <span class="textocodigo">g</span> porque se hace una búsqueda general, no específica.</label></p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="34" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 11 -->
+    <div class="ejercicio" id="ejercicio9" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span>En todos los incisos se asume que el alfabeto es inglés.</p></div><p class="pregunta"><span class="pregunta"></span>Cree la variable "s" con la cadena "Aferrarse a la ira es como beber veneno y esperar que la otra persona muera".</p><div id="pregunta139" class="calculadora" spellcheck="false"><div class="instruccion">s = "Aferrarse a la ira es como beber veneno y esperar que la otra persona muera";</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Coloque la letra inicial de todas las palabras en mayúsculas.</p><div id="pregunta140" class="calculadora" spellcheck="false"><div class="instruccion">s.replace(/\b\w/g, match=&gt;match.toUpperCase())</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Coloque en mayúsculas las palabras "ira", "beber" y "persona".</p><div id="pregunta141" class="calculadora" spellcheck="false"><div class="instruccion">s.replace(/ira|beber|persona/g, match=&gt;match.toUpperCase())</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Coloque en mayúsculas la letra inicial de todas las palabras que tengan 3 o más letras, es decir la letra inicial (recordada) seguida por 2 o más letras (también recordadas).</p><div id="pregunta142" class="calculadora" spellcheck="false"><div class="instruccion">s.replace(/\b(\w)(\w{2,})\b/g, (undefined,p1,p2)=&gt;p1.toUpperCase()+p2)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Coloque en mayúsculas las letras inicial y final de todas las palabras.</p><div id="pregunta143" class="calculadora" spellcheck="false"><div class="instruccion">s.replace(/\b(\w)(\w*)(\w)\b/g, (match,p1,p2,p3)=&gt;p1.toUpperCase()+p2+p3.toUpperCase())</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Intercambie la primera con la última letra de todas las palabras.</p><div id="pregunta144" class="calculadora" spellcheck="false"><div class="instruccion">s.replace(/\b(\w)(\w*)(\w)\b/g, (match,p1,p2,p3)=&gt;p3+p2+p1)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con relación a los ejercicios resueltos:</p><p class="opcionMultiple correcta"><input type="checkbox" name="pregunta145" id="opcion466" checked=""><span class="opcionMultiple"></span><label for="opcion466">Se emplea el modificador <span class="textocodigo">g</span> porque se buscan todas las coincidencias.</label></p><p class="opcionMultiple correcta"><input type="checkbox" name="pregunta145" id="opcion461"><span class="opcionMultiple"></span><label for="opcion461">En la función de reemplazo <span class="textocodigo">match</span> es el primer grupo encontrado.</label></p><p class="opcionMultiple correcta"><input type="checkbox" name="pregunta145" id="opcion462" checked=""><span class="opcionMultiple"></span><label for="opcion462">En la función de reemplazo <span class="textocodigo">p2</span> es el segundo grupo encontrado.</label></p><p class="opcionMultiple correcta"><input type="checkbox" name="pregunta145" id="opcion467"><span class="opcionMultiple"></span><label for="opcion467">Se emplea el modificador <span class="textocodigo">g</span> porque se hace una búsqueda general, no específica.</label></p><p class="opcionMultiple correcta"><input type="checkbox" name="pregunta145" id="opcion463"><span class="opcionMultiple"></span><label for="opcion463">En la función de reemplazo <span class="textocodigo">p2</span> es la cadena que ha sido encontrada dos veces.</label></p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="30" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 12 -->
+    <div class="ejercicio" id="ejercicio10" enunciado="1"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Cree la variable "s" con la cadena:<br> `Corriente 1: 45.65 kg/h, 34.5 °C, 1.2 atm<br>Corriente 2: 52.23 kg/h, 23.5 °C, 1.5 atm<br>Corriente 3: 97.88 kg/h, 78.2 °C, 2.7 atm`</p><div id="pregunta165" class="calculadora" spellcheck="false"><div class="instruccion">s = `Corriente 1: 45.65 kg/h, 34.5 °C, 1.2 atm<br>Corriente 2: 52.23 kg/h, 23.5 °C, 1.5 atm<br>Corriente 3: 97.88 kg/h, 78.2 °C, 2.7 atm`;<br>s</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Convierta todas las cantidades (grupo 1: uno o más dígitos separados con un punto) que estén en kg/h a oz/h, redondeándolas (con toFixed) al segundo dígito después del punto (conversión: oz = kg*35.724)</p><div id="pregunta166" class="calculadora" spellcheck="false"><div class="instruccion">s.replace(/(\d+\.\d+)\skg\/h/g,<br>        (match,p1)=&gt;`${(p1*35.724).toFixed(2)} oz/h`)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Convierta (empleando cadenas literales para construir las cadenas resultante) todas las cantidades (grupo 1), que estén en kg/h o en °C (grupo 2), a oz/h y K, redondeándolas (con toFixed) al segundo dígito después del punto (conversión: oz = kg*35.724, K = °C*1+273.15). Pista: puede copiar y pegar las partes equivalentes del inciso anterior.</p><div id="pregunta167" class="calculadora" spellcheck="false"><div class="instruccion">s.replace(/(\d+\.\d+)\s(kg\/h|°C)/g,<br>        (match,p1,p2)=&gt;p2==="kg/h"?`${(p1*35.724).toFixed(2)} oz/h`<br>        :`${(p1*1+273.15).toFixed(2)} K`)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Convierta (empleando cadenas literales para construir las cadenas resultante) todas las cantidades (grupo 1: uno o más dígitos separados con un punto) en kg/h, °C o en atm a oz/h, K y bar (grupo 2), redondeándolas (con toFixed) al segundo, segundo y tercer dígito después del punto (conversiones: oz = lb*35.724, K = °C*1+273.15, bar = atm*1.01325). Pista: puede copiar y pegar las partes equivalentes del inciso anterior.</p><div id="pregunta168" class="calculadora" spellcheck="false"><div class="instruccion">s.replace(/(\d+\.\d+)\s(kg\/h|°C|atm)/g,<br>        (match,p1,p2)=&gt;p2==="kg/h"?`${(p1*35.724).toFixed(2)} oz/h`<br>        :p2==="°C"?`${(p1*1+273.15).toFixed(2)} K`<br>        :`${(p1*1.01325).toFixed(3)} bar`)</div><div class="resultado"></div></div><p class="pregunta" id="pregunta169"><span class="pregunta"></span>En la función de reemplazo "p1" son las c<span class="campo_literal correcta" tabindex="0" contenteditable="true">antidade</span>s de la cadena.<br>En la función de reemplazo "p2" son las u<span class="campo_literal correcta" tabindex="0" contenteditable="true">nidade</span>s ("kg/h", "°C", "atm") de la cadena.<br>La expresión para encontrar cadenas iguales a "kg/h", es <span class="campo_literal correcta" tabindex="0" contenteditable="true">kg\/h</span>.<br>La operación para convertir "atm" a "bar", es: p<span class="campo_literal correcta" tabindex="0" contenteditable="true">1*1.01325</span>.<br>La operación para convertir "kg/h" a "oz/h" es: p<span class="campo_literal correcta" tabindex="0" contenteditable="true">1*35.724</span>.</p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="48" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 13 -->
+
+
+
+
+    <h2 class="text">El modificador ?</h2>
+
+    <p class="text">El carácter especial <b class="style1">?</b> tiene 2 usos en las expresiones regulares: <dfn class="style1">a)</dfn> Como un cuantificador que encuentra cero o una vez el carácter, patrón o grupo al que sigue (que es como se ha empleado hasta el momento) y <dfn class="style1">b)</dfn> Como un modificador del modo en que llevan a cabo la búsqueda los cuantificadores.</p>
+
+    <p class="text">Por defecto, sin <b class="style1">?</b>, los cuantificadores realizan la búsqueda tratando de abarcar la cadena más larga que cumpla con el patrón de búsqueda, por ejemplo, dada la siguiente cadena:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">s = "Las expresiones regulares son muy útiles en el trabajo con cadenas";</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Para encontrar todas las cadenas que tengan una "l", seguida de cero o más caracteres cualesquiera y que terminen con una "s" (sin importar que los caracteres estén en mayúsculas o minúsculas), se podría pensar que con la siguiente instrucción se lograría obtener el resultado buscado:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">s.match(/l.*s/gi)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Pero, como se puede ver, se obtiene la cadena completa. Esto sucede porque, como se dijo, los cuantificadores (por defecto) encuentran la cadena más larga que cumpla con el patrón de búsqueda y en este caso la cadena más larga que cumple con el patrón, es la cadena completa: porque comienza con la letra "L", está seguida por varios caracteres (recuerde que el punto representa a cualquier carácter excepto el salto de línea) y termina con una "s".</p>
+
+    <p class="text">Para que los cuantificadores encuentren todas las cadena que cumpla con el criterio de búsqueda (en lugar de las cadenas más largas), se debe escribir un <b class="style1">?</b> después del cuantificador. Procediendo de esta manera, se obtiene:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">s.match(/l.*?s/gi)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Que ahora sí, son las cadenas buscadas. Observe, sin embargo, que la última cadena ("l trabajo con cadenas") incluye espacios en blanco. Si lo que en realidad se está buscando son cadenas con 0 o más letras que comiencen con la letra "l" y terminen en la letra "s", se debe escribir la siguiente expresión regular:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">s.match(/l[a-záéíóñ]*?s/gi)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">O, si sólo se quiere encontrar cadenas con letras del alfabeto inglés:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">s.match(/l[a-z]*?s/gi)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">O, si se quiere encontrar cadenas alfanuméricas del alfabeto inglés:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">s.match(/l\w*?s/gi)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">El modificador <b class="style1">?</b>, como modificador del comportamiento de los cuantificadores, ralentiza la evaluación de las expresiones regulares, por lo que, en lo posible, se debe evitar su uso en ciclos repetitivos y procesos recursivos.</p>
+
+    <div class="ejercicio" id="ejercicio11" enunciado="1"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Cree la variable "s" con el texto:<br>`Si tu hermano te ofende<br>recuerda no tanto su mala acción<br>sino, más que nunca,<br>que es tu hermano`</p><div id="pregunta181" class="calculadora" spellcheck="false"><div class="instruccion">s = `Si tu hermano te ofende<br>recuerda no tanto su mala acción<br>sino, más que nunca,<br>que es tu hermano`;<br>s</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Ubique las cadenas (.) más cortas, al principio de cada línea, que terminen en "n".</p><div id="pregunta182" class="calculadora" spellcheck="false"><div class="instruccion">s.match(/^.*?n/gm)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Ubique las cadenas más cortas que, comiencen con una "e" y terminen con una "o"</p><div id="pregunta183" class="calculadora" spellcheck="false"><div class="instruccion">s.match(/e.*?o/g)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Ubique las cadenas (.) más cortas que, comiencen con una "e" y terminen con una "o", pero sin incluir ni la "e" ni la "o"</p><div id="pregunta184" class="calculadora" spellcheck="false"><div class="instruccion">s.match(/(?&lt;=e).*?(?=o)/g)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Ubique las cadenas (.) más cortas que comiencen y terminen en "e", pero incluyendo en la búsqueda los saltos de línea (modificador "s").</p><div id="pregunta185" class="calculadora" spellcheck="false"><div class="instruccion">s.match(/e.*?e/gs)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con relación a los caracteres especiales y modificadores:</p><p class="opcionMultiple correcta"><input type="checkbox" name="pregunta186" id="opcion583"><span class="opcionMultiple"></span><label for="opcion583">Se emplea el carácter especial "$" para recordar el carácter encontrado.</label></p><p class="opcionMultiple correcta"><input type="checkbox" name="pregunta186" id="opcion582" checked=""><span class="opcionMultiple"></span><label for="opcion582">Se emplea el carácter especial "$" para ubicar el final de cada línea.</label></p><p class="opcionMultiple correcta"><input type="checkbox" name="pregunta186" id="opcion584" checked=""><span class="opcionMultiple"></span><label for="opcion584">Se emplea el modificador "s" para que el carácter especial "." incluya los saltos de línea.</label></p><p class="opcionMultiple correcta"><input type="checkbox" name="pregunta186" id="opcion578" checked=""><span class="opcionMultiple"></span><label for="opcion578">Se emplea el modificador "m" para que cada línea sea tratada de forma independiente.</label></p><p class="opcionMultiple correcta"><input type="checkbox" name="pregunta186" id="opcion580" checked=""><span class="opcionMultiple"></span><label for="opcion580">Se emplea el carácter especial "^" para ubicar el principio de cada línea.</label></p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="19" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 14 -->
+
+
+
+
+    <div id="generarPrueba" data-scroll-y="36121.15234375"><br><hr><label class="lnotacapitulo">Nota del capítulo: </label><input type="text" id="notaCapitulo" disabled="disabled" class="itnotacapitulo"><br><br><button id="btGenerarPrueba" style="visibility: visible;" onclick="capitulo.registrarCapitulo()">Iniciar defensa</button><button id="btEmplearBono" style="margin-left:1.1rem;width:9.686rem;display:none;" onclick="capitulo.emplearBono()">Emplear Bono</button><br><br></div>
+
+
+<d id="dAutor" style="font-size: 0.9rem;text-align:center;color: #0808f24f;font-weight:bolder;position:fixed;top: 5px;right: 5px;user-select:none;display:inline-block;z-index:15;">Hernan G. Peñaranda V.</d></div><!-- Cierre del div capítulo -->
+
+<div id="dato" style="display:none;">KqbJCKyn938lCZ0oDYGpDIqsDZWn93SrD30aCpSt93CtDoGnC30aC2H5KMrOQW00</div>
+<div id="reg" style="display:none;">CJ4xCJ4xCJ4xCJ4xCJ4xCJ4mC3ipC30nEp8mCJ0xCJ4mC3ioC34mEp8mCJ00</div>
+
+
+
+
+<div id="divDialogo" style="display: none;"><div onfocus="document.querySelector('#divDialogo input').focus();"><div>Carnet universitario</div><div>Escriba el número de su carnet universitario, verificando que el guión haya sido correctamente insertado.</div><input type="text" onkeydown="return Capitulo.divDialogo.funKeydown(event)" onkeyup="Capitulo.divDialogo.funKeyup(event)"><div><button onclick="Capitulo.divDialogo.funClick('aceptar');">Aceptar</button><button style="margin-left:35px;" onclick="Capitulo.divDialogo.funClick('cancelar');">Cancelar</button></div></div></div></body>

@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<head>
+
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Language" content="es">
+
+    <title>35-6681 capítulo 11</title>
+  
+    <!-- Librería y hoja de estilos KATEX  -->
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/katex/katex.min.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/katex/katex.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/katex/contrib/auto-render.min.js"></script>
+
+    <!-- Librerías y hojas de estilo CodeMirror -->
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/lib/codemirror.min.css">
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/theme/mdn-like.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/lib/codemirror.min.js"></script>
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/fold/foldgutter.min.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/fold/foldcode.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/fold/brace-fold.min.js"></script>
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/dialog/dialog.min.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/dialog/dialog.min.js"></script>
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/hint/show-hint.min.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/hint/show-hint.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/hint/javascript-hint.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/search/searchcursor.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/search/search.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/edit/matchbrackets.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/edit/closebrackets.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/comment/comment.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/addon/wrap/hardwrap.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/javascript/javascript.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/mathematica/mathematica.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/octave/octave.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/python/python.min.js"></script>
+     <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/css/css.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/xml/xml.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/markdown/markdown.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/mode/htmlmixed/htmlmixed.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/codemirror/keymap/sublime.min.js"></script>
+
+    <!-- Librería Plotly -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script><style id="plotly.js-style-global"></style><style id="plotly.js-style-global"></style>
+
+    <!-- Librerías y hojas de estilo function-plot -->
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/function-plot/site/js/vendor/d3.min.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/function-plot/dist/function-plot.js"></script>
+    
+    <!-- Librería quantities -->
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/quantities/quantities.min.js"></script>
+
+    <!-- Librería GoJs para la creación de diagramas de flujo -->
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/gojs/release/go.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/flowchart_gojs.js"></script>
+
+    <!-- Librerías matemáticas propias -->
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/math.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/number.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/array.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/string.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/cplx.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/function.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/object.js"></script>
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/prq.js"></script>
+
+    <!-- Librería y hoja de estilos propias para la creación y manejo de la calculadora  -->
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/src/cjs.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/cjs.js"></script>
+
+    <!-- Librería y hoja de estilos propias para la creación y manejo de los capítulos -->
+    <link rel="stylesheet" href="https://cursosabiertos.usfx.bo/materias/librerias/src/texto.css">
+    <script src="https://cursosabiertos.usfx.bo/materias/librerias/src/texto.js"></script>
+
+   <!-- Librería del capítulo actual -->
+    <script src="https://cursosabiertos.usfx.bo/materias/progoo/capitulos/capitulo11/files/capitulo11.js"></script>
+
+    <!-- Fuentes empleadas en el capítulo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;600;700;800&amp;family=Roboto+Mono&amp;display=swap" rel="stylesheet">
+
+    <script>
+        function katexRender() {
+            renderMathInElement(document.getElementById("capitulo"));
+        }
+        document.addEventListener("DOMContentLoaded", katexRender);
+        window.onerror = function(msg, url, lineNo, columnNo, error) {
+            __error__ = msg;
+        };
+        window.onload = function(){
+            capitulo.iniciar();
+        };
+    </script>
+
+</head>
+
+<body class="text">  
+
+
+<div id="capitulo">
+
+    <button id="btGuardar" style="z-index:15;" onclick="savePage()">Guardar</button>
+
+
+    <h1 class="text" onclick="alerta(capitulo.idPagina,'')" style="cursor: pointer;">Cadenas (Strings)</h1>
+
+    <p class="text">Las cadenas de caracteres o simplemente <dfn class="style1">cadenas</dfn> o <dfn class="style1">strings</dfn> (por su denominación en inglés), son vectores especializados en el manejo de caracteres, es decir en el manejo de texto.</p>
+
+    <p class="text">Al ser vectores son datos estructurados, sin embargo, al ser un tipo de dato de uso frecuente, todos los lenguajes de programación disponen de una sintaxis simplificada para las mismas. Como ya se ha visto en el caso de JavaScript (y en la mayoría de los lenguajes de programación) se crean simplemente escribiéndolas entre comillas o apóstrofos y en el caso de JavaScript, también entre acentos invertidos (plantillas literales).</p>
+
+    <p class="text">Al igual que ocurre con los números, el valor de la cadena: el texto en sí, es un valor primitivo (no un objeto), sin embargo, desde el mismo se puede llamar a cualquiera de los métodos dinámicos de la clase <dfn class="style1">String</dfn>, porque JavaScript los convierte automáticamente en objetos.</p>
+
+    <p class="text">Al ser objetos, las cadenas pueden ser creadas también con el operador <dfn class="style1">new</dfn> (new String("cadena")), sin embargo, en la práctica, las cadenas se crean (casi siempre) empleando la notación simplificada.</p>
+
+
+
+
+
+    <h2 class="text">Métodos  y propiedades de las cadenas</h2>
+
+    <p class="text">Al igual que los <dfn class="style1">array</dfn>, las cadenas tienen la propiedad <i>length</i>, que devuelve el número de caracteres de la cadena, sin embargo, a diferencia de los <dfn class="style1">array</dfn>, esta propiedad no puede ser modificada (es de sólo lectura).</p>
+
+    <p class="text">Además de esta propiedad, las cadenas cuentan con los siguientes métodos:</p>
+
+    <div class="table borderAll">
+        <table align="center">
+            <caption>Métodos de las cadenas</caption>
+            <tbody><tr>
+            <th style="width:180px;">Método</th>
+            <th>Descripción</th>
+            </tr>
+            <tr>
+            <td><dfn class="style1">at(i)</dfn></td>
+            <td class="texto">Devuelve el carácter que se encuentra en la posición "i" (un carácter utf-16). Si "i" es negativo cuenta desde el último carácter hacía atrás.</td>
+            </tr>
+            <tr>
+            <td><dfn class="style1">charAt(i)</dfn></td>
+            <td class="texto">Devuelve el carácter que se encuentra en la posición "i" (un carácter utf-16). Si "i" es negativo o mayor al índice del último elemento, devuelve una cadena vacía.</td>
+            </tr>
+            <tr>
+            <td><dfn class="style1">charCodeAt(i)</dfn></td>
+            <td class="texto">Devuelve el código utf-16 (de 0 a 65535) del carácter que se encuentra en la posición "i".</td>
+            </tr>
+            <tr>
+            <td><dfn class="style1">codePointAt(i)</dfn></td>
+            <td class="texto">Devuelve el código utf-16, de 0 a 65535 o de 0 a 1114111 (cuando es un pseudo-carácter sustituto), del carácter que se encuentra en la posición "i".</td>
+            </tr>
+            <tr>
+            <td><dfn class="style1">concat(s1, s2, ...)</dfn></td>
+            <td class="texto">Devuelve una nueva cadena conformada por la cadena desde la cual se llama al método y las cadenas "s1"+"s2"+... (equivalente al uso del operador "+").</td>
+            </tr>
+            <tr>
+            <td><dfn class="style1">endsWith(s [, l])</dfn></td>
+            <td class="texto">Devuelve <dfn class="style1">true</dfn>, si la cadena desde la cual se llama al método termina con la cadena "s". Opcionalmente puede recibir la longitud de la cadena "l" (por defecto "str.length").</td>
+            </tr>
+            <tr>
+            <td><dfn class="style1">fromCharCode(n)</dfn></td>
+            <td class="texto">Método estático que devuelve el carácter correspondiente al código "n" (entre 0 y 65535).</td>
+            </tr>
+            <tr>
+            <td><dfn class="style1">fromCodePoint(n1, n2, n3, ...)</dfn></td>
+            <td class="texto">Método estático que devuelve una cadena con la secuencia de caracteres equivalentes a los códigos unicode n1, n2, n3, ... (valores comprendidos entre 0 y 1114111).</td>
+            </tr>
+            <tr>
+            <td><dfn class="style1">include(s [, i])</dfn></td>
+            <td class="texto">Devuelve <dfn class="style1">true</dfn>, si la cadena "s" es parte de la cadena desde la cual se llama al método. Opcionalmente puede recibir el índice "i", desde el cual comenzará la búsqueda (por defecto 0).</td>
+            </tr>
+            <tr>
+            <td><dfn class="style1">indexOf(s1, i)</dfn></td>
+            <td class="texto">Devuelve el índice donde aparece, por primera vez, la subcadena "s1", comenzando la búsqueda en la posición "i" (por defecto desde el primer carácter de la cadena).</td>
+            </tr>
+            <tr>
+            <td><dfn class="style1">isWellFormed()</dfn></td>
+            <td class="texto">Devuelve <dfn class="style1">true</dfn>, si la cadena desde la cual se llama al método no contiene ningún código utf-16 incompleto (un código solitario).</td>
+            </tr>
+            <tr>
+            <td><dfn class="style1">lastIndexOf(s, i)</dfn></td>
+            <td class="texto">Devuelve el índice donde aparece, por primera vez, la cadena "s" dentro de la cadena desde la cual se llama al método, pero búscando la cadena hacia atrás: desde la posición "i" (por defecto desde el último carácter: s.length-1).</td>
+            </tr>
+            <tr>
+            <td><dfn class="style1">localeCompare(s [, l [, o]])</dfn></td>
+            <td class="texto">Devuelve un valor positivo si la cadena desde la que se llama al método es menor a "s" (es decir si debe estar antes que "s"), negativo, si es mayor a "s" (debe estar después de "s") y 0 si es igual a "s". Alternativamente puede recibir en "l" (locales) el código del país en el que se basará la comparación y en "o" (opciones) un objeto con opciones adicionales para llevar a cabo la comparación.</td>
+            </tr>
+            <tr>
+            <td><dfn class="style1">match(s)</dfn></td>
+            <td class="texto">Devuelve un vector con las partes de la cadena que coinciden con la cadena (o expresión regular) "s". Si "s" es una expresión regular e incluye el modificador global "g", devuelve un array con todas las coincidencias. Si no incluye "g", devuelve un array con la primera coincidencia y los grupos de esa coincidencia.</td>
+            </tr>
+            <tr>
+            <td><dfn class="style1">matchAll(s)</dfn></td>
+            <td class="texto">Devuelve un iterador con todas las coincidencias correspondientes a la expresión regular "s". La expresión regular "s", debe tener el modificador global "g". Cada uno de los elementos del iterador devuelto, es un array con el texto de la coincidencia y los grupos de esa coincidencia.</td>
+            </tr>
+            <tr>
+            <td><dfn class="style1">normalize(f)</dfn></td>
+            <td class="texto">Devuelve la cadena desde la que se llama al método, normalizada a la forma Unicode "f" (por defecto NFC).</td>
+            </tr>
+            <tr>
+            <td><dfn class="style1">padEnd(l [, s])</dfn></td>
+            <td class="texto">Rellena el final de la cadena desde la que se llama al método, con la cadena "s", hasta que la cadena tiene la longitud "l" especificada. Si no se manda "s", la cadena se rellena con espacios en blanco.</td>
+            </tr>
+            <tr>
+            <td><dfn class="style1">padStart(l [, s])</dfn></td>
+            <td class="texto">Rellena el principio de la cadena desde la que se llama al método, con la cadena "s", hasta que la cadena tiene la longitud "l" especificada. Si no se manda "s", la cadena se rellena con espacios en blanco.</td>
+            </tr>
+            <tr>
+            <td><dfn class="style1">raw`plantilla literal`</dfn></td>
+            <td class="texto">Método estático que devuelve un String, con los elementos ${} de la plantilla evaluados, pero sin evaluar las secuencias de escape, por ejemplo, \n es devuelto como "\n" (no evaluado como un salto de línea).</td>
+            </tr>
+            <tr>
+            <td><dfn class="style1">repeat(n)</dfn></td>
+            <td class="texto">Devuelve una nueva cadena, con la cadena desde la que se llama al método repetida "n" veces.</td>
+            </tr>
+            <tr>
+            <td><dfn class="style1">replace(er, cr)</dfn></td>
+            <td class="texto">Devuelve una nueva cadena con la o las coincidencias de la expresión regular "er", reemplazadas por la cadena de reemplazo "cr". La cadena "cr" puede ser una función que devuelve la cadena de reemplazo. Para reemplazar todas las coincidencias, la expresión regular debe incluir el modificador global "g".</td>
+            </tr>
+            <tr>
+            <td><dfn class="style1">replaceAll(er, cr)</dfn></td>
+            <td class="texto">Devuelve una nueva cadena con todas las coincidencias de la expresión regular "er", reemplazadas por la cadena de reemplazo "cr". La cadena "cr" puede ser una función que devuelve la cadena de reemplazo.</td>
+            </tr>
+            <tr>
+            <td><dfn class="style1">search(s1)</dfn></td>
+            <td class="texto">Devuelve el índice (la posición) de la parte de la cadena, que coincide con la cadena (o expresión regular) "s1".</td>
+            </tr>
+            <tr>
+            <td><dfn class="style1">slice(i, j)</dfn></td>
+            <td class="texto">Devuelve una nueva cadena con los caracteres que existen entre la cadena "i" y "j-1" (o hasta último carácter si no se manda "j"). Si "i" es negativo, devuelve ese número de caracteres del final del texto.</td>
+            </tr>
+            <tr>
+            <td><dfn class="style1">split(s1)</dfn></td>
+            <td class="texto">Divide la cadena en todos los lugares que coinciden con la cadena (o expresión regular) "s1", devolviendo un vector con las cadenas resultantes de esa división.</td>
+            </tr>
+            <tr>
+            <td><dfn class="style1">startsWith(s [, i])</dfn></td>
+            <td class="texto">Devuelve <dfn class="style1">true</dfn>, si la cadena desde la cual se llama al método comienza con la cadena "s". Opcionalmente puede recibir el índice "i" a partir del cual hará la comparación (por defecto 0).</td>
+            </tr>
+            <tr>
+            <td><dfn class="style1">substr(i, n)</dfn></td>
+            <td class="texto">Devuelve una nueva cadena con los "n" caracteres que se encuentran a partir de la posición "i" (o todos los caracteres a partir de "i" si se omite "n").</td>
+            </tr>
+            <tr>
+            <td><dfn class="style1">substring(i, j)</dfn></td>
+            <td class="texto">Devuelve una nueva cadena con los caracteres desde la posición "i", hasta la posición "j-1" (o todos los caracteres a partir de "i" si se omite "j").</td>
+            </tr>
+            <tr>
+            <td><dfn class="style1">toLocaleLowerCase([l])</dfn></td>
+            <td class="texto">Devuelve una nueva cadena, con los caracteres de la cadena desde la cual se llama al método, en minúsculas, empleando el código local por defecto o el código local recibido en "l".</td>
+            </tr>
+            <tr>
+            <td><dfn class="style1">toLocaleUpperCase([l])</dfn></td>
+            <td class="texto">Devuelve una nueva cadena, con los caracteres de la cadena desde la cual se llama al método, en mayúsculas, empleando el código local por defecto o el código local recibido en "l".</td>
+            </tr>
+            <tr>
+            <td><dfn class="style1">toLowerCase()</dfn></td>
+            <td class="texto">Devuelve una nueva cadena, con los caracteres de la cadena desde la cual se llama al método, en minúsculas.</td>
+            </tr>
+            <tr>
+            <td><dfn class="style1">toUpperCase()</dfn></td>
+            <td class="texto">Devuelve una nueva cadena, con los caracteres de la cadena desde la cual se llama al método, en mayúsculas.</td>
+            </tr>
+            <tr>
+            <td><dfn class="style1">toWellFormed()</dfn></td>
+            <td class="texto">Devuelve una nueva cadena, con la cadena desde la que se llama al método, pero con todos sus códigos solitarios reemplazados por el carácter U+FFFD, lo que evita errores con métodos, como <dfn class="style1">encodeURI</dfn>, que esperan cadenas bien formadas.</td>
+            </tr>
+            <tr>
+            <td><dfn class="style1">trim()</dfn></td>
+            <td class="texto">Devuelve una nueva cadena con los caracteres de la cadena desde la cual se llama al método, pero sin espacios en blanco ni al principio, ni al final.</td>
+            </tr>
+            <tr>
+            <td><dfn class="style1">trimEnd()/trimRight()</dfn></td>
+            <td class="texto">Devuelve una nueva cadena con los caracteres de la cadena original, pero sin espacios en blanco al final de la misma. Esta función puede ser llamada tanto con <dfn class="style1">trimEnd</dfn>, como con <dfn class="style1">trimRight</dfn>.</td>
+            </tr>
+            <tr>
+            <td><dfn class="style1">trimStart()/trimLeft()</dfn></td>
+            <td class="texto">Devuelve una nueva cadena con los caracteres de la cadena original, pero sin espacios en blanco al principio de la misma. Esta función puede ser llamada tanto con <dfn class="style1">trimStart</dfn>, como con <dfn class="style1">trimLeft</dfn>.</td>
+            </tr>
+            <tr>
+            <td><dfn class="style1">valueOf()</dfn></td>
+            <td class="texto">Devuelve el valor primitivo de un objeto de tipo String (devuelve la cadena de caracteres en sí).</td>
+            </tr>
+        </tbody></table>
+    </div>
+
+    <p class="text">Observe que en esta lista existen algunos métodos estáticos: <dfn class="style1">fromCharCode</dfn>, <dfn class="style1">fromCodePoint</dfn> y <dfn class="style1">raw</dfn>. Como se recordará, los métodos estáticos son llamados desde la clase constructora, no desde una instancia u objeto, por lo tanto, estos métodos deben ser llamados desde la clase <dfn class="style1">String</dfn>.</p>
+
+    <p class="text">Las cadenas de caracteres son, en realidad, vectores especializados en el manejo de caracteres. Por esa razón, en lugar de emplear el método <dfn class="style1">charAt</dfn> o el método <dfn class="style1">at</dfn>, para recuperar un carácter de la cadena, se puede emplear también la notación de corchetes, empleando el índice del carácter. No obstante, si la cadena tiene caracteres compuestos, como es el caso de algunos emojis y caracteres asiáticos que ocupan dos posiciones (porque están conformados por 2 caracteres), dichos caracteres no pueden ser recuperados ni con el índice ni con <dfn class="style1">charAt</dfn>, sino que se deben emplear los métodos <dfn class="style1">fromCodePoint</dfn> y <dfn class="style1">codePointAt</dfn> (métodos que hacen avanzar el índice dos posiciones).</p>
+    
+    <p class="text">Si sólo se trabaja con alfabetos occidentales (como el nuestro), es seguro emplear tanto los índices como los métodos <dfn class="style1">charAt</dfn> y <dfn class="style1">at</dfn>, así dada la siguiente cadena:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">var s = "No por mucho madrugar amanece más temprano";</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Los caracteres ubicados en las posiciones 4, 21 y 42, se puede obtener con cualquiera de las siguientes instrucciones:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">print(s.charAt(3), s.charAt(20), s.charAt(41))</div>
+        <div class="resultado"></div>
+        <div class="instruccion">print(s.at(3), s.at(20), s.at(41))</div>
+        <div class="resultado"></div>
+        <div class="instruccion">print(s[3], s[20], s[41])</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Varios de los métodos, como <dfn class="style1">match</dfn>, <dfn class="style1">search</dfn>, <dfn class="style1">replace</dfn> y <dfn class="style1">split</dfn>, son de mayor utilidad cuando se trabaja con expresiones regulares, como se verá en el siguiente capítulo.</p>
+
+    <p class="text">Además de estos métodos y como ya se vio en los capítulos previos, los objetos de tipo <dfn class="style1">String</dfn> y todos los objetos JavaScript en general, cuentan con el método <i>toString</i>, que devuelve la cadena que representa al objeto. En el caso de las cadenas es su valor primitivo (el texto en sí). Este método es llamado automáticamente, por Javascript, para mostrar el texto que representa al objeto, por esa razón, cuando se crea una nueva clase, generalmente es necesario sobrecribir su método <i class="style1">toString</i>, para que devuelva una cadena representativa y/o de utilidad práctica.</p>
+
+
+
+
+
+    <h2 class="text">Secuencias de escape</h2>
+
+    <p class="text">El quebrado invertido (<b class="style1">\</b>) seguido de otro carácter, se conoce como una <dfn class="style1">secuencia de escape</dfn> y representa a un carácter que no tiene representación gráfica. Por ejemplo el carácter nulo (que no tiene símbolo gráfico) se representa con la secuencia de escape: <dfn class="style1">\0</dfn>.</p>
+
+    <p class="text">Las secuencias de escape son útiles no sólo para representar caracteres que no tienen símbolos gráficos, sino también, para incluir caracteres que tienen un significado especial, como ya se ha visto previamente con el caso de las comillas:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">"El lenguaje \"Javascript\" es universal"</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Las secuencias de escape que se pueden emplear en JavaScript (y en la mayoría de los lenguajes de programación) son:</p>
+
+    <div class="table borderAll">
+        <table align="center">
+            <caption>Secuencias de escape en Javascript</caption>
+            <tbody><tr>
+            <th style="width:110px;">Secuencia</th>
+            <th>Descripción</th>
+            </tr>
+            <tr>
+            <td><b class="style1">\0</b></td>
+            <td class="texto">Representa el carácter nulo (NUL), código hexadecimal 00.</td>
+            </tr>
+            <tr>
+            <td><b class="style1">\b</b></td>
+            <td class="texto">Representa el carácter de retroceso, código hexadecimal 08.</td>
+            </tr>
+            <tr>
+            <td><b class="style1">\t</b></td>
+            <td class="texto">Representa el carácter de tabulación horizontal, código hexadecimal 09</td>
+            </tr>
+            <tr>
+            <td><b class="style1">\n</b></td>
+            <td class="texto">Representa el carácter de salto de línea, código hexadecimal 0A.</td>
+            </tr>
+            <tr>
+            <td><b class="style1">\v</b></td>
+            <td class="texto">Representa el carácter de tabulación vertical, código hexadecimal 0B.</td>
+            </tr>
+            <tr>
+            <td><b class="style1">\f</b></td>
+            <td class="texto">Representa el carácter de alimentación de página, código hexadecimal 0C.</td>
+            </tr>
+            <tr>
+            <td><b class="style1">\r</b></td>
+            <td class="texto">Representa el carácter de retorno de carro, código hexadecimal 0D.</td>
+            </tr>
+            <tr>
+            <td><b class="style1">\"</b></td>
+            <td class="texto">Comillas, código hexadecimal 22.</td>
+            </tr>
+            <tr>
+            <td><b class="style1">\'</b></td>
+            <td class="texto">Apóstrofo, código hexadecimal 27.</td>
+            </tr>
+            <tr>
+            <td><b class="style1">\\</b></td>
+            <td class="texto">Quebrado invertido, código hexadecimal 5C.</td>
+            </tr>
+            <tr>
+            </tr><tr>
+                <td><b class="style1">\xXX</b></td>
+                <td class="texto">Representa el carácter, cuyo código hexadecimal de dos dígitos, es igual a "XX", por ejemplo \x67 representa a la letra "g".</td>
+            </tr>
+            <tr>
+                <td><b class="style1">\uXXXX</b></td>
+                <td class="texto">Representa el carácter unicode, cuyo código hexadecimal de cuatro dígitos, es igual a "XXXX", por ejemplo \u006e representa al carácter "n".</td>
+            </tr>
+            <tr><td><b class="style1">\u{X}...\u{XXXXXX}</b></td>
+            <td class="texto">Representa el carácter unicode, con un código hexadecimal de entre 1 hasta 6 dígitos, por ejemplo \u{2FB9} representa al carácter "⾹".</td>
+            </tr>
+        </tbody></table>
+    </div>
+
+    <p class="text">Por ejemplo, en la siguiente instrucción, se emplean saltos de línes (\n) y tabuladores (\t) para mostrar los nombres y apellidos de una persona en dos líneas en forma tabular:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">"Nombre:\n\tNombres:\tJuan Carlos\n\tApellidos:\tPope Ruiz"</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="text">Y en la siguiente instrucción se emplean códigos hexadecimales para mostrar algunos caracteres griegos:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">"\u03b1\u03b2\u03b3\u03b4\u03b5\u03b6\u03b7\u03b8"</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="text">Mientras que en la siguiente se muestran algunos emojis:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">"\u{1f602}\u{1f60a}\u{1f612}\u{1f601}\u{1f44c}\u{1f602}\u{1f64c}\u{1f60e}"</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Observe que se emplea la forma "\u{XXXXX}" porque ahora los códigos hexadecimales tienen más de 4 caracteres.</p>
+
+    <p class="text">El proceso contrario, es decir obtener el código de un carácter se logra con el método <dfn class="style1">codePointAt()</dfn>. Por ejemplo, copiando el anterior resultado en la siguiente instrucción, se obtienen los códigos del primer y último emoji, con:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">"😂😊😒😁👌😂🙌😎".codePointAt(0)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">"😂😊😒😁👌😂🙌😎".codePointAt(2*7)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Note que el código está en formato decimal (no hexadecimal), además, para obtener el código del último caracter (el séptimo carácter) se multiplica su posición (la posición 7) por 2 (porque estos son caracteres compuestos que requieren 2 bytes).</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">"😂😊😒😁👌😂🙌😎".codePointAt(0)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">"😂😊😒😁👌😂🙌😎".codePointAt(2*7)</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="text">Para convertir el resultado a format hexadecimal, se emplea el método <dfn class="style1">toString</dfn> al que se le manda la base a la cual se quiere convertir, en este caso 16 (porque la base es hexadecimal):</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">"😂😊😒😁👌😂🙌😎".codePointAt(0).toString(16)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">"😂😊😒😁👌😂🙌😎".codePointAt(14).toString(16)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="text">Para obtener todos los códigos a la vez, se puede crear un array con los caracteres de la matriz (<dfn class="style1">Array.from</dfn>) y emplear el método <dfn class="style1">forEach</dfn> para obtener, convertir e imprimir cada uno de los caracteres:</p>
+
+    <div class="calculadora" spellcheck="false">
+        <div class="instruccion">se = "😂😊😒😁👌👍🙌😎";<br>Array.from(se).forEach(e=&gt;print(e.codePointAt(0).toString(16)));</div>
+        <div class="resultado"></div>
+    </div>
+    <br>
+
+    <div class="ejercicio" id="ejercicio1" enunciado="1"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Empleando comillas cree (y muestre) la cadena: los "métodos dinámicos" se llaman desde los "objetos de la clase"</p><div id="pregunta6" class="calculadora" spellcheck="false"><div class="instruccion">"los \"métodos dinámicos\" se llaman desde los \"objetos de la clase\""</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Empleando apóstrofos cree (y muestre) la cadena: los 'métodos dinámicos' se llaman desde los 'objetos de la clase'</p><div id="pregunta7" class="calculadora" spellcheck="false"><div class="instruccion">'los \'métodos dinámicos\' se llaman desde los \'objetos de la clase\''</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Empleando apóstrofos cree (y muestre) la cadena: los 'métodos dinámicos' se llaman desde los "objetos de la clase"</p><div id="pregunta8" class="calculadora" spellcheck="false"><div class="instruccion">'los \'métodos dinámicos\' se llaman desde los "objetos de la clase"'</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Empleando comillas cree (y muestre) la cadena: los "métodos dinámicos" se llaman desde los 'objetos de la clase'</p><div id="pregunta9" class="calculadora" spellcheck="false"><div class="instruccion">"los \"métodos dinámicos\" se llaman desde los 'objetos de la clase'"</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Empleando tildes invertidas cree (y muestre) la cadena: los 'métodos dinámicos' se llaman desde los "objetos de la clase"</p><div id="pregunta10" class="calculadora" spellcheck="false"><div class="instruccion">`los 'métodos dinámicos' se llaman desde los "objetos de la clase"`</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="5" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 1 -->
+    <div class="ejercicio" id="ejercicio2" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Imprima la secuencia de caracteres conformada por los siguientes códigos hexadecimales UTF-8: 21, 23, 24, 25, A5, 40, A1, A2, A3</p><div id="pregunta16" class="calculadora" spellcheck="false"><div class="instruccion">print("\x21\x23\x24\x25\xA5\x40\xA1\xA2\xA3");</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Imprima la secuencia de caracteres conformada por los siguientes códigos hexadecimales UTF-8: 038F, 0393, 0394, 0398, 039B, 03A3, 03A6, 03A8</p><div id="pregunta17" class="calculadora" spellcheck="false"><div class="instruccion">print("\u038F\u0393\u0394\u0398\u039B\u03A3\u03A6\u03A8");</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Imprima la secuencia de caracteres conformada por los siguientes códigos hexadecimales UTF-8: 168B6, 168B8, 168BA, 168BC, 168BE, 168C1, 168C9, 168D8</p><div id="pregunta18" class="calculadora" spellcheck="false"><div class="instruccion">print("\u{168B6}\u{168B8}\u{168BA}\u{168BC}\u{168BE}\u{168C1}\u{168C9}\u{168D8}");</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Imprima la secuencia de caracteres conformada por los siguientes códigos hexadecimales UTF-8: 1FAE8, 1FAE9, 1FAEA, 1FACD, 1FA91, 1F603, 1f607, 1F60F</p><div id="pregunta19" class="calculadora" spellcheck="false"><div class="instruccion">print("\u{1FAE8}\u{1FAE9}\u{1FAEA}\u{1FACD}\u{1FA91}\u{1F603}\u{1f607}\u{1F60F}");</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="10" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 2 -->
+    <div class="ejercicio" id="ejercicio3" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Con "charCodeAt" obtenga y muestre el código decimal y el código hexadecimal (16) del cuarto, séptimo y noveno caracteres de la cadena: !#$%¥@¡¢£</p><div id="pregunta20" class="calculadora" spellcheck="false"><div class="instruccion">c = "!#$%¥@¡¢£".charCodeAt(3); print(c, c.toString(16))</div><div class="resultado"></div><div class="instruccion">c = "!#$%¥@¡¢£".charCodeAt(6); print(c, c.toString(16))</div><div class="resultado"></div><div class="instruccion">c = "!#$%¥@¡¢£".charCodeAt(8); print(c, c.toString(16))</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con "charCodeAt" obtenga y muestre el código decimal y el código hexadecimal (16) del primero, tercero y sexto caracteres de la cadena: ΏΓΔΘΛΣΦΨ</p><div id="pregunta21" class="calculadora" spellcheck="false"><div class="instruccion">c = "ΏΓΔΘΛΣΦΨ".charCodeAt(0); print(c, c.toString(16))</div><div class="resultado"></div><div class="instruccion">c = "ΏΓΔΘΛΣΦΨ".charCodeAt(2); print(c, c.toString(16))</div><div class="resultado"></div><div class="instruccion">c = "ΏΓΔΘΛΣΦΨ".charCodeAt(5); print(c, c.toString(16))</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con "codePointAt" y "forEach" obtenga y muestre el código decimal y el código hexadecimal de todos los caracteres de la cadena: 𖢶𖢸𖢺𖢼𖢾𖣁𖣉𖣘</p><div id="pregunta22" class="calculadora" spellcheck="false"><div class="instruccion">s = "𖢶𖢸𖢺𖢼𖢾𖣁𖣉𖣘";<br>Array.from(s).forEach(e =&gt; (c = e.codePointAt(0), print(c, c.toString(16))));</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con "codePointAt" y "for-of" obtenga y muestre el código decimal y el código hexadecimal de todos los caracteres de la cadena:: 🫨🫩🫪🫍🪑😃😇😏</p><div id="pregunta23" class="calculadora" spellcheck="false"><div class="instruccion">s = "🫨🫩🫪🫍🪑😃😇😏";<br>for (let e of Array.from(s)) {c = e.codePointAt(0); print(c, c.toString(16));};</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="14" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 3 -->
+    <div class="ejercicio" id="ejercicio4" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Empleando saltos de línea y tabuladores (secuencias de escape), imprima la siguiente información en formato tabular, siendo el encabezado (primera fila): MATERIA, NOTA y los valores de las filas: SIS101, 90; FIS102, 75; MAT101, 80. Debe escribir los tabuladores que sean necesarios para que los valores (las columnas) queden correctamente alineadas.</p><div id="pregunta24" class="calculadora" spellcheck="false"><div class="instruccion">print(<br>  "MATERIA\tNOTA\n" +<br>  "SIS101\t90\n" +<br>  "FIS102\t75\n" +<br>  "MAT101\t80"<br>);</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Empleando saltos de línea y tabuladores (secuencias de escape), imprima la siguiente información en formato tabular, siendo el encabezado (primera fila): ID, Artículo, Precio y los valores de las filas: 065, Manzana, 3.5; 078, Naranja, 2.5; 093, Pera, 4.0. Debe escribir los tabuladores que sean necesarios para que los valores (las columnas) queden correctamente alineadas.</p><div id="pregunta25" class="calculadora" spellcheck="false"><div class="instruccion">print(<br>  "ID\tArtículo\tPrecio\n" +<br>  "065\tManzana\t\t3.5\n" +<br>  "078\tNaranja\t\t2.5\n" +<br>  "093\tPera\t\t4.0"<br>);</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Empleando saltos de línea y tabuladores (secuencias de escape), imprima la siguiente información en formato tabular, siendo el encabezado (primera fila): Artículo, Pr. Unitario, Cantidad, Pr. Total y los valores de las filas: Manzana, 3.0, 12, 36; Naranja, 2.5, 4, 10; Pera, 4.0, 10, 40. Debe escribir los tabuladores que sean necesarios para que los valores (las columnas) queden correctamente alineadas.</p><div id="pregunta26" class="calculadora" spellcheck="false"><div class="instruccion">print(<br>  "Artículo\tPr. Unitario\tCantidad\tPr. Total\n" +<br>  "Manzana\t\t3.0\t\t12\t\t36\n" +<br>  "Naranja\t\t2.5\t\t4\t\t10\n" +<br>  "Pera\t\t4.0\t\t10\t\t40"<br>);</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Empleando saltos de línea y tabuladores (secuencias de escape), imprima la siguiente información en formato tabular, siendo el encabezado (primera fila): Ubicación, Título, Autor, Editorial y los valores de las filas: ISB34, Programación Estructurada, Perez Jaime, Mc Graw Hill; ISA51, Programación Orientada a Objetos, James Robert, Levenspiel; ISF21, Programación Funcional, Ramallo Humberto, Olimpia. Debe escribir los tabuladores que sean necesarios para que los valores (las columnas) queden correctamente alineadas.</p><div id="pregunta27" class="calculadora" spellcheck="false"><div class="instruccion">print(<br>  "Ubicación\tTítulo\t\t\t\t\tAutor\t\t\tEditorial\n" +<br>  "ISB34\t\tProgramación Estructurada\t\tPerez Jaime\t\tMc Graw Hill\n" +<br>  "ISA51\t\tProgramación Orientada a Objetos\tJames Robert\t\tLevenspiel\n" +<br>  "ISF21\t\tProgramación Funcional\t\t\tRamallo Humberto\tOlimpia"<br>);</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="35" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 4 -->
+
+
+
+    <h2 class="text">Ejemplos</h2>
+
+    <p class="ejemplo"><span class="ejemplo"></span></p>
+
+    <p class="ejemplosn">Cree la variable <dfn class="style1">s1</dfn> con el texto "Todos los navegadores actuales soportan Javascript".</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">var s1 = "Todos los navegadores actuales soportan Javascript";</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="ejemplosn">Cree la variable <dfn class="style1">s2</dfn> con 11 caracteres de <dfn class="style1">s1</dfn> a partir del décimo primer carácter.</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">var s2 = s1.substr(10, 11);<br>s2</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="ejemplosn">Sin embargo, debido a que el método <dfn class="style1">substr</dfn> ha sido puesto en la lista de métodos obsoletos, es conveniente resolver este tipo de problemas con otros métodos. Así, empleando los métodos <dfn class="style1">substring</dfn> y <dfn class="style1">slice</dfn>, el problema puede ser resuelto con cualquiera de las siguientes instrucciones:</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">var s2 = s1.substring(10, 10+11);<br>s2</div>
+        <div class="resultado"></div>
+        <div class="instruccion">var s2 = s1.slice(10, 10+11);<br>s2</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="ejemplosn">Cree la variable <dfn class="style1">s3</dfn> con los caracteres del vigésimo tercero al vigésimo noveno de <dfn class="style1">s1</dfn>. Este problema puede ser resuelto empleando los métodos <dfn class="style1">substring</dfn> y <dfn class="style1">slice</dfn>:</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">var s3 = s1.substring(22, 30);<br>s3</div>
+        <div class="resultado"></div>
+        <div class="instruccion">var s3 = s1.slice(22, 30);<br>s3</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="ejemplosn">Obtenga la posición (el índice) donde aparece por primera vez la cadena <dfn class="style1">s2</dfn> en la cadena <dfn class="style1">s1</dfn>.</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">s1.indexOf(s2)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="ejemplosn">Obtenga la posición donde aparece por última vez la letra "a" en la cadena <dfn class="style1">s1</dfn>.</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">s1.lastIndexOf("a")</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="ejemplosn">Obtenga el cuarto carácter de la cadena <dfn class="style1">s3</dfn>. Este problema puede ser resuelto con los métodos <dfn class="style1">charAt</dfn>, <dfn class="style1">at</dfn> y con la notación de corchetes:</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">s3.charAt(3)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">s3.at(3)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">s3[3]</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="ejemplosn">Obtenga el código del último carácter de <dfn class="style1">s1</dfn>. Este problema puede ser resuelto con una combinación de los métodos <dfn class="style1">at</dfn>, <dfn class="style1">slice</dfn> y la propiedad <dfn class="style1">length</dfn>, para obtener el último carácter de la cadena y <dfn class="style1">charCodeAt</dfn> o <dfn class="style1">codePointAt</dfn>, para obtener el código:</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">s1.at(-1).charCodeAt(0)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">s1.at(-1).codePointAt(0)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">s1.slice(-1).charCodeAt(0)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">s1.slice(-1).codePointAt(0)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">s1[s1.length-1].charCodeAt(0)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">s1[s1.length-1].codePointAt(0)</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="ejemplosn">También se podría emplear el método <dfn class="style1">substr</dfn>, pero como se dijo, al estar en la lísta de métodos obsoletos, se debe evitar su uso. Observe que <span class="textocodigo">s1.at(-1)</span> y <span class="textocodigo">s1.slice(-1)</span>, obtienen el último carácter de la cadena "s1" (el carácter "t") y que <span class="textocodigo">s1.length-1</span>, obtiene el último índice de la cadena (el número de caracteres de la cadena menos 1).</p>
+
+    <p class="ejemplosn">Obtenga el carácter correspondiente al código 74. Este problema puede ser resuelto con los métodos <dfn class="style1">fromCharCode</dfn> y <dfn class="style1">fromCodePoint</dfn>:</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">String.fromCharCode(74)</div>
+        <div class="resultado"></div>
+        <div class="instruccion">String.fromCodePoint(74)</div>
+        <div class="resultado"></div>
+    </div>
+
+
+    <p class="ejemplo"><span class="ejemplo"></span></p>
+
+    <p class="ejemplosn">Cree la variable <dfn class="style1">s1</dfn> con el texto "Se pueden añadir y/o modificar métodos mediante la propiedad prototype del constructor.";</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">var s1 = "Se pueden añadir y/o modificar métodos mediante la propiedad prototype del constructor.";</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="ejemplosn">Encuentre la posición en la que aparece, por primera vez, la cadena "métodos" dentro de la cadena <dfn class="style1">s1</dfn>. Este problema puede ser resuelto empleando los métodos <dfn class="style1">indexOf</dfn> y <dfn class="style1">search</dfn>:</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">s1.indexOf("métodos")</div>
+        <div class="resultado"></div>
+        <div class="instruccion">s1.search("métodos")</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="ejemplosn">Cree la variable <dfn class="style1">s2</dfn> con la primera palabra de la cadena "s1", en minúsculas. Para obtener la primera palabra, se debe ubicar la posición donde aparece por primera vez un espacio en blanco (" "), lo que se consigue con el método <dfn class="style1">indexOf</dfn> o <dfn class="style1">search</dfn>, entonces con <dfn class="style1">substring</dfn> o <dfn class="style1">slice</dfn>, se copia la cadena que existe entre 0 y esa posición. Finalmente, la cadena se convierte a minúsculas con el método <dfn class="style1">toLowerCase</dfn> (también se puede emplear el método <dfn class="style1">toLocaleLowerCase</dfn>, pero en este caso no tiene mucho sentido, porque, <dfn class="style1">toLowerCase</dfn>, trabaja por defecto con la configuración local del dispositivo).</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">var s2 = s1.substring(0, s1.indexOf(" ")).toLowerCase();<br>s2</div>
+        <div class="resultado"></div>
+        <div class="instruccion">var s2 = s1.slice(0, s1.search(" ")).toLocaleLowerCase();<br>s2</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="ejemplosn">Cree la variable <dfn class="style1">s3</dfn>, con la última palabra de la cadena <dfn class="style1">s1</dfn>, en mayúsculas. En este caso, en lugar de ubicar el primer espacio en blanco, se ubica el último, lo que se consigue con <dfn class="style1">lastIndexOf</dfn>, entonces desde esa posición más uno (porque el espacio no es parte de la palabra), se copia la cadena con <dfn class="style1">substring</dfn> o <dfn class="style1">slice</dfn>. Para convertir la cadena a mayúsculas se emplea el método <dfn class="style1">toUpperCase</dfn> (aunque se puede emplear, igualmente, el método toLocaleUpperCase):</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">var s3 = s1.substring(s1.lastIndexOf(" ")+1).toUpperCase();<br>s3</div>
+        <div class="resultado"></div>
+        <div class="instruccion">var s3 = s1.slice(s1.lastIndexOf(" ")+1).toUpperCase();<br>s3</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="ejemplosn">Se podría emplear igualmente <dfn class="style1">search</dfn>, pero en ese caso se tendría que emplear una expresión regular, las cuales serán estudiadas más adelante</p>
+    
+    <p class="ejemplosn">Cree la variable <dfn class="style1">s4</dfn>, con el texto de <dfn class="style1">s1</dfn>, pero reemplazando la cadena "la propiedad" por la cadena "el atributo". En este caso, el método indicado para resolver el problema es <dfn class="style1">replace</dfn>:</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">s4 = s1.replace("la propiedad", "el atributo");<br>s4</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="ejemplosn">Cree la variable <dfn class="style1">s5</dfn> a partir de las cadenas <dfn class="style1">s2</dfn> y <dfn class="style1">s3</dfn> separándolas con un espacio en blanco. Este problema puede ser resuelto con el método <dfn class="style1">concat</dfn>, con una plantilla literal y el operador de concatenación <i class="style1">+</i>:</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">var s5 = s2.concat(" ", s3);<br>s5</div>
+        <div class="resultado"></div>
+        <div class="instruccion">var s5 = `${s2} ${s3}`;<br>s5</div>
+        <div class="resultado"></div>
+        <div class="instruccion">var s5 = s2+" "+s3;<br>s5</div>
+        <div class="resultado"></div>
+    </div>
+    
+    <p class="ejemplosn">Cree un vector con las subcadenas de la cadena <dfn class="style1">s1</dfn>, que están entre los espacios en blanco.</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">s1.split(" ")</div>
+        <div class="resultado"></div>
+    </div>
+
+
+    <p class="ejemplo"><span class="ejemplo"></span></p>
+
+    <p class="ejemplosn">Cree la variable <dfn class="style1">s</dfn> con el texto "Todo debe ser hecho tan simple como sea posible, pero no más simple."</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">var s = "Todo debe ser hecho tan simple como sea posible, pero no más simple."</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="ejemplosn">Determine si la cadena "s" comienza con la cadena "Todos " o "Todo " y si termina con la cadena "simple" o "simple.". Para resolver este problema se emplea el método <dfn class="style1">startsWith</dfn>, para determinar si "s" comienza (true) o no (false) con las cadenas dadas y <dfn class="style1">endsWith</dfn>, para determinar si termina (true) o no (false) con las cadenas dadas:</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">s.startsWith("Todos ")</div>
+        <div class="resultado"></div>
+        <div class="instruccion">s.startsWith("Todo ")</div>
+        <div class="resultado"></div>
+        <div class="instruccion">s.endsWith("simple.")</div>
+        <div class="resultado"></div>
+        <div class="instruccion">s.endsWith("simple")</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="ejemplosn">Como se puede ver, el método <dfn class="style1">startsWith</dfn> nos informa que la cadena comienza con "Todo " y el método <dfn class="style1">endsWith</dfn>, nos informa que la cadena termina con "simple."</p>
+
+    <p class="ejemplosn">Cree una nueva cadena, rellenando el principio de la cadena "s" con caracteres "#", de manera que la longitud total de la cadena sea de 75 caracteres. Para resolver este caso se emplea el método <dfn class="style1">padStart</dfn>:</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">s.padStart(75, "#")</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="ejemplosn">Cree una nueva cadena, rellenando el final de la cadena "s" con caracteres "$", de manera que la longitud total de la cadena sea de 80 caracteres. Para resolver este caso se emplea el método <dfn class="style1">padEnd</dfn>:</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">s.padEnd(80, "$")</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="ejemplosn">Cree las cadenas "s1", "s2" y "s3", rellenando el principio de la cadena "s" con espacios en blanco hasta una longitud total de 77 caracteres (s1), rellenando el final de la cadena "s" con espacios hasta una longitud total de 81 caracteres y rellenando, con espacios en blanco, el principio y el final de la cadena "s" hasta una longitud de 80 y 85 caracteres. En este caso se emplean, igualmente, los métodos <dfn class="style1">padStart</dfn> y <dfn class="style1">padEnd</dfn>, excepto que ahora no se manda el carácter de relleno, porque el carácter por defecto es el espacio en blanco:</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">var s1 = s.padStart(77); s1</div>
+        <div class="resultado"></div>
+        <div class="instruccion">var s2 = s.padEnd(81); s2</div>
+        <div class="resultado"></div>
+        <div class="instruccion">var s3 = s.padStart(80).padEnd(85); s3</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="ejemplosn">Obtenga nuevas cadenas, eliminando los espacios en blanco al principio de la cadena "s1", los espacios en blanco al final de la cadena "s2" y los espacios en blanco al principio y al final de la cadena "s3". Para eliminar los espacios en blanco, al principio de la cadena, se emplean los métodos <dfn class="style1">trimStart</dfn> o <dfn class="style1">trimLeft</dfn>; para eliminar los espacios al final <dfn class="style1">trimEnd</dfn> o <dfn class="style1">trimRight</dfn> y para eliminar los espacios al principio y al final <dfn class="style1">trim</dfn>:</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">s3.trimStart()</div>
+        <div class="resultado"></div>
+        <div class="instruccion">s3.trimLeft()</div>
+        <div class="resultado"></div>
+        <div class="instruccion">s3.trimEnd()</div>
+        <div class="resultado"></div>
+        <div class="instruccion">s3.trimRight()</div>
+        <div class="resultado"></div>
+        <div class="instruccion">s3.trim()</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="ejemplosn">Cree la cadena "s4" repitiendo 5 veces la cadena "JavaScript". Para crear una cadena, repitiendo "n" veces una cadena dada, se emplea el método <dfn class="style1">repeat</dfn>:</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">var s4 = "JavaScript".repeat(5); s4</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="ejemplosn">Cree la cadena "s5" con el texto "Nunca pienso \ten el futuro. \nLlega lo \tsuficientemente pronto.", pero de manera que las secuencias de escape \t (tabulación) y \n (nueva línea) no sean interpretadas como tales, sino como caracteres normales. Para que las secuencias de escape no sean interpretadas como tales, se emplea el método estático <dfn class="style1">String.raw</dfn>:</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">var s5 = String.raw`Nunca pienso \ten el futuro. \nLlega lo \tsuficientemente pronto.`;<br>s5</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="ejemplosn">Con <dfn class="style1">localeCompare</dfn> determine si la cadena "opción" debe ir antes de (negativo), después de (positivo) o si es igual a (cero) la cadena "opcion"; igualmente si la cadena "hola" debe ir antes, después o es igual a "Hola" y si la cadena "JavaScript" debe ir antes, después o es igual a "JavaScript":</p>
+
+    <div class="calculadora" spellcheck="false" style="margin-left:1cm;">
+        <div class="instruccion">"opción".localeCompare("opcion")</div>
+        <div class="resultado"></div>
+        <div class="instruccion">"hola".localeCompare("Hola")</div>
+        <div class="resultado"></div>
+        <div class="instruccion">"JavaScript".localeCompare("JavaScript")</div>
+        <div class="resultado"></div>
+    </div>
+
+    <p class="ejemplosn">Observe que en el primer caso, de acuerdo a <dfn class="style1">localeCompare</dfn> "opción" debe ir después de "opcion" (el resultado es positivo); en el segundo caso "hola" debe ir antes de "Hola" (el resultado es negativo) orden que difiere del orden ASCII estándar (donde "h" está después de "H") y en el tercer caso, como las dos cadenas son iguales, <dfn class="style1">localeCompare</dfn> devuelve 0.</p>
+
+    <br>
+
+    <div class="ejercicio" id="ejercicio5" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Cree la variable <dfn>s1</dfn> con el texto "Los valores primitivos en Javascript pueden acceder a los métodos y propiedades del constructor respectivo"</p><div id="pregunta36" class="calculadora" spellcheck="false"><div class="instruccion">s1 = "Los valores primitivos en Javascript pueden acceder a los métodos y propiedades del constructor respectivo";</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con "substr" y los índices adecuados (sin emplear otros métodos) obtenga la palabra "valores" de <dfn>s1</dfn></p><div id="pregunta37" class="calculadora" spellcheck="false"><div class="instruccion">s1.substr(4, 7)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con "substring" y los índices adecuados (sin emplear otros métodos) obtenga la palabra "primitivos" de <dfn>s1</dfn></p><div id="pregunta38" class="calculadora" spellcheck="false"><div class="instruccion">s1.substring(12, 22)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con "slice" y los índices adecuados (obtenidos contando los caracteres) extraiga la subcadena "Javascript" de la cadena <dfn>s1</dfn></p><div id="pregunta39" class="calculadora" spellcheck="false"><div class="instruccion">s1.slice(26, 36)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con "indexOf", obtenga la posición donde aparece por primera vez la subcadena "en" en la cadena <dfn>s1</dfn></p><div id="pregunta40" class="calculadora" spellcheck="false"><div class="instruccion">s1.indexOf("en")</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con "lastIndexOf", obtenga la posición donde aparece por última vez la subcadena "to" en la cadena <dfn>s1</dfn></p><div id="pregunta41" class="calculadora" spellcheck="false"><div class="instruccion">s1.lastIndexOf("to")</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con "at", "charAt" y "[]" obtenga el vigésimo séptimo carácter de la cadena <dfn>s1</dfn></p><div id="pregunta42" class="calculadora" spellcheck="false"><div class="instruccion">s1.at(26)</div><div class="resultado"></div><div class="instruccion">s1.charAt(26)</div><div class="resultado"></div><div class="instruccion">s1[26]</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con "charCodeAt" y "codePointAt" obtenga el código del primer carácter de la cadena <dfn>s1</dfn></p><div id="pregunta43" class="calculadora" spellcheck="false"><div class="instruccion">s1.charCodeAt(0)</div><div class="resultado"></div><div class="instruccion">s1.codePointAt(0)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con los métodos estáticos "fromCharCode" y "fromCodePoint", obtenga el carácter correspondiente al código 109</p><div id="pregunta44" class="calculadora" spellcheck="false"><div class="instruccion">String.fromCharCode(109)</div><div class="resultado"></div><div class="instruccion">String.fromCodePoint(109)</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="19" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 5 -->
+    <div class="ejercicio" id="ejercicio6" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Cree la variable <dfn>s1</dfn> con el texto "Todos los constructores y funciones en Javascript cuentan con la propiedad Prototype".</p><div id="pregunta45" class="calculadora" spellcheck="false"><div class="instruccion">s1 = "Todos los constructores y funciones en Javascript cuentan con la propiedad Prototype";<br>s1</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con "substring", "indexOf" y "toUpperCase", cree la variable <dfn>s2</dfn> con la primera palabra de la cadena en "s1", en mayúsculas (tome en cuenta que la primera palabra está seguida de un espacio)</p><div id="pregunta46" class="calculadora" spellcheck="false"><div class="instruccion">s2 = s1.substring(0, s1.indexOf(" ")).toUpperCase();<br>s2</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con "slice", "search" y "toLocaleUpperCase", cree la variable <dfn>s2b</dfn> con la primera palabra de la cadena en "s1", en mayúsculas.</p><div id="pregunta47" class="calculadora" spellcheck="false"><div class="instruccion">s2b = s1.slice(0, s1.search(" ")).toLocaleUpperCase();<br>s2b</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con "substring", "lastIndexOf" y "toLowerCase", cree la variable <dfn>s3</dfn> con la última palabra de la cadena <dfn>s1</dfn>, en minúsculas (tome en cuenta que antes de la última palabra existe un espacio)</p><div id="pregunta48" class="calculadora" spellcheck="false"><div class="instruccion">s3 = s1.substring(s1.lastIndexOf(" ")+1).toLowerCase();<br>s3</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con "slice", "lastIndexOf" y "toLocaleLowerCase", cree la variable <dfn>s3b</dfn> con la última palabra de la cadena <dfn>s1</dfn> en minúsculas</p><div id="pregunta49" class="calculadora" spellcheck="false"><div class="instruccion">s3b = s1.slice(s1.lastIndexOf(" ")+1).toLocaleLowerCase();<br>s3b</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Obtenga con "slice", "substr" y "substring" los tres últimos caracteres de <dfn>s1</dfn></p><div id="pregunta50" class="calculadora" spellcheck="false"><div class="instruccion">s1.slice(-3)</div><div class="resultado"></div><div class="instruccion">s1.substr(-3)</div><div class="resultado"></div><div class="instruccion">s1.substring(s1.length-3)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Cree la variable <dfn>s4</dfn> con el texto de <dfn>s1</dfn>, pero reemplazando "funciones" por "métodos" (método: replace)</p><div id="pregunta51" class="calculadora" spellcheck="false"><div class="instruccion">s4 = s1.replace("funciones", "métodos");<br>s4</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con "concat", el operador "+" y una plantilla literal, cree una nueva cadena, con las cadenas <dfn>s2</dfn> y <dfn>s3</dfn> separadas con un guión (-)</p><div id="pregunta52" class="calculadora" spellcheck="false"><div class="instruccion">s2.concat("-", s3)</div><div class="resultado"></div><div class="instruccion">s2+"-"+s3</div><div class="resultado"></div><div class="instruccion">`${s2}-${s3}`</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Con "split" cree el vector "v1", con las subcadenas de la cadena <dfn>s1</dfn> que están separadas por un espacio, luego una los elementos del vector "v1", pero separándolos con un guión:</p><div id="pregunta53" class="calculadora" spellcheck="false"><div class="instruccion">v1 = s1.split(" ");<br>v1</div><div class="resultado"></div><div class="instruccion">v1.join("-")</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="20" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 6 -->
+    <div class="ejercicio" id="ejercicio7" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Cree la variable <dfn>s</dfn> con el texto "Locura es hacer lo mismo una y otra vez esperando obtener resultados diferentes".</p><div id="pregunta54" class="calculadora" spellcheck="false"><div class="instruccion">s = "Locura es hacer lo mismo una y otra vez esperando obtener resultados diferentes";</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Determine si la cadena "s" inicia con la cadena "locura" y si termina con la cadena "diferentes".</p><div id="pregunta55" class="calculadora" spellcheck="false"><div class="instruccion">s.startsWith("locura")</div><div class="resultado"></div><div class="instruccion">s.endsWith("diferentes")</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Rellene el principio de la cadena "s" con guiones, hasta que la cadena tenga una longitud de 85 caracteres.</p><div id="pregunta56" class="calculadora" spellcheck="false"><div class="instruccion">s.padStart(85, "-")</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Rellene el final de la cadena "s" con guiones bajos (_), hasta que la cadena tenga una longitud de 90 caracteres.</p><div id="pregunta57" class="calculadora" spellcheck="false"><div class="instruccion">s.padEnd(90, "_")</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Rellene el principio de la cadena "s" con signos de admiración de apertura (¡), hasta que la cadena tenga una longitud de 90 caracteres y con signos de admiración de cierre (!), hasta que la cadena tenga una longitud de 100 caracteres.</p><div id="pregunta58" class="calculadora" spellcheck="false"><div class="instruccion">s.padStart(90, "¡").padEnd(100, "!")</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Empleando los dos métodos equivalentes, elimine los espacios en blanco al principio de la cadena "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hagas lo que hagas, hazlo bien."</p><div id="pregunta59" class="calculadora" spellcheck="false"><div class="instruccion">"        Hagas lo que hagas, hazlo bien.".trimLeft()</div><div class="resultado"></div><div class="instruccion">"        Hagas lo que hagas, hazlo bien.".trimStart()</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Empleando los dos métodos equivalente, elimine los espacios en blanco al final de la cadena "Vivir bien es mejor que vivir.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"</p><div id="pregunta60" class="calculadora" spellcheck="false"><div class="instruccion">"Vivir bien es mejor que vivir.       ".trimEnd()</div><div class="resultado"></div><div class="instruccion">"Vivir bien es mejor que vivir.       ".trimRight()</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Elimine los espacios en blanco al principio y al final de la cadena "&nbsp;&nbsp;&nbsp;Donde hay amor, hay vida.&nbsp;&nbsp;&nbsp;"</p><div id="pregunta61" class="calculadora" spellcheck="false"><div class="instruccion">"   Donde hay amor, hay vida.   ".trim()</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Cree una cadena repitiendo 7 veces la cadena "vida"</p><div id="pregunta62" class="calculadora" spellcheck="false"><div class="instruccion">"vida".repeat(7)</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Cree la cadena "El valor\n de\b\t una idea\n radica\v en su uso.", pero de forma tal que las secuencias de escape no sea interpretadas como tales, sino como secuencias de texto normales.</p><div id="pregunta63" class="calculadora" spellcheck="false"><div class="instruccion">String.raw`El valor\n de\b\t una idea\n radica\v en su uso.`</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Determine si la cadena "Programación" debe ir antes, después o si es igual a la cadena "programación".</p><div id="pregunta64" class="calculadora" spellcheck="false"><div class="instruccion">"Programación".localeCompare("programación")</div><div class="resultado"></div></div><p class="pregunta" id="pregunta65"><span class="pregunta"></span>Como el resultado de <dfn class="style1">localeCompare</dfn> es <span class="campo_literal correcta" tabindex="0" contenteditable="true">positiv</span>o, la cadena "Programación" debe ir <span class="campo_literal correcta" tabindex="0" contenteditable="true">despué</span>s de la cadena "programación"</p><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="27" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 7 -->
+    <div class="ejercicio" id="ejercicio8" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Programe el método "procesarRuta", como un método getter de la clase "String", que trabajando con la ruta Windows desde el cual es llamado (en una ruta Windows los directorios se separan con quebrados invertidos "\"), normalice esa ruta (reemplace los quebrados invertidos por quebrados), extraiga el nombre del archivo (la cadena después del último quebrado y antes del último punto) y la extensión (la cadena después del último quebrado y después del último punto) y devuelva un objeto literal con las propiedades/atributos: rutaNormalizada (normalizada), archivo (nombre) y extensión (extensión).</p><div id="pregunta66" class="calculadora" spellcheck="false"><div class="instruccion">Object.defineProperty(String.prototype, "procesarRuta", {<br><br>  get() {<br>    const ruta = this.valueOf();<br>    // Se reemplazan los quebrados invertidos (\) por quebrados (/)<br>    const normalizada = ruta.replaceAll("\\", "/");<br>    // Se extrae el nombre completo (el texto después del último quebrado)<br>    const posQuebrado = normalizada.lastIndexOf("/");<br>    const nombreCompleto = normalizada.slice(posQuebrado+1);<br>    // Se ubica el último punto del nombre completo<br>    const posPunto = nombreCompleto.lastIndexOf(".");<br>    let nombre, extensión;<br>    // Si el nombreCompleto tiene extensión (un punto y uno o más caracteres)<br>    if (posPunto!==-1 &amp;&amp; posPunto&gt;0) {<br>      // Se extraen el nombre y la extensión<br>      nombre = nombreCompleto.slice(0, posPunto);<br>      extensión = nombreCompleto.slice(posPunto+1);<br>    } else {<br>      // El nombre es el nombre completo y no tiene extensión<br>      nombre = nombreCompleto;<br>      extensión = "Sin extensión";<br>    }<br>    // Se devuelve el objeto literal<br>    return {<br>      rutaNormalizada: normalizada,<br>      archivo: nombre,<br>      extensión: extensión<br>    };<br>  },<br><br>  configurable: true<br><br>});</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Luego llame al método desde las siguientes rutas: "C:\archivos\documentos\reporte_anual_2026.pdf", "C:\informes\graficas\proyeccion_2026.jpg", "C:\documentos\personal\apuntes." y "D:\respaldo\clases\fis102_1" (Nota: Como los quebrados invertidos generan secuencias de escape, para que no sean interpretados como tales, se debe emplear el método estático "raw" de la clase "String").</p><div id="pregunta67" class="calculadora" spellcheck="false"><div class="instruccion">String.raw`C:\archivos\documentos\reporte_anual_2026.pdf`.procesarRuta</div><div class="resultado"></div><div class="instruccion">String.raw`C:\informes\graficas\proyeccion_2026.jpg`.procesarRuta</div><div class="resultado"></div><div class="instruccion">String.raw`C:\documentos\personal\apuntes.`.procesarRuta</div><div class="resultado"></div><div class="instruccion">String.raw`D:\respaldo\clases\fis102_1`.procesarRuta</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="13" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 8 -->
+    <div class="ejercicio" id="ejercicio9" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>Programe el método "generarRecibo", como un método getter de la clase "Array" que, empleando el vector de objetos desde el cual es llamado (atributos/propiedades: nombre y precio), genere una cadena con formato de recibo/tabla, donde la primera columna (el nombre) debe tener un ancho fijo de 20 caracteres alineada a la izquierda y la segunda (el precio) un ancho de 8 caracteres (precedida por "$" y con 2 dígitos después del punto) alineada a la derecha. El encabezado de la tabla debe tener los nombres "ARTÍCULO" y "PRECIO", estar separado del cuerpo por una fila de 32 guiones, el nombre del artículo y el precio deben estar separados por puntos y la tabla debe terminar con una fila de 32 guiones.</p><div id="pregunta68" class="calculadora" spellcheck="false"><div class="instruccion">Object.defineProperty(Array.prototype, "generarRecibo", {<br><br>  get() {<br>    // Array con los items a incluir en el recibo<br>    const items = this;<br>    // Fila con 32 guiones para separar el cuerpo de la tabla<br>    const separador = "-".repeat(32);<br>    // Encabezado de la tabla y fila de separación<br>    let recibo = "ARTÍCULO".padEnd(20) + "PRECIO\n" + separador + "\n";<br>    // Ciclo para iterar con cada uno de los items del array<br>    items.forEach(item =&gt; {<br>      // Fila con el nombre y el precio del item<br>      recibo += item.nombre.padEnd(20, ".") + ("$" + item.precio.toFixed(2)).padStart(8, ".") + "\n";<br>    });<br>    // Separador al final de la tabla<br>    recibo += separador;<br>    // Se devuelve el recibo generado<br>    return recibo;<br>  },<br><br>  configurable: true<br><br>});</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Cree el array "productos" con 3 objetos con los siguientes datos (nombre, precio): "Cuaderno espiral", 15.5; "Bolígrafo azul", 1.2; "Mochila escolar", 120.0. Luego, desde el array creado, llame al método "generarRecibo".</p><div id="pregunta69" class="calculadora" spellcheck="false"><div class="instruccion">productos = [<br>  { nombre: "Cuaderno espiral", precio: 15.5 },<br>  { nombre: "Bolígrafo azul", precio: 1.2 },<br>  { nombre: "Mochila escolar", precio: 120.0 }<br>];</div><div class="resultado"></div><div class="instruccion">print(productos.generarRecibo);</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="15" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 9 -->
+    <div class="ejercicio" id="ejercicio10" enunciado="0"><hr><div class="enunciado"><p class="ejercicio"><span class="ejercicio"></span></p></div><p class="pregunta"><span class="pregunta"></span>El cifrado Cesar, es uno de los cifrados más antiguos de los que se tiene referencia. En este cifrado, simplemente se desplazan los caracteres un determinado número de posiciones hacia la derecha, por ejemplo si la letra es "a" y el desplzamiento elegido es 2, la letra "a" se convertirá en "c", la letra "f" en "h" y así para cualquier carácter.<br>Programe el método "cifrarTexto" como un método estándar de la clase "String", que reciba el "desplazamiento" y con el mismo cifre la cadena desde la que ha sido llamada. El método NO debe cifrar las secuencias de escape correspondientes al salto de línea (\n), retorno de carro (\r) y tabulación (\t). Para desplazar los caracteres hacia la derecha, debe obtener el código del carácter (con "codePointAt"), sumarle el desplazamiento y obtener (con "fromCodePoint") el nuevo carácter.</p><div id="pregunta70" class="calculadora" spellcheck="false"><div class="instruccion">String.prototype.cifrarTexto = function(desplazamiento) {<br>  // Texto desde el cual se llama al método<br>  const texto = this.valueOf();<br>  // Se inicializa la variable que guarda el texto cifrado<br>  let resultado = "";<br>  // Se cifran, uno a uno, los caracteres "c" del texto<br>  for (const c of Array.from(texto)) {<br>    // Si es una de las secuencias de escape elegidas no se cifra<br>    if (c === "\n" || c === "\r" || c === "\t")<br>      resultado += c;<br>    else<br>      // Se codifica el carácter "c"<br>      resultado += String.fromCodePoint(c.codePointAt(0) + desplazamiento);<br>  }<br>  // Se devuelve el texto cifrado<br>  return resultado;<br>};</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Cree la cadena "texto" con la siguiente información: Notas:; Alumno: Juan Pérez; 1er Parcial: 90; 2do Parcial: 95. Donde cada punto y coma corresponde a una fila. Desde la segunda hasta la cuarta fila las columnas deben estar alineadas y desplazadas una posición hacia la derecha. Luego, cifre el "texto" con un desplazameiento de 3 ("cifrado1") y con un desplazamiento de 5 ("cifrado2")</p><div id="pregunta71" class="calculadora" spellcheck="false"><div class="instruccion">texto = "Notas:\n\tAlumno:\t\tJuan Pérez\n\t1er Parcial:\t90\n\t2do Parcial:\t95";<br>print(texto);</div><div class="resultado"></div><div class="instruccion">cifrado1 = texto.cifrarTexto(3);<br>print(cifrado1);</div><div class="resultado"></div><div class="instruccion">cifrado2 = texto.cifrarTexto(5);<br>print(cifrado2);</div><div class="resultado"></div></div><p class="pregunta"><span class="pregunta"></span>Para descifrar un texto (con cifrado Cesar) simplemente se hace lo contrario, es decir se desplaza hacia la izquierda (se resta) el número de posiciones desplazado en el cifrado.<br>Programe el método "descifrarTexto", como un método estándar de la clase "String", que reciba el "desplazamiento" empleado en el cifrado y que llamando al método "cifrarTexto" devuelva el texto descifrado. Luego, llame al método para descifrar los textos "cifrado1" y "cifrado2".</p><div id="pregunta72" class="calculadora" spellcheck="false"><div class="instruccion">String.prototype.descifrarTexto = function(desplazamiento) {<br>  // Texto desde el cual se llama al método<br>  const cifrado = this.valueOf();<br>  // Se llama al método de cifrado para descifrar el texto<br>  return cifrado.cifrarTexto(-desplazamiento);<br>};</div><div class="resultado"></div><div class="instruccion">print(cifrado1.descifrarTexto(3));</div><div class="resultado"></div><div class="instruccion">print(cifrado2.descifrarTexto(5));</div><div class="resultado"></div></div><br><label style="margin-left:0px;">Nota: </label><input type="text" class="itmostrar notas" value="100" disabled="disabled"><label style="padding-left:25px;">Puntos: </label><input type="text" class="itmostrar notas" value="21" disabled="disabled"><button class="btRepetir" style="margin-left:25px;" onclick="Ejercicio.repetir(event)">Repetir</button><hr></div><!-- ejercicio 10 -->
+
+
+
+
+
+
+    <div id="generarPrueba" data-scroll-y="21363.185546875"><br><hr><label class="lnotacapitulo">Nota del capítulo: </label><input type="text" id="notaCapitulo" disabled="disabled" class="itnotacapitulo"><br><br><button id="btGenerarPrueba" style="visibility: visible;" onclick="capitulo.registrarCapitulo()">Iniciar defensa</button><button id="btEmplearBono" style="margin-left:1.1rem;width:9.686rem;display:none;" onclick="capitulo.emplearBono()">Emplear Bono</button><br><br></div>
+
+
+<d id="dAutor" style="font-size: 0.9rem;text-align:center;color: #0808f24f;font-weight:bolder;position:fixed;top: 5px;right: 5px;user-select:none;display:inline-block;z-index:15;">Hernan G. Peñaranda V.</d></div><!-- Cierre del div capítulo -->
+        
+<div id="dato" style="display:none;">KqbJCKyn938lCZ0oDYGpDIqsDZWn93CrE30aCJSv934tEIGnC30aC2HqS3XQQW00</div>
+<div id="reg" style="display:none;">CZ0nC3inCJinCJinCJ0mEp4nEp4nEp4nEp4nEp4nEp4n</div>
+
+
+
+
+<div id="divDialogo" style="display: none;"><div onfocus="document.querySelector('#divDialogo input').focus();"><div>Carnet universitario</div><div>Escriba el número de su carnet universitario, verificando que el guión haya sido correctamente insertado.</div><input type="text" onkeydown="return Capitulo.divDialogo.funKeydown(event)" onkeyup="Capitulo.divDialogo.funKeyup(event)"><div><button onclick="Capitulo.divDialogo.funClick('aceptar');">Aceptar</button><button style="margin-left:35px;" onclick="Capitulo.divDialogo.funClick('cancelar');">Cancelar</button></div></div></div></body>
